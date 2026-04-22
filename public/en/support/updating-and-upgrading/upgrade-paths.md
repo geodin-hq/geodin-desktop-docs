@@ -8,19 +8,19 @@ Ensure you have administrative privileges on the machine where you will install 
 
 Please note that if the GeoDin Licence Service is present from a previous installation, it must be uninstalled before reinstalling GeoDin 15.
 
-![Licence service](../../.gitbook/assets/0_Screen.jpg)
+![Licence service](.gitbook/assets/0_Screen.jpg)
 
 You will also need the installer. A download link for the installer will be sent to you automatically via email after your purchase.
 
 Once downloaded, start the installation by double-clicking on the file `geodin-setup.exe`.
 
-![Start installation](<../../.gitbook/assets/1_Screen (3).jpg>)
+![Start installation](<.gitbook/assets/1_Screen (3).jpg>)
 
 ## 1. Licence agreement
 
 Please read the licence agreement carefully and proceed by accepting it.
 
-![Licence agreement](<../../.gitbook/assets/2_Screen (3).jpg>)
+![Licence agreement](<.gitbook/assets/2_Screen (3).jpg>)
 
 ## 2. GeoDin® update
 
@@ -28,11 +28,11 @@ The GeoDin® setup detects if older versions of GeoDin® (GeoDin® 9.6 and GeoDi
 
 The update process is not supported or guaranteed for older versions of GeoDin® or for GeoDin® that was not installed using the regular setup. In such cases, please contact [support@geodin.com](mailto:support@geodin.com) so that we can prepare an offer for you.
 
-![GeoDin update](<../../.gitbook/assets/3_Screen (2).jpg>)
+![GeoDin update](<.gitbook/assets/3_Screen (2).jpg>)
 
 Alternatively, you can also update within GeoDin by navigating to **System Configuration > Update GeoDin**, if you do not receive an automated update prompt.
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## 3. Installation settings
 
@@ -40,7 +40,7 @@ The installation settings obtained from previous versions are summarized for you
 
 Click `<Install>` to continue.
 
-![Installation settings](<../../.gitbook/assets/4_Screen (2).jpg>)
+![Installation settings](<.gitbook/assets/4_Screen (2).jpg>)
 
 ## 4. Installation process
 
@@ -48,7 +48,7 @@ The installer copies files to the various directories.
 
 Please wait for it to complete.
 
-![Installation process](<../../.gitbook/assets/5_Screen (2).jpg>)
+![Installation process](<.gitbook/assets/5_Screen (2).jpg>)
 
 ## 5. Finish installation
 
@@ -60,4 +60,4 @@ When you open GeoDin® for the first time, you can enter the licence. There is a
 
 Click `<Finish>` to finalize the installation.
 
-![Finish installation](<../../.gitbook/assets/6_Screen (1).jpg>)
+![Finish installation](<.gitbook/assets/6_Screen (1).jpg>)
