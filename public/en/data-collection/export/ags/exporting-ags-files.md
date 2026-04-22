@@ -60,43 +60,43 @@ Begin by selecting the boreholes you wish to export. You can choose from:
 * **A group**
 * **A query**
 
-<figure><img src="../../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption><p>Select objects</p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (4) (1) (1).png" alt=""><figcaption><p>Select objects</p></figcaption></figure>
 
 ### 2. Open the Publish and Export Method
 
 After selecting the boreholes, navigate to the _Publish and Export_ method.
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Publish and export</p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Publish and export</p></figcaption></figure>
 
 ### 3. Choose Export to AGS-format
 
 Within the _Publish and Export_ method, select the _Export to AGS-format_ option.
 
-<figure><img src="../../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption><p>Export to AGS format</p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption><p>Export to AGS format</p></figcaption></figure>
 
 ### 4. Define the AGS Standard
 
 In the export area, select the AGS standard you want to use by choosing the corresponding AED file.
 
-<figure><img src="../../../.gitbook/assets/image (20) (1).png" alt=""><figcaption><p>Define AGS standard</p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (20) (1).png" alt=""><figcaption><p>Define AGS standard</p></figcaption></figure>
 
 ### 5. Provide Details for AGS Group "TRAN"
 
 In the _TRAN_ section, enter all necessary details for the AGS group _TRAN_.
 
-<figure><img src="../../../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption><p>TRAN</p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption><p>TRAN</p></figcaption></figure>
 
 ### 6. User defined groups
 
 To exclude specific groups from the AGS export, check the _User defined groups_ option.
 
-<figure><img src="../../../.gitbook/assets/image (4) (1) (1) (1).png" alt=""><figcaption><p>User defined groups</p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (4) (1) (1) (1).png" alt=""><figcaption><p>User defined groups</p></figcaption></figure>
 
 ### 7. Execute the Export
 
 Once you have made your selections, click the _Execute_ button to perform the AGS export.
 
-<figure><img src="../../../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption><p>Export AGS</p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (5) (1) (1).png" alt=""><figcaption><p>Export AGS</p></figcaption></figure>
 
 ## Additional Options
 
@@ -104,10 +104,10 @@ Once you have made your selections, click the _Execute_ button to perform the AG
 
 By selecting this option, an AGS file will be created for each object.
 
-<figure><img src="../../../.gitbook/assets/5.png" alt=""><figcaption><p>Export objects to separate AGS files</p></figcaption></figure>
+<figure><img src=".gitbook/assets/5.png" alt=""><figcaption><p>Export objects to separate AGS files</p></figcaption></figure>
 
 ### Select coding standard
 
 If you need to export according to a specific coding standard, choose your desired standard from the drop-down menu. Ensure that a lithological description according to the selected coding standard is available within the object. By default, the first encountered coding standard will be used.
 
-<figure><img src="../../../.gitbook/assets/6.png" alt=""><figcaption><p>Coding standard</p></figcaption></figure>
+<figure><img src=".gitbook/assets/6.png" alt=""><figcaption><p>Coding standard</p></figcaption></figure>

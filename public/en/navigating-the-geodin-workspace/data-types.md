@@ -18,7 +18,7 @@ Each data type is identified by:
 
 Some data types are marked as **complex data types**, meaning they contain structured sub‑data rather than single values.
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Available (G1) Location Data Types
 

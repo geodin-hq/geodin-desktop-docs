@@ -16,7 +16,7 @@ Current object types can be installed directly from GeoDin’s server:
 * Click **Install**.
 * To exit, click **Close**.
 
-<figure><img src="../../.gitbook/assets/image (44).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (44).png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -29,7 +29,7 @@ If GeoDin is not connected to the Internet:
   &#xNAN;_(Note: Do NOT use the_ [_ObjectTypesAll.zip archive from `/8_save/`_](http://update.geodin.com/objecttypes/8_save/) _for this manual procedure.)_
 * Follow the same steps as mentioned in **Section 1** above but select the ZIP archive via the second option in Step 4.
 
-<div align="center"><figure><img src="../../.gitbook/assets/image (45).png" alt=""><figcaption></figcaption></figure></div>
+<div align="center"><figure><img src=".gitbook/assets/image (45).png" alt=""><figcaption></figcaption></figure></div>
 
 
 
@@ -39,5 +39,4 @@ You can also use object types from other GeoDin installations or a shared **SYSL
 
 * Follow the steps in **Section 1**, but select the corresponding folder (e.g., **SYSLIB**) as the source using the first option in Step 4.
 
-<div align="center"><figure><img src="../../.gitbook/assets/image (46).png" alt=""><figcaption></figcaption></figure></div>
-
+<div align="center"><figure><img src=".gitbook/assets/image (46).png" alt=""><figcaption></figcaption></figure></div>

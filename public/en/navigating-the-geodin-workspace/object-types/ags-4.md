@@ -10,11 +10,11 @@ All three must be installed in GeoDin to ensure full functionality:
 2. **AGS 4 LBSG - Testing schedule \[AGSLBSG]**: Used to define and manage project-specific testing schedules.
 3. **AGS 4 PREM - Project-specific time-related remarks \[AGSPREM]**: Used to record project-specific time-dependent events (e.g., “Heavy rainfall for two days; site flooded”).
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Follow the process outlined [here](https://docs.geodin.com/navigating-the-geodin-workspace/object-types/installing) in Method 1 and select **“AGSSTAND\_Geotechnical Geoenvironmental Standard“** to install all three object types including the associated data types.
 
-<figure><img src="../../.gitbook/assets/Bild.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Bild.png" alt=""><figcaption></figcaption></figure>
 
 #### 1.1	Missing AGS groups in GeoDin
 
@@ -37,21 +37,21 @@ Parameters or groups that are only included in AGS 4.1.1 and not in AGS 4.0.4 ar
 **Example:**\
 CTRG – Cyclic triaxial test \[CTRG] is a new group for AGS 4.1.1.
 
-<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 **1.2.2 Input Forms**
 
 GeoDin allows users to enter data using input forms (masks). GeoDin provides support for entering parameters. The description of the AGS parameter name can be found below the mask as a note containing the long field name and, in brackets, the short field name.
 
-<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 **1.2.3 Grid View**
 
 When entering data via the grid view, users can switch between the long field name and the AGS short field name. To do this, the user clicks on the column heading with the right mouse button, and a menu bar appears, as shown in the image. Users can also use this menu bar to switch the unit view on and off.
 
-<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
 **1.2.4 Dictionaries**
 
@@ -73,7 +73,7 @@ When entering data via the grid view, users can switch between the long field na
 
 
 
-    <figure><img src="../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src=".gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 * The following dictionaries are repeatedly used in GeoDin:
   * **(AGS) Units: UNIT – Unit**, defining all units used for data headings and data records
     * Used multiple times for all AGS types = **PU**
@@ -97,13 +97,13 @@ GeoDin uses fill patterns defined in the AGS dictionaries to visually represent 
 * **(AGS) Layer data: GEOL – Legend code**
 * **(AGS) Well design: BKFL – Backfill legend**
 
-<figure><img src="../../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 2. Data structure of the GeoDin object types
 
 The below image shows an extensive data structure for the GeoDin object types:
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 3. Object type AGS 4 \[AGSSTAND]
 
@@ -116,7 +116,7 @@ The **AGS 4 object type** is the **core structure** for AGS data in GeoDin. It c
 * Supplementary object type tables
 * Data types for all groups of the **AGS 4.1.1** and **AGS 4.0.4** standards
 
-<figure><img src="../../.gitbook/assets/AGS4.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/AGS4.png" alt=""><figcaption></figcaption></figure>
 
 The user can find the AGS groups and the associated parameters in GeoDin in the following structure:
 
@@ -133,57 +133,57 @@ All AGS groups **except LBSG and PREM** that are **not listed above** are implem
 
 #### 3.1	General data – Location details - LOCA
 
-<figure><img src="../../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### 3.2	Layer data – GEOL, DETL, DLOG
 
 **3.2.1 Field geological description - GEOL**
 
-<figure><img src="../../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
 
 **3.2.2 Stratum detail description - DETL**
 
-<figure><img src="../../.gitbook/assets/image (11) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (11) (1).png" alt=""><figcaption></figcaption></figure>
 
 **3.2.3 Driller geological description (4.1) - DLOG**
 
 The DLOG group represents the driller’s geological description according to AGS 4.1.1.
 
-<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
 
 #### 3.3 Samples - SAMP
 
-<figure><img src="../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
 
 #### 3.4 Well design – HDIA, FLSH, BKFL, PIPE, FILT
 
 **3.4.1 Hole diameter - HDIA**
 
-<figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
 
 **3.4.2 Flushing details - FLSH**
 
-<figure><img src="../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
 
 **3.4.3 Backfill - BKFL**
 
-<figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
 
 **3.4.4 Monitoring installation pipe - PIPE**
 
 The user must create a **Pipe reference entry** in order to make it available in the **Pipe reference dictionary** and to use it for the **Monitoring Installations and Instruments \[MONG]** data type.
 
-<figure><img src="../../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
 
 The entries of the dictionary **(AGS) Monitoring installation: PIPE - Pipe reference** are only available, if the user creates an entry in the Monitoring installation pipe. The dictionary is database specific.
 
-<figure><img src="../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
 
 **3.4.5 Filter details - FILT**
 
 Pipe reference in monitoring installation pipe (PIPE group) and in filter details should be identical. Pipe name in filter details is used as the name (monitoring point ID) in the MONG group.
 
-<figure><img src="../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
 
 #### 3.5 Additional object type tables – CDIA, CHIS, HDPH, DREM, DOBS, HORN
 
@@ -196,37 +196,37 @@ Additional object type tables store advanced drilling information that supports 
 5. DOBS – Drilling advancement observation and parameters
 6. HORN – Hole orientation and inclination
 
-<figure><img src="../../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
 
 **3.5.1 Casing diameter - CDIA**
 
-<figure><img src="../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
 
 **3.5.2 Chiseling details - CHIS**
 
-<figure><img src="../../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
 
 **3.5.3 Depth related hole information - HDPH**
 
-<figure><img src="../../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
 
 **3.5.4 Depth related remarks - DREM**
 
-<figure><img src="../../.gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
 
 **3.5.5 Drilling advancement observation and parameters - DOBS**
 
-<figure><img src="../../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
 
 **3.5.6 Hole orientation and inclination - HORN**
 
-<figure><img src="../../.gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
 
 ### 4. Object type AGS 4 LBSG - Testing schedule \[AGSLBSG]
 
 #### 4.1	General data - Testing schedule - LBSG
 
-<figure><img src="../../.gitbook/assets/image (28).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (28).png" alt=""><figcaption></figcaption></figure>
 
 A **testing schedule object** must be created so that its reference can be used in the **Testing Schedule Details \[LBST]** data type records.
 
@@ -234,7 +234,7 @@ The dictionary **(AGS) Testing schedule: LBSG – Schedule reference** is **data
 
 Using the **Add objects** method at the level of the opened database, testing schedule objects can be copied from one database to another. Once copied, they are also available as schedule references for the **Testing Schedule Details \[LBST]** data type.
 
-<figure><img src="../../.gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure>
 
 ### 5. Object Type AGS 4 PREM – Project-Specific Time-Related Remarks \[AGSPREM]
 
@@ -242,7 +242,7 @@ Using the **Add objects** method at the level of the opened database, testing sc
 
 The **AGS 4 PREM object** allows users to document project‑specific, time‑dependent events such as delays, weather events, and site accessibility issues. These records form part of the project’s **AGS‑compliant documentation**.
 
-<figure><img src="../../.gitbook/assets/image (29).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (29).png" alt=""><figcaption></figcaption></figure>
 
 ### 6.	Data types&#x20;
 
@@ -259,7 +259,7 @@ GeoDin includes **86 AGS data types**, each linked either to:
 * **(AGS) Location \[AGL]**, or
 * **(AGS) Samples \[AGS]**
 
-<figure><img src="../../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
 
 There are currently **no data types** linked to **(AGS) Screens / filter \[AGF]**.
 
@@ -315,7 +315,7 @@ Users can install plugins on the **System** side of GeoDin, as shown below. By p
 
 If a plugin is already installed, it appears under **Installed plugins**.
 
-<figure><img src="../../.gitbook/assets/image (48).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (48).png" alt=""><figcaption></figcaption></figure>
 
 #### **System Requirements**
 
@@ -324,11 +324,11 @@ If a plugin is already installed, it appears under **Installed plugins**.
 
 Users running **GeoDin versions 15.0 to 15.3** can update **GeoDin** by using the **“Update GeoDin”** function on the **System** page.
 
-<figure><img src="../../.gitbook/assets/image (49).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (49).png" alt=""><figcaption></figcaption></figure>
 
 When the AGS plugins are started and the required .NET runtime is not already installed, a message is displayed informing the user that the .NET Desktop Runtime must be downloaded and installed first. If the user confirms the prompt by selecting “Yes”, they are automatically redirected to the official [Microsoft download](https://dotnet.microsoft.com/en-us/download/dotnet) page. From there, the user can download and install the required .NET Desktop Runtime to proceed with the plugin import/export process.
 
-<figure><img src="../../.gitbook/assets/image (50).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (50).png" alt=""><figcaption></figcaption></figure>
 
 #### 7.1 General
 
@@ -344,19 +344,21 @@ To address this:
 
 #### 7.2 AGS Importer
 
-<figure><img src="../../.gitbook/assets/image (51).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (51).png" alt=""><figcaption></figcaption></figure>
 
 The AGS Importer is available at the level of an open GeoDin database and at the level of a GeoDin project.
 
 {% hint style="danger" %}
-Note: The AGS Importer can automatically create the required database tables for AGS object types only when using a **Microsoft Access database** in GeoDin.\
+Note: The AGS Importer can automatically create the required database tables for AGS object types only when using a **Microsoft Access database** in GeoDin.
+\
 If you are working with a **client–server database** and the AGS object types have not yet been registered, you must first create these tables manually via GeoDin. Ensure that the relevant user has **permission to create tables** in the client–server database.
 {% endhint %}
 
 **Creating AGS Database Tables in a Client–Server Database**
 
 1. In GeoDin, Open a project in your client-server database and go to the “Objects“ node. Start the “New object“ method.
-2. Select the object type “AGS 4“ \[AGSSTAND] and confirm with “OK“. GeoDin will now create the corresponding tables in your client-server database.   \
+2. Select the object type “AGS 4“ \[AGSSTAND] and confirm with “OK“. GeoDin will now create the corresponding tables in your client-server database.
+   \
    You may cancel the data entry afterwards by clicking the “Cancel edits“ button (prohibition sign).
 3. Repeat the process for the following object types to create all necessary AGS tables:
    * “AGS 4 LBSG – Testing schedule” \[AGSLBSG]
@@ -381,7 +383,7 @@ Checkbox: “Ignore AGS project identifiers.”
 
 * [x] Import the data into the selected project without comparing the PROJ group.
 
-<figure><img src="../../.gitbook/assets/image (52).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (52).png" alt=""><figcaption></figcaption></figure>
 
 **Step 2 – File selection:** The user selects the AGS file(s) to be imported. It is possible to import multiple AGS files at the same time.
 
@@ -391,27 +393,27 @@ Importing multiple files for the same object:
 
 2\.     If the checkbox is not selected, the data from the first file will be written to the database. The data from the following files will then no longer be written to the database unless the parameter is not yet assigned.
 
-<figure><img src="../../.gitbook/assets/image (53).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (53).png" alt=""><figcaption></figcaption></figure>
 
 **Step 3 – Validation:** Before importing, a validator checks the AGS file and issues warnings if there are any problems. In this case, importing is not possible, and the file must first be modified to comply with the standard and the import process restarted.
 
-<figure><img src="../../.gitbook/assets/image (54).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (54).png" alt=""><figcaption></figcaption></figure>
 
 **Step 4 - Import:** The database structure is written during the first import after creating a GeoDin database. Warnings can be output as a list after the import has been completed (e.g. dictionary entry does not exist in GeoDin).
 
 Warning can be saved as a list for review.
 
-<figure><img src="../../.gitbook/assets/image (55).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (55).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (56).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (56).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (57).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (57).png" alt=""><figcaption></figcaption></figure>
 
 #### 7.3	AGS Exporter
 
 The AGS Exporter is available at the level of a GeoDin project. Starting the method you can navigate thru the plugin.
 
-<figure><img src="../../.gitbook/assets/image (58).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (58).png" alt=""><figcaption></figcaption></figure>
 
 The AGS Exporter creates a fully validated AGS file.
 
@@ -419,19 +421,19 @@ The AGS Exporter creates a fully validated AGS file.
 
 It is important that the user selects not only the LOCA objects, but also the corresponding PREM and LBSG objects for the export.
 
-<figure><img src="../../.gitbook/assets/image (59).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (59).png" alt=""><figcaption></figcaption></figure>
 
 **Step 2 – AGS export configuration:** The user must choose the AGS export configuration. The Standards AGS 4.0.4 and AGS 4.1.1 are available. By choosing one standard, all parameters according to the standard are exported. Currently, it is not possible to export user-defined parameters from data types. The user can also choose AGS groups for the export. By default, all groups are exported.
 
 A check mark can be used to remove empty headings if the lines do not contain any data.
 
-<figure><img src="../../.gitbook/assets/image (60).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (60).png" alt=""><figcaption></figcaption></figure>
 
 **Step 3 – Project details:** The user must insert mandatory project details for the AGS Export, like project identifier \[PROJ\_ID] (PRJ\_ALIAS in GeoDin) and Project name \[PROJ\_NAME] (PRJ\_NAME in GeoDin and read-only). These fields are marked with a star, read from the GeoDin database and can be changed by the user. All other fields are optional.
 
 The PROJ group must be filled in by the user because most of the data (Headings) are not stored in GeoDin: Location of site \[PROJ\_LOC], Client name \[PROJ\_CLNT], Contractors name \[PROJ\_CONT], Project Engineer \[PROJ\_ENG], General project comments \[PROJ\_MEMO]
 
-<figure><img src="../../.gitbook/assets/image (61).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (61).png" alt=""><figcaption></figcaption></figure>
 
 **Step 4 – Transmission details:** In the next, the user must insert the transmission details, like Producer \[TRAN\_PROD], Issue sequence reference \[TRAN\_ISNO], Recipient \[TRAN\_RECV] and Transmission status \[TRAN\_STAT]. The two fields Description \[TRAN\_DESC] and Remarks \[TRAN\_REM] are optional fields. The AGS Edition Reference \[TRAN\_AGS] is read from the Step 2 (AGS export configuration) and can only be changed by the user in Step 2.
 
@@ -439,25 +441,25 @@ The TRAN group must be filled in by the user because the data is not stored in G
 
 By clicking on the Export button, the user must choose the path and the name for the export file.
 
-<figure><img src="../../.gitbook/assets/image (62).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (62).png" alt=""><figcaption></figcaption></figure>
 
 
 
-<figure><img src="../../.gitbook/assets/image (63).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (63).png" alt=""><figcaption></figcaption></figure>
 
 **Step 5 - Export:** The export starts automatically. Once the export has been successfully completed, the user is provided with a link to the AGS export file. Clicking on the link, the file is shown in an editor.
 
-<figure><img src="../../.gitbook/assets/image (64).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (64).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (65).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (65).png" alt=""><figcaption></figcaption></figure>
 
 During the export, the file is validated. Any deviations from the AGS standard are listed.
 
-<figure><img src="../../.gitbook/assets/image (66).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (66).png" alt=""><figcaption></figcaption></figure>
 
 If an error is detected, the export is aborted with the error message: “The export could not be completed.” Example: The database contains data for version 4.1.1 and is exported as format 4.0.4
 
-<figure><img src="../../.gitbook/assets/image (67).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (67).png" alt=""><figcaption></figcaption></figure>
 
 
 
