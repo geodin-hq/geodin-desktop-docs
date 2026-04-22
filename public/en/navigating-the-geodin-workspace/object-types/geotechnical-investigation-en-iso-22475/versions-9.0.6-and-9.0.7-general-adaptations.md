@@ -2,7 +2,7 @@
 description: General Adaptations - Versions 9.0.6 and 9.0.7
 ---
 
-# Versions 9.0.6 and 9.0.7 - General Adaptations
+# Versions 9.0.6 and 9.0.7 — General Adaptations
 
 With the release of object type versions **9.0.6** and **9.0.7**, both major and minor adjustments were made to the object type **Geotechnical Investigation EN ISO 22475 (2018)** \[ENISO002] and its associated geotechnical data types.
 
@@ -39,8 +39,6 @@ is now displayed **without inverted commas**.
 * The default value for the input field **Type of structure (TYP\_TF)** has been removed\
   This enables the deletion of an existing layer.
 
-<figure><img src=".gitbook/assets/image (88).png" alt=""><figcaption></figcaption></figure>
-
 ### Adaptation to DIN 18196 (2023)
 
 #### Soil Groups
@@ -73,8 +71,6 @@ The following changes were implemented:
 * English translation for **DIN EN ISO (deutsch)** adapted\
   (previously displayed in capital letters)
 
-![](<.gitbook/assets/image (89).png>)
-
 ***
 
 **Secondary Components**
@@ -103,8 +99,6 @@ For the standard **DIN EN ISO (deutsch)**, fill patterns were updated for the fo
 * `(E2) Well design – back fill` \[E2ASBVER]
 * `(E2) Well design – casing` \[E2ROHEL]
 
-<figure><img src=".gitbook/assets/image (90).png" alt=""><figcaption></figcaption></figure>
-
 ***
 
 ### Adaptation of the Display for WRT Cutting Conditions
@@ -118,8 +112,6 @@ This was achieved by adapting the dictionary:
 
 **Dictionary:** `(E2) Condition WRT cuttings` \[E2BOHGUT]
 
-<figure><img src=".gitbook/assets/image (91).png" alt=""><figcaption></figcaption></figure>
-
 ***
 
 ### Adaptation of the Display for Weathering Grade
@@ -129,8 +121,6 @@ A new visualisation was introduced for the weathering stage **Residual soil** (g
 **Dictionary:** `(E2) Weathering grades` \[E2VERWIT]
 
 For visualisation, the graphic element **Special symbol** with the special symbol type **Weathering grade** can be used.
-
-<figure><img src=".gitbook/assets/image (92).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -145,8 +135,6 @@ Samples of **category A–E** are now displayed **uniformly in full colour** for
 
 **Screenshot placeholder:**\
 `E2_samples_categoy_A-E.png`
-
-<figure><img src=".gitbook/assets/image (93).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -216,8 +204,6 @@ The display format in the data management method has been adjusted from **0 to 2
   * _slightly_ (`$TRCODE2B`)
   * _very_ (`$TRCODE4B`)
 
-<figure><img src=".gitbook/assets/image (94).png" alt=""><figcaption></figcaption></figure>
-
 ***
 
 #### Sample Type
@@ -256,8 +242,4 @@ In the graphic element **Well design**, the default display has been adjusted fo
 
 **New text macro:**<br>
 
-<figure><img src=".gitbook/assets/image (95).png" alt=""><figcaption></figcaption></figure>
-
 **Old text macro:**<br>
-
-<figure><img src=".gitbook/assets/image (96).png" alt=""><figcaption></figcaption></figure>

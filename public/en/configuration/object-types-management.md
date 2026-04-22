@@ -2,32 +2,25 @@
 description: Object Types Management
 ---
 
-<!--
-**Content status:** Auto-assembled from product documentation
-**Source quality:** B (Moderate (single source type))
-**Needs:** needs legacy verification, needs screenshots, needs examples, editorial review
--->
-
 # Object Types Management
 
 ### Object types
 
-The default setting installs only a limited number of object types. The international English version installs the \"General Borehole Log\". You will find this under the **System** tab.
+The default setting installs only a limited number of object types. The international English version installs the "General Borehole Log". You will find this under the **System** tab.
 
 There are many more object types for all the different language versions of GeoDin, which each user may install directly from the GeoDin DVD. These include separate object type for all the geological survey organizations in Germany as well as several international types in English and Dutch. Additionally there is a range of object types covering other fields of data collection that are not related to boreholes (for example climate measuring station, surface water measurement point).\
 \
-***Note:*** *There are also special FUGRO object types available only for internal company use.*
+&#xNAN;_**Note:**_ _There are also special FUGRO object types available only for internal company use._
 
 The installed object types are shown in the directory **Configuration**.
 
 To install further types double-click the [Install](../installation/express-installation.md) method and choose the appropriate folder from the chosen directory on the GeoDin DVD.
 
-
 **Downward compatibility as of GeoDin 9**
 
 Please note that databases created with GeoDin 9 can only be opened with GeoDin 9 and 8.4. Databases created with GeoDin version 8.3 or older must be updated once to the new database structure. When opening an older database in GeoDin 8.4 or higher, a window appears in which you are shown the changes to be made and can agree to the process. The database can now only be used with GeoDin 8.4 or higher.
 
-New layouts created in GeoDin 9 cannot be used with older versions. However, older layouts can be used with GeoDin 9. <!-- src: help/10/1753 -->
+New layouts created in GeoDin 9 cannot be used with older versions. However, older layouts can be used with GeoDin 9.
 
 ### Fill patterns
 
@@ -39,24 +32,23 @@ This is based on the files stored in the SOURCE folder of the GeoDin installatio
 
 .SYA - Symbol Table
 
-These files contain the definitions of the fill patterns and symbols in text format and can be modified using the ![Edit](.gitbook/assets/icons/edit.png) **\"Edit\"** method.
-
+These files contain the definitions of the fill patterns and symbols in text format and can be modified using the  **"Edit"** method.
 
 The formats of the fill pattern and symbol definitions are described in the chapter [Fill patterns](fill-patterns-and-symbols.md)
 
-The drawing definitions can be edited in the \<Instructions\> text window.
+The drawing definitions can be edited in the \<Instructions> text window.
 
 Using the **Preview** button or the **F4** key, the fill patterns and symbols can be greatly enlarged in the preview bar on the right. If you select a fill pattern or symbol in this bar, it will remain visible as the top entry the next time you activate the preview. Double-clicking on a fill pattern or symbol in the preview list takes you to the first line of the associated definition statement.
 
 To finally apply the changes to the drawing definitions, the **Create** button must be used. The current definition file is then compiled and the result is stored in the SYSLIB folder. The compiled signature tables get the file extension .SGN, while compiled symbol tables get the extension .SYM.
 
-To create a new fill pattern or symbol table, simply copy an existing file or create a new text file with the appropriate extension (.SGA or .SYA) in the SOURCE folder. The new file is now displayed in the object manager of the system objects under *[Fill patterns](fill-patterns-and-symbols.md)* or ***Symbols***. If GeoDin has not been closed in the meantime, you can update the display by right-clicking and selecting the ***Refresh*** menu item for the corresponding entries.
+To create a new fill pattern or symbol table, simply copy an existing file or create a new text file with the appropriate extension (.SGA or .SYA) in the SOURCE folder. The new file is now displayed in the object manager of the system objects under [_Fill patterns_](fill-patterns-and-symbols.md) or _**Symbols**_. If GeoDin has not been closed in the meantime, you can update the display by right-clicking and selecting the _**Refresh**_ menu item for the corresponding entries.
 
-***Attention:*** *The fill pattern \[Empty#0\]\[TYPNULL\]\[\$00FFFFFF\] must be defined as the first available fill pattern in every fill pattern table.*\
-*Depending on the local language version, GeoDin may come with a wide variety of fill pattern tables.*
+_**Attention:**_ _The fill pattern \[Empty#0]\[TYPNULL]\[$00FFFFFF] must be defined as the first available fill pattern in every fill pattern table._\
+&#xNAN;_&#x44;epending on the local language version, GeoDin may come with a wide variety of fill pattern tables._
 
-*The fill pattern table INTENG.SGN (Source INTENG.SGA) contains the English version of the BS5930 fill patterns and symbols and is therefore identical with the fill pattern table GEODDEF.SGN (Source GEODDEF.SGA). The graphical representation of boreholes uses the INTENG fill pattern table for English language objects. Hence changes to the GEODDEF fill pattern table do not affect the display of boreholes. When filling polygons and other areas in the layout editor, the signature table depends on the selection in the corresponding fill dialogue.*\
-*For special object types (for example \"Geotechnical borehole\" or \"Botswana Dep. of Geol. Survey\") there are custom made fill pattern files (GEOTECH1 and BOTSWANA).* <!-- src: help/10/2172 -->
+_The fill pattern table INTENG.SGN (Source INTENG.SGA) contains the English version of the BS5930 fill patterns and symbols and is therefore identical with the fill pattern table GEODDEF.SGN (Source GEODDEF.SGA). The graphical representation of boreholes uses the INTENG fill pattern table for English language objects. Hence changes to the GEODDEF fill pattern table do not affect the display of boreholes. When filling polygons and other areas in the layout editor, the signature table depends on the selection in the corresponding fill dialogue._\
+&#xNAN;_&#x46;or special object types (for example "Geotechnical borehole" or "Botswana Dep. of Geol. Survey") there are custom made fill pattern files (GEOTECH1 and BOTSWANA)._
 
 ### Edit
 
@@ -64,14 +56,13 @@ Locking the edit function prevents the **Configuration** from being changed by m
 
 **Locking the System Objects**\
 \
-To change the lock options make the following new entry under \[System\] in the configuration file GeoDin.ini :\
+To change the lock options make the following new entry under \[System] in the configuration file GeoDin.ini :\
 \
-*\[System\]*\
-*SysPath=C:\\Programme\\GeoDin\\SYSLIB\\*\
-*SysObjChange=false*
+&#xNAN;_\[System]_\
+&#xNAN;_&#x53;ysPath=C:\Programme\GeoDin\SYSLIB\\_\
+&#xNAN;_&#x53;ysObjChange=false_
 
-Restart GeoDin and click the **System** tab. Under system configuration the method ![Remove edit security](.gitbook/assets/icons/remove-edit-security.png) **\"Remove edit security\"** is now shown.
-
+Restart GeoDin and click the **System** tab. Under system configuration the method  **"Remove edit security"** is now shown.
 
 Double-clicking the method opens the dialogue for setting the password the first time. The entered password is used to unlock the editing of the system objects later.
 
@@ -81,63 +72,59 @@ Of course this protection is only good in so far as write permission is granted 
 
 In a password protected GeoDin environment, only viewing methods are available in the system object manager, so that unwanted changes are not possible (i.e. they cannot be edited).
 
-The administrator can remove the protection by double-clicking the **\"Remove edit security\"** method and entering the correct password.\
+The administrator can remove the protection by double-clicking the **"Remove edit security"** method and entering the correct password.\
 \
-After entering the password all editing functions are available. This restores full edit options to the system configuration. <!-- src: help/10/2178 -->
+After entering the password all editing functions are available. This restores full edit options to the system configuration.
 
 ### Uninstall
 
-To delete an object type that is no longer required, select this type from the object types list and double-click the method **\"Uninstall object type\"**.
+To delete an object type that is no longer required, select this type from the object types list and double-click the method **"Uninstall object type"**.
 
-If you have not made any changes to the dictionaries or masks, you can remove them in the same step so that unnecessary files are deleted from the GeoDin system directory (default setting). <!-- src: help/10/2203 -->
+If you have not made any changes to the dictionaries or masks, you can remove them in the same step so that unnecessary files are deleted from the GeoDin system directory (default setting).
 
 ### Install
 
 You have 3 options to install new object types:
 
-
 Select a folder containing the object type(s), for example the GeoDin DVD. All object types from this directory are displayed in a list. Here the entire subfolder structure of the folder is searched, therefore you can use this method also to detect object types.
-
 
 Select a ZIP folder containing the object type(s), which are displayed in a list. If the ZIP file is password secured, you will have to type the password in during installation.
 
-
 Here all object types availble on the GeoDin website are listed, sorted after languages. GeoDin will try to establish a connection to the Internet. If you use a Internetproxy, please configure it in the [Proxy configuration](../installation/infrastructure-and-environment-setup-guide.md).
 
-After you have selected the required object types with either of these methods click [Install](../installation/express-installation.md). You can install several object types in succession. Select another directory and repeat the installation. <!-- src: help/10/2980 -->
+After you have selected the required object types with either of these methods click [Install](../installation/express-installation.md). You can install several object types in succession. Select another directory and repeat the installation.
 
 ### GeoDin licence management
 
 The following information of the current license is shown:
 
-*Serial number:* \*\*\*\*\*\*\*\*\*\*\* 10-13 digit number
+_Serial number:_ \*\*\*\*\*\*\*\*\*\*\* 10-13 digit number
 
-*Version:* For example 8.0
+_Version:_ For example 8.0
 
-*Number of available licenses:* e.g. 1 GeoDin
+_Number of available licenses:_ e.g. 1 GeoDin
 
-*Number of available modules: e.g.* 1 Premium
+_Number of available modules: e.g._ 1 Premium
 
 1 Logs
 
-**1 Site
+\*\*1 Site
 
-*Option:* e.g. Premium
+_Option:_ e.g. Premium
 
-*System edit lock:* Yes/No
+_System edit lock:_ Yes/No
 
-**Updating a license with an update file*Attention:*** *The HASP dongle has to be connected directly (local) to the PC to perform the license update! For GeoDin Version older than 9.5, only!*
+**Updating a license with an update file**_**Attention:**_ _The HASP dongle has to be connected directly (local) to the PC to perform the license update! For GeoDin Version older than 9.5, only!_
 
 Click on the folder symbol and chose your update file (for example yourSerialnumber.upd). The new license information is shown. If the information is displayed correctly, click on the icon **Change license**.
 
-After confirming the new license is installed. A new program window opens, and the new license file is installed on clicking ![Apply Update](.gitbook/assets/icons/apply-update.png) **\<Apply Update\>.**
-
+After confirming the new license is installed. A new program window opens, and the new license file is installed on clicking  **\<Apply Update>.**
 
 Do not interrupt the update process!
 
-After the message \"Update written sucessfully\" close the window.
+After the message "Update written sucessfully" close the window.
 
-***Note:*** *If you select the wrong license file the following message is shown: \"The license file was not created for the connected dongle.\"* <!-- src: help/10/5773 -->
+_**Note:**_ _If you select the wrong license file the following message is shown: "The license file was not created for the connected dongle."_
 
 ### Export object type
 
@@ -145,7 +132,7 @@ This method can be used to create a Zip File from one or more object type defini
 
 All necessary data of the object type (structure definitions, dictionaries, masks, data types and comparison lists) are included in the Zip file. Therefore select the desired object type(s). It is also possible to include a layout folder for this object type.
 
-Start the export by clicking the **Export** button. <!-- src: help/10/7142 -->
+Start the export by clicking the **Export** button.
 
 ### Configure SEP3 conversion
 
@@ -203,11 +190,11 @@ A complete field content is replaced by another.
 
 UPPER
 
-A special set of abbreviations that interchanges the main and secondary rocks if they are incorrectly used in the main or secondary rock area. Prerequisite for the execution of this translation is the activation of the setting \"Correct main rock\".
+A special set of abbreviations that interchanges the main and secondary rocks if they are incorrectly used in the main or secondary rock area. Prerequisite for the execution of this translation is the activation of the setting "Correct main rock".
 
 KLAR
 
-Exchange of plaintexts by keys corresponding to the content. <!-- src: help/10/7178 -->
+Exchange of plaintexts by keys corresponding to the content.
 
 ### Edit parameter
 
@@ -215,7 +202,7 @@ The core technology of data types is the organization and management of paramete
 
 A new parameter can be added to the currently selected parameter group.
 
-***Database Area:*Parameter name/long name**
+\*\*_Database Area:Parameter name/long name_
 
 Long name of the parameter, can be of 140 characters.
 
@@ -257,11 +244,11 @@ The field length for memo and date/time fields is set by the system.
 
 **Decimal places**
 
-Decimal places are adjustable for Double (float) and with the ***Field format*** only. The maximum is 10 and must be at least 2 places smaller than the field length.
+Decimal places are adjustable for Double (float) and with the _**Field format**_ only. The maximum is 10 and must be at least 2 places smaller than the field length.
 
 **Field format**
 
-The number of entered decimal places can be changed here once again. Enter the total field length and the number of decimal places in the format *\[fieldlength.decimalplaces\].* The number of digits before the decimal point is then calculated from the total field length, minus the digits after the decimal point and minus the one digit for the decimal separator.
+The number of entered decimal places can be changed here once again. Enter the total field length and the number of decimal places in the format _\[fieldlength.decimalplaces]._ The number of digits before the decimal point is then calculated from the total field length, minus the digits after the decimal point and minus the one digit for the decimal separator.
 
 **Example:** 3.1 for a single-figure number, a decimal mark and one decimal place (total length of the field=1 place for the single-figure numer + 1 place for the decimal mark + 1 place for the one decimal places).
 
@@ -271,7 +258,7 @@ The parameter can consist of negative values (example: redox potential). In case
 
 This option is not available for integer types.
 
-***Scale units:*Scale unit**
+\*\*_Scale units:Scale unit_
 
 no restrictions for entering a scale unit (max. 40 characters); optional
 
@@ -279,7 +266,7 @@ no restrictions for entering a scale unit (max. 40 characters); optional
 
 This is a scale unit, which can be used for metric (meter, centimeter etc.) or english (feet, inch etc.) values.
 
-***Special settings:*Options**
+\*\*_Special settings:Options_
 
 · offset (only for numeric parameters)
 
@@ -295,7 +282,7 @@ The parameter is displayed in the measurement editor, but it cannot be edited.
 
 · One- time editing/ single editing
 
-This setting causes a special behavior of the input field. If the input field is empty, a new content can be entered and edited. After completing the input with \<Enter\> or by leaving the input field, the input content is locked. It is then no longer possible to change the input. To change the existing input, the entire content must first be deleted by using the \<Enter\> key. The input field will be completely cleared. Now a new single input in this input field is possible. A use case for this option is an input field for a BarCode scanner. After reading in the BarCode, a change of the character string is to be prevented. However, a re-reading of the BarCode is possible after using the \<Del\> key.
+This setting causes a special behavior of the input field. If the input field is empty, a new content can be entered and edited. After completing the input with \<Enter> or by leaving the input field, the input content is locked. It is then no longer possible to change the input. To change the existing input, the entire content must first be deleted by using the \<Enter> key. The input field will be completely cleared. Now a new single input in this input field is possible. A use case for this option is an input field for a BarCode scanner. After reading in the BarCode, a change of the character string is to be prevented. However, a re-reading of the BarCode is possible after using the \<Del> key.
 
 · inorganic (only for numeric parameters)
 
@@ -313,7 +300,7 @@ This option conduces the handling of very small values because their registratio
 
 If this option is activated, the value of the parameter is transferred from the previous row, when a new dataset is created in the measurement value editor.
 
-***Note:*** *This option can be used only if you activate the option -copy last record- in the drop-down-menu in the options of the data set. To get there you have to use the method* ***\"Measurement data\"*** *for the data set and select the button* ***Options. This should be located on the right by default. Open the drop-down-menu with the \"Data set defaults\" and select* **copy last record***.*
+_**Note:**_ _This option can be used only if you activate the option -copy last record- in the drop-down-menu in the options of the data set. To get there you have to use the method_ _**"Measurement data"**_ _for the data set and select the button_ _Options. This should be located on the right by default. Open the drop-down-menu with the "Data set defaults" and select **copy last record**._
 
 · column fixed
 
@@ -337,7 +324,7 @@ An existing dictionary can be set for the parameter. If you want to set a new di
 
 **Dictionary input**
 
-*One key, display of the key*
+_One key, display of the key_
 
 The input field contains a button for the search in the dictionary.
 
@@ -347,7 +334,7 @@ This key will be written into the database.
 
 **Example:** Display: c1- Database content: c1
 
-*Multiple keys, display of the key*
+_Multiple keys, display of the key_
 
 The input field contains a button for the search in the dictionary.
 
@@ -359,7 +346,7 @@ The string will be written into the database.
 
 **Example:** Display: c1,c2- Database content: c1,c1
 
-*One key, display of the long text*
+_One key, display of the long text_
 
 The input field contains a button for the search in the dictionary.
 
@@ -369,7 +356,7 @@ The key belonging to the long text is going to be written into the database.
 
 **Example:** Display: musty - Database content: mo
 
-*Multiple keys, display of the long texts*
+_Multiple keys, display of the long texts_
 
 The input field contains a button for the search in the dictionary.
 
@@ -379,7 +366,7 @@ The string consisting of the comma separated keys is going to be written into th
 
 **Example:** Display: rotten/foul, musty- Database content: fa, mo
 
-*One key/standard text, display of the long text*
+_One key/standard text, display of the long text_
 
 The input field contains a button for the search in the dictionary.
 
@@ -389,7 +376,7 @@ The associated key is going to be written into the database.
 
 **Example:** Display: musty- Database content: mo
 
-*List, keys in database*
+_List, keys in database_
 
 An entry can be chosen in the flip up box.
 
@@ -397,7 +384,7 @@ The associated key is going to be written into the database.
 
 **Example:** Display: blue- Database content: bl
 
-*List, long text in database*
+_List, long text in database_
 
 An entry can be chosen in the flip up box.
 
@@ -405,7 +392,7 @@ This entry is going to be written into the database.
 
 **Example:** Display: black- Database conten: black
 
-*Proposal list, long text in database*
+_Proposal list, long text in database_
 
 An entry can be chosen in the flip up box. Any other can be entered as well.
 
@@ -419,7 +406,7 @@ If the acquisition of additional parameter information has been set for the data
 
 The entries are entered following the scheme
 
-\[name\]=\[content\].
+\[name]=\[content].
 
 The following default values can be defined:
 
@@ -467,13 +454,13 @@ Any arbitrary comment can be entered here for the parameter. This comment is onl
 
 **Set-up of the information for UBA-export**
 
-The definition of this format is based on \"Austausch von Grundwasserdaten (Annex II.x 12.04 zur Verwaltungsvereinbarung über den Datenaustausch im Umweltbereich zwischen Bund und Ländern) / Tischvorlage für die Sitzung des LAWA AK \'Optimierung des Grundwasserdienstes\' am 04.02.1999 in Chemnitz\".
+The definition of this format is based on "Austausch von Grundwasserdaten (Annex II.x 12.04 zur Verwaltungsvereinbarung über den Datenaustausch im Umweltbereich zwischen Bund und Ländern) / Tischvorlage für die Sitzung des LAWA AK 'Optimierung des Grundwasserdienstes' am 04.02.1999 in Chemnitz".
 
 To perform the export into UBA-format you have to deposit formatting information at the concerning parameters. After selecting a parameter to be exported the dialogue for editing the parameter setting will be opened.
 
-A new dialogue offering the possibility to set additional properties to a parameter can be opened with the button \"Supplements\".
+A new dialogue offering the possibility to set additional properties to a parameter can be opened with the button "Supplements".
 
-The input possibility for \"additional properties\" is interesting here. By an entry, as shown in the figure, the parameter will be qualified for the export. The structure of the entry looks like this:
+The input possibility for "additional properties" is interesting here. By an entry, as shown in the figure, the parameter will be qualified for the export. The structure of the entry looks like this:
 
 name of
 
@@ -481,16 +468,15 @@ the property measurement size no. scale unit separation code limit of determinat
 
 UBA= 1244 07 1 0.1
 
-By the identifier \"UBA=\" the property will be recognised to be necessary for the UBA-export. Measurement size no and separation code are information to be taken from the document mentioned above (table coding of the measured values and scale units for groundwater data). The target scale unit for the export is defined by the code number for the scale unit (see the document above). If necessary, a conversion may be executed during the export. The limit of determination is a standard information. If a limit of determination has been registered for the concerning parameter, it will be used for the export. Specific information, following the name of the property, are separated by comma. The decimal character for the limit of determination is the point. <!-- src: help/10/8079 -->
+By the identifier "UBA=" the property will be recognised to be necessary for the UBA-export. Measurement size no and separation code are information to be taken from the document mentioned above (table coding of the measured values and scale units for groundwater data). The target scale unit for the export is defined by the code number for the scale unit (see the document above). If necessary, a conversion may be executed during the export. The limit of determination is a standard information. If a limit of determination has been registered for the concerning parameter, it will be used for the export. Specific information, following the name of the property, are separated by comma. The decimal character for the limit of determination is the point.
 
 ### Data types
 
 Data types are in GeoDin the basis for the management of measured values related to measuring points (object, filter, sample).
 
-When creating a database, initially no data types are installed. Only by adding them in the data type manager are they set up in a database. The data types can be configured in their properties, structures and contents. The data types created and/or edited in this way then form the basis of the measured value acquisition in the specific application. <!-- src: help/10/8084 -->
+When creating a database, initially no data types are installed. Only by adding them in the data type manager are they set up in a database. The data types can be configured in their properties, structures and contents. The data types created and/or edited in this way then form the basis of the measured value acquisition in the specific application.
 
 ### Import data types
-
 
 Use this method to import data types.
 
@@ -498,18 +484,17 @@ First choose a ZIP archive, which contains the data types.
 
 All data types contained in the archive will be listed and selected automatically.
 
-With a click on the button **Import** all selected data types will be installed, inclusive of all necessary dictionaries. In the case that dictionaries already exist, only more recent ones will be replaced. <!-- src: help/10/8271 -->
+With a click on the button **Import** all selected data types will be installed, inclusive of all necessary dictionaries. In the case that dictionaries already exist, only more recent ones will be replaced.
 
 ### Export data types
 
-
 Use this method to export data types.
 
-Select the appropriate data type from the list \"Available data types\". If you start this method on a single data type, this data type will be already selected.
+Select the appropriate data type from the list "Available data types". If you start this method on a single data type, this data type will be already selected.
 
 Subsequently, please choose where you want to save the data type(s) as a ZIP archive.
 
-Dictionaries necessary for the export are also included. <!-- src: help/10/8274 -->
+Dictionaries necessary for the export are also included.
 
 ### Generate subnotes (Layer)
 
@@ -517,32 +502,31 @@ With this transforamation you can process layer data that are not stored in GeoD
 
 **Example**:
 
-GeoDin stores SEP3 borehole logs with multiple logs versions. All the layer information is stored in the table S3SCHDAT. This table also stores the borehole log version in the field INTV, along with sub-layer information and sub-layer type (SART). To output the individual log versions use the transformation \"generate sub-nodes (layers)\"
+GeoDin stores SEP3 borehole logs with multiple logs versions. All the layer information is stored in the table S3SCHDAT. This table also stores the borehole log version in the field INTV, along with sub-layer information and sub-layer type (SART). To output the individual log versions use the transformation "generate sub-nodes (layers)"
 
- Borehole
+Borehole
 
- Interval
+Interval
 
- Transformation
+Transformation
 
- Attribute
+Attribute
 
- depthTop
+depthTop
 
- depthBase
+depthBase
 
- stratigraphy <!-- src: help/10/8498 -->
+stratigraphy
 
 ### Complex data types
 
 Using complex data types hierarchal relationships between measurement data records can be defined. The following figure shows a typical structure for a complex data type:
 
-
-The data type HD1 is a complex data type with the parameters \"HD1 Param1\" und \"Sum SD1 Param 1\". The data types SD1, SD2 and SD3 are each subordinate to this data type with their own structure. A further data type SD4 is also subordinate to data type SD1. Any number of hierarchies can be configured.
+The data type HD1 is a complex data type with the parameters "HD1 Param1" und "Sum SD1 Param 1". The data types SD1, SD2 and SD3 are each subordinate to this data type with their own structure. A further data type SD4 is also subordinate to data type SD1. Any number of hierarchies can be configured.
 
 **Configuration**
 
-To configure subordinated data types there is the option **Data type groups** at the node of a datatype. To create a subordinate data type, first add a data type group to this branch and give the group a name. Groups logically combine the subordinate data types. Within a data type group you can create subordinate data types (identical to a \"normal\" datatype). These have their own parameter list and their own formulas, etc. Subordinate data types also have a data type group branch in which further data type groups and data types can be created.
+To configure subordinated data types there is the option **Data type groups** at the node of a datatype. To create a subordinate data type, first add a data type group to this branch and give the group a name. Groups logically combine the subordinate data types. Within a data type group you can create subordinate data types (identical to a "normal" datatype). These have their own parameter list and their own formulas, etc. Subordinate data types also have a data type group branch in which further data type groups and data types can be created.
 
 **Data collection**
 
@@ -550,27 +534,27 @@ In the data entry grid for measurement values, data types containing subordinate
 
 **Data import**
 
-Importing records for subordinate data types is only possible in the **\"Record and Maintain Measurements\"** method. To do this, navigate to the required subordinate data type (by expanding the branches on the superordinate dataset) and click in the subgrid of that datatype. Then select Import readings from the right toolbar and perform the import. The imported datasets are now assigned to the parent dataset.
+Importing records for subordinate data types is only possible in the **"Record and Maintain Measurements"** method. To do this, navigate to the required subordinate data type (by expanding the branches on the superordinate dataset) and click in the subgrid of that datatype. Then select Import readings from the right toolbar and perform the import. The imported datasets are now assigned to the parent dataset.
 
 **Using Formulae**
 
 Using formulae in a subordinate data type is straightforward. A special case is where formulae in superordinate data types reference child data types (e.g. statistics in thesuperordinate data type based on values in a subordinate data type).
 
-For the target field \"Sum SD1 Param 1\" in the above example the following formula is defined:
+For the target field "Sum SD1 Param 1" in the above example the following formula is defined:
 
-\$SUM\>SD1:SD1P1\$
+$SUM>SD1:SD1P1$
 
-This formula calculates the sum of all the values of the parameters \"SD1 Param 1\" from all subordinated data records.
+This formula calculates the sum of all the values of the parameters "SD1 Param 1" from all subordinated data records.
 
-For the target field \"Mean SD4\" in the data type SD4 \" in the above example the following formula is defined:
+For the target field "Mean SD4" in the data type SD4 " in the above example the following formula is defined:
 
-\$MEAN\>SD4:SD4P1\$
+$MEAN>SD4:SD4P1$
 
-This formula calculates the mean value oft he parameters \"SD4 Param 1\" from all subordinated data records.
+This formula calculates the mean value oft he parameters "SD4 Param 1" from all subordinated data records.
 
 The syntax of the parameter relationship to a subordinated data type is as follows:
 
-\$STAT\>DAT:PARAM\$
+$STAT>DAT:PARAM$
 
 STAT = statistic function; DAT:PARAM = parameter of the subordinated data type
 
@@ -594,17 +578,16 @@ VARIANCECOEFF - Variance coefficient
 
 **Conditions for data records of subordinate data types**
 
-When calculating statistical values all subordinate data records are included by default. If only part of these data records are to be used, a condition with the operator %COND\[condition\] can be defined, which appears before the statistical function:
+When calculating statistical values all subordinate data records are included by default. If only part of these data records are to be used, a condition with the operator %COND\[condition] can be defined, which appears before the statistical function:
 
 **Example:**
 
-\$**%COND\[#SD1QL#=3\]**SUM\>SD1:SD1P1\$
+$\*\*%COND\[#SD1QL#=3]\*\*SUM>SD1:SD1P1$
 
-The condition (logical expression) is defined inside the brackets \[\] and can only reference data fields of subordinate data types. Please note the following:
+The condition (logical expression) is defined inside the brackets \[] and can only reference data fields of subordinate data types. Please note the following:
 
-1.  Referencing a parameter in a condition is done without naming the data type (in the example the parameter SD1QL)
-
-2.  Referencing a parameter in a condition is done between \# symbols (instead of the \$ signs)
+1. Referencing a parameter in a condition is done without naming the data type (in the example the parameter SD1QL)
+2. Referencing a parameter in a condition is done between # symbols (instead of the $ signs)
 
 In the example above the sum of the parameter SD1P1 is calculated using only data records from the data field SD1QL with the value 3.
 
@@ -614,35 +597,33 @@ Active formulae are calculated automatically in the measurement value editor. If
 
 When performing calculations in subordinate data types, data fields in superior data types can be referenced Example:
 
-
 **1**
 
-In the data type \"Complex Child\" a formula takes a value from the column \"Value for child record\" of the data type \"Complex Master\" and transcribes it to the column \"Value from parent record\". In this example a value is simply copied, but mathematical calculations are also possible.
+In the data type "Complex Child" a formula takes a value from the column "Value for child record" of the data type "Complex Master" and transcribes it to the column "Value from parent record". In this example a value is simply copied, but mathematical calculations are also possible.
 
 **2**
 
-In the data type \"Complex Child\" another formula takes a value from the column \"Value from parent record\" and multiplies it with a value from the column \"Child Parameter 2\" and writes it to the column \"Parent value \* Child Parameter 2\".
+In the data type "Complex Child" another formula takes a value from the column "Value from parent record" and multiplies it with a value from the column "Child Parameter 2" and writes it to the column "Parent value \* Child Parameter 2".
 
 **3**
 
-The parent data type \"Complex Master\" can contain formulae that reference columns in subordinted data types that are first calculated. This is shown in the example the sum of the values of the column \"Parent value \* Child Parameter 2\" for the target column \"Statistic for child records\" in the data type \"Complex Master\". This value is also be automatically recalculated.
+The parent data type "Complex Master" can contain formulae that reference columns in subordinted data types that are first calculated. This is shown in the example the sum of the values of the column "Parent value \* Child Parameter 2" for the target column "Statistic for child records" in the data type "Complex Master". This value is also be automatically recalculated.
 
 The process is as follows:
 
-A change to a value in a data record in \"Complex Master\" causes formulae of the data type \"Complex Child\" to carry out calculations for all subordinate data records leading to new values in the columns \"Value from parent record\" **(1)** and \"Parent value \* Child Parameter 2\" **(2)**.
+A change to a value in a data record in "Complex Master" causes formulae of the data type "Complex Child" to carry out calculations for all subordinate data records leading to new values in the columns "Value from parent record" **(1)** and "Parent value \* Child Parameter 2" **(2)**.
 
-In a further step, formulae of the data type \"Complex Master\" perform calculations for the changed data record, referencing the values just calculated in the subordinate data type **(3)**.
+In a further step, formulae of the data type "Complex Master" perform calculations for the changed data record, referencing the values just calculated in the subordinate data type **(3)**.
 
 Following this calculations in superior data types higher up the hierarchy are carried out. This is not shown in the example.
 
-Formula calculations in subordinate data types cascade down to the lowest level data type. Please note that in Step **3** this is only performed for the (manually) changed data. A looped calculation is only possible for the first subordinate level of a changed data record and always ends with Step 3. The value from the column \"Statistic for child records\" in the data type \"Complex Master\" cannot be used for formulae calculations in the data type \"Complex Child\".
+Formula calculations in subordinate data types cascade down to the lowest level data type. Please note that in Step **3** this is only performed for the (manually) changed data. A looped calculation is only possible for the first subordinate level of a changed data record and always ends with Step 3. The value from the column "Statistic for child records" in the data type "Complex Master" cannot be used for formulae calculations in the data type "Complex Child".
 
 **Use in reports and diagrams**
 
 The parameters of the subordinate data types can be referenced as usual in reports and diagrams. References to parameters of subordinate data types result in summary data records, including the contents of the superordinate data records. The following report shows an example:
 
-
-The number of data records in the report for sample P1 is defined by the number of data records in the subordinate (child) data type SD4. For the sample P2 the number of data records in the subordinate (child) data type SD1 are relevant, because no values are present in the data type SD4. <!-- src: help/10/8892 -->
+The number of data records in the report for sample P1 is defined by the number of data records in the subordinate (child) data type SD4. For the sample P2 the number of data records in the subordinate (child) data type SD1 are relevant, because no values are present in the data type SD4.
 
 ### Object type formulas
 
@@ -652,21 +633,18 @@ The following formulas bundle a number of functions with which geodata can be sp
 
 The syntax/grammar of these formulas can be briefly summarised as follows.
 
-1.  the formula begins with \$%EGIS
-
-2.  in simple brackets, the various parameters of the formula can be configured. The parameters are permitted as key-value pairs with spaces.
-
-3.  the formula ends with \$
-
-4.  a fixed parameter is the \"Method\" parameter. The value of this parameter decides which method of formula execution is to be used.
+1. the formula begins with $%EGIS
+2. in simple brackets, the various parameters of the formula can be configured. The parameters are permitted as key-value pairs with spaces.
+3. the formula ends with $
+4. a fixed parameter is the "Method" parameter. The value of this parameter decides which method of formula execution is to be used.
 
 **Structure example of a formula:**
 
-*\$%EGIS(METHOD=XYZ Param1=Value1 Param2=Value2 \... )\$*
+_$%EGIS(METHOD=XYZ Param1=Value1 Param2=Value2 ... )$_
 
 **Conversion of coordinatesExample:**
 
-\$%EGIS(METHOD=TRANSFORMCOORD Result=X X=XCOORD Y=YCOORD EPSG=EPSG DESTEPSG=3068)\$
+$%EGIS(METHOD=TRANSFORMCOORD Result=X X=XCOORD Y=YCOORD EPSG=EPSG DESTEPSG=3068)$
 
 **Method**
 
@@ -678,23 +656,23 @@ Which calculation result is to be transferred to the target of the formula (in t
 
 **X**
 
-Specifies which data field is to be used as input value for X (***example:*** XCOORD).
+Specifies which data field is to be used as input value for X (_**example:**_ XCOORD).
 
 **Y**
 
-Specifies which data field is to be used as input value for Y (***example:*** YCOORD).
+Specifies which data field is to be used as input value for Y (_**example:**_ YCOORD).
 
 **EPSG**
 
-Indicates which data field contains the underlying coordinate system (***example:*** EPSG).
+Indicates which data field contains the underlying coordinate system (_**example:**_ EPSG).
 
 **DESTEPSG**
 
-Specifies the target coordinate system to be transformed into (***example:*** 3068 Soldner Berlin).
+Specifies the target coordinate system to be transformed into (_**example:**_ 3068 Soldner Berlin).
 
 **Derive values from a GIS fileExample:**
 
-\$EGIS(METHOD=GETPOINTVALUE X=XCOORD Y=YCOORD SOURCE=GROUNDWATER EPSG=EPSG)\$
+$EGIS(METHOD=GETPOINTVALUE X=XCOORD Y=YCOORD SOURCE=GROUNDWATER EPSG=EPSG)$
 
 **Method**
 
@@ -708,15 +686,15 @@ In this way, e.g. names of districts, planning areas, TK numbers etc. can be aut
 
 **X**
 
-Indicates which data field contains the X-value (***example:*** XCOORD).
+Indicates which data field contains the X-value (_**example:**_ XCOORD).
 
 **Y**
 
-Indicates which data field contains the Y-value (***example:*** YCOORD).
+Indicates which data field contains the Y-value (_**example:**_ YCOORD).
 
 **EPSG**
 
-Indicates which data field contains the underlying coordinate system (***example:*** EPSG).
+Indicates which data field contains the underlying coordinate system (_**example:**_ EPSG).
 
 **SOURCE**
 
@@ -730,41 +708,39 @@ GROUNDWATERFIELD= Name of the attribute column in the shape or GeoJSON
 
 **Example:**
 
-GROUNDWATER=C:\\GISData\\GW-Model\\gw2020.shp
+GROUNDWATER=C:\GISData\GW-Model\gw2020.shp
 
 GROUNDWATERFIELD=MAXGW
 
-***Note:*** *If no additional reference is specified under SOURCE, GeoDin automatically tries to find a GeoJSON file (\*.geojson) with the name of the target field of the formula in the Syslib directory of the GeoDin installation. The attribute field from which the data is returned to the database must have the same name in the GeoJSON as the target field of the formula.* <!-- src: help/10/11301 -->
+_**Note:**_ _If no additional reference is specified under SOURCE, GeoDin automatically tries to find a GeoJSON file (\*.geojson) with the name of the target field of the formula in the Syslib directory of the GeoDin installation. The attribute field from which the data is returned to the database must have the same name in the GeoJSON as the target field of the formula._
 
 ### User management
 
 The visibility/usability of various methods and functions can be restricted via the user administration.
 
-By default, the option *-*All- is activated - i.e. no restriction.
+By default, the option \*-\*All- is activated - i.e. no restriction.
 
-Via the option -User groups-, the functionality can be explicitly released for certain *groups or individual users*.
+Via the option -User groups-, the functionality can be explicitly released for certain _groups or individual users_.
 
 This is used, for example, for methods, system databases or queries.
 
-The creation of users and groups is described in the chapter on **User settings**. <!-- src: help/10/11348 -->
+The creation of users and groups is described in the chapter on **User settings**.
 
 ### document types
 
- **Document type**
+**Document type**
 
 Here you can determine whether documents may be added to the system database.
 
-If only certain document types are to be allowed, the checkbox *\[Allow only registered document types\]* can be selected. Then the document types must be defined.
+If only certain document types are to be allowed, the checkbox _\[Allow only registered document types]_ can be selected. Then the document types must be defined.
 
 To register a document type, the corresponding file extension is specified, e.g. PDF or JPG. In the next field, settings for the compression of the file can be made. The following options are available:
 
-1.  User defined
+1. User defined
+2. Always save compressed
+3. Always save uncompressed
 
-2.  Always save compressed
-
-3.  Always save uncompressed
-
-In addition, it can also be specified for the document type whether saving in the database, file links are allowed and editing is permitted. Furthermore, the maximum document size and certain document descriptions can be specified. <!-- src: help/10/11375 -->
+In addition, it can also be specified for the document type whether saving in the database, file links are allowed and editing is permitted. Furthermore, the maximum document size and certain document descriptions can be specified.
 
 ### Object frame query
 
@@ -772,4 +748,4 @@ Object frame queries are created like a [System query](../data-analysis/queries/
 
 At an object frame, any number of queries can be created. Each query has to be given a unique name. In the graphic objects, the queries are adressed with these names to collect the required data for the graphic element.
 
-All queries for an object frame are managed in an open list. After making changes to a query, it is possible to re-execute the query with the \<Refresh all queries\> button to refresh the view in the layout. All queries are executed and the displayed graphic is recalculated. <!-- src: help/10/11500 -->
+All queries for an object frame are managed in an open list. After making changes to a query, it is possible to re-execute the query with the \<Refresh all queries> button to refresh the view in the layout. All queries are executed and the displayed graphic is recalculated.

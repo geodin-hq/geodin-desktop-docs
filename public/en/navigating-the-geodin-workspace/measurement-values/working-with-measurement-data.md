@@ -2,12 +2,6 @@
 description: Working with Measurement Data
 ---
 
-<!--
-**Content status:** Auto-assembled from product documentation
-**Source quality:** B (Moderate (single source type))
-**Needs:** needs legacy verification, needs screenshots, needs examples, editorial review
--->
-
 # Working with Measurement Data
 
 ### Measurement values
@@ -16,27 +10,27 @@ description: Working with Measurement Data
 
 GeoDin organizes objects spatially. These are point objects with or without a depth value. At these objects measurements can be made. In order to use GeoDin to collect such data, measurement points need to be defined in the general data. Usually filters and sample intervals are used as measurement points. Also the object itself can be defined as a measurement point. In the GeoDin object manager measurement points are shown by three blue spheres.
 
- GeoDin Demo Project
+GeoDin Demo Project
 
- Object
+Object
 
- All objects
+All objects
 
- General borehole log
+General borehole log
 
- Measurement point
+Measurement point
 
- filters
+filters
 
- upper piezometer: (4.3-6.3m)
+upper piezometer: (4.3-6.3m)
 
- lower piezometer (7.8-8.7m)
+lower piezometer (7.8-8.7m)
 
- samples
+samples
 
- BH01: (1-7m)
+BH01: (1-7m)
 
- BH01: (4-5m)
+BH01: (4-5m)
 
 **Terminology**
 
@@ -64,40 +58,39 @@ Queries are used within projects or databases to interrogate data. They define t
 
 **Special values**
 
-GeoDin organizes measurement values as numerical entries. Hence values below a detection limit cannot be saved as the character „\<". In such cases a negative detection limit is entered (e.g. \"-1\"). These values are ignored by statistical analyses. If the detection limit is unknown (e.g. old data) the value\"-88\" is used. If the value is not detectable then\"-99\" should be entered:
+GeoDin organizes measurement values as numerical entries. Hence values below a detection limit cannot be saved as the character „<". In such cases a negative detection limit is entered (e.g. "-1"). These values are ignored by statistical analyses. If the detection limit is unknown (e.g. old data) the value"-88" is used. If the value is not detectable then"-99" should be entered:
 
-  ------- ---------------------------------------------------------
-  Entry   Description
+***
 
-  -XX     beneath detection limit (XX = detection limit)
-  -88     beneath detection limit (detection limit value unknown)
+Entry Description
 
-  -99     not detectable
+-XX beneath detection limit (XX = detection limit) -88 beneath detection limit (detection limit value unknown)
 
-  ------- --------------------------------------------------------- <!-- src: help/04/3752 -->
+-99 not detectable
+
+\------- ---------------------------------------------------------
 
 ### Measurement data
 
-If an object is selected in the GeoDin Object Manager, for which measurement values can be entered, the method ![Measurement value management](.gitbook/assets/icons/measurement-value-management.png) **\"Measurement value management\"** is available.
-
+If an object is selected in the GeoDin Object Manager, for which measurement values can be entered, the method  **"Measurement value management"** is available.
 
 The main elements of the measurement value editor are:
 
-A complex **Data sheet**, the **Top tool bar**, the **Right tool bar** and the status bar. <!-- src: help/04/3791 -->
+A complex **Data sheet**, the **Top tool bar**, the **Right tool bar** and the status bar.
 
 ### Data sheet
 
 The database grid shows the available measurement values. Depending on the object type definition and database configuration, one or more data types may be used for an individual measurement point. Each data type has its own database sheet - you can move between them using Ctrl+Tab, or just click the appropriate sheet.
 
-Each data type has **\"Measurement program\"** and **\"View\"** settings. At the bottom of the grid there are small tabs with **\"Parameter groups\"** (containing the individual parameters), **\"Diagrams and analysis\"** and **\"Additional measurement information\"**.
+Each data type has **"Measurement program"** and **"View"** settings. At the bottom of the grid there are small tabs with **"Parameter groups"** (containing the individual parameters), **"Diagrams and analysis"** and **"Additional measurement information"**.
 
 The basic use of the data input grid as well as the management of views is described in the chapter [Using the data entry grid](working-with-measurement-data.md).
 
-The parameter of a data type are arranged in so-called parameter groups. This option an be shown as a tab under the data entry grid, where the parameter columns are also displayed in groups. With the option turned off, this ordering is ignored and all data type parameters are shown. The number of displayed parameters can be further restricted by the choice of **\"Measurement program\"** which are a definable selection of named parameters that can be created for data types in the [Measurement program](working-with-measurement-data.md). In addition to the current measurement program there are the collections **\"All parameters\"** (no parameter restrictions) and **\"Used parameters\"** (display of parameters with values in the database). A further way to customize the display in the number and order of parameters is the use of the top left button to select the columns and moving the columns with the mouse. <!-- src: help/04/3800 -->
+The parameter of a data type are arranged in so-called parameter groups. This option an be shown as a tab under the data entry grid, where the parameter columns are also displayed in groups. With the option turned off, this ordering is ignored and all data type parameters are shown. The number of displayed parameters can be further restricted by the choice of **"Measurement program"** which are a definable selection of named parameters that can be created for data types in the [Measurement program](working-with-measurement-data.md). In addition to the current measurement program there are the collections **"All parameters"** (no parameter restrictions) and **"Used parameters"** (display of parameters with values in the database). A further way to customize the display in the number and order of parameters is the use of the top left button to select the columns and moving the columns with the mouse.
 
 ### Additional measurement information
 
-***ATTENTION:*** *Additional data for a measured value can only be attributed to an existing measured value. If additional information is entered although no measured value is available, it will not be included in the current data set. If an attributed measured value is deleted, its additional information is also removed.*
+_**ATTENTION:**_ _Additional data for a measured value can only be attributed to an existing measured value. If additional information is entered although no measured value is available, it will not be included in the current data set. If an attributed measured value is deleted, its additional information is also removed._
 
 **Additional information - Measurement value**
 
@@ -105,7 +98,7 @@ By selecting this option additional information to the actual measurement value 
 
 **•** Additional character
 
-Alternative to recording the negative value instead of a measurement value below the detection limit also the additional symbol "\<" can be entered. At all places in GeoDin where the values below the detection limit are treated different, both methods of displaying values below the detection limit are considered equally.
+Alternative to recording the negative value instead of a measurement value below the detection limit also the additional symbol "<" can be entered. At all places in GeoDin where the values below the detection limit are treated different, both methods of displaying values below the detection limit are considered equally.
 
 In the measurement value editor a record can be visualized by a colored mark of the particular value (**Display options**).
 
@@ -125,70 +118,67 @@ Using this information is sensible mainly for management of the chemical paramet
 
 On this side the laboratory information is stored:
 
-1.  Laboratory
+1. Laboratory
 
 Information about the analyzing laboratory ([Investigation method](../object-types/geotechnical-investigation-en-iso-22475.md))
 
-1.  Sample number
+1. Sample number
 
 Number of the sample in the laboratory
 
-1.  Detection limit
+1. Detection limit
 
 Detection limit of the used analyzing method
 
-1.  Confidence interval
+1. Confidence interval
 
 Confidence interval of the investigated measurement value (+/- most reasonable fluctuation range)
 
-1.  Matrix
+1. Matrix
 
 Matrix used for the sample investigation ([Investigation method](../object-types/geotechnical-investigation-en-iso-22475.md)).
 
-1.  Extraction
+1. Extraction
 
 Method of extraction
 
-1.  Date und time
+1. Date und time
 
 Time of the measurement in the laboratory
 
-1.  Plausibility
+1. Plausibility
 
 Information about the plausibility of the measurement value
 
 Auf der Seite der Ergänzungen werden verwaltet:
 
-1.  Sample preparation
+1. Sample preparation
 
 Information about the preparation of the sample for the laboratory analysis
 
-1.  Reference to the result
+1. Reference to the result
 
 Reference to the result
 
-1.  Interpretation
+1. Interpretation
 
-Interpretation of the measured value <!-- src: help/04/3805 -->
+Interpretation of the measured value
 
 ### Formula
 
-
 As an alternative to presenting the measurement values in grid form you may view the current data set in a mask. At the top of the mask the general sample data (Name, Date, Time) and the group are displayed. Below the individual parameters for the current data set are listed in rows. For each parameter the name, measurement value, unit, detection limit and investigation method are shown. Name and unit are not editable.\
 \
-The contents of a data set can be saved as a simple text file (which can be subsequently loaded). By pressing the **OK** button the mask contents are saved to the data set - by pressing **Cancel** the contents are discarded. Optionally the short field name can be used for the parameter column. <!-- src: help/04/3822 -->
+The contents of a data set can be saved as a simple text file (which can be subsequently loaded). By pressing the **OK** button the mask contents are saved to the data set - by pressing **Cancel** the contents are discarded. Optionally the short field name can be used for the parameter column.
 
 ### Location point link
-
 
 Each data set is internally linked to a measurement point. This classification relationship can be changed in the measurement editor. If opened by clicking the icon, a list of all objects in the current group or query is shown.
 
 After choosing a measurement point and the method (**Move** updates the classification, so that in the original object the measurement values do no longer exist; **Copy** duplicates the measurement values) reclassification is the carried out by clicking **OK**. Reload the object to see this displayed.
 
-If several measurement points are selected when the reclassification is carried out, all these measurement points are reclassified. <!-- src: help/04/3824 -->
+If several measurement points are selected when the reclassification is carried out, all these measurement points are reclassified.
 
 ### Combine data sets
-
 
 With many data sets you may encounter identical sample names, dates and times, although the contents (measured values) are different. This can occur when different laboratories have performed different analyses on the same samples and the values were imported into your database separately. In case such data sets belong together they may be combined. Upon starting this function the data sets are analyzed in the measurement value editor and a list is generated for those data sets, which can be combined. There is an option to include the sample name too.
 
@@ -196,12 +186,11 @@ If a data set is to be excluded, then it can be removed from the list by clickin
 
 By choosing **OK** the data sets will be combined.
 
-***Attention:*** *If parameters are present in several data sets with different values, then the data sets will not be combined. If the values are identical however then the data sets will be combined.* <!-- src: help/04/3827 -->
+_**Attention:**_ _If parameters are present in several data sets with different values, then the data sets will not be combined. If the values are identical however then the data sets will be combined._
 
 ### Measurement value editor options
 
-
-On several tabs there are options to control the way you use the measurement value editor. <!-- src: help/04/3865 -->
+On several tabs there are options to control the way you use the measurement value editor.
 
 ### Data model
 
@@ -213,25 +202,23 @@ As an investigation type the point or interval from which it was measured is con
 
 Data fields
 
-  ---------- ----------------------------------------------------------------------------------------
-  INV_TYPE   Abbreviation (three letters) for a unique identification of the measurement point type
-  INV_NAME   Long name to describe the measurement point type
-  INV_OPT    System options
+***
 
-  ---------- ----------------------------------------------------------------------------------------
+INV\_TYPE Abbreviation (three letters) for a unique identification of the measurement point type INV\_NAME Long name to describe the measurement point type INV\_OPT System options
 
-The definition of the data types occurs in the table DAT_TYPES. Here each data type occurs only once. Only data types registered in this table can be linked to a measurement point type.
+***
+
+The definition of the data types occurs in the table DAT\_TYPES. Here each data type occurs only once. Only data types registered in this table can be linked to a measurement point type.
 
 **Registration of a data type (DATTYPES)**
 
 Data fields
 
-  ---------- -----------------------------------------------------------------------
-  DAT_TYPE   Abbreviation (three letters) for a unique identification of data type
-  DAT_NAME   Long name to describe the data type
-  DAT_OPT    System options
+***
 
-  ---------- -----------------------------------------------------------------------
+DAT\_TYPE Abbreviation (three letters) for a unique identification of data type DAT\_NAME Long name to describe the data type DAT\_OPT System options
+
+***
 
 **Linking data types to investigation types (INVTABS)**
 
@@ -239,11 +226,11 @@ For data types measurement and investigation parameters are grouped together acc
 
 Data fields
 
-  ---------- ----------------------------------------------------------------------------------------
-  INV_TYPE   Abbreviation (three letters) for a unique identification of the measurement point type
-  DAT_TYPE   Abbreviation (three letters) for a unique identification of data type
+***
 
-  ---------- ----------------------------------------------------------------------------------------
+INV\_TYPE Abbreviation (three letters) for a unique identification of the measurement point type DAT\_TYPE Abbreviation (three letters) for a unique identification of data type
+
+***
 
 **Registration of a chemical group (STFGRP)**
 
@@ -251,23 +238,19 @@ There are a variable number of measurement parameters for each data type. These 
 
 Data fields
 
-  ----------- --------------------------------------------------------------------------------
-  DAT_TYPE    Abbreviation (three letters) for a unique identification of the data type
-  FIELD_GRP   Abbreviation (three letters) for a unique identification of the chemical group
-  GRP_NAME    Long name to describe the chemical group
-  GRP_CNT     Counter
-  GRP_OPT     System options
-  TAB_DESC    Table descriptor, in which the chemical group is physically contained
+***
 
-  ----------- --------------------------------------------------------------------------------
+DAT\_TYPE Abbreviation (three letters) for a unique identification of the data type FIELD\_GRP Abbreviation (three letters) for a unique identification of the chemical group GRP\_NAME Long name to describe the chemical group GRP\_CNT Counter GRP\_OPT System options TAB\_DESC Table descriptor, in which the chemical group is physically contained
 
-The contents of the field TAB_DESC must agree with the structure definitions in the table MESSTRS, associated with the chemical group. The contents cannot be longer than 8 characters and must conform to the DOS file naming conventions. Up to 12 Chemical groups can be combined in a database table.
+***
+
+The contents of the field TAB\_DESC must agree with the structure definitions in the table MESSTRS, associated with the chemical group. The contents cannot be longer than 8 characters and must conform to the DOS file naming conventions. Up to 12 Chemical groups can be combined in a database table.
 
 **Structure of the data tables (MESSTRS)**
 
 The structures of the measurement data tables are contained in the table MESSTRS. The structure of this table conforms to the table structure of LOCSTRS (see above).
 
-The contents of the field TAB_DESC must agree with the structure definitions in the table STFGRP. The contents cannot contain more than 8 characters and must conform to the DOS file naming conventions. The field FIELD_GRP must show a valid entry from the table STFGRP.
+The contents of the field TAB\_DESC must agree with the structure definitions in the table STFGRP. The contents cannot contain more than 8 characters and must conform to the DOS file naming conventions. The field FIELD\_GRP must show a valid entry from the table STFGRP.
 
 **Pool Object Data**
 
@@ -277,53 +260,44 @@ Object registration LOCREG
 
 In this table every object is registered with one data set (independently of the object type).
 
-  ----------- --------------------------------------------------------------------------------------
-  PRJ_ID      Project ID
-  LOCID       Up to 4 digit number (running counter) for each object in the project values: 1-9998
-  LOCTYPE     Contains descriptor of the object type
-  INVID       is an exact 16 character long string with the measurement point number:
+***
 
-              zzzzzzxxxxyyy000
+PRJ\_ID Project ID LOCID Up to 4 digit number (running counter) for each object in the project values: 1-9998 LOCTYPE Contains descriptor of the object type INVID is an exact 16 character long string with the measurement point number:
 
-              zzzzzz is the Project ID
-              xxxx is the 4 digit LOCID filled up with zeros (e.g. 0025)
-              yyy is the ID of the investigation type
-              Project ID
+```
+          zzzzzzxxxxyyy000
 
-  OPT_PARAM   empty
-  XCOORD      X coordinate
-  YCOORD      Y coordinate
-  ZCOORDB     Object absolute height
-  ZCOORDE     End depth in meters below ground surface (for depth related objects)
-  SHORTNAME   is the Short name for the object
-  LONGNAME    is the Long name for the object
-  PHYSFILE    Name of the object file (only in GeoDin standard projects)
-  LOCKINFO    empty
+          zzzzzz is the Project ID
+          xxxx is the 4 digit LOCID filled up with zeros (e.g. 0025)
+          yyy is the ID of the investigation type
+          Project ID
+```
 
-  ----------- --------------------------------------------------------------------------------------
+OPT\_PARAM empty XCOORD X coordinate YCOORD Y coordinate ZCOORDB Object absolute height ZCOORDE End depth in meters below ground surface (for depth related objects) SHORTNAME is the Short name for the object LONGNAME is the Long name for the object PHYSFILE Name of the object file (only in GeoDin standard projects) LOCKINFO empty
+
+***
 
 \
 Measurement point registration for developed measurement points FILREG
 
 In this table all developed measurement points of a project are organized (e.g. monitoring wells). A object may contain several measurement points.
 
-  --------- ------------------------------------------------------------------------------------------------------
-  LOCID     ID number of the object
-  RECID     Counter of developed measurement points per object
-  INVID     Measurement point ID number
+***
 
-            zzzzzzxxxxyyynnnn
+LOCID ID number of the object RECID Counter of developed measurement points per object INVID Measurement point ID number
 
-            zzzzzz is the Project ID
-            xxxx is the 4 digit LOCID filled up with zeros (e.g. 0025)
-            yyy is the ID of the investigation type
-            nnnn is xxxx is the 4 digit counter filled up with zeros for developed measurement points per object
+```
+        zzzzzzxxxxyyynnnn
 
-  INVZBEG   Top of the measurement point in meters below ground surface
-  INVZEND   Bottom of the measurement point in meters below ground surface
-  INVNAME   Name of the measurement point
+        zzzzzz is the Project ID
+        xxxx is the 4 digit LOCID filled up with zeros (e.g. 0025)
+        yyy is the ID of the investigation type
+        nnnn is xxxx is the 4 digit counter filled up with zeros for developed measurement points per object
+```
 
-  --------- ------------------------------------------------------------------------------------------------------
+INVZBEG Top of the measurement point in meters below ground surface INVZEND Bottom of the measurement point in meters below ground surface INVNAME Name of the measurement point
+
+***
 
 Measurement point registration for undeveloped measurement points PRBREG
 
@@ -336,56 +310,39 @@ In the GeoDin system version 3 or better a further data model is available for m
 To combat the disadvantages mentioned above a second data model was developed in GeoDin, the Large Data Model (LDM). This model organizes the data parameter wise, i.e. in the measurement value table each value is contained in a row. Through this form of effective data organization there are no empty spaces and remains small even with large numbers of parameters. Additional parameters can be added to the table by a simple redefinition as opposed to a restructuring in the SDM. The conversion from one data model to the other is carried out in the data type model and is reversible.\
 The actual values are kept in three tables in the Large Data Model, optimized for the particular type of parameter. There individual tables for values, text and dates. The LDM table structure is shown below:
 
-Table of numerical values: \<DATATYPE\>VAL01
+Table of numerical values: \<DATATYPE>VAL01
 
-  ------------------------------- ----------- ------------ -------------- ----------------------------
-  FIELD_NAMEFIELD_TYPEFIELD_LEN   FIELD_DEC   FIELD_LONG
-  INVID                           C           16                          Measurement point ID
-  SMPID                           N           9                           GeoDin Sample ID
-  PARAM_DESC                      C           8            Parameter ID
-  MESCHAR                         C           1                           Additional character
-  MESVALUE                        N           20           8              Measurement value
-  MESUNIT                         C           15                          Measurement unit
-  MESSENSIB                       N           20                          Detection limit
-  METHODID                        N           9                           Investigation method
-  MESOPT                          N           9                           Measurement - option
-  MESSIGNIF                       C           10                          Measurement - significance
+***
 
-  ------------------------------- ----------- ------------ -------------- ----------------------------
+FIELD\_NAMEFIELD\_TYPEFIELD\_LEN FIELD\_DEC FIELD\_LONG INVID C 16 Measurement point ID SMPID N 9 GeoDin Sample ID PARAM\_DESC C 8 Parameter ID MESCHAR C 1 Additional character MESVALUE N 20 8 Measurement value MESUNIT C 15 Measurement unit MESSENSIB N 20 Detection limit METHODID N 9 Investigation method MESOPT N 9 Measurement - option MESSIGNIF C 10 Measurement - significance
 
-Table of text values: \<DATATYPE\>TXT01
+***
 
-  ------------ ------------ ----------- -------------- -----------------------------
-  FIELD_NAME   FIELD_TYPE   FIELD_LEN   FIELD_DEC      FIELD_LONG
+Table of text values: \<DATATYPE>TXT01
 
-  INVID        C            16                         GeoDin measurement point ID
-  SMPID        N            9                          GeoDin Sample ID
-  PARAM_DESC   C            8           Parameter ID
-  MESTEXT      C            254                        Text entry
-  MESOPT       N            9                          Measurement - option
+***
 
-  ------------ ------------ ----------- -------------- -----------------------------
+FIELD\_NAME FIELD\_TYPE FIELD\_LEN FIELD\_DEC FIELD\_LONG
 
-Table of text values: \<DATATYPE\>DAT01
+INVID C 16 GeoDin measurement point ID SMPID N 9 GeoDin Sample ID PARAM\_DESC C 8 Parameter ID MESTEXT C 254 Text entry MESOPT N 9 Measurement - option
 
-  ------------ ------------ ----------- -------------- -----------------------------
-  FIELD_NAME   FIELD_TYPE   FIELD_LEN   FIELD_DEC      FIELD_LONG
+***
 
-  INVID        C            16                         GeoDin measurement point ID
-  SMPID        N            9                          GeoDin Sample ID
-  PARAM_DESC   C            8           Parameter ID
-  MESDATE      D            8                          Date entry
-  MESOPT       N            9                          Measurement - option
+Table of text values: \<DATATYPE>DAT01
 
-  ------------ ------------ ----------- -------------- -----------------------------
+***
+
+FIELD\_NAME FIELD\_TYPE FIELD\_LEN FIELD\_DEC FIELD\_LONG
+
+INVID C 16 GeoDin measurement point ID SMPID N 9 GeoDin Sample ID PARAM\_DESC C 8 Parameter ID MESDATE D 8 Date entry MESOPT N 9 Measurement - option
+
+***
 
 **Object type - Measurement point - Investigation type - Data type - Chemical group - Parameter**
 
 In the definition of a object any investigation type may be defined for every measurement point type. An investigation type is basically a combination of data types. Data types are the sum of the investigation parameters that are individually related by the time/date of the measurement and or the investigation type (chemical laboratory measurement, in-situ measurement, geotechnical measurement). Chemical groups are logical arrangements in a data type (for example anions in the data type groundwater chemistry). Parameters of individual chemical groups are shown in GeoDin in various masks as "views".
 
-
 Fig.1: Relation between general data and the measurement values
-
 
 Fig 2: Relationship between object type - measurement point type and investigation type - data type general data\
 \
@@ -414,18 +371,17 @@ The individual investigation types, based on the three types of measurement poin
 
 Both undeveloped and developed measurement points are related via their depth information to a object. In the following example three types of measurement points are shown in the graph of a borehole and water well.
 
-
 There are
 
-1\. the measurement point type \"Object\"
+1\. the measurement point type "Object"
 
 The relation in this case is a borehole. All measurement values, which are related to the borehole and have no depth values, are related here. This can be mixed water from the pipes or measurement values of the place, where the borehole is brought down (plants etc.).
 
-2\. the measurement point type \"Undeveloped measurement point\"
+2\. the measurement point type "Undeveloped measurement point"
 
 It is measured related to a filter pipe, which is again representing a certain aquifer. Also related to the filter is the information about its construction. Normally in time intervals samples are taken.
 
-3\. the measurement point type \"Developed measurement point\"
+3\. the measurement point type "Developed measurement point"
 
 During the boring samples are taken and investigation results were achieved. The samples are only taken once but examined several times. The sample is sufficiently described by the depth, from which it is taken. Additional information is given about the sample material.
 
@@ -436,14 +392,13 @@ Data types are groups of measurable parameters. The composition of each group ma
 
 **Example:**
 
-The data types groundwater chemistry and groundwater dynamics are assigned to the investigation type GWBR-Filter, although both may also be assigned in another combination to another investigation type (e.g.: groundwater chemistry, groundwater dynamics and groundwater dynamics to the investigation type Water Supply Well). <!-- src: help/04/3894 -->
+The data types groundwater chemistry and groundwater dynamics are assigned to the investigation type GWBR-Filter, although both may also be assigned in another combination to another investigation type (e.g.: groundwater chemistry, groundwater dynamics and groundwater dynamics to the investigation type Water Supply Well).
 
 ### Adding data set records
 
 **\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_**
 
-The method ![Add data set records](.gitbook/assets/icons/add-data-set-records.png) **Add data set records** is available for measurement points or groups thereof.
-
+The method  **Add data set records** is available for measurement points or groups thereof.
 
 This method is used to add data sets using a date or date list.
 
@@ -465,10 +420,9 @@ Default value is the current date, but a list of dates may be created, saved and
 
 · **Time**
 
-It may be useful to specify the same time for a number of measurement points or monitoring stages. <!-- src: help/04/3902 -->
+It may be useful to specify the same time for a number of measurement points or monitoring stages.
 
 ### Add several data sets
-
 
 This method is used to add data sets, which follow certain time intervals. An example can be pumping tests.
 
@@ -490,31 +444,31 @@ First load a time interval file (text format). In this time intervals in minutes
 
 By entering the starting time the start of the measurement series is defined. The appropriate time steps of the measurements in the data sets are calculated from the minute values of the time interval file and the start time.
 
-Optional the parameters of the target type values can be defined for a presetting. <!-- src: help/04/4246 -->
+Optional the parameters of the target type values can be defined for a presetting.
 
 ### Datatype Manager
 
-The method **\"Data Type Manager\"** is available at the database level. It is the most important tool for defining and configuring options for measurement data collection. In particular you may define here which data types (thematic groups of measurement parameters) and which measurement parameters are to be used in the current database.
+The method **"Data Type Manager"** is available at the database level. It is the most important tool for defining and configuring options for measurement data collection. In particular you may define here which data types (thematic groups of measurement parameters) and which measurement parameters are to be used in the current database.
 
- Method symbol of the Data Type Manager
+Method symbol of the Data Type Manager
 
 Since data types are related to specific objects and measurement points, they can first be configured once an object has been created in the database.
 
 The Data Type Manager gives an overview of the data types available in the current database. The following functions are available:
 
- [Add data type](../data-types.md)
+[Add data type](../data-types.md)
 
 This function allows you to add a data type to your database. This is described in more detail in Chapter [Add data type](../data-types.md).
 
- **Remove data type**
+**Remove data type**
 
-This function will remove any data records belonging to the data type selected, as well as the database tables and definitions. ***Attention:*** *Deleting measurement value data records cannot be undone! GeoDin calculates how many data records will be deleted and displays this as a warning message. This is the last point at which you may still cancel.*
+This function will remove any data records belonging to the data type selected, as well as the database tables and definitions. _**Attention:**_ _Deleting measurement value data records cannot be undone! GeoDin calculates how many data records will be deleted and displays this as a warning message. This is the last point at which you may still cancel._
 
- ![Determine number of records](.gitbook/assets/icons/determine-number-of-records.png) **Determine number of records**
+&#x20;**Determine number of records**
 
 Function calculates the number of data records present for each data type in the database and shows an overview.
 
- **Add data type to the system configuration**
+**Add data type to the system configuration**
 
 Editing individual parameters of a data type is only possible when the data type is part of the current system configuration. Normally this is the case with GeoDin databases, but sometimes you may receive a database from another user with data types that are not defined in your system configuration. With this function you can then add the definition from the database to your system configuration. Please note that when using dictionaries in data fields of the data type that these will not be present. Please ask the user from whom you have received the database to export the user-defined data type from his system configuration, for you to then import. Hence you should use the method "Add data type to the system configuration" only when no possibility exists to obtain the data type as a configuration file.
 
@@ -528,7 +482,7 @@ Enter a search string for the parameter search in the data type overview. The pa
 
 **Delete parameters**
 
-This function can delete parameters that do not contain any measurement values in the database. All parameters without measurement values are displayed in a dialogue window, where it is possible to edit the parameter list again. All selected parameters will be deleted from the database. If this then causes empty data types, they will be removed from the database too. <!-- src: help/04/8619 -->
+This function can delete parameters that do not contain any measurement values in the database. All parameters without measurement values are displayed in a dialogue window, where it is possible to edit the parameter list again. All selected parameters will be deleted from the database. If this then causes empty data types, they will be removed from the database too.
 
 ### Add data type
 
@@ -538,13 +492,13 @@ First select your data type from the overview and click on the **Proceed** butto
 
 The available parameters are ordered in groups of elements. Make your parameter selection by checking the appropriate boxes. You can also check whole groups or all parameters of a data type by checking the relevant node. The number of already chosen parameters is shown over the parameter overview.
 
-Existing measurement programs (combinations of parameters) can be accessed via the drop-down list in **\"Measurement programs\"**. Here you can quickly chose or remove them from the selected measurement program.
+Existing measurement programs (combinations of parameters) can be accessed via the drop-down list in **"Measurement programs"**. Here you can quickly chose or remove them from the selected measurement program.
 
-A particular parameter can be found by using the search field *\"Search\"*. Only parameters that meet the search criteria are shown (parameter and data field names).
+A particular parameter can be found by using the search field _"Search"_. Only parameters that meet the search criteria are shown (parameter and data field names).
 
 Independently of the measurement program or search criteria restrictions, chosen parameters are shown in the overview, so that you always have an overview of the already chosen parameters.
 
-***Note:*** *parameters can also be added to or removed from the database at a later date by starting the data type manager and editing the required data type.*
+_**Note:**_ _parameters can also be added to or removed from the database at a later date by starting the data type manager and editing the required data type._
 
 [Data model](../data-types.md)
 
@@ -552,7 +506,7 @@ The data type tables can be created in two different variations: the "Small Data
 
 The default data model setting for a data type is shown in the system configuration. You have the option of choosing the other model.
 
-By clicking the **Create** button the data type will be added to the database. This completes this function. <!-- src: help/04/8623 -->
+By clicking the **Create** button the data type will be added to the database. This completes this function.
 
 ### First-time setup: adding a data type to a database
 
@@ -562,9 +516,9 @@ Before measurement values can be entered, the relevant data type must be added t
 
 1. In the GeoDin Object Manager, select the database entry (not a project).
 2. Open the **Data Type Manager** method (available at the database level).
-3. In the Data Type Manager, click the blue **+** button (right-hand side) to select a data type from the system configuration — for example, *Groundwater Chemistry*.
+3. In the Data Type Manager, click the blue **+** button (right-hand side) to select a data type from the system configuration — for example, _Groundwater Chemistry_.
 4. In the parameter selection screen, tick the parameters required (or select a saved **Measurement Program** from the drop-down).
-5. Click **Create** (German: *Erstellen*). GeoDin writes the required database tables and registers the data type. The data type is now available for all objects in this database.
+5. Click **Create** (German: _Erstellen_). GeoDin writes the required database tables and registers the data type. The data type is now available for all objects in this database.
 
 {% hint style="info" %}
 If the data type does not appear in the system configuration list, use **Add data type to the system configuration** to import its definition from the database first.
@@ -586,15 +540,13 @@ A **Measurement Program** is a named, saved selection of parameters within a dat
 
 Measurement Programs are created and managed in the system configuration (System > Data Types > edit the data type group). Once saved, they appear in the **Measurement programs** drop-down in the **Add data type** dialog and in the measurement value editor for filtering the displayed parameters.
 
-<!-- src: transcript/2026-04-15-in-person-workshop -->
-
 ### Data type settings
 
 Here you can edit the data type properties of a database.
 
 Data mode**l**
 
-With the help of the function **\"Convert data model\"** you can change the way that measurement values are stored for a data type in a database. This is achieved by making structural changes to the database tables, which may take some time , depending on the number of measurement values for the data type. This process may be canceled at any time without losing any data (aready available measurements will be completely converted to the other structure). Further information on the data model can be found in the Chapters [Add data type](../data-types.md) and [Data model](../data-types.md)
+With the help of the function **"Convert data model"** you can change the way that measurement values are stored for a data type in a database. This is achieved by making structural changes to the database tables, which may take some time , depending on the number of measurement values for the data type. This process may be canceled at any time without losing any data (aready available measurements will be completely converted to the other structure). Further information on the data model can be found in the Chapters [Add data type](../data-types.md) and [Data model](../data-types.md)
 
 During the conversion process new tables are created in the database, hence the user needs the database rights to create and delete tables. Please contact your database administrator as required.
 
@@ -614,16 +566,15 @@ The association of a data type to measurement point types controls the availabil
 
 The correlation between data types to a measurement point type can be set by selecting the relevant row. The name of the associated measurement point type can be edited by double-clicking on the column name, which defines the GOM measurement point type labelling
 
- Object; A measurement point of this type is generated when an object is created in a GeoDin database..
+Object; A measurement point of this type is generated when an object is created in a GeoDin database..
 
- Sample; A measurement point of this type is generated when a data record for an object is created in the sample table.
+Sample; A measurement point of this type is generated when a data record for an object is created in the sample table.
 
- Filter; A measurement point of this type is generated when a filter is created in the well design table of an object. <!-- src: help/04/8627 -->
+Filter; A measurement point of this type is generated when a filter is created in the well design table of an object.
 
 ### Import
 
-Use the method ![import measurement values](.gitbook/assets/icons/import-measurement-values.png) **\"import measurement values\"**
-
+Use the method  **"import measurement values"**
 
 to import measurement values from external data sources into your GeoDin database.
 
@@ -649,7 +600,7 @@ Select further import options, preview the import data and execute the import.
 
 All import settings can be saved in a configuration file to quickly select and import data with a similar data structure.
 
-You can also load only parts of the settings stored in the configuration file, for example if your parameter mapping is always the same while the mapping for measurement points varies. To do this, select the desired configuration settings in the dialog \'Assign configuration settings\'. <!-- src: help/04/8817 -->
+You can also load only parts of the settings stored in the configuration file, for example if your parameter mapping is always the same while the mapping for measurement points varies. To do this, select the desired configuration settings in the dialog 'Assign configuration settings'.
 
 ### Data source
 
@@ -667,7 +618,7 @@ Open a file or database that contains the import data. The program supports the 
 
 After selecting a file or database, choose a tab sheet (Excel), table (Access, dBase) or a column separator (CSV, text file). You can preview the import data. For MS Excel or text files you can define whether the first line contains column headers, which is common. In addition, you can define the date format used in the import data. GeoDin uses this setting for later date conversion.
 
-In the preview you can select and delete data sets  that should not be imported. They will only be removed from the preview. Your import source will not be modified.
+In the preview you can select and delete data sets that should not be imported. They will only be removed from the preview. Your import source will not be modified.
 
 With the button [Format options](data-sequences-and-cpt.md) you can preformat your import data. For more information see chapter [Format options](data-sequences-and-cpt.md).
 
@@ -675,37 +626,37 @@ With the button [Format options](data-sequences-and-cpt.md) you can preformat yo
 
 GeoDin uses a Microsoft OLEDB database connection to access the MS Excel file. This driver (not GeoDin!) interprets the first few lines of a table to identify the field format of the column. If the the format is number, the column content will be formated as numbers and any text content will be ignored. In this case you can define the column format in MS Excel as text BEFORE importing the file with GeoDin so that the data will be visible in the preview. Still GeoDin will generate an error if you try to import cells with text into a numeric field of the GeoDin database since this is not permitted.
 
-MS Excel internally stores time data as real numbers for both date and time. Due to compatibility issues GeoDin holds date (type date) and time (type text with length of 5) separated. Such information must therefore be separated in the import data as well. Separating date and time in two columns in Excel will still render the date 0 (which is 31.12.1899) in the time format. This means the first 5 characters of the time field will be \'31.12\'. To avoid this, you can either define the time column in MS Excel as text or export the Excel sheet into a CSV file and import this file into GeoDin. <!-- src: help/04/8818 -->
+MS Excel internally stores time data as real numbers for both date and time. Due to compatibility issues GeoDin holds date (type date) and time (type text with length of 5) separated. Such information must therefore be separated in the import data as well. Separating date and time in two columns in Excel will still render the date 0 (which is 31.12.1899) in the time format. This means the first 5 characters of the time field will be '31.12'. To avoid this, you can either define the time column in MS Excel as text or export the Excel sheet into a CSV file and import this file into GeoDin.
 
 ### Measurement point assignment
 
-In this step you can link the data records of your import file to a measurement point in GeoDin. The GeoDin measurement points of the current query or group are listed in the table \"Measurement points:\". Select from the drop-down list **\"Data source:\"** the column of your import table that contains the name or id number of the measurement point, to use to create the link with the GeoDin measurement point. The contents available from this column are displayed in the table \"Data source:\".
+In this step you can link the data records of your import file to a measurement point in GeoDin. The GeoDin measurement points of the current query or group are listed in the table "Measurement points:". Select from the drop-down list **"Data source:"** the column of your import table that contains the name or id number of the measurement point, to use to create the link with the GeoDin measurement point. The contents available from this column are displayed in the table "Data source:".
 
-To create a link between data records to be imported and the measurement points in GeoDin, select and pair the entries of the lists \"Data source:\" and \"Measurement points:\" by drag and drop on one another. The direction that this is carried out does not matter (i.e. Data source dropped onto Measurement points or vice-versa). The links created are displayed in the table \"Links:\" and the already linked entries of the columns are removed from the lists of origin. In this manner only entries, which are not yet linked, remain in the lists \"Measurement points:\" and \"Data source:\".
+To create a link between data records to be imported and the measurement points in GeoDin, select and pair the entries of the lists "Data source:" and "Measurement points:" by drag and drop on one another. The direction that this is carried out does not matter (i.e. Data source dropped onto Measurement points or vice-versa). The links created are displayed in the table "Links:" and the already linked entries of the columns are removed from the lists of origin. In this manner only entries, which are not yet linked, remain in the lists "Measurement points:" and "Data source:".
 
 If the import table contains names that match the names of the measurement points in GeoDin or even the GeoDin ID of the measurement point (INVID) you can use the button **Automatically link** to create a link for the corresponding entries.
 
-The input fields  are to reduce the amount of the displayed fields or columns. Only entries, which contain the search string, will be displayed. Please clear the input field to see all entries.
+The input fields are to reduce the amount of the displayed fields or columns. Only entries, which contain the search string, will be displayed. Please clear the input field to see all entries.
 
 If you have saved a configuration and links for an import in a former GeoDin version as a configuration file (file extension .ini) it is possible to load this using the button **Import**. These configuration files had the following structure:
 
-\[Import measure links\]
+\[Import measure links]
 
-MEAS_PT_ID=
+MEAS\_PT\_ID=
 
-\'B 01 : (4 - 5m)\'=U9SYT40001FIL001
+'B 01 : (4 - 5m)'=U9SYT40001FIL001
 
-\'B 02 : (6 - 7m)\'=U9SYT40002FIL001
+'B 02 : (6 - 7m)'=U9SYT40002FIL001
 
-\...
+...
 
-The first row in the paragraph \[Import measure links\] contains the column name of the import table. After that follows one row for each link: First an entry (name) from the column of the import file then the equals sign and next the GeoDin ID of the measurement point.
+The first row in the paragraph \[Import measure links] contains the column name of the import table. After that follows one row for each link: First an entry (name) from the column of the import file then the equals sign and next the GeoDin ID of the measurement point.
 
-Invalid links will be highlighted in pink. Those links can occur if you change the data source or choose another data type after the parameters were linked. You can remove these invalid links by using the button . <!-- src: help/04/8819 -->
+Invalid links will be highlighted in pink. Those links can occur if you change the data source or choose another data type after the parameters were linked. You can remove these invalid links by using the button .
 
 ### Export
 
-You will find this method within the method collection **\"Publish and export\"**.
+You will find this method within the method collection **"Publish and export"**.
 
 This method exports measurement values for a data type in various formats. In addition the measurement point name and object name is also exported.
 
@@ -721,7 +672,7 @@ In addition to values and general of the measurement point, internal GeoDin fiel
 
 **General data**
 
-In addition to values, general data like coordinates and depth information are exported. <!-- src: help/04/10605 -->
+In addition to values, general data like coordinates and depth information are exported.
 
 ### Time range controller
 
@@ -741,20 +692,18 @@ The system configuration of a data type for the use of the time domain controlle
 
 Which data sets to load can be configured in several ways:
 
-
 On the left and right there are time icons , to pick direct calendar entries. Clicking a month or a year zooms the pop-up calendars out for more choice. The current date can also be selected.
 
-The left and right arrows  and  move the defined time range forward or backward in time. Each step represents the selected time range.
+The left and right arrows and move the defined time range forward or backward in time. Each step represents the selected time range.
 
 It is simplest to choose a time range with the slider controls. The time range set can also be slid horizontally left and right (i.e. forwards and backwards) keeping the range intact. Moving one oft he two sliders leaves the other start or end date intact.
 
-Above the time range controller several useful pieces information are displayed. The time range is shown (date/time from-to) and below this the number of data sets, memory usage and the time to load the data sets. When using the controller these values are estimated, so that the user receives feedback before a selection is made (this may depend upon other factors). After defining a time interval (i.e. after making a selection with the mouse and releasing) the values shown are calculated. Two small vertical lines also show the currently selected time range. <!-- src: help/04/10820 -->
+Above the time range controller several useful pieces information are displayed. The time range is shown (date/time from-to) and below this the number of data sets, memory usage and the time to load the data sets. When using the controller these values are estimated, so that the user receives feedback before a selection is made (this may depend upon other factors). After defining a time interval (i.e. after making a selection with the mouse and releasing) the values shown are calculated. Two small vertical lines also show the currently selected time range.
 
 ### Import measurement data
-
 
 This button can be used to import measurement values to a parent dataset.
 
 The button is not available on groups or queries for several measuring points, but only if you have selected a single measuring point in the GeoDin Object Manager.
 
-Detailed information on the settings in the import dialogue can be found in the chapter [Import](../../data-collection/import.md). <!-- src: help/04/10868 -->
+Detailed information on the settings in the import dialogue can be found in the chapter [Import](../../data-collection/import.md).

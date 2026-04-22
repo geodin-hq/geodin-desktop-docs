@@ -32,10 +32,6 @@ If GeoDin is used by multiple users within a network, it is recommended to insta
 * **Reduced Administrative Effort:** No separate installation required on each client PC.
 * **Controllable Access Rights**: Access can be specifically managed via the network's file system (e.g., NTFS permissions).
 
-
-
-<figure><img src=".gitbook/assets/GeoDin_infrastructure_overview_en.png" alt=""><figcaption></figcaption></figure>
-
 ***
 
 If you need a recommendation based on your requirements, please contact our [**Client Success Team**](mailto:geodinclientsuccess@fugro.com) to schedule a consultation.
@@ -43,8 +39,6 @@ If you need a recommendation based on your requirements, please contact our [**C
 ## 3. GeoDin Databases
 
 GeoDin uses **FireDAC** (Fire Data Access Components) to connect to databases. This is a universal framework that enables access to a wide range of databases – locally, remotely, or in the cloud.
-
-<figure><img src=".gitbook/assets/Picture2.png" alt=""><figcaption></figcaption></figure>
 
 #### Examples:
 
@@ -66,8 +60,6 @@ Connection string:
 Database=myDatabase;Server=myServer;User_Name=myUser;Password=secret;DriverID=MSSQL
 ```
 
-<figure><img src=".gitbook/assets/connection_mssql 1.png" alt=""><figcaption></figcaption></figure>
-
 **PostgreSQL**
 
 ```ini
@@ -82,8 +74,6 @@ Connection string:
 Server=myServer;Database=myDatabase;User_Name=myUser;Password=secret;DriverID=PG
 ```
 
-<figure><img src=".gitbook/assets/connection_pg 1.png" alt=""><figcaption></figcaption></figure>
-
 **Oracle**
 
 ```ini
@@ -96,8 +86,6 @@ Password=secret
 Connection string:
 Database=myDatabase;User_Name=myUser;Password=secret;DriverID=Ora
 ```
-
-<figure><img src=".gitbook/assets/connection_ora 1.png" alt=""><figcaption></figcaption></figure>
 
 **Azure Cloud (Microsoft SQL Server)**
 
@@ -120,54 +108,42 @@ Connection string:
 Database=myDatabase;User_Name=myUser;Password=secret;Server=tcp:myInstance.database.windows.net,1433;Encrypt=Yes;DriverID=MSSQL
 ```
 
-<figure><img src=".gitbook/assets/connection_mssql_cloud 1.png" alt=""><figcaption></figcaption></figure>
-
----
-
-<!-- Sections below were added during AI-augmented authoring (not in canonical desktop-docs) -->
+***
 
 ## System Requirements & Runtime
 
+Onsite is a .NET 8 program and requires the Microsoft .NET 8 runtime.
 
+On first launch, if the .NET 8 runtime is missing, Onsite redirects the user to Microsoft to download and install it.
 
-Onsite is a .NET 8 program and requires the Microsoft .NET 8 runtime. <!-- src: transcript/deployment-infrastructure#system-requirements-runtime -->
-
-On first launch, if the .NET 8 runtime is missing, Onsite redirects the user to Microsoft to download and install it. <!-- src: transcript/deployment-infrastructure#system-requirements-runtime -->
-
-Tablets or PCs running Windows are the supported platform; no separate mobile OS build. <!-- src: transcript/deployment-infrastructure#system-requirements-runtime -->
+Tablets or PCs running Windows are the supported platform; no separate mobile OS build.
 
 ## Multi-User & Network Deployment
 
+Network installation: one shared installation can serve multiple users — all users share the same layouts and dictionaries.
 
+Custom data types, modified dictionaries, and custom layouts all live in the syslib folder and must be copied or shared between installations manually when delivering to an external client.
 
-Network installation: one shared installation can serve multiple users — all users share the same layouts and dictionaries. <!-- src: transcript/deployment-infrastructure#multi-user-network-deployment -->
+When sending data to a client who does not have the same custom dictionaries, the user must also send the `.GSD` dictionary files or the full syslib folder.
 
-Custom data types, modified dictionaries, and custom layouts all live in the syslib folder and must be copied or shared between installations manually when delivering to an external client. <!-- src: transcript/deployment-infrastructure#multi-user-network-deployment -->
+Configuration file changes (new dictionaries, new filters, new custom data types) can be shared between users by copying the relevant files (e.g., `Sony_Filter.sys` for import filters) between user syslib folders.
 
-When sending data to a client who does not have the same custom dictionaries, the user must also send the `.GSD` dictionary files or the full syslib folder. <!-- src: transcript/deployment-infrastructure#multi-user-network-deployment -->
+Updates: if a dictionary file's date has changed (due to user edits), GeoDin updates will NOT overwrite it, preserving user changes.
 
-Configuration file changes (new dictionaries, new filters, new custom data types) can be shared between users by copying the relevant files (e.g., `Sony_Filter.sys` for import filters) between user syslib folders. <!-- src: transcript/deployment-infrastructure#multi-user-network-deployment -->
+Updates may push new default layouts — if a user edits defaults in place, they risk being overwritten; recommended workflow is to copy defaults to a client-specific folder first.
 
-Updates: if a dictionary file's date has changed (due to user edits), GeoDin updates will NOT overwrite it, preserving user changes. <!-- src: transcript/deployment-infrastructure#multi-user-network-deployment -->
-
-Updates may push new default layouts — if a user edits defaults in place, they risk being overwritten; recommended workflow is to copy defaults to a client-specific folder first. <!-- src: transcript/deployment-infrastructure#multi-user-network-deployment -->
-
-External users may not have permission to modify system data types; Data Types under System Configuration can be read-only for external users. <!-- src: transcript/deployment-infrastructure#multi-user-network-deployment -->
+External users may not have permission to modify system data types; Data Types under System Configuration can be read-only for external users.
 
 ## Backend Database Options (Desktop)
 
+Backend database options are Microsoft Access (local or network share) or SQL Server (client-server, requires IT-managed connection string).
 
+Microsoft Access files have a 2 GB size limit; one Access file per database is recommended.
 
-Backend database options are Microsoft Access (local or network share) or SQL Server (client-server, requires IT-managed connection string). <!-- src: transcript/deployment-infrastructure#backend-database-options-desktop -->
+SQL Server client-server databases support multiple concurrent projects with no project-count constraint.
 
-Microsoft Access files have a 2 GB size limit; one Access file per database is recommended. <!-- src: transcript/deployment-infrastructure#backend-database-options-desktop -->
+Databases can be stored locally, on a company network, or on a shared network drive.
 
-SQL Server client-server databases support multiple concurrent projects with no project-count constraint. <!-- src: transcript/deployment-infrastructure#backend-database-options-desktop -->
+Database maintenance operations (Close Database, Maintain, Optimize) are available via right-click on the database connection.
 
-Databases can be stored locally, on a company network, or on a shared network drive. <!-- src: transcript/deployment-infrastructure#backend-database-options-desktop -->
-
-Database maintenance operations (Close Database, Maintain, Optimize) are available via right-click on the database connection. <!-- src: transcript/deployment-infrastructure#backend-database-options-desktop -->
-
-Some corporate IT policies prevent the use of Access and require SQL Server only. <!-- src: transcript/deployment-infrastructure#backend-database-options-desktop -->
-
-
+Some corporate IT policies prevent the use of Access and require SQL Server only.

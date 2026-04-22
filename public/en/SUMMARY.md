@@ -1,5 +1,7 @@
 # Table of contents
 
+* [Introduction](README.md)
+
 ## Getting Started
 
 * [Getting Started](documentation/getting-started.md)

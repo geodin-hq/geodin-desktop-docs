@@ -2,12 +2,6 @@
 description: Digitizing Objects
 ---
 
-<!--
-**Content status:** Auto-assembled from product documentation
-**Source quality:** B (Moderate (single source type))
-**Needs:** needs legacy verification, needs screenshots, needs examples, editorial review
--->
-
 # Digitizing Objects
 
 ### Properties
@@ -18,19 +12,19 @@ Use this option to make objects from this layer selectable. Uncheck this option 
 
 **Show in overview map**
 
-Select this option to display the selected layer in the overview map in the lower left corner. <!-- src: help/MP/5954 -->
+Select this option to display the selected layer in the overview map in the lower left corner.
 
 ### Display for object data
 
 In this view, details about the currently selected GeoDin objects in the map are displayed. The layouts used can contain links to other layouts, making it possible to browse the detail data of the objects.
 
-Elements with links can be identified by their colour and the different mouse cursor. Click on the object link to display further detailed information about the object. <!-- src: help/MP/5956 -->
+Elements with links can be identified by their colour and the different mouse cursor. Click on the object link to display further detailed information about the object.
 
 ### Quick search
 
-In the Quick Search field, simple searches for objects on the map can be made to navigate to these objects. After entering the search key word, a dropdown list shows all items where the condition is true. By pressing the ENTER-Key or by clicking on the symbol to the right  , the object can be highlighted.
+In the Quick Search field, simple searches for objects on the map can be made to navigate to these objects. After entering the search key word, a dropdown list shows all items where the condition is true. By pressing the ENTER-Key or by clicking on the symbol to the right , the object can be highlighted.
 
-The search field can be configured to different searches (depending on the layer), as described in **Quick search**. <!-- src: help/MP/7291 -->
+The search field can be configured to different searches (depending on the layer), as described in **Quick search**.
 
 ### Preferences
 
@@ -42,7 +36,7 @@ Choose this option to draw a scale bar in the lower right corner of the map wind
 
 Elements selected in the GeoDin object manager (GOM) can be selected to blink in the Map. The objects from the object manager can be easily recognized in the map.
 
-Only objects which can be displayed in the map will blink, objects not in the map are ignored. <!-- src: help/MP/7479 -->
+Only objects which can be displayed in the map will blink, objects not in the map are ignored.
 
 ### Adding map data to the document management
 
@@ -53,11 +47,11 @@ GeoDin Maps shows GeoDin objects in a spaital contex. Map information has to fir
 Geographic map information can be either grid (JPG, TIFF, ECW\*) or vector data (SHAPE, DXF).
 
 \
-***Note:*** *ECW is a new highly efficient grid format.*
+&#xNAN;_**Note:**_ _ECW is a new highly efficient grid format._
 
 **Adding documents to the Document management**
 
-1\. First the [Document management](../navigating-the-geodin-workspace/documents/managing-documents.md)  is started.
+1\. First the [Document management](../navigating-the-geodin-workspace/documents/managing-documents.md) is started.
 
 2\. If required add new folders using the **New Folder** button to create an organised structure.
 
@@ -67,7 +61,7 @@ Geographic map information can be either grid (JPG, TIFF, ECW\*) or vector data 
 
 5\. In some cases an item is composed of several individual files with different extensions and hence cannot be added to the database. This is not only the case with SHAPE (.shp) files, but also with raster files where spatial information is stored in separate files. To resolve this GeoDin creates a link to the files that are saved outside of the database.
 
-6.The next step is to choose the document description type \"**(DOC) GeoDin layer**\". In the same dialogue window the final step in the adding document process is to describe the contents of the document along with any other necessary comments. This final step can be repeated at a later date as more information becomes available.
+6.The next step is to choose the document description type "**(DOC) GeoDin layer**". In the same dialogue window the final step in the adding document process is to describe the contents of the document along with any other necessary comments. This final step can be repeated at a later date as more information becomes available.
 
 7\. End the documenet management with **Close**.
 
@@ -77,7 +71,7 @@ GeoDin data is made available as queries and groups. First of all a group of dat
 
 Both user-defined and system queries can be shown in the map window. All the result fields defined in these queries will be available in the map window. If a field is not defined then it cannot be used for labelling or other presentation options. These fileds are defined under the node " Results fields (ArcGIS/Export)" in the query.
 
-Additionally specific layouts can be defined in the query for displaying the relevant data. Choose the button **Favourite layouts** to define which layouts are to be used for the query (these need to be multi object capable, e.g. time lines from several objects) or the results of the query (single object frame layouts). <!-- src: help/MP/7925 -->
+Additionally specific layouts can be defined in the query for displaying the relevant data. Choose the button **Favourite layouts** to define which layouts are to be used for the query (these need to be multi object capable, e.g. time lines from several objects) or the results of the query (single object frame layouts).
 
 ### Search in polygons
 
@@ -91,33 +85,33 @@ Select one of the offered polygon layers that contains one or more polygons in w
 
 If the option Selection is selected, select one or more polygons of the surface layer defined in the first step by clicking on them on the map. If you want to select the corresponding surface layer according to defined attributes, use the option Condition and enter the corresponding data using the SQL syntax.
 
-*\[Buffer\]*
+_\[Buffer]_
 
 If you would like to optionally set an extended search radius around the selected surface layers, enter this in meters.
 
 **GeoDin-Layer:**
 
-Specify the layer that contains the GeoDin objects to be determined. Note: Only layers with GeoDin objects are available for selection, no other point layers added to the map (\*.shp or similar). If \[Automatically update preview \] is checked, the found objects are displayed in the preview window (loading process varies depending on the scope of the search result).
+Specify the layer that contains the GeoDin objects to be determined. Note: Only layers with GeoDin objects are available for selection, no other point layers added to the map (\*.shp or similar). If \[Automatically update preview ] is checked, the found objects are displayed in the preview window (loading process varies depending on the scope of the search result).
 
 **Select objects**
 
-By clicking on \<Select objects\> the selected objects are displayed at the node \"Object selection\" in the GeoDin object manager.
+By clicking on \<Select objects> the selected objects are displayed at the node "Object selection" in the GeoDin object manager.
 
-If a layout is displayed in the [Display for object data](digitizing-objects.md) of the map, it is filled with the data of the found objects. It is recommended to use a layout with [Multi object frame](../data-visualization/layouts/object-frames.md) if more than one object is found by the \"Search in polygons\". <!-- src: help/MP/10745 -->
+If a layout is displayed in the [Display for object data](digitizing-objects.md) of the map, it is filled with the data of the found objects. It is recommended to use a layout with [Multi object frame](../data-visualization/layouts/object-frames.md) if more than one object is found by the "Search in polygons".
 
 ### Mini graphics for the layer
 
-With the option \"**Mini graphics**\" you can place your objects in the map layouts of your choice, e.g. showing a *drill log* or a *measurement diagram*.
+With the option "**Mini graphics**" you can place your objects in the map layouts of your choice, e.g. showing a _drill log_ or a _measurement diagram_.
 
-Add a new layout with the buttons **Add New Element**  (to the end of the layout list) or **Insert New Element**  (above the selected layout).
+Add a new layout with the buttons **Add New Element** (to the end of the layout list) or **Insert New Element** (above the selected layout).
 
-With the button ![Duplicate](.gitbook/assets/icons/duplicate.png) **Duplicate element**  you duplicate the selected layout. If you want to make changes to the list without an immediate update, use the button **Edit without update** .
+With the button  **Duplicate element** you duplicate the selected layout. If you want to make changes to the list without an immediate update, use the button **Edit without update** .
 
 The following setting options are available for editing the mini graphics:
 
 (All changes are immediately visible on the map so you can check the result immediately.)
 
-*\[Activated\]*
+_\[Activated]_
 
 By ticking the box, the mini graphic is visible on the map. So you can keep numerous layouts available on the object layer, only the activated ones will be displayed.
 
@@ -137,13 +131,13 @@ If you want to make the mini graphics inserted into the map transparent in order
 
 Depending on the zoom level and the proximity of the holes to each other, layouts may overlap. To optimize the display, you can set the maximum allowed overlap of adjacent layouts in % of the layout area.
 
-*\[Draw frame\]*
+_\[Draw frame]_
 
-Check the box to draw a frame around the layout whose color and line width you can specify. <!-- src: help/MP/10857 -->
+Check the box to draw a frame around the layout whose color and line width you can specify.
 
 ### Digitise object
 
-With the function  \"Digitise objects\" it is possible to draw point, line and area objects directly in GeoDin Maps and save them as objects.
+With the function "Digitise objects" it is possible to draw point, line and area objects directly in GeoDin Maps and save them as objects.
 
 The digitisation process takes place in four steps.
 
@@ -155,7 +149,7 @@ The digitisation process takes place in four steps.
 
 [Input general data](../navigating-the-geodin-workspace/objects/general-data.md)
 
-In order to digitise objects in the integrated GIS, it is assumed that the map has a coordinate system. <!-- src: help/MP/11222 -->
+In order to digitise objects in the integrated GIS, it is assumed that the map has a coordinate system.
 
 ### Choose object type and destination project
 
@@ -165,6 +159,5 @@ In the **object type** field, the type of object to be created can be selected; 
 
 In the next section, the project assignment for the new object is defined. There are two possibilities for this:
 
-1.  Manual assignment: simple selection of the project in which the object is to be saved later.
-
-2.  Definition via a field of a map layer: the field must contain the PRJID (for this case, use the button **\<\...\>** in field \"Take from map\" and select the corresponding field in the new window). <!-- src: help/MP/11227 -->
+1. Manual assignment: simple selection of the project in which the object is to be saved later.
+2. Definition via a field of a map layer: the field must contain the PRJID (for this case, use the button **<...>** in field "Take from map" and select the corresponding field in the new window).

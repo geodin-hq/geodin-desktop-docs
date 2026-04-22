@@ -1,4 +1,4 @@
-# Object Types
+# Object Types Overview
 
 GeoDin uses _object types_ to represent various standards for recording drilling data or general geodata.\
 \
@@ -27,8 +27,6 @@ The object type determines:
 Each object type is configured for specific purposes and based on recognized standards such as **EN ISO 22475**, **ISO 14688/14689**, or **BS 5930:1999**.
 
 #### **Handling Object Types**
-
-<figure><img src=".gitbook/assets/image (41).png" alt=""><figcaption></figcaption></figure>
 
 * GeoDin includes predefined object types by default.
 * Additional object types can be installed via the **System** tab.

@@ -1,6 +1,6 @@
 # Data Types
 
-This page provides an overview of the data types available in GeoDin for geotechnical, geological, and laboratory data collection.&#x20;
+This page provides an overview of the data types available in GeoDin for geotechnical, geological, and laboratory data collection.
 
 The list below is based on the official data type definition and includes the data type name, short name, and description as defined in GeoDin.
 
@@ -17,8 +17,6 @@ Each data type is identified by:
 * A **long name / description**
 
 Some data types are marked as **complex data types**, meaning they contain structured sub‑data rather than single values.
-
-<figure><img src=".gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Available (G1) Location Data Types
 

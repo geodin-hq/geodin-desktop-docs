@@ -9,8 +9,6 @@ The object type **“Geotechnical Investigation EN ISO 22475 (2018)”** is a fu
 For current projects, the **2018 object type \[ENISO002]** is recommended and is provided to all GeoDin users via the GeoDin server.\
 <br>
 
-<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
-
 ### Standards and Normative References
 
 The object type is based on the following standards:
@@ -68,8 +66,6 @@ The object type includes the following main data categories:
 * Bilingual geological standard (German / English)
 * Customizable dictionaries and input forms
 
-<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
-
 ### Key Features
 
 #### Detailed Soil and Rock Description
@@ -85,8 +81,6 @@ Soil and rock characteristics can be recorded in detail using dedicated input fo
 * Cored section boundaries
 
 These forms are available in **German/Austrian and English**.
-
-<figure><img src=".gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 #### Advanced Layer Data Handling
 
@@ -106,12 +100,6 @@ Geological fill patterns comply with:
 * **DIN 4023**
 * **ÖNORM EN ISO 14688/14689**
 * **BS 5930‑1990**
-
-<figure><img src=".gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
-
-<figure><img src=".gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
-
-<figure><img src=".gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
 #### Visualization Outputs
 
@@ -168,4 +156,3 @@ The following database tables are used by the object type:
 * **GEODIN\_LOC\_E2WDFLUI** – Well design: flushing
 * **GEODIN\_LOC\_E2WDSPCL** – Well design: special features
 * **GEODIN\_LOC\_E2DSREG** – Register of data sequences
-

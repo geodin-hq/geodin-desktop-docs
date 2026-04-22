@@ -10,13 +10,9 @@ All three must be installed in GeoDin to ensure full functionality:
 2. **AGS 4 LBSG - Testing schedule \[AGSLBSG]**: Used to define and manage project-specific testing schedules.
 3. **AGS 4 PREM - Project-specific time-related remarks \[AGSPREM]**: Used to record project-specific time-dependent events (e.g., “Heavy rainfall for two days; site flooded”).
 
-<figure><img src=".gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
-
 Follow the process outlined [here](https://docs.geodin.com/navigating-the-geodin-workspace/object-types/installing) in Method 1 and select **“AGSSTAND\_Geotechnical Geoenvironmental Standard“** to install all three object types including the associated data types.
 
-<figure><img src=".gitbook/assets/Bild.png" alt=""><figcaption></figcaption></figure>
-
-#### 1.1	Missing AGS groups in GeoDin
+#### 1.1 Missing AGS groups in GeoDin
 
 Some AGS groups are not stored in GeoDin because they are either automatically generated during the AGS export process or are not supported by GeoDin’s data model and therefore cannot be stored within the system.
 
@@ -28,7 +24,7 @@ Some AGS groups are not stored in GeoDin because they are either automatically g
 • UNIT – GeoDin provides its own dedicated unit dictionary (PU)\
 • STND – not part of the GeoDin structure
 
-#### 1.2	General information for GeoDin
+#### 1.2 General information for GeoDin
 
 **1.2.1 Parameters and Groups**
 
@@ -37,21 +33,13 @@ Parameters or groups that are only included in AGS 4.1.1 and not in AGS 4.0.4 ar
 **Example:**\
 CTRG – Cyclic triaxial test \[CTRG] is a new group for AGS 4.1.1.
 
-<figure><img src=".gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
-
 **1.2.2 Input Forms**
 
 GeoDin allows users to enter data using input forms (masks). GeoDin provides support for entering parameters. The description of the AGS parameter name can be found below the mask as a note containing the long field name and, in brackets, the short field name.
 
-<figure><img src=".gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
-
 **1.2.3 Grid View**
 
 When entering data via the grid view, users can switch between the long field name and the AGS short field name. To do this, the user clicks on the column heading with the right mouse button, and a menu bar appears, as shown in the image. Users can also use this menu bar to switch the unit view on and off.
-
-<figure><img src=".gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
-
-<figure><img src=".gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
 **1.2.4 Dictionaries**
 
@@ -66,14 +54,9 @@ When entering data via the grid view, users can switch between the long field na
   * **(AGS) Testing schedule: LBSG – Schedule reference**, used in data type **LBST**
   * **(AGS) Monitoring installation: PIPE – Pipe reference**, used in data type **MONG**\
     These dictionaries are only usable once the required information has been entered into the database.
-*   In contrast to the AGS structure, GeoDin includes an **additional EPSG dictionary** to enable location display in:
-
-    * Map preview
-    * GeoDin Maps
-
-
-
-    <figure><img src=".gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
+* In contrast to the AGS structure, GeoDin includes an **additional EPSG dictionary** to enable location display in:
+  * Map preview
+  * GeoDin Maps
 * The following dictionaries are repeatedly used in GeoDin:
   * **(AGS) Units: UNIT – Unit**, defining all units used for data headings and data records
     * Used multiple times for all AGS types = **PU**
@@ -97,13 +80,9 @@ GeoDin uses fill patterns defined in the AGS dictionaries to visually represent 
 * **(AGS) Layer data: GEOL – Legend code**
 * **(AGS) Well design: BKFL – Backfill legend**
 
-<figure><img src=".gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
-
 ### 2. Data structure of the GeoDin object types
 
 The below image shows an extensive data structure for the GeoDin object types:
-
-<figure><img src=".gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 3. Object type AGS 4 \[AGSSTAND]
 
@@ -115,8 +94,6 @@ The **AGS 4 object type** is the **core structure** for AGS data in GeoDin. It c
 * Well design details
 * Supplementary object type tables
 * Data types for all groups of the **AGS 4.1.1** and **AGS 4.0.4** standards
-
-<figure><img src=".gitbook/assets/AGS4.png" alt=""><figcaption></figcaption></figure>
 
 The user can find the AGS groups and the associated parameters in GeoDin in the following structure:
 
@@ -131,59 +108,37 @@ The user can find the AGS groups and the associated parameters in GeoDin in the 
 
 All AGS groups **except LBSG and PREM** that are **not listed above** are implemented in GeoDin as **data types**. The complete list of AGS data types is provided in **Chapter 6 – Data Types**.
 
-#### 3.1	General data – Location details - LOCA
+#### 3.1 General data – Location details - LOCA
 
-<figure><img src=".gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
-
-#### 3.2	Layer data – GEOL, DETL, DLOG
+#### 3.2 Layer data – GEOL, DETL, DLOG
 
 **3.2.1 Field geological description - GEOL**
 
-<figure><img src=".gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
-
 **3.2.2 Stratum detail description - DETL**
-
-<figure><img src=".gitbook/assets/image (11) (1).png" alt=""><figcaption></figcaption></figure>
 
 **3.2.3 Driller geological description (4.1) - DLOG**
 
 The DLOG group represents the driller’s geological description according to AGS 4.1.1.
 
-<figure><img src=".gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
-
 #### 3.3 Samples - SAMP
-
-<figure><img src=".gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
 
 #### 3.4 Well design – HDIA, FLSH, BKFL, PIPE, FILT
 
 **3.4.1 Hole diameter - HDIA**
 
-<figure><img src=".gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
-
 **3.4.2 Flushing details - FLSH**
 
-<figure><img src=".gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
-
 **3.4.3 Backfill - BKFL**
-
-<figure><img src=".gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
 
 **3.4.4 Monitoring installation pipe - PIPE**
 
 The user must create a **Pipe reference entry** in order to make it available in the **Pipe reference dictionary** and to use it for the **Monitoring Installations and Instruments \[MONG]** data type.
 
-<figure><img src=".gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
-
 The entries of the dictionary **(AGS) Monitoring installation: PIPE - Pipe reference** are only available, if the user creates an entry in the Monitoring installation pipe. The dictionary is database specific.
-
-<figure><img src=".gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
 
 **3.4.5 Filter details - FILT**
 
 Pipe reference in monitoring installation pipe (PIPE group) and in filter details should be identical. Pipe name in filter details is used as the name (monitoring point ID) in the MONG group.
-
-<figure><img src=".gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
 
 #### 3.5 Additional object type tables – CDIA, CHIS, HDPH, DREM, DOBS, HORN
 
@@ -196,37 +151,21 @@ Additional object type tables store advanced drilling information that supports 
 5. DOBS – Drilling advancement observation and parameters
 6. HORN – Hole orientation and inclination
 
-<figure><img src=".gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
-
 **3.5.1 Casing diameter - CDIA**
-
-<figure><img src=".gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
 
 **3.5.2 Chiseling details - CHIS**
 
-<figure><img src=".gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
-
 **3.5.3 Depth related hole information - HDPH**
-
-<figure><img src=".gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
 
 **3.5.4 Depth related remarks - DREM**
 
-<figure><img src=".gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
-
 **3.5.5 Drilling advancement observation and parameters - DOBS**
-
-<figure><img src=".gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
 
 **3.5.6 Hole orientation and inclination - HORN**
 
-<figure><img src=".gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
-
 ### 4. Object type AGS 4 LBSG - Testing schedule \[AGSLBSG]
 
-#### 4.1	General data - Testing schedule - LBSG
-
-<figure><img src=".gitbook/assets/image (28).png" alt=""><figcaption></figcaption></figure>
+#### 4.1 General data - Testing schedule - LBSG
 
 A **testing schedule object** must be created so that its reference can be used in the **Testing Schedule Details \[LBST]** data type records.
 
@@ -234,19 +173,15 @@ The dictionary **(AGS) Testing schedule: LBSG – Schedule reference** is **data
 
 Using the **Add objects** method at the level of the opened database, testing schedule objects can be copied from one database to another. Once copied, they are also available as schedule references for the **Testing Schedule Details \[LBST]** data type.
 
-<figure><img src=".gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure>
-
 ### 5. Object Type AGS 4 PREM – Project-Specific Time-Related Remarks \[AGSPREM]
 
-#### 5.1	General data - Project specific time related remarks - PREM
+#### 5.1 General data - Project specific time related remarks - PREM
 
 The **AGS 4 PREM object** allows users to document project‑specific, time‑dependent events such as delays, weather events, and site accessibility issues. These records form part of the project’s **AGS‑compliant documentation**.
 
-<figure><img src=".gitbook/assets/image (29).png" alt=""><figcaption></figcaption></figure>
+### 6. Data types
 
-### 6.	Data types&#x20;
-
-#### 6.1	General information
+#### 6.1 General information
 
 There are **three types of measuring points** used in the AGS object type:
 
@@ -258,8 +193,6 @@ GeoDin includes **86 AGS data types**, each linked either to:
 
 * **(AGS) Location \[AGL]**, or
 * **(AGS) Samples \[AGS]**
-
-<figure><img src=".gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
 
 There are currently **no data types** linked to **(AGS) Screens / filter \[AGF]**.
 
@@ -295,15 +228,13 @@ If differences exist between AGS 4.1.1 and AGS 4.0.4, GeoDin provides the corres
 
 A total of **28 data types** are linked to **Locations**, including **18 sub‑data types**.
 
-<table data-header-hidden><thead><tr><th valign="bottom">Data type</th><th valign="bottom">Shortname</th><th width="198" valign="bottom">Longname</th><th valign="bottom">GeoDin   Table</th><th valign="bottom">1. level   sub-data type</th><th valign="bottom">2. level   sub-data type</th></tr></thead><tbody><tr><td valign="bottom"><p> </p><p>(AGS) CORE </p><p> </p></td><td valign="bottom"><p> </p><p>COR</p><p> </p></td><td valign="bottom"><p> </p><p>Coring Information</p><p> </p></td><td valign="bottom"><p> </p><p>CORTAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) DISC</p><p> </p></td><td valign="bottom"><p> </p><p>DIS</p><p> </p></td><td valign="bottom"><p> </p><p>Discontinuity Data</p><p> </p></td><td valign="bottom"><p> </p><p>DISTAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) DCPG</p><p> </p></td><td valign="bottom"><p> </p><p>DPG</p><p> </p></td><td valign="bottom"><p> </p><p>Dynamic Cone Penetrometer Tests - General</p><p> </p></td><td valign="bottom"><p> </p><p>DPGTAB01</p><p> </p></td><td valign="bottom"><p> </p><p>DCPT</p><p> </p></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) DPRG</p><p> </p></td><td valign="bottom"><p> </p><p>DRG</p><p> </p></td><td valign="bottom"><p> </p><p>Dynamic Probe Tests - General</p><p> </p></td><td valign="bottom"><p> </p><p>DRGTAB01</p><p> </p></td><td valign="bottom"><p> </p><p>DPRB</p><p> </p></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) FGHG</p><p> </p></td><td valign="bottom"><p> </p><p><em>FGG</em></p><p> </p></td><td valign="bottom"><p> </p><p><em>Field Geohydraulic Testing - General (4.1)</em></p><p> </p></td><td valign="bottom"><p> </p><p><em>FGGTAB01</em></p><p> </p></td><td valign="bottom"><p> </p><p><em>FGHI</em></p><p> </p><p><em>FGHS</em></p><p> </p></td><td valign="bottom"><p> </p><p><em>FGHT</em></p><p> </p></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) FRAC</p><p> </p></td><td valign="bottom"><p> </p><p>FRA</p><p> </p></td><td valign="bottom"><p> </p><p>Fracture Spacing</p><p> </p></td><td valign="bottom"><p> </p><p>FRATAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) ICBR</p><p> </p></td><td valign="bottom"><p> </p><p>ICB</p><p> </p></td><td valign="bottom"><p> </p><p>In Situ California Bearing Ratio Tests</p><p> </p></td><td valign="bottom"><p> </p><p>ICBTAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) IDEN</p><p> </p></td><td valign="bottom"><p> </p><p>IDE</p><p> </p></td><td valign="bottom"><p> </p><p>In Situ Density Tests</p><p> </p></td><td valign="bottom"><p> </p><p>IDETAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) IFID</p><p> </p></td><td valign="bottom"><p> </p><p>IFI</p><p> </p></td><td valign="bottom"><p> </p><p>On Site Volatile Headspace Testing Using Flame Ionisation Detector</p><p> </p></td><td valign="bottom"><p> </p><p>IFITAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) IPEN</p><p> </p></td><td valign="bottom"><p> </p><p>IPE</p><p> </p></td><td valign="bottom"><p> </p><p>In Situ Hand Penetrometer Tests</p><p> </p></td><td valign="bottom"><p> </p><p>IPETAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) IPRG*</p><p> </p></td><td valign="bottom"><p> </p><p>IPG</p><p> </p></td><td valign="bottom"><p> </p><p>In Situ Permeability Tests - General (4.0.4)</p><p> </p></td><td valign="bottom"><p> </p><p>IPGTAB01</p><p> </p></td><td valign="bottom"><p> </p><p>IPRT*</p><p> </p></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) IRDX</p><p> </p></td><td valign="bottom"><p> </p><p>IRD</p><p> </p></td><td valign="bottom"><p> </p><p>In Situ Redox Tests</p><p> </p></td><td valign="bottom"><p> </p><p>IRDTAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) IRES</p><p> </p></td><td valign="bottom"><p> </p><p>IRE</p><p> </p></td><td valign="bottom"><p> </p><p>In Situ Resistivity Tests</p><p> </p></td><td valign="bottom"><p> </p><p>IRETAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) ISAG</p><p> </p></td><td valign="bottom"><p> </p><p>ISG</p><p> </p></td><td valign="bottom"><p> </p><p>Soakaway Tests - General</p><p> </p></td><td valign="bottom"><p> </p><p>ISGTAB01</p><p> </p></td><td valign="bottom"><p> </p><p>ISAT</p><p> </p></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) ISPT</p><p> </p></td><td valign="bottom"><p> </p><p>ISP</p><p> </p></td><td valign="bottom"><p> </p><p>Standard Penetration Test Results</p><p> </p></td><td valign="bottom"><p> </p><p>ISPTAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) IVAN</p><p> </p></td><td valign="bottom"><p> </p><p>IVA</p><p> </p></td><td valign="bottom"><p> </p><p>In Situ Vane Tests</p><p> </p></td><td valign="bottom"><p> </p><p>IVATAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) MONG</p><p> </p></td><td valign="bottom"><p> </p><p>MOG</p><p> </p></td><td valign="bottom"><p> </p><p>Monitoring Installations and Instruments</p><p> </p></td><td valign="bottom"><p> </p><p>MOGTAB01</p><p> </p></td><td valign="bottom"><p> </p><p>MOND</p><p> </p></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) PLTG</p><p> </p></td><td valign="bottom"><p> </p><p>PLG</p><p> </p></td><td valign="bottom"><p> </p><p>Plate Loading Tests - General</p><p> </p></td><td valign="bottom"><p> </p><p>PLGTAB01</p><p> </p></td><td valign="bottom"><p> </p><p>PLTT</p><p> </p></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) PMTG</p><p> </p></td><td valign="bottom"><p> </p><p>PMG</p><p> </p></td><td valign="bottom"><p> </p><p>Pressuremeter Test Results - General</p><p> </p></td><td valign="bottom"><p> </p><p>PMGTAB01</p><p> </p></td><td valign="bottom"><p> </p><p>PMTD</p><p> </p><p>PMTL</p><p> </p></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) PTIM </p><p> </p></td><td valign="bottom"><p> </p><p>PTI</p><p> </p></td><td valign="bottom"><p> </p><p>Boring/Drilling Progress by Time</p><p> </p></td><td valign="bottom"><p> </p><p>PTITAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) PUMG</p><p> </p></td><td valign="bottom"><p> </p><p>PUG</p><p> </p></td><td valign="bottom"><p> </p><p>Pumping Tests - General</p><p> </p></td><td valign="bottom"><p> </p><p>PUGTAB01</p><p> </p></td><td valign="bottom"><p> </p><p>PUMT</p><p> </p></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) SCPG</p><p> </p></td><td valign="bottom"><p> </p><p>SCG</p><p> </p></td><td valign="bottom"><p> </p><p>Static Cone Penetration Tests - General</p><p> </p></td><td valign="bottom"><p> </p><p>SCGTAB01</p><p> </p></td><td valign="bottom"><p> </p><p>SCDG</p><p> </p><p>SCPP</p><p> </p><p>SCPT</p><p> </p></td><td valign="bottom"><p> </p><p>SCDT</p><p> </p></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) TREM</p><p> </p></td><td valign="bottom"><p> </p><p>TRE</p><p> </p></td><td valign="bottom"><p> </p><p>Location Specific Time Related Remarks</p><p> </p></td><td valign="bottom"><p> </p><p>TRETAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) WADD</p><p> </p></td><td valign="bottom"><p> </p><p>WAD</p><p> </p></td><td valign="bottom"><p> </p><p>Water Added Records</p><p> </p></td><td valign="bottom"><p> </p><p>WADTAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) WETH</p><p> </p></td><td valign="bottom"><p> </p><p>WET</p><p> </p></td><td valign="bottom"><p> </p><p>Weathering</p><p> </p></td><td valign="bottom"><p> </p><p>WETTAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) WGPG</p><p> </p></td><td valign="bottom"><p> </p><p><em>WGG</em></p><p> </p></td><td valign="bottom"><p> </p><p><em>Wireline Geophysics - General (4.1)</em></p><p> </p></td><td valign="bottom"><p> </p><p><em>WGGTAB01</em></p><p> </p></td><td valign="bottom"><p> </p><p><em>WGPT</em></p><p> </p></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) WINS</p><p> </p></td><td valign="bottom"><p> </p><p>WIN</p><p> </p></td><td valign="bottom"><p> </p><p>Window or Windowless Sampling Run Details</p><p> </p></td><td valign="bottom"><p> </p><p>WINTAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) WSTG</p><p> </p></td><td valign="bottom"><p> </p><p>WSG</p><p> </p></td><td valign="bottom"><p> </p><p>Water Strike - General</p><p> </p></td><td valign="bottom"><p> </p><p>WSGTAB01</p><p> </p></td><td valign="bottom"><p> </p><p>WSTD</p><p> </p></td><td valign="bottom"></td></tr></tbody></table>
-
-&#x20;
+<table data-header-hidden><thead><tr><th valign="bottom">Data type</th><th valign="bottom">Shortname</th><th width="198" valign="bottom">Longname</th><th valign="bottom">GeoDin Table</th><th valign="bottom">1. level sub-data type</th><th valign="bottom">2. level sub-data type</th></tr></thead><tbody><tr><td valign="bottom">(AGS) CORE</td><td valign="bottom">COR</td><td valign="bottom">Coring Information</td><td valign="bottom">CORTAB01</td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) DISC</td><td valign="bottom">DIS</td><td valign="bottom">Discontinuity Data</td><td valign="bottom">DISTAB01</td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) DCPG</td><td valign="bottom">DPG</td><td valign="bottom">Dynamic Cone Penetrometer Tests - General</td><td valign="bottom">DPGTAB01</td><td valign="bottom">DCPT</td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) DPRG</td><td valign="bottom">DRG</td><td valign="bottom">Dynamic Probe Tests - General</td><td valign="bottom">DRGTAB01</td><td valign="bottom">DPRB</td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) FGHG</td><td valign="bottom"><em>FGG</em></td><td valign="bottom"><em>Field Geohydraulic Testing - General (4.1)</em></td><td valign="bottom"><em>FGGTAB01</em></td><td valign="bottom"><p><em>FGHI</em></p><p><em>FGHS</em></p></td><td valign="bottom"><em>FGHT</em></td></tr><tr><td valign="bottom">(AGS) FRAC</td><td valign="bottom">FRA</td><td valign="bottom">Fracture Spacing</td><td valign="bottom">FRATAB01</td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) ICBR</td><td valign="bottom">ICB</td><td valign="bottom">In Situ California Bearing Ratio Tests</td><td valign="bottom">ICBTAB01</td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) IDEN</td><td valign="bottom">IDE</td><td valign="bottom">In Situ Density Tests</td><td valign="bottom">IDETAB01</td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) IFID</td><td valign="bottom">IFI</td><td valign="bottom">On Site Volatile Headspace Testing Using Flame Ionisation Detector</td><td valign="bottom">IFITAB01</td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) IPEN</td><td valign="bottom">IPE</td><td valign="bottom">In Situ Hand Penetrometer Tests</td><td valign="bottom">IPETAB01</td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) IPRG*</td><td valign="bottom">IPG</td><td valign="bottom">In Situ Permeability Tests - General (4.0.4)</td><td valign="bottom">IPGTAB01</td><td valign="bottom">IPRT*</td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) IRDX</td><td valign="bottom">IRD</td><td valign="bottom">In Situ Redox Tests</td><td valign="bottom">IRDTAB01</td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) IRES</td><td valign="bottom">IRE</td><td valign="bottom">In Situ Resistivity Tests</td><td valign="bottom">IRETAB01</td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) ISAG</td><td valign="bottom">ISG</td><td valign="bottom">Soakaway Tests - General</td><td valign="bottom">ISGTAB01</td><td valign="bottom">ISAT</td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) ISPT</td><td valign="bottom">ISP</td><td valign="bottom">Standard Penetration Test Results</td><td valign="bottom">ISPTAB01</td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) IVAN</td><td valign="bottom">IVA</td><td valign="bottom">In Situ Vane Tests</td><td valign="bottom">IVATAB01</td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) MONG</td><td valign="bottom">MOG</td><td valign="bottom">Monitoring Installations and Instruments</td><td valign="bottom">MOGTAB01</td><td valign="bottom">MOND</td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) PLTG</td><td valign="bottom">PLG</td><td valign="bottom">Plate Loading Tests - General</td><td valign="bottom">PLGTAB01</td><td valign="bottom">PLTT</td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) PMTG</td><td valign="bottom">PMG</td><td valign="bottom">Pressuremeter Test Results - General</td><td valign="bottom">PMGTAB01</td><td valign="bottom"><p>PMTD</p><p>PMTL</p></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) PTIM</td><td valign="bottom">PTI</td><td valign="bottom">Boring/Drilling Progress by Time</td><td valign="bottom">PTITAB01</td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) PUMG</td><td valign="bottom">PUG</td><td valign="bottom">Pumping Tests - General</td><td valign="bottom">PUGTAB01</td><td valign="bottom">PUMT</td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) SCPG</td><td valign="bottom">SCG</td><td valign="bottom">Static Cone Penetration Tests - General</td><td valign="bottom">SCGTAB01</td><td valign="bottom"><p>SCDG</p><p>SCPP</p><p>SCPT</p></td><td valign="bottom">SCDT</td></tr><tr><td valign="bottom">(AGS) TREM</td><td valign="bottom">TRE</td><td valign="bottom">Location Specific Time Related Remarks</td><td valign="bottom">TRETAB01</td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) WADD</td><td valign="bottom">WAD</td><td valign="bottom">Water Added Records</td><td valign="bottom">WADTAB01</td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) WETH</td><td valign="bottom">WET</td><td valign="bottom">Weathering</td><td valign="bottom">WETTAB01</td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) WGPG</td><td valign="bottom"><em>WGG</em></td><td valign="bottom"><em>Wireline Geophysics - General (4.1)</em></td><td valign="bottom"><em>WGGTAB01</em></td><td valign="bottom"><em>WGPT</em></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) WINS</td><td valign="bottom">WIN</td><td valign="bottom">Window or Windowless Sampling Run Details</td><td valign="bottom">WINTAB01</td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) WSTG</td><td valign="bottom">WSG</td><td valign="bottom">Water Strike - General</td><td valign="bottom">WSGTAB01</td><td valign="bottom">WSTD</td><td valign="bottom"></td></tr></tbody></table>
 
 **6.1.2 Sample data types**
 
 **58 data types** are linked to **Samples**, including **19 sub‑data types**.
 
-<table data-header-hidden><thead><tr><th valign="bottom">Data type</th><th width="89" valign="bottom">Shortname</th><th width="289" valign="bottom">Longname</th><th valign="bottom">GeoDin   Table</th><th valign="bottom">1. level   sub-data type</th><th valign="bottom">2. level   sub-data type</th><th valign="bottom"></th></tr></thead><tbody><tr><td valign="bottom"><p> </p><p>(AGS) AAVT</p><p> </p></td><td valign="bottom"><p> </p><p>AAV</p><p> </p></td><td valign="bottom"><p> </p><p>Aggregate Abrasion Tests</p><p> </p></td><td valign="bottom"><p> </p><p>AAVTAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) ACVT</p><p> </p></td><td valign="bottom"><p> </p><p>ACV</p><p> </p></td><td valign="bottom"><p> </p><p>Aggregate Crushing Value Tests</p><p> </p></td><td valign="bottom"><p> </p><p>ACVTAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) AELO</p><p> </p></td><td valign="bottom"><p> </p><p>AEL</p><p> </p></td><td valign="bottom"><p> </p><p>Aggregate Elongation Index Tests</p><p> </p></td><td valign="bottom"><p> </p><p>AELTAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) AFLK</p><p> </p></td><td valign="bottom"><p> </p><p>AFL</p><p> </p></td><td valign="bottom"><p> </p><p>Aggregate Flakiness Tests</p><p> </p></td><td valign="bottom"><p> </p><p>AFLTAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) AIVT</p><p> </p></td><td valign="bottom"><p> </p><p>AIV</p><p> </p></td><td valign="bottom"><p> </p><p>Aggregate Impact Value Tests</p><p> </p></td><td valign="bottom"><p> </p><p>AIVTAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) ALOS</p><p> </p></td><td valign="bottom"><p> </p><p>ALO</p><p> </p></td><td valign="bottom"><p> </p><p>Los Angeles Abrasion Tests</p><p> </p></td><td valign="bottom"><p> </p><p>ALOTAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) APSV</p><p> </p></td><td valign="bottom"><p> </p><p>APS</p><p> </p></td><td valign="bottom"><p> </p><p>Aggregate Polished Stone Tests</p><p> </p></td><td valign="bottom"><p> </p><p>APSTAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) ARTW</p><p> </p></td><td valign="bottom"><p> </p><p>ART</p><p> </p></td><td valign="bottom"><p> </p><p>Aggregate Determination of the Resistance to Wear (micro-Deval)</p><p> </p></td><td valign="bottom"><p> </p><p>ARTTAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) ASDI</p><p> </p></td><td valign="bottom"><p> </p><p>ASD</p><p> </p></td><td valign="bottom"><p> </p><p>Slake Durability Index Tests</p><p> </p></td><td valign="bottom"><p> </p><p>ASDTAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) ASNS</p><p> </p></td><td valign="bottom"><p> </p><p>ASN</p><p> </p></td><td valign="bottom"><p> </p><p>Aggregate Soundness Tests</p><p> </p></td><td valign="bottom"><p> </p><p>ASNTAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) AWAD</p><p> </p></td><td valign="bottom"><p> </p><p>AWA</p><p> </p></td><td valign="bottom"><p> </p><p>Aggregate Water Absorption Tests</p><p> </p></td><td valign="bottom"><p> </p><p>AWATAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) CBRG</p><p> </p></td><td valign="bottom"><p> </p><p>CBG</p><p> </p></td><td valign="bottom"><p> </p><p>California Bearing Ratio Tests - General</p><p> </p></td><td valign="bottom"><p> </p><p>CBGTAB01</p><p> </p></td><td valign="bottom"><p> </p><p>CBRT</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) CHOC</p><p> </p></td><td valign="bottom"><p> </p><p>CHO</p><p> </p></td><td valign="bottom"><p> </p><p>Chain of Custody Information</p><p> </p></td><td valign="bottom"><p> </p><p>CHOTAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) CMPG</p><p> </p></td><td valign="bottom"><p> </p><p>CMG</p><p> </p></td><td valign="bottom"><p> </p><p>Compaction Tests - General</p><p> </p></td><td valign="bottom"><p> </p><p>CMGTAB01</p><p> </p></td><td valign="bottom"><p> </p><p>CMPT</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) CONG </p><p> </p></td><td valign="bottom"><p> </p><p>COG</p><p> </p></td><td valign="bottom"><p> </p><p>Consolidation Tests - General</p><p> </p></td><td valign="bottom"><p> </p><p>COGTAB01</p><p> </p></td><td valign="bottom"><p> </p><p>CONS</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) CTRG</p><p> </p></td><td valign="bottom"><p> </p><p><em>CTG</em></p><p> </p></td><td valign="bottom"><p> </p><p><em>Cyclic Triaxial Tests - General (4.1)</em></p><p> </p></td><td valign="bottom"><p> </p><p><em>CTGTAB01</em></p><p> </p></td><td valign="bottom"><p> </p><p><em>CTRC</em></p><p> </p><p><em>CTRS</em></p><p> </p></td><td valign="bottom"><p> </p><p><em>CTRP</em></p><p> </p></td><td valign="bottom"><p> </p><p><em>CTRD</em></p><p> </p></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) ECTN</p><p> </p></td><td valign="bottom"><p> </p><p><em>ECT</em></p><p> </p></td><td valign="bottom"><p> </p><p><em>Sample Container Details (4.1)</em></p><p> </p></td><td valign="bottom"><p> </p><p><em>ECTTAB01</em></p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) ELRG</p><p> </p></td><td valign="bottom"><p> </p><p><em>ELR</em></p><p> </p></td><td valign="bottom"><p> </p><p><em>Environmental Laboratory Reporting (4.1)</em></p><p> </p></td><td valign="bottom"><p> </p><p><em>ELRTAB01</em></p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) ERES* </p><p> </p></td><td valign="bottom"><p> </p><p>ERE</p><p> </p></td><td valign="bottom"><p> </p><p>Environmental Contaminant Testing (4.0.4)</p><p> </p></td><td valign="bottom"><p> </p><p>ERETAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) ESCG</p><p> </p></td><td valign="bottom"><p> </p><p>ESG</p><p> </p></td><td valign="bottom"><p> </p><p>Effective Stress Consolidation Tests - General</p><p> </p></td><td valign="bottom"><p> </p><p>ESGTAB01</p><p> </p></td><td valign="bottom"><p> </p><p>ESCT</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) FRST</p><p> </p></td><td valign="bottom"><p> </p><p>FRS</p><p> </p></td><td valign="bottom"><p> </p><p>Frost Susceptibility Tests</p><p> </p></td><td valign="bottom"><p> </p><p>FRSTAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) GCHM</p><p> </p></td><td valign="bottom"><p> </p><p>GCM</p><p> </p></td><td valign="bottom"><p> </p><p>Geotechnical Chemistry Testing</p><p> </p></td><td valign="bottom"><p> </p><p>GCMTAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) GRAG </p><p> </p></td><td valign="bottom"><p> </p><p>GRG</p><p> </p></td><td valign="bottom"><p> </p><p>Particle Size Distribution Analysis - General</p><p> </p></td><td valign="bottom"><p> </p><p>GRGTAB01</p><p> </p></td><td valign="bottom"><p> </p><p>GRAT</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) IPID</p><p> </p></td><td valign="bottom"><p> </p><p>IPI</p><p> </p></td><td valign="bottom"><p> </p><p>On Site Volatile Headspace Testing by Photo Ionisation Detector</p><p> </p></td><td valign="bottom"><p> </p><p>IPITAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) LBST</p><p> </p></td><td valign="bottom"><p> </p><p>LBT</p><p> </p></td><td valign="bottom"><p> </p><p>Testing Schedule Details</p><p> </p></td><td valign="bottom"><p> </p><p>LBTTAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) LDEN</p><p> </p></td><td valign="bottom"><p> </p><p>LDE</p><p> </p></td><td valign="bottom"><p> </p><p>Density Tests</p><p> </p></td><td valign="bottom"><p> </p><p>LDETAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) LDYN</p><p> </p></td><td valign="bottom"><p> </p><p>LDY</p><p> </p></td><td valign="bottom"><p> </p><p>Dynamic Testing</p><p> </p></td><td valign="bottom"><p> </p><p>LDYTAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p><em>(AGS) LFCN</em></p><p> </p></td><td valign="bottom"><p> </p><p><em>LFC</em></p><p> </p></td><td valign="bottom"><p> </p><p><em>Laboratory Fall Cone Tests (4.1)</em></p><p> </p></td><td valign="bottom"><p> </p><p><em>LFCTAB01</em></p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) LLIN</p><p> </p></td><td valign="bottom"><p> </p><p>LLI</p><p> </p></td><td valign="bottom"><p> </p><p>Linear Shrinkage Tests</p><p> </p></td><td valign="bottom"><p> </p><p>LLITAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) LLPL</p><p> </p></td><td valign="bottom"><p> </p><p>LLP</p><p> </p></td><td valign="bottom"><p> </p><p>Liquid and Plastic Limit Tests</p><p> </p></td><td valign="bottom"><p> </p><p>LLPTAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) LNMC</p><p> </p></td><td valign="bottom"><p> </p><p>LNM</p><p> </p></td><td valign="bottom"><p> </p><p>Water/Moisture Content Tests</p><p> </p></td><td valign="bottom"><p> </p><p>LNMTAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) LPDN</p><p> </p></td><td valign="bottom"><p> </p><p>LPD</p><p> </p></td><td valign="bottom"><p> </p><p>Particle Density Tests</p><p> </p></td><td valign="bottom"><p> </p><p>LPDTAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) LPEN</p><p> </p></td><td valign="bottom"><p> </p><p>LPE</p><p> </p></td><td valign="bottom"><p> </p><p>Laboratory Hand Penetrometer Tests</p><p> </p></td><td valign="bottom"><p> </p><p>LPETAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) LRES</p><p> </p></td><td valign="bottom"><p> </p><p>LRE</p><p> </p></td><td valign="bottom"><p> </p><p>Laboratory Resistivity Tests</p><p> </p></td><td valign="bottom"><p> </p><p>LRETAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) LSTG</p><p> </p></td><td valign="bottom"><p> </p><p>LSG</p><p> </p></td><td valign="bottom"><p> </p><p>Initial Consumption of Lime Tests - General</p><p> </p></td><td valign="bottom"><p> </p><p>LSGTAB01</p><p> </p></td><td valign="bottom"><p> </p><p>LSTT</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) LSLT</p><p> </p></td><td valign="bottom"><p> </p><p>LSL</p><p> </p></td><td valign="bottom"><p> </p><p>Shrinkage Limit Tests</p><p> </p></td><td valign="bottom"><p> </p><p>LSLTAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) LSWL </p><p> </p></td><td valign="bottom"><p> </p><p>LSW</p><p> </p></td><td valign="bottom"><p> </p><p>Swelling Index Testing</p><p> </p></td><td valign="bottom"><p> </p><p>LSWTAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p><em>(AGS) LTCH</em></p><p> </p></td><td valign="bottom"><p> </p><p><em>LTC</em></p><p> </p></td><td valign="bottom"><p> </p><p><em>Laboratory Thermal Conductivity (4.1)</em></p><p> </p></td><td valign="bottom"><p> </p><p><em>LTCTAB01</em></p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) LUCT</p><p> </p></td><td valign="bottom"><p> </p><p><em>LUC</em></p><p> </p></td><td valign="bottom"><p> </p><p><em>Laboratory Unconfined Compression Test (4.1)</em></p><p> </p></td><td valign="bottom"><p> </p><p><em>LUCTAB01</em></p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) LVAN</p><p> </p></td><td valign="bottom"><p> </p><p>LVA</p><p> </p></td><td valign="bottom"><p> </p><p>Laboratory Vane Tests</p><p> </p></td><td valign="bottom"><p> </p><p>LVATAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) MCVG</p><p> </p></td><td valign="bottom"><p> </p><p>MCG</p><p> </p></td><td valign="bottom"><p> </p><p>MCV Tests - General</p><p> </p></td><td valign="bottom"><p> </p><p>MCGTAB01</p><p> </p></td><td valign="bottom"><p> </p><p>MCVT</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) PTST</p><p> </p></td><td valign="bottom"><p> </p><p>PTS</p><p> </p></td><td valign="bottom"><p> </p><p>Laboratory Permeability Tests</p><p> </p></td><td valign="bottom"><p> </p><p>PTSTAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) RCAG</p><p> </p></td><td valign="bottom"><p> </p><p><em>RAG</em></p><p> </p></td><td valign="bottom"><p> </p><p><em>Rock Abrasiveness Tests - General (4.1)</em></p><p> </p></td><td valign="bottom"><p> </p><p><em>RAGTAB01</em></p><p> </p></td><td valign="bottom"><p> </p><p><em>RCAT</em></p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) RESG</p><p> </p></td><td valign="bottom"><p> </p><p><em>RCG</em></p><p> </p></td><td valign="bottom"><p> </p><p><em>Resonant Column Test - General (4.1)</em></p><p> </p></td><td valign="bottom"><p> </p><p><em>RCGTAB01</em></p><p> </p></td><td valign="bottom"><p> </p><p><em>RESC</em></p><p> </p><p><em>RESD</em></p><p> </p><p><em>RESS</em></p><p> </p></td><td valign="bottom"><p> </p><p> </p><p> </p><p><em>RESP</em></p><p> </p></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) RCCV</p><p> </p></td><td valign="bottom"><p> </p><p>RCV</p><p> </p></td><td valign="bottom"><p> </p><p>Chalk Crushing Value Tests</p><p> </p></td><td valign="bottom"><p> </p><p>RCVTAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) RDEN</p><p> </p></td><td valign="bottom"><p> </p><p>RDE</p><p> </p></td><td valign="bottom"><p> </p><p>Rock Porosity and Density Tests</p><p> </p></td><td valign="bottom"><p> </p><p>RDETAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) RELD</p><p> </p></td><td valign="bottom"><p> </p><p>REL</p><p> </p></td><td valign="bottom"><p> </p><p>Relative Density Tests</p><p> </p></td><td valign="bottom"><p> </p><p>RELTAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) RPLT</p><p> </p></td><td valign="bottom"><p> </p><p>RPL</p><p> </p></td><td valign="bottom"><p> </p><p>Point Load Testing</p><p> </p></td><td valign="bottom"><p> </p><p>RPLTAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) RSCH</p><p> </p></td><td valign="bottom"><p> </p><p>RSC</p><p> </p></td><td valign="bottom"><p> </p><p>Schmidt Rebound Hardness Tests</p><p> </p></td><td valign="bottom"><p> </p><p>RSCTAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) RSHR</p><p> </p></td><td valign="bottom"><p> </p><p>RSH</p><p> </p></td><td valign="bottom"><p> </p><p>Shore Scleroscope Hardness Tests</p><p> </p></td><td valign="bottom"><p> </p><p>RSHTAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) RTEN</p><p> </p></td><td valign="bottom"><p> </p><p>RTE</p><p> </p></td><td valign="bottom"><p> </p><p>Tensile Strength Testing</p><p> </p></td><td valign="bottom"><p> </p><p>RTETAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) RUCS</p><p> </p></td><td valign="bottom"><p> </p><p>RUC</p><p> </p></td><td valign="bottom"><p> </p><p>Rock Uniaxial Compressive Strength and Deformability Tests</p><p> </p></td><td valign="bottom"><p> </p><p>RUCTAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) RWCO</p><p> </p></td><td valign="bottom"><p> </p><p>RWC</p><p> </p></td><td valign="bottom"><p> </p><p>Water Content of Rock Tests</p><p> </p></td><td valign="bottom"><p> </p><p>RWCTAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) SHBG</p><p> </p></td><td valign="bottom"><p> </p><p>SHG</p><p> </p></td><td valign="bottom"><p> </p><p>Shear Box Testing - General</p><p> </p></td><td valign="bottom"><p> </p><p>SHGTAB01</p><p> </p></td><td valign="bottom"><p> </p><p>SHBT</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) SUCT</p><p> </p></td><td valign="bottom"><p> </p><p>SUC</p><p> </p></td><td valign="bottom"><p> </p><p>Suction Tests</p><p> </p></td><td valign="bottom"><p> </p><p>SUCTAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) TREG</p><p> </p></td><td valign="bottom"><p> </p><p>TEG</p><p> </p></td><td valign="bottom"><p> </p><p>Triaxial Tests - Effective Stress - General</p><p> </p></td><td valign="bottom"><p> </p><p>TEGTAB01</p><p> </p></td><td valign="bottom"><p> </p><p>TRET</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) TRIG</p><p> </p></td><td valign="bottom"><p> </p><p>TIG</p><p> </p></td><td valign="bottom"><p> </p><p>Triaxial Tests - Total Stress - General</p><p> </p></td><td valign="bottom"><p> </p><p>TIGTAB01</p><p> </p></td><td valign="bottom"><p> </p><p>TRIT</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><p> </p><p>(AGS) TNPC</p><p> </p></td><td valign="bottom"><p> </p><p>TNP</p><p> </p></td><td valign="bottom"><p> </p><p>Ten Per Cent Fines</p><p> </p></td><td valign="bottom"><p> </p><p>TNPTAB01</p><p> </p></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th valign="bottom">Data type</th><th width="89" valign="bottom">Shortname</th><th width="289" valign="bottom">Longname</th><th valign="bottom">GeoDin Table</th><th valign="bottom">1. level sub-data type</th><th valign="bottom">2. level sub-data type</th><th valign="bottom"></th></tr></thead><tbody><tr><td valign="bottom">(AGS) AAVT</td><td valign="bottom">AAV</td><td valign="bottom">Aggregate Abrasion Tests</td><td valign="bottom">AAVTAB01</td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) ACVT</td><td valign="bottom">ACV</td><td valign="bottom">Aggregate Crushing Value Tests</td><td valign="bottom">ACVTAB01</td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) AELO</td><td valign="bottom">AEL</td><td valign="bottom">Aggregate Elongation Index Tests</td><td valign="bottom">AELTAB01</td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) AFLK</td><td valign="bottom">AFL</td><td valign="bottom">Aggregate Flakiness Tests</td><td valign="bottom">AFLTAB01</td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) AIVT</td><td valign="bottom">AIV</td><td valign="bottom">Aggregate Impact Value Tests</td><td valign="bottom">AIVTAB01</td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) ALOS</td><td valign="bottom">ALO</td><td valign="bottom">Los Angeles Abrasion Tests</td><td valign="bottom">ALOTAB01</td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) APSV</td><td valign="bottom">APS</td><td valign="bottom">Aggregate Polished Stone Tests</td><td valign="bottom">APSTAB01</td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) ARTW</td><td valign="bottom">ART</td><td valign="bottom">Aggregate Determination of the Resistance to Wear (micro-Deval)</td><td valign="bottom">ARTTAB01</td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) ASDI</td><td valign="bottom">ASD</td><td valign="bottom">Slake Durability Index Tests</td><td valign="bottom">ASDTAB01</td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) ASNS</td><td valign="bottom">ASN</td><td valign="bottom">Aggregate Soundness Tests</td><td valign="bottom">ASNTAB01</td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) AWAD</td><td valign="bottom">AWA</td><td valign="bottom">Aggregate Water Absorption Tests</td><td valign="bottom">AWATAB01</td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) CBRG</td><td valign="bottom">CBG</td><td valign="bottom">California Bearing Ratio Tests - General</td><td valign="bottom">CBGTAB01</td><td valign="bottom">CBRT</td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) CHOC</td><td valign="bottom">CHO</td><td valign="bottom">Chain of Custody Information</td><td valign="bottom">CHOTAB01</td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) CMPG</td><td valign="bottom">CMG</td><td valign="bottom">Compaction Tests - General</td><td valign="bottom">CMGTAB01</td><td valign="bottom">CMPT</td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) CONG</td><td valign="bottom">COG</td><td valign="bottom">Consolidation Tests - General</td><td valign="bottom">COGTAB01</td><td valign="bottom">CONS</td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) CTRG</td><td valign="bottom"><em>CTG</em></td><td valign="bottom"><em>Cyclic Triaxial Tests - General (4.1)</em></td><td valign="bottom"><em>CTGTAB01</em></td><td valign="bottom"><p><em>CTRC</em></p><p><em>CTRS</em></p></td><td valign="bottom"><em>CTRP</em></td><td valign="bottom"><em>CTRD</em></td></tr><tr><td valign="bottom">(AGS) ECTN</td><td valign="bottom"><em>ECT</em></td><td valign="bottom"><em>Sample Container Details (4.1)</em></td><td valign="bottom"><em>ECTTAB01</em></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) ELRG</td><td valign="bottom"><em>ELR</em></td><td valign="bottom"><em>Environmental Laboratory Reporting (4.1)</em></td><td valign="bottom"><em>ELRTAB01</em></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) ERES*</td><td valign="bottom">ERE</td><td valign="bottom">Environmental Contaminant Testing (4.0.4)</td><td valign="bottom">ERETAB01</td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) ESCG</td><td valign="bottom">ESG</td><td valign="bottom">Effective Stress Consolidation Tests - General</td><td valign="bottom">ESGTAB01</td><td valign="bottom">ESCT</td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) FRST</td><td valign="bottom">FRS</td><td valign="bottom">Frost Susceptibility Tests</td><td valign="bottom">FRSTAB01</td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) GCHM</td><td valign="bottom">GCM</td><td valign="bottom">Geotechnical Chemistry Testing</td><td valign="bottom">GCMTAB01</td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) GRAG</td><td valign="bottom">GRG</td><td valign="bottom">Particle Size Distribution Analysis - General</td><td valign="bottom">GRGTAB01</td><td valign="bottom">GRAT</td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) IPID</td><td valign="bottom">IPI</td><td valign="bottom">On Site Volatile Headspace Testing by Photo Ionisation Detector</td><td valign="bottom">IPITAB01</td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) LBST</td><td valign="bottom">LBT</td><td valign="bottom">Testing Schedule Details</td><td valign="bottom">LBTTAB01</td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) LDEN</td><td valign="bottom">LDE</td><td valign="bottom">Density Tests</td><td valign="bottom">LDETAB01</td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) LDYN</td><td valign="bottom">LDY</td><td valign="bottom">Dynamic Testing</td><td valign="bottom">LDYTAB01</td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><em>(AGS) LFCN</em></td><td valign="bottom"><em>LFC</em></td><td valign="bottom"><em>Laboratory Fall Cone Tests (4.1)</em></td><td valign="bottom"><em>LFCTAB01</em></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) LLIN</td><td valign="bottom">LLI</td><td valign="bottom">Linear Shrinkage Tests</td><td valign="bottom">LLITAB01</td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) LLPL</td><td valign="bottom">LLP</td><td valign="bottom">Liquid and Plastic Limit Tests</td><td valign="bottom">LLPTAB01</td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) LNMC</td><td valign="bottom">LNM</td><td valign="bottom">Water/Moisture Content Tests</td><td valign="bottom">LNMTAB01</td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) LPDN</td><td valign="bottom">LPD</td><td valign="bottom">Particle Density Tests</td><td valign="bottom">LPDTAB01</td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) LPEN</td><td valign="bottom">LPE</td><td valign="bottom">Laboratory Hand Penetrometer Tests</td><td valign="bottom">LPETAB01</td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) LRES</td><td valign="bottom">LRE</td><td valign="bottom">Laboratory Resistivity Tests</td><td valign="bottom">LRETAB01</td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) LSTG</td><td valign="bottom">LSG</td><td valign="bottom">Initial Consumption of Lime Tests - General</td><td valign="bottom">LSGTAB01</td><td valign="bottom">LSTT</td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) LSLT</td><td valign="bottom">LSL</td><td valign="bottom">Shrinkage Limit Tests</td><td valign="bottom">LSLTAB01</td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) LSWL</td><td valign="bottom">LSW</td><td valign="bottom">Swelling Index Testing</td><td valign="bottom">LSWTAB01</td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom"><em>(AGS) LTCH</em></td><td valign="bottom"><em>LTC</em></td><td valign="bottom"><em>Laboratory Thermal Conductivity (4.1)</em></td><td valign="bottom"><em>LTCTAB01</em></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) LUCT</td><td valign="bottom"><em>LUC</em></td><td valign="bottom"><em>Laboratory Unconfined Compression Test (4.1)</em></td><td valign="bottom"><em>LUCTAB01</em></td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) LVAN</td><td valign="bottom">LVA</td><td valign="bottom">Laboratory Vane Tests</td><td valign="bottom">LVATAB01</td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) MCVG</td><td valign="bottom">MCG</td><td valign="bottom">MCV Tests - General</td><td valign="bottom">MCGTAB01</td><td valign="bottom">MCVT</td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) PTST</td><td valign="bottom">PTS</td><td valign="bottom">Laboratory Permeability Tests</td><td valign="bottom">PTSTAB01</td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) RCAG</td><td valign="bottom"><em>RAG</em></td><td valign="bottom"><em>Rock Abrasiveness Tests - General (4.1)</em></td><td valign="bottom"><em>RAGTAB01</em></td><td valign="bottom"><em>RCAT</em></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) RESG</td><td valign="bottom"><em>RCG</em></td><td valign="bottom"><em>Resonant Column Test - General (4.1)</em></td><td valign="bottom"><em>RCGTAB01</em></td><td valign="bottom"><p><em>RESC</em></p><p><em>RESD</em></p><p><em>RESS</em></p></td><td valign="bottom"><em>RESP</em></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) RCCV</td><td valign="bottom">RCV</td><td valign="bottom">Chalk Crushing Value Tests</td><td valign="bottom">RCVTAB01</td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) RDEN</td><td valign="bottom">RDE</td><td valign="bottom">Rock Porosity and Density Tests</td><td valign="bottom">RDETAB01</td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) RELD</td><td valign="bottom">REL</td><td valign="bottom">Relative Density Tests</td><td valign="bottom">RELTAB01</td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) RPLT</td><td valign="bottom">RPL</td><td valign="bottom">Point Load Testing</td><td valign="bottom">RPLTAB01</td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) RSCH</td><td valign="bottom">RSC</td><td valign="bottom">Schmidt Rebound Hardness Tests</td><td valign="bottom">RSCTAB01</td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) RSHR</td><td valign="bottom">RSH</td><td valign="bottom">Shore Scleroscope Hardness Tests</td><td valign="bottom">RSHTAB01</td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) RTEN</td><td valign="bottom">RTE</td><td valign="bottom">Tensile Strength Testing</td><td valign="bottom">RTETAB01</td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) RUCS</td><td valign="bottom">RUC</td><td valign="bottom">Rock Uniaxial Compressive Strength and Deformability Tests</td><td valign="bottom">RUCTAB01</td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) RWCO</td><td valign="bottom">RWC</td><td valign="bottom">Water Content of Rock Tests</td><td valign="bottom">RWCTAB01</td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) SHBG</td><td valign="bottom">SHG</td><td valign="bottom">Shear Box Testing - General</td><td valign="bottom">SHGTAB01</td><td valign="bottom">SHBT</td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) SUCT</td><td valign="bottom">SUC</td><td valign="bottom">Suction Tests</td><td valign="bottom">SUCTAB01</td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) TREG</td><td valign="bottom">TEG</td><td valign="bottom">Triaxial Tests - Effective Stress - General</td><td valign="bottom">TEGTAB01</td><td valign="bottom">TRET</td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) TRIG</td><td valign="bottom">TIG</td><td valign="bottom">Triaxial Tests - Total Stress - General</td><td valign="bottom">TIGTAB01</td><td valign="bottom">TRIT</td><td valign="bottom"></td><td valign="bottom"></td></tr><tr><td valign="bottom">(AGS) TNPC</td><td valign="bottom">TNP</td><td valign="bottom">Ten Per Cent Fines</td><td valign="bottom">TNPTAB01</td><td valign="bottom"></td><td valign="bottom"></td><td valign="bottom"></td></tr></tbody></table>
 
 **6.1.3 List of sub-data types**
 
@@ -315,8 +246,6 @@ Users can install plugins on the **System** side of GeoDin, as shown below. By p
 
 If a plugin is already installed, it appears under **Installed plugins**.
 
-<figure><img src=".gitbook/assets/image (48).png" alt=""><figcaption></figcaption></figure>
-
 #### **System Requirements**
 
 * **GeoDin version 15.4 or higher**
@@ -324,11 +253,7 @@ If a plugin is already installed, it appears under **Installed plugins**.
 
 Users running **GeoDin versions 15.0 to 15.3** can update **GeoDin** by using the **“Update GeoDin”** function on the **System** page.
 
-<figure><img src=".gitbook/assets/image (49).png" alt=""><figcaption></figcaption></figure>
-
 When the AGS plugins are started and the required .NET runtime is not already installed, a message is displayed informing the user that the .NET Desktop Runtime must be downloaded and installed first. If the user confirms the prompt by selecting “Yes”, they are automatically redirected to the official [Microsoft download](https://dotnet.microsoft.com/en-us/download/dotnet) page. From there, the user can download and install the required .NET Desktop Runtime to proceed with the plugin import/export process.
-
-<figure><img src=".gitbook/assets/image (50).png" alt=""><figcaption></figcaption></figure>
 
 #### 7.1 General
 
@@ -344,21 +269,17 @@ To address this:
 
 #### 7.2 AGS Importer
 
-<figure><img src=".gitbook/assets/image (51).png" alt=""><figcaption></figcaption></figure>
-
 The AGS Importer is available at the level of an open GeoDin database and at the level of a GeoDin project.
 
 {% hint style="danger" %}
-Note: The AGS Importer can automatically create the required database tables for AGS object types only when using a **Microsoft Access database** in GeoDin.
-\
+Note: The AGS Importer can automatically create the required database tables for AGS object types only when using a **Microsoft Access database** in GeoDin.\
 If you are working with a **client–server database** and the AGS object types have not yet been registered, you must first create these tables manually via GeoDin. Ensure that the relevant user has **permission to create tables** in the client–server database.
 {% endhint %}
 
 **Creating AGS Database Tables in a Client–Server Database**
 
 1. In GeoDin, Open a project in your client-server database and go to the “Objects“ node. Start the “New object“ method.
-2. Select the object type “AGS 4“ \[AGSSTAND] and confirm with “OK“. GeoDin will now create the corresponding tables in your client-server database.
-   \
+2. Select the object type “AGS 4“ \[AGSSTAND] and confirm with “OK“. GeoDin will now create the corresponding tables in your client-server database.\
    You may cancel the data entry afterwards by clicking the “Cancel edits“ button (prohibition sign).
 3. Repeat the process for the following object types to create all necessary AGS tables:
    * “AGS 4 LBSG – Testing schedule” \[AGSLBSG]
@@ -383,37 +304,23 @@ Checkbox: “Ignore AGS project identifiers.”
 
 * [x] Import the data into the selected project without comparing the PROJ group.
 
-<figure><img src=".gitbook/assets/image (52).png" alt=""><figcaption></figcaption></figure>
-
 **Step 2 – File selection:** The user selects the AGS file(s) to be imported. It is possible to import multiple AGS files at the same time.
 
 Importing multiple files for the same object:
 
-1\.     If the data within the AGS files differs, the data from the last file will be written, provided that the checkbox “Update existing data with uploaded AGS” is selected.
+1\. If the data within the AGS files differs, the data from the last file will be written, provided that the checkbox “Update existing data with uploaded AGS” is selected.
 
-2\.     If the checkbox is not selected, the data from the first file will be written to the database. The data from the following files will then no longer be written to the database unless the parameter is not yet assigned.
-
-<figure><img src=".gitbook/assets/image (53).png" alt=""><figcaption></figcaption></figure>
+2\. If the checkbox is not selected, the data from the first file will be written to the database. The data from the following files will then no longer be written to the database unless the parameter is not yet assigned.
 
 **Step 3 – Validation:** Before importing, a validator checks the AGS file and issues warnings if there are any problems. In this case, importing is not possible, and the file must first be modified to comply with the standard and the import process restarted.
-
-<figure><img src=".gitbook/assets/image (54).png" alt=""><figcaption></figcaption></figure>
 
 **Step 4 - Import:** The database structure is written during the first import after creating a GeoDin database. Warnings can be output as a list after the import has been completed (e.g. dictionary entry does not exist in GeoDin).
 
 Warning can be saved as a list for review.
 
-<figure><img src=".gitbook/assets/image (55).png" alt=""><figcaption></figcaption></figure>
-
-<figure><img src=".gitbook/assets/image (56).png" alt=""><figcaption></figcaption></figure>
-
-<figure><img src=".gitbook/assets/image (57).png" alt=""><figcaption></figcaption></figure>
-
-#### 7.3	AGS Exporter
+#### 7.3 AGS Exporter
 
 The AGS Exporter is available at the level of a GeoDin project. Starting the method you can navigate thru the plugin.
-
-<figure><img src=".gitbook/assets/image (58).png" alt=""><figcaption></figcaption></figure>
 
 The AGS Exporter creates a fully validated AGS file.
 
@@ -421,19 +328,13 @@ The AGS Exporter creates a fully validated AGS file.
 
 It is important that the user selects not only the LOCA objects, but also the corresponding PREM and LBSG objects for the export.
 
-<figure><img src=".gitbook/assets/image (59).png" alt=""><figcaption></figcaption></figure>
-
 **Step 2 – AGS export configuration:** The user must choose the AGS export configuration. The Standards AGS 4.0.4 and AGS 4.1.1 are available. By choosing one standard, all parameters according to the standard are exported. Currently, it is not possible to export user-defined parameters from data types. The user can also choose AGS groups for the export. By default, all groups are exported.
 
 A check mark can be used to remove empty headings if the lines do not contain any data.
 
-<figure><img src=".gitbook/assets/image (60).png" alt=""><figcaption></figcaption></figure>
-
 **Step 3 – Project details:** The user must insert mandatory project details for the AGS Export, like project identifier \[PROJ\_ID] (PRJ\_ALIAS in GeoDin) and Project name \[PROJ\_NAME] (PRJ\_NAME in GeoDin and read-only). These fields are marked with a star, read from the GeoDin database and can be changed by the user. All other fields are optional.
 
 The PROJ group must be filled in by the user because most of the data (Headings) are not stored in GeoDin: Location of site \[PROJ\_LOC], Client name \[PROJ\_CLNT], Contractors name \[PROJ\_CONT], Project Engineer \[PROJ\_ENG], General project comments \[PROJ\_MEMO]
-
-<figure><img src=".gitbook/assets/image (61).png" alt=""><figcaption></figcaption></figure>
 
 **Step 4 – Transmission details:** In the next, the user must insert the transmission details, like Producer \[TRAN\_PROD], Issue sequence reference \[TRAN\_ISNO], Recipient \[TRAN\_RECV] and Transmission status \[TRAN\_STAT]. The two fields Description \[TRAN\_DESC] and Remarks \[TRAN\_REM] are optional fields. The AGS Edition Reference \[TRAN\_AGS] is read from the Step 2 (AGS export configuration) and can only be changed by the user in Step 2.
 
@@ -441,31 +342,8 @@ The TRAN group must be filled in by the user because the data is not stored in G
 
 By clicking on the Export button, the user must choose the path and the name for the export file.
 
-<figure><img src=".gitbook/assets/image (62).png" alt=""><figcaption></figcaption></figure>
-
-
-
-<figure><img src=".gitbook/assets/image (63).png" alt=""><figcaption></figcaption></figure>
-
 **Step 5 - Export:** The export starts automatically. Once the export has been successfully completed, the user is provided with a link to the AGS export file. Clicking on the link, the file is shown in an editor.
-
-<figure><img src=".gitbook/assets/image (64).png" alt=""><figcaption></figcaption></figure>
-
-<figure><img src=".gitbook/assets/image (65).png" alt=""><figcaption></figcaption></figure>
 
 During the export, the file is validated. Any deviations from the AGS standard are listed.
 
-<figure><img src=".gitbook/assets/image (66).png" alt=""><figcaption></figcaption></figure>
-
 If an error is detected, the export is aborted with the error message: “The export could not be completed.” Example: The database contains data for version 4.1.1 and is exported as format 4.0.4
-
-<figure><img src=".gitbook/assets/image (67).png" alt=""><figcaption></figcaption></figure>
-
-
-
-
-
-
-
-
-

@@ -2,7 +2,7 @@
 description: Structural Changes to Geotechnical Data Types - Versions 9.0.6 and 9.0.7
 ---
 
-# Versions 9.0.6 and 9.0.7 - Structural Changes
+# Versions 9.0.6 and 9.0.7 — Structural Changes
 
 With the release of object type versions **9.0.6** and **9.0.7**, both minor and major adjustments were made to the object type **Geotechnical investigation EN ISO 22475 (2018)** \[ENISO002] and its associated geotechnical data types.
 
@@ -58,8 +58,6 @@ To check the GeoDin version currently in use:
 * Click the **Info (i)** button in the top‑right corner of the GeoDin user interface
 * Select **“Info to GeoDin…”**
 
-<figure><img src=".gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
-
 ### Determining the Object Type Version in Your System
 
 The installed object type version can be checked as follows:
@@ -68,8 +66,6 @@ The installed object type version can be checked as follows:
 * Navigate to **System configuration → Object types**
 * Select **Geotechnical investigation EN ISO 22475 (2008)**
 * Open **Properties**
-
-<figure><img src=".gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
 ### Backup Recommendation Before Updating
 
@@ -82,8 +78,6 @@ Before updating the object type, it is strongly recommended to:
   * **System → System configuration → Data types**
   * Use the **Export data types** method
 
-<figure><img src=".gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
-
 ### Determining the Object Type Version in Your Database
 
 The object type version registered in a database is displayed **during a database update** in the dialog:
@@ -91,8 +85,6 @@ The object type version registered in a database is displayed **during a databas
 **“Database structure: \[DATABASE NAME]”**
 
 A backup of the relevant database is strongly recommended before updating.
-
-<figure><img src=".gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
 ### Cleaning Up the GeoDin Configuration
 

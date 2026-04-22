@@ -2,12 +2,6 @@
 description: Parameterized Queries
 ---
 
-<!--
-**Content status:** Auto-assembled from product documentation
-**Source quality:** B (Moderate (single source type))
-**Needs:** needs legacy verification, needs screenshots, needs examples, editorial review
--->
-
 # Parameterized Queries
 
 ### Queries
@@ -16,39 +10,39 @@ All objects shown in the GeoDin object manager are the result of a query to the 
 
 GeoDin automatically makes a number of queries and displays them in the GeoDin object manager when a project or database is opened. All the objects in a database including different types of objects and measurement points are listed:
 
- Objects
+Objects
 
- All objects
+All objects
 
- Geotechnical borehole
+Geotechnical borehole
 
- BH 01
+BH 01
 
- BH 02
+BH 02
 
- BH 03
+BH 03
 
- BH 04
+BH 04
 
- CPT
+CPT
 
- Measurement point
+Measurement point
 
- BH
+BH
 
- Filter
+Filter
 
- B01: (4-6m)
+B01: (4-6m)
 
- B01: (7.5-9.5m)
+B01: (7.5-9.5m)
 
- Samples
+Samples
 
- B01: (1.4-1.8m)
+B01: (1.4-1.8m)
 
- B01: (2.5-2.9m)
+B01: (2.5-2.9m)
 
- B01: (5.2-5.6m)
+B01: (5.2-5.6m)
 
 In addition to the predefined standard queries of GeoDin you can create your user-specified queries using the query assistant. The results are also displayed in the GeoDin object manager - you may create as many queries as you like, the definitions are being stored in the project or database. The query definitions remain available until they are deleted from the project or database.\
 \
@@ -56,37 +50,37 @@ Depending upon, for which object in the GeoDin object manager a query was define
 
 For instance a query on an **Object** or **Measurement point** within a project can only produce results of objects from the project, in which it is contained.
 
- DemoDB\
- Projekt 1\
- Objekte\
- Alle Objekte\
- Standardaufschluß SEP kompatibel\
- Bohrung 1\
- Bohrung 2\
- Bohrung 3\
- Meine Abfrage\
- Messpunkte\
- Objekte\
- Messpunkte
+DemoDB\
+Projekt 1\
+Objekte\
+Alle Objekte\
+Standardaufschluß SEP kompatibel\
+Bohrung 1\
+Bohrung 2\
+Bohrung 3\
+Meine Abfrage\
+Messpunkte\
+Objekte\
+Messpunkte
 
 On the other hand using either the **Objects** or **Measurementpoints** node of a database (i.e. below all projects of that database), a query will act on all projects of that database.
 
- Datenbanken\
- DemoDB\
- Projekt 1\
- Objekte\
- Alle Objekte\
- Standardaufschluß SEP kompatibel\
- Messpunkte\
- Objekte\
- Meine datenbankweite Abfrage\
- Messpunkte
+Datenbanken\
+DemoDB\
+Projekt 1\
+Objekte\
+Alle Objekte\
+Standardaufschluß SEP kompatibel\
+Messpunkte\
+Objekte\
+Meine datenbankweite Abfrage\
+Messpunkte
 
 \
 \
 **Visibilities**
 
-This can be controlled via the advanced settings and  the user management. <!-- src: help/12/2942 -->
+This can be controlled via the advanced settings and the user management.
 
 ### Using result fields for Shape export
 
@@ -104,16 +98,13 @@ Without result fields, the Shape export contains only geometry and the object ID
 Queries on the **Measurement Points** branch work the same way — result fields defined there are exported alongside the measurement point geometry.
 {% endhint %}
 
-<!-- src: transcript/2026-04-15-in-person-workshop -->
-
 ### Create query
 
-To define your own queries (e.g. \"boreholes deeper than 9 m\") a query wizard is available.
+To define your own queries (e.g. "boreholes deeper than 9 m") a query wizard is available.
 
 The query wizard is able to create queries up to a certain degree of complexity. For highly complex queries it is possible to enter [Alternative SQL-Command](sql-and-advanced-options.md) in the query wizard or to create [System queries](creating-queries.md) (On the system-side of GeoDin).
 
-The query wizard is started by using the method ![New Query](.gitbook/assets/icons/new-query.png) **\"New Query\"**.
-
+The query wizard is started by using the method  **"New Query"**.
 
 This is available when either **Objects** or **Measurement points** are selected in the GeoDin object manager.
 
@@ -133,9 +124,9 @@ Create a sub-query using the **New** button that takes you to the selection of t
 Following templates are offered:
 
 \
-**All objects**  - Query registration of GeoDin- Objects
+**All objects** - Query registration of GeoDin- Objects
 
-***Note:*** *This option is only available under the object nodes, i.e. not under the measure point node in the GeoDin object manager!*
+_**Note:**_ _This option is only available under the object nodes, i.e. not under the measure point node in the GeoDin object manager!_
 
 With this template, the available data fields for conditions and display fields are strongly limited (only search by name, coordinates, starting depth and final depth of objects).\
 \
@@ -161,63 +152,63 @@ Templates can be created by you or your GeoDin supervisor on the GeoDin system p
 
 When you click a query type explanatory help is shown in the lower half of the dialogue window. The relevant tables and data fields for the query are shown in the window.
 
-After selecting the desired template, the **Next** button takes you to the definition of the conditions and display fields. <!-- src: help/12/2951 -->
+After selecting the desired template, the **Next** button takes you to the definition of the conditions and display fields.
 
 ### Define settings
 
 Depending on the chosen query type the window shows a list of the relevant database tables. To open a table field list click on the plus- symbol (+) before the table name.
 
-Almost all operations in this dialogue are carried out by drag and drop. This means clicking on a table entry, keeping the mouse button pressed down and dragging onto the *![Condition](.gitbook/assets/icons/condition.png) **Condition*** branch of the tree structure in the lower window.\
+Almost all operations in this dialogue are carried out by drag and drop. This means clicking on a table entry, keeping the mouse button pressed down and dragging onto the  _**Condition**_ branch of the tree structure in the lower window.\
 \
-As soon as the first data field entry is dropped onto a condition, the sub-level \"IF\" appears. If more than one requirement is to be met, then perform the drag and drop action again, dropping onto the \"IF\" node. This will be automatically extended with \"AND\" (Note: the field dropped need not be a different one e.g. limiting values for a particular variable).\
+As soon as the first data field entry is dropped onto a condition, the sub-level "IF" appears. If more than one requirement is to be met, then perform the drag and drop action again, dropping onto the "IF" node. This will be automatically extended with "AND" (Note: the field dropped need not be a different one e.g. limiting values for a particular variable).\
 \
-If either one or another condition is to be met, a table entry from the top field should be dropped onto the condition, whereby the node \"Or\" will appear automatically.
+If either one or another condition is to be met, a table entry from the top field should be dropped onto the condition, whereby the node "Or" will appear automatically.
 
 In the following example the query for all objects that were drilled deeper than 9m and that lie on the maps numbers JD1234 or JD1235 was set.
 
- Bedingung
+Bedingung
 
- Wenn
+Wenn
 
- SSGKRZT1.TK25=JD1234
+SSGKRZT1.TK25=JD1234
 
- SSGKRZT1.ZCOORDE\>9
+SSGKRZT1.ZCOORDE>9
 
- Oder
+Oder
 
- SSGKRZT1.TK25=JD1234
+SSGKRZT1.TK25=JD1234
 
- SSGKRZT1.ZCOORDE\>9
+SSGKRZT1.ZCOORDE>9
 
-***Note:*** *In order to simplify the visual query display it is not possible to define OR conditions from within an AND condition. This keeps the query logic clear for the user and through the definition of unlimited OR conditions virtually any query can be defined.*
+_**Note:**_ _In order to simplify the visual query display it is not possible to define OR conditions from within an AND condition. This keeps the query logic clear for the user and through the definition of unlimited OR conditions virtually any query can be defined._
 
 If we want to summarize the query shown in the above example as follows:
 
-(ZCOORDE\>9) AND ((ORDNSURV='JD1234') OR (ORDNSURV='JD1235'))
+(ZCOORDE>9) AND ((ORDNSURV='JD1234') OR (ORDNSURV='JD1235'))
 
 GeoDin also allows you to formulate a query as text - further details are given in [Alternative SQL-Command](sql-and-advanced-options.md).
 
 **Valid comparisom operators:**
 
-=
+\=
 
 \>
 
 \>=
 
-\<
+<
 
-\<=
+<=
 
-\<\> (not equal to)
+<> (not equal to)
 
 is null (Data field is empty)
 
 is not null (Data field is not empty)
 
-like \'A%\' (Data field contents in high commas, Placeholders: % for unlimited characters and \_ exactly one character)
+like 'A%' (Data field contents in high commas, Placeholders: % for unlimited characters and \_ exactly one character)
 
-in (\'T1\',\'T2\') (Value list in round brackets, values separated by commas, values in high commas for text fields,
+in ('T1','T2') (Value list in round brackets, values separated by commas, values in high commas for text fields,
 
 for nummerical values a decimal delimiter and not in high commas)
 
@@ -227,15 +218,15 @@ The standard values are:
 
 Access database #mm/dd/yyyy#
 
-Oracle database \'dd-mmm-yyyy\'
+Oracle database 'dd-mmm-yyyy'
 
-dBase database \'dd.mm.yyyy\'
+dBase database 'dd.mm.yyyy'
 
 **For conditions, that query a time-stampplease use the following standard formats**
 
 Access: #MM/DD/YYYY HH:MM:SS#
 
-Oracle: TO_DATE(\'*31.05.2015 12:24:36\'*,\'dd.mm.yyyy hh24:mi:ss\')
+Oracle: TO\_DATE('_31.05.2015 12:24:36'_,'dd.mm.yyyy hh24:mi:ss')
 
 MySQL, MS SQL, PostgreSQL: 'DD.MM.YYYY HH:MM:SS'
 
@@ -247,11 +238,11 @@ With the same button you may also delete the display or whole branches of the co
 \
 Often you may not know, which values to expect for the objects to meet the condition you wish to define. By clicking **Show values** you may display these manually. By checking the box **Automatic** they will be displayed for whichever field you select. This automatic option should be left unchecked when working with large databases to avoid possible delays when navigating between the data fields.
 
-You may drag an entry from the value list into the **Restriction** field. This is a great help when these contain a lot of characters. GeoDin automatically recognizes the format of the database field and sets text strings in high commas (\"Text string\") in the condition.
+You may drag an entry from the value list into the **Restriction** field. This is a great help when these contain a lot of characters. GeoDin automatically recognizes the format of the database field and sets text strings in high commas ("Text string") in the condition.
 
 **Testing a query**
 
-By clicking on the button **Test query** the conditions are checked for syntax errors and the number of objects meeting the query conditions are displayed. Up to 50 values are displayed in the list. <!-- src: help/12/2955 -->
+By clicking on the button **Test query** the conditions are checked for syntax errors and the number of objects meeting the query conditions are displayed. Up to 50 values are displayed in the list.
 
 ### Set display fields
 
@@ -267,25 +258,25 @@ To separate individual display contents (data fields) from each other, a text ca
 
 **Example:**
 
- View fields
+View fields
 
- SSGKRZT1.LONGNAME (bis
+SSGKRZT1.LONGNAME (bis
 
- SSGKRZT1.ZCOORDE m)
+SSGKRZT1.ZCOORDE m)
 
-In order to form the total text in the form **Long Name (to Xm)** for each found borehole, the extension text **(*bis*** or \[english\] ***to*** and for the display field ZCOORDE the extension text ***m*)** is defined for the display field LONGNAME. As a result, each borehole in the GeoDin object manager is labeled with name and final depth:
+In order to form the total text in the form **Long Name (to Xm)** for each found borehole, the extension text **(**_**bis**_ or \[english] _**to**_ and for the display field ZCOORDE the extension text _**m**_**)** is defined for the display field LONGNAME. As a result, each borehole in the GeoDin object manager is labeled with name and final depth:
 
- Location deeper than 9m
+Location deeper than 9m
 
- Brg 01 (to depth 11m)
+Brg 01 (to depth 11m)
 
- Brg 02 (to depth 10.5m)
+Brg 02 (to depth 10.5m)
 
- Brg 03 (to depth 12m)
+Brg 03 (to depth 12m)
 
- Brg 04 (to depth 9.5m)
+Brg 04 (to depth 9.5m)
 
-You can change the order of the display fields by dragging and dropping an entry to a different position within the ![Display Fields](.gitbook/assets/icons/display-fields.png) **Display Fields** section.
+You can change the order of the display fields by dragging and dropping an entry to a different position within the  **Display Fields** section.
 
 With the display fields you also define the sorting order of the found objects in the GeoDin object manager.
 
@@ -293,36 +284,36 @@ In front of each display field, an arrow indicates the set sort order. You can c
 
 To sort the objects by final depth without changing the order of the display fields, double-click the LONGNAME display field until sorting is turned off for that field. The result set will now be sorted by final depth only, and the definition of the display field order will be retained. As a result, the following list is now displayed in the GeoDin- Object- Manager:
 
- Location deeper than 9m
+Location deeper than 9m
 
- Brg 04 (to depth 9.5m)
+Brg 04 (to depth 9.5m)
 
- Brg 02 (to depth 10.5m)
+Brg 02 (to depth 10.5m)
 
- Brg 01 (to depth 11m)
+Brg 01 (to depth 11m)
 
- Brg 03 (to depth 12m)
+Brg 03 (to depth 12m)
 
 **Formatting and retranslation of labels in the object manager**
 
-If the section \"Display fields\" is marked, you can further adjust the display fields via the lower input field **Labeling instruction - Query:**. Beside numerous [Text macro](../../reporting/text-macros-in-reports.md) By entering a macro, you can specify that the long name of the field entry (i.e. the reverse translation) is displayed in the object manager.
+If the section "Display fields" is marked, you can further adjust the display fields via the lower input field **Labeling instruction - Query:**. Beside numerous [Text macro](../../reporting/text-macros-in-reports.md) By entering a macro, you can specify that the long name of the field entry (i.e. the reverse translation) is displayed in the object manager.
 
-The macros entered must be available in the \"Display fields\" section. They cannot replace the display fields, but serve to supplement them.
+The macros entered must be available in the "Display fields" section. They cannot replace the display fields, but serve to supplement them.
 
-***TIP:*** *Switch to the SQL preview and copy the desired entries from there.*
+_**TIP:**_ _Switch to the SQL preview and copy the desired entries from there._
 
-**Example:** \
-If you have defined GeoDin_LOC_S3STAMM.LONGNAME and GeoDin_LOC_S3STAMM.BART as display fields and want the long description of the bore type (BART), i.e. the back translation of the key, to be displayed in the GeoDin object manager, the following entry must be written in the input field **Labeling statement - query:**
+**Example:**\
+If you have defined GeoDin\_LOC\_S3STAMM.LONGNAME and GeoDin\_LOC\_S3STAMM.BART as display fields and want the long description of the bore type (BART), i.e. the back translation of the key, to be displayed in the GeoDin object manager, the following entry must be written in the input field **Labeling statement - query:**
 
-\$GeoDin_LOC_S3STAMM.LONGNAME\$ (\$GeoDin_LOC_S3STAMM.BART\$)
+$GeoDin\_LOC\_S3STAMM.LONGNAME$ ($GeoDin\_LOC\_S3STAMM.BART$)
 
 The object manager now shows the following:
 
- Holes (digestion type)\
- SEP3 Hole 1 (general)\
- SEP3 Hole 2 (digestion, filled)\
- SEP3 hole 3 (oblique hole)\
- SEP3 Hole 4 (general)
+Holes (digestion type)\
+SEP3 Hole 1 (general)\
+SEP3 Hole 2 (digestion, filled)\
+SEP3 hole 3 (oblique hole)\
+SEP3 Hole 4 (general)
 
 If a labeling instruction is used, an additional macro must be defined in the input field **Labeling instruction - Refresh:**. As a rule, the macro consists of the field references above it in the input field, minus the table names.
 
@@ -332,7 +323,7 @@ The macro is used when updating the display in the object manager due to changes
 
 The following field references are therefore entered for the above example:
 
-\$LONGNAME\$ (\$BART\$)
+$LONGNAME$ ($BART$)
 
 **Select sorting fields**
 
@@ -340,47 +331,44 @@ Beside the view fields (which can also be used for sorting the results as descri
 
 **Select result fields**
 
-Additionally to the view and sorting fields the result fields can be selected, which are used neither for the display nor for the sorting. However, if the query results are to be exported, e.g. for GIS, use the result fields to determine which data fields are to be transferred from GeoDin to the attribute table of the generated layer. Drag the desired fields as usual to the node Result fields (Export). If you want to transfer all fields of a GeoDin table, simply drag the desired table to the node Result Fields (Export). <!-- src: help/12/2959 -->
+Additionally to the view and sorting fields the result fields can be selected, which are used neither for the display nor for the sorting. However, if the query results are to be exported, e.g. for GIS, use the result fields to determine which data fields are to be transferred from GeoDin to the attribute table of the generated layer. Drag the desired fields as usual to the node Result fields (Export). If you want to transfer all fields of a GeoDin table, simply drag the desired table to the node Result Fields (Export).
 
 ### Alternative SQL-Command
 
 As well as visually constructing queries you may define your own SQL-commands by using the SQL-Preview window.
 
-The option \<[Alternative SQL-Command](sql-and-advanced-options.md)\> allows you to define an SQL-SELECT-command for your query:
+The option <[Alternative SQL-Command](sql-and-advanced-options.md)> allows you to define an SQL-SELECT-command for your query:
 
-1.  The command must return an amount (database cursor). An SQL-Command without SELECT-instruction at the beginning of a command will not be executed.
-
-<!-- -->
-
-1.  The first row of the result returned must contain a valid GeoDin-Location-ID (LOCID) or a GeoDin-Measurementpoint-ID (INVID) (depending on the desired result set). The queries are not checked for their validity, but a formal check that the first row of the result contains numbers that can be converted to integers. Where the result does not return a valid ID, the object cannot be selected later.
+1. The command must return an amount (database cursor). An SQL-Command without SELECT-instruction at the beginning of a command will not be executed.
+2. The first row of the result returned must contain a valid GeoDin-Location-ID (LOCID) or a GeoDin-Measurementpoint-ID (INVID) (depending on the desired result set). The queries are not checked for their validity, but a formal check that the first row of the result contains numbers that can be converted to integers. Where the result does not return a valid ID, the object cannot be selected later.
 
 Because no further conditions are set for the SQL-Command, it is possible to integrate other database tables in the query that are not part of the GeoDin system structure. Of course such a query only makes sense when other such tables are related to a GeoDin-Table, so that the result returned gives valid ID's.
 
-The alternative SQL-Command shows all the parameters visually defined in the query (order, additional text etc) as long as the data field names correspond. <!-- src: help/12/2966 -->
+The alternative SQL-Command shows all the parameters visually defined in the query (order, additional text etc) as long as the data field names correspond.
 
 ### Parameterized query
 
-In the example above a condition was set in the query that the end depth must be greater than 9 m. At another time you may want to choose all boreholes that are deeper than 20 m. To do this you could change the value from (\>9m) to (\>20m) in the existing query or define a new query, which differs from the first one only in the depth value.
+In the example above a condition was set in the query that the end depth must be greater than 9 m. At another time you may want to choose all boreholes that are deeper than 20 m. To do this you could change the value from (>9m) to (>20m) in the existing query or define a new query, which differs from the first one only in the depth value.
 
 GeoDin offers another more efficient method to define queries, which have similar conditions, while leaving the main parameter free to assume different values. The same query can then be used to make various selections of GeoDin objects.
 
-To do this use the type \":?\" in the limiting field instead of a number (depth) - see below:
+To do this use the type ":?" in the limiting field instead of a number (depth) - see below:
 
- Condition
+Condition
 
- If
+If
 
- SSGKRZT1.ZCOORDE\>:?
+SSGKRZT1.ZCOORDE>:?
 
- Display Fields
+Display Fields
 
- SSGKRZT1.LONGNAME (to
+SSGKRZT1.LONGNAME (to
 
- SSGKRZT1.ZCOORDE m)
+SSGKRZT1.ZCOORDE m)
 
-The used query condition is \>:?
+The used query condition is >:?
 
-To characterize a parameterized query, an appropriate name can be chosen, e.g. \"boreholes deeper than ?m\", to mark the query is variable in the GeoDin Object Manager. Once the query is opened for the first time, an input dialogue is shown, asking for the input of the parameter.
+To characterize a parameterized query, an appropriate name can be chosen, e.g. "boreholes deeper than ?m", to mark the query is variable in the GeoDin Object Manager. Once the query is opened for the first time, an input dialogue is shown, asking for the input of the parameter.
 
 Enter the desired depth value and confirm by clicking **OK**. As result, all boreholes deeper than the given value are displayed in the GeoDin Object Manager. The displayed boreholes can then be used for further analysis.
 
@@ -398,7 +386,7 @@ Date: The standard value must be a complete date in the dd.mm.yyy (day-month-yea
 
 If a query is parameterized, it is possible to use an interval instead of an upper and lower boundary. An example for this is the search for objects in an area around a specific point. This is possible with a parameterized query and the parameters:
 
-(X \>= X_value1) and (X \<= X_value2) and (Y \>= Y_value1) and (Y \<= Y_value2)
+(X >= X\_value1) and (X <= X\_value2) and (Y >= Y\_value1) and (Y <= Y\_value2)
 
 If coordinates values have multiple digits, entering the 4 necessary parameters is lengthy. For these cases, the option -Use interval- offers an easier possibility. To use it, define only two conditions:
 
@@ -410,60 +398,57 @@ Y = :?
 
 and switch on the option -Use interval-. A default value for the interval can also be given.
 
-From the condition ( X =X_value) and ( Y= Y_value), GeoDin will automatically generate the following SQL statement:
+From the condition ( X =X\_value) and ( Y= Y\_value), GeoDin will automatically generate the following SQL statement:
 
-((X \>= X_value - Xinterval) and (X \<= X_value + Xinterval)) and ((Y \>= Y_value - Yinterval) and (Y \<= Y_value + Yinterval))
+((X >= X\_value - Xinterval) and (X <= X\_value + Xinterval)) and ((Y >= Y\_value - Yinterval) and (Y <= Y\_value + Yinterval))
 
 As parameters, only the coordinates of the center and the interval need to be entered.
 
 Using intervals is only possible for parameterized queries, but can be used for any numeric data field (for example end depth).
 
-**Using the \$%SYSDATE\$ parameter**
+**Using the $%SYSDATE$ parameter**
 
-You can use the \$%SYSDATE\$ placeholder as the default value of a date parameter to set the current date as the default value. Also, mathematical statements are possible with the \$%SYSDATE\$ macro, e.g. \$%SYSDATE\$ - 7 to get a default date for the day before a week.
+You can use the $%SYSDATE$ placeholder as the default value of a date parameter to set the current date as the default value. Also, mathematical statements are possible with the $%SYSDATE$ macro, e.g. $%SYSDATE$ - 7 to get a default date for the day before a week.
 
 **Change Parameters**
 
-To change a defined value, use the method ![Change parameter](.gitbook/assets/icons/change-parameter.png) **Change parameter** at the query object:
-
+To change a defined value, use the method  **Change parameter** at the query object:
 
 In a query, any number of parameters can be defined.
 
 **Example:**
 
- Condition
+Condition
 
- If
+If
 
- LOCREG.XCOORD\>=:?
+LOCREG.XCOORD>=:?
 
- LOCREG.XCOORD\<=:?
+LOCREG.XCOORD<=:?
 
- LOCREG.YCOORD\>=:?
+LOCREG.YCOORD>=:?
 
- LOCREG.YCOORD\<=:?
+LOCREG.YCOORD<=:?
 
- Display Fields
+Display Fields
 
- SSGKRZT1.LONGNAME
+SSGKRZT1.LONGNAME
 
 In the example above, four parameters are defined to build a rectangle of co-ordinates. The first of each of the X and Y values defines the starting coordinates - the second value in each pair defines the extent of the area to be searched. The query dialogue for this query is shown below:
 
- <!-- src: help/12/2968 -->
-
 ### Update query
 
-In a multi-user environment it may often be necessary to update a query to reflect changes in the data itself. GeoDin automatically checks for changes to objects that are used for the display (e.g. an object name that is shown in the GeoDin object manager). However if a parameter for the condition is changed (e.g. \"End depth\") the query is not automatically updated because this would interfere with the workflow with large data sets. Similarly if another user changes the end depth this is not automatically updated in the query.
+In a multi-user environment it may often be necessary to update a query to reflect changes in the data itself. GeoDin automatically checks for changes to objects that are used for the display (e.g. an object name that is shown in the GeoDin object manager). However if a parameter for the condition is changed (e.g. "End depth") the query is not automatically updated because this would interfere with the workflow with large data sets. Similarly if another user changes the end depth this is not automatically updated in the query.
 
-There is a simple way for you to quickly update your query results to incorporate data changes (e.g. end depth values). Right click with the mouse on the query in the GeoDin object manager and choose **Refresh** from the pop-up menu. The object list will be rebuilt. <!-- src: help/12/2981 -->
+There is a simple way for you to quickly update your query results to incorporate data changes (e.g. end depth values). Right click with the mouse on the query in the GeoDin object manager and choose **Refresh** from the pop-up menu. The object list will be rebuilt.
 
 ### Duplicate query
 
-With the method **\"Duplicate query\"** you may copy a query made in one project to use in another. To copy a query to all projects, select the **All** button. The query will be copied to all selected projects in the database. If you have used the project identifier (PRJ_ID data field) in your query in the condition, display or alternative SQL command, it will be automatically adjusted to the other project identifier when copying the query, so the duplicated query does not need to be corrected in the target project. <!-- src: help/12/2984 -->
+With the method **"Duplicate query"** you may copy a query made in one project to use in another. To copy a query to all projects, select the **All** button. The query will be copied to all selected projects in the database. If you have used the project identifier (PRJ\_ID data field) in your query in the condition, display or alternative SQL command, it will be automatically adjusted to the other project identifier when copying the query, so the duplicated query does not need to be corrected in the target project.
 
 ### Delete query
 
-This method deletes the query definition. You **do not** delete the objects contained in the query results, only the condition producing these results. <!-- src: help/12/2987 -->
+This method deletes the query definition. You **do not** delete the objects contained in the query results, only the condition producing these results.
 
 ### Group objects
 
@@ -471,28 +456,27 @@ In some situations the objects of a database cannot be properly queried. This ma
 
 For such cases GeoDin offers the possibility to create **Groups** of objects that do not conform to any specific conditions.
 
-The method **\"New Group\"** is available at the objects and measurement points nodes.
+The method **"New Group"** is available at the objects and measurement points nodes.
 
 Enter a name for the group that will be used in the GeoDin object manager for identification.
 
-After creating a group, the list is at first empty. To fill the list, select an object in the GeoDin object manager, keep the left-hand mouse button pressed, drag and drop it onto the open dialogue window. You may select individual objects or groups in the GeoDin object manager. You may delete and change the order of objects in a group by using the appropriate buttons in the \<**Group**\> dialogue window.
+After creating a group, the list is at first empty. To fill the list, select an object in the GeoDin object manager, keep the left-hand mouse button pressed, drag and drop it onto the open dialogue window. You may select individual objects or groups in the GeoDin object manager. You may delete and change the order of objects in a group by using the appropriate buttons in the <**Group**> dialogue window.
 
-Objects are inserted into the list with the designation they have at the time of insertion. This text cannot be changed later and will not be updated even if the data situation changes. In contrast, for queries, the label texts are updated and objects that no longer meet the condition are removed from the list when the query is updated. Therefore, there may be objects in a group whose labels are no longer correct after a change in the object\'s data. This example shows that groups have a number of disadvantages compared to queries and should therefore only be used if a query is really not possible for the reasons mentioned at the beginning or if you expect that the data of these objects will no longer change.
+Objects are inserted into the list with the designation they have at the time of insertion. This text cannot be changed later and will not be updated even if the data situation changes. In contrast, for queries, the label texts are updated and objects that no longer meet the condition are removed from the list when the query is updated. Therefore, there may be objects in a group whose labels are no longer correct after a change in the object's data. This example shows that groups have a number of disadvantages compared to queries and should therefore only be used if a query is really not possible for the reasons mentioned at the beginning or if you expect that the data of these objects will no longer change.
 
 Queries and groups are shown with different colored pyramids in the GeoDin object manager - yellow for queries and blue for groups.
 
-Visibility can be controlled for users and groups in advanced settings in  user management. <!-- src: help/12/2994 -->
+Visibility can be controlled for users and groups in advanced settings in user management.
 
 ### Delete object group
 
-This method deletes the group definition, **not** the objects contained within the group. <!-- src: help/12/2997 -->
+This method deletes the group definition, **not** the objects contained within the group.
 
 ### Import groups
 
+Use the **"Import Group"** method to search for GeoDin objects in a GeoDin database based on external data ("import file") and group the found objects together.
 
-Use the **\"Import Group\"** method to search for GeoDin objects in a GeoDin database based on external data (\"import file\") and group the found objects together.
-
-Depending on the node at which the method is started, GeoDin objects are searched in the entire database (\"Objects\" node one level below the database) or only in one project (\"Objects\" node one level below the project).
+Depending on the node at which the method is started, GeoDin objects are searched in the entire database ("Objects" node one level below the database) or only in one project ("Objects" node one level below the project).
 
 The following steps are required:
 
@@ -510,28 +494,23 @@ Make the settings for comparison control here. The preview shows which GeoDin ob
 
 **Save and load configuration**
 
-All group import settings can be saved in a configuration file. The configuration file allows a quick re-execution of a group creation at a later time, if the data basis is similar or equal. <!-- src: help/12/10837 -->
+All group import settings can be saved in a configuration file. The configuration file allows a quick re-execution of a group creation at a later time, if the data basis is similar or equal.
 
 ### Data source
 
 Open the file that contains the information about the GeoDin objects to be searched (and later grouped) in the database. The following file formats are supported:
 
-1.  MS Excel
-
-2.  MS Access
-
-3.  dBASE
-
-4.  Text files
-
-5.  CSV files
+1. MS Excel
+2. MS Access
+3. dBASE
+4. Text files
+5. CSV files
 
 After selecting the file, specify the data source and select a spreadsheet (Excel), a table (Access, dBase) or a column separator (CSV, text file).
 
 The search data is displayed in the preview. For MS Excel or text files, you can also specify whether the first row contains column captions. The date format used in these files can also be specified. GeoDin takes this setting into account when later converting dates.
 
-
-Use this button to remove selected records from the preview if you do not want them to be included in the search (the records will only be removed in this preview, the source file remains unchanged). <!-- src: help/12/10842 -->
+Use this button to remove selected records from the preview if you do not want them to be included in the search (the records will only be removed in this preview, the source file remains unchanged).
 
 ### Object link
 
@@ -545,60 +524,60 @@ The import file contains a column with a selection of drill hole names. These bo
 
 Select the master data table from the database that is to serve as the basis for a master data comparison between the import file and GeoDin objects.
 
-To assign the fields to be referenced, drag and drop the individual entries from the \"Tables:\" and \"Data source:\" lists to the corresponding field on the other list. Alternatively, you can select the two fields and double-click on one of them to make the assignment. In the case of column names in the import file that are identical to the column names in the master data table of the database, you can assign these matching entries automatically using the switch \<Automatic assignment\>.
+To assign the fields to be referenced, drag and drop the individual entries from the "Tables:" and "Data source:" lists to the corresponding field on the other list. Alternatively, you can select the two fields and double-click on one of them to make the assignment. In the case of column names in the import file that are identical to the column names in the master data table of the database, you can assign these matching entries automatically using the switch \<Automatic assignment>.
 
-The assignments made are transferred to the table \"Assignments:\". At the same time, the assigned entries are removed from the \"Tables:\" and \"Data source:\" lists so that only those entries remain that have not yet been assigned.
+The assignments made are transferred to the table "Assignments:". At the same time, the assigned entries are removed from the "Tables:" and "Data source:" lists so that only those entries remain that have not yet been assigned.
 
-With the two input fields  below the lists the contents of the lists can be filtered. If a term is entered, only those entries are displayed in the lists which contain this term. If you empty the input field, all entries are displayed again.
+With the two input fields below the lists the contents of the lists can be filtered. If a term is entered, only those entries are displayed in the lists which contain this term. If you empty the input field, all entries are displayed again.
 
 Invalid assignments are highlighted in color in the table. These occur when you change the data source after you have made the assignment. Remove these entries using the button\
- . <!-- src: help/12/10847 -->
+.
 
 ### Import
 
 Make the last settings for the group creation and see a preview of the status of the assignments. Then start creating a new group.
 
 **Comparison options**\
-If you check the box *\[Case sensitive\]*, column names of the import file and those of the master data table will only be assigned if the spellings also match with regard to case sensitivity.
+If you check the box _\[Case sensitive]_, column names of the import file and those of the master data table will only be assigned if the spellings also match with regard to case sensitivity.
 
 **Preview**\
 The preview window provides an overview of the assignments performed. There are three types of results:
 
-*A GeoDin object was found*
+_A GeoDin object was found_
 
 Exactly one GeoDin object could be found in the database for the entry to be searched for.
 
-*Several GeoDin objects were found*
+_Several GeoDin objects were found_
 
 Several GeoDin objects were found in the database for the entry to be searched for. This means that the contents of your import file are not unique. You may need to include more data fields in the comparison to find the correct GeoDin objects.
 
-*No GeoDin object was found*
+_No GeoDin object was found_
 
 There is no GeoDin object in the database with information that matches the search term. Check the assignment of the data fields and the contents of the import file.
 
 **Filter for the preview**\
 You can filter and sort the assignments displayed in the preview. To do this, click on the column header in the required column.\
-\"**Use the Filter for preview:\"** drop-down box to display only one of the three types of results (see above) in the preview window.
+"**Use the Filter for preview:"** drop-down box to display only one of the three types of results (see above) in the preview window.
 
 **Execute import**\
-With a mouse click on the button ** Execute Import** all successfully assigned GeoDin objects are combined in a new group in the GeoDin Object Manager. Under the heading \"Execution\" you can define a name for the new group in the editing window. By default, the name of the import file is pre-entered here.\
-After execution, a log is displayed which you can save using the corresponding button. If you want to create further groups, switch back to **Data Source**. <!-- src: help/12/10852 -->
+With a mouse click on the button \*\* Execute Import\*\* all successfully assigned GeoDin objects are combined in a new group in the GeoDin Object Manager. Under the heading "Execution" you can define a name for the new group in the editing window. By default, the name of the import file is pre-entered here.\
+After execution, a log is displayed which you can save using the corresponding button. If you want to create further groups, switch back to **Data Source**.
 
 ### User management
 
 The visibility/usability of various methods and functions can be restricted via the user administration.
 
-By default, the option *"All"* is activated - i.e. no restriction.
+By default, the option _"All"_ is activated - i.e. no restriction.
 
-Via the option User groups, the functionality can be explicitly released for certain *groups or individual users*.
+Via the option User groups, the functionality can be explicitly released for certain _groups or individual users_.
 
 This is used, for example, for methods, system databases or queries.
 
-The creation of users and groups is described in the chapter on **User settings**. <!-- src: help/12/11350 -->
+The creation of users and groups is described in the chapter on **User settings**.
 
 ### Field mapping
 
-This help chapter is not available in the current language. You can update the GeoDin help files with the \<Online update\> function. For this, an internet connection is necessary.
+This help chapter is not available in the current language. You can update the GeoDin help files with the \<Online update> function. For this, an internet connection is necessary.
 
 Benutzerdefiniertem SQL können Strukturinformationen angefügt werden. Somit sind dann für Zahlenfelder Dezimalstellenformatierungen oder Einheitenumrechnungen möglich oder für Textfelder Wörterbuchübersetzungen.
 
@@ -606,10 +585,10 @@ Für die Feldzuordnung wird ein Ergebnisfeld einem Feld aus der GeoDin-Struktur 
 
 **Beispiel:**
 
-select \$Schema\$GeoDin_LOC_LOCE2LAYER.\* from \$Schema\$GeoDin_LOC_LOCE2LAYER
+select $Schema$GeoDin\_LOC\_LOCE2LAYER.\* from $Schema$GeoDin\_LOC\_LOCE2LAYER
 
 Zuordnung:
 
 Datenbank Tabellenstruktur
 
-GeoDin_LOC_LOC_E2LAYER.SECSTYPE E2LAYER.SECSTYPE <!-- src: help/12/11522 -->
+GeoDin\_LOC\_LOC\_E2LAYER.SECSTYPE E2LAYER.SECSTYPE

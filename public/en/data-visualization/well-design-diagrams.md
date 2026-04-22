@@ -2,17 +2,11 @@
 description: Well Design Diagrams
 ---
 
-<!--
-**Content status:** Auto-assembled from product documentation
-**Source quality:** B (Moderate (single source type))
-**Needs:** needs legacy verification, needs screenshots, needs examples, editorial review
--->
-
 # Well Design Diagrams
 
 ### Parameter list
 
-Defined parameters for calculation are expected for the diagrams Piper, Durow, Formatio, Pie, Bar. Because a parameter name for a substance can be changed in a database, it is possible to adjust the preset correlation in the parameter list. Double-click the parameter to adjust and select its entry in the view of the object properties. <!-- src: help/05/617 -->
+Defined parameters for calculation are expected for the diagrams Piper, Durow, Formatio, Pie, Bar. Because a parameter name for a substance can be changed in a database, it is possible to adjust the preset correlation in the parameter list. Double-click the parameter to adjust and select its entry in the view of the object properties.
 
 ### Measurement value graphic
 
@@ -28,7 +22,7 @@ Display of the drawing layer, on which the graphic element is placed. Using the 
 
 **Arrangement in the fore- or background**\
 \
-Overlapping graphic elements are displayed in order of insertion into the graph. This order can be changed using the icons **Bring to front** and **Send to back**. If the graphic element is part of a group the arrangement is only changed inside the group, but the other elements of the graph are not affected. If necessary the group frame has to be moved in the fore- or background, to receive a change of the arrangement of the grouped elements relative to the rest of the graph. <!-- src: help/05/618 -->
+Overlapping graphic elements are displayed in order of insertion into the graph. This order can be changed using the icons **Bring to front** and **Send to back**. If the graphic element is part of a group the arrangement is only changed inside the group, but the other elements of the graph are not affected. If necessary the group frame has to be moved in the fore- or background, to receive a change of the arrangement of the grouped elements relative to the rest of the graph.
 
 ### Piper diagram
 
@@ -46,11 +40,11 @@ To display the original molar equivalent concentrations without ion balance, thi
 
 GeoDin interprets all special values (-99, -88 etc.) as 0 and all other negative values (under the detection limit) as absolute values.
 
-If the parameters Fe or NO3 are defined as empty in the parameter definition, they are also removed from the diagram labelling. <!-- src: help/05/638 -->
+If the parameters Fe or NO3 are defined as empty in the parameter definition, they are also removed from the diagram labelling.
 
 ### Well design
 
-Using the graphic element *Well design* well designs after DIN 4021, including the labeling with depth, fill and casing elements, can be carried out.
+Using the graphic element _Well design_ well designs after DIN 4021, including the labeling with depth, fill and casing elements, can be carried out.
 
 The well design is automatically divided in several pages, if the set scale requires it. In this case the page icons in the upper symbol bar are available to change to the next or previous page.
 
@@ -66,15 +60,15 @@ Display of the drawing layer, on which the graphic element is placed. Using the 
 
 **Arrangement in the fore- or background**\
 \
-Overlapping graphic elements are displayed in order of insertion into the graph. This order can be changed using the icons **Bring to front** and **Send to back**. If the graphic element is part of a group the arrangement is only changed inside the group, but the other elements of the graph are not affected. If necessary the group frame has to be moved in the fore- or background, to receive a change of the arrangement of the grouped elements relative to the rest of the graph. <!-- src: help/05/1327 -->
+Overlapping graphic elements are displayed in order of insertion into the graph. This order can be changed using the icons **Bring to front** and **Send to back**. If the graphic element is part of a group the arrangement is only changed inside the group, but the other elements of the graph are not affected. If necessary the group frame has to be moved in the fore- or background, to receive a change of the arrangement of the grouped elements relative to the rest of the graph.
 
 ### Data source
 
-If a GeoDin object has several (versioned) well designs, here the selection of the well design version to be shown is possible. <!-- src: help/05/1337 -->
+If a GeoDin object has several (versioned) well designs, here the selection of the well design version to be shown is possible.
 
 ### Graphic properties
 
-Select the mode (country standard) for the graphic presentation of the well design in the drop down menu **\"Data presentation\"**. Usually the setting is \'Automatic\'.
+Select the mode (country standard) for the graphic presentation of the well design in the drop down menu **"Data presentation"**. Usually the setting is 'Automatic'.
 
 Other options for the graphic presentation:
 
@@ -110,7 +104,7 @@ Select the line thickness of the shown fill patterns (only printout).
 
 **Draw wall thickness**
 
-Specify whether the wall thickness of the pipe elements/special fixtures should be drawn to scale (provided the wall thickness was recorded in the expansion data). <!-- src: help/05/1338 -->
+Specify whether the wall thickness of the pipe elements/special fixtures should be drawn to scale (provided the wall thickness was recorded in the expansion data).
 
 ### Borehole
 
@@ -120,7 +114,7 @@ With activated option -Standard- the elements are labeled with a predefined stan
 
 The construction of labeling instructions is described in detail in the chapter [Text macro](../reporting/text-macros-in-reports.md).
 
-Text tags to the element can optionally be selected automatically to the element border or centered. <!-- src: help/05/1345 -->
+Text tags to the element can optionally be selected automatically to the element border or centered.
 
 ### Backfill
 
@@ -130,7 +124,7 @@ With activated option -Standard- the elements are labeled with a predefined stan
 
 The construction of labeling instructions is described in detail in the chapter [Text macro](../reporting/text-macros-in-reports.md).
 
-Text tags to the element can optionally be selected automatically to the element border or centered. <!-- src: help/05/1351 -->
+Text tags to the element can optionally be selected automatically to the element border or centered.
 
 ### Special features
 
@@ -140,7 +134,7 @@ With activated option -Standard- the elements are labeled with a predefined stan
 
 The construction of labeling instructions is described in detail in the chapter [Text macro](../reporting/text-macros-in-reports.md).
 
-Text tags to the element can optionally be selected automatically to the element border or centered. <!-- src: help/05/1353 -->
+Text tags to the element can optionally be selected automatically to the element border or centered.
 
 ### Filter information
 
@@ -150,13 +144,13 @@ With activated option -Standard- the elements are labeled with a predefined stan
 
 The construction of labeling instructions is described in detail in the chapter [Text macro](../reporting/text-macros-in-reports.md).
 
-Text tags to the element can optionally be selected automatically to the element border or centered. <!-- src: help/05/1354 -->
+Text tags to the element can optionally be selected automatically to the element border or centered.
 
 ### Piezometers
 
 Choosing the option -Automatic piezometer spacing- these are placed automatically in the well design. For the piezometers 1 to 9 also a free horizontal position in the view can be chosen.
 
-See also [Piezometer number](well-design-diagrams.md). <!-- src: help/05/1357 -->
+See also [Piezometer number](well-design-diagrams.md).
 
 ### Piezometer number
 
@@ -164,9 +158,9 @@ Select if the particular piezometer should be drawn.
 
 Additionally the distance of the piezometer from the center axis of the well design can be adjusted. For a negative distance the piezometer series is displayed left of the center axis, for a positive distance right of the center axis.
 
-***Note:*** *This setting only takes an effect, if the option -Automatic piezometer spacing- in the branch Piezometers is deactivated.*
+_**Note:**_ _This setting only takes an effect, if the option -Automatic piezometer spacing- in the branch Piezometers is deactivated._
 
-See also [Piezometers](well-design-diagrams.md). <!-- src: help/05/1359 -->
+See also [Piezometers](well-design-diagrams.md).
 
 ### Complex graphic elements
 
@@ -185,8 +179,7 @@ The method to create graphs with complex graphic elements can be structured in t
 **1. Drawing the object frame**
 
 \
-Using the tool a object frame is drawn. The frame should be large enough to hold all the graphic elements. The selected frame is represented by 4 grey squares and 4 grey side lines. If not selected the frame is represented by 4 grey angles. The selection of the object frame as an active graphic element is done with the mouse in the boundary area of the frame or with the ![Ctrl](.gitbook/assets/icons/ctrl.png) **Ctrl** key pressed at any place inside the frame.
-
+Using the tool a object frame is drawn. The frame should be large enough to hold all the graphic elements. The selected frame is represented by 4 grey squares and 4 grey side lines. If not selected the frame is represented by 4 grey angles. The selection of the object frame as an active graphic element is done with the mouse in the boundary area of the frame or with the  **Ctrl** key pressed at any place inside the frame.
 
 **2. Adding an element inside of the object frame**
 
@@ -198,11 +191,11 @@ To draw a geological graphic element inside the object frame, you select the obj
 
 or
 
-**Data source** <!-- src: help/05/1378 -->
+**Data source**
 
 ### Axis range
 
-Select here the distance of the main divisions for the depth-axis, as well as the chosen number of help divisions. <!-- src: help/05/1400 -->
+Select here the distance of the main divisions for the depth-axis, as well as the chosen number of help divisions.
 
 ### Diagram design
 
@@ -210,11 +203,11 @@ In the branch Diagram design any areas, texts and symbols can be added to the di
 
 You add a single **Surfaces**, [Text](layouts/text-macros-and-variable-text.md) or [Symbol](../configuration/fill-patterns-and-symbols.md) in the particular branches of the object properties.
 
-If areas, texts or symbols exist, their display can be showed and hidden using the particular option. You do not have to remove the areas or text, if you temporarily do not want to display them. <!-- src: help/05/1673 -->
+If areas, texts or symbols exist, their display can be showed and hidden using the particular option. You do not have to remove the areas or text, if you temporarily do not want to display them.
 
 ### Show filters
 
-If an existing well design is added to a groundwater measurement place, this option can be used to add the presentation of the filter length in the borehole cross-section. <!-- src: help/05/3277 -->
+If an existing well design is added to a groundwater measurement place, this option can be used to add the presentation of the filter length in the borehole cross-section.
 
 ### Horizontal scale
 
@@ -228,19 +221,17 @@ The layout has to contain at least one graphic element [Well design](../navigati
 
 **Results in the layout**
 
-All well designs of the layout apply the horizontal scale. <!-- src: help/05/3656 -->
+All well designs of the layout apply the horizontal scale.
 
----
+***
 
 ## Reference: Fill Color and Transparency
-
-<!-- src: help/05/504 -->
 
 ### Color / Transparency
 
 Controls the fill color and transparency of area fills in well design diagrams:
 
-- **Default color** — The background color for a fill pattern is taken from the fill pattern table by default.
-- **User defined** — Select this option to override the default and choose a custom color for the area fill.
-- **Transparent fill** — Allows overlaying filled areas with a transparent fill pattern so underlying elements remain visible. Note: not all print output devices support transparency.
-- **Line thickness** — Adjustable only for vector fill patterns; affects print output only. Changing this setting has no visible effect on the screen.
+* **Default color** — The background color for a fill pattern is taken from the fill pattern table by default.
+* **User defined** — Select this option to override the default and choose a custom color for the area fill.
+* **Transparent fill** — Allows overlaying filled areas with a transparent fill pattern so underlying elements remain visible. Note: not all print output devices support transparency.
+* **Line thickness** — Adjustable only for vector fill patterns; affects print output only. Changing this setting has no visible effect on the screen.

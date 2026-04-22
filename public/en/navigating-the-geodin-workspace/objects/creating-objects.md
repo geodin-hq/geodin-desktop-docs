@@ -2,12 +2,6 @@
 description: Creating Objects
 ---
 
-<!--
-**Content status:** Auto-assembled from product documentation
-**Source quality:** B (Moderate (single source type))
-**Needs:** needs legacy verification, needs screenshots, needs examples, editorial review
--->
-
 # Creating Objects
 
 ### Objects
@@ -16,7 +10,7 @@ A project may contain up to 9998 objects or boreholes. Because the number of pro
 
 A object may be defined in the GeoDin system as an object that has at least a name and is related to a project. Objects can be boreholes, monitoring wells, cone testing holes as well as climate measuring stations, surface water collection points etc.
 
-Each object must be defined by general data containing information like its name and where present its coordinates. Depending upon the type of object further information may then be entered and displayed, for example a borehole log, CPT results, a groundwater monitoring well. There are over 100 different types of objects (\"Object types**\"**) in GeoDin, which cover all types of data collection and presentation.
+Each object must be defined by general data containing information like its name and where present its coordinates. Depending upon the type of object further information may then be entered and displayed, for example a borehole log, CPT results, a groundwater monitoring well. There are over 100 different types of objects ("Object types\*\*"\*\*) in GeoDin, which cover all types of data collection and presentation.
 
 The default installation provides the user a set of object types, depending on the language version. Further object types can be installed from the CD. For example all German geological survey organizations (Geologische Landesämter) have their own input masks for which special syntax controls have been defined. Other international standards are supported (e.g. BS5930, NEN, ÖNORM) as well as specific national standards (e.g. Dept. of Geological Survey, Botswana). A project may contain several different types of objects as long as these are installed in the GeoDin-System folder. In addition there are controls to allow or to prevent the creation of certain types of objects (e.g. read only).
 
@@ -24,129 +18,127 @@ The difference between a measurement point and a object is that the former canno
 
 In the GeoDin object manager a project is always subdivided into objects and measurement points. Both categories may be further subdivided depending on what data is to be collected. As a user you cannot alter this arrangement, because each subdivision is automatically generated.
 
- Datenbases
+Datenbases
 
- DemoDB
+DemoDB
 
- GeoDin Demo
+GeoDin Demo
 
- Objects
+Objects
 
- All objects
+All objects
 
- General borehole log
+General borehole log
 
- Measurement points <!-- src: help/03/141 -->
+Measurement points
 
 ### View in Object Manager
 
-A list of objects and measurement points is shown in the GeoDin object manager, either by clicking on the group header name or on the plus \<**+**\> symbol:
+A list of objects and measurement points is shown in the GeoDin object manager, either by clicking on the group header name or on the plus <**+**> symbol:
 
- GeoDin Demo Project
+GeoDin Demo Project
 
- Objects
+Objects
 
- All objects
+All objects
 
- Standard outcrop SEP compatible
+Standard outcrop SEP compatible
 
- Borehole 01
+Borehole 01
 
- Borehole 02
+Borehole 02
 
- Borehole 03
+Borehole 03
 
- Borehole 04
+Borehole 04
 
- Cone penetration test
+Cone penetration test
 
- Measurement points
+Measurement points
 
- Filter
+Filter
 
- Samples
+Samples
 
- B01: (1.4-1.8m)
+B01: (1.4-1.8m)
 
- B01: (2.5-2.9m)
+B01: (2.5-2.9m)
 
- B01: (5.2-5.6m)
+B01: (5.2-5.6m)
 
 The objects are shown with their longname. The measurement point identifier is made up of the shortname of the object, the name of the measurement point and depth (where present).
 
 In addition to these automatically generated views, you may use queries and groups to generate any number of completely different views where both the type and amount of information displayed can be controlled (e.g. the SHORTNAME with the height of ground surface in brackets). Hence the way that objects are displayed can be customized to your way of working.
 
- GeoDin Demo Project
+GeoDin Demo Project
 
- Objects
+Objects
 
- All objects
+All objects
 
- Standard outcrop SEP compatible
+Standard outcrop SEP compatible
 
- Borehole 01
+Borehole 01
 
- Borehole 02
+Borehole 02
 
- Borehole 03
+Borehole 03
 
- Borehole 04
+Borehole 04
 
- Cone penetration test
+Cone penetration test
 
- Short name (height)
+Short name (height)
 
- B01 (105m)
+B01 (105m)
 
- B02 (107m)
+B02 (107m)
 
- B03 (107m)
+B03 (107m)
 
- B04 (115m)
+B04 (115m)
 
-Both the entries "Borehole 01" and "B01 (105m)" refer to the same object in the database. What you see in the GeoDin object manager is simply a "**view**" of the database. The entry "Borehole 01" is only present once in the database, although it may appear several times in different views. Hence an object (e.g. a borehole) that appears under \"All objects\" and under the specific object type exists only once in the database but is presented in two different views. Views are the result of queries - in this example GeoDin automatically generates the queries. The chapter **Creation of queries and groups** explains the concepts of queries and groups more detailed. <!-- src: help/03/142 -->
+Both the entries "Borehole 01" and "B01 (105m)" refer to the same object in the database. What you see in the GeoDin object manager is simply a "**view**" of the database. The entry "Borehole 01" is only present once in the database, although it may appear several times in different views. Hence an object (e.g. a borehole) that appears under "All objects" and under the specific object type exists only once in the database but is presented in two different views. Views are the result of queries - in this example GeoDin automatically generates the queries. The chapter **Creation of queries and groups** explains the concepts of queries and groups more detailed.
 
 ### Create object
 
-A new object can be accessed when *![Objects](.gitbook/assets/icons/objects-2.png) **Object***, ***All objects*** or the particular **object type** (in the example \"General borehole log\") is selected in the GeoDin object manager.
+A new object can be accessed when  _**Object**_, _**All objects**_ or the particular **object type** (in the example "General borehole log") is selected in the GeoDin object manager.
 
- GeoDin Demo Project
+GeoDin Demo Project
 
- Object
+Object
 
- All objects
+All objects
 
- General borehole log
+General borehole log
 
-Create a new object with a double-click the method ![New object](.gitbook/assets/icons/new-object.png) **New object**:
+Create a new object with a double-click the method  **New object**:
 
-
-If the method was selected whilst either ***Object*** or ***All objects*** were selected, a dialogue field appears containing the option to choose, which type of object should be created.
+If the method was selected whilst either _**Object**_ or _**All objects**_ were selected, a dialogue field appears containing the option to choose, which type of object should be created.
 
 The option of choosing the unit system to be used is only available for certain object types that support this feature.\
 \
-In the dialogue you can optionally choose that -Data types are created automatically**-**. For this it is required, that the object type has the permission and that a measurement program for data types has been created ([Measurement programs](../measurement-values/working-with-measurement-data.md)). If at least one data type for the chosen object type, has not yet been created, then this option can be activated. Upon adding this object the relevant tables for the data type with the parameters of the measurement program will be created.
+In the dialogue you can optionally choose that -Data types are created automatically\*\*-\*\*. For this it is required, that the object type has the permission and that a measurement program for data types has been created ([Measurement programs](../measurement-values/working-with-measurement-data.md)). If at least one data type for the chosen object type, has not yet been created, then this option can be activated. Upon adding this object the relevant tables for the data type with the parameters of the measurement program will be created.
 
- Objects
+Objects
 
- All objects
+All objects
 
- General borehole log
+General borehole log
 
- New object
+New object
 
-If a specific object type was selected whilst starting the method **\"New object\"**, then the same type of object will be created.
+If a specific object type was selected whilst starting the method **"New object"**, then the same type of object will be created.
 
 After creating a object it is automatically inserted into the GeoDin object manager and the [Data management](data-management.md) mask is opened.
 
 If you mistakenly create a new object you can undo this by clicking the **Cancel Edits** button in the data collection:
 
-
 After a warning you may then delete the object by clicking on **OK**.
 
-Normally however you will want to continue in the **\"data management\"** mask using one of the five editors: General data, Layer data, Sample data, Well design and Data sequences. Detailed information is available in the following chapters.
+Normally however you will want to continue in the **"data management"** mask using one of the five editors: General data, Layer data, Sample data, Well design and Data sequences. Detailed information is available in the following chapters.
 
- Once you are in the data management mask, there is no need to change over to the GeoDin object manager in order to create another objects. Instead just click the button **New object**. This may be repeated as often as you like. <!-- src: help/03/143 -->
+Once you are in the data management mask, there is no need to change over to the GeoDin object manager in order to create another objects. Instead just click the button **New object**. This may be repeated as often as you like.
 
 ### Import and export
 
@@ -162,22 +154,21 @@ The following chapters describe the import and export of data sequences and data
 
 [Export shape files](../../maps/cad-and-gis-exports.md)
 
-[XML export](../../data-collection/export/geodinml-export.md) <!-- src: help/03/182 -->
+[XML export](../../data-collection/export/geodinml-export.md)
 
 ### Delete objects
 
 Alternatively you may choose a group of objects to delete all at once by selecting the appropriate group in the GeoDin object manager
 
-  All Objects
+All Objects
 
-  Borehole 01
+Borehole 01
 
-  Borehole 02
+Borehole 02
 
-and selecting the option **\"Delete all objects\"**.
+and selecting the option **"Delete all objects"**.
 
-
-***WARNING:*** *THIS METHOD CANNOT BE UNDONE!* <!-- src: help/03/188 -->
+_**WARNING:**_ _THIS METHOD CANNOT BE UNDONE!_
 
 ### Create objects from data sequences
 
@@ -189,48 +180,32 @@ Because in objects, which are automatically filled by the import of ASCII files,
 
 For this do as follows:
 
-1.  Create a object of the type, into which the data sequence should be imported. The editing window of the general data appears.
-
-<!-- -->
-
-1.  Change the mode of the general data settings, click the appropriate icon.
-
-<!-- -->
-
-1.  Fill the entry fields with content now.
-
-<!-- -->
-
-1.  Lock the general data presetting (by clicking on the icon **Default general data**)
-
-<!-- -->
-
-1.  Delete the (unused) object. The result is still an empty project (except objects were entered already), but already with general data presets for the data sequences to be imported!
-
-<!-- -->
-
-1.  Now chose the method **Import data sequences** on the branch ***Objects*** and you get to the method described above.
+1. Create a object of the type, into which the data sequence should be imported. The editing window of the general data appears.
+2. Change the mode of the general data settings, click the appropriate icon.
+3. Fill the entry fields with content now.
+4. Lock the general data presetting (by clicking on the icon **Default general data**)
+5. Delete the (unused) object. The result is still an empty project (except objects were entered already), but already with general data presets for the data sequences to be imported!
+6. Now chose the method **Import data sequences** on the branch _**Objects**_ and you get to the method described above.
 
 You can select a certain group of files with the icon **Chosen files** or an entire folder with the icon **Entire folder**. Select also, in which object type the files should be used.
 
-With the automatic reduction factor GeoDin calculates the reduction factor so , that no measurement series contains more than 500 measurement values. With the setting \'fixed\' you can define an individual factor, and with the value =1 completely deactivates the data reduction. <!-- src: help/03/2148 -->
+With the automatic reduction factor GeoDin calculates the reduction factor so , that no measurement series contains more than 500 measurement values. With the setting 'fixed' you can define an individual factor, and with the value =1 completely deactivates the data reduction.
 
 ### SEP1 export
 
-You export objects in the SEP format with the method **\"SEP export\"**, within the method **\"Publish and export\"** which is available at the entry ***All objects*** or in queries and groups.
-
+You export objects in the SEP format with the method **"SEP export"**, within the method **"Publish and export"** which is available at the entry _**All objects**_ or in queries and groups.
 
 You can export the boreholes as single files or combined in a file (SEP catalogue).
 
 Optional the entry of vowel mutations is possible in the DOS output.
 
-Note that not all object types can be exported in the SEP format. If for example all boreholes, have been entered in the ÖNORM, the export function for this borehole is not available. The location types, which contain the addition SEP compatible in the name, can always be exported in the SEP format. <!-- src: help/03/2901 -->
+Note that not all object types can be exported in the SEP format. If for example all boreholes, have been entered in the ÖNORM, the export function for this borehole is not available. The location types, which contain the addition SEP compatible in the name, can always be exported in the SEP format.
 
 ### Import general data
 
-The method **\"Update general data\"** imports or updates general data from the external files into **existing GeoDin objects**.
+The method **"Update general data"** imports or updates general data from the external files into **existing GeoDin objects**.
 
-The method **\"Import general data\"** creates **new GeoDin objects** based on general data from external files (MS-Access, Excel, text files, CSV files).
+The method **"Import general data"** creates **new GeoDin objects** based on general data from external files (MS-Access, Excel, text files, CSV files).
 
 For the import of external data the following steps are necessary:
 
@@ -254,11 +229,11 @@ Here further settings for the import are made, see a preview of the importable d
 
 All settings of an import process can be saved in a configuration file.
 
-This means that subsequent imports with the same or similar data can be carried out much more quickly without having to make all the assignments again. When loading a configuration file, it is also possible to take over only parts of the configuration settings. This is useful, for example, if the parameter assignments of your import files are always identical, but the object assignment must be made anew in each case. To do this, activate the configuration settings to be adopted in the \"Adopt configuration settings\" dialogue.
+This means that subsequent imports with the same or similar data can be carried out much more quickly without having to make all the assignments again. When loading a configuration file, it is also possible to take over only parts of the configuration settings. This is useful, for example, if the parameter assignments of your import files are always identical, but the object assignment must be made anew in each case. To do this, activate the configuration settings to be adopted in the "Adopt configuration settings" dialogue.
 
-**Group of imported objects for \"Import general data\"**
+**Group of imported objects for "Import general data"**
 
-When importing data as new objects, a group with the name ***New objects created / imported on (date)*** is automatically generated and added to the object manager. This makes it easier to edit the new objects, as you will find them all in one group (and not mixed up with already existing GeoDin objects). In addition, in case of errors during the import (for example, incorrectly assigned data field), you can delete the objects in one step (execute method **\"Delete all objects\"** on the group) in order to repeat the import. <!-- src: help/03/7174 -->
+When importing data as new objects, a group with the name _**New objects created / imported on (date)**_ is automatically generated and added to the object manager. This makes it easier to edit the new objects, as you will find them all in one group (and not mixed up with already existing GeoDin objects). In addition, in case of errors during the import (for example, incorrectly assigned data field), you can delete the objects in one step (execute method **"Delete all objects"** on the group) in order to repeat the import.
 
 ### Check measurements
 
@@ -272,7 +247,7 @@ GeoDin graphic documents must be inserted below the object. It is irrelevant if 
 
 Once you have selected a usable graphic this will be shortly analysed, a report will be displayed summarizing measured quantities as well as the configured influencing factors.
 
-Use these details to identify or validate the underlying objects and regression parameters. The evaluation of the measured data will be executed by clicking the button \"continue\".
+Use these details to identify or validate the underlying objects and regression parameters. The evaluation of the measured data will be executed by clicking the button "continue".
 
 **Step 2**
 
@@ -282,19 +257,19 @@ You will get a list of **Event** that have occurred during the calculation.
 
 The different event groups can be switched on and off by using the buttons
 
-   .
+.
 
 **Step 3**
 
 Clicking the continue button you will be asked if you want to take in the evaluated measuring parameters into the database. Doing so the target fields of the event will be filled with the appropriately configured target values. Only at this point any data will be written into the database.
 
-***Note:***
+_**Note:**_
 
-*If both the target field and the measuring parameter, meant for evaluation, are in the same data type, the data set of the measurement will be located and the dataset will be completed with the target value of the target data field. If there already is an evaluation for the data set, the existing information remains, which means that no data fields will be overwritten.*
+_If both the target field and the measuring parameter, meant for evaluation, are in the same data type, the data set of the measurement will be located and the dataset will be completed with the target value of the target data field. If there already is an evaluation for the data set, the existing information remains, which means that no data fields will be overwritten._
 
-*If the target field is of another data type, a new dataset will be created in this data type. Therefore the target field is filled with the target value of the event.*
+_If the target field is of another data type, a new dataset will be created in this data type. Therefore the target field is filled with the target value of the event._
 
-*A separate target data type for events should contain a field with the name LINKSMPID. The SMPID of the triggering data set can be entered into this field during the evaluation of the data. Furthermore the target data type should contain fields for the triggering data type or the triggering parameter. You can choose this option in the data type manager of a certain measurement parameter under Special settings.* <!-- src: help/03/8719 -->
+_A separate target data type for events should contain a field with the name LINKSMPID. The SMPID of the triggering data set can be entered into this field during the evaluation of the data. Furthermore the target data type should contain fields for the triggering data type or the triggering parameter. You can choose this option in the data type manager of a certain measurement parameter under Special settings._
 
 ### Map view
 
@@ -308,7 +283,7 @@ If there is no EPSG code in the general data, GeoDin tries to find the appropria
 
 If GeoDin finds only one valid system, the tile preview is hidden and the main view is maximised directly.
 
-If no valid coordinate system is found, a dialogue window opens in which the coordinate system to be used is requested. The correct display of all marked objects requires that the coordinates of the objects are based on the same coordinate system. <!-- src: help/03/10752 -->
+If no valid coordinate system is found, a dialogue window opens in which the coordinate system to be used is requested. The correct display of all marked objects requires that the coordinates of the objects are based on the same coordinate system.
 
 ### Update data sequences
 
@@ -322,6 +297,6 @@ The button **Check object link** will analyse which files to be imported can be 
 
 After selecting an import filter, the import can be carried out.
 
-***Note:***
+_**Note:**_
 
-If you have created your own customized import filter(s) these will be shown in the **\"Import filter\"** list but can only be edited in the data sequence editor. <!-- src: help/03/10809 -->
+If you have created your own customized import filter(s) these will be shown in the **"Import filter"** list but can only be edited in the data sequence editor.
