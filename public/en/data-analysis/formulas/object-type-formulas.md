@@ -32,7 +32,7 @@ This is based on the files stored in the SOURCE folder of the GeoDin installatio
 
 .SYA - Symbol Table
 
-These files contain the definitions of the fill patterns and symbols in text format and can be modified using the  **"Edit"** method.
+These files contain the definitions of the fill patterns and symbols in text format and can be modified using the  ![Edit](../../.gitbook/assets/icons/edit.png) **"Edit"** method.
 
 The formats of the fill pattern and symbol definitions are described in the chapter [Fill patterns](../../configuration/fill-patterns-and-symbols.md)
 
@@ -62,7 +62,7 @@ To change the lock options make the following new entry under \[System] in the c
 &#xNAN;_&#x53;ysPath=C:\Programme\GeoDin\SYSLIB\\_\
 &#xNAN;_&#x53;ysObjChange=false_
 
-Restart GeoDin and click the **System** tab. Under system configuration the method  **"Remove edit security"** is now shown.
+Restart GeoDin and click the **System** tab. Under system configuration the method  ![Remove edit security](../../.gitbook/assets/icons/remove-edit-security.png) **"Remove edit security"** is now shown.
 
 Double-clicking the method opens the dialogue for setting the password the first time. The entered password is used to unlock the editing of the system objects later.
 

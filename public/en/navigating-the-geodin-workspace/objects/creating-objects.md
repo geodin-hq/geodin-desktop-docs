@@ -102,7 +102,7 @@ Both the entries "Borehole 01" and "B01 (105m)" refer to the same object in the 
 
 ### Create object
 
-A new object can be accessed when  _**Object**_, _**All objects**_ or the particular **object type** (in the example "General borehole log") is selected in the GeoDin object manager.
+A new object can be accessed when  ![Objects](../../.gitbook/assets/icons/objects-2.png) _**Object**_, _**All objects**_ or the particular **object type** (in the example "General borehole log") is selected in the GeoDin object manager.
 
 GeoDin Demo Project
 
@@ -112,7 +112,7 @@ All objects
 
 General borehole log
 
-Create a new object with a double-click the method  **New object**:
+Create a new object with a double-click the method  ![New object](../../.gitbook/assets/icons/new-object.png) **New object**:
 
 If the method was selected whilst either _**Object**_ or _**All objects**_ were selected, a dialogue field appears containing the option to choose, which type of object should be created.
 

@@ -179,7 +179,7 @@ The method to create graphs with complex graphic elements can be structured in t
 **1. Drawing the object frame**
 
 \
-Using the tool a object frame is drawn. The frame should be large enough to hold all the graphic elements. The selected frame is represented by 4 grey squares and 4 grey side lines. If not selected the frame is represented by 4 grey angles. The selection of the object frame as an active graphic element is done with the mouse in the boundary area of the frame or with the  **Ctrl** key pressed at any place inside the frame.
+Using the tool a object frame is drawn. The frame should be large enough to hold all the graphic elements. The selected frame is represented by 4 grey squares and 4 grey side lines. If not selected the frame is represented by 4 grey angles. The selection of the object frame as an active graphic element is done with the mouse in the boundary area of the frame or with the  ![Ctrl](../.gitbook/assets/icons/ctrl.png) **Ctrl** key pressed at any place inside the frame.
 
 **2. Adding an element inside of the object frame**
 

@@ -160,7 +160,7 @@ Entry Description
 
 #### Measurement data
 
-If an object is selected in the GeoDin Object Manager, for which measurement values can be entered, the method  **"Measurement value management"** is available.
+If an object is selected in the GeoDin Object Manager, for which measurement values can be entered, the method  ![Measurement value management](../../.gitbook/assets/icons/measurement-value-management.png) **"Measurement value management"** is available.
 
 The main elements of the measurement value editor are:
 
@@ -889,7 +889,7 @@ A regression calculation allows us to explore the relationship between two (or m
 
 The conditional expected value is referred to here as the **estimation target**.
 
-This can be estimated from various  **influencing factors**.
+This can be estimated from various  ![influencing factors](../../.gitbook/assets/icons/influencing-factors.png) **influencing factors**.
 
 **Methodology:**
 
