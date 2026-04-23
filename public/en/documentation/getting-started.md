@@ -104,6 +104,6 @@ You can also start the SQL protocol and the online support function.
 
 With the function **SQL protocol**, you can record all database operations performed by GeoDin for a later analysis. The protocol contains data about the actions executed, their execution time and the success. It is especially helpful in debugging newly developed complex SQL queries.
 
-The protocol is started with the **Start SQL protocol** menu item in the information menu. All SQL commands executed afterwards are recorded in the protocol. To stop the protocol, select the same menu item, now called  **Stop SQL protocol**. The protocol is now displayed in an extra window and can also be saved as a text file.
+The protocol is started with the **Start SQL protocol** menu item in the information menu. All SQL commands executed afterwards are recorded in the protocol. To stop the protocol, select the same menu item, now called  ![Stop SQL protocol](../.gitbook/assets/icons/stop-sql-protocol.png) **Stop SQL protocol**. The protocol is now displayed in an extra window and can also be saved as a text file.
 
 You can also start the SQL protocol with the keyboard shortcut **Alt-S** without using the menu.

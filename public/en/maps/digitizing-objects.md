@@ -105,7 +105,7 @@ With the option "**Mini graphics**" you can place your objects in the map layout
 
 Add a new layout with the buttons **Add New Element** (to the end of the layout list) or **Insert New Element** (above the selected layout).
 
-With the button  **Duplicate element** you duplicate the selected layout. If you want to make changes to the list without an immediate update, use the button **Edit without update** .
+With the button  ![Duplicate](../.gitbook/assets/icons/duplicate.png) **Duplicate element** you duplicate the selected layout. If you want to make changes to the list without an immediate update, use the button **Edit without update** .
 
 The following setting options are available for editing the mini graphics:
 

@@ -14,7 +14,7 @@ This is based on the files stored in the SOURCE folder of the GeoDin installatio
 
 .SYA - Symbol Table
 
-These files contain the definitions of the fill patterns and symbols in text format and can be modified using the  **"Edit"** method.
+These files contain the definitions of the fill patterns and symbols in text format and can be modified using the  ![Edit](../.gitbook/assets/icons/edit.png) **"Edit"** method.
 
 The formats of the fill pattern and symbol definitions are described in the chapter [Fill patterns](fill-patterns-and-symbols.md)
 

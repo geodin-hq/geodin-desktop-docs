@@ -79,7 +79,7 @@ The site plan tool can be started at the following places:
 
 1\) Start at a query or at a group of objects
 
-By double clicking the method symbol  **Site plan**:
+By double clicking the method symbol  ![Site plan](../.gitbook/assets/icons/site-plan.png) **Site plan**:
 
 The graphics window is opened, and the site plan tool is started. All objects of the query or group are added to the site plan
 

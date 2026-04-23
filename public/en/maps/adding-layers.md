@@ -208,4 +208,4 @@ The column created in the attribute table (see above) receives the column name e
 
 Start the calculation with this button and get a first overview in the preview window.
 
-Save the result in Shape format, (\*.shp), Geography Markup Language (\*.gml), MapInfo File (\*.mif), Keyhole Markup Language (\*.km) or JavaScript Object Notation (\*.json). After saving, you will be asked whether the saved file should be transferred to the map and displayed. If you want this, confirm with  **\<Yes>.**
+Save the result in Shape format, (\*.shp), Geography Markup Language (\*.gml), MapInfo File (\*.mif), Keyhole Markup Language (\*.km) or JavaScript Object Notation (\*.json). After saving, you will be asked whether the saved file should be transferred to the map and displayed. If you want this, confirm with  ![Yes](../.gitbook/assets/icons/yes.png) **\<Yes>.**

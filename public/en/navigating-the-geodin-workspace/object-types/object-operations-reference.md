@@ -117,7 +117,7 @@ All objects
 
 General borehole log
 
-Create a new object with a double-click the method  **New object**:
+Create a new object with a double-click the method  ![New object](../../.gitbook/assets/icons/new-object.png) **New object**:
 
 If the method was selected whilst either _**Object**_ or _**All objects**_ were selected, a dialogue field appears containing the option to choose, which type of object should be created.
 
@@ -185,7 +185,7 @@ Creates a new object without leaving the Data management method (see also: [Crea
 
 In the data entry grid each object is shown as one line. By clicking this icon, you are taken to the general data input masks for the object selected in the current line.
 
-&#x20;**Create object group**
+&#x20;![Create object group](../../.gitbook/assets/icons/create-object-group.png) **Create object group**
 
 The data records of the GeoDin objects can be filtered in the general data grid. Not all objects of the underlying query or group will then be displayed as rows. Using the Create Object Group function, these filtered GeoDin objects can be combined into a new group in the Object Manager.
 
@@ -212,7 +212,7 @@ A dialogue with the current keyboard short cuts is displayed. Many functions of 
 
 The help option is started.
 
-&#x20;**Page layout** (direct link to the graphic preview)\
+&#x20;![Page layout](../../.gitbook/assets/icons/page-layout.png) **Page layout** (direct link to the graphic preview)\
 \
 This function saves any changes made in the [Data management](../objects/data-management.md) method and opens the graphic preview for the current object. Hence using this preview method you always view the actual status of the database.
 
@@ -250,7 +250,7 @@ A short explanation to each entry box is shown in the status bar. For several in
 
 The following special icons are available for the input of the general data:
 
-&#x20;**Select input form**
+&#x20;![Select input form](../../.gitbook/assets/icons/select-input-form.png) **Select input form**
 
 For the input of the data different masks can in some cases be used. The selection of (another) input form is done with this icon.
 
@@ -265,7 +265,7 @@ Depending upon the object type there will be a ceratin number of obligatory entr
 
 Dictionary fields such as _Field log, Summary log, Data security_ and _Checked by_ in the BS 5930 object typeare user-definable i.e. you can customize the dictionaries linked to each field. For example, if always the same persons check the data their names can be stored in the relevant dictionary and can be subsequently chosen from the pull-down menu to quicken data collection.
 
-&#x20;**Input control**
+&#x20;![Input control](../../.gitbook/assets/icons/input-control.png) **Input control**
 
 When entering data in an input field it is tested automatically for correctness of its content (e.g. invalid code or number).
 
@@ -277,7 +277,7 @@ _\[Check after entering separator]_ - activates the feature when a separator is 
 
 The second option results in the data enter being first checked when a comma, bracket or other separator has been entered and the next field selected. The default setting is "off" for this feature so that when typing several letters an error may be shown before one has completed the data entry. Once data entry is finished it will however be clear whether errors have been made. This feature does basic checks on data entry and is fully supported in the table grid view.
 
-&#x20;**Map preview**
+&#x20;![Map preview](../../.gitbook/assets/icons/map-preview.png) **Map preview**
 
 This icon shows an object plotted as a red cross (x) on a OpenStreetMaps background. You must have an internet connection to display the OSM map. In the edit modus you can move the position of the cross. There are two options available by clicking the three bar icon in the top left corner of the map:\
 \
@@ -307,7 +307,7 @@ _**Note:**_ _The input fields always refer to the x-coordinate, y-coordinate and
 
 The edit fields also update when the object is moved on the map.
 
-&#x20;**Coordinate transformation**
+&#x20;![Coordinate transformation](../../.gitbook/assets/icons/coordinate-transformation.png) **Coordinate transformation**
 
 The tool for the coordinate transformation can be used by clicking on the crosshair symbol in the general data editor.
 
@@ -315,7 +315,7 @@ The tool uses the coordinates and the coordinate system of the current object fo
 
 To calculate the coordinates, click on the **Calculate** button. After converting the coordinates, the **OK** button becomes active and the newly calculated values can be transferred to the object.
 
-&#x20;**Export master data**
+&#x20;![Export master data](../../.gitbook/assets/icons/export-master-data.png) **Export master data**
 
 In the table/grid view of the master data, the \<Export> button is also available in the upper toolbar. This allows you to export the table to Excel in the form in which it is displayed.
 
@@ -383,7 +383,7 @@ When entering information on backfill, casing and special features, codes (abbre
 
 Well design information is divided into the following groups (shown as individual editors in the GUI):
 
-&#x20;**Borehole information, drilling method and tools**
+&#x20;![Borehole information, drilling method and tools](../../.gitbook/assets/icons/borehole-information-drilling-method-and-tools.png) **Borehole information, drilling method and tools**
 
 This table is used to collect information on drilling progress, including the drilling method and the tools used.
 
@@ -397,7 +397,7 @@ The following fields are mandatory:
 
 This information is used for the graphical presentation of the borehole true to scale. The optional entries for drilling methods and tools can be chosen using the key combinations **Shift down-arrow** and **Shift up-arrow**.
 
-&#x20;**Backfill information**
+&#x20;![Backfill information](../../.gitbook/assets/icons/backfill-information.png) **Backfill information**
 
 Backfill information is also entered in a table, whereby the following fields are mandatory:
 
@@ -409,7 +409,7 @@ The type of material is entered using easy to remember abbreviations. This can b
 \
 The automatic entries in the Material field can be overwritten and will be used in the graphical presentation of the backfill. Additional information on the grain size (from - to) can be optionally entered in two fields. This will also be displayed graphically.
 
-&#x20;**Casing information**
+&#x20;![Casing information](../../.gitbook/assets/icons/casing-information.png) **Casing information**
 
 This table is used for entering the individual components of the monitoring well such as filters and end caps etc. If such a well has several piezometers, each one will have a separate entry table. The tables are created as index cards and can be accessed by clicking on the tabs at the lower window boundary. You can also use the key combination **Ctrl+digit**. Each piezometer is numbered successively, up to a maximum of nine per object.
 
@@ -426,23 +426,23 @@ The depth and diameter information are used for the true scale graphical present
 
 In the field _"casing material"_ further information can be entered. This can be chosen from a list and will be used in combination with _"the type of casing"_ for labeling the well design graphic. This is an optional field as is the element thickness (Thk.).
 
-&#x20;**Filter details**
+&#x20;![Filter details](../../.gitbook/assets/icons/filter-details.png) **Filter details**
 
 After entering an element of the type **"Filter"** the data entry mask can be used for collecting further details on the groundwater monitoring well.
 
 This entry mask is available via the casing table when the cursor is in an entry row where there is a filter element. None of the mask entries are compulsory - the information is evaluated using the measurement editor. If there are more than one set of casing then you can move between them using the "up arrow" and "down arrow" buttons.
 
-&#x20;**Information on special features**
+&#x20;![Information on special features](../../.gitbook/assets/icons/information-on-special-features.png) **Information on special features**
 
 Here special features can be recorded that cannot be attributed to individual casing elements, for example concrete rings, hydrant covers etc. With these elements complicated well housing features for multiple piezometer installations above and below the ground surface can be constructed. All these elements are drawn centred on the borehole.
 
 Special features are also entered using codes that are either entered in the **Type** field or chosen from the list. The field **Feature type** is automatically filled out with plain text upon entry of a Type code - this text can be over-written, changed etc. and is used for well design labelling.
 
-&#x20;**Additional information**
+&#x20;![Additional information](../../.gitbook/assets/icons/additional-information.png) **Additional information**
 
 General data for a groundwater monitoring well can be entered in this mask.
 
-&#x20;**Copy well-design data from another object**
+&#x20;![Copy well-design data from another object](../../.gitbook/assets/icons/copy-well-design-data-from-another-object.png) **Copy well-design data from another object**
 
 This feature allows you to copy well design data from another object.
 
@@ -492,7 +492,7 @@ Objects can be removed from the list of objects to be displayed (printed out).
 
 The order can be edited, which is also the order of the printout and in a mult-object frame the order of the objetcs
 
-&#x20;**Edit without refresh**
+&#x20;![Edit without refresh](../../.gitbook/assets/icons/edit-without-refresh.png) **Edit without refresh**
 
 The order in larger lists can be edited without continuously refreshing the graphic view.
 
@@ -514,9 +514,9 @@ If kept pressed, this icon fades out the overview of available layouts, so that 
 
 Below the list of objects to display the available layout interfaces for the current page layout are shown. Here for example the vertical scale of the actual view, a labeling text, the view section of an axis etc. can be configured. Each page layout has its own amount of layout interfaces. Layouts of older GeoDin versions have no configured layout interfaces, but these can be added easily.
 
-&#x20;**Edit quick settings**
+&#x20;![Edit quick settings](../../.gitbook/assets/icons/edit-quick-settings.png) **Edit quick settings**
 
-In the window **Edit quick settings** use the icon  **Edit** to add or remove quick settings. All layout interface possibilities are grouped. Activate the interfaces, which should be available in this layout template. The images displayed on the right are previews of the quick settings. Consider that the layout interfaces, which are not available in the actual layout, cannot be activated. For example the interfaces '**Vertical scale**' cannot (sensibly) be used in a layout, which contains a report of measurement values, because no graphic element exists, on which a vertical scale could be adjusted.
+In the window **Edit quick settings** use the icon  ![Edit](../../.gitbook/assets/icons/edit.png) **Edit** to add or remove quick settings. All layout interface possibilities are grouped. Activate the interfaces, which should be available in this layout template. The images displayed on the right are previews of the quick settings. Consider that the layout interfaces, which are not available in the actual layout, cannot be activated. For example the interfaces '**Vertical scale**' cannot (sensibly) be used in a layout, which contains a report of measurement values, because no graphic element exists, on which a vertical scale could be adjusted.
 
 A detailed description of the functions of layout interfaces is available in the particular chapter [Layout interfaces](../../data-visualization/layouts/layout-editor-basics.md).
 
@@ -734,7 +734,7 @@ If the object contains either measurement or document data, it will be shown in 
 
 ### Duplicate object
 
-You can also create new object by using the method  **Duplicate object**.
+You can also create new object by using the method  ![Duplicate object](../../.gitbook/assets/icons/duplicate-object.png) **Duplicate object**.
 
 If the object contains subordinated data, like measurement values or document data these can optionally be copied with the object.
 
@@ -819,7 +819,7 @@ _\[Check after entering separator]_ - activates the feature when a separator is 
 
 The second option results in the data enter being first checked when a comma, bracket or other separator has been entered and the next field selected. The default setting is "off" for this feature so that when typing several letters an error may be shown before one has completed the data entry. Once data entry is finished it will however be clear whether errors have been made. This feature does basic checks on data entry and is fully supported in the table grid view. Complex checks on interdependencies and key code transitions are not covered.
 
-&#x20;**Borehole profile preview and translation of codes to text**
+&#x20;![Borehole profile preview and translation of codes to text](../../.gitbook/assets/icons/borehole-profile-preview-and-translation-of-codes-to-text.png) **Borehole profile preview and translation of codes to text**
 
 Both the graphic preview of the borehole and the text description are displayed beneath the data entry mask and are permanently updated during layer data input. You can navigate in this preview by using the scroll bars, a mouse wheel or an equivalent touch gesture (on mice or track pads). By clicking on a layer you can directly go to the data entry mask at the chosen depth.
 

@@ -87,7 +87,7 @@ The construction of a cross-section can be started by different methods:
 
 1\) Start at a query or group of objects
 
-By double-clicking on the method icon  **Cross-section**:
+By double-clicking on the method icon  ![Cross-section](../../.gitbook/assets/icons/cross-section.png) **Cross-section**:
 
 the graphic window is opened, the cross-section is started and all objects of the query are loaded into the site plan view of the cross-section.
 

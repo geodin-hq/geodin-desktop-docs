@@ -117,7 +117,7 @@ o Type of the possible or desired sub-layers of the investigated layer
 
 A layer query definition file (file extension \*.GLQ) is a collection of of the single definition conditions, layer classifications, layer packages, layer package sequences and execution options. It is possible to create and use any number of layer query definition files. Under the system tab of GeoDin new definition files can be created and existing files can edited and deleted.
 
-The layer query definition file is stored by default in the folder QUERYDEF of the GeoDin installation. In a network environment this area is normally write-protected and can only be accessed by entering the password. Therefore you can create your own layer query definition files wherever you like, also the access to data from other users is possible. With the method ' **Properties**' a list of folders can be configured to be searched by GeoDin for layer query definition files:
+The layer query definition file is stored by default in the folder QUERYDEF of the GeoDin installation. In a network environment this area is normally write-protected and can only be accessed by entering the password. Therefore you can create your own layer query definition files wherever you like, also the access to data from other users is possible. With the method ' ![Properties](../../.gitbook/assets/icons/properties.png) **Properties**' a list of folders can be configured to be searched by GeoDin for layer query definition files:
 
 The folder QUERYDEF is set by default and cannot be deleted from the search path with the consequence that all layer query files from this folder will always be displayed.
 
@@ -129,7 +129,7 @@ The search pathes are a local setting at the work station of the user. For this 
 
 ### Preview
 
-In the [Layer data](../../navigating-the-geodin-workspace/concepts/layer-and-stratigraphy.md) in the method **"Data management"**, a preview of the layer queries is available. It can be opened with the  **Layer queries** button:
+In the [Layer data](../../navigating-the-geodin-workspace/concepts/layer-and-stratigraphy.md) in the method **"Data management"**, a preview of the layer queries is available. It can be opened with the  ![Layer queries](../../.gitbook/assets/icons/layer-queries.png) **Layer queries** button:
 
 Here, the desired layer query definition and the classification can be selected. The results of the layer query and the classification are displayed for the current layer. The selected layer query definition and the classification will remain until GeoDin is shut down.
 
@@ -417,7 +417,7 @@ The list is to exclude layer classification of sub layers. It will result in 'TR
 
 ### New layer query
 
-To create a new layer query definition choose the **System** tab and the method " **New layer query**":
+To create a new layer query definition choose the **System** tab and the method " ![New layer query](../../.gitbook/assets/icons/new-layer-query.png) **New layer query**":
 
 Layer query definitions are tied to object types since the conditions that the data field contents describe are particular to the object type structure. Hence the first choice tobe made is for which object type the query definition shall be defined.
 

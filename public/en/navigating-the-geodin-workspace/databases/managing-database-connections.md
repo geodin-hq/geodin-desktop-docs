@@ -68,7 +68,7 @@ After the copy completes, both databases are closed automatically. Open only one
 
 ### Create database connection
 
-The method **"Create database connection"** is available under the  **Databases** tab in the GeoDin object manager (GOM):
+The method **"Create database connection"** is available under the  ![Databases](../../.gitbook/assets/icons/databases-3.png) **Databases** tab in the GeoDin object manager (GOM):
 
 Upon starting the method you may then choose, whether to use an Access database or create a connection to a database server (with _GeoDin Client/Server_ module).
 
@@ -90,7 +90,7 @@ The creation of database connections to Client/Server databases is described in 
 
 ### Edit database connection
 
-When the database icon of an database connection is selected in the GeoDin object manager (GOM), the method  **"Edit database connection"** is available (_**Note:**_ _The database has to be closed_).
+When the database icon of an database connection is selected in the GeoDin object manager (GOM), the method  ![Edit database connection](../../.gitbook/assets/icons/edit-database-connection.png) **"Edit database connection"** is available (_**Note:**_ _The database has to be closed_).
 
 Editing a database connection is the same as creating a new connection, with the exception that the current connection is replaced. Both the name of the connection and the Access file or Client/Server database may be changed.
 
@@ -104,7 +104,7 @@ The settings for Client/Server databases are described in the chapter:
 
 ### Delete database connection
 
-An existing database connection can be deleted in the GeoDin-Object manager using the method  **"Delete database connection"** (_**Note:**_ _The database must be closed and it must be a user-defined database; system databases can only be deleted on the_ [_System databases_](connecting-to-a-database.md)).
+An existing database connection can be deleted in the GeoDin-Object manager using the method  ![Delete database connection](../../.gitbook/assets/icons/delete-database-connection.png) **"Delete database connection"** (_**Note:**_ _The database must be closed and it must be a user-defined database; system databases can only be deleted on the_ [_System databases_](connecting-to-a-database.md)).
 
 Confirming with **OK** deletes the database connection in the GeoDin object manager. This deletes the connection but not the data, except in the following exceptions outlined below.
 
@@ -593,7 +593,7 @@ https://docwiki.embarcadero.com/RADStudio/XE5/en/Database\_Connectivity\_(FireDA
 
 ### Create report
 
-&#x20;**Create report**
+&#x20;![Create report](../../.gitbook/assets/icons/create-report.png) **Create report**
 
 With the method **"Create Report"** at a database it is possible to fill a prefabricated text with data from a database by using special macro commands. The file format is odt (open documenttext). As the macro commands can be corrupted by other internal Office commands when saving the file, we recommend to use only one text processing program (Ms Word, Libre Office) when creating the report.
 

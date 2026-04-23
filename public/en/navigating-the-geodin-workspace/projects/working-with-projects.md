@@ -14,7 +14,7 @@ How you combine the objects in a project, is left to you. Because objects can be
 
 #### Project details
 
-First select the database, in which the project should be created (for this select the chosen database entry in the object manager and open the branch with a double-click or clicking the plus **+** symbol). With selected and opened database the symbol  **"New project"** appears in the method bar:
+First select the database, in which the project should be created (for this select the chosen database entry in the object manager and open the branch with a double-click or clicking the plus **+** symbol). With selected and opened database the symbol  ![New project](../../.gitbook/assets/icons/new-project.png) **"New project"** appears in the method bar:
 
 The given project name is shown in the GeoDin object manager. An alias name can be used for a second project name or a company related identification.
 
@@ -32,9 +32,9 @@ Related subjects:
 
 #### Open project
 
-You can open a project by double-clicking on the project entry, by clicking on the arrow sign in front of the project entry or by double-clicking on the method symbol  **"Open project"**
+You can open a project by double-clicking on the project entry, by clicking on the arrow sign in front of the project entry or by double-clicking on the method symbol  ![Open project](../../.gitbook/assets/icons/open-project.png) **"Open project"**
 
-An open project is indicated by a yellow folder icon in the GeoDin object manager and remains open throughout the session until it is explicitly closed by the  **"Close project"** or **"Close database"** methods.
+An open project is indicated by a yellow folder icon in the GeoDin object manager and remains open throughout the session until it is explicitly closed by the  ![Close project](../../.gitbook/assets/icons/close-project.png) **"Close project"** or **"Close database"** methods.
 
 You can open any number of projects (also from any number of databases) at the same time and navigate between them in the GeoDin object manager.
 
@@ -46,7 +46,7 @@ _**Tip:**_ _Clicking on the arrow sign in front of a project entry does not clos
 
 #### Delete project
 
-To delete a project from the GeoDin database choose the method  **"Delete project"**
+To delete a project from the GeoDin database choose the method  ![Delete project](../../.gitbook/assets/icons/delete-project.png) **"Delete project"**
 
 After confirming your intention in the delete project window all project data is deleted.
 
@@ -54,7 +54,7 @@ If you delete a project in a database (MS Access, ORACLE etc.) all data sets, wh
 
 #### Copy project
 
-To copy an entire project choose the method  **"Copy project"**
+To copy an entire project choose the method  ![Copy project](../../.gitbook/assets/icons/copy-project.png) **"Copy project"**
 
 The entries for project name and author must be entered - the default values are based on the original project.
 
@@ -76,7 +76,7 @@ _Normally after copying single projects or all projects from an Access database 
 
 It is possible to copy all projects from one database into another in one step. Opposite to copying a single project here the original project identifications are kept and a 1:1 copy of the database is created. This function is useful for transferring complete GeoDin databases from one database format to another.
 
-For this select at the database entry of the source database the method  **"Copy all projects"** .
+For this select at the database entry of the source database the method  ![Copy all projects](../../.gitbook/assets/icons/copy-all-projects.png) **"Copy all projects"** .
 
 After choosing the destination directory and confirming with **OK** the copying process begins. Depending on the size of the database and the type of the database connection, this may take a long time. After successfully completing the operation both databases are automatically closed. Always open only one of the databases, because GeoDin system identifies a project by its ID number, which now exists in two databases.
 
@@ -94,7 +94,7 @@ It is not possible to take over an object that already exists in the target proj
 
 1\. First open the project in which you want to add the objects and select it.
 
-2\. Open the method  **"Add object"**.
+2\. Open the method  ![Add object](../../.gitbook/assets/icons/add-object.png) **"Add object"**.
 
 3\. Now open the database and the project, query or group from which you want to copy objects to your target project.
 
@@ -223,7 +223,7 @@ After a closing bracket only the symbols \<comma> \<bracket open/close>, \<minus
 
 For the transfer of database projects the following methods are available:
 
-&#x20;**Export data**
+&#x20;![Export data](../../.gitbook/assets/icons/export-data.png) **Export data**
 
 With the method **"Export data"**, within the method collection **"Publish and export"**, you can compress your data (database, projects, objects or queries) into a Zip-archive on a path at your PC or network you have chosen. Please note that with large amounts of data, this process may take a while. After compression you can send it via your standard email client.
 
