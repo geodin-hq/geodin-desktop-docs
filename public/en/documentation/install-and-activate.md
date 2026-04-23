@@ -10,6 +10,7 @@ This page is the fastest path from zero to a running GeoDin installation. For de
 
 To install GeoDin you need:
 
+* A supported environment — **Windows 10/11 64-bit**. See [Infrastructure and Environment Setup Guide](../installation/infrastructure-and-environment-setup-guide.md#1-system-requirements) for database-client DLL requirements by backend (MS SQL Server, PostgreSQL, Oracle, or MS Access).
 * A valid GeoDin licence serial (purchase or trial — [request from geodin.com](https://geodin.com))
 * Administrative privileges on the target machine
 * The installer `GeoDin-Setup.exe`, sent to you by email after purchase — or downloaded directly from [resources.geodin.com](https://resources.geodin.com/downloads/geodin/latest/installer/GeoDin-Setup.exe)

@@ -9,12 +9,18 @@ description: A five-step happy-path walkthrough — from opening the demo databa
 
 # First steps
 
+⏱ **15–20 minutes.** At the end you'll have a project with one borehole, its stratigraphy, and a generated borehole log.
+
 This walkthrough takes you end-to-end through GeoDin's core workflow: open a database, create a project, add a borehole, describe its layers, and produce a borehole log. Each step links to the deeper reference page if you want more detail.
 
 **What you need before you start**
 
 * GeoDin installed and licensed — see [Install & activate](install-and-activate.md)
 * The Express installation's **demo database** (installed by default) — or a database of your own
+
+{% hint style="info" %}
+**Already have data in AGS, Excel, gINT, or GeoDinML?** This walkthrough covers manual entry against the demo database. To import existing data instead, start at [Importing Data](../data-collection/import.md).
+{% endhint %}
 
 ## Step 1 — Open the demo database
 
@@ -40,7 +46,11 @@ The new project appears under the database in the tree, with empty sub-branches 
 
 ![](../.gitbook/assets/icons/new-object.png) Select your new project in the tree. In the central **Methods** ribbon, double-click **New object** (or right-click the project → **New object**).
 
-Choose an object type — for a standard geotechnical borehole, ![](../.gitbook/assets/icons/borehole.png) **(G1) Location** is the common choice — and enter identifying information (borehole ID, coordinates, elevation).
+Choose an object type — for a standard geotechnical borehole, ![](../.gitbook/assets/icons/borehole.png) **(G1) Location** (GeoDin's standard geotechnical investigation object type — see [Object Types Overview](../navigating-the-geodin-workspace/object-types.md)) is the common choice. Enter identifying information: borehole ID, coordinates, and elevation.
+
+{% hint style="warning" %}
+Coordinates are interpreted in the project's configured coordinate system. If you'll be working in a specific CRS (UTM zones, British National Grid, SIRGAS for Brazil, etc.), confirm the project's system before entering data — see [Coordinate Systems and EPSG](../maps/coordinate-systems-and-epsg.md).
+{% endhint %}
 
 The new borehole appears under the project's **Objects** branch.
 
@@ -82,3 +92,7 @@ Pick a borehole log template and run it. GeoDin produces a PDF-style log showing
 | Visualize boreholes on a map | [Getting Started with Maps](../maps/getting-started-with-maps.md) |
 | Query your database | [Creating Queries](../data-analysis/queries/creating-queries.md) |
 | Produce a full report | [Report Templates](../reporting/report-templates.md) |
+
+---
+
+**Stuck on any step?** See [Troubleshooting](../support/troubleshooting.md) or [Get Support](../support/get-support.md).
