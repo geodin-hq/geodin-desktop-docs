@@ -80,7 +80,7 @@ Documents that have been linked to a database, a project, an object or a measure
 
 The following methods are available for documents:
 
-&#x20;**Manage documents**
+&#x20;![Documents](../../.gitbook/assets/icons/documents.png) **Manage documents**
 
 This method starts the document management for the selected object.
 
@@ -117,7 +117,7 @@ The documents of an object can be stored in any folder structure. This is compar
 
 ### Creating and organizing folders
 
-New folders can be added beneath existing ones by selecting an existing folder and clicking the  **New folder** button:
+New folders can be added beneath existing ones by selecting an existing folder and clicking the  ![New](../../.gitbook/assets/icons/new.png) **New folder** button:
 
 Borehole 01
 

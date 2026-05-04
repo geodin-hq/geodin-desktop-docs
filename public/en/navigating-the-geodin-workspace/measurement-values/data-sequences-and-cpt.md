@@ -6,7 +6,7 @@ description: Data Sequences and CPT
 
 ### Measurement data
 
-If an object is selected in the GeoDin Object Manager, for which measurement values can be entered, the method  **"Measurement value management"** is available.
+If an object is selected in the GeoDin Object Manager, for which measurement values can be entered, the method  ![Measurement value management](../../.gitbook/assets/icons/measurement-value-management.png) **"Measurement value management"** is available.
 
 The main elements of the measurement value editor are:
 
@@ -354,7 +354,7 @@ The data types groundwater chemistry and groundwater dynamics are assigned to th
 
 **\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_**
 
-The method  **Add data set records** is available for measurement points or groups thereof.
+The method  ![Add data set records](../../.gitbook/assets/icons/add-data-set-records.png) **Add data set records** is available for measurement points or groups thereof.
 
 This method is used to add data sets using a date or date list.
 
@@ -504,7 +504,7 @@ This function allows you to add a data type to your database. This is described 
 
 This function will remove any data records belonging to the data type selected, as well as the database tables and definitions. _**Attention:**_ _Deleting measurement value data records cannot be undone! GeoDin calculates how many data records will be deleted and displays this as a warning message. This is the last point at which you may still cancel._
 
-&#x20;**Determine number of records**
+&#x20;![Determine number of records](../../.gitbook/assets/icons/determine-number-of-records.png) **Determine number of records**
 
 Function calculates the number of data records present for each data type in the database and shows an overview.
 

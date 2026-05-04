@@ -117,7 +117,7 @@ The documents of an object can be stored in any folder structure. This is compar
 
 ### Creating and organizing folders
 
-New folders can be added beneath existing ones by selecting an existing folder and clicking the  **New folder** button:
+New folders can be added beneath existing ones by selecting an existing folder and clicking the  ![New](../../.gitbook/assets/icons/new.png) **New folder** button:
 
 Borehole 01
 

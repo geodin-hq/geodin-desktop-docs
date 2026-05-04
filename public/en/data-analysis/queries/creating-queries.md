@@ -105,7 +105,7 @@ To define your own queries (e.g. "boreholes deeper than 9 m") a query wizard is 
 
 The query wizard is able to create queries up to a certain degree of complexity. For highly complex queries it is possible to enter [Alternative SQL-Command](sql-and-advanced-options.md) in the query wizard or to create [System queries](creating-queries.md) (On the system-side of GeoDin).
 
-The query wizard is started by using the method  **"New Query"**.
+The query wizard is started by using the method  ![New Query](../../.gitbook/assets/icons/new-query.png) **"New Query"**.
 
 This is available when either **Objects** or **Measurement points** are selected in the GeoDin object manager.
 
@@ -159,7 +159,7 @@ After selecting the desired template, the **Next** button takes you to the defin
 
 Depending on the chosen query type the window shows a list of the relevant database tables. To open a table field list click on the plus- symbol (+) before the table name.
 
-Almost all operations in this dialogue are carried out by drag and drop. This means clicking on a table entry, keeping the mouse button pressed down and dragging onto the  _**Condition**_ branch of the tree structure in the lower window.\
+Almost all operations in this dialogue are carried out by drag and drop. This means clicking on a table entry, keeping the mouse button pressed down and dragging onto the  ![Condition](../../.gitbook/assets/icons/condition.png) _**Condition**_ branch of the tree structure in the lower window.\
 \
 As soon as the first data field entry is dropped onto a condition, the sub-level "IF" appears. If more than one requirement is to be met, then perform the drag and drop action again, dropping onto the "IF" node. This will be automatically extended with "AND" (Note: the field dropped need not be a different one e.g. limiting values for a particular variable).\
 \
@@ -249,7 +249,7 @@ By clicking on the button **Test query** the conditions are checked for syntax e
 
 The result of a query is always at least the GeoDin database field LOCID - a unique GeoDin object identification number. When no display fields are defined, the results of the query are shown using the LOCID in the GeoDin object manager. Of course this LOCID may not be all that helpful.
 
-&#x20;**Display fields**
+&#x20;![Display Fields](../../.gitbook/assets/icons/display-fields.png) **Display fields**
 
 With the display fields you define the labeling of the objects in the GeoDin object manager. You can combine as many display fields as you like (e.g. name of borehole and final depth). To do this, drag the desired data fields onto the Display fields entry in the lower part of the window. The contents of all display fields will be linked to a text and displayed in the GeoDin object manager.
 
@@ -413,7 +413,7 @@ You can use the $%SYSDATE$ placeholder as the default value of a date parameter 
 
 **Change Parameters**
 
-To change a defined value, use the method  **Change parameter** at the query object:
+To change a defined value, use the method  ![Change parameter](../../.gitbook/assets/icons/change-parameter.png) **Change parameter** at the query object:
 
 In a query, any number of parameters can be defined.
 

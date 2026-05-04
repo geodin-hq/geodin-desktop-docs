@@ -10,7 +10,7 @@ This chapter describes the configuration and the technical background of the col
 
 ### Configuration
 
-For the configuration of ground types the method **"Edit configuration"** is available at the node  **"System configuration"** in the System tab of the GeoDin object manager:
+For the configuration of ground types the method **"Edit configuration"** is available at the node  ![System configuration](../.gitbook/assets/icons/system-configuration.png) **"System configuration"** in the System tab of the GeoDin object manager:
 
 _**Tip:**_ _The method is only available, if the following conditions are fullfilled:_
 

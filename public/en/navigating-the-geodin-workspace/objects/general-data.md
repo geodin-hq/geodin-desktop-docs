@@ -34,7 +34,7 @@ Measurement points
 
 ### Create object
 
-A new object can be accessed when _**Object**_,  _**All objects**_ or the particular **object type** (in the example "General borehole log") is selected in the GeoDin object manager.
+A new object can be accessed when _**Object**_,  ![All objects](../../.gitbook/assets/icons/all-objects.png) _**All objects**_ or the particular **object type** (in the example "General borehole log") is selected in the GeoDin object manager.
 
 GeoDin Demo Project
 
@@ -44,7 +44,7 @@ All objects
 
 General borehole log
 
-Create a new object with a double-click the method  **New object**:
+Create a new object with a double-click the method  ![New object](../../.gitbook/assets/icons/new-object.png) **New object**:
 
 If the method was selected whilst either _**Object**_ or _**All objects**_ were selected, a dialogue field appears containing the option to choose, which type of object should be created.
 
@@ -68,7 +68,7 @@ If you mistakenly create a new object you can undo this by clicking the **Cancel
 
 After a warning you may then delete the object by clicking on **OK**.
 
-Normally however you will want to continue in the  **"data management"** mask using one of the five editors: General data, Layer data, Sample data, Well design and Data sequences. Detailed information is available in the following chapters.
+Normally however you will want to continue in the  ![Data management](../../.gitbook/assets/icons/data-management.png) **"data management"** mask using one of the five editors: General data, Layer data, Sample data, Well design and Data sequences. Detailed information is available in the following chapters.
 
 Once you are in the data management mask, there is no need to change over to the GeoDin object manager in order to create another objects. Instead just click the button **New object**. This may be repeated as often as you like.
 
@@ -112,7 +112,7 @@ Creates a new object without leaving the Data management method (see also: [Crea
 
 In the data entry grid each object is shown as one line. By clicking this icon, you are taken to the general data input masks for the object selected in the current line.
 
-&#x20;**Create object group**
+&#x20;![Create object group](../../.gitbook/assets/icons/create-object-group.png) **Create object group**
 
 The data records of the GeoDin objects can be filtered in the general data grid. Not all objects of the underlying query or group will then be displayed as rows. Using the Create Object Group function, these filtered GeoDin objects can be combined into a new group in the Object Manager.
 
@@ -139,11 +139,11 @@ A dialogue with the current keyboard short cuts is displayed. Many functions of 
 
 The help option is started.
 
-&#x20;**Page layout** (direct link to the graphic preview)\
+&#x20;![Page layout](../../.gitbook/assets/icons/page-layout.png) **Page layout** (direct link to the graphic preview)\
 \
 This function saves any changes made in the [Data management](data-management.md) method and opens the graphic preview for the current object. Hence using this preview method you always view the actual status of the database.
 
-&#x20;**Manage documents**
+&#x20;![Documents](../../.gitbook/assets/icons/documents-2.png) **Manage documents**
 
 The **Document management** for the current object is started. If you edit a sample or a groundwater measurement point the document branch for this measurement is opened.
 
@@ -177,7 +177,7 @@ A short explanation to each entry box is shown in the status bar. For several in
 
 The following special icons are available for the input of the general data:
 
-&#x20;**Select input form**
+&#x20;![Select input form](../../.gitbook/assets/icons/select-input-form.png) **Select input form**
 
 For the input of the data different masks can in some cases be used. The selection of (another) input form is done with this icon.
 
@@ -192,7 +192,7 @@ Depending upon the object type there will be a ceratin number of obligatory entr
 
 Dictionary fields such as _Field log, Summary log, Data security_ and _Checked by_ in the BS 5930 object typeare user-definable i.e. you can customize the dictionaries linked to each field. For example, if always the same persons check the data their names can be stored in the relevant dictionary and can be subsequently chosen from the pull-down menu to quicken data collection.
 
-&#x20;**Input control**
+&#x20;![Input control](../../.gitbook/assets/icons/input-control.png) **Input control**
 
 When entering data in an input field it is tested automatically for correctness of its content (e.g. invalid code or number).
 
@@ -204,7 +204,7 @@ _\[Check after entering separator]_ - activates the feature when a separator is 
 
 The second option results in the data enter being first checked when a comma, bracket or other separator has been entered and the next field selected. The default setting is "off" for this feature so that when typing several letters an error may be shown before one has completed the data entry. Once data entry is finished it will however be clear whether errors have been made. This feature does basic checks on data entry and is fully supported in the table grid view.
 
-&#x20;**Map preview**
+&#x20;![Map preview](../../.gitbook/assets/icons/map-preview.png) **Map preview**
 
 This icon shows an object plotted as a red cross (x) on a OpenStreetMaps background. You must have an internet connection to display the OSM map. In the edit modus you can move the position of the cross. There are two options available by clicking the three bar icon in the top left corner of the map:\
 \
@@ -234,7 +234,7 @@ _**Note:**_ _The input fields always refer to the x-coordinate, y-coordinate and
 
 The edit fields also update when the object is moved on the map.
 
-&#x20;**Coordinate transformation**
+&#x20;![Coordinate transformation](../../.gitbook/assets/icons/coordinate-transformation.png) **Coordinate transformation**
 
 The tool for the coordinate transformation can be used by clicking on the crosshair symbol in the general data editor.
 
@@ -242,7 +242,7 @@ The tool uses the coordinates and the coordinate system of the current object fo
 
 To calculate the coordinates, click on the **Calculate** button. After converting the coordinates, the **OK** button becomes active and the newly calculated values can be transferred to the object.
 
-&#x20;**Export master data**
+&#x20;![Export master data](../../.gitbook/assets/icons/export-master-data.png) **Export master data**
 
 In the table/grid view of the master data, the \<Export> button is also available in the upper toolbar. This allows you to export the table to Excel in the form in which it is displayed.
 
@@ -269,7 +269,7 @@ To create a copy of an existing object including some or all of its data, right-
 
 A dialog appears with options to include:
 
-* **Layer data** — geological layers and borehole log data
+* !['Layer data\'](../../.gitbook/assets/icons/layer-data.png) **Layer data** — geological layers and borehole log data
 * **Sample data** — sample intervals and associated data
 * **Well design data** — casing, backfill, and filter information
 * **Documents** — linked or embedded document files
@@ -289,13 +289,13 @@ Depths are entered in m below ground.
 
 The following special icons are available for the input of sample data:
 
-&#x20;**\<First row> -** Moves to first data record
+&#x20;![First](../../.gitbook/assets/icons/first.png) **\<First row> -** Moves to first data record
 
 \
 &#xNAN;**\<Previous row> -** Moves to previous data record
 
 \
-&#x20;**\<Next row> -** Moves to next data record\
+&#x20;![Next](../../.gitbook/assets/icons/next.png) **\<Next row> -** Moves to next data record\
 \
 &#xNAN;**\<Last row> -** Moves to last data record
 
@@ -345,7 +345,7 @@ When entering information on backfill, casing and special features, codes (abbre
 
 Well design information is divided into the following groups (shown as individual editors in the GUI):
 
-&#x20;**Borehole information, drilling method and tools**
+&#x20;![Borehole information, drilling method and tools](../../.gitbook/assets/icons/borehole-information-drilling-method-and-tools.png) **Borehole information, drilling method and tools**
 
 This table is used to collect information on drilling progress, including the drilling method and the tools used.
 
@@ -359,7 +359,7 @@ The following fields are mandatory:
 
 This information is used for the graphical presentation of the borehole true to scale. The optional entries for drilling methods and tools can be chosen using the key combinations **Shift down-arrow** and **Shift up-arrow**.
 
-&#x20;**Backfill information**
+&#x20;![Backfill information](../../.gitbook/assets/icons/backfill-information.png) **Backfill information**
 
 Backfill information is also entered in a table, whereby the following fields are mandatory:
 
@@ -371,7 +371,7 @@ The type of material is entered using easy to remember abbreviations. This can b
 \
 The automatic entries in the Material field can be overwritten and will be used in the graphical presentation of the backfill. Additional information on the grain size (from - to) can be optionally entered in two fields. This will also be displayed graphically.
 
-&#x20;**Casing information**
+&#x20;![Casing information](../../.gitbook/assets/icons/casing-information.png) **Casing information**
 
 This table is used for entering the individual components of the monitoring well such as filters and end caps etc. If such a well has several piezometers, each one will have a separate entry table. The tables are created as index cards and can be accessed by clicking on the tabs at the lower window boundary. You can also use the key combination **Ctrl+digit**. Each piezometer is numbered successively, up to a maximum of nine per object.
 
@@ -388,23 +388,23 @@ The depth and diameter information are used for the true scale graphical present
 
 In the field _"casing material"_ further information can be entered. This can be chosen from a list and will be used in combination with _"the type of casing"_ for labeling the well design graphic. This is an optional field as is the element thickness (Thk.).
 
-&#x20;**Filter details**
+&#x20;![Filter details](../../.gitbook/assets/icons/filter-details.png) **Filter details**
 
 After entering an element of the type **"Filter"** the data entry mask can be used for collecting further details on the groundwater monitoring well.
 
 This entry mask is available via the casing table when the cursor is in an entry row where there is a filter element. None of the mask entries are compulsory - the information is evaluated using the measurement editor. If there are more than one set of casing then you can move between them using the "up arrow" and "down arrow" buttons.
 
-&#x20;**Information on special features**
+&#x20;![Information on special features](../../.gitbook/assets/icons/information-on-special-features.png) **Information on special features**
 
 Here special features can be recorded that cannot be attributed to individual casing elements, for example concrete rings, hydrant covers etc. With these elements complicated well housing features for multiple piezometer installations above and below the ground surface can be constructed. All these elements are drawn centred on the borehole.
 
 Special features are also entered using codes that are either entered in the **Type** field or chosen from the list. The field **Feature type** is automatically filled out with plain text upon entry of a Type code - this text can be over-written, changed etc. and is used for well design labelling.
 
-&#x20;**Additional information**
+&#x20;![Additional information](../../.gitbook/assets/icons/additional-information.png) **Additional information**
 
 General data for a groundwater monitoring well can be entered in this mask.
 
-&#x20;**Copy well-design data from another object**
+&#x20;![Copy well-design data from another object](../../.gitbook/assets/icons/copy-well-design-data-from-another-object.png) **Copy well-design data from another object**
 
 This feature allows you to copy well design data from another object.
 
@@ -436,7 +436,7 @@ The second option results in the data enter being first checked when a comma, br
 
 To import files in the SEP format first create a new GeoDin project or open an existing GeoDin project, into which you want to import the data.
 
-Select the method  **"SEP import"** at the entry object.
+Select the method  ![SEP import](../../.gitbook/assets/icons/sep-import.png) **"SEP import"** at the entry object.
 
 Choose the source of your SEP files. For this you have 3 options:
 
@@ -571,12 +571,12 @@ The following special icons are available for the input of the layer data:
 **Last layer** - scrolls to the last layer (not in full-text mode)
 
 \
-&#x20;**Insert layer** - inserts a new layer
+&#x20;![Insert](../../.gitbook/assets/icons/insert.png) **Insert layer** - inserts a new layer
 
 **Duplicate layer** - duplicates the current layer
 
 \
-&#x20;**Delete layer** - deletes the current layer
+&#x20;![Delete](../../.gitbook/assets/icons/delete.png) **Delete layer** - deletes the current layer
 
 \
 **Input control** - syntax control
@@ -591,7 +591,7 @@ _\[Check after entering separator]_ - activates the feature when a separator is 
 
 The second option results in the data enter being first checked when a comma, bracket or other separator has been entered and the next field selected. The default setting is "off" for this feature so that when typing several letters an error may be shown before one has completed the data entry. Once data entry is finished it will however be clear whether errors have been made. This feature does basic checks on data entry and is fully supported in the table grid view. Complex checks on interdependencies and key code transitions are not covered.
 
-&#x20;**Borehole profile preview and translation of codes to text**
+&#x20;![Borehole profile preview and translation of codes to text](../../.gitbook/assets/icons/borehole-profile-preview-and-translation-of-codes-to-text.png) **Borehole profile preview and translation of codes to text**
 
 Both the graphic preview of the borehole and the text description are displayed beneath the data entry mask and are permanently updated during layer data input. You can navigate in this preview by using the scroll bars, a mouse wheel or an equivalent touch gesture (on mice or track pads). By clicking on a layer you can directly go to the data entry mask at the chosen depth.
 
@@ -625,7 +625,7 @@ Data sequence information is collected with the data sequence editor.
 
 All types of data sequences can be entered: CPTs, SPTs, chemical profiles, geophysical logs, etc. Depth values are entered in m below ground surface and the measurement values may have any number of decimal places, or just text.
 
-The data sequence list shows all the data sequences that belong to the object. New data sequences are created by clicking the  **New** button upon which it must be given a name.
+The data sequence list shows all the data sequences that belong to the object. New data sequences are created by clicking the  ![New](../../.gitbook/assets/icons/new.png) **New** button upon which it must be given a name.
 
 Confirming with **OK** an empty table is added and data entry can begin.
 
@@ -937,7 +937,7 @@ As a data source the following formats can be used:
 
 · Shape- files (\*.SHP)
 
-Navigate to the import file via the  **Open** button and select it.
+Navigate to the import file via the  ![Open](../../.gitbook/assets/icons/open.png) **Open** button and select it.
 
 If the file can contain several tables, e.g. MS Excel or MS Access, please select the desired table via the drop-down box below.
 
