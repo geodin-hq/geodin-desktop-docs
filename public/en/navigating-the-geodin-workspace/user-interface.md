@@ -99,3 +99,50 @@ For detailed information about each section, see:
 - [Sample Data](objects/sample-data.md)
 - [Well Design Data](objects/well-design-data.md)
 - [Measurement Values](measurement-values/working-with-measurement-data.md)
+
+---
+
+## Working with methods
+
+All available methods for the selected object(s) appear on the right-hand side of the object manager under **Methods**. To run a method, double-click its icon. Because many methods apply to either a single object or several selected objects, it is important to select the right objects before starting a method.
+
+**Example.** The method **Measurement data** is available for a single measurement point as well as for a group or query. With just one measurement point selected, only data for this point is loaded into the measurement data editor. If a group of measurement points (for example, a query) is selected, all the measurement data for the selected points is loaded.
+
+There are two main types of methods:
+
+### Discrete methods
+
+A discrete method must be completed before further operations in the object manager are carried out, or another method is started. For example, when the method **Delete project** is chosen, the new window dialog allows the choice between carrying out the delete action or cancelling. While this window is open, you cannot choose another method nor select another object.
+
+### Parallel methods
+
+Parallel methods remain active until they are ended by closing the method window. When a parallel method is active, you can select and start other methods in the object manager. Parallel methods retain their direct connection to the object manager and react to changes in object selection. An example is **Data management**: choose an object, double-click the method symbol, and the object is loaded in the editor for editing general data, borehole logs, and so on. If another object is chosen, it is automatically opened for editing — the editor does not have to be closed first.
+
+An unlimited number of parallel methods may be used concurrently. This means you can edit borehole data and its graphical presentation simultaneously.
+
+### Selection-bound methods
+
+Some methods take a selection from the object manager on startup and then keep that selection even if you click elsewhere in the tree. The **Cross-section assistant** is the typical example: the initial boreholes shown in the assistant are those selected as a group when the method started. You can expand the selection from inside the method using the **Add** button or by dragging further objects into the method's window.
+
+### Methods without a selection
+
+A handful of methods can be started directly from the task bar at the bottom of the object manager, without first selecting anything in the tree. **GeoDin-Graph** (the CAD module for creating drawings independent of any database object) is one example — you do not need any object selected to launch it.
+
+### Switching between active methods
+
+Switching between active methods is done by clicking the method's symbol in the **Active Methods** toolbar. The method currently in use is highlighted by a blue frame.
+
+| Shortcut | Action |
+|---|---|
+| **F8** | Switch to the method on the right |
+| **Ctrl+F8** | Switch to the method on the left |
+| **F9** | Maximize or minimize the object manager's Objects and Methods windows |
+| **Ctrl+F9** | Maximize or minimize both at once |
+
+On the right side of each method symbol, a small switch closes the method — even when the method is in the background. The **Close all methods** switch on the right side of the **Active Methods** toolbar closes every active method in one step.
+
+{% hint style="info" %}
+It is not necessary to shut down all methods before closing GeoDin. Selecting **File → Exit** (or **Alt+F4**) closes all active methods automatically; if any have unsaved changes, a save dialog appears first.
+{% endhint %}
+
+All methods available for a selected object are also available as a popup menu via right-click on the tree entry — the methods window does not need to be maximized to start a method.

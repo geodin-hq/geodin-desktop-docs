@@ -1,12 +1,11 @@
 # Table of contents
 
-* [Introduction](README.md)
-
 ## Getting Started
 
-* [Getting Started](documentation/getting-started.md)
-* [User Interface](navigating-the-geodin-workspace/user-interface.md)
-* [Data Types](navigating-the-geodin-workspace/data-types.md)
+* [Introduction](README.md)
+* [Install & activate](documentation/install-and-activate.md)
+* [The GeoDin user interface](navigating-the-geodin-workspace/user-interface.md)
+* [First steps](documentation/first-steps.md)
 
 ## Concepts
 
@@ -15,6 +14,7 @@
 * [Sample and Specimen Model](navigating-the-geodin-workspace/concepts/sample-and-specimen-model.md)
 * [Object Types](navigating-the-geodin-workspace/concepts/object-types.md)
 * [Dictionaries](navigating-the-geodin-workspace/concepts/dictionaries.md)
+* [Data Types](navigating-the-geodin-workspace/data-types.md)
 
 ## Installation & Licensing
 
