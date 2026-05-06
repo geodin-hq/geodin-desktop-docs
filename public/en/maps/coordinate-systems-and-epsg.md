@@ -43,12 +43,4 @@ The transformation defaults to the last coordinate system used. If you perform t
 
 <!-- src: transcript/2026-04-15-in-person-workshop -->
 
-## Map View & Coordinate Picking
-
-Once coordinates and a coordinate system are entered, a borehole can be displayed on a map via the map preview button in the right-hand ribbon. <!-- src: transcript/maps-gis-integration#map-view-coordinate-picking -->
-
-The map view supports picking coordinates by clicking: the `Draw` tool lets users click on the map to capture local easting/northing values back into the coordinate fields. <!-- src: transcript/maps-gis-integration#map-view-coordinate-picking -->
-
-Coordinate picking on the map is useful for establishing tentative borehole locations before precise survey data is available. <!-- src: transcript/maps-gis-integration#map-view-coordinate-picking -->
-
-The cross-section method includes a top-down map view for spatially selecting boreholes via drag-rectangle selection. <!-- src: transcript/maps-gis-integration#map-view-coordinate-picking -->
+For displaying boreholes on a map and picking coordinates by clicking, see [Map View and Coordinate Picking](map-view-coordinate-picking.md).

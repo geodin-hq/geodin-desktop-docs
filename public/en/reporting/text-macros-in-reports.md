@@ -1,79 +1,62 @@
 ---
-description: Text Macros in Reports
+description: Text macro syntax, dynamic fields, conditional separators, and translation support in GeoDin reports
 ---
-
-<!--
-**Content status:** Auto-assembled from product documentation
-**Source quality:** B (Moderate (single source type))
-**Needs:** editorial review
--->
 
 # Text Macros in Reports
 
-## Borehole Log Reports
+Text macros are GeoDin's mechanism for pulling live database values into reports. They appear in headers, footers, variable text elements, report column headings, and labels inside borehole log elements. This page covers macro syntax and the practical patterns that come up when building report templates.
 
-Templates and layouts drive the primary report output: borehole logs, CPT traces, multi-borehole comparison layouts. <!-- src: transcript/reporting-exports#borehole-log-reports -->
+For the broader template structure (layouts, snippets, report elements), see [Report Templates](report-templates.md). For borehole-log-specific layouts and cross-section layouts, see [Borehole Log Reports](borehole-log-reports.md) and [Cross-Section Reports](cross-section-reports.md).
 
-Template output can combine borehole description text, layer fill patterns, water levels, borehole design diagrams, data-sequence plots, test result tables, static labels, and dynamic macros. <!-- src: transcript/reporting-exports#borehole-log-reports -->
+## Static text vs. dynamic macros
 
-Borehole element drawing types include Graphic Log, Tabular Log, and Log with Default. <!-- src: transcript/reporting-exports#borehole-log-reports -->
+- **Static text** — placed anywhere on a template; the same text prints on every output.
+- **Dynamic macros** — placed inside an object frame, reference a GeoDin parameter and resolve at render time. For example, the `location_name` macro pulls the current borehole name dynamically.
 
-Borehole element can be resized; a red outline indicates insufficient space for the description text. <!-- src: transcript/reporting-exports#borehole-log-reports -->
+## Macro syntax
 
-Borehole scale can be set to fixed ratios (e.g., 1:100, 1:200), to a fixed depth interval (e.g., only show first 10 m), or to "Fit to Page" (dynamic scale per object). <!-- src: transcript/reporting-exports#borehole-log-reports -->
+Macros are delimited with `$` on both sides:
 
-A depth interval setting can force a page break — set end depth to 10 m and the borehole continues on page 2. <!-- src: transcript/reporting-exports#borehole-log-reports -->
+- `$LONGNAME$` — long location name
+- `$%PRNPAGE$` — page print number
+- `$ZCOORDE$` — Z coordinate (elevation)
 
-Scale, interval, page break, and fit-to-page settings interact and must be balanced together. <!-- src: transcript/reporting-exports#borehole-log-reports -->
+Macros can reference parameters from any table — general data, sample tables, measurement tables, and data sequences.
 
-Each borehole with measurement data is marked with a small blue sphere icon next to it in the tree view. <!-- src: transcript/reporting-exports#borehole-log-reports -->
+### Concatenation
 
-## Cross-Section Reports
+Multiple parameters can be concatenated into a single string. Example:
 
-Cross-section creation workflow runs under the All Objects branch → Cross Section method. <!-- src: transcript/reporting-exports#cross-section-reports -->
+```
+Sample $sample_reference$ penetration from $depth_from$ to $depth_to$ meters
+```
 
-Step 1: select objects from the map view (drag-rectangle to select, Remove/Add from list). <!-- src: transcript/reporting-exports#cross-section-reports -->
+### Conditional separators
 
-Step 2: draw a line of section by clicking two points, OR click each borehole sequentially for a polyline. <!-- src: transcript/reporting-exports#cross-section-reports -->
+Square brackets `[ ]` inside a macro act as conditional separators: the bracketed content is only rendered if the macro inside has a value. This avoids stray commas and orphan punctuation when fields are empty.
 
-Step 3: option to "project boreholes perpendicular to line of section" (single button) moves boreholes onto the line. <!-- src: transcript/reporting-exports#cross-section-reports -->
+### Calculated parameters
 
-Step 4: Scales and Positions — set horizontal/vertical scale; GeoDin auto-picks paper size (A0/A1/A2/A3) to fit, or user can override via Page Layout. <!-- src: transcript/reporting-exports#cross-section-reports -->
+The Build dialog can include calculated parameters — for example, layer thickness derived from top and base depths — alongside raw database fields.
 
-Step 5: Cross-Section Scenarios — add graphic elements (borehole log, borehole name, depth scale left/right, samples, data sequence, measurement element, horizontal scale, distance ruler, coordinates, waypoints). <!-- src: transcript/reporting-exports#cross-section-reports -->
+<!-- src: transcript/reporting-exports#text-macros-dynamic-fields -->
 
-Cross-section depth scale divisions are configurable (e.g., 1 m → 5 m main division). <!-- src: transcript/reporting-exports#cross-section-reports -->
+## Display options
 
-Cross-sections can be saved as GLO (template, no data) or GGF (with connected data). <!-- src: transcript/reporting-exports#cross-section-reports -->
+When configuring a text-macro element you can choose:
 
-GGF cross-sections are stored as graphic files and can be reopened later with their data intact. <!-- src: transcript/reporting-exports#cross-section-reports -->
+- **Show depth** — include the depth value of the referenced row.
+- **Show layer data** — include layer attributes alongside the macro.
+- **Orientation** — text orientation on the page.
 
-Cross-sections can be stored in the project's Documents area: New Folder → New Document → choose GGF file → save in database OR link to external file. <!-- src: transcript/reporting-exports#cross-section-reports -->
+The **coding / norm / user** setting controls which descriptor source feeds the macro. For G1 these are mostly equivalent; the **user** option allows arbitrary plain text mixed with macros.
 
-Cross-section workflow supports both automatic perpendicular projection AND manual per-borehole placement. <!-- src: transcript/reporting-exports#cross-section-reports -->
+For G1 ground description specifically, most descriptive content sits inside the single `geological description` macro — unlike other object types which split the description across separate petrography and colour macros.
 
-## Text Macros & Dynamic Fields
+## Translation support
 
-Static text fields can be placed anywhere on a template (fixed label text). <!-- src: transcript/reporting-exports#text-macros-dynamic-fields -->
+A single layout can hold multiple translations. Switching the file language under `File > Language` prints the same template in different languages without modification.
 
-Dynamic text fields (macros) placed inside the object frame reference GeoDin parameters — e.g., `location_name` macro pulls the current borehole name dynamically. <!-- src: transcript/reporting-exports#text-macros-dynamic-fields -->
+## Querying for macro data sources
 
-Macros use `$parameter$` syntax (begin and end with `$`). <!-- src: transcript/reporting-exports#text-macros-dynamic-fields -->
-
-Macros can concatenate multiple parameters into one string, e.g., "Sample [sample_reference] penetration from X to Y meters". <!-- src: transcript/reporting-exports#text-macros-dynamic-fields -->
-
-Macros can reference parameters from any table — general data, sample table, measurement tables, data sequences. <!-- src: transcript/reporting-exports#text-macros-dynamic-fields -->
-
-Text macro build supports calculated parameters (e.g., layer thickness). <!-- src: transcript/reporting-exports#text-macros-dynamic-fields -->
-
-Brackets in text macros `[, ]` act as conditional separators — the bracketed separator is only rendered if the macro inside has a value (avoids stray commas). <!-- src: transcript/reporting-exports#text-macros-dynamic-fields -->
-
-Text macro options: show depth, show layer data, orientation. <!-- src: transcript/reporting-exports#text-macros-dynamic-fields -->
-
-Text macro "coding/norm/user" options: for G1 these are mostly equivalent; "user" allows custom plain text + macros. <!-- src: transcript/reporting-exports#text-macros-dynamic-fields -->
-
-Translation support in text macros: a layout can hold multiple translations; switching the file language in the File menu prints the same template in different languages. <!-- src: transcript/reporting-exports#text-macros-dynamic-fields -->
-
-For G1 ground description, most info sits inside the single "geological description" macro (unlike other object types which have separate petrography, color macros). <!-- src: transcript/reporting-exports#text-macros-dynamic-fields -->
-
-Queries: users can build SQL queries joining tables across different tests (e.g., "show water content only where unit weight is non-zero") and use query results as a data source in templates. <!-- src: transcript/reporting-exports#text-macros-dynamic-fields -->
+Text macros can pull from query results, not just direct table fields. Build a SQL query that joins tables across different tests — for example, "show water content only where unit weight is non-zero" — and use the query result as the data source for a template element.

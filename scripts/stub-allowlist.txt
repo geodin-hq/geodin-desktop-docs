@@ -1,0 +1,9 @@
+# Pages allowed to be under MIN_LINES of content. One path per line.
+# Use only for pages where shortness is intentional (focused topic, link-only landing).
+# Do NOT add empty 1-line files here — those should be deleted or filled.
+
+# Short focused pages with valid content
+public/en/user-management/database-visibility.md
+public/en/user-management/data-privacy-and-ownership.md
+public/en/user-management/groups-and-permissions.md
+public/en/maps/map-view-coordinate-picking.md

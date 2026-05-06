@@ -1,51 +1,39 @@
 ---
-description: Multi User Collaboration
+description: How multiple users — and multiple companies — collaborate on a shared GeoDin database
 ---
 
-<!--
-**Content status:** Auto-assembled from product documentation
-**Source quality:** B (Moderate (single source type))
-**Needs:** editorial review
--->
+# Multi-User Collaboration
 
-# Multi User Collaboration
+GeoDin databases support concurrent multi-user editing, both inside a single team and across companies in a consortium. This page covers shared-database mechanics, conflict behaviour, and what is shared via the syslib in each install topology.
 
-## Built-in User Management System
+For user accounts and the optional built-in user management system, see [Users and Roles](users-and-roles.md). For database-level access control, see [Database Visibility](database-visibility.md).
 
-GeoDin includes a built-in user management system that is optional — most customers do not use it. <!-- src: transcript/user-management-permissions#built-in-user-management-system -->
+## Sharing a database
 
-Users are created with a name and a login credential tied to the Windows login used at laptop startup. <!-- src: transcript/user-management-permissions#built-in-user-management-system -->
+Databases can be shared via network folders (Microsoft Teams folders, network drives, etc.) for concurrent multi-user access. Any user with a working GeoDin license within a team can connect to a shared database and work with it.
 
-Primarily used by organizations with strict access requirements (e.g., public authorities with ~20 users). <!-- src: transcript/user-management-permissions#built-in-user-management-system -->
+## Concurrent editing behaviour
 
-GeoDin Onsite has no user accounts or authentication — it is a single-user desktop/tablet application. User name and computer name are captured only in each form's `history` section for audit purposes. <!-- src: transcript/user-management-permissions#built-in-user-management-system -->
+- **SQL Server (client-server):** latency is low; concurrent editing rarely causes issues unless two users edit the exact same field at the same time.
+- **Microsoft Access:** latency is slightly higher than SQL Server, but concurrent editing on different boreholes — or different fields of the same borehole — causes no issues in practice.
 
-## Multi-User Collaboration on Shared Databases
+**Conflict scenario to watch for:** if one user deletes a sample while another user is entering measurement data for that sample, a conflict occurs. Coordinate destructive operations (deletes) when multiple users are active.
 
-Multiple users can collaborate on the same database simultaneously. <!-- src: transcript/user-management-permissions#multi-user-collaboration-on-shared-databases -->
+## What is shared, and what is not
 
-Databases can be shared via network folders (e.g., Microsoft Teams folders, network drives) for concurrent multi-user access. <!-- src: transcript/user-management-permissions#multi-user-collaboration-on-shared-databases -->
+Templates, calculations, and data stored **in the database** are shareable across teams — a template created by one user is visible to colleagues with database access. Proprietary calculation formulas can be stored in the database and stay scoped to the client's team; GeoDin staff have no access to client formulas or data.
 
-Any user with a working GeoDin license within a team can access a shared database and work with it. <!-- src: transcript/user-management-permissions#multi-user-collaboration-on-shared-databases -->
+**Syslib content** (dictionaries, custom data types, layouts, filters such as `Sony_Filter.sys`) behaves differently depending on install topology:
 
-With client-server (SQL Server) databases, latency is low and concurrent editing generally causes no issues unless two users edit the exact same field at the same time. <!-- src: transcript/user-management-permissions#multi-user-collaboration-on-shared-databases -->
+- **Central / network installation** — all users share the same `syslib`; custom content is automatically common.
+- **Per-machine installation** — each user has their own copy. Sharing custom dictionaries, filters, or custom data types between users requires manual file copying.
 
-With Microsoft Access databases, latency is slightly higher than client-server, but concurrent editing on different boreholes or different fields of the same borehole causes no issues. <!-- src: transcript/user-management-permissions#multi-user-collaboration-on-shared-databases -->
+<!-- src: transcript/user-management-permissions#multi-user-collaboration-on-shared-databases -->
 
-Conflict scenario: if one user deletes a sample while another user is entering measurement data for that sample, a conflict will occur. <!-- src: transcript/user-management-permissions#multi-user-collaboration-on-shared-databases -->
+## Multi-company / consortium collaboration
 
-Templates, calculations, and data stored in the database are shareable across teams — a template created by one user is visible to colleagues with database access. <!-- src: transcript/user-management-permissions#multi-user-collaboration-on-shared-databases -->
+A single shared database can host **multi-company collaboration**. The model has been demonstrated at scale on a national power transmission project across a 5-company consortium — ~700 km of alignment and 3,600+ boreholes, all sharing and collaborating on data within one platform.
 
-In central (network) GeoDin installations, all users share the same `syslib`, dictionaries, custom data types, layouts, and configuration. <!-- src: transcript/user-management-permissions#multi-user-collaboration-on-shared-databases -->
+In consortium scenarios, all member companies can manage, analyse, and export data from the shared database according to the access controls configured at the database and method level.
 
-In per-machine installations, each user has their own copy of these folders; sharing custom dictionaries, filters (e.g., `Sony_Filter.sys`), or custom data types between users requires manual file copying. <!-- src: transcript/user-management-permissions#multi-user-collaboration-on-shared-databases -->
-
-Proprietary calculation formulas can be stored in the database and shared only within the client's team; GeoDin staff do not have access to client formulas or data. <!-- src: transcript/user-management-permissions#multi-user-collaboration-on-shared-databases -->
-
-## Multi-Company / Consortium Collaboration
-
-GeoDin supports multi-company collaboration on a single shared database. <!-- src: transcript/user-management-permissions#multi-company-consortium-collaboration -->
-
-Demonstrated at scale on a national power transmission project across a 5-company consortium, ~700 km of alignment and 3,600+ boreholes, all sharing and collaborating on data within one platform. <!-- src: transcript/user-management-permissions#multi-company-consortium-collaboration -->
-
-In consortium scenarios, all member companies can manage, analyze, and export data as needed from the shared database. <!-- src: transcript/user-management-permissions#multi-company-consortium-collaboration -->
+<!-- src: transcript/user-management-permissions#multi-company-consortium-collaboration -->

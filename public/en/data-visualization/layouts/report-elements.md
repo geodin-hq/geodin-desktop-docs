@@ -1,70 +1,14 @@
 ---
-description: Report Elements
+description: How to use the Report Element to produce tabular output and Excel exports across multiple objects
 ---
-
-<!--
-**Content status:** Auto-assembled from product documentation
-**Source quality:** B (Moderate (single source type))
-**Needs:** editorial review
--->
 
 # Report Elements
 
-## Borehole Elements
+The **Report Element** is the layout component for tabular output: general data, layer data, samples, and measurement data, displayed inside a layout as a configurable table. Combined with a **Multi-Object Frame**, it is also GeoDin's most practical path for exporting tabular data across many objects at once.
 
-**Borehole element** drawing type options: Graphic Log, Tabular Log, Log with Default. <!-- src: transcript/forms-templates-customization#borehole-elements -->
+For the related layout components (borehole graphic logs, depth scales, samples, groundwater, well design), see [Borehole Elements](borehole-elements.md). For the broader template structure, see [Report Templates](../../reporting/report-templates.md).
 
-Borehole element can be resized; a red outline indicates insufficient space for the description text. <!-- src: transcript/forms-templates-customization#borehole-elements -->
-
-Borehole scale can be set to 1:100, 1:200, etc.; or to a fixed depth interval (e.g., only show first 10 m); or "Fit to Page" (dynamic scale per object). <!-- src: transcript/forms-templates-customization#borehole-elements -->
-
-Depth interval can force a page break — setting end depth to 10 m causes the borehole to continue on page 2. <!-- src: transcript/forms-templates-customization#borehole-elements -->
-
-Scale, interval, page break, and fit-to-page interact and must be balanced together. <!-- src: transcript/forms-templates-customization#borehole-elements -->
-
-Borehole text description is driven by Text Macro > Build button. <!-- src: transcript/forms-templates-customization#borehole-elements -->
-
-Text macros for G1 ground description: most information sits inside the single "geological description" macro (unlike other object types which have separate petrography, color macros). <!-- src: transcript/forms-templates-customization#borehole-elements -->
-
-Template layout objects include pre-made borehole logs (with ground description/layer patterns), water level triangle indicators, and borehole design visualizations. <!-- src: transcript/forms-templates-customization#borehole-elements -->
-
-Borehole design display in templates can render the borehole with varying diameters, different casing types, different backfill materials, backfill grain size categories, and special features (concrete rings, piezometer boxes) at the correct depths. <!-- src: transcript/forms-templates-customization#borehole-elements -->
-
-Borehole logs drive the primary report output alongside CPT traces and multi-borehole comparison layouts. <!-- src: transcript/forms-templates-customization#borehole-elements -->
-
-## Depth Scale, Samples & Groundwater Elements
-
-**Depth Scale** element: add from toolbar; can be placed left or right of the borehole. <!-- src: transcript/forms-templates-customization#depth-scale-samples-groundwater-elements -->
-
-**Samples** element: automatically connects to the borehole and moves with it (height sync, no misfit). <!-- src: transcript/forms-templates-customization#depth-scale-samples-groundwater-elements -->
-
-**Groundwater** element: similar behavior; shows nothing if no groundwater data exists in the object. <!-- src: transcript/forms-templates-customization#depth-scale-samples-groundwater-elements -->
-
-**Well Design** element: for casing and filling visualization. <!-- src: transcript/forms-templates-customization#depth-scale-samples-groundwater-elements -->
-
-Water levels can be displayed in templates (e.g., triangle symbol at the water-level depth). <!-- src: transcript/forms-templates-customization#depth-scale-samples-groundwater-elements -->
-
-## Report Elements
-
-**Report element**: table-based element used for tabular output of general, layer, sample, or measurement data. <!-- src: transcript/forms-templates-customization#report-elements -->
-
-Report element data source: choose General Data, Layer Data, Samples > Geotechnical Borehole > specific data type (e.g., CU). <!-- src: transcript/forms-templates-customization#report-elements -->
-
-Report element columns: blue "+" button adds columns; each column has a Text Macro (which parameter to display) and a Heading. <!-- src: transcript/forms-templates-customization#report-elements -->
-
-Report element selectors can exclude rows by parameter conditions (e.g., skip values above/below threshold). <!-- src: transcript/forms-templates-customization#report-elements -->
-
-Report element conditional formatting: Column Properties > Presentation Options > set a condition + color (e.g., "if CU > 50, color row red"). <!-- src: transcript/forms-templates-customization#report-elements -->
-
-Report element can combine multiple report blocks in one layout (e.g., one general-data report and one measurement report side-by-side). <!-- src: transcript/forms-templates-customization#report-elements -->
-
-Report element can be exported directly from edit mode via right-click > Export as Excel or CSV. <!-- src: transcript/forms-templates-customization#report-elements -->
-
-Report element can also be exported from the layout overview without opening edit mode, via the Report Access button (produces an Excel export). <!-- src: transcript/forms-templates-customization#report-elements -->
-
-Report Type options: original data OR calculations (statistics, comparisons); the latter is more advanced. <!-- src: transcript/forms-templates-customization#report-elements -->
-
-## Exporting data to Excel via the Report Element and Multi-Object Frame
+## Exporting tabular data via the Report Element + Multi-Object Frame
 
 The most practical pattern for exporting master data or layer data to Excel from multiple objects at once combines a **Multi-Object Frame** (German: *Mehrfachobjektrahmen*) with a **Report Element**.
 
@@ -85,7 +29,7 @@ This pattern is the recommended way to produce tabular exports of master data or
 
 ## Grouping and custom views in the Stammdaten Grid
 
-The general data grid (Stammdaten Grid) supports dynamic grouping of rows by column values, allowing quick reorganization of objects without creating a new query.
+The general data grid (Stammdaten Grid) supports dynamic grouping of rows by column values, allowing quick reorganisation of objects without creating a new query.
 
 **Enabling the grouping area:**
 
