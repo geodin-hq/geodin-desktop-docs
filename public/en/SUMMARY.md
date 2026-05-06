@@ -198,7 +198,6 @@
 * [Groups and Permissions](user-management/groups-and-permissions.md)
 * [Database Visibility](user-management/database-visibility.md)
 * [Multi-User Collaboration](user-management/multi-user-collaboration.md)
-* [Multi-Company Collaboration](user-management/multi-company-collaboration.md)
 * [Data Privacy and Ownership](user-management/data-privacy-and-ownership.md)
 
 ## Updating & Upgrading
