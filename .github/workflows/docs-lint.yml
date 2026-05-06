@@ -1,0 +1,26 @@
+name: docs-lint
+
+on:
+  pull_request:
+    paths:
+      - 'public/**/*.md'
+      - 'scripts/**'
+      - '.github/workflows/docs-lint.yml'
+  push:
+    branches: [main]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check duplicate src: references
+        # Informational while we clear the existing backlog. Promote to required
+        # by removing `continue-on-error` once Phase 1-3 cleanup PRs land.
+        continue-on-error: true
+        run: bash scripts/check-duplication.sh public
+
+      - name: Check stub pages
+        continue-on-error: true
+        run: bash scripts/check-stubs.sh public
