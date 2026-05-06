@@ -154,7 +154,6 @@
 * [Report Templates](reporting/report-templates.md)
 * [Borehole Log Reports](reporting/borehole-log-reports.md)
 * [Cross Section Reports](reporting/cross-section-reports.md)
-* [Print Preview and Layer Overview](reporting/print-preview-and-layer-overview.md)
 * [Bulk Print and PDF Export](reporting/bulk-print-and-pdf-export.md)
 * [Text Macros in Reports](reporting/text-macros-in-reports.md)
 
