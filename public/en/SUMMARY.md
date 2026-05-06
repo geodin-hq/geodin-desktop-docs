@@ -160,12 +160,10 @@
 ## Exporting Data
 
 * [Overview](data-collection/export.md)
-* [CSV Export](data-collection/export/csv-export.md)
 * [Excel Export](data-collection/export/excel.md)
+* [CSV Export](data-collection/export/csv-export.md)
+* [AGS Export](data-collection/export/ags-export.md)
 * [DXF Export](data-collection/export/dxf-export.md)
-* [AGS Export](data-collection/export/ags.md)
-  * [Exporting AGS Files (G1 Location)](data-collection/export/ags/exporting-ags-files.md)
-* [Leapfrog Export](data-collection/export/leapfrog.md)
 * [GeoDinML Export](data-collection/export/geodinml-export.md)
 
 ## Integrations

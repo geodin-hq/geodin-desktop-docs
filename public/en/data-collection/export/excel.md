@@ -1,53 +1,25 @@
 ---
-description: Excel
+description: Exporting GeoDin data tables to Excel for analysis, sharing, or as import templates
 ---
 
-<!--
-**Content status:** Auto-assembled from product documentation
-**Source quality:** B (Moderate (single source type))
-**Needs:** editorial review
--->
+# Excel Export
 
-# Excel
+GeoDin can export any data table to Excel: general data, sample tables, measurement data tables, and data sequence series. The export preserves column titles via cell formatting, so the resulting workbook is ready to read or to use as a round-trip import template.
 
-## Export Formats (PDF, AGS, DXF, CSV, Excel, GeoDin ML)
+For CSV equivalents, see [CSV Export](csv-export.md). For the import side of the round-trip, see [CSV and Excel Import](../import/csv-and-excel-import.md).
 
-Export commands (red dot + two arrows icon) are available on most tabular views: general data, sample table, measurement data tables, data sequence series. <!-- src: transcript/reporting-exports#export-formats-pdf-ags-dxf-csv-excel-geodin-ml -->
+## Exporting a tabular view
 
-Any data table (general data, samples, measurement data) can be exported to Excel via the red-dot export button — the recommended way to inspect expected headers/structure before preparing an import table. <!-- src: transcript/reporting-exports#export-formats-pdf-ags-dxf-csv-excel-geodin-ml -->
+Export commands sit on most tabular views and are identified by the **red dot with two arrows** icon. The same icon and dialog are used across general data, sample tables, measurement tables, and data sequence series — the workflow is consistent regardless of the data type.
 
-Data sequence series can be re-exported as CSV files — useful when users import, modify, and re-export. <!-- src: transcript/reporting-exports#export-formats-pdf-ags-dxf-csv-excel-geodin-ml -->
+The **All Objects > Data Management > General Data** tabular view shows metadata for all locations at once. Exporting this view produces a single workbook covering every location in the database, useful for project-level reporting or as a starting point for bulk-edit-then-reimport workflows.
 
-The `All Objects > Data Management > General Data` tabular view shows metadata for all locations at once and can be exported to Excel. <!-- src: transcript/reporting-exports#export-formats-pdf-ags-dxf-csv-excel-geodin-ml -->
+## Round-trip with import
 
-**Publish and Export** feature creates a zip file containing an Access database with the selected objects — available at project level and at individual borehole level. <!-- src: transcript/reporting-exports#export-formats-pdf-ags-dxf-csv-excel-geodin-ml -->
+Excel files exported by GeoDin contain headers matching GeoDin's internal parameter names. They can be re-imported via the import wizard's **Automatic Link** mapping with no manual column-mapping step required.
 
-A borehole exported via Publish and Export produces a single-borehole Access database that can be re-imported elsewhere. <!-- src: transcript/reporting-exports#export-formats-pdf-ags-dxf-csv-excel-geodin-ml -->
+Typical workflow:
 
-**AGS export**: AGS 4.0.4 and AGS 4.1 formats supported via Publish and Export → AGS export; user can choose which groups to export, then Execute. <!-- src: transcript/reporting-exports#export-formats-pdf-ags-dxf-csv-excel-geodin-ml -->
-
-**DXF export**: the internal PDF printer can export layouts as DXF files for use in AutoCAD or other CAD software. <!-- src: transcript/reporting-exports#export-formats-pdf-ags-dxf-csv-excel-geodin-ml -->
-
-Internal PDF printer supports vector output (not just raster), preserving quality for CAD/publication. <!-- src: transcript/reporting-exports#export-formats-pdf-ags-dxf-csv-excel-geodin-ml -->
-
-GeoDin Onsite has two export mechanisms: <!-- src: transcript/reporting-exports#export-formats-pdf-ags-dxf-csv-excel-geodin-ml -->
-
-Onsite form export options include `Export to PDF` and `Export GeoDin` (GeoDin ML). <!-- src: transcript/reporting-exports#export-formats-pdf-ags-dxf-csv-excel-geodin-ml -->
-
-Onsite PDF exports contain a "DRAFT" watermark unless the form was produced via `Publish as Complete`; GeoDin ML exports never carry a draft watermark. <!-- src: transcript/reporting-exports#export-formats-pdf-ags-dxf-csv-excel-geodin-ml -->
-
-Onsite default export path is controlled by `Configuration > Folders > Export folder path`; supports shortcut codes like `[my documents]` and `[desktop]`. <!-- src: transcript/reporting-exports#export-formats-pdf-ags-dxf-csv-excel-geodin-ml -->
-
-Onsite exports are always placed in a project-named subfolder inside the configured export path (Onsite auto-creates the subfolder). <!-- src: transcript/reporting-exports#export-formats-pdf-ags-dxf-csv-excel-geodin-ml -->
-
-AGS format is supported as an Onsite output — `Publish as Complete` generates the full deliverable set (GDOF, PDF, GeoDin ML, AGS). <!-- src: transcript/reporting-exports#export-formats-pdf-ags-dxf-csv-excel-geodin-ml -->
-
-When Onsite `Publish as Complete` runs, only the `.GDOF` file stays visible locally as a photocopy; the full deliverable set is placed in the shared delivery folder. <!-- src: transcript/reporting-exports#export-formats-pdf-ags-dxf-csv-excel-geodin-ml -->
-
-## Excel Export as Import Template Source
-
-GeoDin can export any data table (general data, samples, measurement data) to Excel via the red-dot export button — the recommended way to see the expected headers/structure before preparing an import table. <!-- src: transcript/data-import-migration#excel-export-as-import-template-source -->
-
-The tabular "All Objects" view under Data Management shows general data for all locations in a single sortable table — this view can be exported to Excel for template creation. <!-- src: transcript/data-import-migration#excel-export-as-import-template-source -->
-
-Exported Excel files contain headers matching GeoDin's internal parameter names, ready for round-trip re-import. <!-- src: transcript/data-import-migration#excel-export-as-import-template-source -->
+1. Export the relevant data type from GeoDin to Excel (creates a template with correct headers).
+2. Edit or fill the file in Excel.
+3. Re-import using the import wizard.
