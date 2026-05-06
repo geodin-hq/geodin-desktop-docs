@@ -72,19 +72,12 @@
 ## Importing Data
 
 * [Overview](data-collection/import.md)
-* [General Data](data-collection/import/general-data.md)
-* [Sample Data](data-collection/import/sample-data.md)
-* [Data Sequences](data-collection/import/data-sequences.md)
-* [Measurement Data](data-collection/import/measurement-data.md)
+* [Data Sequences (CPT, free-format)](data-collection/import/data-sequences.md)
 * [CSV and Excel Import](data-collection/import/csv-and-excel-import.md)
 * [AGS Import](data-collection/import/ags-import.md)
 * [GeoDinML Import](data-collection/import/geodin-ml-import.md)
-* [CPT Data Sequences](data-collection/import/cpt-data-sequences.md)
 * [Cross-Database Object Copying](data-collection/import/cross-database-object-copying.md)
 * [SEP 3 Exchange Database Import](data-collection/import/sep3-exchange-database.md)
-* [Special Imports](data-collection/import/special-imports.md)
-  * [AGS Special Import](data-collection/import/special-imports/ags.md)
-  * [GeoDinML Special Import](data-collection/import/special-imports/import-geodinml.md)
 
 ## Data Visualization
 
