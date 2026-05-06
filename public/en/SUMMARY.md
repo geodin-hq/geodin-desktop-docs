@@ -72,19 +72,12 @@
 ## Importing Data
 
 * [Overview](data-collection/import.md)
-* [General Data](data-collection/import/general-data.md)
-* [Sample Data](data-collection/import/sample-data.md)
-* [Data Sequences](data-collection/import/data-sequences.md)
-* [Measurement Data](data-collection/import/measurement-data.md)
+* [Data Sequences (CPT, free-format)](data-collection/import/data-sequences.md)
 * [CSV and Excel Import](data-collection/import/csv-and-excel-import.md)
 * [AGS Import](data-collection/import/ags-import.md)
 * [GeoDinML Import](data-collection/import/geodin-ml-import.md)
-* [CPT Data Sequences](data-collection/import/cpt-data-sequences.md)
 * [Cross-Database Object Copying](data-collection/import/cross-database-object-copying.md)
 * [SEP 3 Exchange Database Import](data-collection/import/sep3-exchange-database.md)
-* [Special Imports](data-collection/import/special-imports.md)
-  * [AGS Special Import](data-collection/import/special-imports/ags.md)
-  * [GeoDinML Special Import](data-collection/import/special-imports/import-geodinml.md)
 
 ## Data Visualization
 
@@ -161,19 +154,16 @@
 * [Report Templates](reporting/report-templates.md)
 * [Borehole Log Reports](reporting/borehole-log-reports.md)
 * [Cross Section Reports](reporting/cross-section-reports.md)
-* [Print Preview and Layer Overview](reporting/print-preview-and-layer-overview.md)
 * [Bulk Print and PDF Export](reporting/bulk-print-and-pdf-export.md)
 * [Text Macros in Reports](reporting/text-macros-in-reports.md)
 
 ## Exporting Data
 
 * [Overview](data-collection/export.md)
-* [CSV Export](data-collection/export/csv-export.md)
 * [Excel Export](data-collection/export/excel.md)
+* [CSV Export](data-collection/export/csv-export.md)
+* [AGS Export](data-collection/export/ags-export.md)
 * [DXF Export](data-collection/export/dxf-export.md)
-* [AGS Export](data-collection/export/ags.md)
-  * [Exporting AGS Files (G1 Location)](data-collection/export/ags/exporting-ags-files.md)
-* [Leapfrog Export](data-collection/export/leapfrog.md)
 * [GeoDinML Export](data-collection/export/geodinml-export.md)
 
 ## Integrations
@@ -208,7 +198,6 @@
 * [Groups and Permissions](user-management/groups-and-permissions.md)
 * [Database Visibility](user-management/database-visibility.md)
 * [Multi-User Collaboration](user-management/multi-user-collaboration.md)
-* [Multi-Company Collaboration](user-management/multi-company-collaboration.md)
 * [Data Privacy and Ownership](user-management/data-privacy-and-ownership.md)
 
 ## Updating & Upgrading

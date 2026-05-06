@@ -1,8 +1,10 @@
-# Exporting AGS Files (G1 Location)
+---
+description: Exporting GeoDin G1 Location data as AGS 4.0.4 / 4.1.1 files
+---
 
-## Introduction
+# AGS Export
 
-GeoDin enables you to export AGS files in compliance with the AGS 4.0.4 and AGS 4.1.1 standards. We support AGS exports from the Geotechnical object type _G1 Location_.
+GeoDin enables you to export AGS files in compliance with the AGS 4.0.4 and AGS 4.1.1 standards. AGS exports are available for the Geotechnical object type **G1 Location**, and run through the Publish and Export feature.
 
 ### Supported AGS Groups
 

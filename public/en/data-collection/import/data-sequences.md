@@ -8,6 +8,14 @@ Data sequences (German: *Sondierungen*) cover CPT (cone penetration test) data a
 
 For the data entry grid and manual editing of data sequences, see [Data sequences (editor)](../../navigating-the-geodin-workspace/objects/general-data.md#data-sequences).
 
+## Supported formats
+
+- **Free-format ASCII / CSV** — handled by the generic Data Sequences importer described below. Use this for any depth-indexed text file, including CSV-format CPT data.
+- **GEF** — supported natively for CPT data. GEF is the standard format used in the Netherlands and the UK.
+- **Dedicated ASCII CPT** — a legacy filter built for historic company use. Note that **CSV CPT imports do not go through this filter** — use the generic Data Sequences import for CSV.
+
+<!-- src: transcript/data-import-migration#cpt-data-sequence-import-gef-ascii-custom-filters -->
+
 ## Free-format CPT import
 
 To import a CPT or other data sequence into an existing object:
@@ -37,6 +45,10 @@ The reduce factor controls how many values are imported from dense data series. 
 
 {% hint style="info" %}
 If you leave the reduce factor at 0, GeoDin calculates an automatic factor so that no series exceeds 500 values. Set the factor to 1 to import without any reduction (maximum 10,000 values per series).
+{% endhint %}
+
+{% hint style="warning" %}
+**Column layout constraint** — data columns must sit to the right of the depth column in the source file. The importer reads every column to the right of depth and there is no option to skip or exclude specific columns at import time. To remove unwanted series, delete them after import.
 {% endhint %}
 
 <!-- src: transcript/2026-04-15-in-person-workshop -->
@@ -80,3 +92,9 @@ Filenames must match the object short name exactly (case-sensitive on some syste
 {% endhint %}
 
 <!-- src: transcript/2026-04-15-in-person-workshop -->
+
+## Beyond CPT — custom filters for any depth-indexed data
+
+The Data Sequences importer is not limited to CPT. Build a custom import filter for any depth-indexed series, for example **measurement-while-drilling (MWD)** logs that record penetration speed, tool pressure, injection pressure, torque, and RPM against depth. The filter mechanism is the same as for CPT: define depth column, data start column, delimiters, units, and series names; save it as a named filter for reuse.
+
+Imported data sequence series can also be **re-exported to CSV** — useful when you need to pull a series out of GeoDin, edit it externally, and re-import.

@@ -1,46 +1,33 @@
 ---
-description: Overview of export formats and workflows in GeoDin, including Excel, CSV, AGS, DXF, PDF, and GeoDin ML
+description: Overview of export formats and workflows in GeoDin, including Excel, CSV, AGS, DXF, PDF, and GeoDinML
 ---
-
-<!--
-**Content status:** Polished from product documentation
-**Source quality:** A (Help + Transcripts)
-**Needs:** screenshots, editorial review
--->
 
 # Export
 
-GeoDin provides multiple export formats for different use cases, from quick tabular exports to full project-level data packages. This page covers the available export options for both GeoDin (desktop) and GeoDin Onsite (field).
+GeoDin provides multiple export formats for different use cases, from quick tabular dumps to full project-level data packages. This page is the entry point for the Exporting Data section: it gives a one-line summary of each format and links to the dedicated guide.
 
-## Tabular data exports (Excel and CSV)
+## Choosing a format
 
-Export commands (identified by the red dot with two arrows icon) are available on most tabular views, including general data, sample tables, measurement data tables, and data sequence series. Any of these tables can be exported directly to Excel via the export button — this is also the recommended way to inspect expected headers and column structure before preparing an import table. <!-- src: transcript/reporting-exports#export-formats-pdf-ags-dxf-csv-excel-geodin-ml -->
+| Format | Use it when… | Guide |
+|---|---|---|
+| **Excel** | You need a structured workbook for analysis, sharing, or as a round-trip import template | [Excel Export](export/excel.md) |
+| **CSV** | The downstream tool prefers plain delimited text, or you need to re-export a data sequence | [CSV Export](export/csv-export.md) |
+| **AGS** | Delivering geotechnical data per AGS 4.0.4 / 4.1 | [AGS Export](export/ags-export.md) |
+| **DXF** | The output needs to land in AutoCAD or another CAD tool as editable vectors | [DXF Export](export/dxf-export.md) |
+| **GeoDinML** | Pushing data between GeoDin Desktop and GeoDin Onsite, or distributing a project list | [GeoDinML Export](export/geodinml-export.md) |
+| **PDF** | Static deliverables (reports, archives, attachments). Bulk PDF runs through the print/report system | [Bulk Print and PDF Export](../reporting/bulk-print-and-pdf-export.md) |
 
-The `All Objects > Data Management > General Data` tabular view shows metadata for all locations at once and can be exported to Excel. Data sequence series can also be re-exported as CSV files, which is useful when users need to import, modify, and re-export data. <!-- src: transcript/reporting-exports#export-formats-pdf-ags-dxf-csv-excel-geodin-ml -->
+## Publish and Export
 
-## Publish and Export (Access databases)
+The **Publish and Export** feature creates a zip file containing an Access database with the selected objects. It is available at both the project level (a group of boreholes) and the individual borehole level (a single-borehole database that can be re-imported elsewhere). AGS export runs through this same feature.
 
-The **Publish and Export** feature creates a zip file containing an Access database with the selected objects. This is available at both the project level (for exporting a group of boreholes) and at the individual borehole level (producing a single-borehole database that can be re-imported elsewhere). <!-- src: transcript/reporting-exports#export-formats-pdf-ags-dxf-csv-excel-geodin-ml -->
+## Onsite export defaults
 
-## AGS export
+For exports originating in GeoDin Onsite, the default export path is controlled by `Configuration > Folders > Export folder path` and supports shortcut codes like `[my documents]` and `[desktop]`. Exports are always placed in a project-named subfolder inside the configured path; Onsite creates the subfolder automatically.
 
-AGS 4.0.4 and AGS 4.1 export formats are supported via `Publish and Export > AGS export`. Users can choose which groups to export before executing the export. <!-- src: transcript/reporting-exports#export-formats-pdf-ags-dxf-csv-excel-geodin-ml -->
+PDF exports from Onsite contain a "DRAFT" watermark unless the form was produced via **Publish as Complete**. GeoDinML exports never carry a draft watermark.
 
-## DXF and PDF export
-
-The internal PDF printer can export layouts as DXF files for use in AutoCAD or other CAD software. The PDF printer supports vector output (not just raster), preserving quality for CAD and publication workflows. <!-- src: transcript/reporting-exports#export-formats-pdf-ags-dxf-csv-excel-geodin-ml -->
-
-## Exporting from GeoDin Onsite
-
-GeoDin Onsite supports two export mechanisms: `Export to PDF` and `Export GeoDin` (GeoDin ML format). <!-- src: transcript/reporting-exports#export-formats-pdf-ags-dxf-csv-excel-geodin-ml -->
-
-{% hint style="warning" %}
-PDF exports from Onsite contain a "DRAFT" watermark unless the form was produced via `Publish as Complete`. GeoDin ML exports never carry a draft watermark.
-{% endhint %}
-
-When `Publish as Complete` runs, the full deliverable set (GDOF, PDF, GeoDin ML, AGS) is generated and placed in the shared delivery folder. Only the `.GDOF` file stays visible locally as a photocopy. <!-- src: transcript/reporting-exports#export-formats-pdf-ags-dxf-csv-excel-geodin-ml -->
-
-The default export path is controlled by `Configuration > Folders > Export folder path` and supports shortcut codes like `[my documents]` and `[desktop]`. Exports are always placed in a project-named subfolder inside the configured path (GeoDin Onsite creates the subfolder automatically). <!-- src: transcript/reporting-exports#export-formats-pdf-ags-dxf-csv-excel-geodin-ml -->
+<!-- src: transcript/reporting-exports#export-formats-pdf-ags-dxf-csv-excel-geodin-ml -->
 
 ---
 

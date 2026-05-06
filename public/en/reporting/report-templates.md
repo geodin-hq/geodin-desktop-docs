@@ -92,18 +92,7 @@ The **Legend** element auto-detects fill patterns from objects currently in the 
 The auto-generated legend only includes patterns from objects currently displayed. For an "all possible fill patterns" legend, it must be built manually.
 {% endhint %}
 
----
-
-## Text macros for dynamic fields
-
-Text macros allow dynamic insertion of database content into any text element. They can be used in: <!-- src: transcript/reporting-exports#text-macros-dynamic-fields -->
-
-- Page headers and footers
-- Variable text elements
-- Report column headings
-- Labeling within borehole log elements
-
-Macros are constructed via the `Build` dialog, which presents available fields from the connected data source. The syntax uses `$` delimiters: `$LONGNAME$` for the location name, `$%PRNPAGE$` for page numbering, etc. <!-- src: transcript/reporting-exports#text-macros-dynamic-fields -->
+For a focused guide to text-macro syntax, conditional separators, calculated parameters, and translation support, see [Text Macros in Reports](text-macros-in-reports.md).
 
 {% hint style="info" %}
 PSD (Particle Size Distribution) layouts are pre-built and shipped with GeoDin. It is recommended to customize existing PSD templates rather than building from scratch.
