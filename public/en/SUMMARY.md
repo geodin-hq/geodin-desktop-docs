@@ -19,8 +19,8 @@
 ## Installation & Licensing
 
 * [Express Installation](installation/express-installation.md)
-* [Custom Installation](installation/custom-installation.md)
 * [Deployment Modes](installation/deployment-modes.md)
+* [Custom Installation](installation/custom-installation.md)
 * [Infrastructure and Environment Setup Guide](installation/infrastructure-and-environment-setup-guide.md)
 * [Activate Your License](installation/activating-your-license.md)
 * [Using a License Server](installation/license-server.md)
