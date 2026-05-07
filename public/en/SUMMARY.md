@@ -19,14 +19,13 @@
 ## Installation & Licensing
 
 * [Express Installation](installation/express-installation.md)
+* [Deployment Modes](installation/deployment-modes.md)
 * [Custom Installation](installation/custom-installation.md)
 * [Infrastructure and Environment Setup Guide](installation/infrastructure-and-environment-setup-guide.md)
-* [Database Backend Options](installation/database-backend-options.md)
-* [Configuration File Reference](installation/configuration-file-reference.md)
 * [Activate Your License](installation/activating-your-license.md)
 * [Using a License Server](installation/license-server.md)
-* [Network Licensing (HASP Dongle)](installation/network-licensing-hasp-dongle.md)
 * [Renew Licence](installation/renew-licence.md)
+* [Configuration File Reference](installation/configuration-file-reference.md)
 
 ## Object Types
 
