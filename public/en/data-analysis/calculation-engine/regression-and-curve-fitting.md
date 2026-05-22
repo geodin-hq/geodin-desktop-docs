@@ -148,15 +148,11 @@ Queries are used within projects or databases to interrogate data. They define t
 
 GeoDin organizes measurement values as numerical entries. Hence values below a detection limit cannot be saved as the character „<". In such cases a negative detection limit is entered (e.g. "-1"). These values are ignored by statistical analyses. If the detection limit is unknown (e.g. old data) the value"-88" is used. If the value is not detectable then"-99" should be entered:
 
-***
-
-Entry Description
-
--XX beneath detection limit (XX = detection limit) -88 beneath detection limit (detection limit value unknown)
-
--99 not detectable
-
-\------- ---------------------------------------------------------
+| Entry | Description |
+| --- | --- |
+| -XX | beneath detection limit (XX = detection limit) |
+| -88 | beneath detection limit (detection limit value unknown) |
+| -99 | not detectable |
 
 #### Measurement data
 
@@ -411,11 +407,22 @@ For example: $DAT.PAR1$ \* 100
 
 The characters inside the $-signs relate to a GeoDin data field. The following operators can be used:
 
-***
-
-\+ Addition - Subtraction \* Multiplication / Division SQR (x) Square of x SQRT (x) Square root of x LN (x) Natural logarithm of x EXP (x) Potency of x (e to the power of x) SIN (x) Sinus of x COS (x) Cosinus of x TAN (x) Tangent of X ARCTAN (x) Arctangent of X COTAN (x) Cotangent of X ABS (x) Absolute value of X
-
-***
+| Operator | Meaning |
+| --- | --- |
+| \+ | Addition |
+| - | Subtraction |
+| \* | Multiplication |
+| / | Division |
+| SQR (x) | Square of x |
+| SQRT (x) | Square root of x |
+| LN (x) | Natural logarithm of x |
+| EXP (x) | Potency of x (e to the power of x) |
+| SIN (x) | Sinus of x |
+| COS (x) | Cosinus of x |
+| TAN (x) | Tangent of X |
+| ARCTAN (x) | Arctangent of X |
+| COTAN (x) | Cotangent of X |
+| ABS (x) | Absolute value of X |
 
 (x) stands for the table column of GeoDin (e.g. $DAT:PAR1$)
 
@@ -525,11 +532,13 @@ First of all the entry for CONE is replaced by the value from the dictionary. Fo
 
 Values from one data type can be used in calculating values in other data types. To do this, the code of a data type is followed by a colon. The relationship to a data record in another data type is defined by time. To compare values the date is used in a number of different ways:
 
-***
-
-\[=SMPDATE] or no definition The date must be the same \[<=SMPDATE] The date can be the same or less than \[\<SMPDATE] The date must be less than \[>=SMPDATE] The date can be the same or more than \[\<SMPDATE] The date must be more than
-
-***
+| Definition | Meaning |
+| --- | --- |
+| \[=SMPDATE] or no definition | The date must be the same |
+| \[<=SMPDATE] | The date can be the same or less than |
+| \[\<SMPDATE] | The date must be less than |
+| \[>=SMPDATE] | The date can be the same or more than |
+| \[\<SMPDATE] | The date must be more than |
 
 **Example**: WASSPNN=$ROK:ROKNN\[<=SMPDATE]$-$WASSPROK$
 
@@ -631,13 +640,27 @@ By starting this method a dialogue appears where all import or export settings c
 
 The following parameters are used to calculate the ion balance:
 
-***
-
-N Parameter P Type Factor Sum 1 Calcium (CA) **1** cation 0,0499 Total mineralization 2 Magnesium (Mg) **1** cation 0,0822 3 Sodium (Na) **1** cation 0,0435 4 Potassium (K) **1** cation 0,0256 5 Bicarbonate (HCO3) **1** anion 0,0164 6 Carbonate (CO3) **3** anion 0,0333 7 Chloride (CL) **1** anion 0,0282 8 Sulfate (SO4) **1** anion 0,0208 9 Iron (total) **2** anion 0,0537 10 Manganese **2** anion 0,0364 11 Ammonia (NH4) **2** anion 0,0554 12 Nitrate (NO3) **2** anion 0,0161 13 Nitrite (NO2) **2** anion 0,0217 14 Phosphate **2** anion 0,0316
-
-15 pH-value **3** Proton concentration 16 m-value **3** The parameter is used for carbonate substitution 17 p-value **3** 18 Carbonate hardness **3** 19 Total hardness **3** Total hardness - Check
-
-***
+| N | Parameter | P | Type | Factor | Sum |
+| --- | --- | --- | --- | --- | --- |
+| 1 | Calcium (CA) | **1** | cation | 0,0499 | Total mineralization |
+| 2 | Magnesium (Mg) | **1** | cation | 0,0822 | |
+| 3 | Sodium (Na) | **1** | cation | 0,0435 | |
+| 4 | Potassium (K) | **1** | cation | 0,0256 | |
+| 5 | Bicarbonate (HCO3) | **1** | anion | 0,0164 | |
+| 6 | Carbonate (CO3) | **3** | anion | 0,0333 | |
+| 7 | Chloride (CL) | **1** | anion | 0,0282 | |
+| 8 | Sulfate (SO4) | **1** | anion | 0,0208 | |
+| 9 | Iron (total) | **2** | anion | 0,0537 | |
+| 10 | Manganese | **2** | anion | 0,0364 | |
+| 11 | Ammonia (NH4) | **2** | anion | 0,0554 | |
+| 12 | Nitrate (NO3) | **2** | anion | 0,0161 | |
+| 13 | Nitrite (NO2) | **2** | anion | 0,0217 | |
+| 14 | Phosphate | **2** | anion | 0,0316 | |
+| 15 | pH-value | **3** | | | Proton concentration |
+| 16 | m-value | **3** | | | The parameter is used for carbonate substitution |
+| 17 | p-value | **3** | | | |
+| 18 | Carbonate hardness | **3** | | | |
+| 19 | Total hardness | **3** | | | Total hardness - Check |
 
 P = Priority (**1** Main component, **2** secondary component, **3** Substitution)\
 N = internal number
@@ -683,11 +706,11 @@ As an investigation type the point or interval from which it was measured is con
 
 Data fields
 
-***
-
-INV\_TYPE Abbreviation (three letters) for a unique identification of the measurement point type INV\_NAME Long name to describe the measurement point type INV\_OPT System options
-
-***
+| Field | Description |
+| --- | --- |
+| INV\_TYPE | Abbreviation (three letters) for a unique identification of the measurement point type |
+| INV\_NAME | Long name to describe the measurement point type |
+| INV\_OPT | System options |
 
 The definition of the data types occurs in the table DAT\_TYPES. Here each data type occurs only once. Only data types registered in this table can be linked to a measurement point type.
 
@@ -695,11 +718,11 @@ The definition of the data types occurs in the table DAT\_TYPES. Here each data 
 
 Data fields
 
-***
-
-DAT\_TYPE Abbreviation (three letters) for a unique identification of data type DAT\_NAME Long name to describe the data type DAT\_OPT System options
-
-***
+| Field | Description |
+| --- | --- |
+| DAT\_TYPE | Abbreviation (three letters) for a unique identification of data type |
+| DAT\_NAME | Long name to describe the data type |
+| DAT\_OPT | System options |
 
 **Linking data types to investigation types (INVTABS)**
 
@@ -707,11 +730,10 @@ For data types measurement and investigation parameters are grouped together acc
 
 Data fields
 
-***
-
-INV\_TYPE Abbreviation (three letters) for a unique identification of the measurement point type DAT\_TYPE Abbreviation (three letters) for a unique identification of data type
-
-***
+| Field | Description |
+| --- | --- |
+| INV\_TYPE | Abbreviation (three letters) for a unique identification of the measurement point type |
+| DAT\_TYPE | Abbreviation (three letters) for a unique identification of data type |
 
 **Registration of a chemical group (STFGRP)**
 
@@ -719,11 +741,14 @@ There are a variable number of measurement parameters for each data type. These 
 
 Data fields
 
-***
-
-DAT\_TYPE Abbreviation (three letters) for a unique identification of the data type FIELD\_GRP Abbreviation (three letters) for a unique identification of the chemical group GRP\_NAME Long name to describe the chemical group GRP\_CNT Counter GRP\_OPT System options TAB\_DESC Table descriptor, in which the chemical group is physically contained
-
-***
+| Field | Description |
+| --- | --- |
+| DAT\_TYPE | Abbreviation (three letters) for a unique identification of the data type |
+| FIELD\_GRP | Abbreviation (three letters) for a unique identification of the chemical group |
+| GRP\_NAME | Long name to describe the chemical group |
+| GRP\_CNT | Counter |
+| GRP\_OPT | System options |
+| TAB\_DESC | Table descriptor, in which the chemical group is physically contained |
 
 The contents of the field TAB\_DESC must agree with the structure definitions in the table MESSTRS, associated with the chemical group. The contents cannot be longer than 8 characters and must conform to the DOS file naming conventions. Up to 12 Chemical groups can be combined in a database table.
 
@@ -741,9 +766,21 @@ Object registration LOCREG
 
 In this table every object is registered with one data set (independently of the object type).
 
-***
-
-PRJ\_ID Project ID LOCID Up to 4 digit number (running counter) for each object in the project values: 1-9998 LOCTYPE Contains descriptor of the object type INVID is an exact 16 character long string with the measurement point number:
+| Field | Description |
+| --- | --- |
+| PRJ\_ID | Project ID |
+| LOCID | Up to 4 digit number (running counter) for each object in the project values: 1-9998 |
+| LOCTYPE | Contains descriptor of the object type |
+| INVID | is an exact 16 character long string with the measurement point number (see below) |
+| OPT\_PARAM | empty |
+| XCOORD | X coordinate |
+| YCOORD | Y coordinate |
+| ZCOORDB | Object absolute height |
+| ZCOORDE | End depth in meters below ground surface (for depth related objects) |
+| SHORTNAME | is the Short name for the object |
+| LONGNAME | is the Long name for the object |
+| PHYSFILE | Name of the object file (only in GeoDin standard projects) |
+| LOCKINFO | empty |
 
 ```
           zzzzzzxxxxyyy000
@@ -754,18 +791,19 @@ PRJ\_ID Project ID LOCID Up to 4 digit number (running counter) for each object 
           Project ID
 ```
 
-OPT\_PARAM empty XCOORD X coordinate YCOORD Y coordinate ZCOORDB Object absolute height ZCOORDE End depth in meters below ground surface (for depth related objects) SHORTNAME is the Short name for the object LONGNAME is the Long name for the object PHYSFILE Name of the object file (only in GeoDin standard projects) LOCKINFO empty
-
-***
-
 \
 Measurement point registration for developed measurement points FILREG
 
 In this table all developed measurement points of a project are organized (e.g. monitoring wells). A object may contain several measurement points.
 
-***
-
-LOCID ID number of the object RECID Counter of developed measurement points per object INVID Measurement point ID number
+| Field | Description |
+| --- | --- |
+| LOCID | ID number of the object |
+| RECID | Counter of developed measurement points per object |
+| INVID | Measurement point ID number (see below) |
+| INVZBEG | Top of the measurement point in meters below ground surface |
+| INVZEND | Bottom of the measurement point in meters below ground surface |
+| INVNAME | Name of the measurement point |
 
 ```
         zzzzzzxxxxyyynnnn
@@ -775,10 +813,6 @@ LOCID ID number of the object RECID Counter of developed measurement points per 
         yyy is the ID of the investigation type
         nnnn is xxxx is the 4 digit counter filled up with zeros for developed measurement points per object
 ```
-
-INVZBEG Top of the measurement point in meters below ground surface INVZEND Bottom of the measurement point in meters below ground surface INVNAME Name of the measurement point
-
-***
 
 Measurement point registration for undeveloped measurement points PRBREG
 
@@ -793,31 +827,38 @@ The actual values are kept in three tables in the Large Data Model, optimized fo
 
 Table of numerical values: \<DATATYPE>VAL01
 
-***
-
-FIELD\_NAMEFIELD\_TYPEFIELD\_LEN FIELD\_DEC FIELD\_LONG INVID C 16 Measurement point ID SMPID N 9 GeoDin Sample ID PARAM\_DESC C 8 Parameter ID MESCHAR C 1 Additional character MESVALUE N 20 8 Measurement value MESUNIT C 15 Measurement unit MESSENSIB N 20 Detection limit METHODID N 9 Investigation method MESOPT N 9 Measurement - option MESSIGNIF C 10 Measurement - significance
-
-***
+| FIELD\_NAME | FIELD\_TYPE | FIELD\_LEN | FIELD\_DEC | FIELD\_LONG |
+| --- | --- | --- | --- | --- |
+| INVID | C | 16 | | Measurement point ID |
+| SMPID | N | 9 | | GeoDin Sample ID |
+| PARAM\_DESC | C | 8 | | Parameter ID |
+| MESCHAR | C | 1 | | Additional character |
+| MESVALUE | N | 20 | 8 | Measurement value |
+| MESUNIT | C | 15 | | Measurement unit |
+| MESSENSIB | N | 20 | | Detection limit |
+| METHODID | N | 9 | | Investigation method |
+| MESOPT | N | 9 | | Measurement - option |
+| MESSIGNIF | C | 10 | | Measurement - significance |
 
 Table of text values: \<DATATYPE>TXT01
 
-***
-
-FIELD\_NAME FIELD\_TYPE FIELD\_LEN FIELD\_DEC FIELD\_LONG
-
-INVID C 16 GeoDin measurement point ID SMPID N 9 GeoDin Sample ID PARAM\_DESC C 8 Parameter ID MESTEXT C 254 Text entry MESOPT N 9 Measurement - option
-
-***
+| FIELD\_NAME | FIELD\_TYPE | FIELD\_LEN | FIELD\_DEC | FIELD\_LONG |
+| --- | --- | --- | --- | --- |
+| INVID | C | 16 | | GeoDin measurement point ID |
+| SMPID | N | 9 | | GeoDin Sample ID |
+| PARAM\_DESC | C | 8 | | Parameter ID |
+| MESTEXT | C | 254 | | Text entry |
+| MESOPT | N | 9 | | Measurement - option |
 
 Table of text values: \<DATATYPE>DAT01
 
-***
-
-FIELD\_NAME FIELD\_TYPE FIELD\_LEN FIELD\_DEC FIELD\_LONG
-
-INVID C 16 GeoDin measurement point ID SMPID N 9 GeoDin Sample ID PARAM\_DESC C 8 Parameter ID MESDATE D 8 Date entry MESOPT N 9 Measurement - option
-
-***
+| FIELD\_NAME | FIELD\_TYPE | FIELD\_LEN | FIELD\_DEC | FIELD\_LONG |
+| --- | --- | --- | --- | --- |
+| INVID | C | 16 | | GeoDin measurement point ID |
+| SMPID | N | 9 | | GeoDin Sample ID |
+| PARAM\_DESC | C | 8 | | Parameter ID |
+| MESDATE | D | 8 | | Date entry |
+| MESOPT | N | 9 | | Measurement - option |
 
 **Object type - Measurement point - Investigation type - Data type - Chemical group - Parameter**
 

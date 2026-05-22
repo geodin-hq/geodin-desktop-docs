@@ -292,17 +292,16 @@ Limiting the projects shown in theGeoDinobject manager
 
 If your project folder contains a high number of projects it may be helpful to limit the number of projects displayed by a condition in the WHERE field in SQL syntax. Every GeoDin project manager contains the following data fields:
 
-***
-
-FIELD\_NAME FIELD\_TYPE FIELD\_LEN FIELD\_DEC Description
-
-PRJ\_ID C 6 0 Project ID
-
-PRJ\_NAME C 40 0 Project name
-
-PRJ\_ALIAS C 40 0 Alias (or project) name PRJ\_TYPE C 1 0 Project type PRJ\_OPT N 10 0 Optional parameter PRJ\_USER C 30 0 Name of author PRJ\_DATE D 10 0 Date created PRJ\_PATH C 78 0 Path or database alias
-
-***
+| FIELD\_NAME | FIELD\_TYPE | FIELD\_LEN | FIELD\_DEC | Description |
+| --- | --- | --- | --- | --- |
+| PRJ\_ID | C | 6 | 0 | Project ID |
+| PRJ\_NAME | C | 40 | 0 | Project name |
+| PRJ\_ALIAS | C | 40 | 0 | Alias (or project) name |
+| PRJ\_TYPE | C | 1 | 0 | Project type |
+| PRJ\_OPT | N | 10 | 0 | Optional parameter |
+| PRJ\_USER | C | 30 | 0 | Name of author |
+| PRJ\_DATE | D | 10 | 0 | Date created |
+| PRJ\_PATH | C | 78 | 0 | Path or database alias |
 
 **SQL-Query examples:**
 
@@ -496,23 +495,16 @@ Data types with measurement values can be stored with two different data models,
 
 GeoDin automatically recognises the database type
 
-_GeoDin Data Type DDL Name_
-
-String VARCHAR(n)
-
-SmallInt SMALLINT
-
-Integer INTEGER
-
-Float DOUBLE
-
-Date DATE
-
-TimeStamp DATETIME
-
-Memo LONGTEXT
-
-Blob LONGBLOB
+| GeoDin Data Type | DDL Name |
+| --- | --- |
+| String | VARCHAR(n) |
+| SmallInt | SMALLINT |
+| Integer | INTEGER |
+| Float | DOUBLE |
+| Date | DATE |
+| TimeStamp | DATETIME |
+| Memo | LONGTEXT |
+| Blob | LONGBLOB |
 
 With FireDAC it is possible to natively access the database without ODBC .TimeStamp values and Array-DML (natively) are supported.
 
@@ -532,23 +524,16 @@ http://docwiki.embarcadero.com/RADStudio/XE5/en/Database\_Connectivity\_(FireDAC
 
 GeoDin automatically recognises the database type
 
-_GeoDin Data Type DDL Name_
-
-String VARCHAR(n)
-
-SmallInt SMALLINT
-
-Integer INTEGER
-
-Float FLOAT
-
-Date DATE
-
-TimeStamp TIMESTAMP
-
-Memo TEXT
-
-Blob BYTEA
+| GeoDin Data Type | DDL Name |
+| --- | --- |
+| String | VARCHAR(n) |
+| SmallInt | SMALLINT |
+| Integer | INTEGER |
+| Float | FLOAT |
+| Date | DATE |
+| TimeStamp | TIMESTAMP |
+| Memo | TEXT |
+| Blob | BYTEA |
 
 With FireDAC it is possible to natively access the database without ODBC .TimeStamp values and Array-DML (natively) are supported.
 
@@ -670,23 +655,16 @@ Replacements of constants cannot be highlighted in a special way because they ca
 
 GeoDin automatically recognizes the database type.
 
-_GeoDin data type DDL Name_
-
-String VARCHAR(n)
-
-SmallInt SMALLINT
-
-Integer INTEGER
-
-Float FLOAT
-
-Date DATETIME
-
-TimeStamp DATETIME
-
-Memo TEXT
-
-Blob IMAGE
+| GeoDin data type | DDL Name |
+| --- | --- |
+| String | VARCHAR(n) |
+| SmallInt | SMALLINT |
+| Integer | INTEGER |
+| Float | FLOAT |
+| Date | DATETIME |
+| TimeStamp | DATETIME |
+| Memo | TEXT |
+| Blob | IMAGE |
 
 FireDAC is a factor of 1,2 to 1,6 faster than OLE-DB.
 
@@ -704,23 +682,16 @@ FireDACConnection=DriverID=MSSQL;Server=192.168.49.250;Database=GeoDin;OSAuthent
 
 Automatic recognition of the database type by GeoDin
 
-_GeoDin data type DDL-Name_
-
-String VARCHAR(n)
-
-SmallInt SMALLINT
-
-Integer INTEGER
-
-Float FLOAT
-
-Date DATE
-
-TimeStamp DATE
-
-Memo CLOB
-
-Blob BLOB
+| GeoDin data type | DDL-Name |
+| --- | --- |
+| String | VARCHAR(n) |
+| SmallInt | SMALLINT |
+| Integer | INTEGER |
+| Float | FLOAT |
+| Date | DATE |
+| TimeStamp | DATE |
+| Memo | CLOB |
+| Blob | BLOB |
 
 The field types CLOB and BLOB are supported.
 
@@ -771,29 +742,17 @@ Project databases contain the Local Project Manager in the physical database for
 
 The structure of the tables in the project manager are as follows:
 
-***
-
-**FIELD\_NAMEFIELD\_TYPEFIELD\_DECExplanationComment**
-
-PRJ\_ID C 0 Project ID must be unique in GeoDin
-
-PRJ\_NAME C 0 Project name mandatory
-
-PRJ\_ALIAS C 0 Alias name (2nd name for project) optional
-
-PRJ\_TYPE C 0 Project type Reserved for system
-
-PRJ\_OPT N 0 Optional parameter always 0
-
-PRJ\_USER C 0 Author name
-
-PRJ\_DATE D 0 Creation date
-
-PRJ\_PATH C 0 Path or database alias contains for a GeoDin drive database the path to the drive database (normally LW:\GeoDinDB\\, where LW stands for the drive letter, the trailing backslash is required!), for all other databases the field contains the database alias name (e.g. GeoDin\_DBASE).
-
-GeoDinGUID C 0 GeoDin GUID unique project ID
-
-***
+| FIELD\_NAME | FIELD\_TYPE | FIELD\_DEC | Explanation | Comment |
+| --- | --- | --- | --- | --- |
+| PRJ\_ID | C | 0 | Project ID | must be unique in GeoDin |
+| PRJ\_NAME | C | 0 | Project name | mandatory |
+| PRJ\_ALIAS | C | 0 | Alias name (2nd name for project) | optional |
+| PRJ\_TYPE | C | 0 | Project type | Reserved for system |
+| PRJ\_OPT | N | 0 | Optional parameter | always 0 |
+| PRJ\_USER | C | 0 | Author name | |
+| PRJ\_DATE | D | 0 | Creation date | |
+| PRJ\_PATH | C | 0 | Path or database alias | contains for a GeoDin drive database the path to the drive database (normally LW:\GeoDinDB\\, where LW stands for the drive letter, the trailing backslash is required!), for all other databases the field contains the database alias name (e.g. GeoDin\_DBASE). |
+| GeoDinGUID | C | 0 | GeoDin GUID | unique project ID |
 
 The registration of a project is done with a record in the Local Project Manager of the database.
 
@@ -809,15 +768,21 @@ The registration tables contain the basic measuring point descriptions of the Ge
 
 Each object (regardless of object type) is registered with a data record in this table.
 
-***
-
-PRJ\_ID Project ID
-
-LOCID is a max. 4-digit sequential number of the object in project 1-9998
-
-LOCTYPE Contains the descriptor of the object type
-
-INVID is a string of exactly 16 characters. It is formed from:
+| Field | Description |
+| --- | --- |
+| PRJ\_ID | Project ID |
+| LOCID | is a max. 4-digit sequential number of the object in project 1-9998 |
+| LOCTYPE | Contains the descriptor of the object type |
+| INVID | 16-character measuring-point string (format below) |
+| OPT\_PARAM | empty |
+| XCOORD | easting |
+| YCOORD | northing |
+| ZCOORDB | Borehole starting point absolute |
+| ZCOORDE | Final depth in metres below ground level (for depth-oriented objects) |
+| SHORTNAME | short name for the object |
+| LONGNAME | long name for the object |
+| PHYSFILE | Name of the object file (only in GeoDin standard projects) |
+| LOCKINFO | empty |
 
 ```
           zzzzzz Project ID
@@ -833,37 +798,18 @@ INVID is a string of exactly 16 characters. It is formed from:
           zzzzzzxxxxyyy000
 ```
 
-OPT\_PARAM empty
-
-XCOORD easting
-
-YCOORD northing
-
-ZCOORDB Borehole starting point absolute
-
-ZCOORDE Final depth in metres below ground level (for depth-oriented objects)
-
-SHORTNAME short name for the object
-
-LONGNAME long name for the object
-
-PHYSFILE Name of the object file (only in GeoDin standard projects)
-
-LOCKINFO empty
-
-***
-
 \
 **Measuring point registration of expanded measuring points FILREG**\
 In dieser Tabelle werden sämtliche ausgebauten Messpunkte (z. B. Grundwassermessstellen) des Projektes verwaltet. Je Objekt können mehrere Messpunkte vorkommen.
 
-***
-
-LOCID Identification number of the object
-
-RECID Counter of the removed measuring points per object
-
-INVID Measuring point identification number
+| Field | Description |
+| --- | --- |
+| LOCID | Identification number of the object |
+| RECID | Counter of the removed measuring points per object |
+| INVID | Measuring point identification number (format below) |
+| INVZBEG | Start of the measuring point in metres below ground level |
+| INVZEND | End of the measuring point in metres below ground level |
+| INVNAME | Name of the measuring point |
 
 ```
         zzzzzzxxxxyyynnn
@@ -878,14 +824,6 @@ INVID Measuring point identification number
 
         nnn 3-digit sequential no. filled with zeros per object
 ```
-
-INVZBEG Start of the measuring point in metres below ground level
-
-INVZEND End of the measuring point in metres below ground level
-
-INVNAME Name of the measuring point
-
-***
 
 \
 **Measuring point registration of non-expanded measuring points PRBREG**
@@ -906,141 +844,83 @@ The number of projects is not limited.
 
 The data fields XCOORD to ZCOORDE describe the position of the object in space. The data fields SHORTNAME and LONGNAME are used for a verbal designation of the object..
 
-***
-
-**FIELD\_NAMEFIELD\_TYPEFIELD\_LENFIELD\_DECFIELD\_CNTFIELD\_OPTFIELD\_LONG**
-
-LOCID N 4 0 1 3 GeoDin Location Ident
-
-RECID N 4 0 2 0 GeoDin Record Ident
-
-XCOORD N 20 4 3 0 easting
-
-YCOORD N 20 4 4 0 northing
-
-ZCOORDB N 20 4 5 0 elevation NN
-
-ZCOORDE N 20 4 6 0 end depth
-
-SHORTNAME C 14 0 7 0 Short description
-
-LONGNAME C 40 0 8 0 Long description
-
-TABDESK
-
-...
-
-***
+| FIELD\_NAME | FIELD\_TYPE | FIELD\_LEN | FIELD\_DEC | FIELD\_CNT | FIELD\_OPT | FIELD\_LONG |
+| --- | --- | --- | --- | --- | --- | --- |
+| LOCID | N | 4 | 0 | 1 | 3 | GeoDin Location Ident |
+| RECID | N | 4 | 0 | 2 | 0 | GeoDin Record Ident |
+| XCOORD | N | 20 | 4 | 3 | 0 | easting |
+| YCOORD | N | 20 | 4 | 4 | 0 | northing |
+| ZCOORDB | N | 20 | 4 | 5 | 0 | elevation NN |
+| ZCOORDE | N | 20 | 4 | 6 | 0 | end depth |
+| SHORTNAME | C | 14 | 0 | 7 | 0 | Short description |
+| LONGNAME | C | 40 | 0 | 8 | 0 | Long description |
+| TABDESK | | | | | | |
+| ... | | | | | | |
 
 **Layer data table (optional)**
 
 This table is optional, it contains depth-oriented descriptions for layers. Several independent layer data tables can be defined for one object type. In the standard case, representations of borehole profiles or borehole tables with corresponding interpretation of codes are derived from these tables. However, they can also be pure text representations of depth-oriented features.
 
-***
-
-**FIELD\_NAMEFIELD\_TYPEFIELD\_LENFIELD\_DECFIELD\_CNTFIELD\_OPTFIELD\_LONG**
-
-LOCID N 4 0 1 1 GeoDin Location Ident
-
-RECID N 4 0 2 0 GeoDin Record Ident
-
-DEPTH N 20 4 3 0 depth
-
-...
-
-***
+| FIELD\_NAME | FIELD\_TYPE | FIELD\_LEN | FIELD\_DEC | FIELD\_CNT | FIELD\_OPT | FIELD\_LONG |
+| --- | --- | --- | --- | --- | --- | --- |
+| LOCID | N | 4 | 0 | 1 | 1 | GeoDin Location Ident |
+| RECID | N | 4 | 0 | 2 | 0 | GeoDin Record Ident |
+| DEPTH | N | 20 | 4 | 3 | 0 | depth |
+| ... | | | | | | |
 
 **Sample table (optional)**
 
 This table contains a data record for each sample. "General data" for a single sample can be entered here.
 
-***
-
-**FIELD\_NAMEFIELD\_TYPEFIELD\_LENFIELD\_DECFIELD\_CNTFIELD\_OPTFIELD\_LONG**
-
-LOCID N 4 0 1 1 GeoDin Location Ident
-
-RECID N 4 0 2 0 GeoDin Record Ident
-
-INVID C 16 0 3 0 GeoDin Messpunkttyp Ident
-
-INVZBEG N 8 2 4 32 depth from
-
-INVZEND N 8 2 5 32 depth to
-
-INVZNAME C 20 0 6 0 sample name (short)
-
-...
-
-***
+| FIELD\_NAME | FIELD\_TYPE | FIELD\_LEN | FIELD\_DEC | FIELD\_CNT | FIELD\_OPT | FIELD\_LONG |
+| --- | --- | --- | --- | --- | --- | --- |
+| LOCID | N | 4 | 0 | 1 | 1 | GeoDin Location Ident |
+| RECID | N | 4 | 0 | 2 | 0 | GeoDin Record Ident |
+| INVID | C | 16 | 0 | 3 | 0 | GeoDin Messpunkttyp Ident |
+| INVZBEG | N | 8 | 2 | 4 | 32 | depth from |
+| INVZEND | N | 8 | 2 | 5 | 32 | depth to |
+| INVZNAME | C | 20 | 0 | 6 | 0 | sample name (short) |
+| ... | | | | | | |
 
 **Well design general data (optional)**
 
 This table can be used for developed boreholes to additionally enter general data for wells, groundwater monitoring wells, etc., such as owners, operators, etc. Editing is offered in the extension editor.
 
-***
-
-**FIELD\_NAMEFIELD\_TYPEFIELD\_LENFIELD\_DECFIELD\_CNTFIELD\_OPTFIELD\_LONG**
-
-LOCID N 4 0 1 3 GeoDin Location Ident
-
-RECID N 4 0 2 0 GeoDin Record Ident
-
-...
-
-***
+| FIELD\_NAME | FIELD\_TYPE | FIELD\_LEN | FIELD\_DEC | FIELD\_CNT | FIELD\_OPT | FIELD\_LONG |
+| --- | --- | --- | --- | --- | --- | --- |
+| LOCID | N | 4 | 0 | 1 | 3 | GeoDin Location Ident |
+| RECID | N | 4 | 0 | 2 | 0 | GeoDin Record Ident |
+| ... | | | | | | |
 
 **Well design backfilling (optional)**
 
 This table contains information on backfilling. The data is entered in tabular form in the extension editor.
 
-***
-
-**FIELD\_NAMEFIELD\_TYPEFIELD\_LENFIELD\_DECFIELD\_CNTFIELD\_OPTFIELD\_LONG**
-
-LOCID N 4 0 1 1 GeoDin Location Ident
-
-RECID N 4 0 2 0 GeoDin Record Ident
-
-VFCODE C 8 0 3 40 type
-
-VFBEG N 8 2 4 8 from \[m]
-
-VFEND N 4 2 5 8 to \[m]
-
-...
-
-***
+| FIELD\_NAME | FIELD\_TYPE | FIELD\_LEN | FIELD\_DEC | FIELD\_CNT | FIELD\_OPT | FIELD\_LONG |
+| --- | --- | --- | --- | --- | --- | --- |
+| LOCID | N | 4 | 0 | 1 | 1 | GeoDin Location Ident |
+| RECID | N | 4 | 0 | 2 | 0 | GeoDin Record Ident |
+| VFCODE | C | 8 | 0 | 3 | 40 | type |
+| VFBEG | N | 8 | 2 | 4 | 8 | from \[m] |
+| VFEND | N | 4 | 2 | 5 | 8 | to \[m] |
+| ... | | | | | | |
 
 **Well design tubes and installation (optional)**
 
 The table contains information on the individual pipe tours.
 
-***
-
-**FIELD\_NAMEFIELD\_TYPEFIELD\_LENFIELD\_DECFIELD\_CNTFIELD\_OPTFIELD\_LONG**
-
-LOCID N 4 0 1 1 GeoDin Location Ident
-
-RECID N 4 0 2 0 GeoDin Record Ident
-
-INVID C 16 0 3 0 GeoDin Messpunkttyp Ident
-
-TOURID N 2 0 4 8 pipe tour number
-
-ELCODE C 8 0 5 40 element
-
-ELBEG N 8 2 6 8 depth from
-
-ELEND N 8 2 7 8 depth to
-
-ELWIDE N 4 0 8 8 diameter
-
-ELTHICKN N 4 1 9 0 wall thickness
-
-...
-
-***
+| FIELD\_NAME | FIELD\_TYPE | FIELD\_LEN | FIELD\_DEC | FIELD\_CNT | FIELD\_OPT | FIELD\_LONG |
+| --- | --- | --- | --- | --- | --- | --- |
+| LOCID | N | 4 | 0 | 1 | 1 | GeoDin Location Ident |
+| RECID | N | 4 | 0 | 2 | 0 | GeoDin Record Ident |
+| INVID | C | 16 | 0 | 3 | 0 | GeoDin Messpunkttyp Ident |
+| TOURID | N | 2 | 0 | 4 | 8 | pipe tour number |
+| ELCODE | C | 8 | 0 | 5 | 40 | element |
+| ELBEG | N | 8 | 2 | 6 | 8 | depth from |
+| ELEND | N | 8 | 2 | 7 | 8 | depth to |
+| ELWIDE | N | 4 | 0 | 8 | 8 | diameter |
+| ELTHICKN | N | 4 | 1 | 9 | 0 | wall thickness |
+| ... | | | | | | |
 
 The INVID field contains a measuring point ID for filter sections and is formed automatically.
 
@@ -1048,135 +928,80 @@ The INVID field contains a measuring point ID for filter sections and is formed 
 
 This table contains expansion elements that are not related to an individual pipe tour (e.g. concrete ring, hydrant cover).
 
-***
-
-**FIELD\_NAMEFIELD\_TYPEFIELD\_LENFIELD\_DECFIELD\_CNTFIELD\_OPTFIELD\_LONG**
-
-LOCID N 4 0 1 1 GeoDin Location Ident
-
-RECID N 4 0 2 0 GeoDin Record Ident
-
-ELCODE C 8 0 5 40 element
-
-ELBEG N 8 2 6 8 depth from
-
-ELEND N 8 2 7 8 depth to
-
-ELWIDE N 4 0 8 8 diameter
-
-ELTHICKN N 4 1 9 0 wall thickness
-
-...
-
-***
+| FIELD\_NAME | FIELD\_TYPE | FIELD\_LEN | FIELD\_DEC | FIELD\_CNT | FIELD\_OPT | FIELD\_LONG |
+| --- | --- | --- | --- | --- | --- | --- |
+| LOCID | N | 4 | 0 | 1 | 1 | GeoDin Location Ident |
+| RECID | N | 4 | 0 | 2 | 0 | GeoDin Record Ident |
+| ELCODE | C | 8 | 0 | 5 | 40 | element |
+| ELBEG | N | 8 | 2 | 6 | 8 | depth from |
+| ELEND | N | 8 | 2 | 7 | 8 | depth to |
+| ELWIDE | N | 4 | 0 | 8 | 8 | diameter |
+| ELTHICKN | N | 4 | 1 | 9 | 0 | wall thickness |
+| ... | | | | | | |
 
 **Well design filter details (optional)**
 
 This table contains a data record for each filter pipe. "General data" for an individual filter can be entered here.
 
-***
-
-**FIELD\_NAMEFIELD\_TYPEFIELD\_LENFIELD\_DECFIELD\_CNTFIELD\_OPTFIELD\_LONG**
-
-LOCID N 4 0 1 1 GeoDin Location Ident
-
-RECID N 4 0 2 0 GeoDin Record Ident
-
-INVID C 16 0 3 0 GeoDin Messpunkttyp Ident
-
-INVZBEG N 8 2 4 8 depth from
-
-INVZEND N 8 2 5 8 depth to
-
-INVZNAME C 20 0 6 0 filter name (shor)
-
-...
-
-***
+| FIELD\_NAME | FIELD\_TYPE | FIELD\_LEN | FIELD\_DEC | FIELD\_CNT | FIELD\_OPT | FIELD\_LONG |
+| --- | --- | --- | --- | --- | --- | --- |
+| LOCID | N | 4 | 0 | 1 | 1 | GeoDin Location Ident |
+| RECID | N | 4 | 0 | 2 | 0 | GeoDin Record Ident |
+| INVID | C | 16 | 0 | 3 | 0 | GeoDin Messpunkttyp Ident |
+| INVZBEG | N | 8 | 2 | 4 | 8 | depth from |
+| INVZEND | N | 8 | 2 | 5 | 8 | depth to |
+| INVZNAME | C | 20 | 0 | 6 | 0 | filter name (shor) |
+| ... | | | | | | |
 
 **Probing registry (optional)**
 
 This table contains a data record for each probing measurement series of an object. For each object, the probing series are numbered in SNDID and stored in binary form in the field SNDDATA.
 
-***
-
-**FIELD\_NAMEFIELD\_TYPEFIELD\_LENFIELD\_DECFIELD\_CNTFIELD\_OPTFIELD\_LONG**
-
-LOCID N 4 0 1 1 GeoDin Location Ident
-
-RECID N 4 0 2 0 GeoDin Record Ident
-
-SNDID N 3 0 3 0 GeoDin Sondierungs-Ident
-
-SNDNAME C 50 0 4 0 Sondierungsname
-
-SNDDATA B 0 0 5 0 Sondierungsdaten
-
-***
+| FIELD\_NAME | FIELD\_TYPE | FIELD\_LEN | FIELD\_DEC | FIELD\_CNT | FIELD\_OPT | FIELD\_LONG |
+| --- | --- | --- | --- | --- | --- | --- |
+| LOCID | N | 4 | 0 | 1 | 1 | GeoDin Location Ident |
+| RECID | N | 4 | 0 | 2 | 0 | GeoDin Record Ident |
+| SNDID | N | 3 | 0 | 3 | 0 | GeoDin Sondierungs-Ident |
+| SNDNAME | C | 50 | 0 | 4 | 0 | Sondierungsname |
+| SNDDATA | B | 0 | 0 | 5 | 0 | Sondierungsdaten |
 
 **Probing data (optional)**
 
 This table contains the probing data for all objects of the project. The assignment is made via LOCID and SNDID. The structure of this table cannot be changed or extended.
 
-***
-
-**FIELD\_NAMEFIELD\_TYPEFIELD\_LENFIELD\_DECFIELD\_CNTFIELD\_OPTFIELD\_LONG**
-
-LOCID N 4 0 1 1 GeoDin Location Ident
-
-RECID N 4 0 2 0 GeoDin Record Ident
-
-SNDID N 3 0 3 0 GeoDin Sondierungs-Ident
-
-DEPTH N 20 4 4 0 depth to
-
-SNDVALUE C 20 0 5 0 probing value
-
-***
+| FIELD\_NAME | FIELD\_TYPE | FIELD\_LEN | FIELD\_DEC | FIELD\_CNT | FIELD\_OPT | FIELD\_LONG |
+| --- | --- | --- | --- | --- | --- | --- |
+| LOCID | N | 4 | 0 | 1 | 1 | GeoDin Location Ident |
+| RECID | N | 4 | 0 | 2 | 0 | GeoDin Record Ident |
+| SNDID | N | 3 | 0 | 3 | 0 | GeoDin Sondierungs-Ident |
+| DEPTH | N | 20 | 4 | 4 | 0 | depth to |
+| SNDVALUE | C | 20 | 0 | 5 | 0 | probing value |
 
 **1:n tables**
 
 These tables contain additional information on the object, e.g. groundwater level information, archive number.
 
-***
-
-**FIELD\_NAMEFIELD\_TYPEFIELD\_LENFIELD\_DECFIELD\_CNTFIELD\_OPTFIELD\_LONG**
-
-LOCID N 4 0 1 1 GeoDin Location Ident
-
-RECID N 4 0 2 0 GeoDin Record Ident
-
-GW N 8 2 3 0 groundwater level
-
-GWDATUM D 10 0 4 0 date
-
-...
-
-***
+| FIELD\_NAME | FIELD\_TYPE | FIELD\_LEN | FIELD\_DEC | FIELD\_CNT | FIELD\_OPT | FIELD\_LONG |
+| --- | --- | --- | --- | --- | --- | --- |
+| LOCID | N | 4 | 0 | 1 | 1 | GeoDin Location Ident |
+| RECID | N | 4 | 0 | 2 | 0 | GeoDin Record Ident |
+| GW | N | 8 | 2 | 3 | 0 | groundwater level |
+| GWDATUM | D | 10 | 0 | 4 | 0 | date |
+| ... | | | | | | |
 
 **Linking tables (outdated)**
 
 These tables define and describe relationships between measurement points. INVID contains a measuring point of the object. This measurement point is related to the measurement point number (unique in GeoDin) contained in LNKINVID. INVIDT and LNKINVIDT contain verbal description of the measuring point. The type of relationship can be described in more detail by further data fields (from "...").
 
-***
-
-**FIELD\_NAMEFIELD\_TYPEFIELD\_LENFIELD\_DECFIELD\_CNTFIELD\_OPTFIELD\_LONG**
-
-LOCID N 4 0 1 1 GeoDin Location Ident
-
-RECID N 4 0 2 0 GeoDin Record Ident
-
-INVID C 16 0 3 1 measuring point ident
-
-LNKINVID C 16 0 4 1 measuring point ident assigned
-
-INVIDT C 60 0 5 0 Description of measuring point
-
-LNKINVIDT C 60 0 6 0 Description of measuring point assigned
-
-...
-
-\---------------- ---------------- --------------- --------------- --------------- --------------- -----------------------------------------
+| FIELD\_NAME | FIELD\_TYPE | FIELD\_LEN | FIELD\_DEC | FIELD\_CNT | FIELD\_OPT | FIELD\_LONG |
+| --- | --- | --- | --- | --- | --- | --- |
+| LOCID | N | 4 | 0 | 1 | 1 | GeoDin Location Ident |
+| RECID | N | 4 | 0 | 2 | 0 | GeoDin Record Ident |
+| INVID | C | 16 | 0 | 3 | 1 | measuring point ident |
+| LNKINVID | C | 16 | 0 | 4 | 1 | measuring point ident assigned |
+| INVIDT | C | 60 | 0 | 5 | 0 | Description of measuring point |
+| LNKINVIDT | C | 60 | 0 | 6 | 0 | Description of measuring point assigned |
+| ... | | | | | | |
 
 ### Measurement values
 
@@ -1188,15 +1013,11 @@ As an investigation type the point or interval from which it was measured is con
 
 Data fields
 
-***
-
-INV\_TYPE Abbreviation (three letters) for a unique identification of the measurement point type
-
-INV\_NAME Long name to describe the measurement point type
-
-INV\_OPT System options
-
-***
+| Field | Description |
+| --- | --- |
+| INV\_TYPE | Abbreviation (three letters) for a unique identification of the measurement point type |
+| INV\_NAME | Long name to describe the measurement point type |
+| INV\_OPT | System options |
 
 The definition of the data types occurs in the table DAT\_TYPES. Here each data type occurs only once. Only data types registered in this table can be linked to a measurement point type.
 
@@ -1204,15 +1025,11 @@ The definition of the data types occurs in the table DAT\_TYPES. Here each data 
 
 Data fields
 
-***
-
-DAT\_TYPE Abbreviation (three letters) for a unique identification of data type
-
-DAT\_NAME Long name to describe the data type
-
-DAT\_OPT System options
-
-***
+| Field | Description |
+| --- | --- |
+| DAT\_TYPE | Abbreviation (three letters) for a unique identification of data type |
+| DAT\_NAME | Long name to describe the data type |
+| DAT\_OPT | System options |
 
 **Linking data types to investigation types (INVTABS)**
 
@@ -1220,13 +1037,10 @@ For data types measurement and investigation parameters are grouped together acc
 
 Data fields
 
-***
-
-INV\_TYPE Abbreviation (three letters) for a unique identification of the measurement point type
-
-DAT\_TYPE Abbreviation (three letters) for a unique identification of data type
-
-***
+| Field | Description |
+| --- | --- |
+| INV\_TYPE | Abbreviation (three letters) for a unique identification of the measurement point type |
+| DAT\_TYPE | Abbreviation (three letters) for a unique identification of data type |
 
 **Registration of a chemical group (STFGRP)**
 
@@ -1234,21 +1048,14 @@ There are a variable number of measurement parameters for each data type. These 
 
 Data fields
 
-***
-
-DAT\_TYPE Abbreviation (three letters) for a unique identification of the data type
-
-FIELD\_GRP Abbreviation (three letters) for a unique identification of the chemical group
-
-GRP\_NAME Long name to describe the chemical group
-
-GRP\_CNT Counter
-
-GRP\_OPT System options
-
-TAB\_DESC Table descriptor, in which the chemical group is physically contained
-
-***
+| Field | Description |
+| --- | --- |
+| DAT\_TYPE | Abbreviation (three letters) for a unique identification of the data type |
+| FIELD\_GRP | Abbreviation (three letters) for a unique identification of the chemical group |
+| GRP\_NAME | Long name to describe the chemical group |
+| GRP\_CNT | Counter |
+| GRP\_OPT | System options |
+| TAB\_DESC | Table descriptor, in which the chemical group is physically contained |
 
 The contents of the field TAB\_DESC must agree with the structure definitions in the table MESSTRS, associated with the chemical group. The contents cannot be longer than 8 characters and must conform to the DOS file naming conventions. Up to 12 Chemical groups can be combined in a database table.
 
@@ -1266,15 +1073,21 @@ Object registration LOCREG
 
 In this table every object is registered with one data set (independently of the object type).
 
-***
-
-PRJ\_ID Project ID
-
-LOCID Up to 4 digit number (running counter) for each object in the project values: 1-9998
-
-LOCTYPE Contains descriptor of the object type
-
-INVID is an exact 16 character long string with the measurement point number:
+| Field | Description |
+| --- | --- |
+| PRJ\_ID | Project ID |
+| LOCID | Up to 4 digit number (running counter) for each object in the project values: 1-9998 |
+| LOCTYPE | Contains descriptor of the object type |
+| INVID | 16-character measuring-point string (format below) |
+| OPT\_PARAM | empty |
+| XCOORD | X coordinate |
+| YCOORD | Y coordinate |
+| ZCOORDB | Object absolute height |
+| ZCOORDE | End depth in meters below ground surface (for depth related objects) |
+| SHORTNAME | is the Short name for the object |
+| LONGNAME | is the Long name for the object |
+| PHYSFILE | Name of the object file (only in GeoDin standard projects) |
+| LOCKINFO | empty |
 
 ```
           zzzzzzxxxxyyy000
@@ -1290,38 +1103,19 @@ INVID is an exact 16 character long string with the measurement point number:
           Project ID
 ```
 
-OPT\_PARAM empty
-
-XCOORD X coordinate
-
-YCOORD Y coordinate
-
-ZCOORDB Object absolute height
-
-ZCOORDE End depth in meters below ground surface (for depth related objects)
-
-SHORTNAME is the Short name for the object
-
-LONGNAME is the Long name for the object
-
-PHYSFILE Name of the object file (only in GeoDin standard projects)
-
-LOCKINFO empty
-
-***
-
 \
 Measurement point registration for developed measurement points FILREG
 
 In this table all developed measurement points of a project are organized (e.g. monitoring wells). A object may contain several measurement points.
 
-***
-
-LOCID ID number of the object
-
-RECID Counter of developed measurement points per object
-
-INVID Measurement point ID number
+| Field | Description |
+| --- | --- |
+| LOCID | ID number of the object |
+| RECID | Counter of developed measurement points per object |
+| INVID | Measurement point ID number (format below) |
+| INVZBEG | Top of the measurement point in meters below ground surface |
+| INVZEND | Bottom of the measurement point in meters below ground surface |
+| INVNAME | Name of the measurement point |
 
 ```
         zzzzzzxxxxyyynnnn
@@ -1337,14 +1131,6 @@ INVID Measurement point ID number
         nnnn is xxxx is the 4 digit counter filled up with zeros for developed measurement points per object
 ```
 
-INVZBEG Top of the measurement point in meters below ground surface
-
-INVZEND Bottom of the measurement point in meters below ground surface
-
-INVNAME Name of the measurement point
-
-***
-
 Measurement point registration for undeveloped measurement points PRBREG
 
 In this table all developed measurement points of a project are organized (for example sediment sampling). A object may contain several measurement points. The structure is identical to the table with the table FILREG.
@@ -1358,67 +1144,38 @@ The actual values are kept in three tables in the Large Data Model, optimized fo
 
 Table of numerical values: \<DATATYPE>VAL01
 
-***
-
-FIELD\_NAMEFIELD\_TYPEFIELD\_LEN FIELD\_DEC FIELD\_LONG
-
-INVID C 16 Measurement point ID
-
-SMPID N 9 GeoDin Sample ID
-
-PARAM\_DESC C 8 Parameter ID
-
-MESCHAR C 1 Additional character
-
-MESVALUE N 20 8 Measurement value
-
-MESUNIT C 15 Measurement unit
-
-MESSENSIB N 20 Detection limit
-
-METHODID N 9 Investigation method
-
-MESOPT N 9 Measurement - option
-
-MESSIGNIF C 10 Measurement - significance
-
-***
+| FIELD\_NAME | FIELD\_TYPE | FIELD\_LEN | FIELD\_DEC | FIELD\_LONG |
+| --- | --- | --- | --- | --- |
+| INVID | C | 16 | | Measurement point ID |
+| SMPID | N | 9 | | GeoDin Sample ID |
+| PARAM\_DESC | C | 8 | | Parameter ID |
+| MESCHAR | C | 1 | | Additional character |
+| MESVALUE | N | 20 | 8 | Measurement value |
+| MESUNIT | C | 15 | | Measurement unit |
+| MESSENSIB | N | 20 | | Detection limit |
+| METHODID | N | 9 | | Investigation method |
+| MESOPT | N | 9 | | Measurement - option |
+| MESSIGNIF | C | 10 | | Measurement - significance |
 
 Table of text values: \<DATATYPE>TXT01
 
-***
-
-FIELD\_NAME FIELD\_TYPE FIELD\_LEN FIELD\_DEC FIELD\_LONG
-
-INVID C 16 GeoDin measurement point ID
-
-SMPID N 9 GeoDin Sample ID
-
-PARAM\_DESC C 8 Parameter ID
-
-MESTEXT C 254 Text entry
-
-MESOPT N 9 Measurement - option
-
-***
+| FIELD\_NAME | FIELD\_TYPE | FIELD\_LEN | FIELD\_DEC | FIELD\_LONG |
+| --- | --- | --- | --- | --- |
+| INVID | C | 16 | | GeoDin measurement point ID |
+| SMPID | N | 9 | | GeoDin Sample ID |
+| PARAM\_DESC | C | 8 | | Parameter ID |
+| MESTEXT | C | 254 | | Text entry |
+| MESOPT | N | 9 | | Measurement - option |
 
 Table of text values: \<DATATYPE>DAT01
 
-***
-
-FIELD\_NAME FIELD\_TYPE FIELD\_LEN FIELD\_DEC FIELD\_LONG
-
-INVID C 16 GeoDin measurement point ID
-
-SMPID N 9 GeoDin Sample ID
-
-PARAM\_DESC C 8 Parameter ID
-
-MESDATE D 8 Date entry
-
-MESOPT N 9 Measurement - option
-
-***
+| FIELD\_NAME | FIELD\_TYPE | FIELD\_LEN | FIELD\_DEC | FIELD\_LONG |
+| --- | --- | --- | --- | --- |
+| INVID | C | 16 | | GeoDin measurement point ID |
+| SMPID | N | 9 | | GeoDin Sample ID |
+| PARAM\_DESC | C | 8 | | Parameter ID |
+| MESDATE | D | 8 | | Date entry |
+| MESOPT | N | 9 | | Measurement - option |
 
 **Object type - Measurement point - Investigation type - Data type - Chemical group - Parameter**
 
@@ -1491,33 +1248,22 @@ The system tables consist of the following tables:
 
 **Object type definition**
 
-***
-
-LOCTYPES GeoDin\_SYS\_LOCTYPES Definition of object types
-
-LOCTABTY GeoDin\_SYS\_LOCTABTY Definition of data tables
-
-LOCTABS GeoDin\_SYS\_LOCTABS Assignment of data tables to object types
-
-LOCSTRS GeoDin\_SYS\_LOCSTRS Definition of the structures of the data tables
-
-***
+| Table | System table name | Definition |
+| --- | --- | --- |
+| LOCTYPES | GeoDin\_SYS\_LOCTYPES | Definition of object types |
+| LOCTABTY | GeoDin\_SYS\_LOCTABTY | Definition of data tables |
+| LOCTABS | GeoDin\_SYS\_LOCTABS | Assignment of data tables to object types |
+| LOCSTRS | GeoDin\_SYS\_LOCSTRS | Definition of the structures of the data tables |
 
 **Measuring point type definition**
 
-***
-
-INVTYPES GeoDin\_SYS\_INVTYPES Definition of measuring point
-
-INVTABS GeoDin\_SYS\_INVTABS Assignment of the data types to the measuring point types
-
-DATTYPES GeoDin\_SYS\_DATTYPES Definition of data types
-
-STFGRP GeoDin\_SYS\_STFGRP Definition of the substance groups
-
-MESSTRS GeoDin\_SYS\_MESSTRS Definition of all measuring point type parameters
-
-***
+| Table | System table name | Definition |
+| --- | --- | --- |
+| INVTYPES | GeoDin\_SYS\_INVTYPES | Definition of measuring point |
+| INVTABS | GeoDin\_SYS\_INVTABS | Assignment of the data types to the measuring point types |
+| DATTYPES | GeoDin\_SYS\_DATTYPES | Definition of data types |
+| STFGRP | GeoDin\_SYS\_STFGRP | Definition of the substance groups |
+| MESSTRS | GeoDin\_SYS\_MESSTRS | Definition of all measuring point type parameters |
 
 Notes on the data fields described:
 
@@ -1537,13 +1283,87 @@ Options for an object are stored bit by bit in binary form in a longint paramete
 
 Each object type is registered with a data record in the LOC-TYPES table. The following data fields are used for this:
 
-+----------+---------------------------------------------------------------------------------------------+--------------------------------------------------------------+ | GEN\_DESC | Descriptor of the digestion type (exactly 8 characters long, consisting of capital letters) | | +----------+---------------------------------------------------------------------------------------------+--------------------------------------------------------------+ | | | | +----------+---------------------------------------------------------------------------------------------+--------------------------------------------------------------+ | GEN\_NAME | Long name of the object type | | +----------+---------------------------------------------------------------------------------------------+--------------------------------------------------------------+ | | | | +----------+---------------------------------------------------------------------------------------------+--------------------------------------------------------------+ | GEN\_OPT | System options | | +----------+---------------------------------------------------------------------------------------------+--------------------------------------------------------------+ | | | | +----------+---------------------------------------------------------------------------------------------+--------------------------------------------------------------+ | | **Bit (Value)** | **Meaning** | +----------+---------------------------------------------------------------------------------------------+--------------------------------------------------------------+ | | | | +----------+---------------------------------------------------------------------------------------------+--------------------------------------------------------------+ | | 0 (1) | GeoDin system object (cannot be changed) | | | | | | | 1 (2) | SEP-compatible object, may be imported | | | | | | | 2 (4) | Object type is displayed during 'Create' | | | | | | | 3 (8) | Object type requires link to others | | | | | | | 4 (16) | Object type allows creation of standard measurement programs | | | | | | | 5 (32) | Attribution of graphic elements | | | | | | | 6 (64) | Dynamic units | | | | | | | 7 (128) | Document description | +----------+---------------------------------------------------------------------------------------------+--------------------------------------------------------------+ | | | | +----------+---------------------------------------------------------------------------------------------+--------------------------------------------------------------+
+| Field | Description |
+| --- | --- |
+| GEN\_DESC | Descriptor of the digestion type (exactly 8 characters long, consisting of capital letters) |
+| GEN\_NAME | Long name of the object type |
+| GEN\_OPT | System options |
+
+GEN\_OPT bit-flags:
+
+| Bit (Value) | Meaning |
+| --- | --- |
+| 0 (1) | GeoDin system object (cannot be changed) |
+| 1 (2) | SEP-compatible object, may be imported |
+| 2 (4) | Object type is displayed during 'Create' |
+| 3 (8) | Object type requires link to others |
+| 4 (16) | Object type allows creation of standard measurement programs |
+| 5 (32) | Attribution of graphic elements |
+| 6 (64) | Dynamic units |
+| 7 (128) | Document description |
 
 **Registration of the tables used for the object type (LOCTABTY)**
 
 Each data table type is registered with a data record in the LOCTABTY table.
 
-+-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+ | TABE\_TYPE | Table type | describes the basic usage of a data table. There are mandatory fields prescribed by the system for each type of data table. | +-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+ | | | | +-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+ | | value=1 | General data table | | | | | | | value=2 | Layer data tables | | | | | | | value=3 | Expansion general data | | | | | | | value=4 | Borehole development | | | | | | | value=5 | Backfilling | | | | | | | value=6 | Pipe removal and installation | | | | | | | value=7 | Removal of special installations | | | | | | | value=8 | Removal measuring point specification | | | | | | | value=9 | Sample table | | | | | | | value=10 | Sounding registry | | | | | | | value=11 | Sounding data | | | | | | | value=12 | Link from LOC | | | | | | | value=13 | Link from FIL | | | | | | | value=14 | Link from PRB | | | | | | | value=15 | Expansion flushing | | | | | | | value=16 | Undifferentiated data table 1:n to location | | | | | | | value=17 | Measured value table - real table in GEOTAB | | | | | | | value=18 | Title data SVZ | | | | | | | value=19 | Layer data table versions | | | | | | | value=20 | SED measured values as probing-temporal for graphic structure like Sonddata | | | | | | | value=21 | Sample measured values as probing-temporal for graphic structure like Sonddata | | | | | | | value=22 | Data table 1:n for location with SUBID | | | | | | | value=23 | Data table 1:n for location with SUBID for LTO\_HNMTab | | | | | | | value=24 | Temporary mem table - not on LOCOBJ | | | | | | | value=25 | Graphic attributes | | | | | | | value=26 | Expansion of title data versions | | | | | | | value=27 | Expansion borehole versions | | | | | | | value=28 | Expansion backfill versions | | | | | | | value=29 | Removal of pipes and installation Versions | | | | | | | value=30 | Removal of special installations Versions | | | | | | | value=31 | Removal of filter data Versions | | | | | | | value=32 | Removal Flushing Versions | | | | | | | value=33 | Document description general data | +-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+ | | | | +-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+ | TAB\_OPT | System options | | +-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+ | | | | +-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+ | | **Bit (Value)** | **Meaning** | +-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+ | | | | +-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+ | | 0 (1) | Main table (general tables and layer tables); in the case of probing register table, probes are saved as BLOB in the reg table (the SNDDATA field with type B must be defined in the reg table), probing data table remains empty | | | | | | | 1 (2) | SEP layer data table | | | | | | | 2 (4) | Depth information starts with 0 | | | | | | | 3 (8) | Shifts can be printed out in DIN form | | | | | | | 4 (16) | Write lock | | | | | | | 5 (32) | not visible | | | | | | | 6 (64) | Delete lock | | | | | | | 7 (128) | Insertion lock | | | | | | | 8 (256) | Numbered layer data table with sub-layers | +-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+ | | | | +-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+ | TAB\_TRC | Standard translation code. Reserved by the system until 16. | | +-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+ | | | | +-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+ | INV\_TYPE | Measuring point type | | | | | | | | If the data table defines the measuring point type (e.g. general data table, filter table, sample table), INV\_TYPE determines the measuring point type and thus the type of measurement results that can be linked. | | +-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+ | | | | +-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Field | Description |
+| --- | --- |
+| TABE\_TYPE | Table type. Describes the basic usage of a data table. There are mandatory fields prescribed by the system for each type of data table. (See the value table below.) |
+| TAB\_OPT | System options (see bit-flag table below) |
+| TAB\_TRC | Standard translation code. Reserved by the system until 16. |
+| INV\_TYPE | Measuring point type. If the data table defines the measuring point type (e.g. general data table, filter table, sample table), INV\_TYPE determines the measuring point type and thus the type of measurement results that can be linked. |
+
+TABE\_TYPE values:
+
+| Value | Meaning |
+| --- | --- |
+| value=1 | General data table |
+| value=2 | Layer data tables |
+| value=3 | Expansion general data |
+| value=4 | Borehole development |
+| value=5 | Backfilling |
+| value=6 | Pipe removal and installation |
+| value=7 | Removal of special installations |
+| value=8 | Removal measuring point specification |
+| value=9 | Sample table |
+| value=10 | Sounding registry |
+| value=11 | Sounding data |
+| value=12 | Link from LOC |
+| value=13 | Link from FIL |
+| value=14 | Link from PRB |
+| value=15 | Expansion flushing |
+| value=16 | Undifferentiated data table 1:n to location |
+| value=17 | Measured value table - real table in GEOTAB |
+| value=18 | Title data SVZ |
+| value=19 | Layer data table versions |
+| value=20 | SED measured values as probing-temporal for graphic structure like Sonddata |
+| value=21 | Sample measured values as probing-temporal for graphic structure like Sonddata |
+| value=22 | Data table 1:n for location with SUBID |
+| value=23 | Data table 1:n for location with SUBID for LTO\_HNMTab |
+| value=24 | Temporary mem table - not on LOCOBJ |
+| value=25 | Graphic attributes |
+| value=26 | Expansion of title data versions |
+| value=27 | Expansion borehole versions |
+| value=28 | Expansion backfill versions |
+| value=29 | Removal of pipes and installation Versions |
+| value=30 | Removal of special installations Versions |
+| value=31 | Removal of filter data Versions |
+| value=32 | Removal Flushing Versions |
+| value=33 | Document description general data |
+
+TAB\_OPT bit-flags:
+
+| Bit (Value) | Meaning |
+| --- | --- |
+| 0 (1) | Main table (general tables and layer tables); in the case of probing register table, probes are saved as BLOB in the reg table (the SNDDATA field with type B must be defined in the reg table), probing data table remains empty |
+| 1 (2) | SEP layer data table |
+| 2 (4) | Depth information starts with 0 |
+| 3 (8) | Shifts can be printed out in DIN form |
+| 4 (16) | Write lock |
+| 5 (32) | not visible |
+| 6 (64) | Delete lock |
+| 7 (128) | Insertion lock |
+| 8 (256) | Numbered layer data table with sub-layers |
 
 **Assignment of data tables to object types (LOCTABS)**
 
@@ -1553,4 +1373,45 @@ For each object type, the descriptors (GEN\_DESC) of the data tables to be used 
 
 The structures of all data tables are stored in the LOCSTRS table. Each data table can contain a maximum of 255 data fields.
 
-+-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | **Data fields** | **Description** | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | TAB\_DESC | Descriptor of a data table | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | FIELD\_NAME | Physical field name | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | FIELD\_TYPE | Physical field type; C (character), N (numeric), D (date), S (date/time) and M (memo) are permitted | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | FIELD\_LEN | Physical field length (for D:=10) | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | FIELD\_DEC | Number of decimal places for numeric fields | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | FIELD\_CNT | Running counter of the field in a data table | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | FIELD\_OPT | System options (extract) | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | **Bit (Value)** | **Meaning** | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | 0 (1) | Indexed field | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | 1 (2) | Unique index (unique) only if bit 0 is set | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | 2 (4) | Field is used for signature / for measured values: Offset field | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | 3 (8) | Field is used for signature (secondary) | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | 4 (16) | Field is used for signature (tertiary) | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | 5 (32) | Mandatory field | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | 6 (64) | Long codes are used (WB) | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | 7 (128) | either only an abbreviation (not bit 6) or long entry editable (with bit 6) | | | | | | | | (bit 6 off): | | | | | | | | on : only one key is allowed | | | | | | | | off : several keys are permitted | | | | | | | | (bit 6 on) : | | | | | | | | on : Long texts can be edited | | | | | | | | off : Long texts cannot be edited | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | 8 (256) | Field visible (for measured values) | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | 9 (512) | Field editable (for measured values) (vacant: always set) | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | 10 (1024) | Quantity parameters | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | 11 (2048) | Calculated parameter | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | 12 (4096) | Negative values allowed | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | 13 (8192) | Anorganic | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | 14 (16384) | Write lockout | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | 15 (32768) | External field | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | 16 (65536) | Conditional write lockout | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | 17 (131072) | controls WB fields, | | | | | | | | Dic: Bit 6 on - write combo key (instead of long name) in DB | | | | | | | | 131136 for Dic - show plain text, key in DB: 17+6 | | | | | | | | 131168 same as mandatory field, 17+6+5 Dic: Bit 6 off - ? as plain text (key in DB) | | | | | | | | 131200 not mandatory only one key 17+7 | | | | | | | | 131232 as mandatory field only one key 17+7+5 Dic: Bit 6 off - ? as plain text (several keys in DB) | | | | | | | | 131072 not mandatory multiple keys 17 131104 mandatory multiple keys 17+5 | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | 18 (262144) | TVQK\_SingleNorm Recoding of the standard text during input | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | 19 (524288) | Field has dynamic units | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | 20 (1048576) | Last FixedCol field | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | 21 (2097152) | Field is automatically transferred to new DS | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | FIELD\_LONG | Long name for data field | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | FIELD\_DIC | Descriptor of a dictionary for the data field | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | FIELD\_GRP | Descriptor of a dictionary for the data field | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | FIELD\_UNIT | Measurement unit | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | FIELD\_FMT | Output format | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | FIELD\_DEF | Default value | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+ | | | | +-----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+
+| Data fields | Description |
+| --- | --- |
+| TAB\_DESC | Descriptor of a data table |
+| FIELD\_NAME | Physical field name |
+| FIELD\_TYPE | Physical field type; C (character), N (numeric), D (date), S (date/time) and M (memo) are permitted |
+| FIELD\_LEN | Physical field length (for D:=10) |
+| FIELD\_DEC | Number of decimal places for numeric fields |
+| FIELD\_CNT | Running counter of the field in a data table |
+| FIELD\_OPT | System options (extract) (see bit-flag table below) |
+| FIELD\_LONG | Long name for data field |
+| FIELD\_DIC | Descriptor of a dictionary for the data field |
+| FIELD\_GRP | Descriptor of a dictionary for the data field |
+| FIELD\_UNIT | Measurement unit |
+| FIELD\_FMT | Output format |
+| FIELD\_DEF | Default value |
+
+FIELD\_OPT bit-flags:
+
+| Bit (Value) | Meaning |
+| --- | --- |
+| 0 (1) | Indexed field |
+| 1 (2) | Unique index (unique) only if bit 0 is set |
+| 2 (4) | Field is used for signature / for measured values: Offset field |
+| 3 (8) | Field is used for signature (secondary) |
+| 4 (16) | Field is used for signature (tertiary) |
+| 5 (32) | Mandatory field |
+| 6 (64) | Long codes are used (WB) |
+| 7 (128) | either only an abbreviation (not bit 6) or long entry editable (with bit 6) (bit 6 off): on : only one key is allowed / off : several keys are permitted; (bit 6 on): on : Long texts can be edited / off : Long texts cannot be edited |
+| 8 (256) | Field visible (for measured values) |
+| 9 (512) | Field editable (for measured values) (vacant: always set) |
+| 10 (1024) | Quantity parameters |
+| 11 (2048) | Calculated parameter |
+| 12 (4096) | Negative values allowed |
+| 13 (8192) | Anorganic |
+| 14 (16384) | Write lockout |
+| 15 (32768) | External field |
+| 16 (65536) | Conditional write lockout |
+| 17 (131072) | controls WB fields, Dic: Bit 6 on - write combo key (instead of long name) in DB; 131136 for Dic - show plain text, key in DB: 17+6; 131168 same as mandatory field, 17+6+5 Dic: Bit 6 off - ? as plain text (key in DB); 131200 not mandatory only one key 17+7; 131232 as mandatory field only one key 17+7+5 Dic: Bit 6 off - ? as plain text (several keys in DB); 131072 not mandatory multiple keys 17; 131104 mandatory multiple keys 17+5 |
+| 18 (262144) | TVQK\_SingleNorm Recoding of the standard text during input |
+| 19 (524288) | Field has dynamic units |
+| 20 (1048576) | Last FixedCol field |
+| 21 (2097152) | Field is automatically transferred to new DS |
