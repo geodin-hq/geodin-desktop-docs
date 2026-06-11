@@ -27,6 +27,8 @@ GeoDin supports client-server databases, which can be hosted on a single compute
 GeoDin databases are based on Microsoft Access files. For other backend options, see the [Installation guide](../installation/express-installation.md).
 {% endhint %}
 
+<div data-full-width="false"><figure><img src="../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption><p>Figure 1</p></figcaption></figure></div>
+
 
 ### Tree hierarchy and navigation
 
@@ -53,6 +55,8 @@ A project's **Documents** area lives directly under the project level and can ho
 
 The **System** panel provides access to system-level configuration. Within this panel, you can access and edit pre-made dictionaries, data types, and object types — including those for G1 locations and AGS standards.
 
+<figure><img src="../.gitbook/assets/Screenshot 2025-12-22 142044.png" alt=""><figcaption><p>Figure 2</p></figcaption></figure>
+
 
 ## 3. Interface controls
 
@@ -75,6 +79,8 @@ The **System** panel provides access to system-level configuration. Within this 
 ### Central ribbon
 
 When you select a location within a project, the central ribbon displays the available methods for that object. Methods are activated by **double-clicking** the method icon.
+
+<figure><img src="../.gitbook/assets/Screenshot 2025-12-22 133833.png" alt=""><figcaption><p>Figure 3</p></figcaption></figure>
 
 
 ---
