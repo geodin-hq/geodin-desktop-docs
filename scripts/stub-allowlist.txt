@@ -7,3 +7,17 @@ public/en/user-management/database-visibility.md
 public/en/user-management/data-privacy-and-ownership.md
 public/en/user-management/groups-and-permissions.md
 public/en/maps/map-view-coordinate-picking.md
+# Slimmed in PR docs/dedup-cleanup — intentional landing pages that cross-link
+# to canonical reference pages (see PR description for the canonical map).
+public/en/navigating-the-geodin-workspace/objects/data-management.md
+public/en/navigating-the-geodin-workspace/objects/general-data.md
+public/en/navigating-the-geodin-workspace/objects/sample-data.md
+public/en/navigating-the-geodin-workspace/objects/well-design-data.md
+public/en/data-analysis/calculation-engine/data-checks-and-validations.md
+public/en/plug-ins-and-tools/com-api/overview.md
+public/en/navigating-the-geodin-workspace/documents/document-organization.md
+public/en/data-analysis/queries/conditions-and-operators.md
+public/en/data-analysis/queries/creating-queries.md
+public/en/data-analysis/queries/parameterized-queries.md
+public/en/data-analysis/queries/sql-and-advanced-options.md
+public/en/navigating-the-geodin-workspace/projects/copying-and-transferring-projects.md
