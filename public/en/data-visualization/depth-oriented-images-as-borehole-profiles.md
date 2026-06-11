@@ -17,6 +17,8 @@ Name your image files clearly (e.g., by drill core section) for easy depth assig
 Place all core photos in one folder (e.g., `core photos`) for easier display later.
 {% endhint %}
 
+<div align="center"><figure><img src="../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure></div>
+
 ### Step 3: Display images in a layout
 
 1. Use a reference graphic element based on the borehole's vertical scale (e.g., borehole log, well design, samples).
@@ -24,6 +26,8 @@ Place all core photos in one folder (e.g., `core photos`) for easier display lat
 3. In the borehole log's **object properties**, set the data source to **Documents**.
 4. Click **Browse Documents** and select the folder containing the depth-oriented images.
 5. GeoDin will automatically stitch images at the correct depths based on the **Dimensions** tab values.
+
+<figure><img src="../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
 
 ### Optional image display settings
 
