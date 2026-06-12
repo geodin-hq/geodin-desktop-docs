@@ -1,257 +1,250 @@
-
 # Creating Cross Sections
 
-### Undo
+A cross section in GeoDin is a vertical slice through the ground that displays borehole data — logs, samples, groundwater levels, and data sequences — projected onto a user-defined line of section. This page is a reference for the cross-section window panels and their settings. For layout element options (axis ranges, data sequence display, layout lists), see [Cross Section Layouts](cross-section-layouts.md).
 
-Here the maximum number of steps and the maximum of memory available for the function **Undo changes** are selected.
-
-The actual capacity of memory is indicated. If large cross-section graphics are created often and sufficient PC-RAM is available, the maximum available memory should be greatly increased.
-
-_**Note:**_ _If 0 is chosen as maximum number of steps, the undo function is deactivated._
-### Show filters
-
-If an existing well design is added to a groundwater measurement place, this option can be used to add the presentation of the filter length in the borehole cross-section.
-### Snap
-
-The snap distance - that is the maximum distance, which cannot be exceeded for connecting one point automatically to another, can be adjusted between 1 and 50 mm. The selection of the distance is possible using the menu entry _**Preferences**\\**Snap preferences**_.
-
-Graphic elements, with nodes that are influenced by the snap function are:\
-line, rectangle, polyline and borehole profile.
-### Import layer boundaries
-
-For the import of layer boundaries in GeoDin the menu function _**File**\\**Import**\\**Layer boundaries**_ is available. For this an existing profile cross-section in the current graph is required.
-
-\
-Using the icon **Import file** the selected file is opened.
-
-Example:
-
-0 4444440.00000 5555200.00000 50.2\
-0 4444425.00000 5555180.00000 50.7\
-0 4444430.00000 5555150.00000 50.3\
-0 4444450.00000 5555100.00000 51.1\
-0 4444410.00000 5555050.00000 50.3\
-END
-
-The file contains the 4 columns:
-
-1\. Column = 0\
-2\. Column = Easting\
-3\. Column= Northing\
-4\. Column = Elevation
-
-_**Attention:**_ _The coordinate systems used in the section and the import file must match and must be at right angles._
-
-The polyline resulting from the file is shown in the left preview, so that a control with the real line of section is possible. The elevation values of coordinates, which do not match exactly with the line of section, are projected perpendicular on the line of section.
-
-The icon **Add layer boundary** transfers polylines in the graph. Without leaving the dialogue, more layer boundaries can be imported.
-### Line types
-
-Select here the line type for the separating lines between the subsections of the interbedding.
-
-A line or outline is displayed in the chosen Color and Line type. To select a color, which is not available in the drop down menu, click in the list on the first entry **"Individually"**. In the color dialogue you can adjust a new color.
-
-The line thickness can be chosen in mm or pixels. The selection should be done in mm by preference. In this case the thickness of the lines in the preview is not equal to the print output and not depending on the used print resolution. The selection of a line thickness in pixels is only suitable for graphs, which are only viewed on the screen.
+## Reference: Cross-section panels
 
 ### Objects
 
-By selecting the branch _**Objects**_ at a cross-section, the window \<Cross-section: Objects> opens. The window is freely scalable and stays visible until another branch in the object properties tree is selected or the window is closed.
+By selecting the **Objects** branch in the cross-section object properties tree, the **Cross-section: Objects** window opens. The window is freely scalable and stays visible until another branch is selected or the window is closed.
 
-Objects needed for the cross-section or for orientation in the site plan can be added directly by Drag & Drop from the GeoDin object manager. Single objects, queries or groups can be selected with the mouse and can be dropped either onto the list or the site plan. If an object is already included in the list, it is not added again.
+Objects for the cross section can be added directly by drag and drop from the GeoDin object manager. Single objects, queries, or groups can be selected and dropped onto the list or the site plan. If an object is already included in the list, it is not added again.
 
-Objects for a cross-section can be loaded from any database or project, i.e. it is not necessary to store data for a cross-section in one project or database.
+Objects can be loaded from any database or project — data for a cross section does not need to be stored in a single project or database.
 
-In the site plan, the objects loaded are presented with a sign and a label, the site plan can be zoomed and moved as necessary with the available tools.
+In the site plan, loaded objects are shown with a marker and label. The site plan can be zoomed and panned with the available tools.
 
-**Borehole list:**
+**Borehole list**
 
-The selected boreholes are displayed in a site plan presentation. An object can be selected either in the list or in the site plan, it is displayed in red in the site plan and marked in the list.
+The selected boreholes are displayed in a site plan. An object can be selected either in the list or in the site plan — it appears in red in the site plan and is highlighted in the list. The coordinates, elevation, and depth of the selected object are shown below the list.
 
-The coordinates of the object, elevation and depth of the borehole are diplayed below the list of objects.
-
-An object deleted from the object list with the **Remove** button is also deleted from the site plan.
+Use the **Remove** button to remove an object from the list; it is also removed from the site plan.
 
 **Coordinate transformation**
 
-If the coordinates of the boreholes are in different meridian zones, the coordinates can be transformed into a single zone. This is done by selecting the desired zone. The presentation in the site-plan is corrected accordingly, making it possible to define a line of section (This function is available for the Gaus-Krüger coordinate system).
+If borehole coordinates span different meridian zones (Gauss-Krüger coordinate system), use the zone selector to transform all coordinates into a single zone. The site plan updates accordingly, making it possible to define a continuous line of section.
 
-If the boreholes are located on the _\[southern hemisphere]_ (Y coordinate increasing "downward"), checking the option -Southern hemisphere- will mirror the site plan.
+If boreholes are on the southern hemisphere (Y coordinate increasing downward), enable **Southern hemisphere** to mirror the site plan.
 
-It is possible to multiply the object coordinates with a selectable factor, if necessary.
+Object coordinates can be multiplied by a selectable factor if required.
 
-Changing between the different parts of the cross-section (objects, line of section, scales, and cross-section scenarios) is possible by directly clicking on the branch in the object properties window, or by using the buttons in the upper right of the window.
+Switching between cross-section parts (objects, line of section, scales, cross-section scenarios) is possible by clicking directly on the branch in the object properties window, or by using the buttons in the upper right of the window.
+
 ### Line of section
 
-By selecting the branch _**Line of section**_ at a cross-section, the window 'Cross-section: Line of section' opens. The window is freely scalable and stays visible until another branch in the object properties tree is selected or the window is closed.
+By selecting the **Line of section** branch, the **Cross-section: Line of section** window opens. The window is freely scalable and stays visible until another branch is selected or the window is closed.
 
-In this window, the line of section is defined.
+Two tools are available for defining the line of section:
 
-To draw a line of section, two tools are available:
+* The first tool defines the line of section itself. The line can contain any number of nodal points; the position of each nodal point can be edited.
+* The second tool projects objects onto the line of section. Objects are always projected at a right angle using the shortest distance to the line. Clicking a projected object deselects it. Objects already used as nodal points cannot be projected again.
 
-With the first tool, the line of section itself is defined. The line of section can contain any number of nodal points. The position of a nodal point can be edited.
+The line of section can be built by connecting individual objects as nodal points, with additional objects projected onto the line. It is also possible to define nodal points freely without objects, then project all objects onto the resulting line.
 
-With the second tool objects are projected onto the line of section. Objects are always projected at a right angle, using the shortest distance to the line of section. By clicking on a projected object, the borehole will be deselected. It is not possible to project objects already used as a nodal point.
+The table on the right lists all nodal points and objects used as nodal points, with their coordinates. Coordinates of nodal points can be edited directly in the table. If a nodal point coincides exactly with an object, the object name is shown. Changing the coordinates of such a nodal point disconnects it from the object (the object can still be projected onto the line). Nodal points that are not needed can be removed with the **Remove nodal point** button.
 
-The line of section can thus be constructed by connecting the individual objects, with the possiblility to project additional objects onto the section line. It is also possible to create a line of section with freely placed nodal points, and all objects are projected onto it.
+The entire line of section can be deleted with the **Remove line of section** button.
 
-The table at the right side of the window shows all nodal points and objects (those which are used as nodal points) with their coordinates.
+**Saving and loading a line of section**
 
-It is possible to change the coordinates of the nodal points here. If a nodal point is located exactly at an object, the object name will be shown. If the coordinates of such a nodal point are changed, the borehole is no longer included into the cross-section, its name will not be displayed here (but the object could be projected onto the line of section). Nodal points which are not needed can be deleted from the list and the site plan with the **Remove nodal point** button.
+The line of section can be saved to a file with the **Save line of section** function. Each nodal point's coordinates are saved in LIN format (ASCII):
 
-With the button **Remove line of section**, the entire line of section can be deleted.
-
-The line of section can be saved to a file with the **Save line of section** function. The coordinates of each nodal point are saved in the LIN format in an ASCII file:
-
-1\
-4444440.00000 5555200.00000\
-4444418.67902 5555150.35802\
-4444450.00000 5555100.00000\
-4444410.00000 5555050.00000\
-END\
+```
+1
+4444440.00000 5555200.00000
+4444418.67902 5555150.35802
+4444450.00000 5555100.00000
+4444410.00000 5555050.00000
 END
+END
+```
 
-It is possible to load the nodal points from an existing line of section with the **Load line of section** function, if the nodal points are stored in LIN format. This way lines of section from other programs can be imported.
+A saved line of section can be reloaded with the **Load line of section** function. This also allows importing lines of section from other programs, provided they are stored in LIN format.
 
-Changing between the different parts of the cross-section (objects, line of section, scales, and cross-section scenarios) is possible by directly clicking on the branch in the object properties window, or by using the buttons in the upper right of the window.
 ### Cross-section scenarios
 
-Detailled scenarios can be created, loaded and saved.
+Scenarios define which graphic elements are shown for each borehole in the cross section. A scenario contains one graphic element (a scene) to be applied across all selected boreholes. Example scenes: a borehole log scene, or a variable text element showing the borehole name.
 
-A scene contains a graphic element, which is to be used to display information for all selected boreholes. So for example a scene could be the borehole log, another could be the variable text element with the borehole name. All depth related graphic elements like borehole logs, data sequences (for cone penetration tests, geophysical logging data or sample data), well design and groundwater levels can be used in a scene.
+All depth-related graphic elements can be used in a scene: borehole logs, data sequences (cone penetration tests, geophysical logging data, sample data), well design, and groundwater levels.
 
-The following elements are available for scenes:
+**Available scene types**
 
-1. Distance ruler
-2. Well design
-3. Report
-4. Borehole profile
-5. Ground surface
-6. Groundwater
-7. Depth scale
-8. Legend for borehole profiles
-9. Measurement graphic
-10. Samples
-11. Special features
-12. Data sequences
-13. Symbols
-14. Variabler Text
+| Scene | Description |
+|---|---|
+| Distance ruler | Horizontal labelling line shown beneath the cross section |
+| Well design | Well construction elements |
+| Report | Tabular data report |
+| Borehole profile | Borehole log |
+| Ground surface | Surface elevation line |
+| Groundwater | Groundwater level |
+| Depth scale | Vertical depth scale bar |
+| Legend for borehole profiles | Legend items for profiles, symbols, samples, and groundwater |
+| Measurement graphic | Data sequence graph (CPT, geophysical, sample data) |
+| Samples | Sample markers |
+| Special features | Special feature symbols |
+| Data sequences | Data sequence values |
+| Symbols | Object symbols |
+| Variable text | Text element pulling values from the database |
 
-The _legend_ scene creates legend items for borehole profiles, special symbols, samples and groundwater elements.
+By default, the borehole log, borehole name (variable text), and two scale bars are selected. Additional scenes can be added, removed, or modified.
 
-As default the scenes borehole log, borehole name (variable text) and two scale bars are selected. Additionally elements can be added, removed or modified.
+Use the **Add** button to add more scenes and select the graphic element type. The drawing order follows the sequence in the list — the top scene is drawn first, the bottom scene last. Change the order with the arrow buttons. In cases of overlap, drawing order determines which element appears on top.
 
-Use the button to add more scenes and select the type of graphic element.
+Cross-section scenarios can be saved and loaded independently of boreholes (file format: `*.gsz`). Click **Save** to store the scenario (`*.gsz`); **Load** applies a saved scenario to another cross section. All predefined scenes are available and can be adjusted as required. Multiple scenario files can be created for different cross-section themes.
 
-The sequence of the series defines the drawing order. The scene on top will be drawn first, the one on the bottom will be drawn last. In cases of an overlap in can be important, which element is drawn above the other. Change the order by using the arrow bars.
+## Reference: Scene settings
 
-Cross-section scenes can be loaded and saved independent from boreholes as files and be re-used for different cross-sections. To create another cross-section with different boreholes you only have to load the scenario file. All predefined scenes are availble for the new cross-section and can be adjusted as required. You can create several of scenario files for different themes of cross-sections.
-
-To save a scenario click **Save** The scenario will be saved in the selected folder with the file format \*.gsz.
-
-With the button **Load** you can load a saved scenario to use it on another cross-section.
 ### Cross section scene
 
-For each scene a name can be chosen and the defined wether it schould be displayed in the graphic or not.
+For each scene, a name can be assigned and its visibility toggled (shown or hidden in the graphic).
 
-**Scene sizeElement width**
+**Element width**
 
-For the scene elements the display width can be defined. If the option 'automatic' is chosen the cross-section modul calculates reasonable widths as default. If a data sequence like a penetration test should be displayed in a certain width it can be entered here. Widths from 1 to 100 mm are possible.
+The display width of the scene element can be set manually or left on **Automatic**, which lets the cross-section module calculate a reasonable default width. For data sequences such as penetration tests that require a specific width, enter the value here. Widths from 1 to 100 mm are accepted.
 
 **Element height**
 
-This option can only be selected for measurement graphics. Here, the desired height for the scene in the graphic can be selected.
+Available for measurement graphics only. Sets the desired height of the scene in the graphic.
 
 **Relative scenario position**
 
-Here the positions of the elements to display relative to the anchor point of the object can be modified for all elements in horizontal direction. The element \<Variable Text> can also be moved in vertical direction.
+The position of each scene element relative to the anchor point of the object can be adjusted horizontally for all elements. Variable text elements can also be moved vertically.
 
-The anchor point is shown on the following graphic:
+The anchor point (X:0, Y:0) is the calculated position of the object in the cross section based on its coordinates and elevation. Example positions:
 
-The anchor point X:0, Y:0 is the calculated position (according to the coordinates and the elevation) of the object in the cross-section. The scene 'Borehole log' is drawn exactly on the anchor point. The scenes 'Scale bar' and 'Groundwater' can only be moved vertical, since they have to be adjusted to the borehole log. The drawing point of the scale bar is 20 mm left of the borehole log (related to the anchor point), the relative scenario position is therefore X:-20, Y:0. The drawing point of the groundwater symbol is 10 mm right of the borehole. The relative scenario position is X:10, Y:0.
-
-For variable text elements the alignment (section alignment in the properties of the text element), whether the text should be displayed above or below the borehole log. With the allignment 'Top' the text element 'Borehole name', will be added above the borhole (relative scenario position X:0,Y:-5). The scene 'Enddepth' is added below the borehole log (relative scenario position X:-5,Y:5) since the option bottom was chosen.
+* **Borehole log** — drawn directly on the anchor point (X:0, Y:0)
+* **Scale bar** — drawn 20 mm to the left: X:−20, Y:0
+* **Groundwater symbol** — drawn 10 mm to the right: X:10, Y:0
+* **Borehole name (variable text, top-aligned)** — shown above the borehole: X:0, Y:−5
+* **End depth (variable text, bottom-aligned)** — shown below the borehole log: X:−5, Y:5
 
 **Using scenes**
 
-Select here, if the scene should be applied on selected objects (default all objects) of the cross-section or only the first object from the left and the right. The last option is designed especially for scale bars, which usually should only appear on the outside of the cross-section. The individual settings can be done under [Objects to display](creating-cross-sections.md).
+Select whether the scene is applied to all objects in the cross section (default), or only to the first object on the left and the first on the right. The latter option is intended for scale bars, which typically appear only at the outer edges of the cross section. Individual object assignment can be configured under [Objects](#objects).
+
 ### Column properties
 
 **Creating columns**
 
-In addition to manually creating columns, you can automate this process based on data fields from the chosen data source. This option is useful for reports designed for export (e.g. Excel). Further column headings options and formatting of automatic macros can be defined **Options**. It is better to use a fixed report width, independent of the number of columns.
+In addition to manually creating columns, you can automate this process based on data fields from the chosen data source. This option is useful for reports designed for export (for example, Excel). Further column heading options and formatting of automatic macros can be defined under **Options**. It is better to use a fixed report width, independent of the number of columns.
 
 **Report width**
 
-Define if your report should have a fixed width.
+Define whether your report should have a fixed width.
 
-With this setting you can fix the report width even if there are invisible or removed (if empty) columns.
-
-Each remaining column has their width calculated proportional to the report width.
+With this setting you can fix the report width even if there are invisible or removed (if empty) columns. Each remaining column has its width calculated proportionally to the report width.
 
 **Example:**
 
-Column 1: 20mm
+| Column | Defined width | Visible |
+|---|---|---|
+| Column 1 | 20 mm | Yes |
+| Column 2 | 40 mm | Yes |
+| Column 3 | 50 mm | Yes |
+| Column 4 | 30 mm | Yes |
+| Column 5 | 10 mm | No (invisible) |
+| Column 6 | 20 mm | No (invisible) |
 
-Column 2: 40mm
+Fixed report width: 200 mm. Sum of visible columns: 20 + 40 + 50 + 30 = 140 mm.
 
-Column 3: 50mm
-
-Column 4: 30mm
-
-Column 5: 10mm (invisble)
-
-Column 6: 20mm (invisible)
-
-fixed report width: 200mm
-
-Complete width of the remaining columns is 20+40+50+30=140.
-
-The outcome of this is:
-
-Column 1: 20/140\*200=29mm
-
-Column 2: 40/140\*200=57mm
-
-Column 3: 50/140\*200=71mm
-
-Column 4: 30/140\*200=43mm
+Resulting widths: Column 1 = 29 mm · Column 2 = 57 mm · Column 3 = 71 mm · Column 4 = 43 mm
 
 **Horizontal report orientation**
 
-This setting is only active when the report width is not fixed and coulmns are either invisible or empty columns removed. Hence the report will be smaller than the element frame would allow and can be positioned horizontally. The default orientation setting is left
+This setting is only active when the report width is not fixed and columns are either invisible or empty columns are removed. In that case the report will be smaller than the element frame allows, and can be positioned horizontally. The default orientation is left.
 
 **Vertical report orientation**
 
-This setting is only available when the report data overflows one page. The default orientation setting is top.
+This setting is only available when the report data overflows one page. The default orientation is top.
 
-_**Note:**_ _Both settings are independant from element anchors, since they are only releated to their respective element container._
+{% hint style="info" %}
+Both orientation settings are independent of element anchors, as they relate only to their respective element container.
+{% endhint %}
+
+## Reference: Display settings
+
+### Undo
+
+Sets the maximum number of undo steps and the maximum memory available for the **Undo changes** function. The current memory capacity in use is displayed.
+
+If large cross-section graphics are created frequently and sufficient RAM is available, increase the maximum memory allocation.
+
+{% hint style="info" %}
+Setting the maximum number of steps to 0 deactivates the undo function.
+{% endhint %}
+
+### Show filters
+
+When an existing well design is added to a groundwater measurement point, this option adds the filter length to the borehole cross-section display.
+
+### Snap
+
+The snap distance — the maximum distance within which one point automatically connects to another — can be set between 1 and 50 mm. The snap distance is configured via **Preferences** > **Snap preferences**.
+
+Graphic elements whose nodes are affected by the snap function: line, rectangle, polyline, and borehole profile.
+
+### Line types
+
+Sets the line type for separating lines between subsections of the interbedding.
+
+A line or outline is shown in the chosen color and line type. To use a color not in the drop-down, select **Individually** at the top of the list and choose a custom color in the color dialog.
+
+Line thickness can be set in mm or pixels. Prefer mm: thickness in mm is independent of print resolution, so the preview may differ from print output. Pixel-based thickness is only appropriate for graphics viewed on screen only.
 
 ### View
 
-Define here the options for the scale bar:
+Defines options for the scale bar element.
 
 **Number of main divisions**
 
-Select here how many divisions should be displayed in the scale bar. It contains n+1 scale bar sections (n is the number entered).
+Select how many divisions to display. The scale bar contains n+1 sections, where n is the number entered.
 
 **Alignment**
 
-The scale bar element has a dynamic size, that changes relatively to the presetting in % and is rounded to a common scale. With this option you define, if the anchor point should be the left or the right edge of the scale bar.
+The scale bar element has a dynamic size that adjusts relative to the configured percentage and is rounded to a common scale. This option sets whether the anchor point is the left or right edge of the scale bar.
 
-**Example:**
-
-\- A scale bar size of 25 % of the map might be for example 5 cm
-
-\- The exact scale bar would be 8223 m.
-
-\- This is adjusted afterwards to a reasonable length (8000 m).
-
-\- Because the size of the scale bar element is changed to 8000 m, the scale bar element in this case is smaller than the selected 25 % = 5 cm.
+Example: a scale bar set to 25% of the map might resolve to 5 cm → exact value 8,223 m → rounded to 8,000 m → the element is slightly smaller than the original 25%.
 
 ### Distance ruler
 
-With the help of the cross-section scenario 'Distance ruler' additional labelling can be added to the objects shown in the section, for example the distance between objects. These are arranged in a horizontal line and usually shown beneath the cross-section. The ruler is composed of a configurable rectangle with the required [Labeling](creating-cross-sections.md).
+The **Distance ruler** scene adds horizontal labelling to the objects shown in the cross section (for example, distances between boreholes). Rulers are arranged in a horizontal line, usually shown beneath the cross section. Each ruler is a configurable rectangle with the required labelling content.
 
-The ruler starts at the position of the first cross-section object and ends at the last object on the right. The relative position of the start and end points can be defined using the two 'Position' entry fields.
+The ruler starts at the position of the first cross-section object and ends at the last object on the right. The relative start and end positions can be adjusted with the two **Position** entry fields.
 
-Shared reference content for this area lives in [Cross Section Layouts](cross-section-layouts.md).
+For labelling options, see [Cross Section Layouts](cross-section-layouts.md).
+
+## Reference: Import layer boundaries
+
+Layer boundaries from external files can be imported using **File** > **Import** > **Layer boundaries**. An existing profile cross section in the current graph is required before importing.
+
+Use the **Import file** icon to open the file. The file must contain four columns in space-delimited ASCII format:
+
+| Column | Content |
+|---|---|
+| 1 | 0 (constant) |
+| 2 | Easting |
+| 3 | Northing |
+| 4 | Elevation |
+
+Example:
+
+```
+0 4444440.00000 5555200.00000 50.2
+0 4444425.00000 5555180.00000 50.7
+0 4444430.00000 5555150.00000 50.3
+0 4444450.00000 5555100.00000 51.1
+0 4444410.00000 5555050.00000 50.3
+END
+```
+
+{% hint style="warning" %}
+The coordinate systems used in the cross section and in the import file must match and must be at right angles.
+{% endhint %}
+
+The polyline from the file is shown in the left preview so it can be checked against the actual line of section. Elevation values for coordinates that do not align exactly with the line of section are projected perpendicularly onto it.
+
+Use the **Add layer boundary** button to transfer polylines into the graph. Multiple layer boundaries can be imported without closing the dialog.
+
+***
+
+For axis ranges, scales, and labeling options, see [Cross Section Layouts](cross-section-layouts.md).
