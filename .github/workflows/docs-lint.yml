@@ -4,16 +4,27 @@ on:
   pull_request:
     paths:
       - 'public/**/*.md'
+      - 'public/**/.gitbook/assets/**'
       - 'scripts/**'
       - '.github/workflows/docs-lint.yml'
   push:
     branches: [main]
+    # No path filter on push: this is what catches GitBook->git sync commits
+    # (e.g. "GITBOOK-86") that change ONLY assets and bypass pull requests.
 
 jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Check asset integrity
+        # Required: detects silent GitBook asset swaps — an existing
+        # `.gitbook/assets/` filename whose image bytes change without intent
+        # (the GITBOOK-86 failure mode). Pinned in scripts/asset-manifest.sha256.
+        # On an intentional asset change, run `scripts/check-asset-integrity.sh
+        # --update` and commit the refreshed manifest in the same PR.
+        run: bash scripts/check-asset-integrity.sh
 
       - name: Check duplicate src: references
         # Required: the dedupe cleanup is complete and any future PR that

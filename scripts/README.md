@@ -22,6 +22,18 @@ Fails if any `.md` page has fewer than 10 lines of real content (frontmatter, bl
 MIN_LINES=20 ./scripts/check-stubs.sh   # raise the bar
 ```
 
+## `check-asset-integrity.sh`
+
+Fails if an existing `.gitbook/assets/` image's **content** changes, or a pinned asset disappears — the silent-swap failure mode. GitBook keeps every image in one flat folder with generic names (`image (N).png`, `N_Screen.jpg`); a GitBook→git sync can re-point an existing filename at different bytes while leaving the page markdown untouched (commit `ce308ef` / "GITBOOK-86" did exactly this to 20 screenshots, unnoticed for ~2 months). Every asset is pinned by sha256 in `asset-manifest.sha256`. New uploads are allowed and only reported; mutating an existing file is what fails.
+
+```bash
+./scripts/check-asset-integrity.sh           # verify against the manifest (CI)
+./scripts/check-asset-integrity.sh --update   # regenerate after an intended change
+ROOT=public/en ./scripts/check-asset-integrity.sh   # narrow scope
+```
+
+On a legitimate change (new screenshot for a step, GitBook re-export): review the flagged files, then run `--update` and commit the refreshed `asset-manifest.sha256` in the same PR. Because GitBook syncs *into* this repo, the `push: main` trigger (no path filter) is what surfaces a sync-introduced swap — it can't block an already-pushed commit, but it turns a months-long silent corruption into a red check within minutes.
+
 ## `check-text-similarity.py`
 
 Informational audit: finds **near-duplicate pages** and **repeated paragraph blocks** that don't share a `<!-- src: -->` marker (so the marker-based linter can't catch them). 5-word word-shingles + Jaccard, page-level AND block-level, with `difflib.SequenceMatcher.ratio()` as a secondary verify on top candidates. Stdlib only.
@@ -40,4 +52,4 @@ Defaults: page Jaccard ≥ 0.55, block Jaccard ≥ 0.75 with ≥ 40 normalized t
 
 ## CI
 
-`check-duplication.sh` and `check-stubs.sh` run via `.github/workflows/docs-lint.yml` on every PR. `check-duplication.sh` is required; `check-stubs.sh` is informational. `check-text-similarity.py` is not in CI — it's a local audit tool.
+`check-asset-integrity.sh`, `check-duplication.sh`, and `check-stubs.sh` run via `.github/workflows/docs-lint.yml`. `check-asset-integrity.sh` and `check-duplication.sh` are required; `check-stubs.sh` is informational. The asset check also runs on every push to `main` (no path filter) so GitBook sync commits are caught. `check-text-similarity.py` is not in CI — it's a local audit tool.
