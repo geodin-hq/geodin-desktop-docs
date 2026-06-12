@@ -10,8 +10,6 @@ description: Regression and Curve Fitting
 
 Optionally in a time line series presentation curves, bars and symbols (in any combination) can be used. If no presentation type is chosen, the series is not displayed (this can be sensible for series, which are used for aggregations).
 
-While selecting the presentation type <**Curve**> optionally an interruption criterion can be selected. Here the time span between two measurements is decisive. This way you can avoid the visual impression of continuous measurements through a connected line. In combination with a symbol or bar diagram in the areas, in which samples were taken only seldom, you receive different graphic presentation types for irregular measurement intervals.
-
 By default, two measuring points are connected by a line in the graph, which is inclined differently at each measurement values. With the option <**Step plot**> presentations can be achieved, which show a measuring point **from** a certain time. For the following measurement, the curve is drawn as a horizontal line and then perpendicularly to the next value. With this type of representation, the option <**drawing till end of diagram**> can be helpful, which continues the line of the series until the end of the timeline. Thus it can be shown that the measured value has not changed since the last measurement
 
 By default data records on a curve are ignored if the chosen parameter has no value (although a time exists) and a line is drawn through these records. This line can be interupted using the option **break line for empty records**.

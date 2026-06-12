@@ -8,4 +8,3 @@ To help GeoDin find a network dongle in your network more quickly, you can use t
 2. Enter the **IP address** of your license server (or the PC where the network dongle is connected) in the file.
 3. Download a sample file here:\
    [http://download.geodin.com/driver/hasp/NETHASP\_ini.zip](http://download.geodin.com/driver/hasp/NETHASP_ini.zip)
-

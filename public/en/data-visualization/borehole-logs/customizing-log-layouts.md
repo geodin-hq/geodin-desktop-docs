@@ -32,10 +32,6 @@ The element name is used mainly to identify the graphic elements of a GeoDin gra
 
 Display of the drawing layer, on which the graphic element is placed. Using the icon **In another layer** the graphic element can be moved in anther drawing layer. You find further information on drawing layers in the chapter [Drawing layer](../layouts/layout-editor-basics.md).
 
-**Arrangement in the fore- or background**\
-\
-Overlapping graphic elements are displayed in order of insertion into the graph. This order can be changed using the icons **Bring to front** and **Send to back**. If the graphic element is part of a group the arrangement is only changed inside the group, but the other elements of the graph are not affected. If necessary the group frame has to be moved in the fore- or background, to receive a change of the arrangement of the grouped elements relative to the rest of the graph.
-
 ### Complex graphic elements
 
 The second toolbar contains complex graphic elements. Here you find tools for borehole logs, well design, data sequences etc.
@@ -56,8 +52,6 @@ The method to create graphs with complex graphic elements can be structured in t
 Using the tool a object frame is drawn. The frame should be large enough to hold all the graphic elements. The selected frame is represented by 4 grey squares and 4 grey side lines. If not selected the frame is represented by 4 grey angles. The selection of the object frame as an active graphic element is done with the mouse in the boundary area of the frame or with the  ![Ctrl](../../.gitbook/assets/icons/ctrl.png) **Ctrl** key pressed at any place inside the frame.
 
 **2. Adding an element inside of the object frame**
-
-To draw a geological graphic element inside the object frame, you select the object frame and then the chosen tool from the symbol bar. The graphic element can only be drawn, placed and scaled inside the object frame. After insertion the graphic elements are shown as blue dashed markings and show the space that will be needed for presentation of the borehole data. Editing the geological graphic elements is equal to the editing of the elementary graphic elements.
 
 **3. Defining the featured object or objects at**
 
@@ -155,10 +149,6 @@ The element name is used mainly to identify the graphic elements of a GeoDin gra
 
 Display of the drawing layer, on which the graphic element is placed. Using the icon **In another layer** the graphic element can be moved in anther drawing layer. You find further information on drawing layers in the chapter [Drawing layer](../layouts/layout-editor-basics.md).
 
-**Arrangement in the fore- or background**\
-\
-Overlapping graphic elements are displayed in order of insertion into the graph. This order can be changed using the icons **Bring to front** and **Send to back**. If the graphic element is part of a group the arrangement is only changed inside the group, but the other elements of the graph are not affected. If necessary the group frame has to be moved in the fore- or background, to receive a change of the arrangement of the grouped elements relative to the rest of the graph.
-
 ### Object frame
 
 The object frame is the key element for the presentation of geological objects. It is used for combination (grouping) of the graphic elements of a geological object. Therefore a object frame has to be drawn for each borehole, if more than one borehole should be shown in one graph.
@@ -184,10 +174,6 @@ The element name is used mainly to identify the graphic elements of a GeoDin gra
 [Drawing layer](../layouts/layout-editor-basics.md)
 
 Display of the drawing layer, on which the graphic element is placed. Using the icon **In another layer** the graphic element can be moved in anther drawing layer. You find further information on drawing layers in the chapter [Drawing layer](../layouts/layout-editor-basics.md).
-
-**Arrangement in the fore- or background**\
-\
-Overlapping graphic elements are displayed in order of insertion into the graph. This order can be changed using the icons **Bring to front** and **Send to back**. If the graphic element is part of a group the arrangement is only changed inside the group, but the other elements of the graph are not affected. If necessary the group frame has to be moved in the fore- or background, to receive a change of the arrangement of the grouped elements relative to the rest of the graph.
 
 ### Selection syntax
 
@@ -351,8 +337,6 @@ The (vertical) text orientation of the labeling can be chosen, as well as the li
 
 Select if the borehole log should be drawn (otherwise only labels are displayed).
 
-The data presentation allows the presentation of borehole data in different country norms. For this [Standards](../../configuration/ground-description-standards.md) and fill patterns are necessary. Once entered borehole logs can this way be put out in the original language with the customary fill pattern, as well as in any foreign language with completely different fill patterns. In the mode "Automatic" the language and corresponding presentation norm of the data entry are used.
-
 Optionally the width of the profile can be selected -Automatic- or directly -Default-.
 
 ### Main layers
@@ -362,8 +346,6 @@ In most cases the presentation of a borehole log is based on the main layers. So
 Optionally the main layers can be drawn colored or black and white, transparent or opaque. For the printout the line thickness of the fill patterns can be selected.
 
 ### Layer query
-
-If you choose the option -Layer query- as presentation form, the borehole log is not filled with the fill patterns of the petrographic description from the original layer data, but with the fill patterns of the filled layer order. The calculation is done directly before the presentation of the profile, so that a correction of the layer features in the layer data editor leads to an immediate change in the borehole log presentation.
 
 The presentation can either be based on a [Layer query file](../../data-analysis/queries/complex-layer-queries.md) or the input of a [Individual conditions](../../data-analysis/queries/conditions-and-operators.md).
 

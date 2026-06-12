@@ -20,10 +20,6 @@ The element name is used mainly to identify the graphic elements of a GeoDin gra
 
 Display of the drawing layer, on which the graphic element is placed. Using the icon **In another layer** the graphic element can be moved in anther drawing layer. You find further information on drawing layers in the chapter [Drawing layer](layouts/layout-editor-basics.md).
 
-**Arrangement in the fore- or background**\
-\
-Overlapping graphic elements are displayed in order of insertion into the graph. This order can be changed using the icons **Bring to front** and **Send to back**. If the graphic element is part of a group the arrangement is only changed inside the group, but the other elements of the graph are not affected. If necessary the group frame has to be moved in the fore- or background, to receive a change of the arrangement of the grouped elements relative to the rest of the graph.
-
 ### Piper diagram
 
 The Piper diagram after PIPER (1944) is one of the most common methods to display hydrogeochemical analyses.
@@ -57,10 +53,6 @@ The element name is used mainly to identify the graphic elements of a GeoDin gra
 [Drawing layer](layouts/layout-editor-basics.md)
 
 Display of the drawing layer, on which the graphic element is placed. Using the icon **In another layer** the graphic element can be moved in anther drawing layer. You find further information on drawing layers in the chapter [Drawing layer](layouts/layout-editor-basics.md).
-
-**Arrangement in the fore- or background**\
-\
-Overlapping graphic elements are displayed in order of insertion into the graph. This order can be changed using the icons **Bring to front** and **Send to back**. If the graphic element is part of a group the arrangement is only changed inside the group, but the other elements of the graph are not affected. If necessary the group frame has to be moved in the fore- or background, to receive a change of the arrangement of the grouped elements relative to the rest of the graph.
 
 ### Data source
 
@@ -177,9 +169,6 @@ The object frame is a base for geological/geotechnical graphic drawing elements,
 The method to create graphs with complex graphic elements can be structured in the following steps.
 
 **1. Drawing the object frame**
-
-\
-Using the tool a object frame is drawn. The frame should be large enough to hold all the graphic elements. The selected frame is represented by 4 grey squares and 4 grey side lines. If not selected the frame is represented by 4 grey angles. The selection of the object frame as an active graphic element is done with the mouse in the boundary area of the frame or with the  ![Ctrl](../.gitbook/assets/icons/ctrl.png) **Ctrl** key pressed at any place inside the frame.
 
 **2. Adding an element inside of the object frame**
 

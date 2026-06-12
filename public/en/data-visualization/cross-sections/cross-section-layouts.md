@@ -33,12 +33,6 @@ _**Note:**_ _\*.GLL files can no longer be created, only existing ones can be op
 
 A layout list has advanced features compared to a single layout:
 
-* Layouts can be combined into a [Reports](../../reporting/report-templates.md). Reports allow the printout of several layouts in a given order, e.g. the complete documentation of a borehole with general data sheet, representation of the geology and representation of the well design
-* (e.g. backfill, casing/screens)
-* In addition, the following applies only to \*.GLL files:
-  * Compilation of layouts in groups, e.g. to find a specific layout more quickly.
-  * Layout lists can contain images (e.g. company logos) that can be used in all layouts of the layout list. This saves storage space and allows the image to be exchanged in one place without having to edit each individual layout.
-
 Layout lists/layout collections are also used in the [Create and edit graphic](../layouts/layout-editor-basics.md) method to get quickly to a specific layout.
 
 Editing a layout list file takes place in the GeoDin graphics window (see also [Create and edit graphic](../layouts/layout-editor-basics.md)). Here the opening of a layout list file takes place either via the function **Open file** or - if the standard layout list is to be opened -- more quickly via the button **Standard layout list**.

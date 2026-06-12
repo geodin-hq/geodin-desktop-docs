@@ -30,16 +30,11 @@ All codes, which can be used for the data input in the GeoDin system, are contai
 
 In addition to input control, the dictionaries are also responsible for the type of graphic display (e.g. which fill pattern is used for granite) and contain various foreign language translations.
 
-All installed dictionaries are displayed in the GeoDin object manager. Each dictionary identifier is preceded by an identifier in round brackets. These identifiers are used to distinguish which object type the dictionary belongs to. This is particularly relevant for dictionaries that exist with the same name for different object types. For example, there will be a dictionary for entering petrography in many object types.
-
  <!-- src: help/10/1754 -->
 
 ### Refresh
 
 With the method **\"Update object type\"** changes to dictionaries and masks can be incorporated in an existing object type. This can be carried out either from the current GeoDin-CD or from a client who provides you with a new set of files.
-
-You can do this from a current GeoDin DVD or our website or you can get a new set of object type files from a third party (e.g. client). In this case, select the directory or zip archive that contains the current files and perform the update.\
-When updating, the files with the most recent date are always saved/received. So if you have made changes to your masks or added entries to your dictionaries, they will be preserved as long as the files you want to update with are not even more current than your changes.
 
 **Example**:
 
@@ -125,6 +120,8 @@ The object type
 ### Properties
 
 The **\"Properties\"** method displays information about the configuration of the selected object type. This includes the lists of the associated dictionaries, entry masks and signature standards as well as the properties and structures of the associated GeoDin tables. All properties shown are unchangeable for the user in the window. The information serves the purpose of further understanding the object-type-specific data storage and requires further knowledge of the structure and structure of GeoDin object types.
+
+The **"Properties"** method displays information about the configuration of the selected object type. This includes the lists of the associated dictionaries, entry masks and signature standards as well as the properties and structures of the associated GeoDin tables. All properties shown are unchangeable for the user in the window. The information serves the purpose of further understanding the object-type-specific data storage and requires further knowledge of the structure and structure of GeoDin object types.
 
 *\[Object type can be created\]*
 

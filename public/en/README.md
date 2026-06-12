@@ -22,4 +22,3 @@ GeoDin itself is 2D only. The product suite extends into the field and into 3D v
 * **GeoDin Ground** — a free plugin for Autodesk Civil 3D (separate Civil 3D licence required) that connects directly to a GeoDin database and renders boreholes in 3D.
 
 Continue to [Install & activate](documentation/install-and-activate.md) to set up GeoDin on your machine.
-

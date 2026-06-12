@@ -62,8 +62,6 @@ Even if there is an entry in the target field this will be overwritten with the 
 
 1. result 0, if all values are below the limit of determination
 
-In certain cases a measured value will lie below the limit of determination for a particular measuring device. This means that although the value is not accurate, it is nevertheless present and could be used in a summation of several parameters. Normally a value between 0 and the limit of determination is used for such calculations, but in some situations the calculated value by summation, can be greater than the limit of determination of individual parameter values, which would be false. This option enables you to set the sum to the minimum or maximum detection limit, or to 0 if all parameter values are beneath the limit of determination and no special settings with "@B" exist.
-
 1. Macro
 
 For complex handling of text formulas with OR constructs or %COND.
@@ -104,8 +102,6 @@ The characters inside the $-signs relate to a GeoDin data field. The following o
 
 ***
 
-\+ Addition - Subtraction \* Multiplication / Division SQR (x) Square of x SQRT (x) Square root of x LN (x) Natural logarithm of x EXP (x) Potency of x (e to the power of x) SIN (x) Sinus of x COS (x) Cosinus of x TAN (x) Tangent of X ARCTAN (x) Arctangent of X COTAN (x) Cotangent of X ABS (x) Absolute value of X
-
 ***
 
 (x) stands for the table column of GeoDin (e.g. $DAT:PAR1$)
@@ -113,8 +109,6 @@ The characters inside the $-signs relate to a GeoDin data field. The following o
 Empty spaces can be contained in the formulas. Fixed number values (100 in the example above), can be entered directly in the formula.
 
 **Use of conditions**
-
-In addition to the mathematical operators, special syntax constructions can be used to take a large number of special cases into consideration. For a formula, a condition can be defined in which the formula is executed. A condition is an expression which has two possible results: TRUE or FALSE. Several expressions can be combined using the logical operators AND and OR. The definition of the data type abbreviation is always necessary (e.g.: $WAS:NA$).
 
 _**Note:**_
 
@@ -181,8 +175,6 @@ The target parameter NA\_CALC is calculated as half of the parameter NA, if the 
 Additionally to the mathematical operators special syntax constructions can be used for the usage of values from the GeoDin tables to take into consideration numerous special cases.
 
 **Special cases in formula syntaxDetection Limits**
-
-Detection limits present a special case. These are by definition negative values (e.g. -1 for <1). If these values are used without care, false results may be produced, for example when building sums from individual parameters. To do this, a construction in the form of @B(x) within the $-signs must be used, where x is a factor with which the detection limit enters the calculation. For example a detection limit of 5 mg (entered as -5) using the factor 0.5 produces the result 2.5.
 
 **Example:** $WAS:BENZEN@B(0,5)$+$WAS:TOLUEN@B(0,5)$+$WAS:XYLEN@B(0,5)$
 
@@ -315,8 +307,6 @@ depthBase
 stratigraphy
 
 ### Formulas
-
-Where it is possible to define and edit any number of elements, they are displayed with their names in a list. This can be for example series of a data sequences, columns of a report element, lists of layout file names etc. Simultaneously these entries appear in the tree view of the object properties in the selected order. To add, remove and rearrange entries of the list on the right side the following icons are available:
 
 **New**
 

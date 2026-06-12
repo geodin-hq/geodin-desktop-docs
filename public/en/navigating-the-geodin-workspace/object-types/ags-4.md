@@ -349,14 +349,16 @@ To address this:
 The AGS Importer is available at the level of an open GeoDin database and at the level of a GeoDin project.
 
 {% hint style="danger" %}
-Note: The AGS Importer can automatically create the required database tables for AGS object types only when using a **Microsoft Access database** in GeoDin.\
+Note: The AGS Importer can automatically create the required database tables for AGS object types only when using a **Microsoft Access database** in GeoDin.
+\
 If you are working with a **client–server database** and the AGS object types have not yet been registered, you must first create these tables manually via GeoDin. Ensure that the relevant user has **permission to create tables** in the client–server database.
 {% endhint %}
 
 **Creating AGS Database Tables in a Client–Server Database**
 
 1. In GeoDin, Open a project in your client-server database and go to the “Objects“ node. Start the “New object“ method.
-2. Select the object type “AGS 4“ \[AGSSTAND] and confirm with “OK“. GeoDin will now create the corresponding tables in your client-server database.   \
+2. Select the object type “AGS 4“ \[AGSSTAND] and confirm with “OK“. GeoDin will now create the corresponding tables in your client-server database.
+   \
    You may cancel the data entry afterwards by clicking the “Cancel edits“ button (prohibition sign).
 3. Repeat the process for the following object types to create all necessary AGS tables:
    * “AGS 4 LBSG – Testing schedule” \[AGSLBSG]
@@ -458,12 +460,3 @@ During the export, the file is validated. Any deviations from the AGS standard a
 If an error is detected, the export is aborted with the error message: “The export could not be completed.” Example: The database contains data for version 4.1.1 and is exported as format 4.0.4
 
 <figure><img src="../../.gitbook/assets/image (67).png" alt=""><figcaption></figcaption></figure>
-
-
-
-
-
-
-
-
-

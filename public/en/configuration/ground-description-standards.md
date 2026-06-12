@@ -24,8 +24,6 @@ After starting the method the chosen configuration file is selected (file type \
 
 Edit here the list of available standards. A [Coding standard](ground-description-standards.md) defines the different ground types and details of the entry and output of contents.
 
-Where it is possible to define and edit any number of elements, they are displayed with their names in a list. This can be for example series of a data sequences, columns of a report element, lists of layout file names etc. Simultaneously these entries appear in the tree view of the object properties in the selected order. To add, remove and rearrange entries of the list on the right side the following icons are available:
-
 **New**
 
 Using this icon, entries can be added to the list.
@@ -68,8 +66,6 @@ _**Important:**_ _During the collection of ground types in the GeoDin database o
 
 Define here the properties, which should be used to describe the different soil types. The possible properties are defined directly in the [Ground type](ground-description-standards.md).
 
-Where it is possible to define and edit any number of elements, they are displayed with their names in a list. This can be for example series of a data sequences, columns of a report element, lists of layout file names etc. Simultaneously these entries appear in the tree view of the object properties in the selected order. To add, remove and rearrange entries of the list on the right side the following icons are available:
-
 **New**
 
 Using this icon, entries can be added to the list.
@@ -109,8 +105,6 @@ _**Important:**_ _During the collection of ground types in the GeoDin database o
 ### Ground types
 
 Define here the available ground types in the input norm. Because the different ground types are described by different properties, a ground type is mainly defined by a list of properties, which should be used. In a ground type only those properties can be used, which were created in the list of the **Properties**.
-
-Where it is possible to define and edit any number of elements, they are displayed with their names in a list. This can be for example series of a data sequences, columns of a report element, lists of layout file names etc. Simultaneously these entries appear in the tree view of the object properties in the selected order. To add, remove and rearrange entries of the list on the right side the following icons are available:
 
 **New**
 

@@ -101,8 +101,6 @@ B03 (107m)
 
 B04 (115m)
 
-Both the entries "Borehole 01" and "B01 (105m)" refer to the same object in the database. What you see in the GeoDin object manager is simply a "**view**" of the database. The entry "Borehole 01" is only present once in the database, although it may appear several times in different views. Hence an object (e.g. a borehole) that appears under "All objects" and under the specific object type exists only once in the database but is presented in two different views. Views are the result of queries - in this example GeoDin automatically generates the queries. The chapter **Creation of queries and groups** explains the concepts of queries and groups more detailed.
-
 ### Create object
 
 A new object can be accessed when _**Object**_, _**All objects**_ or the particular **object type** (in the example "General borehole log") is selected in the GeoDin object manager.
@@ -118,10 +116,6 @@ General borehole log
 Create a new object with a double-click the method  ![New object](../../.gitbook/assets/icons/new-object.png) **New object**:
 
 If the method was selected whilst either _**Object**_ or _**All objects**_ were selected, a dialogue field appears containing the option to choose, which type of object should be created.
-
-The option of choosing the unit system to be used is only available for certain object types that support this feature.\
-\
-In the dialogue you can optionally choose that -Data types are created automatically\*\*-\*\*. For this it is required, that the object type has the permission and that a measurement program for data types has been created ([Measurement programs](../measurement-values/working-with-measurement-data.md)). If at least one data type for the chosen object type, has not yet been created, then this option can be activated. Upon adding this object the relevant tables for the data type with the parameters of the measurement program will be created.
 
 Objects
 
@@ -900,17 +894,11 @@ Please also see the help notes [Using the data entry grid](../measurement-values
 
 The default setting installs only a limited number of object types. The international English version installs the "General Borehole Log". You will find this under the **System** tab.
 
-There are many more object types for all the different language versions of GeoDin, which each user may install directly from the GeoDin DVD. These include separate object type for all the geological survey organizations in Germany as well as several international types in English and Dutch. Additionally there is a range of object types covering other fields of data collection that are not related to boreholes (for example climate measuring station, surface water measurement point).\
-\
-&#xNAN;_**Note:**_ _There are also special FUGRO object types available only for internal company use._
-
 The installed object types are shown in the directory **Configuration**.
 
 To install further types double-click the [Install](../../installation/express-installation.md) method and choose the appropriate folder from the chosen directory on the GeoDin DVD.
 
 **Downward compatibility as of GeoDin 9**
-
-Please note that databases created with GeoDin 9 can only be opened with GeoDin 9 and 8.4. Databases created with GeoDin version 8.3 or older must be updated once to the new database structure. When opening an older database in GeoDin 8.4 or higher, a window appears in which you are shown the changes to be made and can agree to the process. The database can now only be used with GeoDin 8.4 or higher.
 
 New layouts created in GeoDin 9 cannot be used with older versions. However, older layouts can be used with GeoDin 9.
 
@@ -1095,10 +1083,6 @@ There are various options for adapting existing databases in your table structur
 
 **1. New database**
 
-1.1 Create a new database.\
-1.2 After updating the object type on the system side (see above), create the new table structure in the database by creating a (dummy) object of the updated object type in the new database. This object can then be deleted directly.\
-1.3 Now copy the desired objects of the old database into the new database using one of the methods [Copy all projects](../projects/copying-and-transferring-projects.md), [Copy project](../projects/copying-and-transferring-projects.md) or **Add objects**
-
 **2. Run a publication to customize standard object types** _(only Access databases tested so far)_
 
 2.1 Download the required **Publications** (\<standard object types> or \<MP surface water>) and save the \*.GPC file in the CONFIG folder of your GeoDin installation.\
@@ -1165,8 +1149,6 @@ The object type
 3.1 To update C/S databases, we have provided various SQL scripts for you to download directly from the database for selected object types at http://download.GeoDin.com/SQL\_DB-Update\_SEP1/ for updating C/S databases.
 
 ### Properties
-
-The **"Properties"** method displays information about the configuration of the selected object type. This includes the lists of the associated dictionaries, entry masks and signature standards as well as the properties and structures of the associated GeoDin tables. All properties shown are unchangeable for the user in the window. The information serves the purpose of further understanding the object-type-specific data storage and requires further knowledge of the structure and structure of GeoDin object types.
 
 _\[Object type can be created]_
 

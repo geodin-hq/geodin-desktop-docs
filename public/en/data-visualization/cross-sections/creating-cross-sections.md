@@ -16,8 +16,6 @@ _**Note:**_ _If 0 is chosen as maximum number of steps, the undo function is dea
 If an existing well design is added to a groundwater measurement place, this option can be used to add the presentation of the filter length in the borehole cross-section.
 ### Snap
 
-To make freehand constructions easier, especially while creating geological cross-sections, the snap function provides the exact connection of one graphic element to another. When creating new or moving existing ends, corners or nodal points, a point is dragged automatic to an existing end, corner or nodal point. The preset distance for searching points is adjustable. The snap function works independently of drawing layers and treats the graphic elements of all areas in the same manner. The snap function is activated and deactivated using the menu entry _**Preferences**\\**Snap**_ or the shortcut **Ctrl+K**.
-
 The snap distance - that is the maximum distance, which cannot be exceeded for connecting one point automatically to another, can be adjusted between 1 and 50 mm. The selection of the distance is possible using the menu entry _**Preferences**\\**Snap preferences**_.
 
 Graphic elements, with nodes that are influenced by the snap function are:\

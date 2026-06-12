@@ -44,8 +44,6 @@ Normally a series is displayed for the entire time interval of the time series g
 
 ### Time series
 
-Where it is possible to define and edit any number of elements, they are displayed with their names in a list. This can be for example series of a data sequences, columns of a report element, lists of layout file names etc. Simultaneously these entries appear in the tree view of the object properties in the selected order. To add, remove and rearrange entries of the list on the right side the following icons are available:
-
 **New**
 
 Using this icon, entries can be added to the list.
@@ -82,8 +80,6 @@ Optionally in a time line series presentation curves, bars and symbols (in any c
 
 While selecting the presentation type \<**Curve**\> optionally an interruption criterion can be selected. Here the time span between two measurements is decisive. This way you can avoid the visual impression of continuous measurements through a connected line. In combination with a symbol or bar diagram in the areas, in which samples were taken only seldom, you receive different graphic presentation types for irregular measurement intervals.
 
-By default, two measuring points are connected by a line in the graph, which is inclined differently at each measurement values. With the option \<**Step plot**\> presentations can be achieved, which show a measuring point **from** a certain time. For the following measurement, the curve is drawn as a horizontal line and then perpendicularly to the next value. With this type of representation, the option \<**drawing till end of diagram**\> can be helpful, which continues the line of the series until the end of the timeline. Thus it can be shown that the measured value has not changed since the last measurement
-
 By default data records on a curve are ignored if the chosen parameter has no value (although a time exists) and a line is drawn through these records. This line can be interupted using the option **break line for empty records**.
 
 For the presentation type \<**Bar chart**\> the bar width can be selected. Like for the presentation type \<**Symbols**\>, here you can select, whether this should be drawn in the areas, in which samples were only taken seldomly (i.e. for interruptions of the curve). <!-- src: help/05/533 -->
@@ -99,10 +95,6 @@ The element name is used mainly to identify the graphic elements of a GeoDin gra
 [Drawing layer](layouts/layout-editor-basics.md)
 
 Display of the drawing layer, on which the graphic element is placed. Using the icon **In another layer** the graphic element can be moved in anther drawing layer. You find further information on drawing layers in the chapter [Drawing layer](layouts/layout-editor-basics.md).
-
-**Arrangement in the fore- or background**\
-\
-Overlapping graphic elements are displayed in order of insertion into the graph. This order can be changed using the icons **Bring to front** and **Send to back**. If the graphic element is part of a group the arrangement is only changed inside the group, but the other elements of the graph are not affected. If necessary the group frame has to be moved in the fore- or background, to receive a change of the arrangement of the grouped elements relative to the rest of the graph. <!-- src: help/05/618 -->
 
 ### Measurement graphic series
 
@@ -149,8 +141,6 @@ The starting and ending point, which are created by the setting or the actual me
 The measurement values of the last 10 years until \"today\" should be displayed. As ending point the option -Current time- has to be chosen, as starting time the option -Relative- with an entry of 10 and a selection of the time interval \"Years\" in the drop down menu. <!-- src: help/05/704 -->
 
 ### Series definitions
-
-Where it is possible to define and edit any number of elements, they are displayed with their names in a list. This can be for example series of a data sequences, columns of a report element, lists of layout file names etc. Simultaneously these entries appear in the tree view of the object properties in the selected order. To add, remove and rearrange entries of the list on the right side the following icons are available:
 
 **New**
 

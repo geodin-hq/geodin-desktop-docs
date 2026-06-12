@@ -168,4 +168,3 @@ The following database tables are used by the object type:
 * **GEODIN\_LOC\_E2WDFLUI** – Well design: flushing
 * **GEODIN\_LOC\_E2WDSPCL** – Well design: special features
 * **GEODIN\_LOC\_E2DSREG** – Register of data sequences
-

@@ -124,8 +124,6 @@ The characters inside the $-signs relate to a GeoDin data field. The following o
 
 ***
 
-\+ Addition - Subtraction \* Multiplication / Division SQR (x) Square of x SQRT (x) Square root of x LN (x) Natural logarithm of x EXP (x) Potency of x (e to the power of x) SIN (x) Sinus of x COS (x) Cosinus of x TAN (x) Tangent of X ARCTAN (x) Arctangent of X COTAN (x) Cotangent of X ABS (x) Absolute value of X
-
 ***
 
 (x) stands for the table column of GeoDin (e.g. $DAT:PAR1$)
@@ -133,8 +131,6 @@ The characters inside the $-signs relate to a GeoDin data field. The following o
 Empty spaces can be contained in the formulas. Fixed number values (100 in the example above), can be entered directly in the formula.
 
 **Use of conditions**
-
-In addition to the mathematical operators, special syntax constructions can be used to take a large number of special cases into consideration. For a formula, a condition can be defined in which the formula is executed. A condition is an expression which has two possible results: TRUE or FALSE. Several expressions can be combined using the logical operators AND and OR. The definition of the data type abbreviation is always necessary (e.g.: $WAS:NA$).
 
 _**Note:**_
 

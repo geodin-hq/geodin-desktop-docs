@@ -122,6 +122,8 @@ The characters inside the \$-signs relate to a GeoDin data field. The following 
   COTAN (x)    Cotangent of X
   ABS (x)      Absolute value of X
 
+\+ Addition - Subtraction \* Multiplication / Division SQR (x) Square of x SQRT (x) Square root of x LN (x) Natural logarithm of x EXP (x) Potency of x (e to the power of x) SIN (x) Sinus of x COS (x) Cosinus of x TAN (x) Tangent of X ARCTAN (x) Arctangent of X COTAN (x) Cotangent of X ABS (x) Absolute value of X
+
   ------------ ------------------------------------
 
 \(x\) stands for the table column of GeoDin (e.g. \$DAT:PAR1\$)
@@ -178,6 +180,8 @@ Note: an inline formula **cannot target a field that is already assigned as the 
 **Use of conditions**
 
 In addition to the mathematical operators, special syntax constructions can be used to take a large number of special cases into consideration. For a formula, a condition can be defined in which the formula is executed. A condition is an expression which has two possible results: TRUE or FALSE. Several expressions can be combined using the logical operators AND and OR. The definition of the data type abbreviation is always necessary (e.g.: \$WAS:NA\$).
+
+In addition to the mathematical operators, special syntax constructions can be used to take a large number of special cases into consideration. For a formula, a condition can be defined in which the formula is executed. A condition is an expression which has two possible results: TRUE or FALSE. Several expressions can be combined using the logical operators AND and OR. The definition of the data type abbreviation is always necessary (e.g.: $WAS:NA$).
 
 ***Note:***
 
@@ -244,8 +248,6 @@ The target parameter NA_CALC is calculated as half of the parameter NA, if the a
 Additionally to the mathematical operators special syntax constructions can be used for the usage of values from the GeoDin tables to take into consideration numerous special cases.
 
 **Special cases in formula syntaxDetection Limits**
-
-Detection limits present a special case. These are by definition negative values (e.g. -1 for \<1). If these values are used without care, false results may be produced, for example when building sums from individual parameters. To do this, a construction in the form of \@B(x) within the \$-signs must be used, where x is a factor with which the detection limit enters the calculation. For example a detection limit of 5 mg (entered as -5) using the factor 0.5 produces the result 2.5.
 
 **Example:** \$WAS:BENZEN@B(0,5)\$+\$WAS:TOLUEN@B(0,5)\$+\$WAS:XYLEN@B(0,5)\$
 
@@ -347,8 +349,6 @@ Example: \$LOCREG.SHORTNAME\$ from \$SMPDATE@dd.mmmm.yyyy\$
 ***Attention:*** *Only parameters of the same table (data type) or object type parameters can be evaluated. The parameter of the current table must be specified here without the table abbreviation. See example.* <!-- src: help/10/8072 -->
 
 ### Formulas
-
-Where it is possible to define and edit any number of elements, they are displayed with their names in a list. This can be for example series of a data sequences, columns of a report element, lists of layout file names etc. Simultaneously these entries appear in the tree view of the object properties in the selected order. To add, remove and rearrange entries of the list on the right side the following icons are available:
 
 **New**
 
