@@ -81,6 +81,8 @@
 ## Data Visualization
 
 * [Creating Custom Layouts](data-visualization/creating-custom-layouts.md)
+  * [Layout Editor Basics](data-visualization/layouts/layout-editor-basics.md)
+    * [X-Y Diagrams](data-visualization/layouts/x-y-diagrams.md)
 * [Depth-Oriented Images as Borehole Profiles](data-visualization/depth-oriented-images-as-borehole-profiles.md)
 * [Display PSD as a Bar Chart](data-visualization/display-particle-size-distribution-psd-as-a-bar-chart.md)
 * [Groundwater Visualizations](data-visualization/groundwater-visualizations.md)
@@ -101,14 +103,12 @@
 
 ## Layouts
 
-* [Layout Editor Basics](data-visualization/layouts/layout-editor-basics.md)
 * [Borehole Elements](data-visualization/layouts/borehole-elements.md)
 * [Cross Section Layouts (advanced)](data-visualization/layouts/cross-section-layouts.md)
 * [Measurement Value Graphics](data-visualization/layouts/measurement-value-graphics.md)
 * [Object Frames](data-visualization/layouts/object-frames.md)
 * [Report Elements](data-visualization/layouts/report-elements.md)
 * [Text Macros and Variable Text](data-visualization/layouts/text-macros-and-variable-text.md)
-* [X-Y Diagrams](data-visualization/layouts/x-y-diagrams.md)
 
 ## Site Plans
 
