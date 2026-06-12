@@ -22,9 +22,7 @@ If you change the signature for the key fS (fine sand) in the dictionary \"Petro
 
 If you change the appearance of a signature, all surfaces (also older graphics) that are filled with this signature will be displayed with the new signature. This is due to the fact that in the GeoDin graphics for a filled surface only the name of the signature table and the number of the signature are stored and not the appearance of the signature itself.
 
-These examples show that in multi-user environments it is advisable that not everybody should have the rights to change the system configuration to avoid unwanted changes. In GeoDin this is controlled as described in the chapter
-
-**Edit**. <!-- src: help/10/1744 -->
+These examples show that in multi-user environments it is advisable that not everybody should have the rights to change the system configuration to avoid unwanted changes. In GeoDin this is controlled as described in [Groups and Permissions](../user-management/groups-and-permissions.md). <!-- src: help/10/1744 -->
 
 ### Dictionaries
 
