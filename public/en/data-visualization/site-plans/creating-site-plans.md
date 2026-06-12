@@ -1,275 +1,174 @@
 
 # Creating Site Plans
 
-### Snap
+The site plan tool constructs a georeferenced plan of GeoDin objects in a configurable map frame, with automatic non-overlapping label placement. Objects are added from any database or project — they do not need to share a project. Scenarios control how object symbols, labels, and the map frame are drawn.
 
-The snap distance - that is the maximum distance, which cannot be exceeded for connecting one point automatically to another, can be adjusted between 1 and 50 mm. The selection of the distance is possible using the menu entry _**Preferences**\\**Snap preferences**_.
+## Creating a site plan
 
-Graphic elements, with nodes that are influenced by the snap function are:\
-line, rectangle, polyline and borehole profile.
+The site plan tool can be started in three ways:
 
-### Name
+1. **From a query or group of objects:** double-click the method symbol ![Site plan](../../.gitbook/assets/icons/site-plan.png) **Site plan**. The graphics window opens and the site plan tool starts with all objects of the query or group already added.
+2. **From the graphics window menu:** choose **Extras** > **Site plan**. The site plan tool starts without objects; add the desired objects later by drag and drop from the GeoDin object manager onto the site plan or the object list in the **Objects** window.
+3. **From the object properties:** navigate to the **Site plan** branch in the object properties of the current graphic, select the desired site plan, and click **Start**. The branches for creating and editing site plans are added to the object properties.
 
-GeoDin-portal layouts provide the possibility to set references to other sites. This function is the essential difference to normal GeoDin-layouts.
+Once started, the construction workflow follows four steps:
 
-_**Note:**_ _To use the portal links it is necessary to activate the portal function in the advanced properties._
+1. Select the desired objects (see [Reference: Objects](#reference-site-plan-properties) below).
+2. Define the extent of the map frame.
+3. Define the map scale and the position of the site plan on the print (see [Reference: Scale](#reference-site-plan-properties) below).
+4. Select and configure the presentation options for map frame, point symbols, object names, and other scenarios (see [Reference: Site plan scenarios](#reference-site-plan-properties) below).
 
-The portal links are differed by the target of the jump.
+All settings made in the site plan branch — adding objects, changing scale or display properties — are immediately reflected in the site plan graphic.
 
-**Change page**:
+## Optional settings
 
-Scroll through a multipage portal layout.
+* **Snap distance:** the maximum distance for connecting one point automatically to another; adjustable from 1 to 50 mm via **Preferences** > **Snap preferences**. Affects graphic elements with nodes (line, rectangle, polyline, and borehole profile).
 
-**Go to portal page**:
+***
 
-Jump to a portal layout.
-
-**Get portal report**:
-
-Get a PDF of a portal report.
-
-**Go to website**:
-
-Jump to an arbitrary URL in the internet or intranet.
-
-[Show document](../../navigating-the-geodin-workspace/documents/managing-documents.md):
-
-Call a document from the GeoDin document manager or from the file system.
-
-If you select a link below the node portal links, the dialogue for the editing the properties of this portal links will open. In this dialogue you can set the following link properties:
-
-**Name of the link:** free name of the link
-
-**Conditions:** Specify here whether and to what type of conditions the portal function should be bound.
-
--without conditions- The portal function is not bound to a condition and is always active.
-
--Data set conditions- \*\*One click into the editing field opens a dialogue to enter the data set condition. You can either enter your own condition or use a frame query.
-
--Conditions of cell content- \*\*referring to the content of a cell you can either enter your own condition or use a frame query.
-
-The option type of the cell content will be active in the case that you have selected the condition of the cell content as a condition.
-
-The type of the cell content may be:
-
--Numeric- \*\*The condition contains numbers as well as the operators "+" and "-" and the decimal point.
-
--Alpha numeric- \*\*The condition allows the input of numbers, letters and special characters.
-
--Date setting- The condition has to be made in a usual date format (e.g. mm.dd.yyyy).
-
-The syntax to be used for the conditions is described in the chapter [Selection syntax](../../data-analysis/queries/conditions-and-operators.md).
-
-**Font colour:** font colour of the link, as it is displayed in the browser
-
-### Go to website
-
-Here you can set the target of a portal link of the type **Go to URL**. This target can be an arbitrary address in the internet or intranet.
-
-Select the node **portal links** in the tree of the properties of the element. Select the type **"Go to URL"** in the editing window of the node. At the node **Go to URL** you can either enter the target of this jump as a free text or choose it from a frame query.
-
-### Site plan
-
-The site plan tool is used for constructing site plans of GeoDin objects in a configurable map frame. The objects are automatically labeled without overlapping of the labels.
-
-The following steps are made for constructing site plans:
-
-1. Selection of the desired objects
-2. Defining the extent of the map frame
-3. Defining the map scale and the position of the site plan on the print
-4. Selecting and configuring the presentation options for map frame, point symbols, object names, etc.
-
-The site plan tool can be started at the following places:
-
-1\) Start at a query or at a group of objects
-
-By double clicking the method symbol  ![Site plan](../../.gitbook/assets/icons/site-plan.png) **Site plan**:
-
-The graphics window is opened, and the site plan tool is started. All objects of the query or group are added to the site plan
-
-2\) Start at the menu entry \<Extras - Site plan> in the graphics window.
-
-In this case, the site plan tool is started without objects. The desired objects are added later from the GeoDin object manager by drag and drop on the site plan or object list in the \<objects> window.
-
-3\) Navigate to the 'Site plan' branch in the object properties of the currrent graphic
-
-There, you can select the desired site plan and click at the **Start** button. The branches with the functions for creating and editing site plans are now added to the object properties
+## Working with site plans
 
 **Graphic elements of site plans**
 
-All graphic elements used for site plan construction are placed in special drawing layers of the graphic. All these graphic elements can only be edited by changing their parameters in the site plan branch. It is not possible to mark and edit these elements directly, except the site plan is dissolved into its elements by using the **break up site plan** function.
+All graphic elements used for site plan construction are placed in special drawing layers of the graphic. These elements can only be edited by changing their parameters in the site plan branch — it is not possible to select and edit them directly, unless the site plan is dissolved using **Break up site plan**.
 
-Each site plan scene (object symbols, object names, map frame etc.) is placed into a separate drawing layer. These layers are displayed in in the layer list with a site plan symbol and can be shown or hidden lika any other drawing layer.
-
-All settings made in the site plan branch, like adding new objects, changing the scale or display properties, are immediately shown in the site plan graphic. The changes in the display properties are automatically performed on the objects in the site plan.
+Each site plan scene (object symbols, object names, map frame, etc.) is placed in a separate drawing layer. These layers appear in the layer list with a site plan symbol and can be shown or hidden like any other drawing layer.
 
 **Start and Close site plan**
 
-To start or continue editing a site plan (and all objects included), the **Start** button is used. The branches for object selection, map scale and position, and for editing the site plan scenarios are now shown. The button **Close** stops the editing mode and hides the properties branches.
+Use the **Start** button to begin or continue editing a site plan and all objects included. The branches for object selection, map scale and position, and site plan scenarios become visible. The **Close** button stops editing mode and hides the properties branches.
 
 **Break up site plan**
 
-If it is necessary to edit the individual graphic elements of a site plan, the site plan element can be dissolved with the **Break up site plan** switch. Then, the graphic elements and layers are unlocked and the individual elements can be selected and edited normally.
+The **Break up site plan** switch dissolves the site plan element so that individual graphic elements and layers are unlocked and can be selected and edited normally.
 
-_**Note:**_ _The link to the site plan is lost and can not be restored if the cross-section is dissolved. It is then no longer possible to edit the display general properties for the element, or set the scales of the site plan. The objects loaded are removed from the current site plan._
+{% hint style="danger" %}
+The link to the site plan is lost and cannot be restored after breaking up. It is no longer possible to edit general display properties or set the scales of the site plan. The objects loaded are removed from the current site plan.
+{% endhint %}
 
 **Drawing order**
 
-The entire site plan can be moved as a whole to the fore- or background relative to the other objects.
+The entire site plan can be moved as a whole to the foreground or background relative to other objects.
+
+**Portal links**
+
+GeoDin-portal layouts can set references to other sites — this is the essential difference from normal GeoDin layouts.
+
+{% hint style="info" %}
+To use portal links, activate the portal function in the advanced properties.
+{% endhint %}
+
+Portal links are differentiated by their jump target:
+
+* **Change page** — scroll through a multipage portal layout.
+* **Go to portal page** — jump to a portal layout.
+* **Get portal report** — retrieve a PDF of a portal report.
+* **Go to website** — jump to an arbitrary URL in the internet or intranet.
+* [Show document](../../navigating-the-geodin-workspace/documents/managing-documents.md) — call a document from the GeoDin document manager or from the file system.
+
+Selecting a link below the **portal links** node opens the properties dialogue for that link. The following properties can be set:
+
+* **Name of the link:** free name for the link.
+* **Conditions:** specify whether and to what conditions the portal function is bound:
+  * **-without conditions-** — the portal function is always active.
+  * **-Data set conditions-** — click the editing field to enter a data set condition (enter directly or use a frame query).
+  * **-Conditions of cell content-** — condition based on cell content; enter directly or use a frame query. The **type of the cell content** must be set: **-Numeric-** (numbers and `+`/`-`/decimal point), **-Alpha numeric-** (numbers, letters, and special characters), or **-Date setting-** (standard date format, e.g. `mm.dd.yyyy`). The syntax for conditions is described in [Selection syntax](../../data-analysis/queries/conditions-and-operators.md).
+* **Font colour:** font colour of the link as displayed in the browser.
+
+**Go to website target**
+
+To set the target of a portal link of type **Go to URL**: select the **portal links** node in the element properties tree, set the type to **"Go to URL"**, then at the **Go to URL** node enter the target as free text or choose it from a frame query.
+
+***
+
+## Reference: Site Plan Properties
 
 ### Objects
 
-By selecting the branch 'Objects' in a site plan, the window \<Site plan: Objects> opens. The window is freely scalable and stays visible until another branch in the object properties tree is selected or the window is closed.
+Selecting the **Objects** branch opens the **Site plan: Objects** window. The window is freely scalable and stays visible until another branch is selected or the window is closed.
 
-Objects needed for the site plan or for orientation in the site plan can be added directly by Drag & Drop from the GeoDin object manager. Single objects, queries or groups can be selected with the mouse and can be dropped either onto the list or the site plan. If an object is already included in the list, it is not added again.
+Add objects by drag and drop from the GeoDin object manager — single objects, queries, or groups can be dropped onto the list or the site plan directly for the site plan or for orientation in the site plan. Objects already in the list are not added again. Objects from any database or project can be used; they do not need to share a project.
 
-Objects for a site plan can be loaded from any database or project, i.e. it is not necessary to store data for a site plan in one project or database.
+Selected objects are shown with a symbol and label in the site plan; the site plan can be zoomed and moved as necessary with the available tools. An object selected in the list is highlighted in red in the site plan. The coordinates, elevation, and depth of a selected borehole are displayed below the object list. Use the **Remove** button to remove an object from both the list and the site plan.
 
-In the site plan, the objects loaded are presented with a sign and a label, the site plan can be zoomed and moved as necessary with the available tools.
+Object coordinates can be multiplied by a user-defined factor if necessary.
 
-If the coordinates of the boreholes are in different meridian zones, the coordinates can be transformed into a single zone. This is done by selecting the desired zone. The presentation in the site plan is corrected accordingly (this function is available for the Gaus-Krüger coordinate system).
+If borehole coordinates are in different meridian zones, transform them to a single zone by selecting the desired zone (available for the Gauss-Krüger coordinate system). For boreholes in the **southern hemisphere** (Y coordinate increasing downward), check the **-Southern hemisphere-** option to mirror the site plan.
 
-If the boreholes are located in the **southern hemisphere** (Y coordinate increasing "downward"), checking the option -Southern hemisphere- will mirror the site plan.
+**Map limits:** the **Map limits** fields automatically display the minimum and maximum X and Y coordinates of the selected boreholes. Edit the values to display only part of the site plan. Manually entered values are preserved when more objects are added. Use **-Set to maximum-** to set the fields to the values required for the current objects, or **-Automatic-** to automate this.
 
-The selected boreholes are displayed in a site plan presentation. An object can be selected either in the list or in the site plan, it is displayed in red in the site plan and marked in the list. The coordinates of the object, elevation and depth of the borehole are diplayed below the list of objects. An object deleted from the Borehole list list with the **Remove** button is also deleted from the site plan.
+In the preview, the map frame for the object coordinates is shown with a black frame; the red frame shows the extent of the coordinates entered in the input fields.
 
-It is possible to multiply the object coordinates with a user-defined factor, if necessary.
+To round corner coordinates to a convenient number (for example, a multiple of 100), check **-Round up corner values-** and enter the rounding value. The resulting rounded map frame is shown in red in the preview.
 
-The field **Map limits** automatically displays the minimum and maximum coordinates (X and Y values) relative to the selected boreholes. The values can be edited if only a selected part of the site plan shall be displayed. If more objects are added later, the values in these fields are kept, so manually entered values are preserved. With the option -Set to maximum-, the values in the input fields can be set to the value necessary with regard to the objects loaded. Choose the -Automatic- option to automate this process.
-
-In the preview, the map frame for the minimum and maximum coordinates of the objects is displayed with a black frame. The red frame is for the extent of the coordinates entered in the input fields.
-
-Often, the coordinates of the corners shall be rounded to a convenient number (e.g. a multiple of 100). It is not necessary to do this manually, but can be done automatically by the site plan tool by checking the box -Round up corner values- . The desired value for rounding can be entered in the input field. The map frame resulting for the rounded is displayed in red (see above).
-
-Changing between the different parts of the site plan (objects, line of section, scales, and site plan scenarios) is possible by directly clicking on the branch in the object properties window, or by using the buttons in the upper right above the site plan (when the object window is too large and hides the branches).
+Switch between the different parts of the site plan (objects, line of section, scales, and site plan scenarios) by clicking the branch in the object properties window, or using the buttons above the site plan when the object window is large enough to hide the branches.
 
 ### Scale
 
-Here, the scale of the site plan and the printing position can be set.
+**Define scale** — use this option to define the scale explicitly. The paper size is determined by the corner coordinates and the selected scale. The map size in centimetres at the selected scale is shown, not accounting for coordinate labels at the map frame border.
 
-**Define scale**
+**Define width and height** — use this option to define the physical size of the site plan on paper. GeoDin calculates and displays the required scale. Enter optional preferred scales in the **"Round scale to"** field as comma-separated values (for example, `1,2,5`); usable scales are those values and their multiples (1, 2, 5, 10, 20, 50, 100, …).
 
-Use this option to define the scale. The size of the paper is defined by the corner co-ordinates and the scale. The size of the map in centimetres at the selected scale is shown without taking into account coordinate labels at the map frame.
-
-**Define width and height**
-
-Use this option to define the site of the site plan on paper. When using this option, define the desired size of the site plan on the paper. The required scale is calculated and displayed.
-
-In the entry field _"Round scale to"_ an optional selection of scales can be pre-defined.
-
-**Example:**
-
-Entry = 1,2,5
-
-Usable scales are the entry values and multiples thereof : 1,2,5,10,20,50,100,200,500,...
-
-**Paper size**
-
-The minimum size and orientation necessary for the site plan is displayed. The position of the site plan, measured from the upper left corner, can be set in the fields _"Position X:"_ and _"Position Y:"_.
-
-If the option -Automatic page layout- is active, the paper size displayed by \<Min:> is used for the site plan construction.
-
-The size of the map in centimetres at the selected scale is given without taking into account coordinate labels at the map frame.
+**Paper size:** the minimum paper size and orientation required for the site plan is displayed. Set the position of the site plan from the upper-left corner using the **"Position X:"** and **"Position Y:"** fields. With **-Automatic page layout-** active, the minimum size shown under `<Min:>` is used for construction.
 
 ### Site plan scenarios
 
-Here, **detailed scenarios** for site plan construction can be designed, saved and loaded.
+Scenarios define the detailed appearance of the site plan. Each scenario contains a graphic element to be displayed for all selected objects — for example, one scenario for the symbol and another for the label.
 
-A scene contains a graphic element, which should be displayed for all selected objects. For example, a scene can contain the graphic element symbol (for displaying the object), another scene the graphic element text for labelling the objects with their names.
+Possible site plan scene types:
 
-Possible site plan scenes are:
+* [Symbol](../../configuration/fill-patterns-and-symbols.md) — displaying the point symbols
+* [Variable text](../layouts/text-macros-and-variable-text.md) — labelling the objects
+* [Map frame](../maps-and-site-plans.md) — display properties of the map frame
+* [Text tag](../layouts/text-macros-and-variable-text.md) — tag lines
 
-[Symbol](../../configuration/fill-patterns-and-symbols.md) for displaying the point symbols
+Scenes can be added as needed (also twice, if required), except for the **tag line** scene type, which can be added only once. The standard preset includes map frame, point symbol, tag line, and borehole name. Additional scenes can be added, deleted, or edited.
 
-[Variable text](../layouts/text-macros-and-variable-text.md) for labelling the objects
+Use the add button to select the desired scene type from the menu. The order of scenes in the scene list determines the drawing order: the upper scene is drawn first, the bottom scene last. Change the order using the arrow icons — this matters when graphic elements overlap.
 
-[Map frame](../maps-and-site-plans.md) for the display properties of the map frame
-
-[Text tag](../layouts/text-macros-and-variable-text.md) for the tag lines
-
-Scenes can be added as necessary (also twice if needed), except for the scene type 'tag line', which can be added only once.
-
-As a standard for the appearance of site plans the scenarios map frame, point symbol, tag line and borehole name are preset. Additionally new elements can be added, deleted or edited for the site plan appearance.
-
-Additional scenes can be added with the button . Select the desired scene type from the menu which opens.
-
-The order of the scenes in the scene list determines later drawing order. The upper scene (the graphic elements of the scenario) is drawn first, the scenario at the bottom of the list is drawn last. The order of the scenes is of interest, if various graphic elements overlap. A change of the order is possible with the help of the arrow icons.
-
-Site plan scenarios can be saved and loaded, independent of the objects currently loaded. This way, they can be used later for site plan construction by simply loading the scenario file. All scenes are then immediately available for the new site plan and can be modified as necessary. Any number of site plan scenario files can be created for different thematic site plans.
-
-To save a scenario file, use the **Save** button. The scenarios can be stored as a scenario file (\*.gpz) in any directory.
-
-A stored scenario file can be loaded again with the button **Load** for using them in other site plans.
+Scenarios can be saved and loaded independently of the objects currently loaded. Save with **Save** (stores as a `.gpz` scenario file in any directory); load with **Load** to reuse the scenario in another site plan. Any number of scenario files can be created for different thematic site plans.
 
 ### Site plan scene
 
-For each scene a name can be entered, and selected whether the scene shall be visble or not.
+For each scene, enter a name and choose whether the scene is visible.
 
-**Relative Scene position**
+**Relative scene position:** controls where scene elements are drawn relative to the base position. The effect depends on the scene type:
 
-The effect of the relative scene position option depends on the type of scene used.
+* **Symbol scenes:** the relative position offsets where the symbol is drawn relative to the object's original plot position. Use this to create exploded-chart presentations (for example, four circle segments drawn slightly offset from the object position).
+* **Text scenes:** determines where the text is printed relative to the position of the non-overlapping labels. Only necessary when multiple scenes contain labels (for example, one scene with a large bold label and another with a smaller depth label). Without a relative position, a single variable text scene supports multi-line labels using `\` (backslash) as a line separator.
 
-**Site plan scene Symbol**
+  **Example:** for a borehole name in Bold Italic plus an end-depth label in a smaller font, define two scenes:
+  1. Variable text with macro `$LONGNAME$`
+  2. Variable text with macro `End depth: $ZCOORDE$ m` and relative position X:0, Y:3 (moves the text 3 mm downward)
 
-The relative scene position calculates the point where the symbol is drawn relative to the place where the location would be plotted originally. In the example below, the 4 circle segments (4 scenes of the 'Symbol' scene type) were drawn slightly offset from the original position of the object (exploded pie chart):
+* **Map frame scenes:** defines the position of frame elements relative to the selected map extent.
 
-**Site plan scene Text**
-
-The relative scene position determines the place where the text is printed, relative to the position of the non-overlapping labels. It is used to create multiple labels placed side by side, which use different fonts. The relative scene position is only necessary when different scnes contain labels. Normally it should be sufficient to use a normal variable text scene, as a label with several lines is possible by using the sign \ (Backslash).
-
-If two different labels are necessary, for example one with normal, the other one with bold typeface, two variable text scenes need to be defined. For the second scene, a relative scene position is necessary.
-
-**Example:**
-
-For the name of the borehole, a larger font with text style Bold Italic is used. The end depth of the borehole uses a smaller text with no special attributes.
-
-Two scenes are defined:
-
-1\. Scene 'Variable text' with the text macro '$LONGNAME$'
-
-2\. Scene 'Variable text' with the text macro 'End depth: $ZCOORDE$ m' '
-
-By defining a relative scenario position for the scenario 'End depth' X:0, Y:3, the text 'ED=10,00m' is moved 3 mm downwards and therefore displayed in a second row.
-
-**Site plan scene Map frame**
-
-The relative scene position for the map frame defines the position of the frame elements relative to the selected map extent.
-
-**Example:**
-
-A second map frame shall be drawn with 3 mm distance to the first frame. By defining a second scene of the type 'Map frame' with the scene position X:3 and Y:3, you get the following result:
+  **Example:** to draw a second map frame 3 mm outside the first, add a second Map frame scene with position X:3, Y:3.
 
 ### Symbol
 
-The site plan scene type Symbol is used to display symbols at the object location.
+The **Symbol** scene type displays symbols at object locations. Symbol type, colour, and size can be defined as **Fixed** (same for all objects) or **Variable** (read from a data field in the general data for each object):
 
-Two define symbol type, colour, and size, two different possibilities are available:
+**Symbol type**
 
-**Fixed**
+* **Fixed:** the selected symbol type is applied to all objects.
+* **Variable:** the selected general data field must contain valid [Symbol tables](../../configuration/fill-patterns-and-symbols.md) entries. If no valid entry is found, no symbol is drawn for that object.
 
-This option defines the symbol for all objects on the site plan. All parameters selected (symbol type, colour, and size) are applied to all objects.
+**Symbol colour**
 
-**Variable**
+* **Fixed:** select the color directly.
+* **Variable:** the selected database field must contain a valid colour number (1–16 from [Color tables](../../configuration/fill-patterns-and-symbols.md)); invalid entries result in the symbol being drawn in black.
+* **-Transparent-** background: graphic elements behind the symbol show through unfilled areas.
+* **-Opaque-** background: all graphic elements behind the symbol are completely hidden regardless of unfilled areas.
 
-For some object types it is possible to define site plan symbols in the general data. The data field can be selected from the list of general data fields. During the site plan construction, the field content is read for each object and interpreted for symbol type, size or colour. The database field must contain numeric values.
+**Symbol size**
 
-**Defining the symbol type**
+Size (height and width) ranges from 0.2 to 100 mm. With **Variable** selected, the data field must contain valid entries; otherwise the symbol is drawn with a diameter of 2 mm.
 
-The symbol type can be either fixed or variable. If the symbol type 'variable' is selected, the selected general data field must contain valid [Symbol tables](../../configuration/fill-patterns-and-symbols.md) entries. If no valid entry can be found, no symbol is drawn for the object.
+**Symbol pen**
 
-**Defining the symbol colour**
-
-If the symbol type -variable- is selected, the selected database field has to contain a valid colour number. Otherwise, the symbol is drawn in black. [Color tables](../../configuration/fill-patterns-and-symbols.md) from 1 to 16 can be used. The background can be drawn as -transparent-, the graphic elements behind the symbol can be seen through the unfilled areas of the symbol. If the symbol mode -opaque- is used, all graphic elements behind the symbol are completely hidden, regardless of whether the symbol contains unfilled areas or not.
-
-**Setting the Symbol size**
-
-The size of the symbol (height and width) can lie within a range of 0.2 to 100 mm. If the setting 'variable' is used, the selected database field has to contain valid entries, otherwise, the symbol is drawn with a diameter of 2 mm.
-
-**Setting the symbol pen**
-
-With activated option -As symbol color- the lines of the symbol are drawn in the same color as the symbol fill color. With deactivated option -As symbol color- only the filled areas of the symbols are drawn colored, the lines are drawn as selected.
-
-***
+* **-As symbol color-** active: symbol lines are drawn in the same color as the symbol fill color.
+* **-As symbol color-** inactive: only the filled areas are drawn in color; lines are drawn as selected separately.
 
 ## Reference: Drawing Layer Properties (Layout Snippets)
 
