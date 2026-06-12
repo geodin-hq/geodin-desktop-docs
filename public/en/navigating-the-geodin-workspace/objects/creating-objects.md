@@ -139,7 +139,7 @@ The following chapters describe the import and export of data sequences and data
 
 [Create objects from data sequences](../../data-collection/import/data-sequences.md)
 
-[SEP import](../../data-collection/import/special-imports.md)
+[SEP import](../../data-collection/import/sep3-exchange-database.md)
 
 [SEP1 export](../../data-collection/export.md)
 

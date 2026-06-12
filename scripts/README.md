@@ -50,6 +50,17 @@ Defaults: page Jaccard ≥ 0.55, block Jaccard ≥ 0.75 with ≥ 40 normalized t
 
 **Not wired into CI** — text similarity isn't a binary defect; a 0.62 page-level score isn't *wrong*, it's a candidate for human review. Run on-demand when you suspect duplication has crept in, or after a bulk content addition.
 
+## `check-relative-links.py`
+
+Fails if a relative link or image reference in any `.md` page points at a file that doesn't exist. This is the move-a-block-break-a-path failure mode: GitBook redirects page *URLs* when SUMMARY regroups, but relative *file* references inside page bodies break silently when content moves between folder depths — a section relocated from a two-level-deep page keeps its `../../.gitbook/...` prefix and points above the content root. Handles GitBook asset names containing parentheses (`image (42).png`), which naive `[^)]+` link regexes silently skip.
+
+```bash
+python3 scripts/check-relative-links.py            # defaults to public/
+python3 scripts/check-relative-links.py public/en  # narrow scope
+```
+
+Checks markdown `](...)` targets and raw `src="..."` attributes with a known file extension; external URLs, mailto:, absolute paths, and bare anchors are ignored. Exits 1 on any broken reference — CI-ready as a required check, not wired in yet.
+
 ## CI
 
 `check-asset-integrity.sh`, `check-duplication.sh`, and `check-stubs.sh` run via `.github/workflows/docs-lint.yml`. `check-asset-integrity.sh` and `check-duplication.sh` are required; `check-stubs.sh` is informational. The asset check also runs on every push to `main` (no path filter) so GitBook sync commits are caught. `check-text-similarity.py` is not in CI — it's a local audit tool.
