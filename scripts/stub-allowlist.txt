@@ -20,3 +20,7 @@ public/en/data-analysis/queries/conditions-and-operators.md
 public/en/data-analysis/queries/parameterized-queries.md
 public/en/data-analysis/queries/sql-and-advanced-options.md
 public/en/navigating-the-geodin-workspace/projects/copying-and-transferring-projects.md
+public/en/navigating-the-geodin-workspace/workspace-and-data-management.md
+public/en/data-analysis/data-analysis-overview.md
+public/en/data-visualization/visualization-overview.md
+public/en/administration.md
