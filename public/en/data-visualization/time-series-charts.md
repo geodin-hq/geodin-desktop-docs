@@ -1,254 +1,189 @@
 
-<!--
-**Content status:** Auto-assembled from product documentation
-**Source quality:** B (Moderate (single source type))
-**Needs:** needs legacy verification, needs screenshots, needs examples, editorial review
--->
-
 # Time Series Charts
 
-### Time line serie
+The **Time Series** diagram type is one of the diagram types available in the **Measurement Value graphic element**. It plots measurement values against time for one or more series, with configurable presentation styles (curve, bar chart, symbols), axis settings, and aggregation options. Add a Measurement Value graphic element to a layout and select **Time Series** as the diagram type to use this feature.
 
-An individual time line series is defining the following characteristic features:
+For general steps on adding layout elements, see [Layout Editor Basics](layouts/layout-editor-basics.md) and [Creating Custom Layouts](creating-custom-layouts.md).
 
-1\) Selection of the data to be displayed
+***
 
-2\) Selection of the parameters / formulas to be displayed
+## Reference: Time Line Series
 
-3\) Selection of the type of presentation (graphic properties)
+An individual time line series defines three characteristic features:
 
-Here in the first place three different types of series are distinguished:
+1. Selection of the data to be displayed
+2. Selection of the parameters or formulas to be displayed
+3. Selection of the type of presentation (graphic properties)
 
-Presentation of measurement values from aGeoDindatabase
+Three series types are available:
 
-Here the data source defines, which measurement values are used for the presentation and which parameters of the measurement point are to be displayed.
+**Presentation of measurement values from a GeoDin database**
+
+The data source defines which measurement values are used for the presentation and which parameters of the measurement point are to be displayed.
 
 **Aggregation of existing series**
 
-This type of series is based on already existing series and allows for example the display of sums or means of these (other) series.
+This type of series is based on already existing series and allows, for example, the display of sums or means of those series.
 
 **Pre-defined line**
 
-This series type is used to display a pre-defined horizontal line (for example a limit line) in the time line series diagram.
+This series type displays a pre-defined horizontal line — for example, a limit line — in the time line diagram.
 
-By selecting the chosen series type the structure of the object properties is changing in the way, that the relevant settings can be adjusted.
-
-To distinguish the individual series better in the tree of object properties, you can entitle it with a free name in the input field *\"Name series\"*.
+Selecting the series type changes the structure of the object properties so that the relevant settings can be adjusted. To distinguish individual series more easily in the object properties tree, give each series a free name in the **Name series** input field.
 
 **Time interval**
 
-Normally a series is displayed for the entire time interval of the time series graph according to the settings of the time scale (as far as data for the series is available). In some cases it can be useful to define a special displayed time interval for a particular series. For example the threshold of a measurement parameter can change according to amendment \<http://dict.leo.org/ende?lp=ende&p=eL4jU.&search=amendment\>s of \<http://dict.leo.org/ende?lp=ende&p=eL4jU.&search=of\> ordinance \<http://dict.leo.org/ende?lp=ende&p=eL4jU.&search=ordinance\>s. This way the display of the threshold as a pre-defined line can contain the information of the validity period of the threshold using the particular time interval. Select -Use user-specified time interval- and select the chosen interval. The series is then only displayed in the selected time interval in the diagram. <!-- src: help/05/475 -->
+By default, a series is displayed for the entire time interval of the time series graph as defined by the time scale settings, for as long as data for the series is available. In some cases it is useful to define a special displayed time interval for a particular series — for example, when a threshold value changes due to regulatory amendments. This way, displaying the threshold as a pre-defined line can include the validity period of the threshold using a specific time interval. Select **-Use user-specified time interval-** and choose the desired interval. The series is then displayed only within the selected time interval.
 
-### Time series
+## Reference: Time Series List Controls
 
-**New**
+The following toolbar icons appear in list controls throughout the time series properties (both the **Time series** list and the **Series definitions** list):
 
-Using this icon, entries can be added to the list.
+**New** — Add an entry to the list.
 
-**Duplicate**
+**Duplicate** — Create a copy of the selected entry. The new entry is added at the end of the list and selected automatically.
 
-Use this icon to create a copy of the selected entry. The new entry is added at the end of the list and selected automatically.
+**Delete** — Remove the marked entries from the list.
 
-**Delete**
+**Move selected entry up** — Move an entry up in the list. Moving entries is also possible using drag and drop.
 
-Using this icon, marked entries can be removed from the list.
+**Move selected entry down** — Move an entry down in the list. Moving entries is also possible using drag and drop.
 
-**Move selected entry up**
+**Edit without refresh** — Edit list entries without triggering a refresh. Moving a series or column definition in the list can cause long processing depending on the underlying data, because many pages may be affected. Use this icon to edit the list without actualization; abandon editing with the cross or confirm with the tick mark.
 
-Using this icon, entries can be moved up in the list. Moving entries is also possible using drag & drop.
+**Double-click an entry** — Closes the list and navigates in the object properties tree to the selected entry, so its properties can be edited.
 
-**Move selected entry down**
+## Reference: Presentation Options
 
-Using this icon, entries can be moved down in the list. Moving entries is also possible using drag & drop.
+Optionally, a time line series can use curves, bars, and symbols — in any combination. If no presentation type is chosen, the series is not displayed (this can be useful for series used only for aggregations).
 
-**Edit without refresh**
+**Curve**
 
-Editing the entries of a list can occasionally cause long processing. So for example moving a series or column definition in the list can take relatively long, depending on the basic data material, because sometimes many pages are affected.
+Select the **Curve** presentation type to display a continuous line. Optionally choose an interruption criterion based on the time span between two measurements — this avoids the visual impression of continuous measurements when data has gaps. Combined with a symbol or bar diagram, this produces different graphic presentation types for irregular measurement intervals.
 
-Using this icon the list can be edited without actualization. Editing the list can be abandoned with the cross or with the tick mark.
+By default, data records are ignored when the chosen parameter has no value (but a time exists), and a line is drawn through these records. Use the option **break line for empty records** to interrupt the line at such records instead.
 
-**Double-click an entry of the list**
+**Bar chart**
 
-Closes the list and changes in the tree view of the object properties to the particular entry, so that its properties can be edited. <!-- src: help/05/484 -->
+Select the bar width. As with the **Symbols** type, choose whether bars should be drawn in areas where samples were taken only infrequently (interruption areas).
 
-### Presentation options
+**Symbols**
 
-Optionally in a time line series presentation curves, bars and symbols (in any combination) can be used. If no presentation type is chosen, the series is not displayed (this can be sensible for series, which are used for aggregations).
+Choose whether symbols are drawn in areas where samples were taken infrequently.
 
-While selecting the presentation type \<**Curve**\> optionally an interruption criterion can be selected. Here the time span between two measurements is decisive. This way you can avoid the visual impression of continuous measurements through a connected line. In combination with a symbol or bar diagram in the areas, in which samples were taken only seldom, you receive different graphic presentation types for irregular measurement intervals.
+## Reference: Measurement Value Graphic Element
 
-By default data records on a curve are ignored if the chosen parameter has no value (although a time exists) and a line is drawn through these records. This line can be interupted using the option **break line for empty records**.
-
-For the presentation type \<**Bar chart**\> the bar width can be selected. Like for the presentation type \<**Symbols**\>, here you can select, whether this should be drawn in the areas, in which samples were only taken seldomly (i.e. for interruptions of the curve). <!-- src: help/05/533 -->
-
-### Measurement value graphic
-
-The graphic element measurement value graphic is used to display time series, XY-diagrams, triangle diagrams and hydrochemical special diagrams. It can be inserted into a object frame any often.
+The **Measurement Value graphic element** is used to display time series, X-Y diagrams, triangle diagrams, and hydrochemical special diagrams. It can be inserted into an object frame as often as required.
 
 **The element name**
 
-The element name is used mainly to identify the graphic elements of a GeoDin graph better in the tree view of graphic elements. By using significant names for graphic elements a complex graph can be designed very clear. For some graphic elements a related element can be entered. Here also the element name is used.
+The element name is used to identify graphic elements in the GeoDin graph tree view. Use meaningful names when building complex layouts. For some graphic elements a related element can be entered. Here also the element name is used.
 
-[Drawing layer](layouts/layout-editor-basics.md)
+**Drawing layer**
 
-Display of the drawing layer, on which the graphic element is placed. Using the icon **In another layer** the graphic element can be moved in anther drawing layer. You find further information on drawing layers in the chapter [Drawing layer](layouts/layout-editor-basics.md).
+Displays the drawing layer on which the element is placed. Use the **In another layer** icon to move it to a different layer. See [Layout Editor Basics](layouts/layout-editor-basics.md) for further information on drawing layers.
 
-### Measurement graphic series
+## Reference: Measurement Graphic Series
 
 An individual series defines two essential features:
 
-1\) Selection of the amount of data to be shown
+1. Selection of the amount of data to be shown
+2. Selection of the type of presentation (graphic properties)
 
-2\) Selection of the type of presentation (graphic properties)
+For example, in an X-Y diagram, triangle diagram, or hydrochemical special diagram — to display measurement values of one measurement point as red symbols and another as blue symbols — create two series: set the data source for the first to the first measurement point and select red as the symbol color; set the data source for the second to the second measurement point and select blue.
 
-To display for example in a XY-diagram, triangle diagram and hydrochemical special diagram, the measurement values of a measurement point as red symbols and the measurement values of another measurement point as blue symbols, you have to create two series, where the data source for the first is the first measurement point and red is selected as symbol color and the data source for second is the second measurement point and blue is selected as symbol color.
+To distinguish individual series in the object properties tree, give each series a free name in the **Name series** input field.
 
-To distinguish the individual series in the tree of object properties more easily, giving a free name in the entry field *\"Name series\"* is possible. <!-- src: help/05/629 -->
+**Series label**
 
-### Time axis
+By default the diagram is labeled with the names of the displayed series. An alternative label can be entered here.
 
-The time axis can be labeled with any text. This is displayed below in the center of the diagram. The font for this text can be selected in the branch [Parameter labels](time-series-charts.md).
+## Reference: Time Axis
 
-The option -Draw top diagram boundary- results a horizontal closing line, otherwise the diagram is open at the top. <!-- src: help/05/702 -->
+The time axis can be labeled with any text, displayed below the center of the diagram. The font for this text is selected in the **Parameter labels** branch.
 
-### Time interval
+The option **-Draw top diagram boundary-** draws a horizontal closing line at the top of the diagram; without it, the diagram is open at the top.
 
-The time interval of the time axis is defining starting and ending time of the presentation. The points in time can be selected separately using the following options:
+## Reference: Time Interval
 
-**Automatic**
+The time interval of the time axis defines the starting and ending time of the presentation. The points in time can be selected separately using the following options:
 
-The point in time is defined by the existing measurement values.
+**Automatic** — The point in time is defined by the existing measurement values.
 
-**Point in time**
+**Point in time** — The point in time is entered directly in the input field.
 
-The point in time is entered in the input field.
+**Relative** — The point in time is selected relative to other points in time. This option can be selected for only one of the two endpoints. Optionally, use **Round up time difference** to round the calculated point in time to a round value of the time interval (for example, the 1st of the month).
 
-**Relative**
+**Current time** — Available for the ending time only. The current time is used as the ending point.
 
-The point in time is selected relative to other points in time. This can be selected only for one of both points in time. For the selection of the relative point in time a rounding up of the calculated point in time on a straight value of the time interval (for example the 1. of the month) can be reached using the option \<**Round up time difference**\>.
+The starting and ending points resulting from the settings or the actual measurement values are displayed as information.
 
-**Current time**
+**Example:** to display the measurement values of the last 10 years until today — set the ending point to **-Current time-** and the starting time to **-Relative-** with a value of 10 and **Years** selected in the dropdown.
 
-Is only available for the ending time. The current time is used as ending point.
+## Reference: Formula Syntax
 
-The starting and ending point, which are created by the setting or the actual measurement values, are displayed as information.
+For graphic elements related to measurements and measurement graphics — such as time series, triangle diagrams, and others — formulas are used for the featured parameters. In the simplest case a formula contains only the variable for the parameter; complex mathematical formulas combining several parameters are also supported.
 
-**Example:**
+In formula entry fields, use the **Build** button (right icon in the entry field) to build a formula from a list of possible parameters.
 
-The measurement values of the last 10 years until \"today\" should be displayed. As ending point the option -Current time- has to be chosen, as starting time the option -Relative- with an entry of 10 and a selection of the time interval \"Years\" in the drop down menu. <!-- src: help/05/704 -->
+Like the labeling instructions, relations to parameters of the database are expressed using `$`-symbols:
 
-### Series definitions
+**Example:** `$WAT:NO3$`
 
-**New**
-
-Using this icon, entries can be added to the list.
-
-**Duplicate**
-
-Use this icon to create a copy of the selected entry. The new entry is added at the end of the list and selected automatically.
-
-**Delete**
-
-Using this icon, marked entries can be removed from the list.
-
-**Move selected entry up**
-
-Using this icon, entries can be moved up in the list. Moving entries is also possible using drag & drop.
-
-**Move selected entry down**
-
-Using this icon, entries can be moved down in the list. Moving entries is also possible using drag & drop.
-
-**Edit without refresh**
-
-Editing the entries of a list can occasionally cause long processing. So for example moving a series or column definition in the list can take relatively long, depending on the basic data material, because sometimes many pages are affected.
-
-Using this icon the list can be edited without actualization. Editing the list can be abandoned with the cross or with the tick mark.
-
-**Double-click an entry of the list**
-
-Closes the list and changes in the tree view of the object properties to the particular entry, so that its properties can be edited. <!-- src: help/05/1422 -->
-
-### Series
-
-As default the diagram is labeled with the names of the displayed series. As an alternative a differing label can be entered here. <!-- src: help/05/1424 -->
-
-### Formula syntax
-
-For graphic elements with relations to measurements and measurement graphics, like *time series, triangle diagrams* etc. formulas are used for the featured parameters, which contain in the simplest case only the variable for the parameter, but also complex mathematical formulas for the calculation of several parameters.
-
-In the entry fields for formulas you can **Build** a formula from a list of possible parameters with clicking the right icon in the entry field.
-
-Like the labeling instructions the relations to parameters of the database are made in \$-symbols:
-
-**Example:** \$WAT:NO3\$
-
-This value defines that the parameter \'nitrate\' from the data type \'ground water chemistry\' should be used for the presentation.
+This defines the parameter 'nitrate' from the data type 'ground water chemistry' for the presentation.
 
 **Mathematical operators**
 
-Beside the selection of single parameters also the entry of any formula, in which parameter names are combined with mathematical operators, is possible:
+In addition to single parameters, any formula combining parameter names with mathematical operators is supported:
 
-**Example:** \$WAT:NO3\$ \*2
+**Example:** `$WAT:NO3$ * 2`
 
-Use of the parameter 'nitrate' multiplied by 2.
+Uses the parameter 'nitrate' multiplied by 2.
 
-Beside the mathematical operators + - \* / the use of the following functions is possible:
+Supported mathematical operators: `+` `-` `*` `/`
 
-ABS
+Supported functions (argument in round brackets):
 
-ROUND
-
-EXP
-
-LN
-
-LOG
-
-SIN
-
-COS
-
-SQR
-
-SQRT
-
-The argument is made in round brackets:
-
-ROUND(\$WAS:NO3\$)
+* `ABS`
+* `ROUND` — example: `ROUND($WAS:NO3$)`
+* `EXP`
+* `LN`
+* `LOG`
+* `SIN`
+* `COS`
+* `SQR`
+* `SQRT`
 
 **Detection limits**
 
-Special cases are detection limits from tables. These are entered as negative value per definition (for example -1 for \<1). If the values would be used uncritical, wrong results would be produced. These values can optionally be handled special. For this a construct \@B(x) under the \$-symbols is necessary, while x is a factor, with which the detection limit is contributing to the result. For example a detection limit of 5 mg (entered as -5 ) would with a use of the factor 0,5 equal the value 2,5.
+Detection limit values from tables are entered as negative values by convention (for example, `-1` for `<1`). If used without special handling, these produce incorrect results. Use the `@B(x)` construct under the `$`-symbols to handle them, where `x` is a factor specifying how much the detection limit contributes to the result:
 
-**Example:** \$BENZENE@B(0,5)\$ + \$TOLUENE@B(0,5)\$ + \$XYLENE@B(0,5)\$
+**Example:** `$BENZENE@B(0,5)$ + $TOLUENE@B(0,5)$ + $XYLENE@B(0,5)$`
 
-In this case for negative values only half of the value is calculated. <!-- src: help/05/2573 -->
+With a factor of `0,5`, a detection limit of 5 mg (stored as `-5`) contributes `2,5` to the result.
+
+***
+
+## Reference: Layout Interfaces (Time Series Quick Settings)
+
+These layout interface options control the time axis of time series in a layout.
 
 ### Time line presentation for the last
 
 **Using layout interfaces**
 
-With this layout interface option the time interval of a time line series can be adjusted so that the measurement values of this current point of time are taken into consideration to a defined time span in the past.
+The time interval of a time line series can be adjusted so that the measurement values of the current point in time are taken into consideration to a defined time span in the past.
 
-**Requirements in the layout**
+**Requirements:** the layout must contain at least one measurement value graphic with diagram type **Time series** selected.
 
-The layout to be used has to contain at least one measurment value graphic. As diagram type [Time series](time-series-charts.md) has to be selected.
+**Effect:** the presentation area of the time axis of all time line series in the layout is set to the selected time interval in the past of the current date.
 
-**Results in the layout**
-
-The presentation area of ther time axis of all time line series in the layout are set to the selected time interval (in the past of the current date). <!-- src: help/05/3697 -->
-
-### Axis scale time axis
+### Axis scale — time axis
 
 **Using layout interfaces**
 
-With this option the time axis scale can be adjusted
+The time axis scale can be adjusted.
 
-**Requirements in the layout**
+**Requirements:** the layout must contain at least one measurement value graphic with diagram type **Time series** selected.
 
-The used layout has to contain at least one measurement value graphic. The diagram type [Time series](time-series-charts.md) has to be selected.
-
-**Results in the layout**
-
-The time axis scale of all time series in the layout will be affected. <!-- src: help/05/8992 -->
+**Effect:** the time axis scale of all time series in the layout is affected.
