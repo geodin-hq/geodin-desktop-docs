@@ -4,36 +4,9 @@ description: Projection model, cross-section alignment, layer joining and freeha
 
 # Construction and Alignment
 
-Part of the [Creating Custom Layouts](../creating-custom-layouts.md) family.
-
-## Column properties for reports
-
-
-When configuring report columns, options include:
-
-* **Report width:** Fix the report width so it remains consistent regardless of invisible or removed columns. Remaining column widths are calculated proportionally.
-* **Horizontal orientation:** Position the report within its frame (left, center, right) — applies only when the report is narrower than the frame.
-* **Vertical orientation:** Position data within the frame when content overflows to multiple pages (top or bottom).
-
-## Importing and exporting polylines
-
-
-**Importing:** Use `File > Import > Polylines`. Polylines use the ArcInfo UNGENERATE format (`.lic`). Coordinates are transformed according to the active projection model. Maximum 8,192 nodes per polyline. Imported polylines appear red in preview; click "Add polyline(s)" to transfer them to the graph.
-
-**Exporting:** Use `File > Export > Polylines`. Three coordinate modes are available:
-
-| Mode                       | Description                                                                                                                                                                                |
-| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Relative coordinates**   | 2D coordinates in mm of the drawing area (origin = top-left of page).                                                                                                                      |
-| **Projection coordinates** | 2D coordinates converted via the active projection model. For cross-sections, X = distance from first node of section line, Y = absolute height.                                           |
-| **Global coordinates**     | 3D coordinates (easting, northing, absolute height) recalculated from the 2D drawing using the line of section. Requires a valid cross-section construction with correct projection model. |
-
-Export produces multiple files: `.lic` (line coordinates), `.lia` (line attributes), `.plc` (polygon coordinates), `.pla` (polygon attributes), `.pnt` (line of section), and `.log`.
-
-> **Important:** When exporting cross-sections in global coordinates, do not move the cross-section on the paper or change the paper format after construction. If the projection model becomes invalid, GeoDin displays error codes 1-9 with specific correction instructions accessible via F1 Help.
+This page is part of the [Creating Custom Layouts](../creating-custom-layouts.md) family. It covers the geometric and spatial tools available in the layout editor: the projection model that links paper coordinates to real-world coordinates, alignment options for cross-section boreholes, tools for drawing and connecting geological layers, polyline import/export, and display properties for the north arrow, scale bar, and report columns.
 
 ## Projection model
-
 
 The projection model converts between paper coordinates (cm from top-left corner) and real-world coordinate systems (e.g., meters). This is essential for site plans and geological cross-sections.
 
@@ -49,7 +22,6 @@ The projection model is configured automatically when using the geological cross
 
 ## Cross-section alignment
 
-
 | Feature                           | Description                                                                                                                                                                                                                                                                     |
 | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Align to ground level (Datum)** | Select multiple object frames (`Shift+Ctrl+click`), then `Arrange > Surface level` to align boreholes vertically by their ground level elevation. The leftmost borehole is the reference. Boreholes requiring moves exceeding the page height are skipped with a warning.       |
@@ -59,7 +31,6 @@ The projection model is configured automatically when using the geological cross
 | **Drawing depth options**         | _Depth_ — draw to a fixed depth below ground surface. _Cut-off_ — set a reduced level below which the cross-section is not displayed (acts as a horizontal cut line).                                                                                                           |
 
 ## Join layers tool
-
 
 The "Join layers" tool connects geological layers between adjacent boreholes with filled polygons, either fully automatically or semi-automatically.
 
@@ -73,15 +44,33 @@ The "Join layers" tool connects geological layers between adjacent boreholes wit
 
 **Combining layers:** Hold Shift and click to extend the selection across multiple adjacent layers within one borehole. The first selected layer determines the suggested fill pattern. Shift+click a central layer to remove the entire selection for that borehole.
 
-> It is recommended to create cross-section layer connections in a separate drawing layer from the borehole columns to simplify editing.
+{% hint style="info" %}
+Create cross-section layer connections in a separate drawing layer from the borehole columns to simplify editing.
+{% endhint %}
 
 ## Freehand layer drawing
 
-
 Layer connections can also be drawn as freehand polygons instead of using the Join layers tool. Draw with the Polygon element — the polyline does not need to be closed. Use overlapping layers drawn front-to-back to create clean boundaries: draw the deeper layer first, then overlap with the upper layer so the upper boundary becomes the visible edge.
 
-## North arrow and map rotation
+## Importing and exporting polylines
 
+**Importing:** Use `File > Import > Polylines`. Polylines use the ArcInfo UNGENERATE format (`.lic`). Coordinates are transformed according to the active projection model. Maximum 8,192 nodes per polyline. Imported polylines appear red in preview; click "Add polyline(s)" to transfer them to the graph.
+
+**Exporting:** Use `File > Export > Polylines`. Three coordinate modes are available:
+
+| Mode                       | Description                                                                                                                                                                                |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Relative coordinates**   | 2D coordinates in mm of the drawing area (origin = top-left of page).                                                                                                                      |
+| **Projection coordinates** | 2D coordinates converted via the active projection model. For cross-sections, X = distance from first node of section line, Y = absolute height.                                           |
+| **Global coordinates**     | 3D coordinates (easting, northing, absolute height) recalculated from the 2D drawing using the line of section. Requires a valid cross-section construction with correct projection model. |
+
+Export produces multiple files: `.lic` (line coordinates), `.lia` (line attributes), `.plc` (polygon coordinates), `.pla` (polygon attributes), `.pnt` (line of section), and `.log`.
+
+{% hint style="warning" %}
+When exporting cross-sections in global coordinates, do not move the cross-section on the paper or change the paper format after construction. If the projection model becomes invalid, GeoDin displays error codes 1-9 with specific correction instructions accessible via F1 Help.
+{% endhint %}
+
+## North arrow and map rotation
 
 For map elements within variable images:
 
@@ -95,5 +84,12 @@ For map elements within variable images:
 
 ## Scale bar
 
-
 The horizontal scale bar appearance is configured with number of divisions, font type, size, and other display settings. Unit labeling (`m`, `ft`) is automatic when an EPSG code is defined for the cross-section objects — the unit matches the coordinate system of the EPSG code. Without an EPSG code, unit labeling must be entered manually.
+
+## Column properties for reports
+
+When configuring report columns, options include:
+
+* **Report width:** Fix the report width so it remains consistent regardless of invisible or removed columns. Remaining column widths are calculated proportionally.
+* **Horizontal orientation:** Position the report within its frame (left, center, right) — applies only when the report is narrower than the frame.
+* **Vertical orientation:** Position data within the frame when content overflows to multiple pages (top or bottom).
