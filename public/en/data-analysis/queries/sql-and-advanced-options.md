@@ -8,4 +8,4 @@ The Query Builder supports **direct SQL** entry for cases where the visual build
 
 When using raw SQL, the **table list** declares which identifiers in the FROM clause should be schema-extended at execution time, so the query works portably across database connections with different schema configurations.
 
-For the comprehensive reference — full syntax, all options, edge cases — see [**Query Builder Reference**](query-builder-reference.md).
+For the comprehensive reference — full syntax, all options, edge cases — see [**Creating Queries**](creating-queries.md) (long-form) and [**Query Builder Reference**](query-builder-reference.md).

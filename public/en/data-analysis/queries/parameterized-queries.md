@@ -8,4 +8,4 @@ description: Parameterized queries — queries with placeholders that prompt for
 
 Parameters are defined in the Query Builder with a name, type, and optional default value. At runtime, GeoDin shows a dialog listing each parameter and capturing the user's input before executing the query.
 
-For the comprehensive reference — full syntax, all options, edge cases — see [**Query Builder Reference**](query-builder-reference.md).
+For the comprehensive reference — full syntax, all options, edge cases — see [**Creating Queries**](creating-queries.md) (long-form) and [**Query Builder Reference**](query-builder-reference.md).
