@@ -4,8 +4,6 @@ description: Fill Patterns and Symbols
 
 # Fill Patterns and Symbols
 
-### Fill patterns
-
 All the fill patterns and symbols available in the GeoDin system are displayed in the object manager of the system objects (via the **System** tab).
 
 This is based on the files stored in the SOURCE folder of the GeoDin installation. The folder contains files with the extension:
@@ -16,8 +14,6 @@ This is based on the files stored in the SOURCE folder of the GeoDin installatio
 
 These files contain the definitions of the fill patterns and symbols in text format and can be modified using the  ![Edit](../.gitbook/assets/icons/edit.png) **"Edit"** method.
 
-The formats of the fill pattern and symbol definitions are described in the chapter [Fill patterns](fill-patterns-and-symbols.md)
-
 The drawing definitions can be edited in the \<Instructions> text window.
 
 Using the **Preview** button or the **F4** key, the fill patterns and symbols can be greatly enlarged in the preview bar on the right. If you select a fill pattern or symbol in this bar, it will remain visible as the top entry the next time you activate the preview. Double-clicking on a fill pattern or symbol in the preview list takes you to the first line of the associated definition statement.
@@ -32,33 +28,6 @@ _**Attention:**_ _The fill pattern \[Empty#0]\[TYPNULL]\[$00FFFFFF] must be defi
 _The fill pattern table INTENG.SGN (Source INTENG.SGA) contains the English version of the BS5930 fill patterns and symbols and is therefore identical with the fill pattern table GEODDEF.SGN (Source GEODDEF.SGA). The graphical representation of boreholes uses the INTENG fill pattern table for English language objects. Hence changes to the GEODDEF fill pattern table do not affect the display of boreholes. When filling polygons and other areas in the layout editor, the signature table depends on the selection in the corresponding fill dialogue._\
 &#xNAN;_&#x46;or special object types (for example "Geotechnical borehole" or "Botswana Dep. of Geol. Survey") there are custom made fill pattern files (GEOTECH1 and BOTSWANA)._
 
-### Symbols
-
-All the fill patterns and symbols available in the GeoDin system are displayed in the object manager of the system objects (via the **System** tab).
-
-This is based on the files stored in the SOURCE folder of the GeoDin installation. The folder contains files with the extension:
-
-.SGA - Signature Table
-
-.SYA - Symbol Table
-
-These files contain the definitions of the fill patterns and symbols in text format and can be modified using the **"Edit"** method.
-
-The formats of the fill pattern and symbol definitions are described in the chapter [Fill patterns](fill-patterns-and-symbols.md)
-
-The drawing definitions can be edited in the \<Instructions> text window.
-
-Using the **Preview** button or the **F4** key, the fill patterns and symbols can be greatly enlarged in the preview bar on the right. If you select a fill pattern or symbol in this bar, it will remain visible as the top entry the next time you activate the preview. Double-clicking on a fill pattern or symbol in the preview list takes you to the first line of the associated definition statement.
-
-To finally apply the changes to the drawing definitions, the **Create** button must be used. The current definition file is then compiled and the result is stored in the SYSLIB folder. The compiled signature tables get the file extension .SGN, while compiled symbol tables get the extension .SYM.
-
-To create a new fill pattern or symbol table, simply copy an existing file or create a new text file with the appropriate extension (.SGA or .SYA) in the SOURCE folder. The new file is now displayed in the object manager of the system objects under [_Fill patterns_](fill-patterns-and-symbols.md) or _**Symbols**_. If GeoDin has not been closed in the meantime, you can update the display by right-clicking and selecting the _**Refresh**_ menu item for the corresponding entries.
-
-_**Attention:**_ _The fill pattern \[Empty#0]\[TYPNULL]\[$00FFFFFF] must be defined as the first available fill pattern in every fill pattern table._\
-&#xNAN;_&#x44;epending on the local language version, GeoDin may come with a wide variety of fill pattern tables._
-
-_The fill pattern table INTENG.SGN (Source INTENG.SGA) contains the English version of the BS5930 fill patterns and symbols and is therefore identical with the fill pattern table GEODDEF.SGN (Source GEODDEF.SGA). The graphical representation of boreholes uses the INTENG fill pattern table for English language objects. Hence changes to the GEODDEF fill pattern table do not affect the display of boreholes. When filling polygons and other areas in the layout editor, the signature table depends on the selection in the corresponding fill dialogue._\
-&#xNAN;_&#x46;or special object types (for example "Geotechnical borehole" or "Botswana Dep. of Geol. Survey") there are custom made fill pattern files (GEOTECH1 and BOTSWANA)._
 
 ### Dictionary properties
 

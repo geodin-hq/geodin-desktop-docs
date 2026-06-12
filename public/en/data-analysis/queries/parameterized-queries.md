@@ -8,4 +8,20 @@ description: Parameterized queries — queries with placeholders that prompt for
 
 Parameters are defined in the Query Builder with a name, type, and optional default value. At runtime, GeoDin shows a dialog listing each parameter and capturing the user's input before executing the query.
 
-For the comprehensive reference — full syntax, all options, edge cases — see [**Query Builder Reference**](query-builder-reference.md).
+### Using result fields for Shape export
+
+The **Result fields (Export)** node in the query wizard determines which data fields are included in the attribute table when the query result is exported as a Shape file.
+
+To enable Shape export of measurement values (e.g. chloride concentrations):
+
+1. In the query wizard, go to the **Set display fields** step.
+2. Drag the desired parameter fields (e.g. `GWC.CHLORIDE`) onto the **Result fields (Export)** node.
+3. Save the query. In the Maps module, the query layer will now expose these fields for labelling, interpolation, and Shape export.
+
+Without result fields, the Shape export contains only geometry and the object ID. Adding measurement parameters here is the prerequisite for generating interpolation maps or contour layers from query results.
+
+{% hint style="info" %}
+Queries on the **Measurement Points** branch work the same way — result fields defined there are exported alongside the measurement point geometry.
+{% endhint %}
+
+For the comprehensive reference — full syntax, all options, edge cases — see [**Creating Queries**](creating-queries.md) (long-form) and [**Query Builder Reference**](query-builder-reference.md).

@@ -13,8 +13,6 @@ description: >-
 
 A project may contain up to 9998 objects or boreholes. Because the number of projects in a database is unlimited, the number of objects in a database is also unlimited.
 
-A object may be defined in the GeoDin system as an object that has at least a name and is related to a project. Objects can be boreholes, monitoring wells, cone testing holes as well as climate measuring stations, surface water collection points etc.
-
 Each object must be defined by general data containing information like its name and where present its coordinates. Depending upon the type of object further information may then be entered and displayed, for example a borehole log, CPT results, a groundwater monitoring well. There are over 100 different types of objects ("Object types\*\*"\*\*) in GeoDin, which cover all types of data collection and presentation.
 
 The default installation provides the user a set of object types, depending on the language version. Further object types can be installed from the CD. For example all German geological survey organizations (Geologische Landesämter) have their own input masks for which special syntax controls have been defined. Other international standards are supported (e.g. BS5930, NEN, ÖNORM) as well as specific national standards (e.g. Dept. of Geological Survey, Botswana). A project may contain several different types of objects as long as these are installed in the GeoDin-System folder. In addition there are controls to allow or to prevent the creation of certain types of objects (e.g. read only).
@@ -236,6 +234,10 @@ The number of editors available depends on the object type chosen. There are too
 
 If for the current object an input of these data is not possible the particular icons are not present in the tool bar. For example for a climate measurement point only the general data can be entered, so only one icon appears in the tool bar.
 
+&#x20;![New](../../.gitbook/assets/icons/new.png) **New object**\
+\
+Creates a new object without leaving the Data management method (see also: [Create object](creating-objects.md)).
+
 ### General data
 
 The input masks for recording general data are accessed by clicking on this icon.
@@ -372,6 +374,13 @@ Key functions for the input in the table:
 **Ctrl + Del** Deletes current line (following lines move up)
 
 Please also see the help notes [Using the data entry grid](../measurement-values/working-with-measurement-data.md).
+
+&#x20;![First](../../.gitbook/assets/icons/first.png) **\<First row> -** Moves to first data record
+
+\
+&#x20;![Next](../../.gitbook/assets/icons/next.png) **\<Next row> -** Moves to next data record\
+\
+&#xNAN;**\<Last row> -** Moves to last data record
 
 ### Well design data
 
@@ -636,6 +645,8 @@ Optional the coordinates from the SEP files can be transformed into another meri
 \
 Confirm your selection with **OK**. After completing the import further data can be imported without calling up the option again.
 
+Select the method  ![SEP import](../../.gitbook/assets/icons/sep-import.png) **"SEP import"** at the entry object.
+
 ### Data checks and calculations
 
 You can use the method **"Data checks and calculations"** for input controls, search and replace of contents and layer queries.
@@ -847,6 +858,22 @@ The following keys have special functions for working in the layer data mask edi
 
 In the input screen the information of each layer can be edited. The lower layer boundary of the previous and the next layer is displayed left and right beside the entry field for the depth value.
 
+\
+&#x20;![Insert](../../.gitbook/assets/icons/insert.png) **Insert layer** - inserts a new layer
+
+\
+&#x20;![Delete](../../.gitbook/assets/icons/delete.png) **Delete layer** - deletes the current layer
+
+\
+&#x20;**First layer** - scrolls to the first layer (not in full-text mode)
+
+&#x20;![Previous](../../.gitbook/assets/icons/previous.png) **Previous layer** - scrolls to the previous layer (not in full-text mode)
+
+\
+&#x20;**Next layer** - scrolls to the following layer (not in full-text mode)
+
+&#x20;![Last](../../.gitbook/assets/icons/last.png) **Last layer** - scrolls to the last layer (not in full-text mode)
+
 ### Data sequences
 
 Data sequence information is collected with the data sequence editor.
@@ -868,22 +895,6 @@ The **Import** button can import existing data sequences from ASCII files. A det
 Conversely the **Export** button allows selected data sequences to be exported in CSV-Format. For each data sequence a file with the following format is created in a user defined folder: Objekt.LONGNAME\_SNDNAME\_SNDID.csv.
 
 Please also see the help notes [Using the data entry grid](../measurement-values/working-with-measurement-data.md).
-
-### Configuration
-
-The system configuration contains all global (project independent) settings in GeoDin. Under the index card "System" you can access system configuration. These include dictionaries (Keylists), signature tables, fill patterns, data types etc.
-
-Settings or changes in the system configuration may affect the display of all graphics.
-
-**Example:**
-
-If you change the signature for the key fS (fine sand) in the dictionary "Petrography", the fine sand layers of all boreholes will be displayed with the new signature in all graphics from now on.
-
-If you change the appearance of a signature, all surfaces (also older graphics) that are filled with this signature will be displayed with the new signature. This is due to the fact that in the GeoDin graphics for a filled surface only the name of the signature table and the number of the signature are stored and not the appearance of the signature itself.
-
-These examples show that in multi-user environments it is advisable that not everybody should have the rights to change the system configuration to avoid unwanted changes. In GeoDin this is controlled as described in the chapter
-
-**Edit**.
 
 ### Object types
 
@@ -1037,31 +1048,7 @@ If you give in the entry field "Reduction factor" a value <>0, the data of the f
 
 ### Fill patterns
 
-All the fill patterns and symbols available in the GeoDin system are displayed in the object manager of the system objects (via the **System** tab).
-
-This is based on the files stored in the SOURCE folder of the GeoDin installation. The folder contains files with the extension:
-
-.SGA - Signature Table
-
-.SYA - Symbol Table
-
-These files contain the definitions of the fill patterns and symbols in text format and can be modified using the **"Edit"** method.
-
-The formats of the fill pattern and symbol definitions are described in the chapter [Fill patterns](../../configuration/fill-patterns-and-symbols.md)
-
-The drawing definitions can be edited in the \<Instructions> text window.
-
-Using the **Preview** button or the **F4** key, the fill patterns and symbols can be greatly enlarged in the preview bar on the right. If you select a fill pattern or symbol in this bar, it will remain visible as the top entry the next time you activate the preview. Double-clicking on a fill pattern or symbol in the preview list takes you to the first line of the associated definition statement.
-
-To finally apply the changes to the drawing definitions, the **Create** button must be used. The current definition file is then compiled and the result is stored in the SYSLIB folder. The compiled signature tables get the file extension .SGN, while compiled symbol tables get the extension .SYM.
-
-To create a new fill pattern or symbol table, simply copy an existing file or create a new text file with the appropriate extension (.SGA or .SYA) in the SOURCE folder. The new file is now displayed in the object manager of the system objects under [_Fill patterns_](../../configuration/fill-patterns-and-symbols.md) or [_Symbols_](../../configuration/fill-patterns-and-symbols.md). If GeoDin has not been closed in the meantime, you can update the display by right-clicking and selecting the _**Refresh**_ menu item for the corresponding entries.
-
-_**Attention:**_ _The fill pattern \[Empty#0]\[TYPNULL]\[$00FFFFFF] must be defined as the first available fill pattern in every fill pattern table._\
-&#xNAN;_&#x44;epending on the local language version, GeoDin may come with a wide variety of fill pattern tables._
-
-_The fill pattern table INTENG.SGN (Source INTENG.SGA) contains the English version of the BS5930 fill patterns and symbols and is therefore identical with the fill pattern table GEODDEF.SGN (Source GEODDEF.SGA). The graphical representation of boreholes uses the INTENG fill pattern table for English language objects. Hence changes to the GEODDEF fill pattern table do not affect the display of boreholes. When filling polygons and other areas in the layout editor, the signature table depends on the selection in the corresponding fill dialogue._\
-&#xNAN;_&#x46;or special object types (for example "Geotechnical borehole" or "Botswana Dep. of Geol. Survey") there are custom made fill pattern files (GEOTECH1 and BOTSWANA)._
+See [Fill Patterns and Symbols](../../configuration/fill-patterns-and-symbols.md) for the source formats (.SGA / .SYA), the editing and preview workflow, and compilation to .SGN / .SYM.
 
 ### Edit
 
@@ -1197,104 +1184,11 @@ If you have not made any changes to the dictionaries or masks, you can remove th
 
 ### Symbols
 
-All the fill patterns and symbols available in the GeoDin system are displayed in the object manager of the system objects (via the **System** tab).
-
-This is based on the files stored in the SOURCE folder of the GeoDin installation. The folder contains files with the extension:
-
-.SGA - Signature Table
-
-.SYA - Symbol Table
-
-These files contain the definitions of the fill patterns and symbols in text format and can be modified using the **"Edit"** method.
-
-The formats of the fill pattern and symbol definitions are described in the chapter [Fill patterns](../../configuration/fill-patterns-and-symbols.md)
-
-The drawing definitions can be edited in the \<Instructions> text window.
-
-Using the **Preview** button or the **F4** key, the fill patterns and symbols can be greatly enlarged in the preview bar on the right. If you select a fill pattern or symbol in this bar, it will remain visible as the top entry the next time you activate the preview. Double-clicking on a fill pattern or symbol in the preview list takes you to the first line of the associated definition statement.
-
-To finally apply the changes to the drawing definitions, the **Create** button must be used. The current definition file is then compiled and the result is stored in the SYSLIB folder. The compiled signature tables get the file extension .SGN, while compiled symbol tables get the extension .SYM.
-
-To create a new fill pattern or symbol table, simply copy an existing file or create a new text file with the appropriate extension (.SGA or .SYA) in the SOURCE folder. The new file is now displayed in the object manager of the system objects under [_Fill patterns_](../../configuration/fill-patterns-and-symbols.md) or [_Symbols_](../../configuration/fill-patterns-and-symbols.md). If GeoDin has not been closed in the meantime, you can update the display by right-clicking and selecting the _**Refresh**_ menu item for the corresponding entries.
-
-_**Attention:**_ _The fill pattern \[Empty#0]\[TYPNULL]\[$00FFFFFF] must be defined as the first available fill pattern in every fill pattern table._\
-&#xNAN;_&#x44;epending on the local language version, GeoDin may come with a wide variety of fill pattern tables._
-
-_The fill pattern table INTENG.SGN (Source INTENG.SGA) contains the English version of the BS5930 fill patterns and symbols and is therefore identical with the fill pattern table GEODDEF.SGN (Source GEODDEF.SGA). The graphical representation of boreholes uses the INTENG fill pattern table for English language objects. Hence changes to the GEODDEF fill pattern table do not affect the display of boreholes. When filling polygons and other areas in the layout editor, the signature table depends on the selection in the corresponding fill dialogue._\
-&#xNAN;_&#x46;or special object types (for example "Geotechnical borehole" or "Botswana Dep. of Geol. Survey") there are custom made fill pattern files (GEOTECH1 and BOTSWANA)._
+Symbol tables (.SYA) follow the same editing and compilation workflow — see [Fill Patterns and Symbols](../../configuration/fill-patterns-and-symbols.md).
 
 ### Dictionary properties
 
-In addition to a list of codes and associated fill patterns there are general settings for each dictionary.
-
-**Numbers are converted into amounts**
-
-\
-This option results, that the used keys can be combined with postpositive numbers. These allow quantification or a qualification of the code.
-
-**Example from the Petrography dictionary (SSG):**
-
-fs fine sandy
-
-If a '2' or '4' are used after a code then this is interpreted as slightly or very in some object type dictionaries
-
-fs2 slightly fine sandy
-
-fs4 very fine sandy
-
-The addition of digits is not automatically permitted for every key, but is also controlled by the properties of the key. If the option -Digits are evaluated as part- is switched off, digits are generally evaluated as part of the key. This setting then applies to all keys in the dictionary.
-
-**Example from the Stratigraphy dictionary (SSG):**
-
-so1 Röt 1
-
-**Codes may be combined**
-
-\
-With this option it can be selected, that single codes of the dictionary can be combined without a separator while entering. This function is used in the dictionary (SSG) Colour, for example, to make it easier to enter different mixed colours:
-
-**Example:**
-
-In the dictionary color mixtures may be entered using combining individual codes: d (dark) and gr (gray) giving dgr to produce dark gray.
-
-**Recoding during data input**
-
-This option allows keys to be re-coded during input. This can be useful if you need to use older documents for input where outdated keys have been used. To avoid having to constantly check whether the key is out of date and needs to be replaced with a newer key, you can proceed as follows:
-
-Enable the -Recoding during data input- option and close the dialogue with the \<OK> button. This will display an additional column "DB key" next to the column for the key.
-
-The obsolete key and its plaintext are now entered in the dictionary. In addition, the DB KEY field is filled with the new key.
-
-KEY DB-KEY PLAINTEXT
-
-S\_old S\_new Plaintext for Key
-
-The "S\_old" key can now be used when entering data, but it is automatically replaced by "S\_new" when the entry is saved in the database. All keys that do not have an entry in the DB key field are written directly to the database.
-
-Please note that "S\_new" must also exist as a separate dictionary entry or be newly created in order to avoid the error "Abbreviation could not be found in dictionary" during or after updating the data record.
-
-As soon as you have defined an entry with a DB key, this entry is immediately written to the database as an abbreviation. However, the existing data records remain unaffected and are only "recoded" when the data record is changed manually and saved again.
-
-Calling up the old data record and using the Save function in the shift input does not result in recoding, as the data record has not changed. Recoding is only triggered and the new abbreviation saved once the data record has been changed.
-
-Alternatively, you can also use the [Data checks and calculations](../../data-analysis/calculation-engine/data-checks-and-validations.md) method and the Find and Replace function contained therein in shift descriptions to replace old abbreviations.
-
-**First separator divides categories**
-
-From the set of delimiters defined for the current dictionary (in the input line to the right of the list of options), the first character can be defined as a division between categories. For example, the semicolon in the SSG Petrography dictionary is used to separate main and secondary components. This option is mainly used in dictionaries with keys to create signatures, as the main components encoded after the selected separator are excluded from the signature.
-
-\
-**Text in apostrophes not allowed**
-
-If this option is switched on, it is no longer possible to enter comments in single inverted commas. This prevents plain text descriptions in input fields with key lists, as these also make it more difficult to analyse the otherwise coded entries. If the option is switched on, key and free text in inverted commas can be combined in the input field.
-
-**Separator**
-
-In the "Separator" input field, all permitted separators are stored in one input field when entering multiple keys. The separators defined for the dictionary may not be used in any key in the dictionary.
-
-**Example:**
-
-;,-()=
+Dictionary special settings (delimiters, signature keys, and graphic settings) are described in [Fill Patterns and Symbols](../../configuration/fill-patterns-and-symbols.md).
 
 ### Edit codes
 
@@ -1680,8 +1574,6 @@ The numbers for the "Graphic type" shown in the figure lead to the appropriate p
 
 ### System variables
 
-In addition to the actual keys, special system variables can be used in a dictionary to control the plain text translation and graphical conversion of keys. The system variables start with the prefix $TR and can be edited or entered like any other key. The system variables are displayed at the end of the key list.
-
 The following variables are defined:
 
 **$TRMINUS** - controls the translation of the minus character (default: \`to´)
@@ -1820,3 +1712,202 @@ A GeoDin dictionary can be exported in an Access database. For this select the m
 Select a target database, in which should be exported. Here you can select an existing Access database or create a new database.
 
 During the export at least one table with codes and text is created. If fill patterns are used in the dictionaries further tables are created containing the appropriate information.
+
+### Recovered editor reference (from pre-slim pages — needs editorial pass)
+
+_Content below existed only in the five objects/data pages slimmed in PR #10; their canonical_
+_carried a condensed variant without it. Recovered 2026-06-12; regrouped by original section._
+
+#### Calculating sequences (recovered)
+
+New series of data sequences can be calculated with the help of graphical templates or formulae. The formular can be defined in a special section of the GeoDin.ini file and is described at the end of this chapter. The graphical templates have to contain one or more [XY-diagram](../../data-visualization/layouts/x-y-diagrams.md) with the formulas. The calculation is done using already existing data sequence series, which have to be displayed in the diagram. The selected areas in the diagram define the conditions for the use of the formula.
+
+A graph of the maximum pressure against the friction ratio in the XY diagram leads to the following example view:
+
+The calculation of a new measurement series (for each single measurement point) is done on the base of the position of a measurement point in a defined area and the related **Surfaces** to this area. The definition of the area and the formulas are created and edited in the branch [Diagram design](../../data-visualization/layouts/layout-editor-basics.md).
+
+_**Important!**_ _The_ [_Measurement value graphic_](../../data-visualization/layouts/measurement-value-graphics.md) _of the graphic element XY diagram is decisive for the name of the new data sequence measurement series to create._
+
+A calculation layout can also contain several calculation diagrams:
+
+In this case several data sequence series are calculated in one operation.
+
+_**Note:**_ _Required for the use of the prepared templates for the calculation in the data sequence editor is the registry of this templates in the configuration file GeoDin.ini._
+
+Here a section with the name DataSequenceCalculation has to be created, which can contain any number of templates:
+
+Template1=c:\programs\GeoDin\templates\Example detection stiffness module.glo
+
+Template2=c:\programs\GeoDin\templates\Kennwerte DIN 1055.glo
+
+Template3=$Ratio Parameter 1 / 2 \[,3]$ = $>DS:Parameter 1$ / $>DS:Parameter 2$
+
+Template4=$Sum Parameter 1 und 2$ = $>DS:Parameter 1$ + $>DS:Parameter 2$
+
+The first two entries are links to GeoDin layouts with XY-Plots. The templates 3 and 4 each contain a simple formula to calculate a new series. The syntax is:
+
+$Result name \[Options]$ = $>DS:Name of a series$ Operator $>DS:Name of a series$ ......
+
+Before the equal sign the name of the result series is selected. In the brackets optionally the number of decimals for the result values can be selected. In template 3 the results will be created with 3 decimals and a comma as separator. Without these settings (like in template 4) the results will be displayed with 2 decimals and a point as separator as default.
+
+If you want to include an existing series in the formula the series name has to be included in $-signs. Additionally the key term >DS: has to be entered after the first $-sign (like in the formulae in the diagrams). If the term is for example "Sleeve Friction in MN/m²", the term in the formula has to be:
+
+The formula can contain any mathematical operator. Use paranthesis in complex formulae for example:
+
+$>DS:New series$ = ( $>DS:Series 1$ \* $>DS:Series 2$ ) + $>DS:Series 3$
+
+The calculation of new series is done in the [Data sequences](../../data-collection/import/data-sequences.md) with the icon [Calculating sequences](../../data-collection/import/data-sequences.md).
+
+After selecting the chosen template the calculation of one or more series (depending on the number of calculation diagrams in the template). The calculated series are afterwards available as new measurement series and can be used for graphic presentation.
+
+Instead of working in the data sequence editor you can calculate series also in the method #GeoDinHelpLink:**Data checks and calculations**155#. You can start this method on a query or group of objects and select the function **Data sequneces: Calculating sequences**.
+
+In these examples, series are calculated step by step and presented as graphics.
+
+Open GeoDin.ini and insert the following section to define a template:
+
+Template1=C:\Programme\GeoDin 8\Layouts\Serien\Beispiel Ableitung Steifemodul.glo
+
+Template3=$Verhältnis Parameter 1 / 2 \[,3]$ = $>DS:Parameter 1$ / $>DS:Parameter 2$
+
+Template4=$Summe Parameter 1 und 2$ = $>DS:Parameter 1$ + $>DS:Parameter 2$
+
+Template1=C:\Programme\GeoDin 8\Layouts\Serien\Steifemodul Tiefe.glo
+
+Template3=$Änderung des Steifemoduls mit der Tiefe \[,3]$ = $>DS:Parameter 1$ / $>DS:Parameter 2$
+
+#### Data source (recovered)
+
+Navigate to the import file via the  ![Open](../../.gitbook/assets/icons/open.png) **Open** button and select it.
+
+If the file can contain several tables, e.g. MS Excel or MS Access, please select the desired table via the drop-down box below.
+
+For MS Excel files or text files, it can additionally be set whether the first line of these files contains column labels, which is often the case.
+
+In addition, the date format used for formatting a date in these files can be specified. GeoDin takes this setting into account when converting dates later.
+
+The records can be marked in the preview and removed by using button if these records are not to be considered for the import. The records will only be removed in this preview and will not be used for the import, your import file will not be changed.
+
+GeoDin uses a Microsoft OLEDB database connection to access an MS Excel file. This driver (not GeoDin!) interprets the first rows of the table to determine the field format of the column. If the driver concludes that the values are numerical, the column is formatted numerically and any text in this column (i.e. content that is not numbers) is lost.
+
+In this case it helps to format this column in MS Excel with the cell format 'Text' BEFORE opening it with GeoDin. The contents will then be visible.
+
+Regardless of this, however, GeoDin will generate an error if an attempt is later made to import cells with text content into a numeric target field of the GeoDin database, as this is not allowed.
+
+MS Excel stores all time data internally as real numbers. This applies to the date as well as to minutes and seconds. Since GeoDin manages date (type date) and time (type string with length 5) separately for reasons of compatibility, these two pieces of information must be available separately when importing.
+
+If you split a combined time information from date and time into two columns in MS Excel, which then display the date and time, the time is internally available as a full time information with the date 0 (corresponds to the date 31.12.1899).
+
+When importing such preset data, the string '31.12' will be entered as the result in the time field of GeoDin, which corresponds exactly to the first 5 digits of the zero date. One way to prevent this is to manage/save the minute field in MS Excel as text or to save the Excel table as a CSV (text) file and then import it.
+
+#### Duplicating objects (recovered)
+
+To create a copy of an existing object including some or all of its data, right-click the object in the GeoDin Object Manager and choose **Duplicate object** (German: _Objekt duplizieren_).
+
+* !['Layer data\'](../../.gitbook/assets/icons/layer-data.png) **Layer data** — geological layers and borehole log data
+* **Sample data** — sample intervals and associated data
+* **Well design data** — casing, backfill, and filter information
+* **Documents** — linked or embedded document files
+* **Measurement values** — all measurement data from the data types assigned to this object
+
+Select the data types to copy and confirm. The duplicated object appears in the same project with a new auto-generated ID. Edit the short name and coordinates to differentiate it from the original.
+
+{% hint style="info" %}
+Object duplication is particularly useful when multiple objects at the same site share the same well design or measurement program setup — create the first object in full, then duplicate and adjust coordinates for subsequent objects.
+{% endhint %}
+
+#### Object link (recovered)
+
+_**Note:**_ _This option is only available for the "Update general data" method._
+
+In this step, you select the two table columns or database fields that are used to assign the data records of your import file to the objects that already exist in GeoDin.
+
+1. The GeoDin objects of the current query or group are displayed in the "Objects" \*\*table. From the drop-down box above the list, you can select the GeoDin field that contains the (as unique as possible) name or ID number for assigning the import data.
+2. For the \*\*"Data Source" list, then select the column in your import table that contains the names or ID numbers of the data records to be assigned. The available contents are now displayed in the list.
+
+The two input fields below the lists are used to restrict the displayed entries. Only entries in which the search term exists are displayed in the lists. Clear the search entry to display all entries again.
+
+#### Using the data entry grid (recovered)
+
+When performing data collection and organisation tasks using a grid, with data entry fields as columns and data records arranged in rows, there are many configuration options. A **view** of the data can be created with a few mouse clicks, which allows the order and visibility of the columns chosen to optimally present the data with respect to sorting, grouping and filtering of the current situation. These views can be saved with user defined names for later re-use.
+
+1. The column width can be changed by clicking and dragging in the header.
+2. By double-clicking the right-hand boundary of a column its width will be automatically adjusted to the length of the current content.
+3. Clicking the column heading once sorts the data records in ascending order.
+4. A further click sorts the data in the reverse direction (descending order).
+5. By Ctrl-clicking a column header the sorting is removed.
+6. Staggered sorting over several columns can be achieved Shift-clicking a column header, whereby the column chosen is lower in the hierarchy than the previously sorted column.
+7. The type of sorting is indicated by a triangular symbol in the column.
+8. The top left corner of the data input grid contains a button to allow the visibility of columns can be toggled on and off.
+
+Several data records can be selected at once by clicking the top-left button in front of each data record. By keeping the mouse button depressed after the first click and dragging the mouse to another part of the data input grid several records can be chosen. The area selected is shown in a different colour. Alternatively you may use the Shift-key to highlight an area or the Ctrl-key to select individual data sets. The key combination Ctrl+A can be used to select all data records.
+
+Data records can be grouped using the contents of one or more columns. Select and drag the column header to the area above the column headers. The data records are now arranged in groups within a column according to its' contents. Each group is automatically given a header which contains the name and contents of the data record. More hierarchal grouping is achieved by dragging further column headers onto the grouping area. Note: When adding a data record to a group (Insert or Ins) all contents of the parent group are automatically added to the new data record. Manual entry is not necessary and the data record automatically belongs to this group. Normally a grouping column is not visible as a single column. Should this be the case and the contents of a data record change, then this data record will be automatically moved to the relevant group when saving.
+
+Normally a calculated data field is locked by default, so that the value is pre-determined and cannot be changed by the user.
+
+Unexpected behavior may occur, when entering new data records in groups below locked data fields.
+
+If you group a data record by a locked data field and add a new data record afterwards, it is not mandatory for GeoDin to use the grouping value as the content for the locked data field in the new data record, but rather to use the calculated value by default.
+
+The grouping value has priority for unlocked data fields even if the grouping value overwrites an older one. It is equal to a direct overwrite of the data field by the user.
+
+If you group by a locked data field, such as the username, and another user adds a new data record, therefore with another username, the locked data field USER will be filled with the default value. But previously the grouping has been done with another username. Due to that the new data record does not fulfil the grouping value and will not appear in the current group. However the data record has been added correctly and can be found in another group.
+
+Generally speaking, if a new data record is added when grouping by a locked data field and the values both in the grouping field and the new data record do not match, the data record will be moved to the fitting group. The data record still exists, but is not shown in the current group.
+
+You can use filters to define which data records are shown. On the right-hand side of a column header there is a pop-up menu which offers a range of quick filtering options based on the contents of the data records. By choosing one or more of these filters, the number of data records in the grid can be constrained. The current selection is shown at the lower grid boundary. Here you have the option of temporarily removing the filter (checkbox next to the filter criteria), ending the filtering (closing the sub-window using the left-hand button), or choosing a recent filter from a pop-up list next to the current filter item. To set up detailed filter criteria and use individual logical connections and conditions click the \<Customize> button. Filter definitions can also be saved or opened from a file.
+
+By right-clicking a column header a context menu appears in which diverse settings for the current column can be defined (visibility, sorting, grouping, alignment and width. The additional **Footer** option overlays a footer at the base of the grid. The contents of the footer are chosen in the next step by right-clicking in this area. The horizontal position of the mouse pointer determines the column, whereby the minimum, maximum, sum, mean (for numerical columns only) and the number of data records (all columns) can be shown.
+
+A multitude of settings for different data combinations can be individually saved for later re-use. A separate toolbar is available:
+
+The drop-down menu allows the choice between saved views. The \<User defined view> defines a view whose settings are automatically saved upon closing the grid.
+
+This button allows you to save the current view using an individual name, or overwrite an existing view. Note: If you make changes to a saved view and neglect to re-save these, they will be lost upon changing to a new object. The following applies:
+
+Current view is \<User defined view>: upon changing from one object or editor to another, the view will be exactly reproduced as when you left it.
+
+Current view is a saved view: upon changing from one object or editor to another, the view will be reproduced as defined by the last saved view settings. Subsequent unsaved changes are disregarded.
+
+This button removes the current view (e.g. when it is no longer needed).
+
+The management of these settings is user-specific on each PC.
+
+#### XML export (recovered)
+
+The method **"XML Export"** can be found in the superordinate method **"Publish and Export"** at object nodes or at queries and groups below the object nodes, as well as at system queries that return objects (no measuring points) as a result (easily recognisable by the small red ball in the query symbol).
+
+With this method you can export objects of the GeoDin database into a configurable XML format.
+
+The XML files created during the export are exported to the specified directory.
+
+For each GeoDin object, an XML file is created which is named with the name of the object.
+
+Detailed information about configuring an XML export template can be found in the chapter [Settings for XML templates](../../data-collection/export/geodinml-export.md)
+
+The settings of the export dialogue can also be defined by an export configuration file (\*.INI).
+
+To do this, the relevant source database must be included as a system database in GeoDin using the **Configuration**.
+
+In the system database section must be specified with: XMLExportConfig=MyExportConfiguration.ini the path to the export configuration file must be specified.
+
+In order to execute the method directly when opening GeoDin at a database, the parameter AutoOpenMethodID=49 must also be set in the database section.
+
+In the \[PARAMS] section of the XML export configuration file (name of the file.INI), specify which settings are to be made in the XML export dialogue.
+
+The XML export configuration file can be named as desired and must have the following structure:
+
+This parameter must be set, it determines the method to be executed.
+
+Specification of the node point type. The method is thus (=1) only available at nodes and queries that return objects and not measuring points as a result.
+
+This parameter must be set, it determines the type of node at which the method is to be executed.
+
+This parameter must be set, it specifies the folder and path where the export log is saved.
+
+This parameter must be set, it specifies which XML template is to be used.
+
+This parameter must be set, it specifies whether to export as individual XML files (=1), to a database (=2) or to a ZIP archive (=3).
+
+This parameter must be set if ExportTarget=2 was specified. It specifies the name of the target database in the GeoDin object manager.
