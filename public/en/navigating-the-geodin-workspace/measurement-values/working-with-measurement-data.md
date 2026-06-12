@@ -4,68 +4,6 @@ description: Working with Measurement Data
 
 # Working with Measurement Data
 
-### Measurement values
-
-**Requirements**
-
-GeoDin organizes objects spatially. These are point objects with or without a depth value. At these objects measurements can be made. In order to use GeoDin to collect such data, measurement points need to be defined in the general data. Usually filters and sample intervals are used as measurement points. Also the object itself can be defined as a measurement point. In the GeoDin object manager measurement points are shown by three blue spheres.
-
-GeoDin Demo Project
-
-Object
-
-All objects
-
-General borehole log
-
-Measurement point
-
-filters
-
-upper piezometer: (4.3-6.3m)
-
-lower piezometer (7.8-8.7m)
-
-samples
-
-BH01: (1-7m)
-
-BH01: (4-5m)
-
-**Terminology**
-
-The following hierarchy is used in the measurement point organization to relate a single measured value to a measurement object of the measurement point. There are the following different types:
-
-**Measurement point type**
-
-The measurement point type defines, what type of object it is. These can be either with or without a vertical component. An example of a measurement point with a vertical component is a borehole. A borehole can be the measurement point itself (e.g. where the whole length is sampled) or other measurement point types can be associated with it (discrete samples at various intervals over the length of the borehole). Examples of point samples (i.e. without a vertical component) are surface water or climate measuring stations.
-
-**Data type**
-
-Chemical investigations can be done for several objects for each type of measurement point. For these combinations data types are defined. For example at a groundwater well the water quality can be investigated or flow rates measured. For each case there is a data type. Each data type can be assigned to several measurement point types. So the data type "groundwater composition" can be entered for a groundwater measurement point as well as for a well. The results are combined in a data type table, although the data for each measurement point are distinct from one another.
-
-**Chemical group**
-
-Because the number of individual parameters within a data type can reach large amounts, the parameters are subdivided into chemical groups to allow a better overview. Each group is distinguished by a similarity in the chemical parameters or descriptive characteristics and may have up to 20 parameters.
-
-**Parameter**
-
-A parameter is an individual measurement described by a name, a field identification and a unit
-
-**Query**
-
-Queries are used within projects or databases to interrogate data. They define the amount and type of data from which the results are derived.
-
-**Special values**
-
-GeoDin organizes measurement values as numerical entries. Hence values below a detection limit cannot be saved as the character „<". In such cases a negative detection limit is entered (e.g. "-1"). These values are ignored by statistical analyses. If the detection limit is unknown (e.g. old data) the value"-88" is used. If the value is not detectable then"-99" should be entered:
-
-| Entry | Description |
-| --- | --- |
-| -XX | beneath detection limit (XX = detection limit) |
-| -88 | beneath detection limit (detection limit value unknown) |
-| -99 | not detectable |
-
 ### Measurement data
 
 If an object is selected in the GeoDin Object Manager, for which measurement values can be entered, the method  ![Measurement value management](../../.gitbook/assets/icons/measurement-value-management.png) **"Measurement value management"** is available.
@@ -159,12 +97,6 @@ Reference to the result
 1. Interpretation
 
 Interpretation of the measured value
-
-### Formula
-
-As an alternative to presenting the measurement values in grid form you may view the current data set in a mask. At the top of the mask the general sample data (Name, Date, Time) and the group are displayed. Below the individual parameters for the current data set are listed in rows. For each parameter the name, measurement value, unit, detection limit and investigation method are shown. Name and unit are not editable.\
-\
-The contents of a data set can be saved as a simple text file (which can be subsequently loaded). By pressing the **OK** button the mask contents are saved to the data set - by pressing **Cancel** the contents are discarded. Optionally the short field name can be used for the parameter column.
 
 ### Location point link
 
@@ -498,6 +430,7 @@ Enter a search string for the parameter search in the data type overview. The pa
 
 This function can delete parameters that do not contain any measurement values in the database. All parameters without measurement values are displayed in a dialogue window, where it is possible to edit the parameter list again. All selected parameters will be deleted from the database. If this then causes empty data types, they will be removed from the database too.
 
+[Add data type](../../navigating-the-geodin-workspace/data-types.md)
 ### Add data type
 
 This function allows you to add a data type to your database. During this process new tables will be added to your database and as will new information to the system tables of the database. In Client/Server databases you will need the appropriate rights - please contact your database administrator if necessary.
@@ -792,3 +725,57 @@ _Additional variant rows recovered from the former Databases-page copy of “Mea
 
 | INVID | Measurement point ID number (format below) |
 | INVID | Measurement point ID number |
+
+### Display options
+
+Using these options you may control how measurement values are displayed to reflect their contents.
+
+**Frames**
+
+-Detection limit-
+
+By activating this option all cells containing values below the detection limit (negative values for concentration) are displayed with a blue frame.
+
+**Type**
+
+Green, blue and red are available for use with a logical expression (short parameter name and comparison). The comparison can be "<", "=" or ">". The compared value must be a number. You may also influence the font style by using the "@" character with one (or a combination of) of the following four letters:
+
+B bold
+
+U underlined
+
+I italics
+
+S strike-through
+
+The letters can be combined. For example the term "NO3>20@BI" in the color red results that all values for nitrate that exceed the value 20 are displayed in red, bold and serif.
+
+An expression may contain more than one command if a semi-colon ";" is used to separate them (for example: "CL>50; NO3>10@BI"). Hence it is relatively simple for a user to set up a color scheme for use during data entry.
+
+### Input options
+
+To support the data entry two options are available.
+
+**Quick entry**
+
+One activates this function by setting the start date and the time interval. As long as this option is active for each new data set the time interval of the starting date will be added incrementally.
+
+**Datensatz-Vorgaben"no settings"**
+
+A new empty data record is created.
+
+**"Standard settings"**
+
+This option allows presets for every parameter to be defined in a mask.
+
+**"Use last data record"**
+
+This option takes values from the last data record for the new one, where the parameter option \<Use last value> is available. See **Edit parameter**
+
+**"Use last data record (same sample)"**
+
+In addition to copying the same parameter contents, the new data set will be assigned to the same sample as the last data record.
+
+## Related topics
+
+- Shared measurement/data-type reference content now lives in [Formulas in Measurement Values](../../data-analysis/formulas/formulas-in-measurement-values.md)
