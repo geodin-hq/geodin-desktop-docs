@@ -338,30 +338,14 @@ Select the sorting sequence for this data field. An ORDER BY statement is automa
 
 ### Portal properties
 
-This help chapter is not available in the current language. You can update the GeoDin help files with the \<Online update\> function. For this, an internet connection is necessary. <!-- src: help/QB/11069 -->
-
 ### Website properties
 
-This help chapter is not available in the current language. You can update the GeoDin help files with the \<Online update\> function. For this, an internet connection is necessary.
+Here you set the resolution, the refresh interval, and a background colour for the website. You can also select an HTML template for the website. <!-- src: help/QB/11069 -->
 
-**Website-Eigenschaften**
-
-Hier kann die Auflösung und das Aktualisierungsintervall sowie eine Hintergrundfarbe für die Website festgelegt werden.
-
-Außerdem kann eine HTML-Vorlage für die Website ausgewählt werden.
-
-**Layout im Cache vorhalten:**
-
-Bei setzen des Hakens wird das Layout für eine bestimmte Zeit im Cache vorhegahlten. Je nach Layout kann dies die Antwortzeit des Servers deutlich verkürzen. <!-- src: help/QB/11387 -->
+**Keep layout in cache:** when this box is ticked, the layout is kept in the cache for a set time. Depending on the layout, this can noticeably shorten the server's response time. <!-- src: help/QB/11387 -->
 
 ### Cache settings
 
-This help chapter is not available in the current language. You can update the GeoDin help files with the \<Online update\> function. For this, an internet connection is necessary.
+Here you set the number of minutes for which the layout is kept in the cache.
 
-**Cache-Einstellungen**
-
-Hier kann die Anzahl der Minuten eingestellt werden, für die das Layout im Cache vorgehalten werden soll.
-
-Werden für Monitoring-Layouts z. B. die Daten alle fünf Minuten aktualisiert, ist es sinnvoll, das Layout ebenfalls fünf Minuten im Cache zu lassen.
-
-Nach dieser Zeit wird es automatisch entfernt und beim erneuten Abruf mit neuen Daten verbunden. <!-- src: help/QB/11392 -->
+If the data for monitoring layouts is refreshed every five minutes, for example, it makes sense to keep the layout in the cache for five minutes as well. After this time it is removed automatically and reconnected with fresh data on the next request. <!-- src: help/QB/11392 -->

@@ -578,18 +578,16 @@ The creation of users and groups is described in the chapter on **User settings*
 
 ### Field mapping
 
-This help chapter is not available in the current language. You can update the GeoDin help files with the \<Online update> function. For this, an internet connection is necessary.
+Structure information can be attached to user-defined SQL. Number fields can then be given decimal-place formatting or unit conversions, and text fields dictionary translations.
 
-Benutzerdefiniertem SQL können Strukturinformationen angefügt werden. Somit sind dann für Zahlenfelder Dezimalstellenformatierungen oder Einheitenumrechnungen möglich oder für Textfelder Wörterbuchübersetzungen.
+For the field mapping, a result field is assigned to a field from the GeoDin structure.
 
-Für die Feldzuordnung wird ein Ergebnisfeld einem Feld aus der GeoDin-Struktur zugeordnet.
-
-**Beispiel:**
+**Example:**
 
 select $Schema$GeoDin\_LOC\_LOCE2LAYER.\* from $Schema$GeoDin\_LOC\_LOCE2LAYER
 
-Zuordnung:
+Mapping:
 
-Datenbank Tabellenstruktur
+Database — table structure
 
 GeoDin\_LOC\_LOC\_E2LAYER.SECSTYPE E2LAYER.SECSTYPE

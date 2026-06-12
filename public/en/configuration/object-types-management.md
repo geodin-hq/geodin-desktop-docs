@@ -430,7 +430,7 @@ Any arbitrary comment can be entered here for the parameter. This comment is onl
 
 **Set-up of the information for UBA-export**
 
-The definition of this format is based on "Austausch von Grundwasserdaten (Annex II.x 12.04 zur Verwaltungsvereinbarung über den Datenaustausch im Umweltbereich zwischen Bund und Ländern) / Tischvorlage für die Sitzung des LAWA AK 'Optimierung des Grundwasserdienstes' am 04.02.1999 in Chemnitz".
+The definition of this format is based on "Austausch von Grundwasserdaten (Annex II.x 12.04 zur Verwaltungsvereinbarung über den Datenaustausch im Umweltbereich zwischen Bund und Ländern) / Tischvorlage für die Sitzung des LAWA AK 'Optimierung des Grundwasserdienstes' am 04.02.1999 in Chemnitz" (the German federal–state agreement on groundwater data exchange — title left in German as the official designation).
 
 To perform the export into UBA-format you have to deposit formatting information at the concerning parameters. After selecting a parameter to be exported the dialogue for editing the parameter setting will be opened.
 

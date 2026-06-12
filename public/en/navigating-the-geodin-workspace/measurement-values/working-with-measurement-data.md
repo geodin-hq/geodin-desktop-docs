@@ -84,7 +84,7 @@ Time of the measurement in the laboratory
 
 Information about the plausibility of the measurement value
 
-Auf der Seite der Ergänzungen werden verwaltet:
+The Supplements page manages:
 
 1. Sample preparation
 

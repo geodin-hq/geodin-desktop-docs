@@ -1748,15 +1748,15 @@ In these examples, series are calculated step by step and presented as graphics.
 
 Open GeoDin.ini and insert the following section to define a template:
 
-Template1=C:\Programme\GeoDin 8\Layouts\Serien\Beispiel Ableitung Steifemodul.glo
+Template1=C:\Program Files\GeoDin 8\Layouts\Series\Stiffness modulus derivation example.glo
 
-Template3=$Verhältnis Parameter 1 / 2 \[,3]$ = $>DS:Parameter 1$ / $>DS:Parameter 2$
+Template3=$Ratio parameter 1 / 2 \[,3]$ = $>DS:Parameter 1$ / $>DS:Parameter 2$
 
-Template4=$Summe Parameter 1 und 2$ = $>DS:Parameter 1$ + $>DS:Parameter 2$
+Template4=$Sum of parameters 1 and 2$ = $>DS:Parameter 1$ + $>DS:Parameter 2$
 
-Template1=C:\Programme\GeoDin 8\Layouts\Serien\Steifemodul Tiefe.glo
+Template1=C:\Program Files\GeoDin 8\Layouts\Series\Stiffness modulus depth.glo
 
-Template3=$Änderung des Steifemoduls mit der Tiefe \[,3]$ = $>DS:Parameter 1$ / $>DS:Parameter 2$
+Template3=$Change of stiffness modulus with depth \[,3]$ = $>DS:Parameter 1$ / $>DS:Parameter 2$
 
 #### Data source (recovered)
 
@@ -1920,7 +1920,7 @@ Each object (regardless of object type) is registered with a data record in this
 
 \
 **Measuring point registration of expanded measuring points FILREG**\
-In dieser Tabelle werden sämtliche ausgebauten Messpunkte (z. B. Grundwassermessstellen) des Projektes verwaltet. Je Objekt können mehrere Messpunkte vorkommen.
+This table manages all expanded measuring points of the project (e.g. groundwater monitoring wells). An object can have several measuring points.
 
 | Field | Description |
 | --- | --- |
