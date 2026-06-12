@@ -13,8 +13,6 @@ description: >-
 
 A project may contain up to 9998 objects or boreholes. Because the number of projects in a database is unlimited, the number of objects in a database is also unlimited.
 
-A object may be defined in the GeoDin system as an object that has at least a name and is related to a project. Objects can be boreholes, monitoring wells, cone testing holes as well as climate measuring stations, surface water collection points etc.
-
 Each object must be defined by general data containing information like its name and where present its coordinates. Depending upon the type of object further information may then be entered and displayed, for example a borehole log, CPT results, a groundwater monitoring well. There are over 100 different types of objects ("Object types\*\*"\*\*) in GeoDin, which cover all types of data collection and presentation.
 
 The default installation provides the user a set of object types, depending on the language version. Further object types can be installed from the CD. For example all German geological survey organizations (Geologische Landesämter) have their own input masks for which special syntax controls have been defined. Other international standards are supported (e.g. BS5930, NEN, ÖNORM) as well as specific national standards (e.g. Dept. of Geological Survey, Botswana). A project may contain several different types of objects as long as these are installed in the GeoDin-System folder. In addition there are controls to allow or to prevent the creation of certain types of objects (e.g. read only).
@@ -1546,8 +1544,6 @@ The numbers for the "Graphic type" shown in the figure lead to the appropriate p
 **8 -** The sample interval is represented by a symbol from the symbol library. The number of the desired symbol from the symbol library must be entered in the "Symbol number" input field. The number of symbols in a symbol library is unlimited.
 
 ### System variables
-
-In addition to the actual keys, special system variables can be used in a dictionary to control the plain text translation and graphical conversion of keys. The system variables start with the prefix $TR and can be edited or entered like any other key. The system variables are displayed at the end of the key list.
 
 The following variables are defined:
 
