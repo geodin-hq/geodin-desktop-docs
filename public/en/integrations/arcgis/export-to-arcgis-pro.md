@@ -50,4 +50,4 @@ For projects with multiple investigation areas, create separate feature classes 
 
 **Next step:** [Generate geotechnical reports](generate-reports.md) in GeoDin for attaching to ArcGIS features.
 
-[Watch the full video walkthrough](https://loom.com/share/44be6a90c6544b1290a8a6706b548cb2)
+[Watch the full video walkthrough](https://www.youtube.com/watch?v=-J9Kn2hG9n4&list=PLfA_dsMIot34WQYVtEluk87UsZt0hb21A&index=2)

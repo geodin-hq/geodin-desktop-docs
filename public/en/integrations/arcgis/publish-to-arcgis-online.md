@@ -56,7 +56,7 @@ Navigate between borehole points on the map to verify that all locations have th
 
 **This completes the GeoDin ↔ ArcGIS integration workflow.** Your team can now access geotechnical reports directly from the web map without needing GeoDin or ArcGIS Pro installed.
 
-[Watch the full video walkthrough](https://loom.com/share/b4204e56f5684fe89df01f83bc4aab1a)
+[Watch the full video walkthrough](https://www.youtube.com/watch?v=v7Lb_Vphhzc&list=PLfA_dsMIot34WQYVtEluk87UsZt0hb21A&index=5)
 
 ***
 

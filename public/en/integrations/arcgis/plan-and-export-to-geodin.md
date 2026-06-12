@@ -53,4 +53,4 @@ After import, verify that the borehole locations have been created correctly in 
 
 **Next step:** After field data collection, [export the enriched data back to ArcGIS Pro](export-to-arcgis-pro.md).
 
-[Watch the full video walkthrough](https://loom.com/share/e7bded01de9148eb8e20ca003c68119c)
+[Watch the full video walkthrough](https://www.youtube.com/watch?v=BGi4QhmIx3M&list=PLfA_dsMIot34WQYVtEluk87UsZt0hb21A&index=1)
