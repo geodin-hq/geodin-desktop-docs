@@ -79,7 +79,7 @@ Pick a borehole log template and run it. GeoDin produces a PDF-style log showing
 
 → References:
 * [Creating Borehole Logs](../data-visualization/borehole-logs/creating-borehole-logs.md)
-* [Print Preview and Layer Overview](../reporting/print-preview-and-layer-overview.md)
+* [Bulk Print and PDF Export](../reporting/bulk-print-and-pdf-export.md)
 
 ---
 

@@ -40,8 +40,8 @@ For anything beyond a single-machine install, start in the **Installation & Lice
 
 * [Custom Installation](../installation/custom-installation.md) — for tailored deployments
 * [Infrastructure and Environment Setup Guide](../installation/infrastructure-and-environment-setup-guide.md) — for multi-user / central network installations
-* [Database Backend Options](../installation/database-backend-options.md) — for non-default database backends
+* [Supported Database Types](../navigating-the-geodin-workspace/databases/supported-database-types.md) — for non-default database backends
 * [Configuration File Reference](../installation/configuration-file-reference.md) — `GeoDin.ini` parameters
 * [Using a License Server](../installation/license-server.md) — for floating-licence deployments
-* [Network Licensing (HASP Dongle)](../installation/network-licensing-hasp-dongle.md) — for dongle-based licensing
+* [Network Licensing (HASP Dongle)](../installation/license-server.md#client-access-to-a-network-licence) — for dongle-based licensing
 * [Renew Licence](../installation/renew-licence.md) — when your licence approaches expiry

@@ -389,4 +389,4 @@ PPA>Temp 0\\\\\11.1
 
 ## Related topics
 
-- Shared measurement/data-type reference content now lives in the measurement-data editor reference ([Working with Measurement Data](../measurement-values/working-with-measurement-data.md))
+- Shared measurement/data-type reference content now lives in the measurement-data editor reference ([Working with Measurement Data](../../navigating-the-geodin-workspace/measurement-values/working-with-measurement-data.md))

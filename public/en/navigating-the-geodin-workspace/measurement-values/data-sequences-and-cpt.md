@@ -117,7 +117,7 @@ Opens a window to [Edit parameter properties](data-sequences-and-cpt.md) This fu
 
 \*\*'Display order'
 
-This function allows you to set the display orderof chemical groups and parameters in the method [Measurement data](../../data-collection/import/measurement-data.md) Choose the data type branch in the first line to edit the display order of the chemical groups. To edit the parameter order in the data collection grid, choose the branch of the chemical group for which you wish to edit the display order.
+This function allows you to set the display orderof chemical groups and parameters in the method [Measurement data](working-with-measurement-data.md) Choose the data type branch in the first line to edit the display order of the chemical groups. To edit the parameter order in the data collection grid, choose the branch of the chemical group for which you wish to edit the display order.
 
 _**Note:**_ _To make quickly finding parameters easier you can sort them according to your own criteria. The structured display of the parameters in the Data Type Manager overview always shows the original order of chemical groups and parameters from the system configuration. The display order for subsequent data collection is only viewable in the Data Type Manager using this function._
 

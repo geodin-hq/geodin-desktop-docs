@@ -102,7 +102,7 @@ Template creation is documented comprehensively in the in-product **F1** guide, 
 
 ### Create report (moved from Databases pages)
 
-&#x20;![Create report](../../.gitbook/assets/icons/create-report.png) **Create report**
+&#x20;![Create report](../.gitbook/assets/icons/create-report.png) **Create report**
 
 With the method **"Create Report"** at a database it is possible to fill a prefabricated text with data from a database by using special macro commands. The file format is odt (open documenttext). As the macro commands can be corrupted by other internal Office commands when saving the file, we recommend to use only one text processing program (Ms Word, Libre Office) when creating the report.
 

@@ -230,7 +230,7 @@ If for the current object an input of these data is not possible the particular 
 
 &#x20;![New](../../.gitbook/assets/icons/new.png) **New object**\
 \
-Creates a new object without leaving the Data management method (see also: [Create object](creating-objects.md)).
+Creates a new object without leaving the Data management method (see also: [Create object](../objects/creating-objects.md)).
 
 ### General data
 
@@ -723,7 +723,7 @@ The following chapters describe the import and export of data sequences and data
 
 [Create objects from data sequences](../../data-collection/import/data-sequences.md)
 
-[SEP import](../../data-collection/import/special-imports.md)
+[SEP import](../../data-collection/import/sep3-exchange-database.md)
 
 [SEP1 export](../../data-collection/export.md)
 

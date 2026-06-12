@@ -85,7 +85,7 @@ The element can be moved and scaled inside the object frame. All other graphic e
 
 **Labeling with layer data:** Layer data descriptions are added on the right side of the borehole log. For layers with component descriptions, you can define whether component labeling occurs at the depth where the component is described. The option "Layer description only once" ensures that a layer split across pages is labelled only once.
 
-**Language selection:** A different language than the input language can be selected for text labeling (requires configured [Standards](depth-oriented-images-as-borehole-profiles.md#main-layers)). Fill pattern presentation is not affected by language selection. Vertical text orientation and tag line styles can also be configured.
+**Language selection:** A different language than the input language can be selected for text labeling (requires configured [Standards](#main-layers-and-fill-patterns)). Fill pattern presentation is not affected by language selection. Vertical text orientation and tag line styles can also be configured.
 
 #### Graphical view
 
