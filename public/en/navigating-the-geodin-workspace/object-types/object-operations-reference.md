@@ -1776,55 +1776,6 @@ Template1=C:\Programme\GeoDin 8\Layouts\Serien\Steifemodul Tiefe.glo
 
 Template3=$Änderung des Steifemoduls mit der Tiefe \[,3]$ = $>DS:Parameter 1$ / $>DS:Parameter 2$
 
-#### Check measurements (recovered)
-
-By using this method you can check and evaluate measured data sets.
-
-GeoDin graphic documents must be inserted below the object. It is irrelevant if these objects are linked or embedded in a database. The method provides all of the graphics for the currently selected object of the GeoDin Object Manager. If the graphic contains a time series element including a regression series, it is possible to use this graphic for the evaluation of the measured data.
-
-Once you have selected a usable graphic this will be shortly analysed, a report will be displayed summarizing measured quantities as well as the configured influencing factors.
-
-Use these details to identify or validate the underlying objects and regression parameters. The evaluation of the measured data will be executed by clicking the button "continue".
-
-You will get a list of **Event** that have occurred during the calculation.
-
-The different event groups can be switched on and off by using the buttons
-
-Clicking the continue button you will be asked if you want to take in the evaluated measuring parameters into the database. Doing so the target fields of the event will be filled with the appropriately configured target values. Only at this point any data will be written into the database.
-
-_If both the target field and the measuring parameter, meant for evaluation, are in the same data type, the data set of the measurement will be located and the dataset will be completed with the target value of the target data field. If there already is an evaluation for the data set, the existing information remains, which means that no data fields will be overwritten._
-
-_If the target field is of another data type, a new dataset will be created in this data type. Therefore the target field is filled with the target value of the event._
-
-_A separate target data type for events should contain a field with the name LINKSMPID. The SMPID of the triggering data set can be entered into this field during the evaluation of the data. Furthermore the target data type should contain fields for the triggering data type or the triggering parameter. You can choose this option in the data type manager of a certain measurement parameter under Special settings._
-
-#### Create objects from data sequences (recovered)
-
-Often data sequences are imported into already existing objects. This is described in the chapter [Import data sequence](../../data-collection/import/data-sequences.md).
-
-A special import is available for data sequences. For each imported ASCII file a object is created automatically. As name for the object the name of the ASCII file is used.
-
-Because in objects, which are automatically filled by the import of ASCII files, the name is entered automatically (with the file name), it is recommended to create general data presets before the import of files. So also additional data fields are filled automatically (for example project, client etc.).
-
-1. Create a object of the type, into which the data sequence should be imported. The editing window of the general data appears.
-2. Change the mode of the general data settings, click the appropriate icon.
-3. Fill the entry fields with content now.
-4. Lock the general data presetting (by clicking on the icon **Default general data**)
-5. Delete the (unused) object. The result is still an empty project (except objects were entered already), but already with general data presets for the data sequences to be imported!
-6. Now chose the method **Import data sequences** on the branch _**Objects**_ and you get to the method described above.
-
-You can select a certain group of files with the icon **Chosen files** or an entire folder with the icon **Entire folder**. Select also, in which object type the files should be used.
-
-With the automatic reduction factor GeoDin calculates the reduction factor so , that no measurement series contains more than 500 measurement values. With the setting 'fixed' you can define an individual factor, and with the value =1 completely deactivates the data reduction.
-
-#### Data collection with SEP3 (recovered)
-
-[Data management](../../navigating-the-geodin-workspace/objects/data-management.md)
-
-#### Data management (recovered)
-
-&#x20;![Documents](../../.gitbook/assets/icons/documents-2.png) **Manage documents**
-
 #### Data source (recovered)
 
 Navigate to the import file via the  ![Open](../../.gitbook/assets/icons/open.png) **Open** button and select it.
@@ -1865,40 +1816,6 @@ Select the data types to copy and confirm. The duplicated object appears in the 
 Object duplication is particularly useful when multiple objects at the same site share the same well design or measurement program setup — create the first object in full, then duplicate and adjust coordinates for subsequent objects.
 {% endhint %}
 
-#### Import general data (recovered)
-
-The method **"Update general data"** imports or updates general data from the external files into **existing GeoDin objects**.
-
-The method **"Import general data"** creates **new GeoDin objects** based on general data from external files (MS-Access, Excel, text files, CSV files).
-
-For the import of external data the following steps are necessary:
-
-This opens the external file or database containing the data to be imported.
-
-Here the assignment of the data sets to be read in to a GeoDin object is defined.
-
-Define here the assignment of the columns to be read in to GeoDin parameters of the selected object type.
-
-Here further settings for the import are made, see a preview of the importable data and execute the import.
-
-All settings of an import process can be saved in a configuration file.
-
-This means that subsequent imports with the same or similar data can be carried out much more quickly without having to make all the assignments again. When loading a configuration file, it is also possible to take over only parts of the configuration settings. This is useful, for example, if the parameter assignments of your import files are always identical, but the object assignment must be made anew in each case. To do this, activate the configuration settings to be adopted in the "Adopt configuration settings" dialogue.
-
-When importing data as new objects, a group with the name _**New objects created / imported on (date)**_ is automatically generated and added to the object manager. This makes it easier to edit the new objects, as you will find them all in one group (and not mixed up with already existing GeoDin objects). In addition, in case of errors during the import (for example, incorrectly assigned data field), you can delete the objects in one step (execute method **"Delete all objects"** on the group) in order to repeat the import.
-
-#### Map view (recovered)
-
-The map view shows the location of the marked objects on an OpenStreetMap map, according to the coordinates stored in the general data.
-
-If the object type being used supports the use of the EPSG code field in the general data and this is filled with a valid EPSG code, the object is displayed directly in the selected coordinate system according to the coordinates.
-
-If there is no EPSG code in the general data, GeoDin tries to find the appropriate coordinate system using the existing data. A small preview tile is then created and displayed for each possible solution. For rough orientation, a small world map is displayed in the lower left corner of the tile when the mouse is positioned over one of these tiles. This should make it easier to find the right suggestion from GeoDin and select it with one click.
-
-If GeoDin finds only one valid system, the tile preview is hidden and the main view is maximised directly.
-
-If no valid coordinate system is found, a dialogue window opens in which the coordinate system to be used is requested. The correct display of all marked objects requires that the coordinates of the objects are based on the same coordinate system.
-
 #### Object link (recovered)
 
 _**Note:**_ _This option is only available for the "Update general data" method._
@@ -1909,41 +1826,6 @@ In this step, you select the two table columns or database fields that are used 
 2. For the \*\*"Data Source" list, then select the column in your import table that contains the names or ID numbers of the data records to be assigned. The available contents are now displayed in the list.
 
 The two input fields below the lists are used to restrict the displayed entries. Only entries in which the search term exists are displayed in the lists. Clear the search entry to display all entries again.
-
-#### Objects (recovered)
-
-A object may be defined in the GeoDin system as an object that has at least a name and is related to a project. Objects can be boreholes, monitoring wells, cone testing holes as well as climate measuring stations, surface water collection points etc.
-
-#### Setting default values for new objects (Stammdatenvorgaben) (recovered)
-
-### Setting default values for new objects (Stammdatenvorgaben)
-
-**Stammdatenvorgaben** (master data presets) allow you to pre-fill fields that are the same for all objects in a session — for example, the coordinate system, height system, client name, or drilling company — so they appear automatically when a new object is created.
-
-1. Open the general data editor for any object (or create a temporary new object for the purpose of entering defaults).
-2. In the method bar at the top right of the general data mask, click the **Stammdatenvorgaben** (master data defaults) icon to activate preset mode. A yellow indicator appears in the toolbar.
-3. Fill in the fields you want to use as defaults.
-4. Click the icon again to save and lock the defaults. From this point on, every new object created in this session will inherit these pre-filled values.
-
-**Date shortcut:** In any date field within the preset, type `H.E.` and then press **Tab**. GeoDin fills in today's date. This is especially useful for fields like "Date of survey" that always default to today.
-
-{% hint style="info" %}
-Stammdatenvorgaben are stored per-user in the database table `GeoDin_ENGINEER_DEF_ENGINEER_S3_STAMM`. They persist between sessions until you change them. To clear all defaults, re-open the preset mode and delete the field values.
-{% endhint %}
-
-#### Update data sequences (recovered)
-
-This method allows you to import or update data sequences for existing objects. Simply choose the import files and define the coorelation betweem them and the objects.
-
-You can choose a group or a whole folder by using the **Chosen files** or **Entire folder** options.
-
-The name of the import file must match a data field of the objects. This field can be chosen from the **Object link** window pane. The file extensions are ignored for the files to be imported.
-
-The button **Check object link** will analyse which files to be imported can be linked to existing objects and for which objects there are no files to be imported. The results are recorded in a log; no import is carried out at this stage.
-
-After selecting an import filter, the import can be carried out.
-
-If you have created your own customized import filter(s) these will be shown in the **"Import filter"** list but can only be edited in the data sequence editor.
 
 #### Using the data entry grid (recovered)
 
