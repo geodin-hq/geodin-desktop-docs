@@ -1293,3 +1293,9 @@ The button allows you to preview the effect of using the regular expression on t
 RTF text (Rich Text Format) can be edited and printed from GeoDin. In contrast to simple text files, RTF can contain formatting such as fonts, colours etc. The editor in GeoDin offers similar functions to programs such as WordPad from Microsoft®.
 
 You can add a RTF text to the document management either as a **File** or create directly as a [Create document](managing-documents.md). Choose the method **"Edit document"** in the GeoDin object manager to edit the text. The editor can open and edit multiple documents that are shown in separate tabs. Highlight text to apply edits from the upper tool bar.
+
+### Documents (moved from Databases pages)
+
+The definition of the document description table can be taken from the SYS\_LOCSTRS table from the **System**. The documents are registered like an object type in SYS tables.
+
+A more detailed description of the definition can be found in chapter [Database tables of the document management](../documents/document-organization.md).

@@ -721,3 +721,53 @@ This button can be used to import measurement values to a parent dataset.
 The button is not available on groups or queries for several measuring points, but only if you have selected a single measuring point in the GeoDin Object Manager.
 
 Detailed information on the settings in the import dialogue can be found in the chapter [Import](../../data-collection/import.md).
+
+### Data model (moved from Databases pages)
+
+Any number of projects can be created in GeoDin. The type of storage of the project data depends on the type of database in which the project was created. This database can be a desktop or a client/server database. In GeoDin, different physical database types can be addressed in a mixed way. For example, part of the projects can be in an MS Access database and another part in a client/server database on an ORACLE server.
+
+Project databases contain the Local Project Manager in the physical database format of the respective database in the form of a table named LOCPRMGR.
+
+The structure of the tables in the project manager are as follows:
+
+| FIELD\_NAME | FIELD\_TYPE | FIELD\_DEC | Explanation | Comment |
+| --- | --- | --- | --- | --- |
+| PRJ\_ID | C | 0 | Project ID | must be unique in GeoDin |
+| PRJ\_NAME | C | 0 | Project name | mandatory |
+| PRJ\_ALIAS | C | 0 | Alias name (2nd name for project) | optional |
+| PRJ\_TYPE | C | 0 | Project type | Reserved for system |
+| PRJ\_OPT | N | 0 | Optional parameter | always 0 |
+| PRJ\_USER | C | 0 | Author name | |
+| PRJ\_DATE | D | 0 | Creation date | |
+| PRJ\_PATH | C | 0 | Path or database alias | contains for a GeoDin drive database the path to the drive database (normally LW:\GeoDinDB\\, where LW stands for the drive letter, the trailing backslash is required!), for all other databases the field contains the database alias name (e.g. GeoDin\_DBASE). |
+| GeoDinGUID | C | 0 | GeoDin GUID | unique project ID |
+
+The registration of a project is done with a record in the Local Project Manager of the database.
+
+The database can be divided into 3 main areas (system tables (SYS), object types (LOC) and master data specifications (DEF)) and 3 optional areas (document, measurement data and layer queries).
+
+### Measurement values (moved from Databases pages)
+
+| Field | Description |
+| --- | --- |
+| PRJ\_ID | Project ID |
+| LOCID | Up to 4 digit number (running counter) for each object in the project values: 1-9998 |
+| LOCTYPE | Contains descriptor of the object type |
+| INVID | 16-character measuring-point string (format below) |
+| OPT\_PARAM | empty |
+| XCOORD | X coordinate |
+| YCOORD | Y coordinate |
+| ZCOORDB | Object absolute height |
+| ZCOORDE | End depth in meters below ground surface (for depth related objects) |
+| SHORTNAME | is the Short name for the object |
+| LONGNAME | is the Long name for the object |
+| PHYSFILE | Name of the object file (only in GeoDin standard projects) |
+| LOCKINFO | empty |
+
+The reference in this case is a borehole. All measured values that refer to the borehole itself and have no depth information are assigned here. These could be, for example, mixed water from the pipes or measured values from the location where the borehole was drilled (vegetation, etc.).
+
+Measurements are taken with respect to a filter pipe, which in turn represents a specific aquifer. The filter also includes information on its design. Generally, a sample is taken at regular intervals.
+
+Samples are taken during the drilling process and test results are obtained from them. The samples are taken only once, but then examined several times. The sample is sufficiently described by the depth from which it was taken. Additional information is given about the sample material.
+
+Data types are compilations of measurable parameters. This compilation is ultimately free, but is usually oriented towards the object or type of investigation. These data types can be assigned to the study types in any combination. For example, the data types groundwater chemistry and groundwater dynamics are assigned to the GWBR filter investigation type. However, both can also be used in other combinations in other investigation types.

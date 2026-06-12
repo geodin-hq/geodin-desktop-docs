@@ -1911,3 +1911,188 @@ This parameter must be set, it specifies which XML template is to be used.
 This parameter must be set, it specifies whether to export as individual XML files (=1), to a database (=2) or to a ZIP archive (=3).
 
 This parameter must be set if ExportTarget=2 was specified. It specifies the name of the target database in the GeoDin object manager.
+
+### Objects (moved from Databases pages)
+
+The registration tables contain the basic measuring point descriptions of the GeoDin objects.
+
+Each object (regardless of object type) is registered with a data record in this table.
+
+| Field | Description |
+| --- | --- |
+| PRJ\_ID | Project ID |
+| LOCID | is a max. 4-digit sequential number of the object in project 1-9998 |
+| LOCTYPE | Contains the descriptor of the object type |
+| INVID | 16-character measuring-point string (format below) |
+| OPT\_PARAM | empty |
+| XCOORD | easting |
+| YCOORD | northing |
+| ZCOORDB | Borehole starting point absolute |
+| ZCOORDE | Final depth in metres below ground level (for depth-oriented objects) |
+| SHORTNAME | short name for the object |
+| LONGNAME | long name for the object |
+| PHYSFILE | Name of the object file (only in GeoDin standard projects) |
+| LOCKINFO | empty |
+
+000 Number of the measuring point, for object itself this number is always 0
+
+\
+**Measuring point registration of expanded measuring points FILREG**\
+In dieser Tabelle werden sämtliche ausgebauten Messpunkte (z. B. Grundwassermessstellen) des Projektes verwaltet. Je Objekt können mehrere Messpunkte vorkommen.
+
+| Field | Description |
+| --- | --- |
+| LOCID | Identification number of the object |
+| RECID | Counter of the removed measuring points per object |
+| INVID | Measuring point identification number (format below) |
+| INVZBEG | Start of the measuring point in metres below ground level |
+| INVZEND | End of the measuring point in metres below ground level |
+| INVNAME | Name of the measuring point |
+
+\
+**Measuring point registration of non-expanded measuring points PRBREG**
+
+In this table, all measurement points of the project that have not been developed (e.g. sediment sampling) are managed. Several measuring points can occur per object. The structure of this table is identical to the FILREG table.
+
+_**Note:**_ _All the following tabular representations serve as examples._
+
+The genral data table is a mandatory table for object types, i.e. at least one master data table must be defined in each object type definition. It contains unique information for the object. Each object contains one data record in this table. An object type can also contain several master data tables, e.g. if the master data is very extensive or if a logical subdivision is appropriate.
+
+The LOCID field is the unique number of the object in a project. This results in a limitation of a project to 9998 objects (object number = 9999 is not allowed).
+
+The data fields XCOORD to ZCOORDE describe the position of the object in space. The data fields SHORTNAME and LONGNAME are used for a verbal designation of the object..
+
+| FIELD\_NAME | FIELD\_TYPE | FIELD\_LEN | FIELD\_DEC | FIELD\_CNT | FIELD\_OPT | FIELD\_LONG |
+| --- | --- | --- | --- | --- | --- | --- |
+| LOCID | N | 4 | 0 | 1 | 3 | GeoDin Location Ident |
+| RECID | N | 4 | 0 | 2 | 0 | GeoDin Record Ident |
+| XCOORD | N | 20 | 4 | 3 | 0 | easting |
+| YCOORD | N | 20 | 4 | 4 | 0 | northing |
+| ZCOORDB | N | 20 | 4 | 5 | 0 | elevation NN |
+| ZCOORDE | N | 20 | 4 | 6 | 0 | end depth |
+| SHORTNAME | C | 14 | 0 | 7 | 0 | Short description |
+| LONGNAME | C | 40 | 0 | 8 | 0 | Long description |
+| TABDESK | | | | | | |
+| ... | | | | | | |
+
+This table is optional, it contains depth-oriented descriptions for layers. Several independent layer data tables can be defined for one object type. In the standard case, representations of borehole profiles or borehole tables with corresponding interpretation of codes are derived from these tables. However, they can also be pure text representations of depth-oriented features.
+
+| FIELD\_NAME | FIELD\_TYPE | FIELD\_LEN | FIELD\_DEC | FIELD\_CNT | FIELD\_OPT | FIELD\_LONG |
+| --- | --- | --- | --- | --- | --- | --- |
+| LOCID | N | 4 | 0 | 1 | 1 | GeoDin Location Ident |
+| RECID | N | 4 | 0 | 2 | 0 | GeoDin Record Ident |
+| DEPTH | N | 20 | 4 | 3 | 0 | depth |
+| ... | | | | | | |
+
+This table contains a data record for each sample. "General data" for a single sample can be entered here.
+
+| FIELD\_NAME | FIELD\_TYPE | FIELD\_LEN | FIELD\_DEC | FIELD\_CNT | FIELD\_OPT | FIELD\_LONG |
+| --- | --- | --- | --- | --- | --- | --- |
+| LOCID | N | 4 | 0 | 1 | 1 | GeoDin Location Ident |
+| RECID | N | 4 | 0 | 2 | 0 | GeoDin Record Ident |
+| INVID | C | 16 | 0 | 3 | 0 | GeoDin Messpunkttyp Ident |
+| INVZBEG | N | 8 | 2 | 4 | 32 | depth from |
+| INVZEND | N | 8 | 2 | 5 | 32 | depth to |
+| INVZNAME | C | 20 | 0 | 6 | 0 | sample name (short) |
+| ... | | | | | | |
+
+This table can be used for developed boreholes to additionally enter general data for wells, groundwater monitoring wells, etc., such as owners, operators, etc. Editing is offered in the extension editor.
+
+| FIELD\_NAME | FIELD\_TYPE | FIELD\_LEN | FIELD\_DEC | FIELD\_CNT | FIELD\_OPT | FIELD\_LONG |
+| --- | --- | --- | --- | --- | --- | --- |
+| LOCID | N | 4 | 0 | 1 | 3 | GeoDin Location Ident |
+| RECID | N | 4 | 0 | 2 | 0 | GeoDin Record Ident |
+| ... | | | | | | |
+
+This table contains information on backfilling. The data is entered in tabular form in the extension editor.
+
+| FIELD\_NAME | FIELD\_TYPE | FIELD\_LEN | FIELD\_DEC | FIELD\_CNT | FIELD\_OPT | FIELD\_LONG |
+| --- | --- | --- | --- | --- | --- | --- |
+| LOCID | N | 4 | 0 | 1 | 1 | GeoDin Location Ident |
+| RECID | N | 4 | 0 | 2 | 0 | GeoDin Record Ident |
+| VFCODE | C | 8 | 0 | 3 | 40 | type |
+| VFBEG | N | 8 | 2 | 4 | 8 | from \[m] |
+| VFEND | N | 4 | 2 | 5 | 8 | to \[m] |
+| ... | | | | | | |
+
+| FIELD\_NAME | FIELD\_TYPE | FIELD\_LEN | FIELD\_DEC | FIELD\_CNT | FIELD\_OPT | FIELD\_LONG |
+| --- | --- | --- | --- | --- | --- | --- |
+| LOCID | N | 4 | 0 | 1 | 1 | GeoDin Location Ident |
+| RECID | N | 4 | 0 | 2 | 0 | GeoDin Record Ident |
+| INVID | C | 16 | 0 | 3 | 0 | GeoDin Messpunkttyp Ident |
+| TOURID | N | 2 | 0 | 4 | 8 | pipe tour number |
+| ELCODE | C | 8 | 0 | 5 | 40 | element |
+| ELBEG | N | 8 | 2 | 6 | 8 | depth from |
+| ELEND | N | 8 | 2 | 7 | 8 | depth to |
+| ELWIDE | N | 4 | 0 | 8 | 8 | diameter |
+| ELTHICKN | N | 4 | 1 | 9 | 0 | wall thickness |
+| ... | | | | | | |
+
+The INVID field contains a measuring point ID for filter sections and is formed automatically.
+
+This table contains expansion elements that are not related to an individual pipe tour (e.g. concrete ring, hydrant cover).
+
+| FIELD\_NAME | FIELD\_TYPE | FIELD\_LEN | FIELD\_DEC | FIELD\_CNT | FIELD\_OPT | FIELD\_LONG |
+| --- | --- | --- | --- | --- | --- | --- |
+| LOCID | N | 4 | 0 | 1 | 1 | GeoDin Location Ident |
+| RECID | N | 4 | 0 | 2 | 0 | GeoDin Record Ident |
+| ELCODE | C | 8 | 0 | 5 | 40 | element |
+| ELBEG | N | 8 | 2 | 6 | 8 | depth from |
+| ELEND | N | 8 | 2 | 7 | 8 | depth to |
+| ELWIDE | N | 4 | 0 | 8 | 8 | diameter |
+| ELTHICKN | N | 4 | 1 | 9 | 0 | wall thickness |
+| ... | | | | | | |
+
+This table contains a data record for each filter pipe. "General data" for an individual filter can be entered here.
+
+| FIELD\_NAME | FIELD\_TYPE | FIELD\_LEN | FIELD\_DEC | FIELD\_CNT | FIELD\_OPT | FIELD\_LONG |
+| --- | --- | --- | --- | --- | --- | --- |
+| LOCID | N | 4 | 0 | 1 | 1 | GeoDin Location Ident |
+| RECID | N | 4 | 0 | 2 | 0 | GeoDin Record Ident |
+| INVID | C | 16 | 0 | 3 | 0 | GeoDin Messpunkttyp Ident |
+| INVZBEG | N | 8 | 2 | 4 | 8 | depth from |
+| INVZEND | N | 8 | 2 | 5 | 8 | depth to |
+| INVZNAME | C | 20 | 0 | 6 | 0 | filter name (shor) |
+| ... | | | | | | |
+
+This table contains a data record for each probing measurement series of an object. For each object, the probing series are numbered in SNDID and stored in binary form in the field SNDDATA.
+
+| FIELD\_NAME | FIELD\_TYPE | FIELD\_LEN | FIELD\_DEC | FIELD\_CNT | FIELD\_OPT | FIELD\_LONG |
+| --- | --- | --- | --- | --- | --- | --- |
+| LOCID | N | 4 | 0 | 1 | 1 | GeoDin Location Ident |
+| RECID | N | 4 | 0 | 2 | 0 | GeoDin Record Ident |
+| SNDID | N | 3 | 0 | 3 | 0 | GeoDin Sondierungs-Ident |
+| SNDNAME | C | 50 | 0 | 4 | 0 | Sondierungsname |
+| SNDDATA | B | 0 | 0 | 5 | 0 | Sondierungsdaten |
+
+This table contains the probing data for all objects of the project. The assignment is made via LOCID and SNDID. The structure of this table cannot be changed or extended.
+
+| FIELD\_NAME | FIELD\_TYPE | FIELD\_LEN | FIELD\_DEC | FIELD\_CNT | FIELD\_OPT | FIELD\_LONG |
+| --- | --- | --- | --- | --- | --- | --- |
+| LOCID | N | 4 | 0 | 1 | 1 | GeoDin Location Ident |
+| RECID | N | 4 | 0 | 2 | 0 | GeoDin Record Ident |
+| SNDID | N | 3 | 0 | 3 | 0 | GeoDin Sondierungs-Ident |
+| DEPTH | N | 20 | 4 | 4 | 0 | depth to |
+| SNDVALUE | C | 20 | 0 | 5 | 0 | probing value |
+
+These tables contain additional information on the object, e.g. groundwater level information, archive number.
+
+| FIELD\_NAME | FIELD\_TYPE | FIELD\_LEN | FIELD\_DEC | FIELD\_CNT | FIELD\_OPT | FIELD\_LONG |
+| --- | --- | --- | --- | --- | --- | --- |
+| LOCID | N | 4 | 0 | 1 | 1 | GeoDin Location Ident |
+| RECID | N | 4 | 0 | 2 | 0 | GeoDin Record Ident |
+| GW | N | 8 | 2 | 3 | 0 | groundwater level |
+| GWDATUM | D | 10 | 0 | 4 | 0 | date |
+| ... | | | | | | |
+
+These tables define and describe relationships between measurement points. INVID contains a measuring point of the object. This measurement point is related to the measurement point number (unique in GeoDin) contained in LNKINVID. INVIDT and LNKINVIDT contain verbal description of the measuring point. The type of relationship can be described in more detail by further data fields (from "...").
+
+| FIELD\_NAME | FIELD\_TYPE | FIELD\_LEN | FIELD\_DEC | FIELD\_CNT | FIELD\_OPT | FIELD\_LONG |
+| --- | --- | --- | --- | --- | --- | --- |
+| LOCID | N | 4 | 0 | 1 | 1 | GeoDin Location Ident |
+| RECID | N | 4 | 0 | 2 | 0 | GeoDin Record Ident |
+| INVID | C | 16 | 0 | 3 | 1 | measuring point ident |
+| LNKINVID | C | 16 | 0 | 4 | 1 | measuring point ident assigned |
+| INVIDT | C | 60 | 0 | 5 | 0 | Description of measuring point |
+| LNKINVIDT | C | 60 | 0 | 6 | 0 | Description of measuring point assigned |
+| ... | | | | | | |

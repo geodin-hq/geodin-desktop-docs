@@ -302,3 +302,97 @@ for layouts: layout.SHB ---> layout.GLO\
 for graphics: graphic.GRF ---> graphic.GGF
 
 _**Note:**_ _Eventually project links in the graphics of the version 1.x are unlinked, because it is not considered that linked projects are transferred. To avoid this the option -Embed location data- can be activated. Then the location data are embedded into the graphic before the conversion._
+
+### Select a source (moved from Databases pages)
+
+Standard projects and dBase projects can be selected for conversion into the MS Access (or Client / Server) database format.
+
+By selecting this method, all available drives will be searched for the directory containing the GeoDin projects, normally the directory "GeoDinDB". This directory is specified in the GeoDin.ini by the entry LocalMgrPath=\GeoDinDB\\
+
+The selection list shows all drives where this directory was found (here: C:\GeoDin und E:\GeoDinDB).
+
+If a drive is selected, the project registry is accessed (the table LOCPRMGR in the GeoDin directory) and the number of available projects is displayed.This number includes those projects which are located in other directories, but are registered in "GeoDinDB".
+
+GeoDin standard projects - created by users with older GeoDin versions - can not be registered in GeoDin 6, and are therefore not listed in the LOCPRMGR.DBF. Therefore, they are not found when using the method described above.
+
+When selecting this option, a directory containing the standard projects may be specified. All projects in the file are identified by the GeoDinPR.DBF in the SYS directory and are presented in a list.
+
+The dBase projects are not located in a directory with a fixed name. In a dialogue box, the folder containing the database can be selected. The project registry is accessed and the number of available projects is displayed.
+
+### Select projects (moved from Databases pages)
+
+The number of available projects is displayed for the source selected.
+
+If a file-based project is selected, single projects or project groups can be selected. This can be done repeatedly for different target objects to split up the local database.
+
+If a dBase database is selected as source, all projects will be converted. Selection of the converted projects is not possible.
+
+### Select a destination (moved from Databases pages)
+
+It is necessary to convert file-based and dBase projects into regular GeoDin databases to provide the full spectrum of GeoDin functions available.
+
+All available databases are displayed in a list. The database system can be anything from MS Access to Oracle.
+
+After selection of the target database and clicking OK, the selected projects are copied into the new database.
+
+Alternatively, a new database can be created. For this, a database container for Access is used. In a dialog box, target directory and file name can be selected. At the selected object, an Access database is created and used as target for the copied projects. The file name selected is used as the name of the database connection in the GeoDin object manager. The name of the database connection can be changed later.
+
+I this option is selected, conversion of the projects is considered complete. The original data are packed (zipped) into an archive and deleted. They are then no longer available for further use.
+
+If file based projects were converted, the contents of those projects are zip-packed before the project is deleted from the GeoDinDB directory and the project registry.
+
+If a dBase database was converted, the entire directory will be zip-compressed. It will be saved in the directory where the database was located.
+
+### Preview (moved from Databases pages)
+
+The selected projects are opened. If the project can not be opened, a list of all error messages will be displayed.
+
+All projects opened are checked whether they contain measurement data. As a variety of measurement data structures can be used in projects, the structures used are analysed. A uniform target structure is created. If the target database already contains a measurement data structure, the transferred structure is added.
+
+If all selected projects can be opened without errors, the next step can follow directly. If errors occurred, a system message must be confirmed to proceed to the next step. After conversion, the selected projects can be compressed (zip-packed) and deleted. After this, projects which could not be opened or contained errors are not available for the next steps.
+
+### possible problems (moved from Databases pages)
+
+During the conversion of standard and dBase projects, a series of different steps is performed. Due to special access patterns when reading dBAse tables and due to incorrect entries in the data, diefferent problems can occur during file conversion.
+
+Although a drive contains standard projects, it is not listed. This occurs when using the option "drive-based standard projects" when selecting the data source. The directory containing the GeoDin projects is not identical to the one listed in the GeoDin.INI
+
+each drive will be searched for this file, for example, C:\GeoDinDB or X:\GeoDinDB. If the projects are stored in a directory "DATA" (e.g. D:\DATA\GeoDinDB), the drive will not be displayed.
+
+The solution is either to move the data into the standard directory or to edit the entry in the GeoDin.INI accordingly:
+
+The selected project cannot be opened. The error message says hat the LOCPRMGR.DBF can not be found in the project file. The first step is to verify that the file is contained in the folder. If this is the case, the path to the file can be an error source. File access by ADO is sensitive to long path names and those containing spaces or special characters.
+
+If this may be the case, a possible solution is to copy the project file to place with a short file path (e.g. C:\Temp\\) and to convert it using the method "unregistered projects".
+
+The error message appears: "Error on checking the project code number in the local project manager: LOCPRMGR
+
+This error message means that a project with an identical ID already exists in the target database, for example from an earlier conversion.
+
+During conversion, all objects of the source project are loaded and written into the target database. For processing it is necessary that all object types used in the source projects are installed in GeoDin.
+
+If GeoDin encounters a object where the necessary object type is not installed, the conversion of the current project is cancelled. Install the necessary object type (from the GeoDin DVD) before converting the project again.
+
+The partially converted project should be deleted, because otherwise the project already exists in the target object.
+
+While converting the files, error 9986 can occur. This is the case if the table PRJDEFS in the SYS directory of the project has been created with dBAse level 7. The table contains queries and groups of object types and measurement points created in the project
+
+If available, you can use an older version of GeoDin (starting with Version 3.X). Use the method "Copy project" and select as source the drive-based standard project and as target a database. Using the installed BDE, GeoDin can copy the project without problem.
+
+If you do not necessarily need the queries and groups in the project, the PRJDEFS files in the SYS folder can be deleted.
+
+If both options are not possible or not desired, you can send the data to the GeoDin support team. There, file conversion can be performed.
+
+During the conversion of measurement data an error message is displayed that a query is to complex or that to many fields are defined.
+
+In both cases the reason is that ADO is limited to a table width of 254 columns, while no similar limitation exists when accessing dBase files with the BDE. Therefore, tables with several hundred columns are possible. These tables can not be processed during conversion.
+
+The maximum number of parameters in a data type is 249, as GeoDin needs an additional 5 fields for parameter definition.
+
+In every case, the project data have to be modified before converting the data into a database.
+
+This is only possible using older GeoDin versions (up to version 5.X) and the BDE. If this option is not available, please ask the GeoDin support for help.
+
+Optimize the database structure. This way, empty columns in the tables are removed. In most cases, this will suffice. In the status line of the add/remove parameter dialogue (in the datatype manager), the current number of parameters in the datatype is displayed.
+
+Data types with measurement values can be stored with two different data models, in rows (one sample/one row / SDM) or in columns (one sample = one column / LDM). Convert the data model to LDM before converting the database. Probably, the data model of the target database has to be changed to LDM to manage the broad spectrum of parameters in GeoDin.
