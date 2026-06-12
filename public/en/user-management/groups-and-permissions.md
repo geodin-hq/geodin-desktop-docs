@@ -1,6 +1,3 @@
----
-description: Groups and Permissions
----
 
 <!--
 **Content status:** Auto-assembled from product documentation

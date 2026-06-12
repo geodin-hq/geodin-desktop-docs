@@ -1,6 +1,3 @@
----
-description: Object Types
----
 
 <!--
 **Content status:** Auto-assembled from product documentation
@@ -9,8 +6,6 @@ description: Object Types
 -->
 
 # Object Types
-
-## Object Types
 
 Object types are viewable under `System > System Configuration > Object Types`. <!-- src: transcript/data-model-architecture#object-types -->
 

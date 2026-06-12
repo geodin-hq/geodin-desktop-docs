@@ -1,6 +1,3 @@
----
-description: Coordinate Systems and EPSG
----
 
 <!--
 **Content status:** Auto-assembled from product documentation

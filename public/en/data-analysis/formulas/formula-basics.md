@@ -1,6 +1,3 @@
----
-description: Formula Basics
----
 
 <!--
 **Content status:** Auto-assembled from product documentation

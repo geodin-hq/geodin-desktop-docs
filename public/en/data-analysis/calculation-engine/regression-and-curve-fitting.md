@@ -1,10 +1,5 @@
----
-description: Regression and Curve Fitting
----
 
 # Regression and Curve Fitting
-
-## Regression and Curve Fitting
 
 #### Presentation options
 

@@ -1,6 +1,3 @@
----
-description: Database Visibility
----
 
 <!--
 **Content status:** Auto-assembled from product documentation

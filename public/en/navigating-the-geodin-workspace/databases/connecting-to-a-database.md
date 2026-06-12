@@ -1,11 +1,7 @@
----
-description: Connecting to a Database
----
 
 # Connecting to a Database
 
 ### Databases
-
 
 GeoDin data is stored in databases, which may contain any number of GeoDin projects - the only limit is your disk space.\
 Databases are accessed using a specialized database driver (OLE-DB-Provider). This driver is included in your operating system or is provided with your database. Database connections are created, configured or deleted from the GeoDin user interface.
@@ -39,7 +35,6 @@ are created or defined locally using the method **"Create database connection"**
 Different user databases cannot have identical names. A database connection defined as a system database is used in preference to a user-defined database
 
 ### Create database connection
-
 
 The method **"Create database connection"** is available under the  ![Databases](../../.gitbook/assets/icons/databases-3.png) **Databases** tab in the GeoDin object manager (GOM):
 

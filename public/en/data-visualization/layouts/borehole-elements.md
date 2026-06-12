@@ -1,6 +1,3 @@
----
-description: Borehole Elements
----
 
 <!--
 **Content status:** Auto-assembled from product documentation
@@ -9,8 +6,6 @@ description: Borehole Elements
 -->
 
 # Borehole Elements
-
-## Borehole Elements
 
 **Borehole element** drawing type options: Graphic Log, Tabular Log, Log with Default. <!-- src: transcript/forms-templates-customization#borehole-elements -->
 
@@ -78,9 +73,7 @@ Template layout objects include pre-made borehole logs (with ground description 
 
 ## Reference: Borehole log graphic element
 
-{% hint style="warning" %}
-The following reference content is from legacy product documentation and may describe older interface elements. Verify against the current version of GeoDin.
-{% endhint %}
+<!-- Editorial flag: legacy-sourced reference content below — verify against current GeoDin (Goal 4) -->
 
 The **Borehole log / Borehole tab** graphic element renders the borehole log with fill patterns, depth labeling, layer descriptions, and optionally a scaled tabular presentation. The log automatically distributes across multiple pages when the chosen height scale requires it (unless single-page scaling is selected). Use the page navigation icons to switch between pages.
 

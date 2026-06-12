@@ -1,6 +1,3 @@
----
-description: Dictionaries
----
 
 <!--
 **Content status:** Auto-assembled from product documentation
@@ -200,9 +197,7 @@ Fig. 3 - Representation of the signature in accordance with British Standards, l
 ## Reference: Comparison lists
 <!-- src: help/H0000008081 -->
 
-{% hint style="warning" %}
-The following reference content is from legacy product documentation and may describe older interface elements. Verify against the current version of GeoDin.
-{% endhint %}
+<!-- Editorial flag: legacy-sourced reference content below — verify against current GeoDin (Goal 4) -->
 
 A comparison list (also called a limit list) contains a set of parameters with reference values and units, used for checking measured data against regulatory or project-specific thresholds. Each list must have a unique name within its data type.
 
@@ -215,9 +210,7 @@ A comparison list (also called a limit list) contains a set of parameters with r
 ## Reference: Comparison parameter properties
 <!-- src: help/H0000008095 -->
 
-{% hint style="warning" %}
-The following reference content is from legacy product documentation and may describe older interface elements. Verify against the current version of GeoDin.
-{% endhint %}
+<!-- Editorial flag: legacy-sourced reference content below — verify against current GeoDin (Goal 4) -->
 
 - **Field name** — The parameter to compare against. Once created, the parameter selection is locked; only the value and unit can be edited afterward. Delete and re-add to change the parameter.
 - **Value** — The exceedance threshold. When a measured value exceeds this value, the exceedance is flagged in the report.
@@ -228,9 +221,7 @@ The following reference content is from legacy product documentation and may des
 ## Reference: Code transformation for XML/dictionary export
 <!-- src: help/H0000005585, help/H0000008494 -->
 
-{% hint style="warning" %}
-The following reference content is from legacy product documentation and may describe older interface elements. Verify against the current version of GeoDin.
-{% endhint %}
+<!-- Editorial flag: legacy-sourced reference content below — verify against current GeoDin (Goal 4) -->
 
 When exporting dictionary-coded data to XML, field codes can be transformed to target codes required by the export format.
 
@@ -252,9 +243,7 @@ When exporting dictionary-coded data to XML, field codes can be transformed to t
 ## Reference: Linked additional information
 <!-- src: help/H0000011315 -->
 
-{% hint style="warning" %}
-The following reference content is from legacy product documentation and may describe older interface elements. Verify against the current version of GeoDin.
-{% endhint %}
+<!-- Editorial flag: legacy-sourced reference content below — verify against current GeoDin (Goal 4) -->
 
 Each dictionary key can link to external information via a web service URL. The link is composed of a **base URL** (defined on the dictionary) and an auto-generated parameter block specifying the dictionary name and key code. Linked information appears as a clickable link in the Dictionary Search dialog.
 
@@ -265,9 +254,7 @@ Example: Base URL `https://www.example.com/` + parameter block `DictionaryItemIn
 ## Reference: Search common parent nodes
 <!-- src: help/H0000008595 -->
 
-{% hint style="warning" %}
-The following reference content is from legacy product documentation and may describe older interface elements. Verify against the current version of GeoDin.
-{% endhint %}
+<!-- Editorial flag: legacy-sourced reference content below — verify against current GeoDin (Goal 4) -->
 
 This transformation searches for a common superior node in a hierarchical (tree-structured) dictionary.
 
@@ -281,9 +268,7 @@ This transformation searches for a common superior node in a hierarchical (tree-
 ## Reference: Compare elements
 <!-- src: help/H0000009029 -->
 
-{% hint style="warning" %}
-The following reference content is from legacy product documentation and may describe older interface elements. Verify against the current version of GeoDin.
-{% endhint %}
+<!-- Editorial flag: legacy-sourced reference content below — verify against current GeoDin (Goal 4) -->
 
 The comparison window shows differences between two versions of a configuration item (e.g. a data type formula vs. an import file's formula). The left side shows the target, the right side the source. Items are colour-coded:
 

@@ -1,6 +1,3 @@
----
-description: Working with Measurement Data
----
 
 # Working with Measurement Data
 

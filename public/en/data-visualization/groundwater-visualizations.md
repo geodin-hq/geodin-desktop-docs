@@ -1,6 +1,3 @@
----
-description: Groundwater Visualizations
----
 
 <!--
 **Content status:** Auto-assembled from product documentation

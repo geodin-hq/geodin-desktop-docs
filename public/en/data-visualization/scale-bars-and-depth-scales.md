@@ -1,6 +1,3 @@
----
-description: Scale Bars and Depth Scales
----
 
 <!--
 **Content status:** Auto-assembled from product documentation

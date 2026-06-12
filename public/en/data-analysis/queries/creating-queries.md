@@ -1,6 +1,3 @@
----
-description: Creating Queries
----
 
 # Creating Queries
 

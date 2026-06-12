@@ -33,9 +33,7 @@ For cross-section reports, see [Cross-Section Reports](cross-section-reports.md)
 
 ## Reference: Report graphic element
 
-{% hint style="warning" %}
-The following reference content is from legacy product documentation. Verify against the current version of GeoDin.
-{% endhint %}
+<!-- Editorial flag: legacy-sourced reference content below — verify against current GeoDin (Goal 4) -->
 
 ### Overview
 

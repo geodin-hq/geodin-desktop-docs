@@ -1,6 +1,3 @@
----
-description: Object Type Formulas
----
 
 # Object Type Formulas
 

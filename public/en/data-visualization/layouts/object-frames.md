@@ -1,6 +1,3 @@
----
-description: Object Frames
----
 
 <!--
 **Content status:** Auto-assembled from product documentation
@@ -9,8 +6,6 @@ description: Object Frames
 -->
 
 # Object Frames
-
-## Object Frames
 
 **Object Frame** is the first required element on any layout; it connects the layout to actual object data via drag-and-drop from the tree. <!-- src: transcript/forms-templates-customization#object-frames -->
 

@@ -1,6 +1,3 @@
----
-description: Well Design Diagrams
----
 
 # Well Design Diagrams
 

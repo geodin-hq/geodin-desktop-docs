@@ -1,6 +1,3 @@
----
-description: Customizing Log Layouts
----
 
 # Customizing Log Layouts
 

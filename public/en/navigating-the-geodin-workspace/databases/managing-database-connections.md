@@ -1,11 +1,7 @@
----
-description: Managing Database Connections
----
 
 # Managing Database Connections
 
 ### Edit database connection
-
 
 When the database icon of an database connection is selected in the GeoDin object manager (GOM), the method  ![Edit database connection](../../.gitbook/assets/icons/edit-database-connection.png) **"Edit database connection"** is available (_**Note:**_ _The database has to be closed_).
 
@@ -21,7 +17,6 @@ The settings for Client/Server databases are described in the chapter:
 
 ### Delete database connection
 
-
 An existing database connection can be deleted in the GeoDin-Object manager using the method  ![Delete database connection](../../.gitbook/assets/icons/delete-database-connection.png) **"Delete database connection"** (_**Note:**_ _The database must be closed and it must be a user-defined database; system databases can only be deleted on the_ [_System databases_](connecting-to-a-database.md)).
 
 Confirming with **OK** deletes the database connection in the GeoDin object manager. This deletes the connection but not the data, except in the following exceptions outlined below.
@@ -31,7 +26,6 @@ For a MS Access database the option of deleting the \*.accdb file of the Access 
 _**Warning:**_ _If this option is chosen then the \*.accdb file will be deleted WITHOUT ANY possibility of restoring it. Hence use this option CAREFULLY and ONLY when you are certain that you do not need the database._
 
 ### Configuration
-
 
 Display of database connections in theGeoDinobject manager
 
@@ -86,7 +80,6 @@ GOMGroup=Geotechnics
 The groups are shown in the GeoDin object manager as folders and are listed alphabetically directly beneath the _**...**\\**databases**_ node.
 
 ### Display options
-
 
 The standard setting in the GeoDin object manager (GOM) shows all projects in the open database. Additional information for a project (ID, author, date of creation) is shown by moving the mouse pointer over the project icon in the GOM:
 
@@ -197,7 +190,6 @@ The following key words can be used:
 **'ID, Name, Alias, Date, Author'**.
 
 ### System
-
 
 The system tables of a project contain the object type definition, measurement point type definitions and structure descriptions of physical data tables.
 
@@ -409,7 +401,6 @@ FIELD\_OPT bit-flags:
 
 ### User databases vs. system databases in centralized deployments
 
-
 Understanding the distinction between user and system databases is especially important when GeoDin is installed centrally and accessed via Remote Desktop (RDS/Citrix) or a shared network installation.
 
 **User databases** (blue cylinder icon) are stored in the **Windows registry of the individual user's local PC**. In a centralized deployment, this means they are stored in the registry profile of that user on the terminal server. Only that user sees these connections — other users opening GeoDin from the same installation will not see them.
@@ -425,7 +416,6 @@ If a user creates a user database connection and then another user needs to acce
 {% endhint %}
 
 ### Migrating an Access database to PostgreSQL using Copy All Projects
-
 
 The **Copy All Projects** method (available at the database level) is the recommended way to migrate an entire Access (`.accdb`) database into a PostgreSQL database. It creates a 1:1 copy of all projects while preserving project IDs and all data.
 

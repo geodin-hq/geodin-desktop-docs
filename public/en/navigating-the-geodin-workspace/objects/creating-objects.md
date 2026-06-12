@@ -1,6 +1,3 @@
----
-description: Creating Objects
----
 
 # Creating Objects
 

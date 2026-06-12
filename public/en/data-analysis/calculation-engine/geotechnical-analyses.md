@@ -1,6 +1,3 @@
----
-description: Geotechnical Analyses
----
 
 <!--
 **Content status:** Auto-assembled from product documentation
@@ -32,26 +29,21 @@ If the parameters Fe or NO3 are defined as empty in the parameter definition, th
 
 The settings for the grain size analyses can be edited here.
 
-
 **Hydrometer**
 
 Here the hydrometers available are defined. The hydrometers can be selected later for each analysis. The necessary data can be found in the calibration protocol for the hydrometer.
-
 
 **Readout times**
 
 Here, the standard readout times for the hydrometer analysis are defined. The default set of readout times will be used to generate the datasets when creating new hydrometer analyses.
 
-
 **Dispersant**
 
 Here, the dispersants are defined which can be selected when entering data. For each dispersant, a formula for calculating density and viscosity is needed. These are temperature-dependent values. For defining the temperature, use \$T\$.
 
-
 **Sieve sets/Koehn sieve sets**
 
 The sieve sets available for the analyses are defined here by entering the mesh width into the data grid.
-
 
 **Definitions for the soil identification**
 
@@ -62,7 +54,6 @@ A component list like the one calculated should not be taken as a soil classific
 A definition is composed of several parts without gap. It is best to enter the \"to\" values first, as the \"from\" value is filled automatically when moving the cursor down.
 
 Special signs for values smaller or greater than specific values can also be defined here.
-
 
 **Area curves**
 

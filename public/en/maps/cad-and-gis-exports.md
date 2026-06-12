@@ -1,6 +1,3 @@
----
-description: Cad and Gis Exports
----
 
 <!--
 **Content status:** Auto-assembled from product documentation

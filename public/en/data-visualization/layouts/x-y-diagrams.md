@@ -1,6 +1,3 @@
----
-description: X Y Diagrams
----
 
 <!--
 **Content status:** Auto-assembled from product documentation

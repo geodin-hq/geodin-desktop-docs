@@ -1,6 +1,3 @@
----
-description: Configuration File Reference
----
 
 # Configuration File Reference
 

@@ -1,6 +1,3 @@
----
-description: Rest API Overview
----
 
 <!--
 **Content status:** Auto-assembled from product documentation

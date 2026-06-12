@@ -1,11 +1,7 @@
----
-description: Supported Database Types
----
 
 # Supported Database Types
 
 ### Client/Server
-
 
 In the appropriate environment and especially for working with a high amount of data the use of a database server is sensible. GeoDin supports database connections via **OLE-DB** and **FireDAC**. Whilst OLE-DB has been supported since GeoDin 3.0 , FireDAC is a new high performance data access library for use starting with GeoDin 8 available for customers with a "Software Update Service Contract". The performance of data acces using FireDAC is much faster than OLE-DB, particularly when using Oracle-Server, MySQL Server and PostgreSQL databases.
 
@@ -50,7 +46,6 @@ Alternatively a .UDL file can be used for storing information on a database conn
 Information on system databases is described in the chapter [System databases](connecting-to-a-database.md).
 
 ### MS Access
-
 
 The simplest way to work with databases is the use of a MS Access database by creating a connection directly in GeoDin. Here an existing database (\*.accdb) can be used or a new one can be created.
 
@@ -98,7 +93,6 @@ _DriverID=MSAcc;Database= \[File name]_ for FireDAC connection where \[File name
 
 ### MySQL
 
-
 **FireDAC**
 
 GeoDin automatically recognises the database type
@@ -127,7 +121,6 @@ Detailed descriptions on FireDAC connections can be found here:
 http://docwiki.embarcadero.com/RADStudio/XE5/en/Database\_Connectivity\_(FireDAC)
 
 ### PostGreSQL
-
 
 **FireDAC**
 
@@ -158,7 +151,6 @@ https://docwiki.embarcadero.com/RADStudio/XE5/en/Database\_Connectivity\_(FireDA
 
 ### Microsoft SQL-Server
 
-
 **FireDAC**
 
 GeoDin automatically recognizes the database type.
@@ -185,7 +177,6 @@ FireDACConnection=DriverID=MSSQL;Server=192.168.49.250;Database=GeoDin;User\_Nam
 FireDACConnection=DriverID=MSSQL;Server=192.168.49.250;Database=GeoDin;OSAuthent=Yes
 
 ### Oracle Server
-
 
 **FireDAC**
 

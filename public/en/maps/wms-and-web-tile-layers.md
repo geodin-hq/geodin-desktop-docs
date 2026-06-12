@@ -1,6 +1,3 @@
----
-description: WMS and Web Tile Layers
----
 
 <!--
 **Content status:** Auto-assembled from product documentation

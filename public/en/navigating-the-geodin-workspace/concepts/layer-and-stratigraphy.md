@@ -1,6 +1,3 @@
----
-description: Layer and Stratigraphy
----
 
 <!--
 **Content status:** Auto-assembled from product documentation

@@ -1,6 +1,3 @@
----
-description: Translation Style Sheets
----
 
 <!--
 **Content status:** Auto-assembled from product documentation
