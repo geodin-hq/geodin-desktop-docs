@@ -60,4 +60,4 @@ Repeat the process for additional investigation areas as needed.
 
 **Next step:** [Attach the exported reports to ArcGIS feature classes](attach-reports.md).
 
-[Watch the full video walkthrough](https://loom.com/share/03ad413e30cc4f40b289645ca2f27278)
+[Watch the full video walkthrough](https://www.youtube.com/watch?v=0igEXnqKCww&list=PLfA_dsMIot34WQYVtEluk87UsZt0hb21A&index=3)

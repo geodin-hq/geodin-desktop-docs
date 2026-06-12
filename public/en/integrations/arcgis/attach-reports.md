@@ -66,4 +66,4 @@ Check the results to confirm that attachments have been added successfully. Clic
 
 **Next step:** [Publish the data with attachments to ArcGIS Online](publish-to-arcgis-online.md).
 
-[Watch the full video walkthrough](https://loom.com/share/8c9cb05e6c98430c83c33aa418361704)
+[Watch the full video walkthrough](https://www.youtube.com/watch?v=Xo-wNWrR5TY&list=PLfA_dsMIot34WQYVtEluk87UsZt0hb21A&index=4)
