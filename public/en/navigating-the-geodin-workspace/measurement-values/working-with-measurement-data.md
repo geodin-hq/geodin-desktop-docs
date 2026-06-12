@@ -771,3 +771,24 @@ Measurements are taken with respect to a filter pipe, which in turn represents a
 Samples are taken during the drilling process and test results are obtained from them. The samples are taken only once, but then examined several times. The sample is sufficiently described by the depth from which it was taken. Additional information is given about the sample material.
 
 Data types are compilations of measurable parameters. This compilation is ultimately free, but is usually oriented towards the object or type of investigation. These data types can be assigned to the study types in any combination. For example, the data types groundwater chemistry and groundwater dynamics are assigned to the GWBR filter investigation type. However, both can also be used in other combinations in other investigation types.
+
+| Field | Description |
+| --- | --- |
+| PRJ\_ID | Project ID |
+| LOCID | Up to 4 digit number (running counter) for each object in the project values: 1-9998 |
+| LOCTYPE | Contains descriptor of the object type |
+| INVID | is an exact 16 character long string with the measurement point number: |
+| OPT\_PARAM | empty |
+| XCOORD | X coordinate |
+| YCOORD | Y coordinate |
+| ZCOORDB | Object absolute height |
+| ZCOORDE | End depth in meters below ground surface (for depth related objects) |
+| SHORTNAME | is the Short name for the object |
+| LONGNAME | is the Long name for the object |
+| PHYSFILE | Name of the object file (only in GeoDin standard projects) |
+| LOCKINFO | empty |
+
+_Additional variant rows recovered from the former Databases-page copy of “Measurement values”:_
+
+| INVID | Measurement point ID number (format below) |
+| INVID | Measurement point ID number |

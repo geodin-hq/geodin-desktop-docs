@@ -375,6 +375,38 @@ FIELD\_OPT bit-flags:
 | 20 (1048576) | Last FixedCol field |
 | 21 (2097152) | Field is automatically transferred to new DS |
 
+| Data field | Description | Notes |
+| --- | --- | --- |
+| TABE\_TYPE | Table type | describes the basic usage of a data table. There are mandatory fields prescribed by the system for each type of data table. |
+| TAB\_OPT | System options | |
+| TAB\_TRC | Standard translation code. Reserved by the system until 16. | |
+| INV\_TYPE | Measuring point type | If the data table defines the measuring point type (e.g. general data table, filter table, sample table), INV\_TYPE determines the measuring point type and thus the type of measurement results that can be linked. |
+
+| Bit (Value) | Meaning |
+| --- | --- |
+| 0 (1) | Indexed field |
+| 1 (2) | Unique index (unique) only if bit 0 is set |
+| 2 (4) | Field is used for signature / for measured values: Offset field |
+| 3 (8) | Field is used for signature (secondary) |
+| 4 (16) | Field is used for signature (tertiary) |
+| 5 (32) | Mandatory field |
+| 6 (64) | Long codes are used (WB) |
+| 7 (128) | either only an abbreviation (not bit 6) or long entry editable (with bit 6) (bit 6 off): on : only one key is allowed off : several keys are permitted (bit 6 on) : on : Long texts can be edited off : Long texts cannot be edited |
+| 8 (256) | Field visible (for measured values) |
+| 9 (512) | Field editable (for measured values) (vacant: always set) |
+| 10 (1024) | Quantity parameters |
+| 11 (2048) | Calculated parameter |
+| 12 (4096) | Negative values allowed |
+| 13 (8192) | Anorganic |
+| 14 (16384) | Write lockout |
+| 15 (32768) | External field |
+| 16 (65536) | Conditional write lockout |
+| 17 (131072) | controls WB fields, Dic: Bit 6 on - write combo key (instead of long name) in DB 131136 for Dic - show plain text, key in DB: 17+6 131168 same as mandatory field, 17+6+5 Dic: Bit 6 off - ? as plain text (key in DB) 131200 not mandatory only one key 17+7 131232 as mandatory field only one key 17+7+5 Dic: Bit 6 off - ? as plain text (several keys in DB) 131072 not mandatory multiple keys 17 131104 mandatory multiple keys 17+5 |
+| 18 (262144) | TVQK\_SingleNorm Recoding of the standard text during input |
+| 19 (524288) | Field has dynamic units |
+| 20 (1048576) | Last FixedCol field |
+| 21 (2097152) | Field is automatically transferred to new DS |
+
 ### User databases vs. system databases in centralized deployments
 
 
@@ -412,3 +444,10 @@ Object, measurement, report, document, and project-copy reference content former
 
 - [Connecting to a Database](connecting-to-a-database.md) — creating connections
 - [Supported Database Types](supported-database-types.md) — per-backend specifics
+
+_Additional variant rows recovered from the former Databases-page copy of “System”:_
+
+| Table | Physical name | Description |
+| Data field | Description |
+| FIELD\_OPT | System options (extract) |
+| Table | System table | Description |

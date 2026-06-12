@@ -2096,3 +2096,23 @@ These tables define and describe relationships between measurement points. INVID
 | INVIDT | C | 60 | 0 | 5 | 0 | Description of measuring point |
 | LNKINVIDT | C | 60 | 0 | 6 | 0 | Description of measuring point assigned |
 | ... | | | | | | |
+
+| Field | Description |
+| --- | --- |
+| PRJ\_ID | Project ID |
+| LOCID | is a max. 4-digit sequential number of the object in project 1-9998 |
+| LOCTYPE | Contains the descriptor of the object type |
+| INVID | is a string of exactly 16 characters. It is formed from: |
+| OPT\_PARAM | empty |
+| XCOORD | easting |
+| YCOORD | northing |
+| ZCOORDB | Borehole starting point absolute |
+| ZCOORDE | Final depth in metres below ground level (for depth-oriented objects) |
+| SHORTNAME | short name for the object |
+| LONGNAME | long name for the object |
+| PHYSFILE | Name of the object file (only in GeoDin standard projects) |
+| LOCKINFO | empty |
+
+_Additional variant rows recovered from the former Databases-page copy of “Objects”:_
+
+| INVID | Measuring point identification number |
