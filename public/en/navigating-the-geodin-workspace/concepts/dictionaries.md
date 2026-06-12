@@ -1,6 +1,3 @@
----
-description: Dictionaries
----
 
 <!--
 **Content status:** Auto-assembled from product documentation
@@ -9,8 +6,6 @@ description: Dictionaries
 -->
 
 # Dictionaries
-
-## Dictionaries
 
 Dictionaries are pre-made lists that populate drop-down fields (marked with a `?` symbol to the right of the field). <!-- src: transcript/data-model-architecture#dictionaries -->
 

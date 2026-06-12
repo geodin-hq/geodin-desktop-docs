@@ -1,10 +1,5 @@
----
-description: Working with Projects
----
 
 # Working with Projects
-
-## Working with Projects
 
 #### Projects
 

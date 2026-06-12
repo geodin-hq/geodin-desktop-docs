@@ -1,6 +1,3 @@
----
-description: Data Sequences and CPT
----
 
 # Data Sequences and CPT
 

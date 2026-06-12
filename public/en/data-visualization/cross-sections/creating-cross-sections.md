@@ -1,6 +1,3 @@
----
-description: Creating Cross Sections
----
 
 # Creating Cross Sections
 

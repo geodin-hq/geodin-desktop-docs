@@ -1,6 +1,3 @@
----
-description: Cross Section Layouts
----
 
 # Cross Section Layouts
 

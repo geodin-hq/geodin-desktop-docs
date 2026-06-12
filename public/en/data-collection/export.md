@@ -33,9 +33,7 @@ PDF exports from Onsite contain a "DRAFT" watermark unless the form was produced
 
 ## Reference: Column properties
 
-{% hint style="warning" %}
-The following reference content is from legacy product documentation and may describe older interface elements. Verify against the current version of GeoDin.
-{% endhint %}
+<!-- Editorial flag: legacy-sourced reference content below — verify against current GeoDin (Goal 4) -->
 
 When configuring export column properties, the following options are available: <!-- src: help/05/765 -->
 
@@ -50,9 +48,7 @@ When configuring export column properties, the following options are available: 
 ## Reference: Presentation conditions
 <!-- src: help/H0000000769 -->
 
-{% hint style="warning" %}
-The following reference content is from legacy product documentation and may describe older interface elements. Verify against the current version of GeoDin.
-{% endhint %}
+<!-- Editorial flag: legacy-sourced reference content below — verify against current GeoDin (Goal 4) -->
 
 Presentation conditions control how individual cells in a report column are displayed based on their content. A column has a default font, but presentation conditions can override the font and background colour when specific criteria are met — for example, highlighting values that exceed a regulatory limit.
 
@@ -72,9 +68,7 @@ Cells not matching either condition remain black (the column default).
 ## Reference: Post-selection (data filtering)
 <!-- src: help/H0000000918 -->
 
-{% hint style="warning" %}
-The following reference content is from legacy product documentation and may describe older interface elements. Verify against the current version of GeoDin.
-{% endhint %}
+<!-- Editorial flag: legacy-sourced reference content below — verify against current GeoDin (Goal 4) -->
 
 A post-selection filters data records from already-correlated data types (see Pre-selection for correlation).
 
@@ -99,9 +93,7 @@ A post-selection filters data records from already-correlated data types (see Pr
 ## Reference: Blank values in statistic reports
 <!-- src: help/H0000005071 -->
 
-{% hint style="warning" %}
-The following reference content is from legacy product documentation and may describe older interface elements. Verify against the current version of GeoDin.
-{% endhint %}
+<!-- Editorial flag: legacy-sourced reference content below — verify against current GeoDin (Goal 4) -->
 
 When a statistic report analyses parameters that have no measured values for some periods or locations, three display options control how missing data appears:
 
@@ -118,9 +110,7 @@ When a statistic interval is defined (e.g. yearly), the same three options apply
 ## Reference: Report row types
 <!-- src: help/H0000005328 -->
 
-{% hint style="warning" %}
-The following reference content is from legacy product documentation and may describe older interface elements. Verify against the current version of GeoDin.
-{% endhint %}
+<!-- Editorial flag: legacy-sourced reference content below — verify against current GeoDin (Goal 4) -->
 
 Each row in a report definition has a type that controls its content:
 
@@ -135,9 +125,7 @@ Each row in a report definition has a type that controls its content:
 ## Reference: Text row properties
 <!-- src: help/H0000005334 -->
 
-{% hint style="warning" %}
-The following reference content is from legacy product documentation and may describe older interface elements. Verify against the current version of GeoDin.
-{% endhint %}
+<!-- Editorial flag: legacy-sourced reference content below — verify against current GeoDin (Goal 4) -->
 
 Text rows can display static text, pre-defined text, or variable text built from data-field macros (via the **Build** button). Translation language can be set to control how dictionary-backed field contents are rendered; the default "Automatic" uses the language specified on the object type.
 
@@ -152,9 +140,7 @@ Text rows can display static text, pre-defined text, or variable text built from
 ## Reference: Dynamic captions
 <!-- src: help/H0000007111 -->
 
-{% hint style="warning" %}
-The following reference content is from legacy product documentation and may describe older interface elements. Verify against the current version of GeoDin.
-{% endhint %}
+<!-- Editorial flag: legacy-sourced reference content below — verify against current GeoDin (Goal 4) -->
 
 Dynamic captions provide per-data-record information in column headers of laboratory control reports that display multiple measurements per row. The caption content is defined using text macros. A report can contain only one dynamic caption definition, but multi-line captions are supported (insert a return within the macro). No other row types may precede the dynamic caption row.
 
@@ -163,9 +149,7 @@ Dynamic captions provide per-data-record information in column headers of labora
 ## Reference: Footer row properties
 <!-- src: help/H0000007193 -->
 
-{% hint style="warning" %}
-The following reference content is from legacy product documentation and may describe older interface elements. Verify against the current version of GeoDin.
-{% endhint %}
+<!-- Editorial flag: legacy-sourced reference content below — verify against current GeoDin (Goal 4) -->
 
 - **Name** — Label for the footer line, typically written in the first column. Use the *To column* option to span the label across multiple columns; set to `0` to suppress the label entirely.
 - **Type** — Choose between a text footer or a statistical-value footer.
@@ -176,9 +160,7 @@ The following reference content is from legacy product documentation and may des
 ## Reference: Parameter settings (list comparison)
 <!-- src: help/H0000002692 -->
 
-{% hint style="warning" %}
-The following reference content is from legacy product documentation and may describe older interface elements. Verify against the current version of GeoDin.
-{% endhint %}
+<!-- Editorial flag: legacy-sourced reference content below — verify against current GeoDin (Goal 4) -->
 
 - **Sensitivity of response** — Adjusts the tolerance for list-comparison checks. At 100 % (default) the comparison is exact. Reducing to 90 % introduces a 10 % margin, so a measured value of 95 mg/l would be flagged against a limit of 100 mg/l.
 - **Parameter display — if list value is available** — Show the parameter always, or only when the measured value exceeds the comparison value.
@@ -189,9 +171,7 @@ The following reference content is from legacy product documentation and may des
 ## Reference: Barcode and QR code
 <!-- src: help/H0000010889 -->
 
-{% hint style="warning" %}
-The following reference content is from legacy product documentation and may describe older interface elements. Verify against the current version of GeoDin.
-{% endhint %}
+<!-- Editorial flag: legacy-sourced reference content below — verify against current GeoDin (Goal 4) -->
 
 Report layouts can include barcode or QR code elements. Select the code type, rotation, colour, and whether human-readable text is shown below the code.
 

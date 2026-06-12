@@ -1,6 +1,3 @@
----
-description: Creating Borehole Logs
----
 
 <!--
 **Content status:** Auto-assembled from product documentation

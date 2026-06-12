@@ -1,6 +1,3 @@
----
-description: Dictionaries and Validation
----
 
 <!--
 **Content status:** Auto-assembled from product documentation

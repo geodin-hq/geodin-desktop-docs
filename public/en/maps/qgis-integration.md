@@ -1,6 +1,3 @@
----
-description: QGIS Integration
----
 
 <!--
 **Content status:** Auto-assembled from product documentation
@@ -45,6 +42,5 @@ Enter **\"*GeoDinQGIS*\"** in the search box.
 The most current version of the plugin will be installed.
 
 After the installation, the Plugin can be launched from the *QGIS* toolbar.
-
 
 Information on different versions of ***GeoDinQGIS*** can be found here https://plugins.qgis.org/plugins/GeoDinQGIS/. <!-- src: help/QG/10673 -->

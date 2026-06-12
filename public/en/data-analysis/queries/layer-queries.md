@@ -1,6 +1,3 @@
----
-description: Layer Queries
----
 
 # Layer Queries
 

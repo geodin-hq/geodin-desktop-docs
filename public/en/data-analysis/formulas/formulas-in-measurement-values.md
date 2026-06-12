@@ -1,6 +1,3 @@
----
-description: Formulas in Measurement Values
----
 
 # Formulas in Measurement Values
 

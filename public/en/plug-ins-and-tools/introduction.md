@@ -1,6 +1,3 @@
----
-description: gINT Convertor
----
 
 <!--
 **Content status:** Auto-assembled from product documentation

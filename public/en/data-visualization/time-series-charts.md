@@ -1,6 +1,3 @@
----
-description: Time Series Charts
----
 
 <!--
 **Content status:** Auto-assembled from product documentation

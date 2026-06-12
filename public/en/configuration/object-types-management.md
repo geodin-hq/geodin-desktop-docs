@@ -1,6 +1,3 @@
----
-description: Object Types Management
----
 
 # Object Types Management
 

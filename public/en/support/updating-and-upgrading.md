@@ -1,6 +1,3 @@
----
-description: Updating & Upgrading
----
 
 <!--
 **Content status:** Auto-assembled from product documentation

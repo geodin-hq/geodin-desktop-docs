@@ -1,6 +1,3 @@
----
-description: Method Reference
----
 
 <!--
 **Content status:** Auto-assembled from product documentation

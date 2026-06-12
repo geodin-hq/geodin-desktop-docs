@@ -1,6 +1,3 @@
----
-description: Creating Site Plans
----
 
 # Creating Site Plans
 

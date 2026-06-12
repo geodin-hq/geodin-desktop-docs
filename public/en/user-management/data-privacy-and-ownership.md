@@ -1,6 +1,3 @@
----
-description: Data Privacy and Ownership
----
 
 <!--
 **Content status:** Auto-assembled from product documentation

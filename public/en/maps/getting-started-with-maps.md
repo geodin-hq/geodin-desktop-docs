@@ -1,6 +1,3 @@
----
-description: Getting Started with Maps
----
 
 # Getting Started with Maps
 

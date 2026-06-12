@@ -36,9 +36,7 @@ For tabular data exports (Excel, CSV, AGS), see [Export](../data-collection/expo
 
 ## Reference: Print and report settings
 
-{% hint style="warning" %}
-The following reference content is from legacy product documentation. Verify against the current version of GeoDin.
-{% endhint %}
+<!-- Editorial flag: legacy-sourced reference content below — verify against current GeoDin (Goal 4) -->
 
 ### Fill pattern scaling
 

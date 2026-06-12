@@ -1,6 +1,3 @@
----
-description: Complex Layer Queries
----
 
 # Complex Layer Queries
 

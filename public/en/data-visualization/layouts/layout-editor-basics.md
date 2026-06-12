@@ -1,6 +1,3 @@
----
-description: Layout Editor Basics
----
 
 <!--
 **Content status:** Auto-assembled from product documentation
@@ -9,8 +6,6 @@ description: Layout Editor Basics
 -->
 
 # Layout Editor Basics
-
-## Layout Editor Basics
 
 Templates/layouts are created in the "Graphic Printing and Editing" method and accessed via the Layout section. <!-- src: transcript/forms-templates-customization#layout-editor-basics -->
 

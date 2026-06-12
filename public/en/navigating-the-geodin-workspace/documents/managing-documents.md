@@ -1,6 +1,3 @@
----
-description: Managing Documents
----
 
 # Managing Documents
 

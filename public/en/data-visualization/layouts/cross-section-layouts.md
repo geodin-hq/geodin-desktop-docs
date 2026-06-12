@@ -1,6 +1,3 @@
----
-description: Cross Section Layouts
----
 
 <!--
 **Content status:** Auto-assembled from product documentation

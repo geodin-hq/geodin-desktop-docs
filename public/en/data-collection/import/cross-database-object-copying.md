@@ -1,6 +1,3 @@
----
-description: Cross Database Object Copying
----
 
 <!--
 **Content status:** Auto-assembled from product documentation

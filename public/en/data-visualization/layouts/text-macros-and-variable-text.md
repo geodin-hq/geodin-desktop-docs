@@ -1,6 +1,3 @@
----
-description: Text Macros and Variable Text
----
 
 <!--
 **Content status:** Auto-assembled from product documentation

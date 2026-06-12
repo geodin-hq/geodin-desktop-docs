@@ -1,6 +1,3 @@
----
-description: Ground Description Standards
----
 
 # Ground Description Standards
 

@@ -1,6 +1,3 @@
----
-description: Coordinate Systems and Projections
----
 
 <!--
 **Content status:** Auto-assembled from product documentation

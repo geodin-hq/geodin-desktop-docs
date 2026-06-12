@@ -45,9 +45,7 @@ For borehole log configuration details, see [Borehole Log Reports](borehole-log-
 
 ## Reference: Cross-section tool
 
-{% hint style="warning" %}
-The following reference content is from legacy product documentation. Verify against the current version of GeoDin.
-{% endhint %}
+<!-- Editorial flag: legacy-sourced reference content below — verify against current GeoDin (Goal 4) -->
 
 ### Starting a cross-section
 
