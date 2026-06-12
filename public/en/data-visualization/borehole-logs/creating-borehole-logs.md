@@ -64,11 +64,9 @@ Reality: Diameter of the borehole = D
 
 Maximum diameter of the casing/piezometers series = MaxR
 
-
 Presentation:
 
 The presentation is not possible because MaxR\*4 \> D
-
 
 The individual casing/piezometer series have to be displayed side by side, despite they are constructed staggered in reality. The relative borehole widening can solve the problem. <!-- src: help/05/1335 -->
 
@@ -110,13 +108,7 @@ The method to create graphs with complex graphic elements can be structured in t
 
 **1. Drawing the object frame**
 
-\
-Using the tool a object frame is drawn. The frame should be large enough to hold all the graphic elements. The selected frame is represented by 4 grey squares and 4 grey side lines. If not selected the frame is represented by 4 grey angles. The selection of the object frame as an active graphic element is done with the mouse in the boundary area of the frame or with the **Ctrl** key pressed at any place inside the frame.
-
-
 **2. Adding an element inside of the object frame**
-
-To draw a geological graphic element inside the object frame, you select the object frame and then the chosen tool from the symbol bar. The graphic element can only be drawn, placed and scaled inside the object frame. After insertion the graphic elements are shown as blue dashed markings and show the space that will be needed for presentation of the borehole data. Editing the geological graphic elements is equal to the editing of the elementary graphic elements.
 
 **3. Defining the featured object or objects at**
 
@@ -146,9 +138,7 @@ The element name is used mainly to identify the graphic elements of a GeoDin gra
 
 Display of the drawing layer, on which the graphic element is placed. Using the icon **In another layer** the graphic element can be moved in anther drawing layer. You find further information on drawing layers in the chapter [Drawing layer](../layouts/layout-editor-basics.md).
 
-**Arrangement in the fore- or background**\
-\
-Overlapping graphic elements are displayed in order of insertion into the graph. This order can be changed using the icons **Bring to front** and **Send to back**. If the graphic element is part of a group the arrangement is only changed inside the group, but the other elements of the graph are not affected. If necessary the group frame has to be moved in the fore- or background, to receive a change of the arrangement of the grouped elements relative to the rest of the graph. <!-- src: help/05/2260 -->
+ <!-- src: help/05/2260 -->
 
 ### Borehole log
 
@@ -168,15 +158,15 @@ The element name is used mainly to identify the graphic elements of a GeoDin gra
 
 Display of the drawing layer, on which the graphic element is placed. Using the icon **In another layer** the graphic element can be moved in anther drawing layer. You find further information on drawing layers in the chapter [Drawing layer](../layouts/layout-editor-basics.md).
 
-**Arrangement in the fore- or background**\
-\
-Overlapping graphic elements are displayed in order of insertion into the graph. This order can be changed using the icons **Bring to front** and **Send to back**. If the graphic element is part of a group the arrangement is only changed inside the group, but the other elements of the graph are not affected. If necessary the group frame has to be moved in the fore- or background, to receive a change of the arrangement of the grouped elements relative to the rest of the graph. <!-- src: help/05/2454 -->
+ <!-- src: help/05/2454 -->
 
 ### graphically
 
 Select if the borehole log should be drawn (otherwise only labels are displayed).
 
 The data presentation allows the presentation of borehole data in different country norms. For this [Standards](../../configuration/ground-description-standards.md) and fill patterns are necessary. Once entered borehole logs can this way be put out in the original language with the customary fill pattern, as well as in any foreign language with completely different fill patterns. In the mode \"Automatic\" the language and corresponding presentation norm of the data entry are used.
+
+The data presentation allows the presentation of borehole data in different country norms. For this [Standards](../../configuration/ground-description-standards.md) and fill patterns are necessary. Once entered borehole logs can this way be put out in the original language with the customary fill pattern, as well as in any foreign language with completely different fill patterns. In the mode "Automatic" the language and corresponding presentation norm of the data entry are used.
 
 Optionally the width of the profile can be selected -Automatic- or directly -Default-. <!-- src: help/05/3043 -->
 
@@ -266,8 +256,6 @@ If you use universal layouts that are built for multiple object types, this opti
 Using the option \[Join same layers\] adjacent layers in the borehole log or the borehole table can be unified to one layer, if the content of the selected data fields is identical. <!-- src: help/05/3286 -->
 
 ### Snap
-
-To make freehand constructions easier, especially while creating geological cross-sections, the snap function provides the exact connection of one graphic element to another. When creating new or moving existing ends, corners or nodal points, a point is dragged automatic to an existing end, corner or nodal point. The preset distance for searching points is adjustable. The snap function works independently of drawing layers and treats the graphic elements of all areas in the same manner. The snap function is activated and deactivated using the menu entry ***Preferences**\\**Snap*** or the shortcut **Ctrl+K**.
 
 The snap distance - that is the maximum distance, which cannot be exceeded for connecting one point automatically to another, can be adjusted between 1 and 50 mm. The selection of the distance is possible using the menu entry ***Preferences**\\**Snap preferences***.
 

@@ -99,3 +99,57 @@ PSD (Particle Size Distribution) layouts are pre-built and shipped with GeoDin. 
 {% endhint %}
 
 Template creation is documented comprehensively in the in-product **F1** guide, covering object frames, single vs. multiple frames, macros, and dynamic objects. <!-- src: transcript/reporting-exports#report-templates-layout-snippets -->
+
+### Create report (moved from Databases pages)
+
+&#x20;![Create report](../../.gitbook/assets/icons/create-report.png) **Create report**
+
+With the method **"Create Report"** at a database it is possible to fill a prefabricated text with data from a database by using special macro commands. The file format is odt (open documenttext). As the macro commands can be corrupted by other internal Office commands when saving the file, we recommend to use only one text processing program (Ms Word, Libre Office) when creating the report.
+
+At first you choose an odt source file. When reading the data the program gets the constants definitions and displays them in a dialogue. You must choose a target file to start this procress.
+
+All constants will be replaced when clicking the **Ok** button, then the layouts will be loaded and the appropriate elements will be replaced as well. Depending on the size of layout and data this process can take a long time.
+
+A protocol shows the changes and errors when finished. Until this very point all replacements were performed in internal steps. Once you apply the protocol with the **continue** button the target file is going to be written.
+
+You will find a demonstration, including prepared layouts, on our CD in the directory _**GeoDin**\\**DEMO**\GeoDin Beispiel Demodatenbank\\**AutoBerichtserstellung**_ for the sample database.
+
+Refers to a prefabricated GeoDin graphic or layout and delivers back the image from the graphic.
+
+\#GeoDin:getimage?layout= hydraulicheadquicksetting.GGF\&QLConfig1=TimeLineAxisRange+Param1=01.01.2002+Param2=31.12.2002#
+
+QLConfig1=TimeLineAxisRange defines parameters for quick settings of layouts. Possible modifications are TimeLineAxisRange, TimeLineLeftAxisParam, TimeLineRightAxisParam and Coordinates.
+
++Param1=01.01.2002+Param2=31.12.2002 is as the type of the quick setting of the layout and defines the parameters. For a time domain these are 2 parameters with particular dates.
+
+_**Note:**_ _There must be a place holder in the document already to set both scale and size of the image. Afterwards this place holder image will be replaced by the GeoDin image. Due to this the macro command getimage must be located above the place holder._
+
+Refers to a GeoDin image or layout as getimage does. The difference is the access on text elements within the graphic and their output. At this point a report element can be used as well. In this case the result will be the output of the first cell of the report.
+
+**Example of a frame query, this can be used for getimage too:**
+
+_#GeoDin:gettext?layout=hydraulicheadtexts.GGF\&Query1=year+Param1=01.01.2002+Param2=31.12.2002\&elementname=MaxValue#_
+
+elementname=MaxValue defines the element in the layout meant for analysis
+
++Param1=01.01.2002+Param2=31.12.2002 is as the name of the framework query and defines the parameters. For a time domain these are 2 parameters with particular dates.
+
+It is recommended to define as many text elements via a layout as possible, otherwise you have to load a new layout for each text element.
+
+This variant relates to calculations without a specific reference to the data. No database relations are necessary. Possible macros may look like this:
+
+You can use the date in the format DD,MM,YYYY. The macro mentioned above would give back the current year.
+
+Furthermore it is possible to set often occurring values during the creation of the report. This is done by defining constants. For example: if you have a report over a year with embedded graphics, in which the time axis is parameterised:
+
+_#GeoDin:getimage?layout=WasserstandSchnelleinstellung.GGF\&QLConfig1=TimeLineAxisRange+Param1=01.01.2002+Param2=31.12.2002#_
+
+For frequently use of the axis setting all setting parameters would have to be readjusted each year. But here it is possible to define constants, which are going to be specified while the document is loading. The macro looks like the following:
+
+_#GeoDin:getimage?layout=WasserstandSchnelleinstellung.GGF\&QLConfig1=TimeLineAxisRange+Param1=DateParam?StartDatum|+Param2=DateParam?EndDatum|#_
+
+_#GeoDin:getimage?layout=WasserstandSchnelleinstellung.GGF\&QLConfig1=TimeLineAxisRange+Param1=01.01.DateParam?Berichtsjahr|+Param2=31.12.DateParam?Berichtsjahr|#_
+
+Replacements from get-commands can be highlighted, if successful in green, otherwise red. For this reason you have to validate these reports manually after an automated setting. The commands for gettext and getmacro can be deleted from the target text by using the button **delete successfully replaced command from the text**.
+
+Replacements of constants cannot be highlighted in a special way because they can also be part of macro commands (see example).

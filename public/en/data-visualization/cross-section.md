@@ -3,4 +3,3 @@ hidden: true
 ---
 
 # Cross - Section
-

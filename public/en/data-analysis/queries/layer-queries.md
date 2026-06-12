@@ -36,7 +36,6 @@ For layer queries in GeoDin two different methods are available:
 2. Query several layer properties in one step to classify or generalize all layers or create sequences of predefined layers of the selected boreholes.
 
 While the first method can be done without further preparation, for the second method a layer query definition is required.
-
 ### Query individual layer properties
 
 Querying a single layer characteristic with the goal of finding all boreholes that meet this characteristic is the simplest form of layer query and will be demonstrated with the following example.
@@ -78,7 +77,6 @@ After the codes have been defined, enter a name for the query result, e.g. "bore
 Start the query by clicking **Proceed**. Now, all locations will be queried. After the search is completed, a message window appears, displaying the internal ID of the query and information about the query. In the object query "boreholes lower cretacious" in the GeoDin object manager, all locations can be found in which the field stratigraphy contains the codes for the lower cretacious. All methods normally available to edit the query or the boreholes are available here.
 
 GeoDin stores the results of a layer query in the current database. Each query executed is assigned a unique ID. To manage layer queries, the [Layer query manager](complex-layer-queries.md) is available.
-
 ### Complex layer queries
 
 Querying multiple layer characteristics simultaneously with the goal of classifying layers is much more complex than querying a single characteristic and requires a series of preparations.
@@ -112,7 +110,6 @@ o Type of the possible or desired sub-layers of the investigated layer
 9. Results can be displayed as a borehole graphic
 10. The borehole column can be labeled with the results of the classification
 11. The query result can be stored in the database
-
 ### Organisation
 
 A layer query definition file (file extension \*.GLQ) is a collection of of the single definition conditions, layer classifications, layer packages, layer package sequences and execution options. It is possible to create and use any number of layer query definition files. Under the system tab of GeoDin new definition files can be created and existing files can edited and deleted.
@@ -126,7 +123,6 @@ With the button **Add** any number of folders can be added:
 Now all layer query definition files from the added folder are displayed in the object manager:
 
 The search pathes are a local setting at the work station of the user. For this reason each user of the GeoDin system may have an own search path list.
-
 ### Preview
 
 In the [Layer data](../../navigating-the-geodin-workspace/concepts/layer-and-stratigraphy.md) in the method **"Data management"**, a preview of the layer queries is available. It can be opened with the  ![Layer queries](../../.gitbook/assets/icons/layer-queries.png) **Layer queries** button:
@@ -140,7 +136,6 @@ In the _**Result**_ window, the according text is displayed. Here, the layer cla
 If the current layer is a main layer and contains sublayers, the layer classifications and single conditions for all sublayers are listed also.
 
 With the buttons **Previous** and **Next** it is possible to page through the layers without leaving the preview. With the button **To layer**, it is possible to go directly to the layer currently in the preview. With the **Close** button, the view goes back the layer in which the preview was opened.
-
 ### Data checks and calculations
 
 The method [Data checks and calculations](../calculation-engine/data-checks-and-validations.md) is available to query a group of boreholes for layer properties. The query result can be used to make the data available at a query result in the GeoDin Object manager or to select boreholes for more detailed analysis.
@@ -176,7 +171,6 @@ LOCTYPE Wrong object type. The object cannot be queried, as it is of a location 
 PREPERR Calculation error. During the calculation of characteristics or the conditions of a layer classification, an error occurred. The reasons may be a syntactically incorrect definition of a condition for a layer classification, wrong identifiers for variables, or a division by zero when numerical values are calculated.
 
 DUPLIDS Ambiguous layer classifications. One layer meets the conditions of different classifications, making an unambiguous classification impossible. Whether this is an error is dependent on the aims of the layer classification. Depending on how the query results are used, it may be necessary to refine the layer query definition further.
-
 ### Results
 
 The results of a layer classification are saved in the current database in the following tables:
@@ -250,7 +244,6 @@ If the classification uses a formula, the result is stored in this field. If the
 Data field **RES\_ERR**
 
 If a layer is classified as belonging to several different classes, the Field RES\_ERR contains a 1 instead of a 0.
-
 ### Layer query manager
 
 The layer query manager provides an overview over all layer queries run in the database or project and is avaiable at the **Objects** branch.
@@ -266,7 +259,6 @@ The symbol "No query definition" shows that the file of the layer query definiti
 The symbol "Query result partly deleted" shows that some parts in the current database have been deleted (through direct access to the database). It is recommended to delete this query.
 
 By the help of the button **Delete** a query result is removed from the database. All data sets with the appropriate query-ID are going to be removed from the tables of the GLQ pool. An eventually automatically created object query is deleted at the same time. Due to the large amount of data you should delete the layer query results from the database if there is no need any longer.
-
 ### Layer query definition
 
 A list of all available layer query definitions contains the node **Layer queries**.These can be edited with the method **"Edit layer queries"**:
@@ -276,11 +268,9 @@ A layer query definition is made up of the two sections _**Definitions**_ and _*
 **Example:**
 
 The individual conditions "Search for sand" and "Search for clay" are set in the section _**Definitions**_, as well as the layer order "Sand" and "clay" which is based on those definitions. In the **Processing options** section a classification is then created with the name "Graphic display of sand and clay layers", which encompasses both conditions and is used for presentation with the appropriate fill patterns.
-
 ### Definitions
 
 The fundamental determination of search criteria (single conditions), conditions for the layer classifications, layer packages and layer packages sequences are done in the branch definitions. By the help of these definitions the later operations to be carried out can be set. A layer query definition must contain at least a single condition and layer classification, whilst the other definitions are optional.
-
 ### Single conditions
 
 Here you can manage the single conditions of the definition of the layer query. The specification of complex properties is often easier if you duplicate a single condition (with a later change of name and code to be searched).
@@ -318,7 +308,6 @@ Using this icon the list can be edited without actualization. Editing the list c
 **Double-click an entry of the list**
 
 Closes the list and changes in the tree view of the object properties to the particular entry, so that its properties can be edited.
-
 ### Layer classification
 
 Here you can manage the layer classifications of the definition of the layer query. The specification of complex properties is often easier if you duplicate a layer classification (with a later change of name and condition).
@@ -356,7 +345,6 @@ Using this icon the list can be edited without actualization. Editing the list c
 **Double-click an entry of the list**
 
 Closes the list and changes in the tree view of the object properties to the particular entry, so that its properties can be edited.
-
 ### Layer types
 
 Besides the fulfilment of the logical condition the layers to be analysed can be restricted.
@@ -414,7 +402,6 @@ If all of the layer classifications from a sub layer are marked with TRUE, they 
 **Sub layers m u s t n o t fulfill the layer classifications listed below**
 
 The list is to exclude layer classification of sub layers. It will result in 'TRUE' if the sub layer does not fulfill any layer classification.
-
 ### New layer query
 
 To create a new layer query definition choose the **System** tab and the method " ![New layer query](../../.gitbook/assets/icons/new-layer-query.png) **New layer query**":
@@ -428,7 +415,6 @@ _**Note:**_ _Once the object type and fill pattern file have been defined for a 
 After confirming with **OK** the folder must be selected and a file name given. The new query file will be shown in the GeoDin object manager and if necessary the folder will be automatically added to the search path list.
 
 The editor fort he layer query definition is also started automatically for editing.
-
 ### Delete layer query
 
 To delete a layer query definition file use the method "**Delete layer query"**:
@@ -438,7 +424,6 @@ If a layer query definition is already running this method cannot be used.
 After a check the appriopriate file will be deleted.
 
 In a network environment with password protected GeoDin System tab it is impossible to delete layer query files from the default folder QUERYDEF (except by using the correct password). Therefore this method is only shown when working on self-created layer query files.
-
 ### Layer packets
 
 Here you can manage the layer packages of the layer's query definition. In most of the cases duplicating a layer package (with a later change of name and the condition) makes it easier to set the complex properties.
@@ -476,7 +461,6 @@ Using this icon the list can be edited without actualization. Editing the list c
 **Double-click an entry of the list**
 
 Closes the list and changes in the tree view of the object properties to the particular entry, so that its properties can be edited.
-
 ### Layer packet
 
 By setting layer packages and executing a generalisation afterwards, the following questions can be answered:
@@ -493,7 +477,6 @@ After setting the classifications of the layers for the search for fine sand, co
 The search for layers or layer packages with a given minimum layer thickness is useful for exploration reasons to identify the drillings, which fulfil certain minimum conditions of the wanted material.
 
 At first a layer package is defined by a unique name and a list of ID's of layer classifications. The list in the lower section of the dialogue field gives an overview of the available layer classifications. You can sort the list on names or ID's by clicking on the column header. A layer package can be defined by a single ID of a layer classification, e.g. to execute a generalisation by setting another exclusion of intermediate layers.
-
 ### Layer packet sequence
 
 Here you can manage the layer package sequences of the definition of the layer query. The specification of complex properties is often easier if you duplicate a layer package sequence (with a latter change of name and condition).
@@ -535,7 +518,6 @@ Closes the list and changes in the tree view of the object properties to the par
 ***
 
 ## Reference: Additional Query Options
-
 ### Search position (code hierarchy)
 
 When using structured dictionaries (e.g. SEP 3) that contain hierarchical code descriptions, the search can optionally be restricted to a specific position in the hierarchy:

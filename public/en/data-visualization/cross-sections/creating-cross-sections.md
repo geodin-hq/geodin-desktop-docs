@@ -4,16 +4,6 @@ description: Creating Cross Sections
 
 # Creating Cross Sections
 
-### Presentation options
-
-If you choose the presentation type bar or curve for the series of a data sequence graph, you have the option to interrupt the bar or curve, if it is known, that sections exist, in which samples were not taken continuously, and the bar or curve leads to the impression that measured values are available. Here giving the length of the section, from which the section is not examined, is necessary.
-
-The chosen setting is valid for all series of the diagram and does therefore not have to be selected for each individual series. Besides this general setting you have also the possibility to select this option separately for each series.
-
-For this see also:
-
-[bar / curve](../layouts/measurement-value-graphics.md)
-
 ### Undo
 
 Here the maximum number of steps and the maximum of memory available for the function **Undo changes** are selected.
@@ -21,20 +11,15 @@ Here the maximum number of steps and the maximum of memory available for the fun
 The actual capacity of memory is indicated. If large cross-section graphics are created often and sufficient PC-RAM is available, the maximum available memory should be greatly increased.
 
 _**Note:**_ _If 0 is chosen as maximum number of steps, the undo function is deactivated._
-
 ### Show filters
 
 If an existing well design is added to a groundwater measurement place, this option can be used to add the presentation of the filter length in the borehole cross-section.
-
 ### Snap
-
-To make freehand constructions easier, especially while creating geological cross-sections, the snap function provides the exact connection of one graphic element to another. When creating new or moving existing ends, corners or nodal points, a point is dragged automatic to an existing end, corner or nodal point. The preset distance for searching points is adjustable. The snap function works independently of drawing layers and treats the graphic elements of all areas in the same manner. The snap function is activated and deactivated using the menu entry _**Preferences**\\**Snap**_ or the shortcut **Ctrl+K**.
 
 The snap distance - that is the maximum distance, which cannot be exceeded for connecting one point automatically to another, can be adjusted between 1 and 50 mm. The selection of the distance is possible using the menu entry _**Preferences**\\**Snap preferences**_.
 
 Graphic elements, with nodes that are influenced by the snap function are:\
 line, rectangle, polyline and borehole profile.
-
 ### Import layer boundaries
 
 For the import of layer boundaries in GeoDin the menu function _**File**\\**Import**\\**Layer boundaries**_ is available. For this an existing profile cross-section in the current graph is required.
@@ -63,7 +48,6 @@ _**Attention:**_ _The coordinate systems used in the section and the import file
 The polyline resulting from the file is shown in the left preview, so that a control with the real line of section is possible. The elevation values of coordinates, which do not match exactly with the line of section, are projected perpendicular on the line of section.
 
 The icon **Add layer boundary** transfers polylines in the graph. Without leaving the dialogue, more layer boundaries can be imported.
-
 ### Line types
 
 Select here the line type for the separating lines between the subsections of the interbedding.
@@ -71,76 +55,6 @@ Select here the line type for the separating lines between the subsections of th
 A line or outline is displayed in the chosen Color and Line type. To select a color, which is not available in the drop down menu, click in the list on the first entry **"Individually"**. In the color dialogue you can adjust a new color.
 
 The line thickness can be chosen in mm or pixels. The selection should be done in mm by preference. In this case the thickness of the lines in the preview is not equal to the print output and not depending on the used print resolution. The selection of a line thickness in pixels is only suitable for graphs, which are only viewed on the screen.
-
-### Cross-section
-
-The tool for the creation of profile cross-sections automatically places geologic objects in the graphics at a pre-defined scale. The line of section can be defined using the mouse. In a cross-section, different scenarios can be created for the presentation and combination of borehole logs, well design plans etc.
-
-Creating a profile cross-section consists of several steps:
-
-1. Selection of boreholes for the presentation in the site plan
-2. Defining the line of section
-3. Selection of an appropriate horizontal and vertical scale and the correct position on the paper
-4. adapting the presentation parameters for borehole logs, well design, cone penetration tests etc.
-
-The construction of a cross-section can be started by different methods:
-
-1\) Start at a query or group of objects
-
-By double-clicking on the method icon  ![Cross-section](../../.gitbook/assets/icons/cross-section.png) **Cross-section**:
-
-the graphic window is opened, the cross-section is started and all objects of the query are loaded into the site plan view of the cross-section.
-
-2\) Start at the menu _**Extras**\\**Cross-Section**_ in the graphic window
-
-This will start the cross-section without objects bein added automatically. Objects can be added manually to the site plan or list of objects by drag & drop into the window \<Cross-section Objects>.
-
-\
-3\) Navigate the to the branch "Cross-section" in the properties of the current graphic.
-
-There, the desired cross-section can be selected. By clicking the **Start** button, the property branches to create and modify cross-sections are made available.
-
-**Graphic elements of a cross-section**
-
-The graphic elements of the profile cross-section are stored in special drawing layers. Editing these graphic elements is possible only by changing the properties in the cross-section. It is not possible to select the elements with the mouse. To manipulate the elements individually, the cross-section elements must be written into standard graphic layers with the function **"Break up cross-section"**. Each object is written into a special layer. These layers are shown in the layer list with a cross-section symbol, they can not be edited, but it is possible to select whether a layer is displayed or not.
-
-All setting made in the cross-section, like defining the line of section, changing the scale or the display properties of an scenario is visible immediately. The changes in the display properties are automatically made for all suitable objects.
-
-**Start and Close**
-
-To start or resume work on a cross-section (and thus the contained graphics elements), the switch **Start** is used. The branches for selecting objects, defining the line of section, setting the scales and for changing the cross-section scenarios are displayed. The \<Close> switch ends editing the cross-section and the branches with the settings are hidden.
-
-**Refresh cross-section**
-
-With this button, the objects in the cross-section are read again from the database and the cross-section is refreshed. This option can be used to transfer changes made to the data in the database to the cross-section.
-
-**Options**
-
-Define here in which way the objects in the cross-section are stored in the cross-section graphic.
-
-1. Save object data in the cross section graphic
-
-Use this option to save the borehole data / object data in the graphic file. Changes in the data for these boreholes will have no effect on the displayed graphic when opening the file again (static cross section).
-
-The cross section can be modified later, a connection to the database in which the object data is stored is not necessary. To edit this graphic at another PC, a connection to the GeoDin database is not necessary. (This option is not available if the cross section contains elements which require a database connection, for example measurement values in a data sequence)
-
-1. Save object link in the cross section graphic
-
-Use this option to save only a link to the borehole data / object data in the graphic file. Changes in the data for these boreholes will be effective when opening the graphic file again (dynamic cross section).
-
-To edit the cross section graphic, a connection to the current database is necessary. Without this database, the graphic can not be displayed. If possible, save the file in the documents branch of the current database. This way it is assured that database access to borehole data / object data is available when opening the cross section graphic. For editing at another computer, exchange the database (with the included cross section graphic).
-
-**Break up cross-section**
-
-If it is necessary to edit the individual graphic elements of a cross-section, the cross-section can be dissolved with the **Break up cross-section** switch. Then, the graphic elements and layers are unlocked and the individual elements can be selected and edited normally.
-
-_**Attention:**_ _The link to the cross-section is lost and can not be restored if the cross-section is dissolved. It is then no longer possible to edit the display general properties for the element, or set the scales of the cross-section. The objects loaded and the line of section are removed from the current cross-section._
-
-**Drawing order**
-
-The entire cross-section can be moved as a whole to the fore- or background relative to the other objects.
-
-With the buttons **Visible** and **Invisible**, the drawing layers of the current cross section are made invisible with a single click. This can be used to remove the cross-section temporarily from the graphic.
 
 ### Objects
 
@@ -169,7 +83,6 @@ If the boreholes are located on the _\[southern hemisphere]_ (Y coordinate incre
 It is possible to multiply the object coordinates with a selectable factor, if necessary.
 
 Changing between the different parts of the cross-section (objects, line of section, scales, and cross-section scenarios) is possible by directly clicking on the branch in the object properties window, or by using the buttons in the upper right of the window.
-
 ### Line of section
 
 By selecting the branch _**Line of section**_ at a cross-section, the window 'Cross-section: Line of section' opens. The window is freely scalable and stays visible until another branch in the object properties tree is selected or the window is closed.
@@ -203,29 +116,6 @@ END
 It is possible to load the nodal points from an existing line of section with the **Load line of section** function, if the nodal points are stored in LIN format. This way lines of section from other programs can be imported.
 
 Changing between the different parts of the cross-section (objects, line of section, scales, and cross-section scenarios) is possible by directly clicking on the branch in the object properties window, or by using the buttons in the upper right of the window.
-
-### Scales
-
-Here, the desired horizontal and vertical scales of the cross-section can be defined.
-
-If the option -Automatic page layout- is active, a suitable paper size is selected automatically. This way, the manual adaption of the page size in the \<Page layout> branch of the graphic properties is not necessary.
-
-The position of the cross-section, measured from the upper left corner, can be set in the fields "Position X:" and "Position Y:". The position is also taken into account to calculate the necessary paper size.
-
-It is possible to select different vertical scales for the ground elevation and for the borehole profiles. This is especially helpful in cases were the differences in elevation are large relative to the borehole depth. Otherwise, a reasonable scale for the start elevation would lead to a too small print of the borehole profiles.
-
-**Printing scales in text elements**
-
-The scales used in the cross-section can be written automatically in existing text elements. If a layout contains text elements with the content
-
-$%SectionHorizontalScale$ (Horizontal scale of the cross-section)
-
-or
-
-$%SectionVerticalScale$ (Vertical scale of the cross-section)
-
-the text will be replaced with the corresponding value for the scale. This way, any scale specifications in prepared layouts can be done automatically and do not need to be changed manually.
-
 ### Cross-section scenarios
 
 Detailled scenarios can be created, loaded and saved.
@@ -262,7 +152,6 @@ Cross-section scenes can be loaded and saved independent from boreholes as files
 To save a scenario click **Save** The scenario will be saved in the selected folder with the file format \*.gsz.
 
 With the button **Load** you can load a saved scenario to use it on another cross-section.
-
 ### Cross section scene
 
 For each scene a name can be chosen and the defined wether it schould be displayed in the graphic or not.
@@ -288,7 +177,6 @@ For variable text elements the alignment (section alignment in the properties of
 **Using scenes**
 
 Select here, if the scene should be applied on selected objects (default all objects) of the cross-section or only the first object from the left and the right. The last option is designed especially for scale bars, which usually should only appear on the outside of the cross-section. The individual settings can be done under [Objects to display](creating-cross-sections.md).
-
 ### Column properties
 
 **Creating columns**
@@ -369,10 +257,4 @@ With the help of the cross-section scenario 'Distance ruler' additional labellin
 
 The ruler starts at the position of the first cross-section object and ends at the last object on the right. The relative position of the start and end points can be defined using the two 'Position' entry fields.
 
-### Horizontal scale
-
-The scenario 'Horizontal scale' creates a horizontal scale bar in a cross-section:
-
-By defining the 'minimum width' you can set the horizontal extent for the scale bar. Depending on the coordinate range for the cross-section, a horizontal scale bar will be created with rounded divisions, hence the minimum width settings may have a limited affect.
-
-The postioning options allow you to place the horizontal scale bar to your requirements.
+Shared reference content for this area lives in [Cross Section Layouts](cross-section-layouts.md).

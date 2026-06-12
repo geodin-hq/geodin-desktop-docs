@@ -41,3 +41,12 @@ You can also use object types from other GeoDin installations or a shared **SYSL
 
 <div align="center"><figure><img src="../../.gitbook/assets/image (46).png" alt=""><figcaption></figcaption></figure></div>
 
+### Update object types (moved from Databases pages)
+
+If newer object type definitions are available in the system than in the database, the database structure can be updated here.
+
+In this step, formulas can be executed again. For this, all object types in the database must be updated.
+
+1. Execute formulas activated, all formulas are recalculated.
+
+Existing data is never deleted, even if fields no longer exist in the target structure.

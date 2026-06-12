@@ -10,12 +10,6 @@ A project may contain up to 9998 objects or boreholes. Because the number of pro
 
 A object may be defined in the GeoDin system as an object that has at least a name and is related to a project. Objects can be boreholes, monitoring wells, cone testing holes as well as climate measuring stations, surface water collection points etc.
 
-Each object must be defined by general data containing information like its name and where present its coordinates. Depending upon the type of object further information may then be entered and displayed, for example a borehole log, CPT results, a groundwater monitoring well. There are over 100 different types of objects ("Object types\*\*"\*\*) in GeoDin, which cover all types of data collection and presentation.
-
-The default installation provides the user a set of object types, depending on the language version. Further object types can be installed from the CD. For example all German geological survey organizations (Geologische Landesämter) have their own input masks for which special syntax controls have been defined. Other international standards are supported (e.g. BS5930, NEN, ÖNORM) as well as specific national standards (e.g. Dept. of Geological Survey, Botswana). A project may contain several different types of objects as long as these are installed in the GeoDin-System folder. In addition there are controls to allow or to prevent the creation of certain types of objects (e.g. read only).
-
-The difference between a measurement point and a object is that the former cannot be created directly - a measurement point is part of a object. For example a measurement point could be a point at which groundwater levels, groundwater or sediment chemistry values are recorded. In each case GeoDin will generate the measurement point automatically, when either a filter or a sampling point is defined. In special object types, like climate measuring stations, the measurement point is generated, when the object is defined.
-
 In the GeoDin object manager a project is always subdivided into objects and measurement points. Both categories may be further subdivided depending on what data is to be collected. As a user you cannot alter this arrangement, because each subdivision is automatically generated.
 
 Datenbases

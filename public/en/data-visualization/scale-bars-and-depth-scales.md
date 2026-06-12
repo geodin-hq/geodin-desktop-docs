@@ -26,9 +26,7 @@ The element name is used mainly to identify the graphic elements of a GeoDin gra
 
 Display of the drawing layer, on which the graphic element is placed. Using the icon **In another layer** the graphic element can be moved in anther drawing layer. You find further information on drawing layers in the chapter [Drawing layer](layouts/layout-editor-basics.md).
 
-**Arrangement in the fore- or background**\
-\
-Overlapping graphic elements are displayed in order of insertion into the graph. This order can be changed using the icons **Bring to front** and **Send to back**. If the graphic element is part of a group the arrangement is only changed inside the group, but the other elements of the graph are not affected. If necessary the group frame has to be moved in the fore- or background, to receive a change of the arrangement of the grouped elements relative to the rest of the graph. <!-- src: help/05/39 -->
+ <!-- src: help/05/39 -->
 
 ### Scale
 
@@ -107,11 +105,9 @@ Reality: Diameter of the borehole = D
 
 Maximum diameter of the casing/piezometers series = MaxR
 
-
 Presentation:
 
 The presentation is not possible because MaxR\*4 \> D
-
 
 The individual casing/piezometer series have to be displayed side by side, despite they are constructed staggered in reality. The relative borehole widening can solve the problem. <!-- src: help/05/1335 -->
 

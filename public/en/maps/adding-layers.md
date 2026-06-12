@@ -56,6 +56,9 @@ Vis the context mneu you can access **Presentation options** for the layer.
 
 _Attach presentation to document source_
 
+The order of the layers can be simply changed by \"drag and drop\".
+
+*Attach presentation to document source* <!-- src: help/MP/5938 -->
 ### Selection properties
 
 **Select in**
@@ -72,12 +75,14 @@ Here, the color for outlining and filling the selected objects can be set.
 
 Select this option to mark a selection only with a coloured outline. If this option is not selected, the selected objects are colored transparently in the color selected above. This makes objects easy to recognize, but sometimes hides objects in the background.
 
+Select this option to mark a selection only with a coloured outline. If this option is not selected, the selected objects are colored transparently in the color selected above. This makes objects easy to recognize, but sometimes hides objects in the background. <!-- src: help/MP/7484 -->
 ### Settings
 
 **Description**
 
 The tabs **Layer** and **Section** are available for both vector and raster layers. Here, you can find general information and make some basic settings for the visualisation. Depending on the map size and the performance of the computer hardware, the display settings can be optimized.
 
+The tabs **Layer** and **Section** are available for both vector and raster layers. Here, you can find general information and make some basic settings for the visualisation. Depending on the map size and the performance of the computer hardware, the display settings can be optimized. <!-- src: help/MP/7854 -->
 ### Vector
 
 **Vector dialog box**
@@ -92,7 +97,6 @@ The _Vector_ dialog box is the layer property dialog box for the vector type lay
 6. _Marker tab_ - appears only if the layer supports point or multipoint type shapes
 7. _Label tab_
 8. _Chart tab_
-
 ### pixel
 
 The **Raster** dialog box is the layer property dialog box for the raster type layers (images, grids). It consists of 3 settings tabs :
@@ -102,6 +106,7 @@ The **Raster** dialog box is the layer property dialog box for the raster type l
 3. _Pixel tab_ - appears if the layer was not recognized as a grid layer.
 4. _Grid tab_ - appears only when the layer was recognized as a grid layer.
 
+4.  *Grid tab* - appears only when the layer was recognized as a grid layer. <!-- src: help/MP/7920 -->
 ### Creating a new map
 
 A GeoDin Map is made up of several individual map themes. The combination of layers, their settings, the order in the map and the general map settings are all saved in a map: hence a map is a kind of container.
@@ -137,15 +142,21 @@ To add a new layer, simply drag & drop a node from the GeoDin Object Manager (GO
 **Deleting layers**\
 The context menu for a layer has an option for deleting the layer.
 
+4\. In the \<Add document\> dialogue window select the radio button -Create document- and then click on the new file icon and choose \"**Embedded GIS map\"** from the list and confirm by clicking the blue tick icon. This is referred to as \"Step 1\" at the top of the \<Add document\> window.
+
+6\. In this dialogue window (\"Step 2\") the available document descriptions in your GeoDin installation are shown in the top panel. The correct document type for a map is \"(DOC) GeoDin map\" which should be selected from the \<Chose document description type\> panel. If it is not visible (i.e. not available for your GeoDin installation) you must first install it by clicking the **\<**[Register document descriptions](../navigating-the-geodin-workspace/documents/document-organization.md)**\>** button.
+
+7\. Once installed and registered select the document type \"(DOC) GeoDin map\" from the top panel of the \<Add document\> window (i.e. \"Step 2\").
+
+8\. Step 3 involves completing the description for the map document (content and comments). This data may also be entered later if required. Note that that the type of meta data that can be entered here depends on the document type selected. Be sure to have chosen \"(DOC) GeoDin map\" and not older document description types such as (EDC) or (ADC) etc. The newer DOC types are multilingual.
+
+In a GeoDin Map you may display documents from the \"Document management\" (e.g. shapes, grid data) or GeoDin objects (e.g. boreholes and measurement points).
+
+**Deleting layers**\
+The context menu for a layer has an option for deleting the layer. <!-- src: help/MP/7921 -->
 ### Adding map data to the document management
 
 Preparing GIS data for GeoDin Maps is covered in [Getting Started with Maps](getting-started-with-maps.md).
-
-### Add WebTileLayer
-
-Here you can add "Web Tile" layers or "Web Map Tile Service" layers (WMTS) .
-
-Simply choose from the layers offered **Add layer**.
 
 ### Contour lines
 
@@ -178,3 +189,9 @@ The column created in the attribute table (see above) receives the column name e
 Start the calculation with this button and get a first overview in the preview window.
 
 Save the result in Shape format, (\*.shp), Geography Markup Language (\*.gml), MapInfo File (\*.mif), Keyhole Markup Language (\*.km) or JavaScript Object Notation (\*.json). After saving, you will be asked whether the saved file should be transferred to the map and displayed. If you want this, confirm with  ![Yes](../.gitbook/assets/icons/yes.png) **\<Yes>.**
+
+The **\"Contour lines\"** method is available for layers of type *Grid* (\*.grd).
+
+Save the result in Shape format, (\*.shp), Geography Markup Language (\*.gml), MapInfo File (\*.mif), Keyhole Markup Language (\*.km) or JavaScript Object Notation (\*.json). After saving, you will be asked whether the saved file should be transferred to the map and displayed. If you want this, confirm with **\<Yes\>.** <!-- src: help/MP/10934 -->
+
+Shared reference content for this area lives in [WMS and Web Tile Layers](wms-and-web-tile-layers.md).

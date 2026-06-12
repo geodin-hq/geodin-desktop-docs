@@ -132,8 +132,6 @@ USER 3 USERSGN3
 
 USER 4 USERSGN4
 
-***Note:*** *The installation of the GeoDin system does not contain all of the signature tables listed above, as there are no defaults for tables USERSGN1 to USERSGN4, for example. If this is the case, the error message \"File \...GeoDin\\SYSLIB\\USERSGN1.SGN does not exist\" appears when the corresponding standard is selected. To create a signature table USERSGN1.SGN, for example, copy one of the files in the SOURCE folder, e.g. the file DIN4023.SGA, to the name USERSGN1.SGA. The signature table now appears in the Object Manager below the signatures and can be opened using the* ***\"Edit\"*** *method. Select the* ***Create*** *button. The file USERSGN1.SGN is created.*
-
 **Example:**
 
 For the key \*M (metamorphite) in the dictionary \"(SSG) Petrography\", the translation \"METAMORPHIC ROCK\" was entered for the language \"English\". In addition, the corresponding signature from the INTENG signature table was entered:

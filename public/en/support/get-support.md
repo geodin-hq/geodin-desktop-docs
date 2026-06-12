@@ -19,4 +19,3 @@ You can also contact us directly at:&#x20;
 support@geodin.com
 
 Our support team will assist with technical questions and product-related issues.
-

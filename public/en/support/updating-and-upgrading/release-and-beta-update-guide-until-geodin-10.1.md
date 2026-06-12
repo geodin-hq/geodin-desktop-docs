@@ -39,4 +39,3 @@ Steps:
 2. Unpack the downloaded ZIP archive.
 3. Replace the existing `geodin.exe` file in the **BIN** directory of your GeoDin installation with the new one.\
    &#xNAN;_(Tip: Rename or move the existing file beforehand for backup purposes.)_
-
