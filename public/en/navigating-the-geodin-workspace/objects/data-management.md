@@ -6,6 +6,8 @@ description: Data Management — the central method for entering general, layer,
 
 The **Data Management** method is the central interface for entering and editing data for an object (borehole, sample point, monitoring well). It presents the available data tabs based on the object type, and is launched by double-clicking the **Data management** method icon on a selected object.
 
+## Reference: Data tabs
+
 Typical tabs include:
 
 - [General Data](general-data.md) — identifying information, coordinates, project association
