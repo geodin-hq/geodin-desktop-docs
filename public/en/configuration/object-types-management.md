@@ -1,6 +1,8 @@
 
 # Object Types Management
 
+## Managing object types
+
 ### Object types
 
 The default setting installs only a limited number of object types. The international English version installs the "General Borehole Log". You will find this under the **System** tab.
@@ -13,7 +15,7 @@ The installed object types are shown in the directory **Configuration**.
 
 To install further types double-click the [Install](../installation/express-installation.md) method and choose the appropriate folder from the chosen directory on the GeoDin DVD.
 
-**Downward compatibility as of GeoDin 9**
+#### Downward compatibility as of GeoDin 9
 
 Please note that databases created with GeoDin 9 can only be opened with GeoDin 9 and 8.4. Databases created with GeoDin version 8.3 or older must be updated once to the new database structure. When opening an older database in GeoDin 8.4 or higher, a window appears in which you are shown the changes to be made and can agree to the process. The database can now only be used with GeoDin 8.4 or higher.
 
@@ -117,7 +119,7 @@ When converting to SEP3, it must be taken into account from the outset that cert
 
 An object conversion consists of three components:
 
-**SettingsAllow incomplete conversion**
+#### SettingsAllow incomplete conversion
 
 The conversion is based on an error analysis and the correction of constructs of the coding. If a construct cannot be corrected, the translation of a layer is incomplete. The option decides whether the incomplete translation should be used. If the option is activated, the translated content, which was determined until the unresolved error occurred, is entered into the layer.
 
@@ -125,7 +127,7 @@ If necessary, this results in a layer description with incomplete content. In th
 
 If the option is deactivated, the corresponding SEP3 field remains empty. In this way, you have a very quick overview of where corrections need to be made.
 
-**Correct main rock**
+#### Correct main rock
 
 In special cases (merging of SEP1 descriptions from different resolved table columns) secondary rocks can be used as capital letters. If necessary, secondary rocks may also occur in the main rock section (before the semicolon). These errors can be corrected, provided that the dictionary S3PETRO : UPPER is defined with corresponding entries in the layer data transformation.
 
@@ -133,7 +135,7 @@ In special cases (merging of SEP1 descriptions from different resolved table col
 
 fS;mS,kf becomes fS;ms,kf
 
-**General data transformation**
+#### General data transformation
 
 In general, all fields with the same name and type are transferred from SEP1 to SEP3. No changes are made to the content.
 
@@ -145,7 +147,7 @@ It can be specified that an entry is only accepted if the target field is empty.
 
 A default value can be specified that is entered if no content is available in the input field (source).
 
-**Layer data transformation**
+#### Layer data transformation
 
 Several translations of contents can be defined for the individual fields of the layer descriptions. The individual translations differ according to the types of incoming information.
 
@@ -169,6 +171,10 @@ KLAR
 
 Exchange of plaintexts by keys corresponding to the content.
 
+***
+
+## Data types and parameters
+
 ### Edit parameter
 
 The core technology of data types is the organization and management of parameters. There is no limit to the number of parameters for each data type, though by large numbers the data model (SDM and LDM, see [Data model](../navigating-the-geodin-workspace/data-types.md)) is an important consideration.
@@ -179,11 +185,11 @@ A new parameter can be added to the currently selected parameter group.
 
 Long name of the parameter, can be of 140 characters.
 
-**Short name/field name**
+#### Short name/field name
 
 Short name of the parameter (max. 10 characters), labelling a table's column in SDM; must not contain blank and special characters; must not begin with a number; must be valid inside the data type.
 
-**Type**
+#### Type
 
 Text (characters/string)
 
@@ -199,7 +205,7 @@ Timestamp (date/time)
 
 Memo
 
-**Field length**
+#### Field length
 
 This setting defines which field type should be used in the database.
 
@@ -215,17 +221,17 @@ Double 20
 
 The field length for memo and date/time fields is set by the system.
 
-**Decimal places**
+#### Decimal places
 
 Decimal places are adjustable for Double (float) and with the _**Field format**_ only. The maximum is 10 and must be at least 2 places smaller than the field length.
 
-**Field format**
+#### Field format
 
 The number of entered decimal places can be changed here once again. Enter the total field length and the number of decimal places in the format _\[fieldlength.decimalplaces]._ The number of digits before the decimal point is then calculated from the total field length, minus the digits after the decimal point and minus the one digit for the decimal separator.
 
 **Example:** 3.1 for a single-figure number, a decimal mark and one decimal place (total length of the field=1 place for the single-figure numer + 1 place for the decimal mark + 1 place for the one decimal places).
 
-**Allow negative values**
+#### Allow negative values
 
 The parameter can consist of negative values (example: redox potential). In case of concentrations negative values represent data below the limit of detection, this option must not be used for this.
 
@@ -235,7 +241,7 @@ This option is not available for integer types.
 
 no restrictions for entering a scale unit (max. 40 characters); optional
 
-**dyn scale unit**
+#### dyn scale unit
 
 This is a scale unit, which can be used for metric (meter, centimeter etc.) or english (feet, inch etc.) values.
 
@@ -287,7 +293,7 @@ This option can be used for parameters meant to accept the triggering data type 
 
 This option can be used for parameters meant to accept the triggering parameter of an **Event** as data content during a regression analysis.
 
-**Default value**
+#### Default value
 
 This value will be entered in the relevant parameter automatically when creating a new data set.
 
@@ -295,7 +301,7 @@ This value will be entered in the relevant parameter automatically when creating
 
 An existing dictionary can be set for the parameter. If you want to set a new dictionary for the parameter, you can do this by the help of the button .
 
-**Dictionary input**
+#### Dictionary input
 
 _One key, display of the key_
 
@@ -373,7 +379,7 @@ This entry is going to be written into the database.
 
 **Example:** Display: Suggestion list did not contain the desired term- Database content: Suggestion list did not contain the desired term
 
-**Supplementary information**
+#### Supplementary information
 
 If the acquisition of additional parameter information has been set for the data type default values can be arranged for these extended information, which are useable in the laboratory report.
 
@@ -421,11 +427,11 @@ DEFAULTRESULTREFERENCE result reference
 
 DEFAULTINTERPRETATION interpretation
 
-**Comments**
+#### Comments
 
 Any arbitrary comment can be entered here for the parameter. This comment is only visible on the system page and will not be save in the database.
 
-**Set-up of the information for UBA-export**
+#### Set-up of the information for UBA-export
 
 The definition of this format is based on "Austausch von Grundwasserdaten (Annex II.x 12.04 zur Verwaltungsvereinbarung über den Datenaustausch im Umweltbereich zwischen Bund und Ländern) / Tischvorlage für die Sitzung des LAWA AK 'Optimierung des Grundwasserdienstes' am 04.02.1999 in Chemnitz" (the German federal–state agreement on groundwater data exchange — title left in German as the official designation).
 
@@ -497,19 +503,19 @@ Using complex data types hierarchal relationships between measurement data recor
 
 The data type HD1 is a complex data type with the parameters "HD1 Param1" und "Sum SD1 Param 1". The data types SD1, SD2 and SD3 are each subordinate to this data type with their own structure. A further data type SD4 is also subordinate to data type SD1. Any number of hierarchies can be configured.
 
-**Configuration**
+#### Configuration
 
 To configure subordinated data types there is the option **Data type groups** at the node of a datatype. To create a subordinate data type, first add a data type group to this branch and give the group a name. Groups logically combine the subordinate data types. Within a data type group you can create subordinate data types (identical to a "normal" datatype). These have their own parameter list and their own formulas, etc. Subordinate data types also have a data type group branch in which further data type groups and data types can be created.
 
-**Data collection**
+#### Data collection
 
 In the data entry grid for measurement values, data types containing subordinated data types are shown with a plus sign. Open the underlying hierachy by clicking the plus sign. Data records belonging to a data type are automatically assigned to the parent data records. Hence by deleting a parent data record, all child data records will also be deleted - a warning will appear requiring confirmation to proceed.
 
-**Data import**
+#### Data import
 
 Importing records for subordinate data types is only possible in the **"Record and Maintain Measurements"** method. To do this, navigate to the required subordinate data type (by expanding the branches on the superordinate dataset) and click in the subgrid of that datatype. Then select Import readings from the right toolbar and perform the import. The imported datasets are now assigned to the parent dataset.
 
-**Using Formulae**
+#### Using Formulae
 
 Using formulae in a subordinate data type is straightforward. A special case is where formulae in superordinate data types reference child data types (e.g. statistics in thesuperordinate data type based on values in a subordinate data type).
 
@@ -549,7 +555,7 @@ VARIANCE - Variance
 
 VARIANCECOEFF - Variance coefficient
 
-**Conditions for data records of subordinate data types**
+#### Conditions for data records of subordinate data types
 
 When calculating statistical values all subordinate data records are included by default. If only part of these data records are to be used, a condition with the operator %COND\[condition] can be defined, which appears before the statistical function:
 
@@ -566,7 +572,7 @@ In the example above the sum of the parameter SD1P1 is calculated using only dat
 
 Active formulae are calculated automatically in the measurement value editor. If values are changed in a subordinated data type, values will be recalculated in the superior data type using formulae. This process is repeated until the topmost data type values have been recalculated.
 
-**Referencing parameters of superior data types**
+#### Referencing parameters of superior data types
 
 When performing calculations in subordinate data types, data fields in superior data types can be referenced Example:
 
@@ -592,11 +598,13 @@ Following this calculations in superior data types higher up the hierarchy are c
 
 Formula calculations in subordinate data types cascade down to the lowest level data type. Please note that in Step **3** this is only performed for the (manually) changed data. A looped calculation is only possible for the first subordinate level of a changed data record and always ends with Step 3. The value from the column "Statistic for child records" in the data type "Complex Master" cannot be used for formulae calculations in the data type "Complex Child".
 
-**Use in reports and diagrams**
+#### Use in reports and diagrams
 
 The parameters of the subordinate data types can be referenced as usual in reports and diagrams. References to parameters of subordinate data types result in summary data records, including the contents of the superordinate data records. The following report shows an example:
 
 The number of data records in the report for sample P1 is defined by the number of data records in the subordinate (child) data type SD4. For the sample P2 the number of data records in the subordinate (child) data type SD1 are relevant, because no values are present in the data type SD4.
+
+## Additional configuration
 
 ### Object type formulas
 
@@ -615,7 +623,7 @@ The syntax/grammar of these formulas can be briefly summarised as follows.
 
 _$%EGIS(METHOD=XYZ Param1=Value1 Param2=Value2 ... )$_
 
-**Conversion of coordinatesExample:**
+#### Conversion of coordinatesExample:
 
 $%EGIS(METHOD=TRANSFORMCOORD Result=X X=XCOORD Y=YCOORD EPSG=EPSG DESTEPSG=3068)$
 
@@ -643,7 +651,7 @@ Indicates which data field contains the underlying coordinate system (_**example
 
 Specifies the target coordinate system to be transformed into (_**example:**_ 3068 Soldner Berlin).
 
-**Derive values from a GIS fileExample:**
+#### Derive values from a GIS fileExample:
 
 $EGIS(METHOD=GETPOINTVALUE X=XCOORD Y=YCOORD SOURCE=GROUNDWATER EPSG=EPSG)$
 
@@ -701,7 +709,7 @@ The creation of users and groups is described in the chapter on **User settings*
 
 ### document types
 
-**Document type**
+#### Document type
 
 Here you can determine whether documents may be added to the system database.
 
