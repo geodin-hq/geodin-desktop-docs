@@ -1,7 +1,8 @@
-
 # Layer Queries
 
-### Layer query
+Layer queries search the coded layer descriptions of boreholes — soil and rock attributes recorded as strings of codes — which a plain SQL query on the database cannot reliably match. This page covers what layer queries are, the simple single-condition walkthrough for finding all boreholes with a given layer property, and the full reference for the multi-characteristic layer-query workflow (GLQ definition files, the layer query manager, definitions, results tables) plus additional query options such as code-hierarchy search and multiclassification export.
+
+## What layer queries are
 
 Layer queries are queries on attributes of the layer description. These can usually not be queried with an SQL query on the database, because the description usually consists of a string of codes.
 
@@ -33,7 +34,8 @@ For layer queries in GeoDin two different methods are available:
 2. Query several layer properties in one step to classify or generalize all layers or create sequences of predefined layers of the selected boreholes.
 
 While the first method can be done without further preparation, for the second method a layer query definition is required.
-### Query individual layer properties
+
+## Query individual layer properties
 
 Querying a single layer characteristic with the goal of finding all boreholes that meet this characteristic is the simplest form of layer query and will be demonstrated with the following example.
 
@@ -74,6 +76,13 @@ After the codes have been defined, enter a name for the query result, e.g. "bore
 Start the query by clicking **Proceed**. Now, all locations will be queried. After the search is completed, a message window appears, displaying the internal ID of the query and information about the query. In the object query "boreholes lower cretacious" in the GeoDin object manager, all locations can be found in which the field stratigraphy contains the codes for the lower cretacious. All methods normally available to edit the query or the boreholes are available here.
 
 GeoDin stores the results of a layer query in the current database. Each query executed is assigned a unique ID. To manage layer queries, the [Layer query manager](complex-layer-queries.md) is available.
+
+***
+
+## Reference: Layer query workflow
+
+The multi-characteristic layer-query workflow — defining conditions in GLQ definition files, classifying and generalising layers, and managing the stored results — is documented in the subsections below.
+
 ### Complex layer queries
 
 Querying multiple layer characteristics simultaneously with the goal of classifying layers is much more complex than querying a single characteristic and requires a series of preparations.
@@ -178,33 +187,48 @@ GLQ\_RESDESC Table with the result description (Legend)
 
 GLQ\_LAYER Table with the investigated layers and the results
 
-GLQ\_EXECUTE
+**GLQ\_EXECUTE**
 
-***
+| Data field | Description |
+|---|---|
+| GLQ\_ID | Query ID |
+| GLQ\_NAME | File name of the layer query definition file or empty when the query was run with a single condition |
+| OP\_TYPE | Layer query type: 1 = Classification 2 = Generalisation 3 = Layer sequences 4 = Calculation 5 = Geothermy |
+| OP\_ID | ID in the layer query definition for the operation run |
+| OP\_NAME | Name in the layer query definition of the classification run |
+| OP\_COMMENT | Name of the query result |
+| OP\_OPT | Internal parameter |
+| OP\_DATE | Date the query was run |
+| OP\_TIME | Time the query was run |
 
-Data field Description GLQ\_ID Query ID GLQ\_NAME File name of the layer query definition file or empty when the query was run with a single condition OP\_TYPE Layer query type: 1 = Classification 2 = Generalisation 3 = Layer sequences 4 = Calculation 5 = Geothermy OP\_ID ID in the layer query definition for the operation run OP\_NAME Name in the layer query definition of the classification run OP\_COMMENT Name of the query result OP\_OPT Internal parameter OP\_DATE Date the query was run OP\_TIME Time the query was run
-
-***
-
-GLQ\_RESDESC
+**GLQ\_RESDESC**
 
 The table contains one data set for each result of a layer classification resulting from the query.
 
-***
+| Data field | Description |
+|---|---|
+| GLQ\_ID | Query ID (Link to GLQ\_EXECUTE) |
+| RES\_ID | Result ID (This is the ID of the layer classification in the layer query definition) |
+| RES\_NAME | Result name (Name of the layer classification) |
+| RES\_EXPR | Calculation formula of the layer classification |
+| RES\_GUID | Global unique ID of the layer classification |
 
-Data field Description GLQ\_ID Query ID (Link to GLQ\_EXECUTE) RES\_ID Result ID (This is the ID of the layer classification in the layer query definition) RES\_NAME Result name (Name of the layer classification) RES\_EXPR Calculation formula of the layer classification RES\_GUID Global unique ID of the layer classification
-
-***
-
-GLQ\_LAYER
+**GLQ\_LAYER**
 
 The table contains one data set for each layer data set investigated with the query.
 
-***
-
-Data field Description PRJ\_ID GeoDin Project ID LOCID GeoDin Location ID RECID GeoDin Record ID GLQ\_ID Query ID (Link to GLQ\_EXECUTE) DEPTHFROM Top of layer DEPTHTO Bottom of layer THICKNESS Thickness of layer RES\_ID Result ID (This is the ID of the layer classification in the layer query definition) RES\_VALUE Calculation result of the layer classification formula RES\_ERR Classification errors
-
-***
+| Data field | Description |
+|---|---|
+| PRJ\_ID | GeoDin Project ID |
+| LOCID | GeoDin Location ID |
+| RECID | GeoDin Record ID |
+| GLQ\_ID | Query ID (Link to GLQ\_EXECUTE) |
+| DEPTHFROM | Top of layer |
+| DEPTHTO | Bottom of layer |
+| THICKNESS | Thickness of layer |
+| RES\_ID | Result ID (This is the ID of the layer classification in the layer query definition) |
+| RES\_VALUE | Calculation result of the layer classification formula |
+| RES\_ERR | Classification errors |
 
 _**Notes:**_
 
