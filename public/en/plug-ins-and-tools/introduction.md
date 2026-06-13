@@ -1,10 +1,3 @@
-
-<!--
-**Content status:** Auto-assembled from product documentation
-**Source quality:** C (Thin (limited source material))
-**Needs:** editorial review
--->
-
 # gINT Convertor
 
 ## Easy migration from gINT to GeoDin
