@@ -25,8 +25,6 @@ The most practical pattern for exporting master data or layer data to Excel from
 This pattern is the recommended way to produce tabular exports of master data or layer data for multiple objects — for example, exporting chloride values from a groundwater chemistry data type for all objects in a query.
 {% endhint %}
 
-<!-- src: transcript/2026-04-15-in-person-workshop -->
-
 ## Grouping and custom views in the Stammdaten Grid
 
 The general data grid (Stammdaten Grid) supports dynamic grouping of rows by column values, allowing quick reorganisation of objects without creating a new query.
@@ -42,4 +40,43 @@ The general data grid (Stammdaten Grid) supports dynamic grouping of rows by col
 
 Use the **Save current view** button in the grid toolbar to save the current column order, visibility, sort, and grouping configuration under a custom name. Saved views can be recalled from the drop-down at any time.
 
-<!-- src: transcript/2026-04-15-in-person-workshop -->
+***
+
+## Reference: Report Element
+
+### Data source and columns
+
+| Property | Description |
+|---|---|
+| **Data source** | Choose **General Data**, **Layer Data**, **Samples**, or a specific measurement data type (e.g., CU). Sets the data the report rows draw from. |
+| **Columns** | Added with the blue **+** button. Each column requires a **Text Macro** (which parameter to display) and a **Heading**. |
+
+### Row selectors
+
+Rows can be excluded from the report by parameter condition — for example, skip values above or below a threshold. Selectors are configured in the Report Element properties and filter the displayed rows without modifying the underlying data.
+
+### Conditional formatting
+
+To highlight data by value, use **Column Properties > Presentation Options**: set a condition (e.g., "if CU > 50") and a color (e.g., color the row red). Conditional formatting applies at display and export time.
+
+### Multi-block layouts
+
+Multiple report blocks can be combined in one layout — for example, a general-data report and a measurement report placed side by side in the same frame. Each block has its own data source and column configuration.
+
+### Footers and headers
+
+Each report group can include a **footer** carrying additional information per group (see [Customizing Log Layouts](../borehole-logs/customizing-log-layouts.md) for the HasLoop grouping pattern). For layouts using a **HasLoop** selector, add a **header** row of type **text** and use the text macro `$%SelectorContent:Selector name$` (as selector name, put the name of your HasLoop selector) to print the group name above each dataset group.
+
+### Report types
+
+| Type | Description |
+|---|---|
+| **Original data** | Displays raw database values as-is: summary tables, sample overviews, measurement tables, borehole tabs. |
+| **Calculations** | Processes data before display: statistics, list comparisons, plausibility checks, grain size analyses. |
+
+### Exporting report data
+
+Two export paths are available:
+
+- **Right-click in edit mode** — right-click the Report Element → **Export as Excel** or **Export as CSV**. Exports the visible data for the current object selection.
+- **Report Access button** — in the layout overview, use the **Report Access** button to export to Excel without opening edit mode first.

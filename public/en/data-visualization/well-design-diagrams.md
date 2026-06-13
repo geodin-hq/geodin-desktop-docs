@@ -1,39 +1,9 @@
 
 # Well Design Diagrams
 
-### Parameter list
+The **Well design** graphic element renders well construction and completion diagrams after DIN 4021, including labeling with depth, fill, and casing elements. It is placed inside an object frame alongside other depth-synchronized elements such as borehole logs and depth scales. For well design data entry, see [Well Design Data](../navigating-the-geodin-workspace/objects/well-design-data.md).
 
-Defined parameters for calculation are expected for the diagrams Piper, Durow, Formatio, Pie, Bar. Because a parameter name for a substance can be changed in a database, it is possible to adjust the preset correlation in the parameter list. Double-click the parameter to adjust and select its entry in the view of the object properties.
-
-### Measurement value graphic
-
-The graphic element measurement value graphic is used to display time series, XY-diagrams, triangle diagrams and hydrochemical special diagrams. It can be inserted into a object frame any often.
-
-**The element name**
-
-The element name is used mainly to identify the graphic elements of a GeoDin graph better in the tree view of graphic elements. By using significant names for graphic elements a complex graph can be designed very clear. For some graphic elements a related element can be entered. Here also the element name is used.
-
-[Drawing layer](layouts/layout-editor-basics.md)
-
-Display of the drawing layer, on which the graphic element is placed. Using the icon **In another layer** the graphic element can be moved in anther drawing layer. You find further information on drawing layers in the chapter [Drawing layer](layouts/layout-editor-basics.md).
-
-### Piper diagram
-
-The Piper diagram after PIPER (1944) is one of the most common methods to display hydrogeochemical analyses.
-
-In two three component diagrams the ratio of the molar equivalent concentration of the anions and cations and in a combined rhombus diagram the ratio between (Na+K)/(Ca+Mg+Fe) and (HCO3+CO3)/(SO4+Cl+NO3) is shown.
-
-Classification after the Piper diagram is based in contrary to the method after Valjaschko on the predominant solution contents, the major ions.
-
-To display an analysis in a Piper diagram the main ingredients have to be analyzed (Ca, Mg, Na, K, HCO3+CO3, SO4, Cl), hence a not analyzed ingredient can be calculated using the ion balance. Nitrate is, if analyzed, added to the sulfate, iron to the calcium.
-
-The calculation/estimation via the [Ion balance](../data-analysis/calculation-engine/geotechnical-analyses.md) is activated by default.
-
-To display the original molar equivalent concentrations without ion balance, this option can be deactivated.
-
-GeoDin interprets all special values (-99, -88 etc.) as 0 and all other negative values (under the detection limit) as absolute values.
-
-If the parameters Fe or NO3 are defined as empty in the parameter definition, they are also removed from the diagram labelling.
+## Reference: Well Design element
 
 ### Well design
 
@@ -139,7 +109,7 @@ Text tags to the element can optionally be selected automatically to the element
 
 Choosing the option -Automatic piezometer spacing- these are placed automatically in the well design. For the piezometers 1 to 9 also a free horizontal position in the view can be chosen.
 
-See also [Piezometer number](well-design-diagrams.md).
+See also **Piezometer number** (below).
 
 ### Piezometer number
 
@@ -149,7 +119,7 @@ Additionally the distance of the piezometer from the center axis of the well des
 
 _**Note:**_ _This setting only takes an effect, if the option -Automatic piezometer spacing- in the branch Piezometers is deactivated._
 
-See also [Piezometers](well-design-diagrams.md).
+See also **Piezometers** (above).
 
 ### Complex graphic elements
 
@@ -208,6 +178,44 @@ The layout has to contain at least one graphic element [Well design](../navigati
 **Results in the layout**
 
 All well designs of the layout apply the horizontal scale.
+
+## Reference: Measurement Value Graphic element
+
+The following sections describe properties of the **Measurement Value Graphic** element when used for hydrochemical and special diagram types. For general Measurement Value Graphic setup and diagram types, see [Measurement Value Graphics](layouts/measurement-value-graphics.md) and [X-Y Diagrams](layouts/x-y-diagrams.md).
+
+### Parameter list
+
+Defined parameters for calculation are expected for the diagrams Piper, Durow, Formatio, Pie, Bar. Because a parameter name for a substance can be changed in a database, it is possible to adjust the preset correlation in the parameter list. Double-click the parameter to adjust and select its entry in the view of the object properties.
+
+### Measurement value graphic
+
+The graphic element measurement value graphic is used to display time series, XY-diagrams, triangle diagrams and hydrochemical special diagrams. It can be inserted into a object frame any often.
+
+**The element name**
+
+The element name is used mainly to identify the graphic elements of a GeoDin graph better in the tree view of graphic elements. By using significant names for graphic elements a complex graph can be designed very clear. For some graphic elements a related element can be entered. Here also the element name is used.
+
+[Drawing layer](layouts/layout-editor-basics.md)
+
+Display of the drawing layer, on which the graphic element is placed. Using the icon **In another layer** the graphic element can be moved in anther drawing layer. You find further information on drawing layers in the chapter [Drawing layer](layouts/layout-editor-basics.md).
+
+### Piper diagram
+
+The Piper diagram after PIPER (1944) is one of the most common methods to display hydrogeochemical analyses.
+
+In two three component diagrams the ratio of the molar equivalent concentration of the anions and cations and in a combined rhombus diagram the ratio between (Na+K)/(Ca+Mg+Fe) and (HCO3+CO3)/(SO4+Cl+NO3) is shown.
+
+Classification after the Piper diagram is based in contrary to the method after Valjaschko on the predominant solution contents, the major ions.
+
+To display an analysis in a Piper diagram the main ingredients have to be analyzed (Ca, Mg, Na, K, HCO3+CO3, SO4, Cl), hence a not analyzed ingredient can be calculated using the ion balance. Nitrate is, if analyzed, added to the sulfate, iron to the calcium.
+
+The calculation/estimation via the [Ion balance](../data-analysis/calculation-engine/geotechnical-analyses.md) is activated by default.
+
+To display the original molar equivalent concentrations without ion balance, this option can be deactivated.
+
+GeoDin interprets all special values (-99, -88 etc.) as 0 and all other negative values (under the detection limit) as absolute values.
+
+If the parameters Fe or NO3 are defined as empty in the parameter definition, they are also removed from the diagram labelling.
 
 ***
 

@@ -1,144 +1,105 @@
-
-<!--
-**Content status:** Auto-assembled from product documentation
-**Source quality:** B (Moderate (single source type))
-**Needs:** needs legacy verification, needs screenshots, needs examples, editorial review
--->
-
 # Groundwater Visualizations
 
-### Groundwater
+The **Groundwater** graphic element displays groundwater levels in a borehole log or cross-section column. It reads groundwater codes entered in the layer description or the groundwater table, then renders the appropriate triangle symbols, depth labels, direction arrows (for rising or falling levels), and tag lines. Use it whenever a layout needs to show measured or artesian groundwater conditions alongside stratigraphy.
 
-Using the graphic element *Groundwater* groundwater levels can be shown in the graph, as far as appropriate coded information have been entered in the layer description or in the groundwater table.
+For general graphic-element properties shared across all layout elements (element name, drawing layer, z-order), see [Element Properties Reference](layouts/element-properties.md).
 
-See also **Data source**
+***
 
-The corresponding triangle symbols and depths are used and - if necessary - further information added. If increased or decreased groundwater levels have been entered, this is shown in the graph using the appropriate direction arrows.
-
-**The element name**
-
-The element name is used mainly to identify the graphic elements of a GeoDin graph better in the tree view of graphic elements. By using significant names for graphic elements a complex graph can be designed very clear. For some graphic elements a related element can be entered. Here also the element name is used.
-
-[Drawing layer](layouts/layout-editor-basics.md)
-
-Display of the drawing layer, on which the graphic element is placed. Using the icon **In another layer** the graphic element can be moved in anther drawing layer. You find further information on drawing layers in the chapter [Drawing layer](layouts/layout-editor-basics.md).
-
- <!-- src: help/05/28 -->
+## Reference: Groundwater element properties
 
 ### Data source
 
-If the current object has more than one layer table, the chosen layer table, which contains groundwater information, can be selected. In the setting \"Automatic\" the first available layer table of a borehole is used.
+If the current object has more than one layer table, select the layer table that contains the groundwater information. Set to **Automatic** to use the first available layer table of the borehole.
 
-For object types, in which the groundwater level information is recorded in separate tables (e.g. SEP3) a selection here has no influence, because the information is always read from this special table.
+For object types that record groundwater levels in a separate table (for example, SEP 3), this selection has no effect — the information is always read from the dedicated groundwater table.
 
-**Examples for coding of groundwater level information:SEP compatible boreholes (standard location SEP-compatible etc.)**
+**Groundwater coding — SEP-compatible boreholes**
 
-The coding of the groundwater levels id done in the data field additional information in the layer data collection mask. The codes can be:
+For standard SEP-compatible boreholes, groundwater levels are coded in the **Additional information** field of the layer data entry mask. The supported codes are:
 
-gw - Groundwater level
+| Code | Meaning |
+|---|---|
+| `gw` | Groundwater level |
+| `gws` | Groundwater level increased |
+| `gwf` | Groundwater level decreased |
+| `gwr` | Groundwater level stationary |
+| `gwa` | Groundwater artesian |
 
-gws - Groundwater level increased
+Each code must be followed by the measured depth in round brackets.
 
-gwf - Groundwater level decreased
+**Example:** `gw(3.90)`
 
-gwr - Groundwater level stationary
+Optional additional text (for example, a date) can be added inside the brackets, separated by a semicolon.
 
-gwa - Groundwater artesian
+**Example:** `gw(3.90; 01.08.2005)`
 
-Following the code at least the measured depth has to be entered in round brackets.
+Groundwater levels above the surface level (artesian) are prefixed with `+` inside the brackets.
 
-**Example:** gw(3.90)
+**Example:** `gwa(+0.8)`
 
-Optionally any additional text, like for example date information, can be added in the round brackets.
+The appearance of the groundwater triangles for each code is controlled by the dictionary settings and can be adjusted in the dictionary.
 
-Here the semicolon is used as separator.
+**Groundwater coding — SEP 3 boreholes**
 
-**Example:** gw(3.90; 01.08.2005)
-
-Groundwater levels above the surface level (artesian) are marked with the symbol \<**+**\> (plus) in front of the depth information.
-
-**Example:** gwa(+0.8)
-
-In the dictionary settings the features of the groundwater triangles for the given codes are defined. These settings can be changed in the dictionary.
-
-**SEP 3 boreholes**
-
-For boreholes in the SEP 3 format the groundwater level information is not entered in the borehole table, but in a separate collection mask \'groundwater\'.
-
-Here artesian groundwater levels are entered by putting a \<**-**\> (minus) symbol in front, which means a negative value. The negative value describes a state above the surface level, positive values describe states below the surface level. <!-- src: help/05/34 -->
+For SEP 3 boreholes, groundwater levels are recorded in the separate **Groundwater** collection mask rather than the borehole table. Artesian levels are entered as negative values (a `-` prefix), where negative = above surface level and positive = below surface level.
 
 ### Graphic properties
 
-Select here if the Tag lines for the measured depths should be drawn. Otherwise only the groundwater symbols are displayed (and labeled). Using the option -Scale width to fit- the width of the graphic element is automatically adjusted to the labeling width.
+| Option | Effect |
+|---|---|
+| **Tag lines** | When active, horizontal tag lines are drawn at each measured depth. When inactive, only the groundwater symbols and labels are displayed. |
+| **Scale width to fit** | Automatically adjusts the element width to match the labeling width. |
+| **Tag lines right** | Tag lines start from the right side by default. Deselect to start from the left; this overrides any NORM settings. |
 
-With the option -Tag lines right- you can define the starting side of the tag lines. By default this is the right side. By deselecting it can be switched to the left side, which will ignore any NORM-settings.
+**Presentation mode**
 
-**Presentation modus**
-
-This option defines which language (standard) is used for presentation and hence what symbols are displayed. the standard setting is \"automatic\".
+Defines which standard (language) is used for presentation, and therefore which symbols are displayed. The default is **Automatic**.
 
 **Show in legend**
 
-Define whether the groundwater symbols are to be shown in the automatic legend for the same object frame.
+Controls whether the groundwater symbols appear in the automatic legend for the same object frame.
 
-**Symbol**
+### Symbol
 
-*\[draw symbol\]*
+| Option | Effect |
+|---|---|
+| **Draw symbol** | When active, groundwater symbols are drawn. Deselect to suppress symbols entirely. |
+| **Colour from dictionary** | Uses a color other than the standard color. The color is defined via the **Fill pattern** button in the relevant dictionary entry. |
 
-Defines whether symbols are to be shown.
+### Tags
 
-*\[Colour from dictionary\]*
+| Option | Effect |
+|---|---|
+| **Draw tags** | When active, tag lines are drawn at measured depths alongside the symbols and labels. |
+| **Colour from dictionary** | Uses a color other than the standard color; defined via the **Fill pattern** button in the relevant dictionary entry. |
+| **Tags right** | Tag lines are drawn from the right by default. Deactivate to draw from the left. |
 
-Allows a different colour from the standard colour to be used. The colour setting is defined using the **fill pattern** button in the relevat dictionary.
+### Labelling
 
-**Tags**
-
-*\[Draw tags\]*
-
-Defines whether tags are drawn at measured depths in addition to the groundwater symbols (and labels).
-
-*\[Colour from dictionary\]*
-
-Allows a different colour from the standard colour to be used. The colour setting is defined using the **fill pattern** button in the relevat dictionary.
-
-*\[Tags right\]*
-
-Defines on which side of the element a tag is drawn from. The standard setting if from the right - if it is deactivated then frim the left.
-
-**Labelling**
-
-*\[Colour from dictionary\]*
-
-Allows a different colour from the standard colour to be used. The colour setting is defined using the **fill pattern** button in the relevat dictionary.
-
-*\[fit width\]*
-
-the graphic element width is automatically adjusted to the labelling width. <!-- src: help/05/36 -->
+| Option | Effect |
+|---|---|
+| **Colour from dictionary** | Uses a color other than the standard color; defined via the **Fill pattern** button in the relevant dictionary entry. |
+| **Fit width** | Automatically adjusts the element width to the labelling width. |
 
 ### Groundwater symbols
 
-Select here the line type for the presentation of groundwater symbols.
+Defines the line type for rendering groundwater symbols. A line or outline is drawn in the chosen color and line type.
 
-A line or outline is displayed in the chosen Color and Line type. To select a color, which is not available in the drop down menu, click in the list on the first entry **\"Individually\"**. In the color dialogue you can adjust a new color.
+To use a color not available in the drop-down list, select **Individually** (the first list entry) and choose a custom color in the color dialog.
 
-The line thickness can be chosen in mm or pixels. The selection should be done in mm by preference. In this case the thickness of the lines in the preview is not equal to the print output and not depending on the used print resolution. The selection of a line thickness in pixels is only suitable for graphs, which are only viewed on the screen. <!-- src: help/05/37 -->
+Line thickness can be set in mm or pixels. Prefer mm — this produces consistent output regardless of print resolution. Pixel-based thickness is only suitable for screen-only layouts.
 
 ### Consistency
 
-Selection of the view of consistency, compactness and groundwater on the right side of the borehole.
+Controls the display of consistency, compactness, and groundwater indicators on the right side of the borehole column.
 
-*\[draw\]*
-
-Deacivate this option if you don\'t want consistency, compactness and groundwater to be drawn.
-
-*\[Show in legend\]*
-
-Define whether the symbols for consistency, compactness and groundwater are to be shown in the automatic legend.
-
-**Line type:**
-
-Define how the lines are drawn - a detailed description can be found [Line type](../configuration/fill-patterns-and-symbols.md). <!-- src: help/05/3172 -->
+| Option | Effect |
+|---|---|
+| **Draw** | When deactivated, consistency, compactness, and groundwater are not drawn in this area. |
+| **Show in legend** | Controls whether the symbols for consistency, compactness, and groundwater appear in the automatic legend. |
+| **Line type** | Defines how the lines in this area are drawn. See [Fill Patterns and Symbols](../configuration/fill-patterns-and-symbols.md) for a full description of line type options. |
 
 ### Show filters
 
-If an existing well design is added to a groundwater measurement place, this option can be used to add the presentation of the filter length in the borehole cross-section. <!-- src: help/05/3277 -->
+When a well design is attached to a groundwater measurement point, activating this option adds the filter length to the borehole cross-section display.

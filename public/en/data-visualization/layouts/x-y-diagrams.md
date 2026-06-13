@@ -1,37 +1,49 @@
-
-<!--
-**Content status:** Auto-assembled from product documentation
-**Source quality:** C (Thin (limited source material))
-**Needs:** editorial review
--->
-
-# X Y Diagrams
-
-## X-Y Diagrams (Measurement Value Graphic)
-
-**Measurement Value graphic element** (X-Y diagram) is separate from data sequence and is used for cross-plot charts like UU stress-strain. <!-- src: transcript/forms-templates-customization#x-y-diagrams-measurement-value-graphic -->
-
-Diagram types supported: Time Series, X-Y Diagram, Triangle, Piper diagram, Durov diagram, Pie chart, Histogram, Box plot. <!-- src: transcript/forms-templates-customization#x-y-diagrams-measurement-value-graphic -->
-
-X-Y diagram setup: choose diagram type > set X-axis parameter + labeling > set Y-axis parameter + labeling > add at least one Measurement Graphic Series. <!-- src: transcript/forms-templates-customization#x-y-diagrams-measurement-value-graphic -->
-
-Measurement Graphic Series properties: name, data source (samples), object number (for multi-object frames, specifies which measurement point to pull from, e.g., object number 1, 2). <!-- src: transcript/forms-templates-customization#x-y-diagrams-measurement-value-graphic -->
-
-A multi-object frame lets a single series definition pull from multiple measurement points (e.g., undisturbed = sample 6, remoulded = sample 8). <!-- src: transcript/forms-templates-customization#x-y-diagrams-measurement-value-graphic -->
-
-Series drawing options: connection line (linear or spline), curve quality, color, symbol type (plus, circle, square, etc.), symbol size. <!-- src: transcript/forms-templates-customization#x-y-diagrams-measurement-value-graphic -->
-
-PSD (Particle Size Distribution) layouts are pre-built and shipped with GeoDin — users should customize an existing one rather than build from scratch. <!-- src: transcript/forms-templates-customization#x-y-diagrams-measurement-value-graphic -->
-
 ---
+description: How to set up and configure the X-Y diagram (Measurement Value graphic element) in GeoDin layouts
+---
+
+# X-Y Diagrams
+
+The **Measurement Value graphic element (X-Y diagram)** plots one measurement parameter against another — for example, UU stress-strain cross-plots. It is one of two related layout elements for plotting test results; the other is the **Measurement Value (Data Sequence)** element for depth-vs-value plots. See [Measurement Value Graphics](measurement-value-graphics.md) for that one.
+
+GeoDin also uses X-Y diagrams as graphical templates for calculating new data sequence series using formulas — the layout must contain at least one X-Y diagram element, and the selected areas within the diagram define the conditions for applying the formula.
+
+Supported diagram types: **Time Series**, **X-Y Diagram**, **Triangle**, **Piper diagram**, **Durov diagram**, **Pie chart**, **Histogram**, **Box plot**.
+
+## Setting up an X-Y diagram
+
+1. Add a **Measurement Value graphic element** to the layout (for general steps on adding elements, see [Layout Editor Basics](layout-editor-basics.md) and [Creating Custom Layouts](../creating-custom-layouts.md)).
+2. Choose the **diagram type** from the available options (see the full list above).
+3. Set the **X-axis parameter** and labeling.
+4. Set the **Y-axis parameter** and labeling.
+5. Add at least one **Measurement Graphic Series** and configure its properties.
+
+## Optional settings
+
+* **Measurement Graphic Series — name:** Label identifying this series in the diagram.
+* **Measurement Graphic Series — data source:** Set to **Samples** to pull from sample measurements.
+* **Measurement Graphic Series — object number:** In a multi-object frame, specifies which measurement point in the frame the series pulls from (for example, object number 1 or 2).
+* **Connection line:** Choose **linear** or **spline** interpolation between data points.
+* **Curve quality:** Controls smoothness when spline is selected.
+* **Color:** Series color.
+* **Symbol type:** Choose from plus, circle, square, and other marker shapes.
+* **Symbol size:** Size of the symbol markers.
+
+***
+
+## Working with X-Y diagrams
+
+**Multi-object frames:** A single series definition can pull from multiple measurement points using a multi-object frame. For example, a UU test layout can show undisturbed (sample 6) and remoulded (sample 8) results in the same diagram.
+
+**PSD layouts:** Particle Size Distribution (PSD) layouts are pre-built and shipped with GeoDin. Customize an existing PSD layout rather than building one from scratch. See [Display PSD as a Bar Chart](../display-particle-size-distribution-psd-as-a-bar-chart.md) for the full workflow.
+
+***
 
 ## Reference: Scale and Tag Line Properties
 
-<!-- src: help/05/1928, 1931, 1934 -->
-
 ### Scale labeling (Text)
 
-Controls how numerical values are displayed along the scale axis. Options include:
+Controls how numerical values are displayed along the scale axis:
 
 - **Label side** — Place labels on the left or right side of the scale.
 - **Decimal places** — Number of decimal places shown for numerical labels.

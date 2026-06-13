@@ -1,223 +1,151 @@
-
-<!--
-**Content status:** Auto-assembled from product documentation
-**Source quality:** B (Moderate (single source type))
-**Needs:** needs legacy verification, needs screenshots, needs examples, editorial review
--->
-
 # Scale Bars and Depth Scales
+
+The **Depth Scale** graphic element displays a separate height scale in a borehole log or well-design layout. It can be added to an object frame as often as required. Its behavior depends on the presence of at least one **Borehole log/Borehole tab**, **Well design**, or **Data sequence** element in the same object frame.
+
+For general graphic-element properties shared across all layout elements (element name, drawing layer, z-order), see [Element Properties Reference](layouts/element-properties.md).
+
+***
+
+## Reference: Depth Scale Properties
 
 ### Depth scale
 
-This graphic element is used to display a separate *height scale*. It can be added to a object frame as often as required. Its features depend on the existence of at least one graphic element *Borehole log/Borehole tab* and/or one graphic element *Well design* and/or one graphic element *Data sequence* in the particular object frame.
-
-The length of the graphic element is applied to the length of the object frame. The element can only be moved horizontally. All changes are done according to the vertical position and size of the main elements (borehole log, well design and data sequence).
-
-The graphic element is shown by blue dashes, if there is no linked or embedded object in the object frame.
+The length of the element matches the length of the object frame. It can only be moved horizontally. All changes to vertical position and size follow the main elements (borehole log, well design, and data sequence). The element is shown as blue dashes when no object is linked or embedded in the object frame.
 
 **The element name**
 
-The element name is used mainly to identify the graphic elements of a GeoDin graph better in the tree view of graphic elements. By using significant names for graphic elements a complex graph can be designed very clear. For some graphic elements a related element can be entered. Here also the element name is used.
+The element name identifies graphic elements in the GeoDin graph tree view. Use meaningful names when building complex layouts. For some graphic elements a related element can be entered. Here also the element name is used.
 
-[Drawing layer](layouts/layout-editor-basics.md)
+**Drawing layer**
 
-Display of the drawing layer, on which the graphic element is placed. Using the icon **In another layer** the graphic element can be moved in anther drawing layer. You find further information on drawing layers in the chapter [Drawing layer](layouts/layout-editor-basics.md).
-
- <!-- src: help/05/39 -->
+Displays the drawing layer on which the element is placed. Use the **In another layer** icon to move it to a different layer. See [Layout Editor Basics](layouts/layout-editor-basics.md) for further information on drawing layers.
 
 ### Scale
 
-Here you can select the vertical scale.
+Select the vertical scale here.
 
-The base unit of the paper is cm. You can also switch to m, in or ft.
+The base unit of the paper is cm. You can also switch to m, in, or ft.
 
-If you wish to display objects in a system of units other than the one that they were recorded in, you can use the **Factor for depths** option to convert accordingly. The actual depths will be multiplied by the factor entered: for example metres to feet uses the factor 3.28084.
+Use **Factor for depths** to convert objects recorded in a different unit system: the actual depths are multiplied by the entered factor. For example, metres to feet uses factor 3.28084. To display in an inch-per-foot scale, change the base paper unit to `in` and set the factor to 3.28084. If your object data is already in feet, change the base paper unit to `in` and keep the factor at 1.
 
-If you wish to display such an object in an inch per feet scale you can change the base paper unit to in and the factor to 3.28084.
+By default, a layer or sample interval is not split across pages — the page break falls at a layer or sample interval boundary. If a section at the selected scale is taller than one page, the element is not shown (red dashed frame).
 
-If your object data is in feet already you just need to change the base paper unit to \"in\" and keep the factor at 1.
+* **-Auto correct-** — automatically corrects the height scale so that sections are not split across pages.
+* **-New page-** — allows a unit to be distributed across multiple pages.
+* **-Fit to page-** — automatically calculates the vertical scale so the entire object fits on one page. Not advisable for very deep objects where labeling text may not all be displayable.
 
-Per default a a layer or a sample interval etc. is not distributed on several pages, but the page break is placed at a layer or sample interval boundary. If a section in the selected vertical scale is greater than one page, the element is not shown (red dashed frame).
-
-If you wish to present information, whereby a section (i.e. a layer or a sample) should not be split over several pages, use the option -Auto correct- to automatically correct the height scale.
-
-Conversely the option for -New page- can be chosen, to allow the distribution of a unit on several pages (see below).
-
-Using the option -Fit to page- the vertical scale is automatically calculated so that the object can be shown on one page. For very deep objects this may not be advisible, because not all the labeling text can be displayed on one page.
-
-Besides the chosen scale the selection of a data field variable in the input field *\"Read from\"* is also possible. This works just like a variable text element, where the relation to a database field is defined by a variable in \$ symbols. Example: If the scale should be read from the basic data set "comment", \$comment\$ has to be entered in the input field. The option *\"Read from\"* allows you to store an \"ideal presentation scale\" in the data of a object, independent of the selected layout.
+You can also read the scale from a data field variable using the **"Read from"** input field. This works like a variable text element: the relation to a database field is defined by a variable in `$` symbols. For example, enter `$comment$` to read the scale from the basic data set "comment" field. This allows storing an ideal presentation scale in the object data, independent of the selected layout.
 
 **Interval**
 
-If the element (borehole log, data sequence etc.) should not be completely shown , it is possible to select part of the section using the option -Interval-. The input must be in m below surface. With activated option -Automatic- the whole object is shown.
+To display only part of an object, use the **-Interval-** option. Enter the depth range in m below surface. With **-Automatic-** activated, the whole object is shown.
 
-\
-Using the option -New page - User defined- a depth can be set, at which the page break should be performed. This is carried out at exactly at the selected depth, independent of the existence of a layer boundary, a sample interval boundary etc. This function should only be used with sensible scales (the preset area of for example 5m has to fit on the page) and with appropriate graphic element heights. If the graphic element does not have the required height, the drawing is still completed, but it the correct screen area may not always be refreshed.
+**-New page - User defined-** sets an exact depth at which the page break is performed, independent of layer or sample interval boundaries. Only use this with sensible scales (the preset area must fit on the page) and appropriate graphic element heights. If the element does not have the required height, drawing completes but the screen area may not always refresh correctly.
 
-With the option -New page - Automatically optimize- GeoDin recalculates a page break depth. Here GeoDin checks whether a layer or interval boundary is located in the possible page break area (ca. the last 10% presented on a page). If this is the case, the boundary is used as the separation; otherwise the layer or sample interval is divided between two pages. Is this option activated, an object is can be shown in any vertical scale.
+**-New page - Automatically optimize-** instructs GeoDin to recalculate the page break depth. GeoDin checks whether a layer or interval boundary is located in the possible page break area (approximately the last 10% of the page). If a boundary is found, it is used as the break; otherwise the layer or sample interval is split between pages. With this option active, an object can be shown at any vertical scale.
 
-With the option -Dynamic ground level- the automatic positioning of the ground level can be activated for a layout. The ground level is moved dynamically and the element always begins at the upper edge of the graphics element. If this option is inactive, the ground level always stays at the same vertical position, which for objects with large elements above ground level, may lead to graphic elements being hidden or even extending over the page margin.
+**-Dynamic ground level-** activates automatic positioning of the ground level: the ground level moves dynamically and the element always begins at the upper edge of the graphic element. Without this option, the ground level stays at a fixed vertical position, which may cause graphic elements to be hidden or extend beyond the page margin for objects with large elements above ground level.
 
 **Angle**
 
-The Angle of incline of a object can be entered while labeling an element with depth values and optionaly used for the graphic presentation of an element. First the data field for the amount of incline has to be defined. Using the options **0° = vertical** and **0° = horizontal** you can select, how the value of the inclination is interpreted:
+The angle of incline of an object can be entered while labeling an element with depth values and optionally used for the graphic presentation. First define the data field containing the angle of incline. Use **0° = vertical** or **0° = horizontal** to select how the inclination value is interpreted:
 
-0° = vertical
+* **0° = vertical** — value 0 or empty = vertical borehole; value 89 = nearly horizontal; value 90 is ignored.
+* **0° = horizontal** — value 90 or empty = vertical borehole; value 1 = nearly horizontal; value 0 is ignored.
 
-The value 0 or an empty data field represents a vertical borehole, the value 89 stands for a (nearly) horizontal borehole, the value 90 is ignored.
-
-0° = horizontal
-
-The value 90 or an empty data field represents a vertical borehole, the value 1 stands for a (nearly) horizontal borehole, the value 0 is ignored.
-
-To label recalculated depths choose the option -Display adjusted inclination- (for example in the graphic element [Text](layouts/text-macros-and-variable-text.md)). Choosing the option -Display adjusted inclination- the graphic element is shown at a compressed scale related to the angle. This is important especially to correlate layers correctly for the presentation of a cross-section. If the option \<**Automatic**\> is activated, the labeling is always done with recalculated depth values. If only the labeling of the graphic element should be presented with recalculated depth values, whilst the graphic presentation uses the recommended scale, do not activate the option \<**Display adjusted inclination**\>. <!-- src: help/05/1160 -->
+To label recalculated depths, choose **-Display adjusted inclination-** (for example in the [Text](layouts/text-macros-and-variable-text.md) graphic element). With **-Display adjusted inclination-** active, the element is shown at a compressed scale relative to the angle — important for correct layer correlation in cross-section presentations. With **\<Automatic\>** activated, labeling always uses recalculated depth values. To show recalculated depth values in labeling only while the graphic presentation uses the recommended scale, do not activate **-Display adjusted inclination-**.
 
 ### Depth tag
 
-Select here the line type for the depth tag line.
+Select the line type for the depth tag line.
 
-A line or outline is displayed in the chosen Color and Line type. To select a color, which is not available in the drop down menu, click in the list on the first entry **\"Individually\"**. In the color dialogue you can adjust a new color.
+A line or outline is displayed in the chosen **Color** and **Line type**. To select a color not in the dropdown, click the first entry **"Individually"** to open the color dialog.
 
-The line thickness can be chosen in mm or pixels. The selection should be done in mm by preference. In this case the thickness of the lines in the preview is not equal to the print output and not depending on the used print resolution. The selection of a line thickness in pixels is only suitable for graphs, which are only viewed on the screen. <!-- src: help/05/1269 -->
+The line thickness can be set in mm or pixels. Prefer mm for print consistency — with mm, the thickness in the preview differs from print output and is independent of print resolution. Pixels are suitable only for screen-only layouts.
 
 ### Horizontal scale
 
-Here the preferred **Horizontal scale** can be selected. Entered diameters of borehole and casing elements are drawn with accurate scale.
+Select the preferred **Horizontal scale** here. Entered diameters of borehole and casing elements are drawn at accurate scale.
 
-The option -Constant width- causes an automatic setting of the displayed (maximum) borehole diameter of the well design according to a fix value.
+* **-Constant width-** — sets the displayed (maximum) borehole diameter of the well design to a fixed value.
+* **-Centre display-** — keeps the well design centered regardless of data or horizontal scale.
 
-The option -Centre display- ensures that the well design always remains centered irrespective of the dta or horizontal scale.
+Without these options, standard behavior when the width of the well design is changed:
 
-Otherwise the standard settings for when the width of well design is changed result in:
+1. The left border is fixed; the well design enlarges to the right when a new object is linked to the layout.
+2. The mid-axis is fixed; the well design enlarges both left and right when the horizontal scale, constant width, or percentage width is changed.
 
-1\) the left border is fixed and the well design is enlarged to the right when a new object is linked to the layout,
+A **not-scaled presentation** is possible by entering `<>0%` in the entry field. The borehole is displayed smaller or larger according to the horizontal scale, while all casing elements remain in the selected scale. This is useful for displaying fill patterns or staggered piezometers.
 
-2)´the mid-axis is fixed and the well design is enlarged both to the left and right when a change is made to the horizontal scale , the constant width or the percentage width.
+If the maximum diameter of all casing/piezometer series, multiplied by the number of series, is larger than the borehole diameter:
 
-A **not scaled presentation of the borehole** is possible by entering \<\>0% in the particular entry field. The borehole is displayed smaller or larger according to the horizontal scale. All casing elements are still drawn in the selected scale. This option can be used to display fill patterns or staggered piezometers better.
-
-If the maximum diameter of all casing/piezometer series, multiplied with the number of casing/piezometer series is larger than the diameter of the borehole, the following situation occurs:
-
-Reality: Diameter of the borehole = D
-
-Maximum diameter of the casing/piezometers series = MaxR
-
-Presentation:
-
-The presentation is not possible because MaxR\*4 \> D
-
-The individual casing/piezometer series have to be displayed side by side, despite they are constructed staggered in reality. The relative borehole widening can solve the problem. <!-- src: help/05/1335 -->
+* Reality: Diameter of the borehole = D; Maximum diameter of the casing/piezometer series = MaxR
+* If MaxR × 4 > D, individual casing/piezometer series must be displayed side by side even though they are staggered in reality. The relative borehole widening option addresses this.
 
 ### Depth axis
 
-In this branch no properties can be selected. Choose a subordinate branch, to edit detail properties. <!-- src: help/05/1398 -->
+In this branch no properties can be selected directly. Choose a subordinate branch to edit detail properties.
 
 ### Move and scale
 
-Selected graphic elements can be moved to a new **Position by dragging the element (or elements) with the left mouse button pressed. During such an operation the position on the paper is shown in the status bar.
+Selected graphic elements can be moved to a new position by dragging with the left mouse button pressed. The position on the paper is shown in the status bar during the operation.
 
-To Scale **an element, select the element and drag one corner marker in the chosen direction. The size of the element is also shown in the status bar.
+To scale an element, select it and drag a corner marker in the chosen direction. The size is also shown in the status bar.
 
-\
-When scaling group or object frames, there are some special features:
+When scaling group or object frames:
 
-• If a group frame is scaled using the corner marker, the group elements keep their size, which means they are not scaled.
+* Scaling a group frame using the corner marker keeps the group elements at their current size (they are not scaled).
+* If the group frame is reduced so much that elements no longer fit, the group elements are reduced automatically.
+* To scale group elements together with the group frame, hold **Ctrl** during the movement.
 
-• If a group frame is reduced so much, that the group elements would not fit into the new group frame, the group elements are reduced automatically.
+Rectangles and ellipses can be scaled to squares and circles by holding **Ctrl** while scaling or adding. The same method draws exact vertical or horizontal lines.
 
-• If a scaling of the group elements together with the group frame is required (no matter if it is extended or reduced), the crtl key must be pressed during the movement.
+Exact positioning or scaling can be entered via the **Position** branch in the object properties.
 
-\
-Rectangles and ellipses can be scaled to quadrants and circles, if you press the **crtl** key while scaling (and adding). With the same method you can draw exact vertical or horizontal lines.
+Keyboard shortcuts for moving selected elements:
 
-You can enter an exact positioning or scaling (input of the coordinates with keys) in the branch \'Position\' in the object properties.
+* **Ctrl + arrow key** — displacement 0.1 mm
+* **Shift + arrow key** — displacement 1 mm
 
-Moving one or more selected graphic elements is also possible directly with the keyboard using the shortcut:
+***
 
-**Ctrl + arrow key** Displacement 0,1 mm
+## Reference: Scale Layout Quick Settings
 
-**Shift + arrow key** Displacement 1 mm <!-- src: help/05/2415 -->
+These layout interfaces provide setting options for horizontal and vertical scales. They apply to layouts containing:
 
-### Scales
-
-These layout interfaces contain setting options for horizontal and vertical scales and are usable for layouts, which contain the following graphic elements:
-
-[Borehole log](borehole-logs/creating-borehole-logs.md)
-
-[Well design](../navigating-the-geodin-workspace/objects/well-design-data.md)
-
-[Data sequence](../data-collection/import/data-sequences.md)
-
-[Samples](../navigating-the-geodin-workspace/objects/sample-data.md) <!-- src: help/05/3651 -->
+* [Borehole log](borehole-logs/creating-borehole-logs.md)
+* [Well design](../navigating-the-geodin-workspace/objects/well-design-data.md)
+* [Data sequence](../data-collection/import/data-sequences.md)
+* [Samples](../navigating-the-geodin-workspace/objects/sample-data.md)
 
 ### Vertical scale
 
-**Use of the layout quick settings**
+Enter the vertical scale to use in the presentation.
 
-Enter the vertical scale to be used in the presentation.
+**Requirements:** the layout must contain at least one of: Borehole log/Borehole Tab, Well design, Data sequence, or Sample element.
 
-**Requirements in the layout**
+**Effect:** the layout quick setting is applied to all of the above element types present in the layout.
 
-The layout to be used has to contain at least one of the following graphic elements:
+### Axis scale — time axis
 
-1.  Borehole log/Borehole Tab
+Adjusts the time axis scale.
 
-2.  Well design
+**Requirements:** the layout must contain at least one measurement value graphic with diagram type [Time series](time-series-charts.md) selected.
 
-3.  Data sequence
+**Effect:** the time axis scale of all time series in the layout is affected.
 
-4.  Sample element
+### Axis scale — X-Axis
 
-**Results in the layout**
+Adjusts the X-axis scale of an XY diagram.
 
-The layout quick settings are used on the following graphic elements:
+**Requirements:** the layout must contain at least one measurement value graphic with diagram type [XY-diagram](layouts/x-y-diagrams.md) selected.
 
-1.  Borehole log/Borehole Tab
+**Effect:** all XY-diagrams in the layout apply the selected X-axis scale.
 
-2.  Well design
+### Axis scale — Y-Axis
 
-3.  Data sequence
+Adjusts the Y-axis scale of an XY diagram.
 
-4.  Sample element <!-- src: help/05/3653 -->
+**Requirements:** the layout must contain at least one measurement value graphic with diagram type [XY-diagram](layouts/x-y-diagrams.md) selected.
 
-### Axis scale time axis
-
-**Using layout interfaces**
-
-With this option the time axis scale can be adjusted
-
-**Requirements in the layout**
-
-The used layout has to contain at least one measurement value graphic. The diagram type [Time series](time-series-charts.md) has to be selected.
-
-**Results in the layout**
-
-The time axis scale of all time series in the layout will be affected. <!-- src: help/05/8992 -->
-
-### Axis scale X-Axis
-
-**Using layout interfaces**
-
-With this option the the X-Axis scale of a XY-diagram can be adjusted.
-
-**Requirements in the layout**
-
-The used layout has to contain at least one measurement value graphic. The diagram type [XY-diagram](layouts/x-y-diagrams.md) has to be selected.
-
-**Results in the layout**
-
-All XY-diagrams in the layout apply the selected X-Axis scale. <!-- src: help/05/9006 -->
-
-### Axis scale Y-Axis
-
-**Using layout interfaces**
-
-With this option the the Y-Axis scale of a XY-diagram can be adjusted.
-
-**Requirements in the layout**
-
-The used layout has to contain at least one measurement value graphic. The diagram type [XY-diagram](layouts/x-y-diagrams.md) has to be selected.
-
-**Results in the layout**
-
-All XY-diagrams in the layout apply the selected Y-Axis scale. <!-- src: help/05/9007 -->
+**Effect:** all XY-diagrams in the layout apply the selected Y-axis scale.

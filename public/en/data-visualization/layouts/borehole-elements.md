@@ -1,63 +1,19 @@
-
-<!--
-**Content status:** Auto-assembled from product documentation
-**Source quality:** B (Moderate (single source type))
-**Needs:** editorial review
--->
-
 # Borehole Elements
 
-**Borehole element** drawing type options: Graphic Log, Tabular Log, Log with Default. <!-- src: transcript/forms-templates-customization#borehole-elements -->
+The **Borehole log / Borehole tab** graphic element renders a borehole log inside an object frame: fill patterns, depth labeling, layer descriptions, and optionally a scaled tabular presentation. It supports three drawing types — **Graphic Log**, **Tabular Log**, and **Log with Default** — and automatically distributes across multiple pages when the chosen height scale requires it.
 
-Borehole element can be resized; a red outline indicates insufficient space for the description text. <!-- src: transcript/forms-templates-customization#borehole-elements -->
+For the creation walkthrough (drawing an object frame and adding the element), see [Creating Borehole Logs](../../borehole-logs/creating-borehole-logs.md). For general element properties shared across all layout elements (element name, drawing layer, z-order), see [Element Properties Reference](element-properties.md).
 
-Borehole scale can be set to 1:100, 1:200, etc.; or to a fixed depth interval (e.g., only show first 10 m); or "Fit to Page" (dynamic scale per object). <!-- src: transcript/forms-templates-customization#borehole-elements -->
+## Companion elements
 
-Depth interval can force a page break — setting end depth to 10 m causes the borehole to continue on page 2. <!-- src: transcript/forms-templates-customization#borehole-elements -->
+The following elements are typically placed alongside a borehole log in the same object frame. Each is described on its own page.
 
-Scale, interval, page break, and fit-to-page interact and must be balanced together. <!-- src: transcript/forms-templates-customization#borehole-elements -->
+- **Depth Scale** — add from the toolbar; can be placed left or right of the borehole log. See [Scale Bars and Depth Scales](../../scale-bars-and-depth-scales.md).
+- **Samples** — automatically connects to the borehole and moves with it (height-synchronised; no vertical misfit).
+- **Groundwater** — shows nothing if no groundwater data exists for the object. See [Groundwater Visualizations](../groundwater-visualizations.md).
+- **Well Design** — renders casing and filling visualization alongside the borehole profile.
 
-Borehole text description is driven by Text Macro > Build button. <!-- src: transcript/forms-templates-customization#borehole-elements -->
-
-Text macros for G1 ground description: most information sits inside the single "geological description" macro (unlike other object types which have separate petrography, color macros). <!-- src: transcript/forms-templates-customization#borehole-elements -->
-
-Template layout objects include pre-made borehole logs (with ground description/layer patterns), water level triangle indicators, and borehole design visualizations. <!-- src: transcript/forms-templates-customization#borehole-elements -->
-
-Borehole design display in templates can render the borehole with varying diameters, different casing types, different backfill materials, backfill grain size categories, and special features (concrete rings, piezometer boxes) at the correct depths. <!-- src: transcript/forms-templates-customization#borehole-elements -->
-
-Borehole logs drive the primary report output alongside CPT traces and multi-borehole comparison layouts. <!-- src: transcript/forms-templates-customization#borehole-elements -->
-
-## Depth Scale, Samples & Groundwater Elements
-
-**Depth Scale** element: add from toolbar; can be placed left or right of the borehole. <!-- src: transcript/forms-templates-customization#depth-scale-samples-groundwater-elements -->
-
-**Samples** element: automatically connects to the borehole and moves with it (height sync, no misfit). <!-- src: transcript/forms-templates-customization#depth-scale-samples-groundwater-elements -->
-
-**Groundwater** element: similar behavior; shows nothing if no groundwater data exists in the object. <!-- src: transcript/forms-templates-customization#depth-scale-samples-groundwater-elements -->
-
-**Well Design** element: for casing and filling visualization. <!-- src: transcript/forms-templates-customization#depth-scale-samples-groundwater-elements -->
-
-Water levels can be displayed in templates (e.g., triangle symbol at the water-level depth). <!-- src: transcript/forms-templates-customization#depth-scale-samples-groundwater-elements -->
-
-## Report Elements
-
-**Report element**: table-based element used for tabular output of general, layer, sample, or measurement data. <!-- src: transcript/forms-templates-customization#report-elements -->
-
-Report element data source: choose General Data, Layer Data, Samples > Geotechnical Borehole > specific data type (e.g., CU). <!-- src: transcript/forms-templates-customization#report-elements -->
-
-Report element columns: blue "+" button adds columns; each column has a Text Macro (which parameter to display) and a Heading. <!-- src: transcript/forms-templates-customization#report-elements -->
-
-Report element selectors can exclude rows by parameter conditions (e.g., skip values above/below threshold). <!-- src: transcript/forms-templates-customization#report-elements -->
-
-Report element conditional formatting: Column Properties > Presentation Options > set a condition + color (e.g., "if CU > 50, color row red"). <!-- src: transcript/forms-templates-customization#report-elements -->
-
-Report element can combine multiple report blocks in one layout (e.g., one general-data report and one measurement report side-by-side). <!-- src: transcript/forms-templates-customization#report-elements -->
-
-Report element can be exported directly from edit mode via right-click > Export as Excel or CSV. <!-- src: transcript/forms-templates-customization#report-elements -->
-
-Report element can also be exported from the layout overview without opening edit mode, via the Report Access button (produces an Excel export). <!-- src: transcript/forms-templates-customization#report-elements -->
-
-Report Type options: original data OR calculations (statistics, comparisons); the latter is more advanced. <!-- src: transcript/forms-templates-customization#report-elements -->
+***
 
 ## Working with borehole elements
 
@@ -69,11 +25,11 @@ Text descriptions for borehole elements are driven by the `Text Macro > Build` b
 
 Template layout objects include pre-made borehole logs (with ground description and layer patterns), water level triangle indicators, and borehole design visualizations. Borehole design displays can render the borehole with varying diameters, different casing types, different backfill materials, backfill grain size categories, and special features (concrete rings, piezometer boxes) at the correct depths.
 
+Borehole logs drive the primary report output, appearing alongside CPT traces and multi-borehole comparison layouts.
+
 ***
 
 ## Reference: Borehole log graphic element
-
-<!-- Editorial flag: legacy-sourced reference content below — verify against current GeoDin (Goal 4) -->
 
 The **Borehole log / Borehole tab** graphic element renders the borehole log with fill patterns, depth labeling, layer descriptions, and optionally a scaled tabular presentation. The log automatically distributes across multiple pages when the chosen height scale requires it (unless single-page scaling is selected). Use the page navigation icons to switch between pages.
 
@@ -85,7 +41,7 @@ The element can be moved and scaled inside the object frame. All other graphic e
 
 **Labeling with layer data:** Layer data descriptions are added on the right side of the borehole log. For layers with component descriptions, you can define whether component labeling occurs at the depth where the component is described. The option "Layer description only once" ensures that a layer split across pages is labelled only once.
 
-**Language selection:** A different language than the input language can be selected for text labeling (requires configured [Standards](#main-layers-and-fill-patterns)). Fill pattern presentation is not affected by language selection. Vertical text orientation and tag line styles can also be configured.
+**Language selection:** A different language than the input language can be selected for text labeling (requires configured [Standards](../../../configuration/ground-description-standards.md)). Fill pattern presentation is not affected by language selection. Vertical text orientation and tag line styles can also be configured.
 
 #### Graphical view
 
@@ -149,3 +105,17 @@ When displaying depth-oriented images in the borehole log element:
 #### Image header settings
 
 A header from the first image (smallest start depth) can be displayed above the image column, provided that upper and lower pixel positions for the header area were defined in the document description. Options include "Draw header", "Repeat on every page", and "Edit header range" to remove undesired margins.
+
+## Report Element
+
+The **Report Element** is the layout component for tabular output of general, layer, sample, or measurement data. For full details and the export workflow, see [Report Elements](report-elements.md).
+
+Key behaviors:
+
+- **Data source:** Choose General Data, Layer Data, Samples, or a specific measurement data type (e.g., CU).
+- **Columns:** The blue **+** button adds columns. Each column requires a Text Macro (which parameter to display) and a Heading.
+- **Row selectors:** Rows can be excluded by parameter condition (e.g., skip values above or below a threshold).
+- **Conditional formatting:** Column Properties → Presentation Options → set a condition and color (e.g., "if CU > 50, color row red").
+- **Multi-block layouts:** Multiple report blocks can be combined in one layout (e.g., one general-data report and one measurement report side by side).
+- **Export options:** Right-click in edit mode → Export as Excel or CSV; or use the Report Access button in the layout overview for an Excel export without opening edit mode.
+- **Report Type:** Original data (shows database values as-is) or Calculations (statistics, comparisons — more advanced).
