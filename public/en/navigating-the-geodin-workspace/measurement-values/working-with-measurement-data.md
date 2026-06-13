@@ -1,7 +1,9 @@
 
 # Working with Measurement Data
 
-### Measurement data
+This page is the working reference for the measurement value editor: entering and editing measurement values, the data sheet and additional information, the data model behind the tables, adding and managing data types, importing and exporting, and the time range controller.
+
+## Measurement data
 
 If an object is selected in the GeoDin Object Manager, for which measurement values can be entered, the method  ![Measurement value management](../../.gitbook/assets/icons/measurement-value-management.png) **"Measurement value management"** is available.
 
@@ -19,7 +21,7 @@ The basic use of the data input grid as well as the management of views is descr
 
 The parameter of a data type are arranged in so-called parameter groups. This option an be shown as a tab under the data entry grid, where the parameter columns are also displayed in groups. With the option turned off, this ordering is ignored and all data type parameters are shown. The number of displayed parameters can be further restricted by the choice of **"Measurement program"** which are a definable selection of named parameters that can be created for data types in the [Measurement program](working-with-measurement-data.md). In addition to the current measurement program there are the collections **"All parameters"** (no parameter restrictions) and **"Used parameters"** (display of parameters with values in the database). A further way to customize the display in the number and order of parameters is the use of the top left button to select the columns and moving the columns with the mouse.
 
-### Additional measurement information
+## Additional measurement information
 
 _**ATTENTION:**_ _Additional data for a measured value can only be attributed to an existing measured value. If additional information is entered although no measured value is available, it will not be included in the current data set. If an attributed measured value is deleted, its additional information is also removed._
 
@@ -95,7 +97,7 @@ Reference to the result
 
 Interpretation of the measured value
 
-### Location point link
+## Location point link
 
 Each data set is internally linked to a measurement point. This classification relationship can be changed in the measurement editor. If opened by clicking the icon, a list of all objects in the current group or query is shown.
 
@@ -103,7 +105,7 @@ After choosing a measurement point and the method (**Move** updates the classifi
 
 If several measurement points are selected when the reclassification is carried out, all these measurement points are reclassified.
 
-### Combine data sets
+## Combine data sets
 
 With many data sets you may encounter identical sample names, dates and times, although the contents (measured values) are different. This can occur when different laboratories have performed different analyses on the same samples and the values were imported into your database separately. In case such data sets belong together they may be combined. Upon starting this function the data sets are analyzed in the measurement value editor and a list is generated for those data sets, which can be combined. There is an option to include the sample name too.
 
@@ -113,9 +115,13 @@ By choosing **OK** the data sets will be combined.
 
 _**Attention:**_ _If parameters are present in several data sets with different values, then the data sets will not be combined. If the values are identical however then the data sets will be combined._
 
-### Measurement value editor options
+## Measurement value editor options
 
 On several tabs there are options to control the way you use the measurement value editor.
+
+***
+
+## Reference: Data model and system tables
 
 ### Data model
 
@@ -337,7 +343,7 @@ Data types are groups of measurable parameters. The composition of each group ma
 
 The data types groundwater chemistry and groundwater dynamics are assigned to the investigation type GWBR-Filter, although both may also be assigned in another combination to another investigation type (e.g.: groundwater chemistry, groundwater dynamics and groundwater dynamics to the investigation type Water Supply Well).
 
-### Adding data set records
+## Adding data set records
 
 **\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_**
 
@@ -389,7 +395,7 @@ By entering the starting time the start of the measurement series is defined. Th
 
 Optional the parameters of the target type values can be defined for a presetting.
 
-### Datatype Manager
+## Datatype Manager
 
 The method **"Data Type Manager"** is available at the database level. It is the most important tool for defining and configuring options for measurement data collection. In particular you may define here which data types (thematic groups of measurement parameters) and which measurement parameters are to be used in the current database.
 
@@ -456,13 +462,33 @@ By clicking the **Create** button the data type will be added to the database. T
 
 Before measurement values can be entered, the relevant data type must be added to the specific database. This is a one-time setup step per database.
 
-**Step-by-step:**
+{% stepper %}
+{% step %}
+#### Select the database
 
-1. In the GeoDin Object Manager, select the database entry (not a project).
-2. Open the **Data Type Manager** method (available at the database level).
-3. In the Data Type Manager, click the blue **+** button (right-hand side) to select a data type from the system configuration — for example, _Groundwater Chemistry_.
-4. In the parameter selection screen, tick the parameters required (or select a saved **Measurement Program** from the drop-down).
-5. Click **Create** (German: _Erstellen_). GeoDin writes the required database tables and registers the data type. The data type is now available for all objects in this database.
+In the GeoDin Object Manager, select the database entry (not a project).
+{% endstep %}
+{% step %}
+#### Open the Data Type Manager
+
+Open the **Data Type Manager** method (available at the database level).
+{% endstep %}
+{% step %}
+#### Choose a data type
+
+In the Data Type Manager, click the blue **+** button (right-hand side) to select a data type from the system configuration — for example, _Groundwater Chemistry_.
+{% endstep %}
+{% step %}
+#### Select parameters
+
+In the parameter selection screen, tick the parameters required (or select a saved **Measurement Program** from the drop-down).
+{% endstep %}
+{% step %}
+#### Create the tables
+
+Click **Create** (German: _Erstellen_). GeoDin writes the required database tables and registers the data type. The data type is now available for all objects in this database.
+{% endstep %}
+{% endstepper %}
 
 {% hint style="info" %}
 If the data type does not appear in the system configuration list, use **Add data type to the system configuration** to import its definition from the database first.
@@ -516,7 +542,7 @@ Sample; A measurement point of this type is generated when a data record for an 
 
 Filter; A measurement point of this type is generated when a filter is created in the well design table of an object.
 
-### Import
+## Import
 
 Use the method  ![import measurement values](../../.gitbook/assets/icons/import-measurement-values.png) **"import measurement values"**
 
@@ -598,7 +624,7 @@ The first row in the paragraph \[Import measure links] contains the column name 
 
 Invalid links will be highlighted in pink. Those links can occur if you change the data source or choose another data type after the parameters were linked. You can remove these invalid links by using the button .
 
-### Export
+## Export
 
 You will find this method within the method collection **"Publish and export"**.
 
@@ -618,7 +644,7 @@ In addition to values and general of the measurement point, internal GeoDin fiel
 
 In addition to values, general data like coordinates and depth information are exported.
 
-### Time range controller
+## Time range controller
 
 For data types with measurement values with a time component an optional time range controller can be used to navigate data. This is useful for quickly getting an overview for particular time periods, by only loading the necessary data sets. Additionally, the user has feedback on the amount, distribution, storage requirements and loading time.
 
@@ -644,13 +670,17 @@ It is simplest to choose a time range with the slider controls. The time range s
 
 Above the time range controller several useful pieces information are displayed. The time range is shown (date/time from-to) and below this the number of data sets, memory usage and the time to load the data sets. When using the controller these values are estimated, so that the user receives feedback before a selection is made (this may depend upon other factors). After defining a time interval (i.e. after making a selection with the mouse and releasing) the values shown are calculated. Two small vertical lines also show the currently selected time range.
 
-### Import measurement data
+## Import measurement data
 
 This button can be used to import measurement values to a parent dataset.
 
 The button is not available on groups or queries for several measuring points, but only if you have selected a single measuring point in the GeoDin Object Manager.
 
 Detailed information on the settings in the import dialogue can be found in the chapter [Import](../../data-collection/import.md).
+
+***
+
+## Reference: Project and measurement-value tables
 
 ### Data model (moved from Databases pages)
 
@@ -723,7 +753,7 @@ _Additional variant rows recovered from the former Databases-page copy of “Mea
 | INVID | Measurement point ID number (format below) |
 | INVID | Measurement point ID number |
 
-### Display options
+## Display options
 
 Using these options you may control how measurement values are displayed to reflect their contents.
 
@@ -749,7 +779,7 @@ The letters can be combined. For example the term "NO3>20@BI" in the color red r
 
 An expression may contain more than one command if a semi-colon ";" is used to separate them (for example: "CL>50; NO3>10@BI"). Hence it is relatively simple for a user to set up a color scheme for use during data entry.
 
-### Input options
+## Input options
 
 To support the data entry two options are available.
 
