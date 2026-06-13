@@ -1,6 +1,8 @@
 
 # Fill Patterns and Symbols
 
+## Editing fill patterns and symbols
+
 All the fill patterns and symbols available in the GeoDin system are displayed in the object manager of the system objects (via the **System** tab).
 
 This is based on the files stored in the SOURCE folder of the GeoDin installation. The folder contains files with the extension:
@@ -25,11 +27,11 @@ _**Attention:**_ _The fill pattern \[Empty#0]\[TYPNULL]\[$00FFFFFF] must be defi
 _The fill pattern table INTENG.SGN (Source INTENG.SGA) contains the English version of the BS5930 fill patterns and symbols and is therefore identical with the fill pattern table GEODDEF.SGN (Source GEODDEF.SGA). The graphical representation of boreholes uses the INTENG fill pattern table for English language objects. Hence changes to the GEODDEF fill pattern table do not affect the display of boreholes. When filling polygons and other areas in the layout editor, the signature table depends on the selection in the corresponding fill dialogue._\
 &#xNAN;_&#x46;or special object types (for example "Geotechnical borehole" or "Botswana Dep. of Geol. Survey") there are custom made fill pattern files (GEOTECH1 and BOTSWANA)._
 
-### Dictionary properties
+## Dictionary properties
 
 In addition to a list of codes and associated fill patterns there are general settings for each dictionary.
 
-**Numbers are converted into amounts**
+### Numbers are converted into amounts
 
 \
 This option results, that the used keys can be combined with postpositive numbers. These allow quantification or a qualification of the code.
@@ -50,7 +52,7 @@ The addition of digits is not automatically permitted for every key, but is also
 
 so1 Röt 1
 
-**Codes may be combined**
+### Codes may be combined
 
 \
 With this option it can be selected, that single codes of the dictionary can be combined without a separator while entering. This function is used in the dictionary (SSG) Colour, for example, to make it easier to enter different mixed colours:
@@ -59,7 +61,7 @@ With this option it can be selected, that single codes of the dictionary can be 
 
 In the dictionary color mixtures may be entered using combining individual codes: d (dark) and gr (gray) giving dgr to produce dark gray.
 
-**Recoding during data input**
+### Recoding during data input
 
 This option allows keys to be re-coded during input. This can be useful if you need to use older documents for input where outdated keys have been used. To avoid having to constantly check whether the key is out of date and needs to be replaced with a newer key, you can proceed as follows:
 
@@ -81,16 +83,16 @@ Calling up the old data record and using the Save function in the shift input do
 
 Alternatively, you can also use the [Data checks and calculations](../data-analysis/calculation-engine/data-checks-and-validations.md) method and the Find and Replace function contained therein in shift descriptions to replace old abbreviations.
 
-**First separator divides categories**
+### First separator divides categories
 
 From the set of delimiters defined for the current dictionary (in the input line to the right of the list of options), the first character can be defined as a division between categories. For example, the semicolon in the SSG Petrography dictionary is used to separate main and secondary components. This option is mainly used in dictionaries with keys to create signatures, as the main components encoded after the selected separator are excluded from the signature.
 
 \
-**Text in apostrophes not allowed**
+### Text in apostrophes not allowed
 
 If this option is switched on, it is no longer possible to enter comments in single inverted commas. This prevents plain text descriptions in input fields with key lists, as these also make it more difficult to analyse the otherwise coded entries. If the option is switched on, key and free text in inverted commas can be combined in the input field.
 
-**Separator**
+### Separator
 
 In the "Separator" input field, all permitted separators are stored in one input field when entering multiple keys. The separators defined for the dictionary may not be used in any key in the dictionary.
 
