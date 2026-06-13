@@ -21,5 +21,3 @@ For the related concepts, see also:
 ## Compulsory fields
 
 Compulsory fields (e.g. `Method` in general data) appear in a darker purple colour. Saving a record without a compulsory field triggers a validation error that names the missing field — the record cannot be persisted until the field is supplied.
-
-<!-- src: transcript/data-model-architecture#borehole-location-data-model -->
