@@ -22,5 +22,3 @@ For the general import workflow that applies to General Data, Samples, and Measu
 ## Working with AGS files
 
 Most of the user effort with AGS is upstream — getting the AGS file format correct. Once the file is well-formed, GeoDin handles the import end-to-end.
-
-<!-- src: transcript/data-import-migration#ags-format-support -->
