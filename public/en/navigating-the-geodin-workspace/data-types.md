@@ -1,10 +1,17 @@
+---
+description: >-
+  Reference list of the (G1) Location Data Types available in GeoDin for
+  geotechnical, geological, and laboratory data — name, short name, long
+  name/description, and which are complex data types.
+---
+
 # Data Types
 
 This page provides an overview of the data types available in GeoDin for geotechnical, geological, and laboratory data collection.&#x20;
 
 The list below is based on the official data type definition and includes the data type name, short name, and description as defined in GeoDin.
 
-### What are (G1) Location Data Types
+## What are (G1) Location Data Types
 
 G1 data types define how specific geotechnical and laboratory test results are stored, structured, and visualized in GeoDin.\
 \
@@ -18,9 +25,9 @@ Each data type is identified by:
 
 Some data types are marked as **complex data types**, meaning they contain structured sub‑data rather than single values.
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt="GeoDin Measurement data view with the data type tabs and the Water Content Test label highlighted"><figcaption>In the <strong>Measurement data</strong> view, each data type appears as a tab labelled with its <strong>short name</strong> (e.g. <code>(G1) WC</code>), while the corresponding <strong>long name</strong> (e.g. Water Content Test) is shown for the selected tab.</figcaption></figure>
 
-### Available (G1) Location Data Types
+## Reference: Available (G1) Location Data Types
 
 | Data type       | Short Name | Long Name                                                 | Notes                      |
 | --------------- | ---------- | --------------------------------------------------------- | -------------------------- |
