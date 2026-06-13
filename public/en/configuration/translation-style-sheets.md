@@ -1,13 +1,9 @@
 
-<!--
-**Content status:** Auto-assembled from product documentation
-**Source quality:** B (Moderate (single source type))
-**Needs:** needs legacy verification, needs screenshots, needs examples, editorial review
--->
-
 # Translation Style Sheets
 
-### System variables
+A dictionary's translation behaviour is governed by two layers: special **system variables** that control how keys are converted to plain text and graphics, and the **standards** that hold per-key signatures and translations across languages.
+
+## System variables
 
 In addition to the actual keys, special system variables can be used in a dictionary to control the plain text translation and graphical conversion of keys. The system variables start with the prefix \$TR and can be edited or entered like any other key. The system variables are displayed at the end of the key list.
 
@@ -79,9 +75,9 @@ The variable \$TRNUMB2 contains the character \'
 
 When translating the coding into DIN form (as one of the possible standards), the standard text for the key fs is first determined (in this case identical to the key =fs) and then extended with the character \'. The result of the translation is thus
 
-fs\' <!-- src: help/10/3177 -->
+fs\'
 
-### Standards
+## Standards
 
 The GeoDin dictionaries can be managed **multilingually and for multiple standards**, i.e. for each key of a dictionary
 
@@ -107,7 +103,7 @@ The back translations for the respective keys in the various languages can be en
 
 The following signature tables are assigned to the standards:
 
-**Standard Signature table**
+### Standard Signature table
 
 DIN (german) DIN4023
 
@@ -140,5 +136,3 @@ Fig. 1 - Display of the signature and text in accordance with DIN
 Fig. 2 - Display of the signature in accordance with DIN, labelling in English
 
 Fig. 3 - Representation of the signature in accordance with British Standards, labelling in English
-
- <!-- src: help/10/3180 -->
