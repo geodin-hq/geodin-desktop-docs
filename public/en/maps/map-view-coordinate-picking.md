@@ -10,7 +10,7 @@ For configuring the coordinate system itself (EPSG codes, the `G1_EPSG.GSD` dict
 
 ## Displaying a borehole on the map
 
-Once coordinates and a coordinate system are entered, a borehole can be displayed on a map via the **map preview** button in the right-hand ribbon. <!-- src: transcript/maps-gis-integration#map-view-coordinate-picking -->
+Once coordinates and a coordinate system are entered, a borehole can be displayed on a map via the **map preview** button in the right-hand ribbon.
 
 ## Picking coordinates by clicking
 

@@ -1,7 +1,8 @@
-
 # Digitizing Objects
 
-### Properties
+GeoDin Maps lets you select, search, and display GeoDin objects on the map, tune how each layer behaves, and draw new point, line, and area objects directly into your database. This page is the reference for the map window's object tools — layer properties, the detail and search panels, mini graphics, and the four-step object digitisation flow.
+
+## Reference: Properties
 
 **Objects selectable**
 
@@ -11,19 +12,19 @@ Use this option to make objects from this layer selectable. Uncheck this option 
 
 Select this option to display the selected layer in the overview map in the lower left corner.
 
-### Display for object data
+## Reference: Display for object data
 
 In this view, details about the currently selected GeoDin objects in the map are displayed. The layouts used can contain links to other layouts, making it possible to browse the detail data of the objects.
 
 Elements with links can be identified by their colour and the different mouse cursor. Click on the object link to display further detailed information about the object.
 
-### Quick search
+## Reference: Quick search
 
 In the Quick Search field, simple searches for objects on the map can be made to navigate to these objects. After entering the search key word, a dropdown list shows all items where the condition is true. By pressing the ENTER-Key or by clicking on the symbol to the right , the object can be highlighted.
 
 The search field can be configured to different searches (depending on the layer), as described in **Quick search**.
 
-### Preferences
+## Reference: Preferences
 
 **Draw scalebar**
 
@@ -35,11 +36,11 @@ Elements selected in the GeoDin object manager (GOM) can be selected to blink in
 
 Only objects which can be displayed in the map will blink, objects not in the map are ignored.
 
-### Adding map data to the document management
+## Reference: Adding map data to the document management
 
 Preparing GIS data for GeoDin Maps is covered in [Getting Started with Maps](getting-started-with-maps.md).
 
-### Search in polygons
+## Reference: Search in polygons
 
 You can use this tool to make a location-based selection of objects. All objects in a previously selected polygon of a surface layer are selected.
 
@@ -65,7 +66,7 @@ By clicking on \<Select objects> the selected objects are displayed at the node 
 
 If a layout is displayed in the [Display for object data](digitizing-objects.md) of the map, it is filled with the data of the found objects. It is recommended to use a layout with [Multi object frame](../data-visualization/layouts/object-frames.md) if more than one object is found by the "Search in polygons".
 
-### Mini graphics for the layer
+## Reference: Mini graphics for the layer
 
 With the option "**Mini graphics**" you can place your objects in the map layouts of your choice, e.g. showing a _drill log_ or a _measurement diagram_.
 
@@ -101,7 +102,7 @@ _\[Draw frame]_
 
 Check the box to draw a frame around the layout whose color and line width you can specify.
 
-### Digitise object
+## Reference: Digitise object
 
 With the function "Digitise objects" it is possible to draw point, line and area objects directly in GeoDin Maps and save them as objects.
 

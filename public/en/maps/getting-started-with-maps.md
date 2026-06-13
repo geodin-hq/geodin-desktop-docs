@@ -1,7 +1,4 @@
-
 # Getting Started with Maps
-
-### Maps
 
 Maps can be edited in the **"Maps Modul"** window.
 
@@ -11,8 +8,6 @@ The window is divided into 4 areas:
 2. On the left, the different layers of the map are displayed in the **Legend**.
 3. In the center, the map is displayed. Here, the different operations with the map data can be performed.
 4. On the right side, [Display for object data](digitizing-objects.md) details are displayed in predefined layouts.
-
-### Adding map data to the document management
 
 ## Preparing GIS data for GeoDin Maps
 
@@ -47,7 +42,7 @@ Both user-defined and system queries can be shown in the map window. All the res
 
 Additionally specific layouts can be defined in the query for displaying the relevant data. Choose the button **Favourite layouts** to define which layouts are to be used for the query (these need to be multi object capable, e.g. time lines from several objects) or the results of the query (single object frame layouts).
 
-### Interpolation and contour lines from query result fields
+## Interpolation and contour lines from query result fields
 
 If a query includes numeric result fields (e.g. chloride concentrations, groundwater levels), GeoDin Maps can generate an interpolation grid from the object locations and attribute values.
 
@@ -66,7 +61,7 @@ From the interpolation result layer, right-click and choose **Generate contour l
 Contour lines generated in GeoDin Maps are saved as Shape files. Use the EPSG code in the layer's **Display Options** (Darstellungsoptionen) to ensure the exported Shape file has the correct coordinate system.
 {% endhint %}
 
-### Offline tile caching for OSM base maps
+## Offline tile caching for OSM base maps
 
 An OpenStreetMap (OSM) tile layer can be downloaded and cached locally for offline use — for example, on a field laptop without a reliable internet connection.
 
@@ -77,7 +72,7 @@ An OpenStreetMap (OSM) tile layer can be downloaded and cached locally for offli
 3. Right-click the OSM layer in the Legend and choose the option to **cache tiles offline** (German: _Kacheln offline speichern_).
 4. GeoDin downloads and stores the tiles in a local cache. The map displays from the cache when no internet connection is available.
 
-### Printing and exporting maps (Grafik bearbeiten)
+## Printing and exporting maps (Grafik bearbeiten)
 
 To produce a print-quality map output with a north arrow, scale bar, and grid lines:
 
@@ -98,7 +93,7 @@ The map print editor is the same layout editor used for borehole logs and cross-
 Shape layers displayed in Maps must have their EPSG code set in **Display Options** (Darstellungsoptionen). Without a valid EPSG code, the layer will appear in the wrong location on the map.
 {% endhint %}
 
-### Triangulate
+## Triangulate
 
 Triangulation is the division of a surface into triangles and their measurement.
 
@@ -118,7 +113,7 @@ The Delaunay triangulation method creates a triangle mesh from a set of points, 
 
 In Voronoi diagrams the space is divided into regions, which are determined by their center - the respective point from the point set. The division of a region is based on the number of all spatial points that are closer to the center of that region than to any other center.
 
-### Choose object type and destination project
+## Choose object type and destination project
 
 Defining the type of object and the target object is the first step in digitising objects in the maps module. Various settings can be made in a new window that opens when the function is started.
 
