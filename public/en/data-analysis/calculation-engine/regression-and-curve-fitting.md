@@ -1,7 +1,13 @@
 
 # Regression and Curve Fitting
 
-#### Presentation options
+This page is the reference for the time-series and measurement-value series properties used in regression and curve-fitting work: the series **presentation options** (curve, bar, symbol and table drawing), the measurement-editor **toolbar functions**, the **Ion balance** calculation, and the **regression calculation** branch of a time-series element. Each section below describes one property branch or method; choose a subordinate branch to edit its detail properties.
+
+***
+
+## Reference: Series presentation
+
+### Presentation options
 
 Optionally in a time line series presentation curves, bars and symbols (in any combination) can be used. If no presentation type is chosen, the series is not displayed (this can be sensible for series, which are used for aggregations).
 
@@ -11,11 +17,11 @@ By default data records on a curve are ignored if the chosen parameter has no va
 
 For the presentation type <**Bar chart**> the bar width can be selected. Like for the presentation type <**Symbols**>, here you can select, whether this should be drawn in the areas, in which samples were only taken seldomly (i.e. for interruptions of the curve).
 
-#### Curve
+### Curve
 
 In this branch no properties can be selected. Choose a subordinate branch, to edit detail properties.
 
-#### Line
+### Line
 
 Additionally to presenting the series in a curve, bar or symbol any number of calculated (horizontal) lines can be added to a series.
 
@@ -27,7 +33,7 @@ A line or outline is displayed in the chosen Color and Line type. To select a co
 
 The line thickness can be chosen in mm or pixels. The selection should be done in mm by preference. In this case the thickness of the lines in the preview is not equal to the print output and not depending on the used print resolution. The selection of a line thickness in pixels is only suitable for graphs, which are only viewed on the screen.
 
-#### Drawing type
+### Drawing type
 
 Selection of the presentation in graphic (Curve, Bar chart, Symbols and Curve + Symbols) or tabular form (Table) of the single measurement values.
 
@@ -35,7 +41,7 @@ The presentation type **Curve** starts with the first and ends with the last mea
 
 Using the presentation type **Bar chart** the values characterize a measurement sector (interval), so that the first value is valid for the section from 0,00m to the first measurement value.
 
-#### bar / curve
+### bar / curve
 
 The option -Close line to axis- is illustrated in the following graph. In the left hand graph the option is deactivated, the surrounding line of the bar graph is not connected with the 0-axis at the starting and ending point.
 
@@ -43,7 +49,7 @@ The presentation of a curve can optionally be interrupted in not investigated ar
 
 The possibility to colorize the view using a diagram as legend is described in detail in the chapter **color coding**.
 
-#### Table
+### Table
 
 The tabular presentation of a single measurement value as a text in a certain depth is possible as a combination with a curve or a bar chart and also as a pure table. For this choose the option **-Show individual values-**.
 
@@ -65,7 +71,7 @@ In case the measurement value is =0, the values are only labeled with n.i., if t
 
 For the presentation of the measurement values as text also the Font and the type of Intermediate lines can be adjusted.
 
-#### color coding
+### color coding
 
 Beside the fixed colorization of a curve or bar graph with a fixed signature and color, these presentations can be colored using a legend depending on the complex conditions.
 
@@ -85,7 +91,9 @@ The method to define areas in diagrams is described in chapter **Surfaces**. Sel
 
 Chose this option, if the actual object contains an already calculated series with RGB-values. Select the chosen series. The way to calculate data sequence series is described in chapter [Calculating sequences](../../data-collection/import/data-sequences.md)
 
-#### Top tool bar
+## Reference: Measurement editor toolbars
+
+### Top tool bar
 
 The top toolbar (default position - it may be moved elsewhere in the window) offers general editing functions:
 
@@ -113,15 +121,15 @@ Data are reloaded. Changes to the current dataset are first saved and then the g
 
 Clipboard functions (the key sequences **Ctrl + X**, **Ctrl + C** and **Ctrl + V** are available).
 
-#### Right tool bar
+### Right tool bar
 
 The second menu strip offers functions for the special editing, navigation and changing settings. This menu strip can also be repositioned (by default it is on the right hand side).
 
-#### Navigation
+### Navigation
 
 With the navigation arrows you can move around the table row-wise to the first, previous, next and last row (from top to bottom).
 
-#### Excel export
+### Excel export
 
 **\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_**
 
@@ -143,9 +151,9 @@ The number of parameters for export can be set by the choice of a measurement pr
 
 <**Name tables after measurement points**> default setting is yes/checked - activating this option names each table tab after the measurement point.
 
-#### Ion balance
+## Reference: Ion balance
 
-## **Calculation of the ion balance**
+### Calculation of the ion balance
 
 The following parameters are used to calculate the ion balance:
 
@@ -183,7 +191,7 @@ N = internal number
 5. If nitrite is not analyzed, but nitrite N, then is factorized and used
 6. If phosphate is not analyzed, but phosphate P, then is factorized and used
 
-## **Preparing the calculation**
+### Preparing the calculation
 
 Seven main components and six secondary components are used in the calculation. Before calculation the process is checked with the available data.
 
@@ -205,13 +213,15 @@ Error = cations - anions / 0.5 \* ( cations + anions)
 By values less than 5 mmoleq for the total mineralization the ion balance is plausible, if the absolute error is less than 0.05.\
 By values more than 5 mmoleq for the total mineralization the ion balance is plausible, if the absolute error is less than 0.02.
 
-#### Curve type
+## Reference: Regression and curve fitting
+
+### Curve type
 
 Here you can select the way the displayed points are connected.
 
 For curves, the curve quality can be set. This value determines how many interpolated points are calculated. This value has a considerable influence on the duration of the calculations.
 
-#### Regression calculation
+### Regression calculation
 
 With the help of a regression calculation you aim to find a relationship between a response (dependent) variable and possible predictor(s) (independent) variable(s) by the method of least squares.
 
@@ -233,11 +243,11 @@ Set this option if you wish to use time as an influencing factor.
 
 The time-stamp of the measurements is interpreted as a numerical value and used for the regression analysis just like one of the the other influencing factors. This option should be used when time dependent relationships between the measurement size exist.
 
-#### Input magnitude
+### Input magnitude
 
 Please select a measurement size from an existing time series element. This will be considered as a dependent variable y, which is the target of the the regression approximation.
 
-#### Effective size
+### Effective size
 
 **Series**
 
@@ -247,7 +257,7 @@ Choose the independent variable source which will be used in the regression calc
 
 For the regression calculation it is necessary to analyse the time of each measurement for the source series. Each influencing factor can include a time offset in order to smooth out irregularities in measurement intervals. A time offset of zeo days is only possible in the regression analysis for measurement values taken oin the same day.
 
-#### Result text
+### Result text
 
 You can position the results of the regression analysis here as freely positionable text.
 
@@ -263,7 +273,7 @@ Define the relative position of the text.
 
 The text generated may have large variations in length. This can be truncated when this option is set.
 
-#### Event
+### Event
 
 Events generated by a time-series graphic using a regression analysis, are not evaluated directly but may be analysed using the following options.
 
