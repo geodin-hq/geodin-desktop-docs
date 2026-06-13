@@ -1,11 +1,16 @@
-
-<!--
-**Content status:** Auto-assembled from product documentation
-**Source quality:** B (Moderate (single source type))
-**Needs:** needs legacy verification, needs screenshots, needs examples, editorial review
--->
+---
+description: Query Builder Reference — every node and field in the GeoDin sub-query definition, from the table list and FROM clause to display fields and website caching.
+---
 
 # Query Builder Reference
+
+The Query Builder defines a GeoDin sub-query as a set of individual node definitions — table list, FROM clause, conditions, result and display fields — which GeoDin combines into a full SQL statement. This page is the reference for each node in that definition: what it configures and the syntax it accepts. Use it when you are building or editing a query and need to know what a specific node does.
+
+***
+
+## Reference: Query Builder nodes
+
+Each subsection below documents one node of the sub-query definition, in the order they appear in the builder.
 
 ### Tables
 
@@ -19,7 +24,7 @@ dbo.GeoDin_LOC_LOCREG
 
 To avoid having to specify the schema replacement for each table, it is possible to store the schema of the GeoDin tables in the database connection configuration **Configuration** for user databases.
 
-***Note:*** *Alias names given in the FROM statement (for example for sub-queries) may not be included here. Otherwise, the schema extension will be added to the alias and the statement will fail.* <!-- src: help/QB/6894 -->
+***Note:*** *Alias names given in the FROM statement (for example for sub-queries) may not be included here. Otherwise, the schema extension will be added to the alias and the statement will fail.*
 
 ### Configuration
 
@@ -49,11 +54,11 @@ If the query leads to an error as default an error message is displayed. You can
 
 1.  -Use DISTINCT for shape export-
 
-If the query is used to create a shape file, you can select here if a SELECT DISTINCT or a \"simple\" SELECT command should be used for the shape export. <!-- src: help/QB/6898 -->
+If the query is used to create a shape file, you can select here if a SELECT DISTINCT or a \"simple\" SELECT command should be used for the shape export.
 
 ### Condition
 
-This section of the definition of system queries can be used optional to limit the results of the query. This section is comparable to the WHERE statement of a SQL query and is added automatically to the database query. Add in the list one or more entries to edit. <!-- src: help/QB/6920 -->
+This section of the definition of system queries can be used optional to limit the results of the query. This section is comparable to the WHERE statement of a SQL query and is added automatically to the database query. Add in the list one or more entries to edit.
 
 ### Or
 
@@ -73,6 +78,7 @@ Example using the coordinates of a measurement point (OR operator):
 
 The query shall find all measurement points where either the X-coordinate (XCOORD) is higher than 100 or the Y-coordinate is higher than 50. The conditions would be:
 
+```
  IF
 
  XCOORD \> 100
@@ -80,9 +86,11 @@ The query shall find all measurement points where either the X-coordinate (XCOOR
  OR
 
  YCOORD \> 50
+```
 
 The example can be extended to demonstrate the search of objects whith their coordinates (OR and AND-Relation). The query finds all measurement points with X-coordinates higher than 100 and less than 200 or with Y-coordinates higher than 50 and less than 100:
 
+```
  IF
 
  XCOORD \> 100
@@ -94,9 +102,11 @@ The example can be extended to demonstrate the search of objects whith their coo
  XCOORD \> 50
 
  YCOORD \< 100
+```
 
 If the conditions for both the X-Coordinates and the Y-Coordinates must match, the conditions are entered in the second level (AND) of the query:
 
+```
  IF
 
  XCOORD \> 100
@@ -105,7 +115,8 @@ If the conditions for both the X-Coordinates and the Y-Coordinates must match, t
 
  YCOORD \> 50
 
- YCOORD \< 100 <!-- src: help/QB/6922 -->
+ YCOORD \< 100
+```
 
 ### And
 
@@ -189,7 +200,7 @@ If you select a second condition for the data field GeoDin_LOC_LOCREG.YCOORD (No
 
 **Using the parameter \$%SYSDATE\$**
 
-You can use \$%SYSDATE\$ as placeholder for the date parameter, to select the current date as default value. Also mathematical terms with the macro \$%SYSDATE\$ are possible, e.g. \$%SYSDATE\$-7 to select the same day one week ago. <!-- src: help/QB/6926 -->
+You can use \$%SYSDATE\$ as placeholder for the date parameter, to select the current date as default value. Also mathematical terms with the macro \$%SYSDATE\$ are possible, e.g. \$%SYSDATE\$-7 to select the same day one week ago.
 
 ### View fields
 
@@ -219,15 +230,15 @@ The text macros are implemented in exactly the same way as in a template, hence 
 
 \$GeoDin_LOC\_ ZMGENINF. SHORTNAME \$ (\$GeoDin_LOC_ZMGENINF.PURPOSE \$)
 
-When using a text macro an additional macro must be defined that is used when the macro is refreshed in the GOM. This occurs whenever general data is edited and saved. At this time the object loaded is used to resolve the macro. The initial query nor the data record that provides the entry in the GOM, since this is not necessary and would only unnecessarily use memory. The macro for the update must be created as in a template with field references to the object. Usually the preceeding table names are omitted. <!-- src: help/QB/6934 -->
+When using a text macro an additional macro must be defined that is used when the macro is refreshed in the GOM. This occurs whenever general data is edited and saved. At this time the object loaded is used to resolve the macro. The initial query nor the data record that provides the entry in the GOM, since this is not necessary and would only unnecessarily use memory. The macro for the update must be created as in a template with field references to the object. Usually the preceeding table names are omitted.
 
 ### Sorting fields
 
-Here additional data fields can be selected as additional sorting criteria for the query results (i.e. independent from the displayed fields). A sorting field is defined by using \<tablename\>.\<columnname\>. An ORDER BY command is automatically added to the SQL statement when using the sorting fields. Additionally you can define, if the sorting is used for execution in the object manager or in a layout. <!-- src: help/QB/6951 -->
+Here additional data fields can be selected as additional sorting criteria for the query results (i.e. independent from the displayed fields). A sorting field is defined by using \<tablename\>.\<columnname\>. An ORDER BY command is automatically added to the SQL statement when using the sorting fields. Additionally you can define, if the sorting is used for execution in the object manager or in a layout.
 
 ### Result fields
 
-Result fields are added to the data field list of the SELECT statement and define the structure of the result data. A result field is defined by \<tablename\>.\<columname\>. <!-- src: help/QB/6958 -->
+Result fields are added to the data field list of the SELECT statement and define the structure of the result data. A result field is defined by \<tablename\>.\<columname\>.
 
 ### Sub-query
 
@@ -257,7 +268,7 @@ Here, the SQL command is displayed based on the current configuration of the que
 
 **Query type of an object frame query**
 
-When editing a [Object frame query](conditions-and-operators.md) you can choose between defining a structured template or an entire SQL statement. A SQL statement allows all possibilities of data selection (e.g. SELECT COUNT(Datafield) AS GCCOUNT FROM table), but is probably not executable in all database types. Generally a structured template is preferrable. <!-- src: help/QB/6975 -->
+When editing a [Object frame query](conditions-and-operators.md) you can choose between defining a structured template or an entire SQL statement. A SQL statement allows all possibilities of data selection (e.g. SELECT COUNT(Datafield) AS GCCOUNT FROM table), but is probably not executable in all database types. Generally a structured template is preferrable.
 
 ### Link (FROM)
 
@@ -265,7 +276,7 @@ The Link is the FROM clause of an SQL statement. The information can be collecte
 
 The definition or structure of the FROM clause may vary between different database systems due to the specifications of the specific SQL syntax.
 
-***Hint:*** *It may be helpful to create the query first in a database program using a graphical query editor. Then, the FROM clause of the statement can be copied here (Example: The query editor in MS Access)* <!-- src: help/QB/6976 -->
+***Hint:*** *It may be helpful to create the query first in a database program using a graphical query editor. Then, the FROM clause of the statement can be copied here (Example: The query editor in MS Access)*
 
 ### Restricting fields
 
@@ -289,12 +300,13 @@ The query is restricted by using the project ID and the object ID. The restricti
 
 The query is restricted by using the measurement point ID. The restricting field INVID has to be filled.
 
-The columns have to be selected in the format \<tablename\>.\<columnname\> and have to be part of the result of the query. <!-- src: help/QB/6978 -->
+The columns have to be selected in the format \<tablename\>.\<columnname\> and have to be part of the result of the query.
 
 ### Display field
 
 The display fields define which database fields are used for naming the query results in the GeoDin object manager. This way, the name can be put together from several fields. One commonly used database field is the object name LONGNAME. But you can also use combined names like name and depth.
 
+```
  Database
 
  DemoDB
@@ -320,6 +332,7 @@ The display fields define which database fields are used for naming the query re
  Measurement points
 
  Database
+```
 
 **Data field name**
 
@@ -331,18 +344,18 @@ The characters entered here are appended to the content of the data field as \"e
 
 **Sort criteria**
 
-Select the sorting sequence for this data field. An ORDER BY statement is automatically added to the SQL statement. <!-- src: help/QB/10756 -->
+Select the sorting sequence for this data field. An ORDER BY statement is automatically added to the SQL statement.
 
 ### Portal properties
 
 ### Website properties
 
-Here you set the resolution, the refresh interval, and a background colour for the website. You can also select an HTML template for the website. <!-- src: help/QB/11069 -->
+Here you set the resolution, the refresh interval, and a background colour for the website. You can also select an HTML template for the website.
 
-**Keep layout in cache:** when this box is ticked, the layout is kept in the cache for a set time. Depending on the layout, this can noticeably shorten the server's response time. <!-- src: help/QB/11387 -->
+**Keep layout in cache:** when this box is ticked, the layout is kept in the cache for a set time. Depending on the layout, this can noticeably shorten the server's response time.
 
 ### Cache settings
 
 Here you set the number of minutes for which the layout is kept in the cache.
 
-If the data for monitoring layouts is refreshed every five minutes, for example, it makes sense to keep the layout in the cache for five minutes as well. After this time it is removed automatically and reconnected with fresh data on the next request. <!-- src: help/QB/11392 -->
+If the data for monitoring layouts is refreshed every five minutes, for example, it makes sense to keep the layout in the cache for five minutes as well. After this time it is removed automatically and reconnected with fresh data on the next request.
