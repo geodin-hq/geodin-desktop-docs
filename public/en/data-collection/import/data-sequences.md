@@ -14,23 +14,52 @@ For the data entry grid and manual editing of data sequences, see [Data sequence
 - **GEF** — supported natively for CPT data. GEF is the standard format used in the Netherlands and the UK.
 - **Dedicated ASCII CPT** — a legacy filter built for historic company use. Note that **CSV CPT imports do not go through this filter** — use the generic Data Sequences import for CSV.
 
-<!-- src: transcript/data-import-migration#cpt-data-sequence-import-gef-ascii-custom-filters -->
-
 ## Free-format CPT import
 
 To import a CPT or other data sequence into an existing object:
 
-1. Select the object in the GeoDin Object Manager and open **Data Management > Data Sequences**.
-2. Click **Import** to open the import dialog.
-3. Select the source file and choose **User Format** (free format).
-4. Configure the columns:
+{% stepper %}
+{% step %}
+#### Step 1
+
+Select the object in the GeoDin Object Manager and open **Data Management > Data Sequences**.
+{% endstep %}
+
+{% step %}
+#### Step 2
+
+Click **Import** to open the import dialog.
+{% endstep %}
+
+{% step %}
+#### Step 3
+
+Select the source file and choose **User Format** (free format).
+{% endstep %}
+
+{% step %}
+#### Step 4
+
+Configure the columns:
    - **Depth column** — typically column 1
    - **Data start column** — the first column containing measurement values (typically column 2)
    - **Decimal places** — number of decimal places in the source file
    - **Delimiter** — separator character (space, comma, semicolon, etc.)
    - **Units** — unit of the depth values (e.g. m)
-5. Set the **Reduce factor** (see below).
-6. Click **OK** to run the import.
+{% endstep %}
+
+{% step %}
+#### Step 5
+
+Set the **Reduce factor** (see below).
+{% endstep %}
+
+{% step %}
+#### Step 6
+
+Click **OK** to run the import.
+{% endstep %}
+{% endstepper %}
 
 ### Reduce factor
 
@@ -51,8 +80,6 @@ If you leave the reduce factor at 0, GeoDin calculates an automatic factor so th
 **Column layout constraint** — data columns must sit to the right of the depth column in the source file. The importer reads every column to the right of depth and there is no option to skip or exclude specific columns at import time. To remove unwanted series, delete them after import.
 {% endhint %}
 
-<!-- src: transcript/2026-04-15-in-person-workshop -->
-
 ## Import filters (saving and reusing format settings)
 
 To avoid re-entering the same column configuration for every import of a given file type, save the format as a named import filter:
@@ -62,8 +89,6 @@ To avoid re-entering the same column configuration for every import of a given f
 3. Confirm. The filter is saved to `SONIFLTR.SYS` in the `SYSLIB` folder and is available to all users of the same installation.
 
 To load an existing filter, click the **Edit selected filters** drop-down in the import dialog and select the filter name.
-
-<!-- src: transcript/2026-04-15-in-person-workshop -->
 
 ## Batch import at the Objects branch level
 
@@ -76,12 +101,43 @@ GeoDin can match import files to objects automatically by filename, allowing you
 
 **Steps:**
 
-1. In the GeoDin Object Manager, select the **Objects** branch (or a query/group) — not an individual object.
-2. Choose the method **Import data sequences** (or **Update data sequences** to overwrite/append).
-3. Select **Entire folder** and navigate to the folder containing the CPT files.
-4. Select the import filter.
-5. Click **Check object link** to preview which files match existing objects, and which don't. Review the log before proceeding.
-6. Run the import. Objects without a matching file are skipped; new data sequences are created in matched objects.
+{% stepper %}
+{% step %}
+#### Step 1
+
+In the GeoDin Object Manager, select the **Objects** branch (or a query/group) — not an individual object.
+{% endstep %}
+
+{% step %}
+#### Step 2
+
+Choose the method **Import data sequences** (or **Update data sequences** to overwrite/append).
+{% endstep %}
+
+{% step %}
+#### Step 3
+
+Select **Entire folder** and navigate to the folder containing the CPT files.
+{% endstep %}
+
+{% step %}
+#### Step 4
+
+Select the import filter.
+{% endstep %}
+
+{% step %}
+#### Step 5
+
+Click **Check object link** to preview which files match existing objects, and which don't. Review the log before proceeding.
+{% endstep %}
+
+{% step %}
+#### Step 6
+
+Run the import. Objects without a matching file are skipped; new data sequences are created in matched objects.
+{% endstep %}
+{% endstepper %}
 
 {% hint style="info" %}
 **Import data sequences** (German: *Sondierung importieren*) creates new data sequence series. **Update data sequences** (German: *Sondierung aktualisieren*) overwrites or appends to existing series. Use "Update" for re-imports with corrected source files.
@@ -91,7 +147,7 @@ GeoDin can match import files to objects automatically by filename, allowing you
 Filenames must match the object short name exactly (case-sensitive on some systems). Create general data presets (**Stammdatenvorgaben**) before the batch import so that fields like project, client, and coordinate system are pre-filled on any new objects GeoDin creates during import.
 {% endhint %}
 
-<!-- src: transcript/2026-04-15-in-person-workshop -->
+***
 
 ## Beyond CPT — custom filters for any depth-indexed data
 
