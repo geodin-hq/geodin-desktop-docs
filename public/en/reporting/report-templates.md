@@ -2,25 +2,19 @@
 description: How to work with report templates, layout snippets, report elements, and text macros in GeoDin
 ---
 
-<!--
-**Content status:** Polished from product documentation
-**Source quality:** A (Help + Transcripts)
-**Needs:** screenshots, editorial review
--->
-
 # Report Templates
 
 GeoDin ships with pre-built report templates organized by object type. You can customize these templates or create new ones from scratch using the layout editor.
 
 ## Template basics
 
-Templates are accessed via the **Layout** section in the Graphic Printing and Editing method. Default layouts ship in `GeoDin\Layouts\`, organized by object type — for example, G1 includes borehole logs, stiff/parameter layouts, water content vs. depth, and Atterberg limits charts. <!-- src: transcript/reporting-exports#report-templates-layout-snippets -->
+Templates are accessed via the **Layout** section in the Graphic Printing and Editing method. Default layouts ship in `GeoDin\Layouts\`, organized by object type — for example, G1 includes borehole logs, stiff/parameter layouts, water content vs. depth, and Atterberg limits charts.
 
-Users can add custom layout folders via `Available Layouts > + button > browse to folder` (e.g., a network share for team-wide templates). <!-- src: transcript/reporting-exports#report-templates-layout-snippets -->
+Users can add custom layout folders via `Available Layouts > + button > browse to folder` (e.g., a network share for team-wide templates).
 
 ### File formats
 
-Templates can be saved in two formats: <!-- src: transcript/reporting-exports#report-templates-layout-snippets -->
+Templates can be saved in two formats:
 
 - **GLO (GeoDin Layout)** — template only, no data connection. Reusable across projects. Only GLO files appear in the Available Layouts overview.
 - **GGF (GeoDin Graphic Format)** — layout with connected data (e.g., a specific cross-section with 10 boreholes). Can be reopened by drag-and-dropping into GeoDin.
@@ -33,19 +27,19 @@ When editing a default layout, always use `File > Save As` (never Save) to avoid
 
 ### Layout snippets
 
-A layout can embed another layout as a **snippet** — for example, a company header/footer stored once in `Common_A4_LHF.GLO` and referenced by many templates. Changing the logo in the snippet file automatically updates all layouts using it. In edit mode, snippets appear as green-boxed regions that cannot be edited inline; open the snippet layout directly to modify it. <!-- src: transcript/reporting-exports#report-templates-layout-snippets -->
+A layout can embed another layout as a **snippet** — for example, a company header/footer stored once in `Common_A4_LHF.GLO` and referenced by many templates. Changing the logo in the snippet file automatically updates all layouts using it. In edit mode, snippets appear as green-boxed regions that cannot be edited inline; open the snippet layout directly to modify it.
 
 ### Multi-language support
 
-Templates can carry translations and print in different languages depending on the `File > Language` setting — the same template can output in German or English without modification. <!-- src: transcript/reporting-exports#report-templates-layout-snippets -->
+Templates can carry translations and print in different languages depending on the `File > Language` setting — the same template can output in German or English without modification.
 
 For detailed layout creation steps, see [Creating Custom Layouts](../data-visualization/creating-custom-layouts.md).
 
----
+***
 
 ## Report elements
 
-The **Report element** is a table-based component for displaying tabular output of general, layer, sample, or measurement data within a layout. <!-- src: transcript/reporting-exports#report-elements-annotations -->
+The **Report element** is a table-based component for displaying tabular output of general, layer, sample, or measurement data within a layout.
 
 ### Setting up a report element
 
@@ -54,39 +48,39 @@ The **Report element** is a table-based component for displaying tabular output 
 3. **Selectors:** exclude rows by parameter conditions (e.g., skip values above or below a threshold)
 4. **Conditional formatting:** set presentation options to highlight data — for example, "if CU > 50, color the row red" via `Column Properties > Presentation Options`
 
-Multiple report blocks can be combined in one layout (e.g., a general-data table and a measurement table side by side). <!-- src: transcript/reporting-exports#report-elements-annotations -->
+Multiple report blocks can be combined in one layout (e.g., a general-data table and a measurement table side by side).
 
 ### Report types
 
-Two categories of reports are available: <!-- src: transcript/reporting-exports#report-elements-annotations -->
+Two categories of reports are available:
 
 - **Original data reports** — display raw data in summary (borehole tabs, sample overviews, measurement tables)
 - **Calculation reports** — process data before display (statistics, list comparisons, plausibility checks, grain size analyses)
 
 ### Exporting report data
 
-Reports can be exported to Excel or CSV in two ways: <!-- src: transcript/reporting-exports#report-elements-annotations -->
+Reports can be exported to Excel or CSV in two ways:
 
 - From edit mode: right-click the report element > Export as Excel or CSV
 - From the layout overview: use the Report Access button (no need to open edit mode)
 
----
+***
 
 ## Text macros and annotations
 
 ### Variable text element
 
-The **Variable Text** element displays dynamic data from the database in headers, footers, and annotations. Use the `Build` button to select macros from available parameters. <!-- src: transcript/reporting-exports#report-elements-annotations -->
+The **Variable Text** element displays dynamic data from the database in headers, footers, and annotations. Use the `Build` button to select macros from available parameters.
 
-Common macros include: long name (full location name), project name, driller, borehole, EPSG code, X coordinate, Y coordinate. The macro search bar in the Build dialog speeds up finding specific macros. <!-- src: transcript/reporting-exports#report-elements-annotations -->
+Common macros include: long name (full location name), project name, driller, borehole, EPSG code, X coordinate, Y coordinate. The macro search bar in the Build dialog speeds up finding specific macros.
 
 ### Image element
 
-Load company logos and reference images via `Object Properties > Data Source > Load image file`. Supported formats include BMP, JPG, PNG, TIF, EMF, WMF, and GGF. <!-- src: transcript/reporting-exports#report-elements-annotations -->
+Load company logos and reference images via `Object Properties > Data Source > Load image file`. Supported formats include BMP, JPG, PNG, TIF, EMF, WMF, and GGF.
 
 ### Legend element
 
-The **Legend** element auto-detects fill patterns from objects currently in the frame. Configure via `Options > ... > choose which graphic element to reference` (e.g., select the object frame to show all fill patterns in that frame). <!-- src: transcript/reporting-exports#report-elements-annotations -->
+The **Legend** element auto-detects fill patterns from objects currently in the frame. Configure via `Options > ... > choose which graphic element to reference` (e.g., select the object frame to show all fill patterns in that frame).
 
 {% hint style="info" %}
 The auto-generated legend only includes patterns from objects currently displayed. For an "all possible fill patterns" legend, it must be built manually.
@@ -98,9 +92,9 @@ For a focused guide to text-macro syntax, conditional separators, calculated par
 PSD (Particle Size Distribution) layouts are pre-built and shipped with GeoDin. It is recommended to customize existing PSD templates rather than building from scratch.
 {% endhint %}
 
-Template creation is documented comprehensively in the in-product **F1** guide, covering object frames, single vs. multiple frames, macros, and dynamic objects. <!-- src: transcript/reporting-exports#report-templates-layout-snippets -->
+Template creation is documented comprehensively in the in-product **F1** guide, covering object frames, single vs. multiple frames, macros, and dynamic objects.
 
-### Create report (moved from Databases pages)
+### Create report
 
 &#x20;![Create report](../.gitbook/assets/icons/create-report.png) **Create report**
 
