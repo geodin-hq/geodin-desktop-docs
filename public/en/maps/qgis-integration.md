@@ -1,46 +1,47 @@
-
-<!--
-**Content status:** Auto-assembled from product documentation
-**Source quality:** C (Thin (limited source material))
-**Needs:** needs legacy verification, needs screenshots, needs examples, editorial review
--->
-
 # QGIS Integration
 
-### QGIS
+`GeoDinQGIS` allows you to work with GeoDin databases in QGIS.
 
-***GeoDinQGIS*** allows you to work with GeoDin databases in *QGIS*.
+## Requirements
 
-This requires that the database was created using GeoDin.
+* The database was created using GeoDin.
+* A QGIS 32-Bit installation Version 2.0 or better.
 
-***GeoDinQGIS*** offers the following functionality:
+## Install the GeoDinQGIS plugin
 
-• Display of databases, projects and objects
+{% stepper %}
+{% step %}
+#### Step 1: Open the QGIS Plugin Manager
 
-• Display of GeoDin objects in a QGIS map
+You can install the plugin with the integrated QGIS Plugin Manager. Open the **Plugins** menu and Choose \"Manage and Install Plugins\".
+{% endstep %}
+{% step %}
+#### Step 2: Search for the plugin
 
-• Add new objects in GeoDin
+Enter **\"*GeoDinQGIS*\"** in the search box. The most current version of the plugin will be installed.
+{% endstep %}
+{% step %}
+#### Step 3: Launch the plugin
 
-• Execute GeoDin queries
+After the installation, the Plugin can be launched from the QGIS toolbar.
+{% endstep %}
+{% endstepper %}
 
-• Create user queries in QGIS
+Information on different versions of `GeoDinQGIS` can be found here https://plugins.qgis.org/plugins/GeoDinQGIS/.
 
-• Display of GeoDin layouts
+***
 
-***Note:*** *Detailled information and instructions on all these features and on installation can be found in the integrated GeoDinQGIS help.* <!-- src: help/QG/10667 -->
+## Working with GeoDinQGIS
 
-### Installation
+`GeoDinQGIS` offers the following functionality:
 
-***GeoDinQGIS*** requires a *QGIS* 32-Bit installation Version 2.0 or better.
+* Display of databases, projects and objects
+* Display of GeoDin objects in a QGIS map
+* Add new objects in GeoDin
+* Execute GeoDin queries
+* Create user queries in QGIS
+* Display of GeoDin layouts
 
-You can install the plugin with the integrated *QGIS* Plugin Manager.
-
-Open the Plugins menu and Choose \"Manage and Install Plugins\".
-
-Enter **\"*GeoDinQGIS*\"** in the search box.
-
-The most current version of the plugin will be installed.
-
-After the installation, the Plugin can be launched from the *QGIS* toolbar.
-
-Information on different versions of ***GeoDinQGIS*** can be found here https://plugins.qgis.org/plugins/GeoDinQGIS/. <!-- src: help/QG/10673 -->
+{% hint style="info" %}
+Detailled information and instructions on all these features and on installation can be found in the integrated GeoDinQGIS help.
+{% endhint %}
