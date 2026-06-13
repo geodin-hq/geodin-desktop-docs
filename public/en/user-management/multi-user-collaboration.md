@@ -28,12 +28,9 @@ Templates, calculations, and data stored **in the database** are shareable acros
 - **Central / network installation** — all users share the same `syslib`; custom content is automatically common.
 - **Per-machine installation** — each user has their own copy. Sharing custom dictionaries, filters, or custom data types between users requires manual file copying.
 
-<!-- src: transcript/user-management-permissions#multi-user-collaboration-on-shared-databases -->
-
 ## Multi-company / consortium collaboration
 
 A single shared database can host **multi-company collaboration**. The model has been demonstrated at scale on a national power transmission project across a 5-company consortium — ~700 km of alignment and 3,600+ boreholes, all sharing and collaborating on data within one platform.
 
 In consortium scenarios, all member companies can manage, analyse, and export data from the shared database according to the access controls configured at the database and method level.
 
-<!-- src: transcript/user-management-permissions#multi-company-consortium-collaboration -->
