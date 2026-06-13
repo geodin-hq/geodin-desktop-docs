@@ -1,9 +1,8 @@
-
 # Formulas in Measurement Values
 
-### Measurement values
+This page covers how GeoDin organizes measurement values, how the **Calculation** function recalculates a measurement table using predefined or single formulas, the full formula and condition syntax with its special-case constructions, and the import/export, diagram, and table-format options of the measurement editor.
 
-**Requirements**
+## Measurement values
 
 GeoDin organizes objects spatially. These are point objects with or without a depth value. At these objects measurements can be made. In order to use GeoDin to collect such data, measurement points need to be defined in the general data. Usually filters and sample intervals are used as measurement points. Also the object itself can be defined as a measurement point. In the GeoDin object manager measurement points are shown by three blue spheres.
 
@@ -29,7 +28,7 @@ BH01: (1-7m)
 
 BH01: (4-5m)
 
-**Terminology**
+### Terminology
 
 The following hierarchy is used in the measurement point organization to relate a single measured value to a measurement object of the measurement point. There are the following different types:
 
@@ -53,32 +52,23 @@ A parameter is an individual measurement described by a name, a field identifica
 
 Queries are used within projects or databases to interrogate data. They define the amount and type of data from which the results are derived.
 
-**Special values**
+### Special values
 
 GeoDin organizes measurement values as numerical entries. Hence values below a detection limit cannot be saved as the character „<". In such cases a negative detection limit is entered (e.g. "-1"). These values are ignored by statistical analyses. If the detection limit is unknown (e.g. old data) the value"-88" is used. If the value is not detectable then"-99" should be entered:
-
-***
-
-Entry Description
-
--XX beneath detection limit (XX = detection limit) -88 beneath detection limit (detection limit value unknown)
-
--99 not detectable
-
-\------- ---------------------------------------------------------
 
 | Entry | Description |
 | --- | --- |
 | -XX | beneath detection limit (XX = detection limit) |
 | -88 | beneath detection limit (detection limit value unknown) |
 | -99 | not detectable |
-### Formula
+
+## Formula
 
 As an alternative to presenting the measurement values in grid form you may view the current data set in a mask. At the top of the mask the general sample data (Name, Date, Time) and the group are displayed. Below the individual parameters for the current data set are listed in rows. For each parameter the name, measurement value, unit, detection limit and investigation method are shown. Name and unit are not editable.\
 \
 The contents of a data set can be saved as a simple text file (which can be subsequently loaded). By pressing the **OK** button the mask contents are saved to the data set - by pressing **Cancel** the contents are discarded. Optionally the short field name can be used for the parameter column.
 
-### Calculation
+## Calculation
 
 This function allows you to recalculate values for entire table in the measurement editor. You have two options:
 
@@ -111,7 +101,9 @@ _**-All selected data records-**_
 
 Choose this option to execute the calculation only for the data records (rows) selected in the measurement data editor.
 
-**Definition of formulas**
+***
+
+## Reference: Definition of formulas
 
 A formula is defined as a string of characters (similar to a text macro definition) and contains mathematical operators for calculating a result.
 
@@ -119,15 +111,11 @@ For example: $DAT.PAR1$ \* 100
 
 The characters inside the $-signs relate to a GeoDin data field. The following operators can be used:
 
-***
-
-***
-
 (x) stands for the table column of GeoDin (e.g. $DAT:PAR1$)
 
 Empty spaces can be contained in the formulas. Fixed number values (100 in the example above), can be entered directly in the formula.
 
-**Use of conditions**
+### Use of conditions
 
 _**Note:**_
 
@@ -189,7 +177,7 @@ _Formula:_ $WAS:NA$/2
 
 The target parameter NA\_CALC is calculated as half of the parameter NA, if the author of the data record has the name Müller.
 
-**Using special rules**
+### Using special rules
 
 Additionally to the mathematical operators special syntax constructions can be used for the usage of values from the GeoDin tables to take into consideration numerous special cases.
 
@@ -229,11 +217,13 @@ First of all the entry for CONE is replaced by the value from the dictionary. Fo
 
 Values from one data type can be used in calculating values in other data types. To do this, the code of a data type is followed by a colon. The relationship to a data record in another data type is defined by time. To compare values the date is used in a number of different ways:
 
-***
-
-\[=SMPDATE] or no definition The date must be the same \[<=SMPDATE] The date can be the same or less than \[\<SMPDATE] The date must be less than \[>=SMPDATE] The date can be the same or more than \[\<SMPDATE] The date must be more than
-
-***
+| Operator | Meaning |
+| --- | --- |
+| \[=SMPDATE] or no definition | The date must be the same |
+| \[<=SMPDATE] | The date can be the same or less than |
+| \[\<SMPDATE] | The date must be less than |
+| \[>=SMPDATE] | The date can be the same or more than |
+| \[\<SMPDATE] | The date must be more than |
 
 **Example**: WASSPNN=$ROK:ROKNN\[<=SMPDATE]$-$WASSPROK$
 
@@ -271,13 +261,13 @@ $%USERNAME$ can use a (text-)formula, to create the name of the current database
 
 $%NOW$ results the current date and time
 
-**Object reference**
+### Object reference
 
 $%OBJECTID$ Access to the LOCID for general data tables if available
 
 $%PRJID$ Access to the PRJ\_ID for general data tables if available
 
-**Text exchange - Formulas to create formatted text**
+### Text exchange - Formulas to create formatted text
 
 By activating the control box _\[Text exchange (no calculation)]_ a calculation is prevented when carrying out the formula. This option is only useful, where a string parameter as result is required. The result is that the parameters are replaced by a string of actual values, whereby no calculation is carried out.
 
@@ -293,7 +283,7 @@ Example: $LOCREG.SHORTNAME$ from $SMPDATE@dd.mmmm.yyyy$
 
 _**Attention:**_ _Only parameters of the same table (data type) or object type parameters can be evaluated. The parameter of the current table must be specified here without the table abbreviation. See example._
 
-### Import/Export
+## Reference: Import/Export
 
 In the GeoDin object manager at the level of a measurement point or a group of measurements the methods **"Export measurement values"** and  ![import measurement values](../../.gitbook/assets/icons/import-measurement-values.png) **"Import measurement values"** can be selected.
 
@@ -339,19 +329,15 @@ GeoDin supports two general arrangements of tabular data to be imported.
 
 The format **-Table by row-** describes a table, which contains each sample in one row, the values of the parameters are stored in separate columns for each parameter.
 
-***
-
+```
 NAME DATE NA MG NH3 ... Sample 1 12.07.2012 2,4 4,5 1,23 ... ... ... ... ... ... ...
-
-***
+```
 
 The format **-Table by column-** describes a table, in which one measurement of one parameter builds one row. A sample can consist of a certain number of rows (as many as measured parameters) in this format. This format also allows additional information for each measured parameter to be imported and organised in GeoDin too.
 
-***
-
+```
 SAMPLE DATE PARAM VALUE COMMENT Sample 1 12.07.2012 NA 2,4 verified Sample 1 12.07.2012 MG 4,5 unverified Sample 1 12.08.2012 NA 9,5 implausible ... ... ... ... ...
-
-***
+```
 
 To import data from this type of table you have to first make further adjustments. At first choose the columns, which group the data records of one sample. Therefore tick the appropriate columns in the list of **"Grouping data fields"**; in the example above tick the columns SAMPLE and DATE. The result of this choice would be that the first two rows (Sample 1 from 12.07.2012) would generate one cumulative import row and the third row (Sample 2 from 12.08.2012) another.
 
@@ -361,15 +347,13 @@ From the drop-down list "**Data field with measurement value:"** please choose t
 
 GeoDin now will transform the import table to the table format -table by rows- (please see above). The preview of the import data of our example now will be displayed as follows:
 
-***
-
+```
 SAMPLE DATE NA MG ...
 
 Sample 1 12.07.2012 2,4 4,5 ... Sample 1 12.08.2012 9,5 ... ...
 
 ... ... ... ... ...
-
-***
+```
 
 Please note that the information from the column COMMENT isn't lost. The import preview the cells of the measurement values are tagged at the right top corner with a red triangle. To display the additional information for the measurement value, please hold the mouse pointer over this corner. For the cell NA=2,4 the information 'COMMENT:verified' would be shown. This information can be imported using the [Additional measurement information](../../navigating-the-geodin-workspace/measurement-values/working-with-measurement-data.md).
 
@@ -377,6 +361,7 @@ There is also a special pre-formatting for text files in the Octoware format ava
 
 Example fragment of an Octoware file:
 
+```
 OCT>12072240RE0003\10.08.2000 09:10\\\\\\\\\T2000-07949\\\\\\\1\1
 
 EST>FI1
@@ -386,6 +371,7 @@ PPA>pH 0\\\\\7.24
 PPA>LF 0\\\\\998
 
 PPA>Temp 0\\\\\11.1
+```
 
 ## Related topics
 

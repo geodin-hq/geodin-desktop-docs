@@ -1,13 +1,8 @@
-
-<!--
-**Content status:** Auto-assembled from product documentation
-**Source quality:** B (Moderate (single source type))
-**Needs:** needs legacy verification, needs screenshots, needs examples, editorial review
--->
-
 # Formula Basics
 
-### General formulas
+Formulas let GeoDin compute the value of a data field from values that already exist in the data set. This page is the reference for the formula system: how a formula is defined (its name, target, condition and options), how to add a formula to an existing data type, and the full formula syntax — mathematical operators, conditions, special-case constructions, object-type and EGIS formulas, and the alternative SQL command.
+
+## General formulas
 
 Formulas are for the calculations of data fields based on already existing values in the data set. The formulas defined at a data type will be calculated automatically as long as they are marked with \"Active\". The calculation is done when you add, change or delete details in the dataset or when you add or refresh datasets, e.g. by using the -Import- method of the GeoDin-database.
 
@@ -95,7 +90,7 @@ A condition can be set for the execution of the formula. With this option you ca
 
 If the condition is \$NA\$\>2 and the value in NA equals 1 the value can be changed as often as desired. The formula won't be executed as long as the value lies below 2.
 
-**Definition of formulas**
+### Definition of formulas
 
 A formula is defined as a string of characters (similar to a text macro definition) and contains mathematical operators for calculating a result.
 
@@ -131,27 +126,32 @@ Empty spaces can be contained in the formulas. Fixed number values (100 in the e
 
 Formulas can be added to a data type at any time — even after measurement data already exists in the database. The following steps cover the end-to-end process:
 
-**1. Add a new parameter to the data type (system configuration)**
+{% stepper %}
+{% step %}
+#### Step 1: Add a new parameter to the data type (system configuration)
 
 In the GeoDin system configuration (System > Data Types), open the relevant data type group and add the new parameter that will serve as the formula target. Save the system configuration.
-
-**2. Add the parameter to the database**
+{% endstep %}
+{% step %}
+#### Step 2: Add the parameter to the database
 
 Open the **Data Type Manager** at the database level. Select the data type, click **Edit**, and add the new parameter. Click **Create** to write the updated table structure to the database.
 
 {% hint style="info" %}
 Both the system configuration and the database must be updated. Adding the parameter to the system only does not make it available in the database tables.
 {% endhint %}
-
-**3. Define the formula**
+{% endstep %}
+{% step %}
+#### Step 3: Define the formula
 
 Still in the system configuration, open the data type and add a formula:
 - Set the **Target** to the new parameter.
 - Build the formula expression by dragging macro names (field references such as `$DAT.PAR1$`) from the selection list into the formula field.
 - Mark the formula as **Active**.
 - Save.
-
-**4. Apply the formula to existing records**
+{% endstep %}
+{% step %}
+#### Step 4: Apply the formula to existing records
 
 Active formulas run automatically on new and updated records, but **do not run retroactively on existing data**. To apply the formula to all existing records:
 
@@ -163,16 +163,19 @@ Active formulas run automatically on new and updated records, but **do not run r
 {% hint style="warning" %}
 Formulas defined as active are calculated automatically on new and updated records, but do **not** run retroactively on existing records. Always use the **Calculate** button after adding a new formula to populate historical data.
 {% endhint %}
-
-<!-- src: transcript/2026-04-15-in-person-workshop -->
-
-**5. Single-use inline formulas in the measurement editor**
+{% endstep %}
+{% step %}
+#### Step 5: Single-use inline formulas in the measurement editor
 
 The measurement editor also accepts a one-off formula entered directly in the formula bar — without saving it to the system configuration. This is useful for ad-hoc calculations during a session.
 
 Note: an inline formula **cannot target a field that is already assigned as the target of an active system formula**. If a conflict exists, the active system formula takes precedence and the inline formula will not be executed on that field.
+{% endstep %}
+{% endstepper %}
 
-<!-- src: transcript/2026-04-15-in-person-workshop -->
+***
+
+## Reference: Conditions and special syntax
 
 **Use of conditions**
 
@@ -240,7 +243,7 @@ If strings are used in a condition, the text has to be included in inverted (or 
 
 The target parameter NA_CALC is calculated as half of the parameter NA, if the author of the data record has the name Müller.
 
-**Using special rules**
+### Using special rules
 
 Additionally to the mathematical operators special syntax constructions can be used for the usage of values from the GeoDin tables to take into consideration numerous special cases.
 
@@ -343,9 +346,9 @@ In addition to the text exchange, format specifications can be resolved.
 
 Example: \$LOCREG.SHORTNAME\$ from \$SMPDATE@dd.mmmm.yyyy\$
 
-***Attention:*** *Only parameters of the same table (data type) or object type parameters can be evaluated. The parameter of the current table must be specified here without the table abbreviation. See example.* <!-- src: help/10/8072 -->
+***Attention:*** *Only parameters of the same table (data type) or object type parameters can be evaluated. The parameter of the current table must be specified here without the table abbreviation. See example.*
 
-### Formulas
+## Reference: Formula list management
 
 **New**
 
@@ -375,9 +378,9 @@ Using this icon the list can be edited without actualization. Editing the list c
 
 **Double-click an entry of the list**
 
-Closes the list and changes in the tree view of the object properties to the particular entry, so that its properties can be edited. <!-- src: help/10/8991 -->
+Closes the list and changes in the tree view of the object properties to the particular entry, so that its properties can be edited.
 
-### Formula
+## Reference: Object-type and EGIS formulas
 
 This chapter describes some formulas that can be used/created in GOTE for a general data table of the object type.
 
@@ -403,7 +406,7 @@ DESTEPSG = 3068
 
 This formula transforms the X value of the GeoDin object into the coordinate system 3068 (Soldner Berlin) and writes the transformed X value into the target field of the formula.
 
-*\$EGIS(METHOD=TRANSFORMCOORD Result=X X=XCOORD Y=YCOORD EPSG=KSYS DESTEPSG=3068)\$* <!-- src: help/10/10863 -->
+*\$EGIS(METHOD=TRANSFORMCOORD Result=X X=XCOORD Y=YCOORD EPSG=KSYS DESTEPSG=3068)\$*
 
 ### Object type formulas
 
@@ -495,9 +498,9 @@ GROUNDWATER=C:\\GISData\\GW-Model\\gw2020.shp
 
 GROUNDWATERFIELD=MAXGW
 
-***Note:*** *If no additional reference is specified under SOURCE, GeoDin automatically tries to find a GeoJSON file (\*.geojson) with the name of the target field of the formula in the Syslib directory of the GeoDin installation. The attribute field from which the data is returned to the database must have the same name in the GeoJSON as the target field of the formula.* <!-- src: help/10/11301 -->
+***Note:*** *If no additional reference is specified under SOURCE, GeoDin automatically tries to find a GeoJSON file (\*.geojson) with the name of the target field of the formula in the Syslib directory of the GeoDin installation. The attribute field from which the data is returned to the database must have the same name in the GeoJSON as the target field of the formula.*
 
-### Alternative SQL-Command
+## Reference: Alternative SQL command
 
 With this method of defining a system query for the GeoDin object manager or object frame query within a layout, you can formulate any SQL statement for obtaining data directly. If you are familiar with SQL, this method is significantly faster than formulating the SQL statement step by step via the individual menus.
 
@@ -577,4 +580,4 @@ select INVID,INVNAME from GeoDin_LOC_PRBREG WHERE (PRJ_ID=\'\$PRJID\$\' ) and (L
 
 **Tables**
 
-Because names of tables/views are used in the SQL definition, the names should also be included in the list **Tables**. Only this way is a name protected for additional schema-editing work. <!-- src: help/10/11505 -->
+Because names of tables/views are used in the SQL definition, the names should also be included in the list **Tables**. Only this way is a name protected for additional schema-editing work.

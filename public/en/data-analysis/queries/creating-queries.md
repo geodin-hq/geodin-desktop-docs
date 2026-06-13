@@ -1,7 +1,9 @@
 
 # Creating Queries
 
-### Queries
+A query filters the objects and measurement points shown in the GeoDin object manager by one or more conditions. This page covers what queries are and how they are scoped, the AND/OR logic of the query wizard, the end-to-end walkthrough for creating your own query, and the full reference for query templates, operators and date formats, display fields, the alternative SQL command, and parameterized queries. It also covers object **groups** (manual and import-based collections) and the **field mapping** that attaches structure information to user-defined SQL.
+
+## Queries
 
 All objects shown in the GeoDin object manager are the result of a query to the GeoDin database. Queries can be made on individual projects or in a database (i.e. project independent). In addition to queries that result from a (set of) condition(s) being met, it is also possible to create a mixed group of objects together.
 
@@ -83,7 +85,7 @@ This can be controlled via the advanced settings and the user management.
 **Default visibility changed:** In earlier versions of GeoDin, newly created queries were private by default (visible only to the user who created them). This behaviour has been reversed — queries and maps created now are **visible to all users** of the same database by default. If a query should be restricted to the creating user, open the query's **Advanced** settings tab and configure the visibility accordingly. The same default applies to maps.
 {% endhint %}
 
-### AND vs. OR condition logic
+## AND vs. OR condition logic
 
 When building conditions in the query wizard, the placement of a condition determines whether it is combined with AND or OR logic:
 
@@ -96,15 +98,11 @@ When building conditions in the query wizard, the placement of a condition deter
 Queries on the **Measurement Points** branch of a project return measurement points rather than objects. You can create queries under either the **Objects** or the **Measurement Points** node in the Object Manager tree.
 {% endhint %}
 
-### Create query
+## Creating a query
 
 To define your own queries (e.g. "boreholes deeper than 9 m") a query wizard is available.
 
 The query wizard is able to create queries up to a certain degree of complexity. For highly complex queries it is possible to enter [Alternative SQL-Command](sql-and-advanced-options.md) in the query wizard or to create [System queries](creating-queries.md) (On the system-side of GeoDin).
-
-The query wizard is started by using the method  ![New Query](../../.gitbook/assets/icons/new-query.png) **"New Query"**.
-
-This is available when either **Objects** or **Measurement points** are selected in the GeoDin object manager.
 
 A query is made up of an unlimited number of sub-queries. When an object fulfils a sub-query condition it is included in the query result.
 
@@ -116,10 +114,38 @@ In this case create two sub-queries: One that queries data field A1 in Table A a
 
 Each sub-query has its own sorting, whose results can be changed individually with the help of the option -Sorting the sub/partial results-. Usually however, just one sub-query is enough to choose the required objects.
 
-In the first step of the query assistant you set the query name, which will be displayed in the GeoDin object manager. You may also organize the sub-queries.
+{% stepper %}
+{% step %}
+#### Step 1: Start the query wizard
 
-Create a sub-query using the **New** button that takes you to the selection of the template to be used for creating the subquery. Here you define, whether the query is limited to selected objects in the database. Select one of the query templates and you will get more detailed explanations in the lower part of the dialog window.\
-Following templates are offered:
+The query wizard is started by using the method  ![New Query](../../.gitbook/assets/icons/new-query.png) **"New Query"**.
+
+This is available when either **Objects** or **Measurement points** are selected in the GeoDin object manager.
+{% endstep %}
+{% step %}
+#### Step 2: Name the query and organize sub-queries
+
+In the first step of the query assistant you set the query name, which will be displayed in the GeoDin object manager. You may also organize the sub-queries.
+{% endstep %}
+{% step %}
+#### Step 3: Create a sub-query and choose a template
+
+Create a sub-query using the **New** button that takes you to the selection of the template to be used for creating the subquery. Here you define, whether the query is limited to selected objects in the database. Select one of the query templates and you will get more detailed explanations in the lower part of the dialog window. The templates on offer are listed in **Reference: Query templates** below.
+
+When you click a query type explanatory help is shown in the lower half of the dialogue window. The relevant tables and data fields for the query are shown in the window.
+{% endstep %}
+{% step %}
+#### Step 4: Define conditions and display fields
+
+After selecting the desired template, the **Next** button takes you to the definition of the conditions and display fields (see **Reference: Define settings** and **Reference: Set display fields** below).
+{% endstep %}
+{% endstepper %}
+
+***
+
+## Reference: Query templates
+
+When you create a sub-query, the **New** button opens the selection of the template to be used. Following templates are offered:
 
 \
 **All objects** - Query registration of GeoDin- Objects
@@ -148,11 +174,7 @@ This choice requires SQL expertise and knowledge of the GeoDin database table st
 \
 Templates can be created by you or your GeoDin supervisor on the GeoDin system page.
 
-When you click a query type explanatory help is shown in the lower half of the dialogue window. The relevant tables and data fields for the query are shown in the window.
-
-After selecting the desired template, the **Next** button takes you to the definition of the conditions and display fields.
-
-### Define settings
+## Reference: Define settings
 
 Depending on the chosen query type the window shows a list of the relevant database tables. To open a table field list click on the plus- symbol (+) before the table name.
 
@@ -164,6 +186,7 @@ If either one or another condition is to be met, a table entry from the top fiel
 
 In the following example the query for all objects that were drilled deeper than 9m and that lie on the maps numbers JD1234 or JD1235 was set.
 
+```
 Bedingung
 
 Wenn
@@ -177,6 +200,7 @@ Oder
 SSGKRZT1.TK25=JD1234
 
 SSGKRZT1.ZCOORDE>9
+```
 
 _**Note:**_ _In order to simplify the visual query display it is not possible to define OR conditions from within an AND condition. This keeps the query logic clear for the user and through the definition of unlimited OR conditions virtually any query can be defined._
 
@@ -188,45 +212,36 @@ GeoDin also allows you to formulate a query as text - further details are given 
 
 **Valid comparisom operators:**
 
-\=
-
-\>
-
-\>=
-
-<
-
-<=
-
-<> (not equal to)
-
-is null (Data field is empty)
-
-is not null (Data field is not empty)
-
-like 'A%' (Data field contents in high commas, Placeholders: % for unlimited characters and \_ exactly one character)
-
-in ('T1','T2') (Value list in round brackets, values separated by commas, values in high commas for text fields,
-
-for nummerical values a decimal delimiter and not in high commas)
+| Operator | Meaning |
+|---|---|
+| \= | |
+| \> | |
+| \>= | |
+| < | |
+| <= | |
+| <> | (not equal to) |
+| is null | (Data field is empty) |
+| is not null | (Data field is not empty) |
+| like 'A%' | (Data field contents in high commas, Placeholders: % for unlimited characters and \_ exactly one character) |
+| in ('T1','T2') | (Value list in round brackets, values separated by commas, values in high commas for text fields, for nummerical values a decimal delimiter and not in high commas) |
 
 **For conditions, that query adateplease note the following data formats for databases**:
 
 The standard values are:
 
-Access database #mm/dd/yyyy#
-
-Oracle database 'dd-mmm-yyyy'
-
-dBase database 'dd.mm.yyyy'
+| Database | Format |
+|---|---|
+| Access database | #mm/dd/yyyy# |
+| Oracle database | 'dd-mmm-yyyy' |
+| dBase database | 'dd.mm.yyyy' |
 
 **For conditions, that query a time-stampplease use the following standard formats**
 
-Access: #MM/DD/YYYY HH:MM:SS#
-
-Oracle: TO\_DATE('_31.05.2015 12:24:36'_,'dd.mm.yyyy hh24:mi:ss')
-
-MySQL, MS SQL, PostgreSQL: 'DD.MM.YYYY HH:MM:SS'
+| Database | Format |
+|---|---|
+| Access: | #MM/DD/YYYY HH:MM:SS# |
+| Oracle: | TO\_DATE('_31.05.2015 12:24:36'_,'dd.mm.yyyy hh24:mi:ss') |
+| MySQL, MS SQL, PostgreSQL: | 'DD.MM.YYYY HH:MM:SS' |
 
 To remove a condition click on the **Delete condition** icon.
 
@@ -242,7 +257,7 @@ You may drag an entry from the value list into the **Restriction** field. This i
 
 By clicking on the button **Test query** the conditions are checked for syntax errors and the number of objects meeting the query conditions are displayed. Up to 50 values are displayed in the list.
 
-### Set display fields
+## Reference: Set display fields
 
 The result of a query is always at least the GeoDin database field LOCID - a unique GeoDin object identification number. When no display fields are defined, the results of the query are shown using the LOCID in the GeoDin object manager. Of course this LOCID may not be all that helpful.
 
@@ -331,7 +346,7 @@ Beside the view fields (which can also be used for sorting the results as descri
 
 Additionally to the view and sorting fields the result fields can be selected, which are used neither for the display nor for the sorting. However, if the query results are to be exported, e.g. for GIS, use the result fields to determine which data fields are to be transferred from GeoDin to the attribute table of the generated layer. Drag the desired fields as usual to the node Result fields (Export). If you want to transfer all fields of a GeoDin table, simply drag the desired table to the node Result Fields (Export).
 
-### Alternative SQL-Command
+## Reference: Alternative SQL-Command
 
 As well as visually constructing queries you may define your own SQL-commands by using the SQL-Preview window.
 
@@ -344,7 +359,7 @@ Because no further conditions are set for the SQL-Command, it is possible to int
 
 The alternative SQL-Command shows all the parameters visually defined in the query (order, additional text etc) as long as the data field names correspond.
 
-### Parameterized query
+## Reference: Parameterized query
 
 In the example above a condition was set in the query that the end depth must be greater than 9 m. At another time you may want to choose all boreholes that are deeper than 20 m. To do this you could change the value from (>9m) to (>20m) in the existing query or define a new query, which differs from the first one only in the depth value.
 
@@ -352,6 +367,7 @@ GeoDin offers another more efficient method to define queries, which have simila
 
 To do this use the type ":?" in the limiting field instead of a number (depth) - see below:
 
+```
 Condition
 
 If
@@ -363,6 +379,7 @@ Display Fields
 SSGKRZT1.LONGNAME (to
 
 SSGKRZT1.ZCOORDE m)
+```
 
 The used query condition is >:?
 
@@ -416,6 +433,7 @@ In a query, any number of parameters can be defined.
 
 **Example:**
 
+```
 Condition
 
 If
@@ -431,22 +449,27 @@ LOCREG.YCOORD<=:?
 Display Fields
 
 SSGKRZT1.LONGNAME
+```
 
 In the example above, four parameters are defined to build a rectangle of co-ordinates. The first of each of the X and Y values defines the starting coordinates - the second value in each pair defines the extent of the area to be searched. The query dialogue for this query is shown below:
 
-### Update query
+## Update query
 
 In a multi-user environment it may often be necessary to update a query to reflect changes in the data itself. GeoDin automatically checks for changes to objects that are used for the display (e.g. an object name that is shown in the GeoDin object manager). However if a parameter for the condition is changed (e.g. "End depth") the query is not automatically updated because this would interfere with the workflow with large data sets. Similarly if another user changes the end depth this is not automatically updated in the query.
 
 There is a simple way for you to quickly update your query results to incorporate data changes (e.g. end depth values). Right click with the mouse on the query in the GeoDin object manager and choose **Refresh** from the pop-up menu. The object list will be rebuilt.
 
-### Duplicate query
+## Duplicate query
 
 With the method **"Duplicate query"** you may copy a query made in one project to use in another. To copy a query to all projects, select the **All** button. The query will be copied to all selected projects in the database. If you have used the project identifier (PRJ\_ID data field) in your query in the condition, display or alternative SQL command, it will be automatically adjusted to the other project identifier when copying the query, so the duplicated query does not need to be corrected in the target project.
 
-### Delete query
+## Delete query
 
 This method deletes the query definition. You **do not** delete the objects contained in the query results, only the condition producing these results.
+
+***
+
+## Working with object groups
 
 ### Group objects
 
@@ -561,7 +584,7 @@ You can filter and sort the assignments displayed in the preview. To do this, cl
 With a mouse click on the button \*\* Execute Import\*\* all successfully assigned GeoDin objects are combined in a new group in the GeoDin Object Manager. Under the heading "Execution" you can define a name for the new group in the editing window. By default, the name of the import file is pre-entered here.\
 After execution, a log is displayed which you can save using the corresponding button. If you want to create further groups, switch back to **Data Source**.
 
-### User management
+## User management
 
 The visibility/usability of various methods and functions can be restricted via the user administration.
 
@@ -573,7 +596,7 @@ This is used, for example, for methods, system databases or queries.
 
 The creation of users and groups is described in the chapter on **User settings**.
 
-### Field mapping
+## Reference: Field mapping
 
 Structure information can be attached to user-defined SQL. Number fields can then be given decimal-place formatting or unit conversions, and text fields dictionary translations.
 

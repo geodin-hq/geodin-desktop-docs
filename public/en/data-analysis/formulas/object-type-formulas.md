@@ -1,9 +1,10 @@
-
 # Object Type Formulas
 
-Object-type installation, editing, and management are covered in [Object Types Management](../../configuration/object-types-management.md).
+Object types can carry their own formulas — on master-data fields and as spatial (`$%EGIS`) operations — alongside the data-type formula system they share with measurement values. This page is the reference for those object-type-level mechanics: how a general formula is defined (name, target, condition and options) with its full syntax, how data types are managed and transformed on the object type, the formula list-management controls, the object-type and EGIS spatial formulas, and the system and object-frame queries configured on an object type. Object-type installation, editing, and management are covered in [Object Types Management](../../configuration/object-types-management.md).
 
-### General formulas
+***
+
+## Reference: General formulas
 
 Formulas are for the calculations of data fields based on already existing values in the data set. The formulas defined at a data type will be calculated automatically as long as they are marked with "Active". The calculation is done when you add, change or delete details in the dataset or when you add or refresh datasets, e.g. by using the -Import- method of the GeoDin-database.
 
@@ -89,7 +90,7 @@ A condition can be set for the execution of the formula. With this option you ca
 
 If the condition is $NA$>2 and the value in NA equals 1 the value can be changed as often as desired. The formula won't be executed as long as the value lies below 2.
 
-**Definition of formulas**
+### Definition of formulas
 
 A formula is defined as a string of characters (similar to a text macro definition) and contains mathematical operators for calculating a result.
 
@@ -97,15 +98,11 @@ For example: $DAT.PAR1$ \* 100
 
 The characters inside the $-signs relate to a GeoDin data field. The following operators can be used:
 
-***
-
-***
-
 (x) stands for the table column of GeoDin (e.g. $DAT:PAR1$)
 
 Empty spaces can be contained in the formulas. Fixed number values (100 in the example above), can be entered directly in the formula.
 
-**Use of conditions**
+### Use of conditions
 
 _**Note:**_
 
@@ -167,7 +164,7 @@ _Formula:_ $WAS:NA$/2
 
 The target parameter NA\_CALC is calculated as half of the parameter NA, if the author of the data record has the name Müller.
 
-**Using special rules**
+### Using special rules
 
 Additionally to the mathematical operators special syntax constructions can be used for the usage of values from the GeoDin tables to take into consideration numerous special cases.
 
@@ -205,11 +202,13 @@ First of all the entry for CONE is replaced by the value from the dictionary. Fo
 
 Values from one data type can be used in calculating values in other data types. To do this, the code of a data type is followed by a colon. The relationship to a data record in another data type is defined by time. To compare values the date is used in a number of different ways:
 
-***
-
-\[=SMPDATE] or no definition The date must be the same \[<=SMPDATE] The date can be the same or less than \[\<SMPDATE] The date must be less than \[>=SMPDATE] The date can be the same or more than \[\<SMPDATE] The date must be more than
-
-***
+| Operator | Meaning |
+| --- | --- |
+| \[=SMPDATE] or no definition | The date must be the same |
+| \[<=SMPDATE] | The date can be the same or less than |
+| \[\<SMPDATE] | The date must be less than |
+| \[>=SMPDATE] | The date can be the same or more than |
+| \[\<SMPDATE] | The date must be more than |
 
 **Example**: WASSPNN=$ROK:ROKNN\[<=SMPDATE]$-$WASSPROK$
 
@@ -268,6 +267,10 @@ In addition to the text exchange, format specifications can be resolved.
 Example: $LOCREG.SHORTNAME$ from $SMPDATE@dd.mmmm.yyyy$
 
 _**Attention:**_ _Only parameters of the same table (data type) or object type parameters can be evaluated. The parameter of the current table must be specified here without the table abbreviation. See example._
+
+***
+
+## Reference: Object type configuration
 
 ### Data types
 
@@ -405,7 +408,7 @@ Is only used for the case of the action "Open database". Here you can separately
 
 Only used in the case of the action "Open database". Information text that is displayed in the event of an error when opening the database.
 
-### Object type formulas
+## Reference: Object type formulas
 
 Object types can contain formulas for master data fields. These formulas are then executed during editing with the data entry and maintenance method.
 
@@ -493,6 +496,8 @@ GROUNDWATER=C:\GISData\GW-Model\gw2020.shp
 GROUNDWATERFIELD=MAXGW
 
 _**Note:**_ _If no additional reference is specified under SOURCE, GeoDin automatically tries to find a GeoJSON file (\*.geojson) with the name of the target field of the formula in the Syslib directory of the GeoDin installation. The attribute field from which the data is returned to the database must have the same name in the GeoJSON as the target field of the formula._
+
+## Reference: System and object frame queries
 
 ### System query
 
