@@ -1,7 +1,80 @@
-
 # Adding Layers
 
-### Legend
+A GeoDin Map is a container: it stores a combination of layers, their individual settings, the drawing order, and the general map settings. This page covers creating a map, adding and deleting layers, and the property dialogs and context-menu functions used to control how each layer is displayed.
+
+## Creating a new map
+
+A GeoDin Map is made up of several individual map themes. The combination of layers, their settings, the order in the map and the general map settings are all saved in a map: hence a map is a kind of container.
+
+The map document is created through [Document management](../navigating-the-geodin-workspace/documents/managing-documents.md). Follow the steps below.
+
+{% stepper %}
+{% step %}
+#### Step 1: Open Document management
+
+First of all the [Document management](../navigating-the-geodin-workspace/documents/managing-documents.md) is started.
+{% endstep %}
+{% step %}
+#### Step 2: Organize a folder hierarchy
+
+At this point it is advisable to create a folder hierachy to organize the documents using the **New folder** button. For instance this can be a folder for shape files, or another for layouts. The map document itself (created in the next step) can be in a folder, but it is often easier to have one or maps at the root level of the document management structure.
+{% endstep %}
+{% step %}
+#### Step 3: Create a new document
+
+Now create a new document (that is going to be the map) via the **New document** button.
+{% endstep %}
+{% step %}
+#### Step 4: Choose the Embedded GIS map type
+
+In the \<Add document> dialogue window select the radio button -Create document- and then click on the new file icon and choose "**Embedded GIS map"** from the list and confirm by clicking the blue tick icon. This is referred to as "Step 1" at the top of the \<Add document> window.
+{% endstep %}
+{% step %}
+#### Step 5: Name the map
+
+You must then enter a file name for the map before proceeding by clicking the **Next** button. Note that by default maps are saved in the database but they can also be saved as discrete files.
+{% endstep %}
+{% step %}
+#### Step 6: Select the document description type
+
+In this dialogue window ("Step 2") the available document descriptions in your GeoDin installation are shown in the top panel. The correct document type for a map is "(DOC) GeoDin map" which should be selected from the \<Chose document description type> panel. If it is not visible (i.e. not available for your GeoDin installation) you must first install it by clicking the **<**[Register document descriptions](../navigating-the-geodin-workspace/documents/document-organization.md)**>** button.
+
+6a. This brings up a new dialogue window with two panels. The top panel shows the documents types available in your installation and the registered document descriptions for your database in the bottom panel. Install the correct document type so that it appears in the top panel and then register it for the database by clicking the **Register** button. You can now close the window.
+{% endstep %}
+{% step %}
+#### Step 7: Select the registered map type
+
+Once installed and registered select the document type "(DOC) GeoDin map" from the top panel of the \<Add document> window (i.e. "Step 2").
+{% endstep %}
+{% step %}
+#### Step 8: Complete the description (Step 3)
+
+Step 3 involves completing the description for the map document (content and comments). This data may also be entered later if required. Note that that the type of meta data that can be entered here depends on the document type selected. Be sure to have chosen "(DOC) GeoDin map" and not older document description types such as (EDC) or (ADC) etc. The newer DOC types are multilingual.
+{% endstep %}
+{% step %}
+#### Step 9: Confirm
+
+Finally click the **OK** button to complete the creation of a GeoDin map. This is the basis on which further layers etc. can be added.
+{% endstep %}
+{% endstepper %}
+
+### Adding layers
+
+In a GeoDin Map you may display documents from the "Document management" (e.g. shapes, grid data) or GeoDin objects (e.g. boreholes and measurement points).
+
+To add a new layer, simply drag & drop a node from the GeoDin Object Manager (GOM) into the map window. Layers are drawn in the order that they were added to the map i.e. the last layer added will be superimposed on all other layers. To change this drawing order select a layer with the mouse, press and hold whilst moving the layer up or down in the list.
+
+### Deleting layers
+
+The context menu for a layer has an option for deleting the layer.
+
+### Adding map data to the document management
+
+Preparing GIS data for GeoDin Maps is covered in [Getting Started with Maps](getting-started-with-maps.md).
+
+***
+
+## Reference: The legend
 
 In the legend, all layers of the map are displayed.
 
@@ -13,7 +86,7 @@ Check (or un-check) the box in front of the layer name to display the layer in t
 
 The order of the layers can be simply changed by "drag and drop".
 
-**Context menu**
+### Context menu
 
 _Change parameter_
 
@@ -53,10 +126,33 @@ Vis the context mneu you can access **Presentation options** for the layer.
 
 _Attach presentation to document source_
 
-The order of the layers can be simply changed by \"drag and drop\".
+## Reference: Layer properties
 
-*Attach presentation to document source* <!-- src: help/MP/5938 -->
-### Selection properties
+The tabs **Layer** and **Section** are available for both vector and raster layers. Here, you can find general information and make some basic settings for the visualisation. Depending on the map size and the performance of the computer hardware, the display settings can be optimized.
+
+### Vector dialog box
+
+The _Vector_ dialog box is the layer property dialog box for the vector type layers. It consists of 6 up to 8 settings tabs (depending of the vector layer format):
+
+1. _Layer tab_
+2. _Section tab_
+3. _Renderer tab_
+4. _Line tab_ - appears only if the layer supports line type shapes
+5. _Area tab_ - appears only if the layer supports polygon type shapes
+6. _Marker tab_ - appears only if the layer supports point or multipoint type shapes
+7. _Label tab_
+8. _Chart tab_
+
+### Raster dialog box
+
+The **Raster** dialog box is the layer property dialog box for the raster type layers (images, grids). It consists of 3 settings tabs :
+
+1. _Layer tab_
+2. _Section tab_
+3. _Pixel tab_ - appears if the layer was not recognized as a grid layer.
+4. _Grid tab_ - appears only when the layer was recognized as a grid layer.
+
+## Reference: Selection properties
 
 **Select in**
 
@@ -72,90 +168,7 @@ Here, the color for outlining and filling the selected objects can be set.
 
 Select this option to mark a selection only with a coloured outline. If this option is not selected, the selected objects are colored transparently in the color selected above. This makes objects easy to recognize, but sometimes hides objects in the background.
 
-Select this option to mark a selection only with a coloured outline. If this option is not selected, the selected objects are colored transparently in the color selected above. This makes objects easy to recognize, but sometimes hides objects in the background. <!-- src: help/MP/7484 -->
-### Settings
-
-**Description**
-
-The tabs **Layer** and **Section** are available for both vector and raster layers. Here, you can find general information and make some basic settings for the visualisation. Depending on the map size and the performance of the computer hardware, the display settings can be optimized.
-
-The tabs **Layer** and **Section** are available for both vector and raster layers. Here, you can find general information and make some basic settings for the visualisation. Depending on the map size and the performance of the computer hardware, the display settings can be optimized. <!-- src: help/MP/7854 -->
-### Vector
-
-**Vector dialog box**
-
-The _Vector_ dialog box is the layer property dialog box for the vector type layers. It consists of 6 up to 8 settings tabs (depending of the vector layer format):
-
-1. _Layer tab_
-2. _Section tab_
-3. _Renderer tab_
-4. _Line tab_ - appears only if the layer supports line type shapes
-5. _Area tab_ - appears only if the layer supports polygon type shapes
-6. _Marker tab_ - appears only if the layer supports point or multipoint type shapes
-7. _Label tab_
-8. _Chart tab_
-### pixel
-
-The **Raster** dialog box is the layer property dialog box for the raster type layers (images, grids). It consists of 3 settings tabs :
-
-1. _Layer tab_
-2. _Section tab_
-3. _Pixel tab_ - appears if the layer was not recognized as a grid layer.
-4. _Grid tab_ - appears only when the layer was recognized as a grid layer.
-
-4.  *Grid tab* - appears only when the layer was recognized as a grid layer. <!-- src: help/MP/7920 -->
-### Creating a new map
-
-A GeoDin Map is made up of several individual map themes. The combination of layers, their settings, the order in the map and the general map settings are all saved in a map: hence a map is a kind of container.
-
-**Creating a new map using the Document management method**
-
-1\. First of all the [Document management](../navigating-the-geodin-workspace/documents/managing-documents.md) is started.
-
-2\. At this point it is advisable to create a folder hierachy to organize the documents using the **New folder** button. For instance this can be a folder for shape files, or another for layouts. The map document itself (created in the next step) can be in a folder, but it is often easier to have one or maps at the root level of the document management structure.
-
-3\. Now create a new document (that is going to be the map) via the **New document** button.
-
-4\. In the \<Add document> dialogue window select the radio button -Create document- and then click on the new file icon and choose "**Embedded GIS map"** from the list and confirm by clicking the blue tick icon. This is referred to as "Step 1" at the top of the \<Add document> window.
-
-5\. You must then enter a file name for the map before proceeding by clicking the **Next** button. Note that by default maps are saved in the database but they can also be saved as discrete files.
-
-6\. In this dialogue window ("Step 2") the available document descriptions in your GeoDin installation are shown in the top panel. The correct document type for a map is "(DOC) GeoDin map" which should be selected from the \<Chose document description type> panel. If it is not visible (i.e. not available for your GeoDin installation) you must first install it by clicking the **<**[Register document descriptions](../navigating-the-geodin-workspace/documents/document-organization.md)**>** button.
-
-6a. This brings up a new dialogue window with two panels. The top panel shows the documents types available in your installation and the registered document descriptions for your database in the bottom panel. Install the correct document type so that it appears in the top panel and then register it for the database by clicking the **Register** button. You can now close the window.
-
-7\. Once installed and registered select the document type "(DOC) GeoDin map" from the top panel of the \<Add document> window (i.e. "Step 2").
-
-8\. Step 3 involves completing the description for the map document (content and comments). This data may also be entered later if required. Note that that the type of meta data that can be entered here depends on the document type selected. Be sure to have chosen "(DOC) GeoDin map" and not older document description types such as (EDC) or (ADC) etc. The newer DOC types are multilingual.
-
-9\. Finally click the **OK** button to complete the creation of a GeoDin map. This is the basis on which further layers etc. can be added.
-
-**Adding layers**
-
-In a GeoDin Map you may display documents from the "Document management" (e.g. shapes, grid data) or GeoDin objects (e.g. boreholes and measurement points).
-
-To add a new layer, simply drag & drop a node from the GeoDin Object Manager (GOM) into the map window. Layers are drawn in the order that they were added to the map i.e. the last layer added will be superimposed on all other layers. To change this drawing order select a layer with the mouse, press and hold whilst moving the layer up or down in the list.
-
-**Deleting layers**\
-The context menu for a layer has an option for deleting the layer.
-
-4\. In the \<Add document\> dialogue window select the radio button -Create document- and then click on the new file icon and choose \"**Embedded GIS map\"** from the list and confirm by clicking the blue tick icon. This is referred to as \"Step 1\" at the top of the \<Add document\> window.
-
-6\. In this dialogue window (\"Step 2\") the available document descriptions in your GeoDin installation are shown in the top panel. The correct document type for a map is \"(DOC) GeoDin map\" which should be selected from the \<Chose document description type\> panel. If it is not visible (i.e. not available for your GeoDin installation) you must first install it by clicking the **\<**[Register document descriptions](../navigating-the-geodin-workspace/documents/document-organization.md)**\>** button.
-
-7\. Once installed and registered select the document type \"(DOC) GeoDin map\" from the top panel of the \<Add document\> window (i.e. \"Step 2\").
-
-8\. Step 3 involves completing the description for the map document (content and comments). This data may also be entered later if required. Note that that the type of meta data that can be entered here depends on the document type selected. Be sure to have chosen \"(DOC) GeoDin map\" and not older document description types such as (EDC) or (ADC) etc. The newer DOC types are multilingual.
-
-In a GeoDin Map you may display documents from the \"Document management\" (e.g. shapes, grid data) or GeoDin objects (e.g. boreholes and measurement points).
-
-**Deleting layers**\
-The context menu for a layer has an option for deleting the layer. <!-- src: help/MP/7921 -->
-### Adding map data to the document management
-
-Preparing GIS data for GeoDin Maps is covered in [Getting Started with Maps](getting-started-with-maps.md).
-
-### Contour lines
+## Reference: Contour lines
 
 The **"Contour lines"** method is available for layers of type _Grid_ (\*.grd).
 
@@ -187,8 +200,6 @@ Start the calculation with this button and get a first overview in the preview w
 
 Save the result in Shape format, (\*.shp), Geography Markup Language (\*.gml), MapInfo File (\*.mif), Keyhole Markup Language (\*.km) or JavaScript Object Notation (\*.json). After saving, you will be asked whether the saved file should be transferred to the map and displayed. If you want this, confirm with  ![Yes](../.gitbook/assets/icons/yes.png) **\<Yes>.**
 
-The **\"Contour lines\"** method is available for layers of type *Grid* (\*.grd).
-
-Save the result in Shape format, (\*.shp), Geography Markup Language (\*.gml), MapInfo File (\*.mif), Keyhole Markup Language (\*.km) or JavaScript Object Notation (\*.json). After saving, you will be asked whether the saved file should be transferred to the map and displayed. If you want this, confirm with **\<Yes\>.** <!-- src: help/MP/10934 -->
+***
 
 Shared reference content for this area lives in [WMS and Web Tile Layers](wms-and-web-tile-layers.md).
