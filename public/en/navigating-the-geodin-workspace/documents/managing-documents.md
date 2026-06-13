@@ -1,7 +1,9 @@
 
 # Managing Documents
 
-### Documents
+GeoDin document management lets you attach any type of file — photos, Microsoft Word texts, Microsoft Excel tables, videos, and GeoDin graphics — to a database, project, object, or measurement point, store it in the database or as a link, and view, edit, save, or print it from GeoDin. This page is the canonical, comprehensive reference for the document management module: the orientation and walkthroughs come first, then the working detail, then the full configuration, table, and import-format reference. For a short conceptual overview see [**Document Organization**](document-organization.md).
+
+## Documents
 
 GeoDin document management is an integral part of GeoDin. Any type of document can be integrated within a GeoDin database (Photos, Microsoft Word texts, Microsoft Excel tables, Videos and of course GeoDin graphics).
 
@@ -46,7 +48,7 @@ Documents that are linked to projects, objects or measuring points and are saved
 
 Documents are not only stored in the GeoDin database with their name and, if applicable, the document data, but are also provided with a supplementary description that optionally explains the content or other properties of the document in more detail. GeoDin provides various document description types (with different characteristics) so that, for example, different characteristics can be entered for images than for reports that are available in text form.
 
-### Requirements
+## Requirements
 
 The use of document management within GeoDin requires the following
 
@@ -71,7 +73,7 @@ The use of document management in GeoDin can be configured for entire systems or
 
 The configuration is either done directly in the GeoDin.ini or in special configuration files for specific databases. A detailed description can be found in the chapter [Configuration of the document management](document-organization.md).
 
-### Document management
+## Document management
 
 Documents that have been linked to a database, a project, an object or a measurement point are shown in the GeoDin object manager (GOM). Object and measurement points with linked documents are shown with a special symbol. The documents branch can be fully expanded on the object. If databases or projects contain documents, the corresponding branch is automatically displayed.
 
@@ -112,7 +114,7 @@ The **"Manage documents"** method displays the name of the current GeoDin object
 
 The documents of an object can be stored in any folder structure. This is comparable to a folder structure on a hard drive. Any folder can be created, deleted (except the top folder) and (re)named. The folder structure can be manipulated and documents moved to other folders using drag & drop. To do this, click on the desired entry and drag the mouse pointer to the desired location while holding down the left mouse button. Now release the left mouse button to drop the entry at this location.
 
-### Creating and organizing folders
+## Creating and organizing folders
 
 New folders can be added beneath existing ones by selecting an existing folder and clicking the  ![New](../../.gitbook/assets/icons/new.png) **New folder** button:
 
@@ -230,11 +232,13 @@ By clicking a column the contents can be sorted in either ascending or descendin
 
 By using drag and drop documents and folders can be moved from the folder overview on the right, into the general overview on the left.
 
-### Add document
+## Add document
 
 To import more than one document to several objects use the method [Import documents](managing-documents.md).
 
-**Step 1**
+{% stepper %}
+{% step %}
+#### Step 1
 
 Choose what type of document you want to add; the following options are available:
 
@@ -259,20 +263,26 @@ This option can be used to save a placeholder for a document yet to be added to 
 With this option you create a new object directly in the GeoDin database.
 
 After adding the document click **Next** to move to Step 2
+{% endstep %}
 
-**Step 2**
+{% step %}
+#### Step 2
 
 In the list above the type of document description can be chosen. This determines what kind of additional information can be stored about the document. All the registered document types for the database are shown.
 
 After choosing a type you continue with
+{% endstep %}
 
-**Step 3**
+{% step %}
+#### Step 3
 
 Here document details may be entered (in some cases there are required entries). The contents of the document description may be edited at a later stage. The document type however cannot be changed once Step 3 has been completed by pressing the **Ready** button. Hence if changes to the description type are made, all entries in step 3 will be lost. On pressing the **Ready** button the document description is saved in the document structure and is automatically the current document.
+{% endstep %}
+{% endstepper %}
 
 Renaming a document in the folder structure can be done with the **F2** key or with a click on the entry itself (as in renaming a folder). Similarly moving a document can be done by using drag & drop .
 
-### Deleting documents and folders
+## Deleting documents and folders
 
 To delete documents or folders, select an object and choose **Delete**.
 
@@ -296,7 +306,7 @@ When you delete a document the contents are removed from the GeoDin database. Th
 
 If the document is an alias (i.e. a link to a file stored elsewhere) then after document deletion the file is on the drive and you have to delete it "per hand", if you want to remove it.
 
-### Display of document information
+## Display of document information
 
 Upon selecting an object information relevant to the folder or document is shown on the _**Folder**\\_ _Document_\*\* tab and the following functions are available:
 
@@ -340,7 +350,7 @@ Use this function as well to attach a "real" document to an entry that was previ
 
 By clicking the button, you access the **"Replace Document Data"** function, which has the same structure and operation as the [Add document](managing-documents.md) function.
 
-### Document preview
+## Document preview
 
 The **Preview** tab provides a direct preview for a variety of document types. These include, in particular, image documents (raster and vector formats) as well as GeoDin graphics and layouts.
 
@@ -348,13 +358,13 @@ When the -Refresh Preview- option is enabled, the document data is automatically
 
 If a direct display of the document in the preview is not possible, a corresponding message will appear, and the document can be viewed using the [Display of document information](document-organization.md).
 
-### Document description
+## Document description
 
 The **Document description** tab can be used to provide extra information about the file just added. This can be subsequently edited.
 
 After correcting or adding to the entries, they can be saved with the **Apply** button. If you leave the document entry (e.g., in the left document structure) without having saved the changes with the **Apply** button, a prompt will appear asking if you would like to save the changes now.
 
-### Show enclosed objects
+## Show enclosed objects
 
 After launching the document management for a selected object in the GeoDin Object Manager, this object automatically becomes the main entry in the right overview of folders and documents. Only the documents directly linked to this object are displayed below. To get an overview of all documents, for example, of a project, it is not necessary to select each individual object in the Object Manager and then start the document management. With the option - Display Subordinate Objects -, all objects with documents can be displayed in one step.
 
@@ -572,7 +582,7 @@ Borehole 4
 
 Adding documents may also be carried out, without selecting each object individually.
 
-### Register document descriptions
+## Register document descriptions
 
 **"Register Document Descriptions"** can be done at any branch of the database, as this registration applies to the entire database.
 
@@ -590,7 +600,7 @@ This list shows the document descriptions that are already registered in the cur
 
 If all the document descriptions you need in the current database are displayed in the lower list of registered document descriptions, exit this dialog with **\<Exit>.**
 
-### Using aliases
+## Using aliases
 
 If you add documents to your database as references because you do not want the document data to be stored in the GeoDin database, or the documents (e.g., videos) are too large to be stored in the database, the reference initially contains a full path to the actual document.
 
@@ -628,7 +638,7 @@ Although the saved link remains the same ($Drilling$Core 01.jpg) the image is no
 
 Aliases are valid for the entire database and not object specific. Once defined they apply to various objects added to this folder. GeoDin automatically recognizes, whether documents added to a database belong to a folder with an alias link and replaces the particular connection string automatically. Just notice the display "Saved link" in Step 1 of the function <**Add / Replace document data**>.
 
-### GeoDin graphics as documents
+## GeoDin graphics as documents
 
 GeoDin graphics can be added to a GeoDin database just like any other document, either as a **File** or as the **Current graphic**.
 
@@ -652,7 +662,7 @@ The following approach is generally recommended:
 1. If the graphic contains the representation of an object (e.g., drilling), a link is appropriate. Always add such a GeoDin graphic to the document management of the represented drilling (and not other objects) and store it in the GeoDin database instead of as a file reference.
 2. If the graphic contains the representation of multiple objects (e.g., profile section), embedding the drilling data is more suitable. It is better to add such a GeoDin graphic to the document management of the project rather than a single drilling and store it in the GeoDin database.
 
-### Configuration of the document management
+## Reference: Configuration of the document management
 
 The configurations for document management are done either in the GeoDin configuration file GeoDin.ini or in the configuration file of the desired database connection.
 
@@ -989,7 +999,7 @@ Node3=2=Core Photos=C:\GeoDin\Core Photos
 
 If a physical location is specified, only a file from the specified location can be added to the document management via a link.
 
-### Database tables of the document management
+## Reference: Database tables of the document management
 
 Documents, their structure and links of a database are stored in the following tables:
 
@@ -1103,6 +1113,10 @@ The tables ADCDATA and ADC\_xxxxxxxx are linked via ADC\_ID.
 
 The definition of the document descriptions table can be studied in the SYS\_LOCSTRS table (because the document description is registered like a object type in the SYS-tables).
 
+## Reference: Document add types
+
+The **Add document** walkthrough above lets you choose what kind of document to add. Each type behaves as described below.
+
 ### File
 
 First choose the file to be stored via the folder icon **File open**. In the _"Name:"_ field you may either leave the default setting (file name) or enter any other name. This is initially predefined with the name of the file and can also be changed again at a later date.
@@ -1159,7 +1173,7 @@ With this option you add a new document entry including document and document de
 
 After clicking the icon [Create document](managing-documents.md) you select the type of document to be created.
 
-### Import documents
+## Import documents
 
 Use this method to import documents for objects or measuring points.
 
@@ -1177,6 +1191,8 @@ For general document management information, see [Documents](managing-documents.
 
 The documents (files) are referenced and included using their file names with the entries of a master data field of the objects or the display name of the query.
 
+{% stepper %}
+{% step %}
 **Step 1Files:**
 
 Select the folder that contains the documents you want to import and specify the file types of the document files.
@@ -1198,7 +1214,9 @@ This function offers the possibility to import image files including depth infor
 The prerequisite for the automatic transfer of depth information is the installation of the document description type "Depth-oriented image" or "Image with depth information".
 
 After the import, the document name consists of the specified "Document name (if empty \<ObjectName>)\_depth from\_depth to".
+{% endstep %}
 
+{% step %}
 **Step 2Measuring point assignment:**_**Master data:**_
 
 \[user-defined]
@@ -1208,7 +1226,9 @@ From the list of master data fields, you must select a field whose data field co
 _**Automatically:**_
 
 The assignment is made using the display name of the query.
+{% endstep %}
 
+{% step %}
 **Step 3Document Properties:**_**Document description type:**_
 
 Here you can select to which document description type the documents to be imported are to be assigned. If no document description types are yet registered in your system, you receive a message. You can make up the registration by clicking the button **Register document descriptions**.
@@ -1230,8 +1250,10 @@ Example: _**Subfolder1**\\**Subfolder2**\\**Subfolder3**_
 Once all necessary entries have been made, the **OK** switch becomes active and the import can be started.
 
 At the end of execution, a log is displayed listing all actions performed for all objects. The log can be saved.
+{% endstep %}
+{% endstepper %}
 
-### Import formats
+## Reference: Import formats
 
 The import formats are made up of:
 
@@ -1285,13 +1307,13 @@ Borehole 1\_4.00-5.00
 
 The button allows you to preview the effect of using the regular expression on the example file, to check for the expected result.
 
-### RTF texts as documents
+## RTF texts as documents
 
 RTF text (Rich Text Format) can be edited and printed from GeoDin. In contrast to simple text files, RTF can contain formatting such as fonts, colours etc. The editor in GeoDin offers similar functions to programs such as WordPad from Microsoft®.
 
 You can add a RTF text to the document management either as a **File** or create directly as a [Create document](managing-documents.md). Choose the method **"Edit document"** in the GeoDin object manager to edit the text. The editor can open and edit multiple documents that are shown in separate tabs. Highlight text to apply edits from the upper tool bar.
 
-### Documents (moved from Databases pages)
+## Reference: Document description table definition
 
 The definition of the document description table can be taken from the SYS\_LOCSTRS table from the **System**. The documents are registered like an object type in SYS tables.
 
