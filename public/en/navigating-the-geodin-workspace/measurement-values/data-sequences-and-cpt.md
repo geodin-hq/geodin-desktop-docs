@@ -1,15 +1,21 @@
 
 # Data Sequences and CPT
 
-### Insert line
+Data sequences are the measurement-value series held against a data type in GeoDin — the per-row records the measurement editor reads and writes. This page is the reference for the data-sequence operations and the data-type structure dialogs you work with around them: inserting and removing rows, resolving data-type creation errors, comparing data-type structures across databases, and the parameter overview and parameter-property editors.
+
+For the measurement-data editor itself, see [Working with Measurement Data](../measurement-values/working-with-measurement-data.md).
+
+***
+
+## Reference: Insert line
 
 An empty data set is inserted above the current row. After entering data and reloading the view the data set is sorted in the correct row position.
 
-### Remove line
+## Reference: Remove line
 
 The current row will be deleted from the database after confirming a query. _WARNING:_\*\* _This action cannot be undone! You may delete several data sets using the keyborad shortcut Ctrl+Del._
 
-### Error creating the datatype
+## Reference: Error creating the datatype
 
 The table could not be created because of a syntax error in the definition of the table structure.
 
@@ -23,7 +29,7 @@ b) too many data fields
 
 c) wrong field types
 
-**Wrong field names**
+### Wrong field names
 
 For data types (measurement values) structures can be defined. Beside the field type also a long and a short name are entered for a parameter. If the datamodel is SDM the short parameter names are also used to describe the table columns. In the LDM (large data model) this is not the case because the structure always remains the same.
 
@@ -53,11 +59,11 @@ TEXT
 
 TIME
 
-**Too many data fields**
+### Too many data fields
 
 The number of data fields (columns) in a database table is usually limited and depends on the type of datbase. If this error occurs it my be better to choose the LDM format, because for each measured value a row in the table is created and the number of columns is small (see also [Data model](../data-types.md))
 
-**Incorrect Field types**
+### Incorrect Field types
 
 Some types of data fields are realised differently in different database systems. This is especially true for Blob and Memo fields.
 
@@ -71,7 +77,7 @@ DDL\_MEMO=MEMO
 
 (see also **Configuration**)
 
-### Datatype comparison
+## Reference: Datatype comparison
 
 When tranfering objects into another database, e.g., using the methodes **"Add objects"** or **"Copy project"**, a comparison of the structures of the data types is made. This is done to ensure a complete and correct transfer of the data, which is particularly important for measurement data.
 
@@ -93,7 +99,7 @@ The properties of the measurement units or field formats in both databases vary.
 
 The transfer of the same parameters but with differing field formats (date, character, numeric)is also not possible. In addition the field length will be checked. For instance there could be a parameter REMARKS with a field length of 30 characters in \[database\_1] and the same parameter with a field length of 40 in \[database\_2]. Before it is possible to copy values of this parameter from \[database\_2] into \[database\_1] you must expand the field length in \[database\_1] up to 40. Otherwise there is a risk that text entries with more than 30 characters will be truncated.
 
-### Parameters
+## Reference: Parameters
 
 The parameter overview for a data type shows all the available parameter for a data type. Here you can choose which parameters are to be available in the current database, set their order and edit their properties. In addition there is information on the measurement values in the database.
 
@@ -147,7 +153,7 @@ Important note: The parameters with the symbol are in the current database but N
 
 The parameters shown with the symbol properties that differ from those in the system configuration. This is not cause for concern since parameter properties are independent of the database. For instance the default value entered automatically for every data record could be =10 in the system configuration and =15 in the current database. Hence these differences are perfectly legitimate. However differences in the data filed type are more critical (e.g. in the system configuration type = Text and in the database = Number). These differences may cause problems when data are to be subsequently transferred from one database to another, where the same parameter has different data field types. Such a data transfer is not possible and will be refused. You can edit the [Edit parameter properties](data-sequences-and-cpt.md) to alleviate these differences.
 
-### Edit parameter properties
+## Reference: Edit parameter properties
 
 The overview displays the properties of a parameter in the current database and in the system configuration.
 
