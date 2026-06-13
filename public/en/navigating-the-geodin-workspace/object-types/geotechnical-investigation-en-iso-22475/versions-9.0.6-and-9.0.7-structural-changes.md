@@ -16,11 +16,9 @@ This page describes **only the structural changes**.\
 \
 Information on further, [non‑structural adjustments](versions-9.0.6-and-9.0.7-general-adaptations.md) is documented in a separate Help Centre article.
 
-### Structural Changes to the Geotechnical Data Types
+## Reference: Structural Changes to the Geotechnical Data Types
 
 To avoid future conflicts with the GeoDin object type **Location \[G1BORLOG]**, the **short names of several geotechnical data types** belonging to the object type _Geotechnical investigation EN ISO 22475 (2018)_ had to be adapted.
-
-***
 
 ### Changes to Data Type Short Names
 
@@ -43,13 +41,11 @@ For this reason, **installation or update** to object type versions **9.0.6 and 
 
 If the affected data types are used in **layouts and/or queries**, these must be **updated manually** after an object type or database update.
 
-***
-
 ### What Happens When Updating to Object Type Version 9.0.7?
 
 To install object type version **9.0.7**, clean up the GeoDin configuration, and correct affected databases if required, **GeoDin version 10.1 or 15** is mandatory.
 
-***
+## Reference: Checking your versions before updating
 
 ### Determining Your GeoDin Version
 
@@ -58,7 +54,7 @@ To check the GeoDin version currently in use:
 * Click the **Info (i)** button in the top‑right corner of the GeoDin user interface
 * Select **“Info to GeoDin…”**
 
-<figure><img src="../../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (7).png" alt=""><figcaption>The <strong>Info (i)</strong> menu in the top-right corner of GeoDin, with <strong>Info to GeoDin…</strong> selected; the About dialog reports the running GeoDin version (here <code>GeoDin 15.2.29_H</code>).</figcaption></figure>
 
 ### Determining the Object Type Version in Your System
 
@@ -69,7 +65,17 @@ The installed object type version can be checked as follows:
 * Select **Geotechnical investigation EN ISO 22475 (2008)**
 * Open **Properties**
 
-<figure><img src="../../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (8).png" alt=""><figcaption>System configuration → Object types with <strong>Geotechnical investigation EN ISO 22475 (2018)</strong> selected and <strong>Properties</strong> opened; the Properties dialog shows the installed object type version (here Version 9.0.5).</figcaption></figure>
+
+### Determining the Object Type Version in Your Database
+
+The object type version registered in a database is displayed **during a database update** in the dialog:
+
+**“Database structure: \[DATABASE NAME]”**
+
+A backup of the relevant database is strongly recommended before updating.
+
+<figure><img src="../../../.gitbook/assets/image (10).png" alt=""><figcaption>The <strong>Database structure: ENISO_DEMO_Saarbruecken</strong> update dialog — the <strong>Database version</strong> and <strong>System settings version</strong> columns show the Geotechnical investigation EN ISO 22475 (2018) row updating from 9.0.5 to 9.0.7.</figcaption></figure>
 
 ### Backup Recommendation Before Updating
 
@@ -82,21 +88,13 @@ Before updating the object type, it is strongly recommended to:
   * **System → System configuration → Data types**
   * Use the **Export data types** method
 
-<figure><img src="../../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (9).png" alt=""><figcaption>System → System configuration → Data types → <strong>Export data types</strong>, with the affected geotechnical data types ticked and the export file path set; click <strong>Export</strong> to save the backup.</figcaption></figure>
 
-### Determining the Object Type Version in Your Database
+***
 
-The object type version registered in a database is displayed **during a database update** in the dialog:
+## Reference: Cleaning Up the GeoDin Configuration
 
-**“Database structure: \[DATABASE NAME]”**
-
-A backup of the relevant database is strongly recommended before updating.
-
-<figure><img src="../../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
-
-### Cleaning Up the GeoDin Configuration
-
-#### Changes to the System Configuration
+### Changes to the System Configuration
 
 #### Case 1
 
@@ -132,9 +130,9 @@ When updating to version **9.0.7**:
 * Self‑created data type parameters are **retained**
 * Object type **Location \[G1BORLOG]**, if present, is also retained
 
-### Database Correction During Update
+## Reference: Database Correction During Update
 
-#### Changes to Databases
+### Changes to Databases
 
 #### Case 1
 
@@ -173,5 +171,3 @@ When updating to version **9.0.7**:
 
 * Table names for _(G) UU‑triaxial_ and _Measurement data UU_ are adapted
 * Measurement data is written into the new tables
-
-###
