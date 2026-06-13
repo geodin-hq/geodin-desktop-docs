@@ -1,7 +1,13 @@
+---
+description: >-
+  How GeoDin stores data in databases — desktop vs client/server types, the
+  system/user hierarchy and naming rules, and how to create a database
+  connection from the GeoDin object manager.
+---
 
 # Connecting to a Database
 
-### Databases
+## Databases
 
 GeoDin data is stored in databases, which may contain any number of GeoDin projects - the only limit is your disk space.\
 Databases are accessed using a specialized database driver (OLE-DB-Provider). This driver is included in your operating system or is provided with your database. Database connections are created, configured or deleted from the GeoDin user interface.
@@ -18,7 +24,7 @@ GeoDin data is stored in a user-defined physical database format such as Microso
 Data is stored in a database on a database server e.g. Oracle, SQL-Server etc. In addition to a database driver and database connection, client software for the relevant database is needed. A database administrator must set up user identification on the database server, which appears when the database is opened (login). The database functions are implemented on the database server reducing computing load on the client PC(s).Client/server databases can be used from _**GeoDinProfessional**_ onwards.\
 The GeoDin-System contains functions to copy or transfer data between database types. Hence it is possible to change the database format of a project after it has been created.
 
-**Hierarchy and general rules**
+## Hierarchy and general rules
 
 GeoDin databases can be defined on two distinct levels.
 
@@ -34,7 +40,7 @@ are created or defined locally using the method **"Create database connection"**
 
 Different user databases cannot have identical names. A database connection defined as a system database is used in preference to a user-defined database
 
-### Create database connection
+## Create database connection
 
 The method **"Create database connection"** is available under the  ![Databases](../../.gitbook/assets/icons/databases-3.png) **Databases** tab in the GeoDin object manager (GOM):
 
