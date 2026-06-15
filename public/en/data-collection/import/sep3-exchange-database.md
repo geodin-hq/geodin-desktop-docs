@@ -16,19 +16,49 @@ The **exchange database** (German: *Austauschdatenbank*) is a special Access dat
 
 ## Step-by-step import procedure
 
-1. **Download the exchange database** from the GeoDin website. The download is version-specific — ensure you use the version matching your GeoDin installation.
+{% stepper %}
+{% step %}
+#### Step 1: Download the exchange database
 
-2. **Place the received authority file** in a short local path on the GeoDin server (e.g. `C:\Temp\authority-data.mdb`).
+from the GeoDin website. The download is version-specific — ensure you use the version matching your GeoDin installation.
+{% endstep %}
 
-3. **Connect the exchange database in GeoDin.** In the GeoDin Object Manager, use **Create database connection** to add the downloaded Austauschdatenbank file as a new Access database connection.
+{% step %}
+#### Step 2: Place the received authority file
 
-4. **Point the exchange database to the authority's file.** Once connected, open the exchange database. It will ask you to specify the path to the received authority file. Browse to the file placed in Step 2.
+in a short local path on the GeoDin server (e.g. `C:\Temp\authority-data.mdb`).
+{% endstep %}
 
-5. **Browse the imported objects.** After the path is set, the exchange database displays the SEP 3 objects from the authority file as if they were in a normal GeoDin project. You can inspect layer data and general data before copying.
+{% step %}
+#### Step 3: Connect the exchange database in GeoDin.
 
-6. **Copy objects into your main database.** Select the objects you want to import. Use **Add Objects** on your target project (in your main database) and drag the objects from the exchange database into the list. Choose **Copy** and confirm.
+In the GeoDin Object Manager, use **Create database connection** to add the downloaded Austauschdatenbank file as a new Access database connection.
+{% endstep %}
 
-7. **Review the protocol.** After the copy, GeoDin displays a protocol showing which objects were transferred and any issues encountered (e.g. unmapped SEP codes). See [SEP 1 → SEP 3 conversion](cross-database-object-copying.md#converting-sep-1-objects-to-sep-3-during-copy) for notes on handling unmapped abbreviations.
+{% step %}
+#### Step 4: Point the exchange database to the authority's file.
+
+Once connected, open the exchange database. It will ask you to specify the path to the received authority file. Browse to the file placed in Step 2.
+{% endstep %}
+
+{% step %}
+#### Step 5: Browse the imported objects.
+
+After the path is set, the exchange database displays the SEP 3 objects from the authority file as if they were in a normal GeoDin project. You can inspect layer data and general data before copying.
+{% endstep %}
+
+{% step %}
+#### Step 6: Copy objects into your main database.
+
+Select the objects you want to import. Use **Add Objects** on your target project (in your main database) and drag the objects from the exchange database into the list. Choose **Copy** and confirm.
+{% endstep %}
+
+{% step %}
+#### Step 7: Review the protocol.
+
+After the copy, GeoDin displays a protocol showing which objects were transferred and any issues encountered (e.g. unmapped SEP codes). See [SEP 1 → SEP 3 conversion](cross-database-object-copying.md#converting-sep-1-objects-to-sep-3-during-copy) for notes on handling unmapped abbreviations.
+{% endstep %}
+{% endstepper %}
 
 {% hint style="warning" %}
 The exchange database only works with files that use the **SEP 3 table structure**. Arbitrary third-party Access databases or non-SEP formats are not supported.
@@ -37,5 +67,3 @@ The exchange database only works with files that use the **SEP 3 table structure
 {% hint style="info" %}
 If you regularly receive data from state authorities, keep a permanent connection to the exchange database in GeoDin and simply update the path to point to each new delivery file as it arrives.
 {% endhint %}
-
-<!-- src: transcript/2026-04-15-in-person-workshop -->

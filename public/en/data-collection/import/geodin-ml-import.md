@@ -31,8 +31,6 @@ The **picture log form** does **not** produce GeoDinML — it produces a PDF wit
 **EN ISO E2 standard is currently disabled in Onsite** because of a bug in the GeoDinML importer specifically for E2-flavoured GeoDinML. The form exists in both E2 and Step 3 flavours; E2 has been temporarily hidden to prevent users from creating data they cannot import. Re-activation in Onsite is a ~5-minute turnaround once the Desktop importer is fixed and released.
 {% endhint %}
 
-<!-- src: transcript/data-import-migration#geodin-ml-field-to-office-data-flow -->
-
 ## Loading project metadata into Onsite via GeoDinML
 
 GeoDinML is also the only server-less way to push a project list to field users. The intended workflow: one person centrally exports a GeoDinML file from Desktop and shares it (e.g. via a cloud folder) so that all field users pick from the same canonical project list.
@@ -46,37 +44,45 @@ GeoDinML is also the only server-less way to push a project list to field users.
 
 Onsite never sanitizes data on import via GeoDinML beyond the standard project-number file-name sanitization rules.
 
-<!-- src: transcript/data-import-migration#project-metadata-loading-via-geodin-ml -->
+***
 
 ## Step-by-step: importing a GeoDinML file
 
-### 1. Prepare the database
+{% stepper %}
+{% step %}
+#### Step 1: Prepare the database
 
 Open your database, then create a **dummy project** and a **dummy object** inside it. This forces GeoDin to generate the table structures the import process relies on.
 
 ![Open the database and create a dummy project and object](../../.gitbook/assets/import-geodinml-01.jpg)
-
-### 2. Remove the temporary project
+{% endstep %}
+{% step %}
+#### Step 2: Remove the temporary project
 
 Delete the dummy project once the table structures exist. The database is now ready to receive the import.
 
 ![Delete the dummy project](../../.gitbook/assets/import-geodinml-02.jpg)
-
-### 3. Open the GeoDinML import plugin
+{% endstep %}
+{% step %}
+#### Step 3: Open the GeoDinML import plugin
 
 Go to the **Methods** section and open the **GeoDinML import plugin**.
-
-### 4. Select the file and run the import
+{% endstep %}
+{% step %}
+#### Step 4: Select the file and run the import
 
 Choose the GeoDinML file you want to import and start the process. Review the records shown during the import to confirm the data being brought in.
 
 ![Select the GeoDinML file and start the import](../../.gitbook/assets/import-geodinml-03.jpg)
-
-### 5. Refresh the database to view imported records
+{% endstep %}
+{% step %}
+#### Step 5: Refresh the database to view imported records
 
 When the import finishes, refresh your database. The imported records should now appear.
 
 ![Refresh the database to see the imported records](../../.gitbook/assets/import-geodinml-04.jpg)
+{% endstep %}
+{% endstepper %}
 
 ---
 

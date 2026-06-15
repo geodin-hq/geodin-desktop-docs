@@ -29,5 +29,3 @@ For the form-level constraints (which forms produce GeoDinML, which produce only
 ## File-based integration to Onsite
 
 GeoDinML is the only server-less way to push a project list from Desktop to field users: one person centrally exports the project list, shares the file (e.g. via a cloud folder), and all field users see the same canonical projects.
-
-<!-- src: transcript/api-integrations#file-based-integration-geodin-ml -->

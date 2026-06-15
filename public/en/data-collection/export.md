@@ -27,15 +27,11 @@ For exports originating in GeoDin Onsite, the default export path is controlled 
 
 PDF exports from Onsite contain a "DRAFT" watermark unless the form was produced via **Publish as Complete**. GeoDinML exports never carry a draft watermark.
 
-<!-- src: transcript/reporting-exports#export-formats-pdf-ags-dxf-csv-excel-geodin-ml -->
-
----
+***
 
 ## Reference: Column properties
 
-<!-- Editorial flag: legacy-sourced reference content below — verify against current GeoDin (Goal 4) -->
-
-When configuring export column properties, the following options are available: <!-- src: help/05/765 -->
+When configuring export column properties, the following options are available:
 
 - **Name (also for Excel export):** Columns can be named individually for better identification. When exporting to Excel, this name is used as the column title. Cell formatting can also be configured here.
 - **Visible:** Controls whether a column is included in the export.
@@ -43,12 +39,7 @@ When configuring export column properties, the following options are available: 
 - **Row height:** Calculated automatically to display all content in full. A minimum height can be specified; the maximum of all column minimum heights determines the row's minimum height.
 - **Text style:** Selects the text formatting style for cells in this column.
 
----
-
 ## Reference: Presentation conditions
-<!-- src: help/H0000000769 -->
-
-<!-- Editorial flag: legacy-sourced reference content below — verify against current GeoDin (Goal 4) -->
 
 Presentation conditions control how individual cells in a report column are displayed based on their content. A column has a default font, but presentation conditions can override the font and background colour when specific criteria are met — for example, highlighting values that exceed a regulatory limit.
 
@@ -63,12 +54,7 @@ Cells not matching either condition remain black (the column default).
 
 **Managing condition lists:** Conditions (and other list-based elements such as series or columns) can be added, duplicated, deleted, and reordered using the toolbar icons (New, Duplicate, Delete, Move Up, Move Down). Drag-and-drop reordering is also supported. The *Edit without refresh* toggle suspends live preview updates while reordering, which is useful for large datasets.
 
----
-
 ## Reference: Post-selection (data filtering)
-<!-- src: help/H0000000918 -->
-
-<!-- Editorial flag: legacy-sourced reference content below — verify against current GeoDin (Goal 4) -->
 
 A post-selection filters data records from already-correlated data types (see Pre-selection for correlation).
 
@@ -88,12 +74,7 @@ A post-selection filters data records from already-correlated data types (see Pr
 
 **Displaying selector content in a layout:** Use the variable text element with the macro `$%SelectorContent:Selector_name[@format]$`. Use `@c` to display the dictionary code instead of the translated long name.
 
----
-
 ## Reference: Blank values in statistic reports
-<!-- src: help/H0000005071 -->
-
-<!-- Editorial flag: legacy-sourced reference content below — verify against current GeoDin (Goal 4) -->
 
 When a statistic report analyses parameters that have no measured values for some periods or locations, three display options control how missing data appears:
 
@@ -105,12 +86,7 @@ When a statistic report analyses parameters that have no measured values for som
 
 When a statistic interval is defined (e.g. yearly), the same three options apply to individual time periods within each parameter — missing intervals can show `0`, be left blank, or be suppressed.
 
----
-
 ## Reference: Report row types
-<!-- src: help/H0000005328 -->
-
-<!-- Editorial flag: legacy-sourced reference content below — verify against current GeoDin (Goal 4) -->
 
 Each row in a report definition has a type that controls its content:
 
@@ -120,12 +96,7 @@ Each row in a report definition has a type that controls its content:
 - **Page break** — Forces a page break at the defined position. Commonly placed at the end of a row definition so each sample starts on a new page.
 - **Remove text line or page break if no parameter lines follow** — When enabled, suppresses orphaned header rows or page breaks that would appear when a data source has no matching parameter data (e.g. a "Cations" header with no cation values).
 
----
-
 ## Reference: Text row properties
-<!-- src: help/H0000005334 -->
-
-<!-- Editorial flag: legacy-sourced reference content below — verify against current GeoDin (Goal 4) -->
 
 Text rows can display static text, pre-defined text, or variable text built from data-field macros (via the **Build** button). Translation language can be set to control how dictionary-backed field contents are rendered; the default "Automatic" uses the language specified on the object type.
 
@@ -135,43 +106,23 @@ Text rows can display static text, pre-defined text, or variable text built from
 | **Hide backslash characters in data fields** | Strips `\` characters from displayed text without converting them to line breaks. |
 | **Ignore unknown data field references** | Suppresses unresolvable `$...$` variable references instead of showing them as raw text. Useful for layouts shared across different object types. |
 
----
-
 ## Reference: Dynamic captions
-<!-- src: help/H0000007111 -->
-
-<!-- Editorial flag: legacy-sourced reference content below — verify against current GeoDin (Goal 4) -->
 
 Dynamic captions provide per-data-record information in column headers of laboratory control reports that display multiple measurements per row. The caption content is defined using text macros. A report can contain only one dynamic caption definition, but multi-line captions are supported (insert a return within the macro). No other row types may precede the dynamic caption row.
 
----
-
 ## Reference: Footer row properties
-<!-- src: help/H0000007193 -->
-
-<!-- Editorial flag: legacy-sourced reference content below — verify against current GeoDin (Goal 4) -->
 
 - **Name** — Label for the footer line, typically written in the first column. Use the *To column* option to span the label across multiple columns; set to `0` to suppress the label entirely.
 - **Type** — Choose between a text footer or a statistical-value footer.
 - **Decimal places** — Controls precision of calculated values. Set to `0` to strip trailing insignificant decimals; otherwise all calculated decimals are shown.
 
----
-
 ## Reference: Parameter settings (list comparison)
-<!-- src: help/H0000002692 -->
-
-<!-- Editorial flag: legacy-sourced reference content below — verify against current GeoDin (Goal 4) -->
 
 - **Sensitivity of response** — Adjusts the tolerance for list-comparison checks. At 100 % (default) the comparison is exact. Reducing to 90 % introduces a 10 % margin, so a measured value of 95 mg/l would be flagged against a limit of 100 mg/l.
 - **Parameter display — if list value is available** — Show the parameter always, or only when the measured value exceeds the comparison value.
 - **Parameter display — if list value is not available** — Controls whether parameters without a comparison value appear in the report.
 
----
-
 ## Reference: Barcode and QR code
-<!-- src: help/H0000010889 -->
-
-<!-- Editorial flag: legacy-sourced reference content below — verify against current GeoDin (Goal 4) -->
 
 Report layouts can include barcode or QR code elements. Select the code type, rotation, colour, and whether human-readable text is shown below the code.
 

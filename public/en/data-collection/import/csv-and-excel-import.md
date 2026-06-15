@@ -32,8 +32,6 @@ After mapping, the import preview uses colour to show what will happen:
 - **Dictionary fields** — accept either the short code (e.g. `CPT`) or the full text value.
 - **Unit system** — toggle under `File > Unit System` between Metric (SI) and US Customary. Unit conversions (e.g. feet to metres) happen on the fly during import.
 
-<!-- src: transcript/data-import-migration#csv-excel-import -->
-
 ## Use GeoDin's Excel export to generate a template
 
 The fastest way to prepare an import file with correctly-named columns is to export the matching data type from GeoDin first, fill the exported file, and re-import.
@@ -41,5 +39,3 @@ The fastest way to prepare an import file with correctly-named columns is to exp
 - Any data table (general data, samples, measurement data) can be exported to Excel via the **red-dot export** button.
 - The tabular **All Objects** view under Data Management shows general data for all locations in a single sortable table — exporting this view gives a complete template for general-data imports.
 - Exported Excel files contain headers matching GeoDin's internal parameter names, ready for round-trip re-import.
-
-<!-- src: transcript/data-import-migration#excel-export-as-import-template-source -->

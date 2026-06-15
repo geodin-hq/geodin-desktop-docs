@@ -42,7 +42,7 @@ When samples and measurements are imported, the source file must include a colum
 
 Batch import is supported for general data, samples, data sequences, and sample-level measurement tests.
 
-<!-- src: transcript/data-import-migration#batch-import-workflow-general-samples-measurements -->
+***
 
 ## Import guides by source
 
