@@ -16,9 +16,11 @@ This page describes the **general adaptations** to the object type.\
 \
 [Structural changes to geotechnical data types](versions-9.0.6-and-9.0.7-structural-changes.md) are documented separately and should be reviewed **before updating**.
 
-### Corrections
+***
 
-#### Adjustment of the Output for System Variables
+## Reference: Corrections
+
+### Adjustment of the Output for System Variables
 
 The output of the system variables:
 
@@ -26,8 +28,6 @@ The output of the system variables:
 * `$TRMINUS` (− / to)
 
 is now displayed **without inverted commas**.
-
-***
 
 ### Discontinuities
 
@@ -39,7 +39,9 @@ is now displayed **without inverted commas**.
 * The default value for the input field **Type of structure (TYP\_TF)** has been removed\
   This enables the deletion of an existing layer.
 
-<figure><img src="../../../.gitbook/assets/image (88).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (88).png" alt=""><figcaption>The Discontinuities input form, with multiple keys (<code>e,r</code>) entered in the <strong>Roughness</strong> field — the resulting "planar, rough" description appears in the layer summary bar.</figcaption></figure>
+
+## Reference: Adaptations to DIN standards
 
 ### Adaptation to DIN 18196 (2023)
 
@@ -52,8 +54,6 @@ Three new soil groups according to **DIN 18169 (2023)** have been added to the d
 * Large boulders (BG)
 * Boulders (BL)
 * Cobbles (BS)
-
-***
 
 ### Adaptation to DIN 4023 (2023)
 
@@ -75,8 +75,6 @@ The following changes were implemented:
 
 ![](<../../../.gitbook/assets/image (89).png>)
 
-***
-
 **Secondary Components**
 
 **Dictionary:** `(E2) Secondary components` \[E2SSTYPE]
@@ -89,9 +87,7 @@ The following changes were implemented:
   * _organic \[DIN]_: `h` → `o`
   * _organic \[EN ISO]_: `h` → `o`
 
-***
-
-### Adaptation of Fill Patterns
+#### Adaptation of Fill Patterns
 
 Fill patterns have been adapted to match the **colour values defined in DIN 4023**.
 
@@ -103,9 +99,9 @@ For the standard **DIN EN ISO (deutsch)**, fill patterns were updated for the fo
 * `(E2) Well design – back fill` \[E2ASBVER]
 * `(E2) Well design – casing` \[E2ROHEL]
 
-<figure><img src="../../../.gitbook/assets/image (90).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (90).png" alt=""><figcaption>Old (left) versus new (right) fill patterns for Silt, Limestone, Sandstone, Granite, Monzonite, Rhyolite, Amphibolite, Greenschist, and Hornfels — recoloured to the DIN 4023 colour values.</figcaption></figure>
 
-***
+## Reference: Visualisation adaptations
 
 ### Adaptation of the Display for WRT Cutting Conditions
 
@@ -118,9 +114,7 @@ This was achieved by adapting the dictionary:
 
 **Dictionary:** `(E2) Condition WRT cuttings` \[E2BOHGUT]
 
-<figure><img src="../../../.gitbook/assets/image (91).png" alt=""><figcaption></figcaption></figure>
-
-***
+<figure><img src="../../../.gitbook/assets/image (91).png" alt=""><figcaption>Borehole-log visualisation of the new cutting conditions — "Limestone, highly jointed" (left) and "Topsoil, liquid" (right).</figcaption></figure>
 
 ### Adaptation of the Display for Weathering Grade
 
@@ -130,9 +124,7 @@ A new visualisation was introduced for the weathering stage **Residual soil** (g
 
 For visualisation, the graphic element **Special symbol** with the special symbol type **Weathering grade** can be used.
 
-<figure><img src="../../../.gitbook/assets/image (92).png" alt=""><figcaption></figcaption></figure>
-
-***
+<figure><img src="../../../.gitbook/assets/image (92).png" alt=""><figcaption>Borehole-log visualisation of the residual-soil weathering grade using the <strong>Special symbol</strong> graphic element — "fine Sand, silty, residual soil".</figcaption></figure>
 
 ### Adaptation of Sample Visualisation
 
@@ -146,13 +138,11 @@ Samples of **category A–E** are now displayed **uniformly in full colour** for
 **Screenshot placeholder:**\
 `E2_samples_categoy_A-E.png`
 
-<figure><img src="../../../.gitbook/assets/image (93).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (93).png" alt=""><figcaption>Sample-type legend — categories A–E shown uniformly in full colour, with the water sample as the open-triangle exception.</figcaption></figure>
 
-***
+## Reference: Further general adaptations
 
-### Further General Adaptations
-
-#### New Fields / Parameters
+### New Fields / Parameters
 
 **Layer Data \[E2LAYER]**
 
@@ -162,9 +152,7 @@ Samples of **category A–E** are now displayed **uniformly in full colour** for
 
 * Diameter nominal (`ELDNWIDE`)
 
-***
-
-#### Adjustment of Field Lengths
+### Adjustment of Field Lengths
 
 **General Data \[E2GENER]**
 
@@ -191,8 +179,6 @@ The display format in the data management method has been adjusted from **0 to 2
 * Slit lengths
 * Wall thicknesses
 
-***
-
 ### Adjustment of Long Texts
 
 #### Layer Data
@@ -200,8 +186,6 @@ The display format in the data management method has been adjusted from **0 to 2
 **Data type:** `E2LAYER`
 
 * The long text for the field **GROUP** has been renamed from **“group”** to **“soil group”**
-
-***
 
 ### Adjustment of Dictionaries
 
@@ -216,17 +200,13 @@ The display format in the data management method has been adjusted from **0 to 2
   * _slightly_ (`$TRCODE2B`)
   * _very_ (`$TRCODE4B`)
 
-<figure><img src="../../../.gitbook/assets/image (94).png" alt=""><figcaption></figcaption></figure>
-
-***
+<figure><img src="../../../.gitbook/assets/image (94).png" alt=""><figcaption>Layer data input form — the <strong>Organic components</strong> field with key <code>hum2</code> entered, producing "slightly humous" in the layer description.</figcaption></figure>
 
 #### Sample Type
 
 **Dictionary:** `(E2) Sample type` \[E2PROBAR]
 
 * Code **`wlf`** has been added for **thermal conductivity test**
-
-***
 
 ### Adaptation of Data Input Masks
 
@@ -242,8 +222,6 @@ The display format in the data management method has been adjusted from **0 to 2
   * the **Layer data** tab
   * the **Rock description** tab
 
-***
-
 ### Adaptation of the Standard Text in Layouts
 
 _(Object Type Variables)_
@@ -256,8 +234,8 @@ In the graphic element **Well design**, the default display has been adjusted fo
 
 **New text macro:**<br>
 
-<figure><img src="../../../.gitbook/assets/image (95).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (95).png" alt=""><figcaption>New text macro — the Well design layout displaying borehole and casing diameters with the updated decimal-place formatting.</figcaption></figure>
 
 **Old text macro:**<br>
 
-<figure><img src="../../../.gitbook/assets/image (96).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (96).png" alt=""><figcaption>Old text macro — the previous Well design layout display, before the decimal-place adjustment.</figcaption></figure>

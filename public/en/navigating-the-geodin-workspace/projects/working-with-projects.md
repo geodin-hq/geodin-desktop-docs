@@ -1,13 +1,17 @@
 
 # Working with Projects
 
-#### Projects
+This is the comprehensive reference for GeoDin projects — how they are created and managed, how project data is copied or moved between projects and databases, how data is transferred to other systems, and how legacy projects are converted into the current format. For the focused handover and transfer workflow, see [Copying and Transferring Projects](copying-and-transferring-projects.md).
+
+## Creating and managing projects
+
+### Projects
 
 A GeoDin project is used to combine objects, measurement values and documents, which belong to a unit regarding content. These units can - depending on the case - be projects from the working profile of the user (for example an investigation task) or locally defined projects (for example all boreholes of a map sheet).
 
 How you combine the objects in a project, is left to you. Because objects can be transferred from one project to another, it is possible to change the combination later. The project data is stored in the tables of a database. The access is done over a database connection.
 
-#### Project details
+### Project details
 
 First select the database, in which the project should be created (for this select the chosen database entry in the object manager and open the branch with a double-click or clicking the plus **+** symbol). With selected and opened database the symbol  ![New project](../../.gitbook/assets/icons/new-project.png) **"New project"** appears in the method bar:
 
@@ -25,7 +29,7 @@ Related subjects:
 
 [Data management](../objects/data-management.md)
 
-#### Open project
+### Open project
 
 You can open a project by double-clicking on the project entry, by clicking on the arrow sign in front of the project entry or by double-clicking on the method symbol  ![Open project](../../.gitbook/assets/icons/open-project.png) **"Open project"**
 
@@ -39,7 +43,7 @@ To close a project, double-click on the **"Close project"** method icon .
 
 _**Tip:**_ _Clicking on the arrow sign in front of a project entry does not close the project but only hides the entries below the project._
 
-#### Delete project
+### Delete project
 
 To delete a project from the GeoDin database choose the method  ![Delete project](../../.gitbook/assets/icons/delete-project.png) **"Delete project"**
 
@@ -47,7 +51,9 @@ After confirming your intention in the delete project window all project data is
 
 If you delete a project in a database (MS Access, ORACLE etc.) all data sets, which are related with objects of the project to be deleted, are removed from the tables. Database tables are not deleted.
 
-#### Copy project
+## Copying and moving project data
+
+### Copy project
 
 To copy an entire project choose the method  ![Copy project](../../.gitbook/assets/icons/copy-project.png) **"Copy project"**
 
@@ -67,7 +73,7 @@ _If a project is or all projects are copied from an MS Access database into an O
 
 _Normally after copying single projects or all projects from an Access database in an SQL-database with database login other users (login names) cannot see the queries and groups in the object manager. In this case change the entries in the column OBJ\_OWNER in the table GeoDin\_SYS\_PRJDEFS of the target database. Use an SQL-tool to correct the entries to the required user names. Also note the information about user and system queries and their configuration in the chapter_ [_Queries_](../../data-analysis/queries/creating-queries.md)_._
 
-#### Copy all projects
+### Copy all projects
 
 It is possible to copy all projects from one database into another in one step. Opposite to copying a single project here the original project identifications are kept and a 1:1 copy of the database is created. This function is useful for transferring complete GeoDin databases from one database format to another.
 
@@ -79,7 +85,7 @@ To prevent unintentional mistakes it is better to delete one of the "old" databa
 
 Please note the information about queries and groups in the chapter [Copy project](copying-and-transferring-projects.md).
 
-#### Add objects
+### Add objects
 
 With this method objects (no measuring points!) can be taken over into other projects. Therefore, only objects of nodes, queries and groups that contain objects (red ball as symbol) can be taken over.
 
@@ -172,7 +178,7 @@ Depending on the country of origin they can also be combined. The origin of the 
 
 These 3 error types are additionally displayed with the post-position (SART), if the error occurred trying to solve a sub-layer.
 
-## **Errors and Description**
+#### Errors and Description
 
 1857
 
@@ -214,7 +220,11 @@ The code cannot create a transition to the previous code ... of the described tr
 
 After a closing bracket only the symbols \<comma> \<bracket open/close>, \<minus> or \<end of input> are allowed. A code cannot follow a closed bracket.
 
-#### Transfer GeoDin data
+***
+
+## Transferring GeoDin data
+
+### Transfer GeoDin data
 
 For the transfer of database projects the following methods are available:
 
@@ -244,7 +254,7 @@ First create a new database connection for desktop databases (Access database). 
 
 After copying the database connection (\*.mdb) on the target computer, a new database connection has to be created there to get access to this database file. Select in the method [Create database connection](../databases/managing-database-connections.md) the transferred \*.mdb file and give the database connection a new name. After completing the method the database connection is displayed in the object manager and you can open the transferred projects.
 
-#### Conversion tool
+### Conversion tool
 
 To transfer projects, graphics and layouts from GeoDin version 1.x in the actual GeoDin version the tool **"Conversion"** is available.
 
@@ -298,7 +308,11 @@ for graphics: graphic.GRF ---> graphic.GGF
 
 _**Note:**_ _Eventually project links in the graphics of the version 1.x are unlinked, because it is not considered that linked projects are transferred. To avoid this the option -Embed location data- can be activated. Then the location data are embedded into the graphic before the conversion._
 
-### Select a source (moved from Databases pages)
+***
+
+## Reference: Converting legacy projects
+
+### Select a source
 
 Standard projects and dBase projects can be selected for conversion into the MS Access (or Client / Server) database format.
 
@@ -314,7 +328,7 @@ When selecting this option, a directory containing the standard projects may be 
 
 The dBase projects are not located in a directory with a fixed name. In a dialogue box, the folder containing the database can be selected. The project registry is accessed and the number of available projects is displayed.
 
-### Select projects (moved from Databases pages)
+### Select projects
 
 The number of available projects is displayed for the source selected.
 
@@ -322,7 +336,7 @@ If a file-based project is selected, single projects or project groups can be se
 
 If a dBase database is selected as source, all projects will be converted. Selection of the converted projects is not possible.
 
-### Select a destination (moved from Databases pages)
+### Select a destination
 
 It is necessary to convert file-based and dBase projects into regular GeoDin databases to provide the full spectrum of GeoDin functions available.
 
@@ -338,7 +352,7 @@ If file based projects were converted, the contents of those projects are zip-pa
 
 If a dBase database was converted, the entire directory will be zip-compressed. It will be saved in the directory where the database was located.
 
-### Preview (moved from Databases pages)
+### Preview
 
 The selected projects are opened. If the project can not be opened, a list of all error messages will be displayed.
 
@@ -346,7 +360,7 @@ All projects opened are checked whether they contain measurement data. As a vari
 
 If all selected projects can be opened without errors, the next step can follow directly. If errors occurred, a system message must be confirmed to proceed to the next step. After conversion, the selected projects can be compressed (zip-packed) and deleted. After this, projects which could not be opened or contained errors are not available for the next steps.
 
-### possible problems (moved from Databases pages)
+### Possible problems
 
 During the conversion of standard and dBase projects, a series of different steps is performed. Due to special access patterns when reading dBAse tables and due to incorrect entries in the data, diefferent problems can occur during file conversion.
 

@@ -52,5 +52,3 @@ Onsite assigns each soil sample a unique ID with a fixed structure:
 | Random | 4 chars (default) | Shrinks if prefix grows so that *prefix + random* always totals 5 chars |
 
 The timestamp portion changes every second, so collisions only happen if more than ~20–100 samples are generated in the exact same second.
-
-<!-- src: transcript/data-model-architecture#sample-specimen-model -->

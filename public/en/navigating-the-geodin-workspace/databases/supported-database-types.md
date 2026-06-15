@@ -1,7 +1,15 @@
+---
+description: >-
+  The database backends GeoDin connects to — Client/Server via OLE-DB or
+  FireDAC, and desktop MS Access — with per-platform drivers, GeoDin-to-DDL data
+  type mappings and example connection strings.
+---
 
 # Supported Database Types
 
-### Client/Server
+GeoDin connects both to file-based desktop databases (MS Access) and to Client/Server backends (Oracle, MySQL, PostgreSQL, Microsoft SQL-Server). This page is the per-backend reference: how the connection is made, the driver each platform needs, the GeoDin-to-DDL data type mapping, and an example connection string. Use it when you are setting up a connection to a specific backend; for the general database concepts and the create-connection method see [Connecting to a Database](connecting-to-a-database.md).
+
+## Client/Server connections
 
 In the appropriate environment and especially for working with a high amount of data the use of a database server is sensible. GeoDin supports database connections via **OLE-DB** and **FireDAC**. Whilst OLE-DB has been supported since GeoDin 3.0 , FireDAC is a new high performance data access library for use starting with GeoDin 8 available for customers with a "Software Update Service Contract". The performance of data acces using FireDAC is much faster than OLE-DB, particularly when using Oracle-Server, MySQL Server and PostgreSQL databases.
 
@@ -44,6 +52,12 @@ Alternatively a .UDL file can be used for storing information on a database conn
 **System database**
 
 Information on system databases is described in the chapter [System databases](connecting-to-a-database.md).
+
+***
+
+## Reference: Database platforms
+
+GeoDin automatically recognises the database type and maps its own data types onto the platform-native DDL types. The subsections below give, per platform, the driver requirements, the GeoDin-to-DDL data type mapping and an example connection string.
 
 ### MS Access
 

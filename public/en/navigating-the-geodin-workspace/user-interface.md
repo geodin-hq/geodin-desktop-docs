@@ -2,17 +2,13 @@
 description: Overview of the GeoDin user interface — the database panel, tree navigation, system configuration, and key interface controls
 ---
 
-<!--
-**Content status:** Polished from product documentation
-**Source quality:** A (Help + Transcripts)
-**Needs:** screenshots, editorial review
--->
-
 # User Interface
 
 The GeoDin interface is organized around a hierarchical tree view on the left, a central methods ribbon, and key controls for graphics, help, and system settings.
 
-## 1. Databases panel
+This page is a tour of that workspace: the panels you start from, how the tree is structured, the interface controls around it, and the methods you run on a selected object. Read it top to bottom for orientation, or jump to the reference tables for the data sections, controls, and shortcuts.
+
+## Databases panel
 
 The **Databases** panel is the starting point of your work in GeoDin. Each database contains **Projects**, and each project consists of **Objects** (such as boreholes and locations), **Measurement Points**, and **Documents**.
 
@@ -32,7 +28,7 @@ GeoDin databases are based on Microsoft Access files. For other backend options,
 
 ### Tree hierarchy and navigation
 
-The GeoDin tree hierarchy follows a consistent pattern: <!-- src: transcript/data-model-architecture#geodin-tree-hierarchy-navigation -->
+The GeoDin tree hierarchy follows a consistent pattern:
 
 ```
 Database > Project > Objects (boreholes/locations)
@@ -41,24 +37,33 @@ Database > Project > Objects (boreholes/locations)
     > Documents
 ```
 
-The **Measurement Points** branch holds **Locations** and **Samples** sub-branches, each containing their own measurement records. <!-- src: transcript/data-model-architecture#geodin-tree-hierarchy-navigation -->
+The **Measurement Points** branch holds **Locations** and **Samples** sub-branches, each containing their own measurement records.
 
-Clicking different levels in the left-hand tree populates the central "methods" ribbon with actions applicable to the selected item. Right-clicking a tree item shows the same methods in a context menu (e.g., New Project, Close Database, Maintain, Optimize). <!-- src: transcript/data-model-architecture#geodin-tree-hierarchy-navigation -->
+Clicking different levels in the left-hand tree populates the central "methods" ribbon with actions applicable to the selected item. Right-clicking a tree item shows the same methods in a context menu (e.g., New Project, Close Database, Maintain, Optimize).
 
 {% hint style="info" %}
 Each borehole with measurement data is marked with a small blue sphere icon in the tree view.
 {% endhint %}
 
-A project's **Documents** area lives directly under the project level and can hold folders and files — cross-sections, PDFs, videos, or any other file type. <!-- src: transcript/data-model-architecture#geodin-tree-hierarchy-navigation -->
+A project's **Documents** area lives directly under the project level and can hold folders and files — cross-sections, PDFs, videos, or any other file type.
 
-## 2. System panel
+## System panel
 
 The **System** panel provides access to system-level configuration. Within this panel, you can access and edit pre-made dictionaries, data types, and object types — including those for G1 locations and AGS standards.
 
 <figure><img src="../.gitbook/assets/Screenshot 2025-12-22 142044.png" alt=""><figcaption><p>Figure 2</p></figcaption></figure>
 
 
-## 3. Interface controls
+## Central ribbon
+
+When you select a location within a project, the central ribbon displays the available methods for that object. Methods are activated by **double-clicking** the method icon.
+
+<figure><img src="../.gitbook/assets/Screenshot 2025-12-22 133833.png" alt=""><figcaption><p>Figure 3</p></figcaption></figure>
+
+
+***
+
+## Reference: Interface controls
 
 ### Bottom-left controls
 
@@ -76,18 +81,9 @@ The **System** panel provides access to system-level configuration. Within this 
 | **SQL Protocol** | Alt+S | Opens the SQL protocol log |
 | **Log Folder** | Alt+H | Opens the log file directory |
 
-### Central ribbon
+## Reference: Understanding data management sections
 
-When you select a location within a project, the central ribbon displays the available methods for that object. Methods are activated by **double-clicking** the method icon.
-
-<figure><img src="../.gitbook/assets/Screenshot 2025-12-22 133833.png" alt=""><figcaption><p>Figure 3</p></figcaption></figure>
-
-
----
-
-## Understanding data management sections
-
-When you navigate to an object (borehole) in the tree, the following data sections are available under **Data Management**: <!-- src: transcript/data-model-architecture#geodin-tree-hierarchy-navigation -->
+When you navigate to an object (borehole) in the tree, the following data sections are available under **Data Management**:
 
 | Section | Contents |
 |---|---|
@@ -105,8 +101,6 @@ For detailed information about each section, see:
 - [Sample Data](objects/sample-data.md)
 - [Well Design Data](objects/well-design-data.md)
 - [Measurement Values](measurement-values/working-with-measurement-data.md)
-
----
 
 ## Working with methods
 

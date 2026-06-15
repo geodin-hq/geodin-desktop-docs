@@ -7,7 +7,9 @@ description: >-
 
 # Object Operations Reference
 
-> **Editorial note:** This page is a temporary holding area for object-operations reference content extracted from the legacy `installing.md` page. Editorial review may split it into per-feature pages (e.g. into `objects/data-management.md`, `objects/sample-data.md`, etc.). All citations and inline icons are preserved.
+This page is the comprehensive reference for working with GeoDin objects beyond installation — what objects are, how they appear in the Object Manager, the editors used to record their data, the operations for creating, duplicating, deleting, importing, exporting and reporting them, and the dictionary, code and database-table details that underpin them. Use it as the single look-up home for object operations; the focused task pages (Create object, Data management, Sample data, Well design data, and so on) link here for the full picture.
+
+## Objects in GeoDin
 
 ### Objects
 
@@ -100,6 +102,8 @@ B02 (107m)
 B03 (107m)
 
 B04 (115m)
+
+## Reference: Object operations
 
 ### Create object
 
@@ -890,6 +894,8 @@ Conversely the **Export** button allows selected data sequences to be exported i
 
 Please also see the help notes [Using the data entry grid](../measurement-values/working-with-measurement-data.md).
 
+## Reference: Object types and dictionaries
+
 ### Object types
 
 The default setting installs only a limited number of object types. The international English version installs the "General Borehole Log". You will find this under the **System** tab.
@@ -1171,6 +1177,8 @@ Symbol tables (.SYA) follow the same editing and compilation workflow — see [F
 ### Dictionary properties
 
 Dictionary special settings (delimiters, signature keys, and graphic settings) are described in [Fill Patterns and Symbols](../../configuration/fill-patterns-and-symbols.md).
+
+## Reference: Dictionary codes and graphics
 
 ### Edit codes
 
@@ -1695,12 +1703,9 @@ Select a target database, in which should be exported. Here you can select an ex
 
 During the export at least one table with codes and text is created. If fill patterns are used in the dictionaries further tables are created containing the appropriate information.
 
-### Recovered editor reference (from pre-slim pages — needs editorial pass)
+## Reference: Editor and import details
 
-_Content below existed only in the five objects/data pages slimmed in PR #10; their canonical_
-_carried a condensed variant without it. Recovered 2026-06-12; regrouped by original section._
-
-#### Calculating sequences (recovered)
+### Calculating sequences
 
 New series of data sequences can be calculated with the help of graphical templates or formulae. The formular can be defined in a special section of the GeoDin.ini file and is described at the end of this chapter. The graphical templates have to contain one or more [XY-diagram](../../data-visualization/layouts/x-y-diagrams.md) with the formulas. The calculation is done using already existing data sequence series, which have to be displayed in the diagram. The selected areas in the diagram define the conditions for the use of the formula.
 
@@ -1758,7 +1763,7 @@ Template1=C:\Program Files\GeoDin 8\Layouts\Series\Stiffness modulus depth.glo
 
 Template3=$Change of stiffness modulus with depth \[,3]$ = $>DS:Parameter 1$ / $>DS:Parameter 2$
 
-#### Data source (recovered)
+### Data source
 
 Navigate to the import file via the  ![Open](../../.gitbook/assets/icons/open.png) **Open** button and select it.
 
@@ -1782,7 +1787,7 @@ If you split a combined time information from date and time into two columns in 
 
 When importing such preset data, the string '31.12' will be entered as the result in the time field of GeoDin, which corresponds exactly to the first 5 digits of the zero date. One way to prevent this is to manage/save the minute field in MS Excel as text or to save the Excel table as a CSV (text) file and then import it.
 
-#### Duplicating objects (recovered)
+### Duplicating objects
 
 To create a copy of an existing object including some or all of its data, right-click the object in the GeoDin Object Manager and choose **Duplicate object** (German: _Objekt duplizieren_).
 
@@ -1798,7 +1803,7 @@ Select the data types to copy and confirm. The duplicated object appears in the 
 Object duplication is particularly useful when multiple objects at the same site share the same well design or measurement program setup — create the first object in full, then duplicate and adjust coordinates for subsequent objects.
 {% endhint %}
 
-#### Object link (recovered)
+### Object link
 
 _**Note:**_ _This option is only available for the "Update general data" method._
 
@@ -1809,7 +1814,7 @@ In this step, you select the two table columns or database fields that are used 
 
 The two input fields below the lists are used to restrict the displayed entries. Only entries in which the search term exists are displayed in the lists. Clear the search entry to display all entries again.
 
-#### Using the data entry grid (recovered)
+### Using the data entry grid
 
 When performing data collection and organisation tasks using a grid, with data entry fields as columns and data records arranged in rows, there are many configuration options. A **view** of the data can be created with a few mouse clicks, which allows the order and visibility of the columns chosen to optimally present the data with respect to sorting, grouping and filtering of the current situation. These views can be saved with user defined names for later re-use.
 
@@ -1856,7 +1861,7 @@ This button removes the current view (e.g. when it is no longer needed).
 
 The management of these settings is user-specific on each PC.
 
-#### XML export (recovered)
+### XML export
 
 The method **"XML Export"** can be found in the superordinate method **"Publish and Export"** at object nodes or at queries and groups below the object nodes, as well as at system queries that return objects (no measuring points) as a result (easily recognisable by the small red ball in the query symbol).
 
@@ -1894,7 +1899,9 @@ This parameter must be set, it specifies whether to export as individual XML fil
 
 This parameter must be set if ExportTarget=2 was specified. It specifies the name of the target database in the GeoDin object manager.
 
-### Objects (moved from Databases pages)
+## Reference: Database tables
+
+### Object registration tables
 
 The registration tables contain the basic measuring point descriptions of the GeoDin objects.
 
