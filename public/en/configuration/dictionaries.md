@@ -1,13 +1,8 @@
-
-<!--
-**Content status:** Auto-assembled from product documentation
-**Source quality:** B (Moderate (single source type))
-**Needs:** needs legacy verification, needs screenshots, needs examples, editorial review
--->
-
 # Dictionaries
 
-### Configuration
+Dictionaries are the controlled code lists behind GeoDin's input fields. This page covers where they live in the system configuration, how they behave, how updates are applied, and the reference details for the related comparison, transformation, and configuration-comparison tools.
+
+## Configuration
 
 The system configuration contains all global (project independent) settings in GeoDin. Under the index card \"System\" you can access system configuration. These include dictionaries (Keylists), signature tables, fill patterns, data types etc.
 
@@ -19,17 +14,15 @@ If you change the signature for the key fS (fine sand) in the dictionary \"Petro
 
 If you change the appearance of a signature, all surfaces (also older graphics) that are filled with this signature will be displayed with the new signature. This is due to the fact that in the GeoDin graphics for a filled surface only the name of the signature table and the number of the signature are stored and not the appearance of the signature itself.
 
-These examples show that in multi-user environments it is advisable that not everybody should have the rights to change the system configuration to avoid unwanted changes. In GeoDin this is controlled as described in [Groups and Permissions](../user-management/groups-and-permissions.md). <!-- src: help/10/1744 -->
+These examples show that in multi-user environments it is advisable that not everybody should have the rights to change the system configuration to avoid unwanted changes. In GeoDin this is controlled as described in [Groups and Permissions](../user-management/groups-and-permissions.md).
 
-### Dictionaries
+## Dictionaries
 
 All codes, which can be used for the data input in the GeoDin system, are contained in dictionaries. The dictionaries are connected with their particular input fields and comprise lists of codes or text strings, which are allowed as valid inputs or serve as a guide for inputting data.
 
 In addition to input control, the dictionaries are also responsible for the type of graphic display (e.g. which fill pattern is used for granite) and contain various foreign language translations.
 
- <!-- src: help/10/1754 -->
-
-### Refresh
+## Refresh
 
 With the method **\"Update object type\"** changes to dictionaries and masks can be incorporated in an existing object type. This can be carried out either from the current GeoDin-CD or from a client who provides you with a new set of files.
 
@@ -112,9 +105,9 @@ The object type
 \<Komplettaufschluss SEP-kompatibel\> cannot be updated (not even with the methods mentioned under 1. or 3.).
 
 **3. Update a C/S database using SQL script (recommended only for database administrators)**\
-3.1 To update C/S databases, we have provided various SQL scripts for you to download directly from the database for selected object types at http://download.GeoDin.com/SQL_DB-Update_SEP1/ for updating C/S databases. <!-- src: help/10/2194 -->
+3.1 To update C/S databases, we have provided various SQL scripts for you to download directly from the database for selected object types at http://download.GeoDin.com/SQL_DB-Update_SEP1/ for updating C/S databases.
 
-### Properties
+## Properties
 
 The **\"Properties\"** method displays information about the configuration of the selected object type. This includes the lists of the associated dictionaries, entry masks and signature standards as well as the properties and structures of the associated GeoDin tables. All properties shown are unchangeable for the user in the window. The information serves the purpose of further understanding the object-type-specific data storage and requires further knowledge of the structure and structure of GeoDin object types.
 
@@ -126,9 +119,9 @@ If this box is ticked, the creation of new objects is permitted in the object ty
 
 *\[Allow simultaneous creation of data type structures\]*
 
-The activated option \<**Allow simultaneous creation of data type structures**\> activates the simultaneous creation of data types on the dialogue for the creation of a GeoDin object ([Create object](../navigating-the-geodin-workspace/objects/creating-objects.md)). This way data types can be created optionally, when an object of an object type is created for the first time, if a standard measurement program has been defined for this type (GeoDinHelpLink:\<**Measurement program\>**CLASS_HLP_Conf_DatType_Messprograms#). <!-- src: help/10/2199 -->
+The activated option \<**Allow simultaneous creation of data type structures**\> activates the simultaneous creation of data types on the dialogue for the creation of a GeoDin object ([Create object](../navigating-the-geodin-workspace/objects/creating-objects.md)). This way data types can be created optionally, when an object of an object type is created for the first time, if a standard measurement program has been defined for this type (GeoDinHelpLink:\<**Measurement program\>**CLASS_HLP_Conf_DatType_Messprograms#).
 
-### Standards
+## Standards
 
 The GeoDin dictionaries can be managed **multilingually and for multiple standards**, i.e. for each key of a dictionary
 
@@ -190,14 +183,9 @@ Fig. 2 - Display of the signature in accordance with DIN, labelling in English
 
 Fig. 3 - Representation of the signature in accordance with British Standards, labelling in English
 
- <!-- src: help/10/3180 -->
-
----
+***
 
 ## Reference: Comparison lists
-<!-- src: help/H0000008081 -->
-
-<!-- Editorial flag: legacy-sourced reference content below — verify against current GeoDin (Goal 4) -->
 
 A comparison list (also called a limit list) contains a set of parameters with reference values and units, used for checking measured data against regulatory or project-specific thresholds. Each list must have a unique name within its data type.
 
@@ -205,23 +193,13 @@ A comparison list (also called a limit list) contains a set of parameters with r
 
 **Importing comparison lists:** In the List Manager, create a new list group if needed, then add a new list using the **Add** button. In the editor, use the **Import** button to read a previously exported text file. The file contents populate the list name and parameters automatically. Lists with duplicate names within the same group are not permitted.
 
----
-
 ## Reference: Comparison parameter properties
-<!-- src: help/H0000008095 -->
-
-<!-- Editorial flag: legacy-sourced reference content below — verify against current GeoDin (Goal 4) -->
 
 - **Field name** — The parameter to compare against. Once created, the parameter selection is locked; only the value and unit can be edited afterward. Delete and re-add to change the parameter.
 - **Value** — The exceedance threshold. When a measured value exceeds this value, the exceedance is flagged in the report.
 - **Unit** — The unit of measurement for the comparison value. If the measured value uses a different unit, GeoDin performs automatic unit conversion during comparison.
 
----
-
 ## Reference: Code transformation for XML/dictionary export
-<!-- src: help/H0000005585, help/H0000008494 -->
-
-<!-- Editorial flag: legacy-sourced reference content below — verify against current GeoDin (Goal 4) -->
 
 When exporting dictionary-coded data to XML, field codes can be transformed to target codes required by the export format.
 
@@ -238,23 +216,13 @@ When exporting dictionary-coded data to XML, field codes can be transformed to t
 - **Field name (target code)** — Column containing the target codes.
 - **Field name (list name)** — Column identifying which code list the mapping belongs to, used as a node restriction during export configuration.
 
----
-
 ## Reference: Linked additional information
-<!-- src: help/H0000011315 -->
-
-<!-- Editorial flag: legacy-sourced reference content below — verify against current GeoDin (Goal 4) -->
 
 Each dictionary key can link to external information via a web service URL. The link is composed of a **base URL** (defined on the dictionary) and an auto-generated parameter block specifying the dictionary name and key code. Linked information appears as a clickable link in the Dictionary Search dialog.
 
 Example: Base URL `https://www.example.com/` + parameter block `DictionaryItemInfo?Dictionary=S3EPSG&Code=0` produces the full URL `https://www.example.com/DictionaryItemInfo?Dictionary=S3EPSG&Code=0`.
 
----
-
 ## Reference: Search common parent nodes
-<!-- src: help/H0000008595 -->
-
-<!-- Editorial flag: legacy-sourced reference content below — verify against current GeoDin (Goal 4) -->
 
 This transformation searches for a common superior node in a hierarchical (tree-structured) dictionary.
 
@@ -263,12 +231,7 @@ This transformation searches for a common superior node in a hierarchical (tree-
 - **Dictionary** — Select a tree-structured dictionary whose hierarchy is used to find superior terms.
 - **Code list** — An optional code list to translate individual components before the hierarchy lookup.
 
----
-
 ## Reference: Compare elements
-<!-- src: help/H0000009029 -->
-
-<!-- Editorial flag: legacy-sourced reference content below — verify against current GeoDin (Goal 4) -->
 
 The comparison window shows differences between two versions of a configuration item (e.g. a data type formula vs. an import file's formula). The left side shows the target, the right side the source. Items are colour-coded:
 

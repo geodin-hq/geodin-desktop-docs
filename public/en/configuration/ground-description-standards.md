@@ -1,6 +1,8 @@
 
 # Ground Description Standards
 
+## Overview
+
 ### Ground descriptions standards
 
 This chapter describes the configuration and the technical background of the collection of ground types according to different collection standards and with variable properties.
@@ -16,6 +18,8 @@ _**Tip:**_ _The method is only available, if the following conditions are fullfi
 2\. The configuration file GeoDin.ini contains the option "EditUGLConfig=true" in the system section.
 
 After starting the method the chosen configuration file is selected (file type \*.ugl = universal ground description layers) and editing starts.
+
+## Standards and properties
 
 ### Standards
 
@@ -99,6 +103,8 @@ A property is defined by its unique ID (GUID) and by its name. The GUIDs of the 
 
 _**Important:**_ _During the collection of ground types in the GeoDin database only the GUIDs of standards, ground types and properties are saved and not the name. Because of this GUIDs that already have been used for the data collection may NOT be changed, because it would lead to a misinterpretation of existing data._
 
+## Ground types
+
 ### Ground types
 
 Define here the available ground types in the input norm. Because the different ground types are described by different properties, a ground type is mainly defined by a list of properties, which should be used. In a ground type only those properties can be used, which were created in the list of the **Properties**.
@@ -140,6 +146,8 @@ A ground type is described by a defined number of properties. This list is edite
 The labelling instruction controls the name of the ground type during the data collection. As long as no property is entered, the branch of the ground type in the data collection is labelled with the name of the ground type (general name). As data fields for a labelling instruction the GUIDs of a property of a ground type are available. Because of this the labelling macro $1$ will translate the entered content of a ground type property with the GUID = 1 and use it for the labelling of the ground type branch in the data collection.
 
 _**Important:**_ _During the collection of ground types in the GeoDin database only the GUIDs of standards, ground types and properties are saved and not the name. Because of this GUIDs that already have been used for the data collection may NOT be changed, because it would lead to a misinterpretation of existing data._
+
+## Translation style sheets and dictionaries
 
 ### Translation style sheets
 
@@ -255,6 +263,8 @@ f(S) = Sand can be no attribute of fine
 S(f(m)) = fine cannot be attributed by 'intermediate'
 
 The type list above is a very simple example and demonstrates only the minimum conditions for the syntax test of the parenthesis diction. Practically more complex syntax rules my be necessary, which require more typing of the codes in a dictionary, for example differentiation of the properties after technical or professional points of view to avoid senseless attributions.
+
+## Data model and collection
 
 ### Data model
 
