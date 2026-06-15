@@ -39,8 +39,6 @@ Square brackets `[ ]` inside a macro act as conditional separators: the brackete
 
 The Build dialog can include calculated parameters — for example, layer thickness derived from top and base depths — alongside raw database fields.
 
-<!-- src: transcript/reporting-exports#text-macros-dynamic-fields -->
-
 ## Display options
 
 When configuring a text-macro element you can choose:

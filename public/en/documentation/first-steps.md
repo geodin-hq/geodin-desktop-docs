@@ -2,11 +2,6 @@
 description: A five-step happy-path walkthrough — from opening the demo database to generating your first borehole log
 ---
 
-<!--
-**Content status:** Scaffolded — needs screenshots and a verification pass against the current GeoDin release
-**Source quality:** C (structural scaffold; specific UI labels need product verification)
--->
-
 # First steps
 
 ⏱ **15–20 minutes.** At the end you'll have a project with one borehole, its stratigraphy, and a generated borehole log.
@@ -81,7 +76,7 @@ Pick a borehole log template and run it. GeoDin produces a PDF-style log showing
 * [Creating Borehole Logs](../data-visualization/borehole-logs/creating-borehole-logs.md)
 * [Bulk Print and PDF Export](../reporting/bulk-print-and-pdf-export.md)
 
----
+***
 
 ## Where to go next
 
@@ -93,6 +88,6 @@ Pick a borehole log template and run it. GeoDin produces a PDF-style log showing
 | Query your database | [Creating Queries](../data-analysis/queries/creating-queries.md) |
 | Produce a full report | [Report Templates](../reporting/report-templates.md) |
 
----
+***
 
 **Stuck on any step?** See [Troubleshooting](../support/troubleshooting.md) or [Get Support](../support/get-support.md).

@@ -21,39 +21,35 @@ Users are created with a name and a login credential tied to the Windows login u
 
 GeoDin Onsite has **no user accounts and no authentication** — it is a single-user desktop/tablet application. User name and computer name are captured passively in each form's `history` section for audit purposes.
 
-<!-- src: transcript/user-management-permissions#built-in-user-management-system -->
-
 ## Authentication and environment constraints
 
 - Authentication piggybacks on the Windows login.
 - The installation scope (`All users` vs. `Local user`) is the only user-scoping decision for Onsite — it controls whether the executable is available to all Windows accounts or only the installing user.
 - GeoDin can run in a locked-down corporate environment with no internet access. Runtime telemetry and file transfer from GeoDin staff into the customer network are blocked in such setups.
 
-<!-- src: transcript/user-management-permissions#authentication-environment-constraints -->
-
 ## Single-ownership model (Onsite "one piece of paper")
 
 Onsite treats every form as **one piece of paper**: at any moment exactly one location owns the live copy. This model drives the Publish / Retrieve / Revoke workflow and prevents two field users from editing the same form in parallel.
 
-**Two shelves on the shared delivery folder:**
+### Two shelves on the shared delivery folder
 
 - **Incomplete** — any user with access can retrieve a form back from this shelf.
 - **Final / Complete** — once a form lands here, the original user cannot retrieve it. The form belongs to office staff.
 
-**Publish behaviour:**
+### Publish behaviour
 
 - Publishing as **Complete** requires full form validation to pass; the deliverable bundle (`.GDOF`, PDF, GeoDinML, AGS) is generated.
 - Publishing as **Incomplete** is allowed with validation errors; only the `.GDOF` is shelved (no PDF or GeoDinML yet).
 - On publish, the `.GDOF` is moved to the shared delivery folder and the original file leaves the local `projects` folder — `Load local` will no longer find it. A local **photocopy** is kept on the device for disaster recovery.
 
-**Retrieve and Revoke:**
+### Retrieve and Revoke
 
 - **Retrieve** is the reverse of Publish: it reads a form back from the shared delivery folder onto the tablet and transfers ownership to the local user. After Retrieve, a photocopy remains on the shelf marked as not-owned.
 - **Revoke** reactivates a published-as-Complete form from the local photocopy. Use it when a publish was a mistake. Revoke is dangerous because it can overwrite data already processed downstream.
 
 The intended workflow is fire-and-forget: field users publish from the tablet, the form disappears locally, and office staff pick it up — a clean separation between field and office work.
 
-<!-- src: transcript/user-management-permissions#single-ownership-model-onsite-one-piece-of-paper -->
+***
 
 ## GeoDin Desktop licensing
 
@@ -68,8 +64,6 @@ Two license types exist (Standard and Professional). With a Professional license
 
 For pricing details, see [geodin.com/pricing](https://geodin.com/pricing).
 
-<!-- src: transcript/user-management-permissions#geodin-licensing-model -->
-
 ## GeoDin Onsite licensing (Keygen + hardware binding)
 
 Onsite uses a separate seat-based licensing system delivered via license key.
@@ -83,8 +77,6 @@ Onsite uses a separate seat-based licensing system delivered via license key.
 - **Anti-abuse:** only existing GeoDin customers can self-serve Onsite; unknown emails trigger manual sales approval.
 - **Onboarding:** post-purchase the customer receives an installer URL and a license key. First launch runs the License Wizard, which binds the license to the machine hardware ID.
 
-<!-- src: transcript/user-management-permissions#geodin-onsite-licensing-keygen-hardware-binding -->
-
 ## Dictionaries, custom content, and team scope
 
 Custom dictionaries, custom tables, and configuration settings are stored in the user's `syslib` folder.
@@ -96,10 +88,6 @@ Custom dictionaries, custom tables, and configuration settings are stored in the
 - **Risk profile:** low-risk dictionaries (client list, lab names) can be edited freely. Higher-risk dictionaries (soil types, fill patterns) should be edited carefully because losing future distribution updates can matter.
 - **Custom data types and layouts** also live in the `syslib` folder and must be manually copied between installations when a network install is not used.
 
-<!-- src: transcript/user-management-permissions#dictionaries-custom-content-team-scope -->
-
 ## Trial and evaluation access
 
 GeoDin offers a **free 30-day trial** with no user limit and extensions available on request. There is no hard stop on the trial. The trial-first approach is actively recommended — no customer should buy GeoDin without trialling it first.
-
-<!-- src: transcript/user-management-permissions#trial-evaluation-access -->

@@ -1,11 +1,6 @@
-
-<!--
-**Content status:** Auto-assembled from product documentation
-**Source quality:** B (Moderate (single source type))
-**Needs:** needs legacy verification, needs screenshots, needs examples, editorial review
--->
-
 # Method Reference
+
+## Overview
 
 ### COM-Functions and Plugins
 
@@ -13,51 +8,51 @@ GeoDin offers the option to connect GeoDin to external applications. This chapte
 
 For running GeoDin by an external application several functions are available. A part of this functions is used for controlling the GeoDin program interface (in this case GeoDin is visible for the user), but an erxternal application like for example a GIS chooses self-dependently an object in the GeoDin object manager and starts a GeoDin method. Another part of the functions is used for supplying information from the GeoDin database up to graphic images of objects. Here GeoDin is usually invisible and manages its tasks in the background. The individual functions are described in the chapter #GeoDinHelpLink:**COM functions**5284#. For each function is defined, which GeoDin edition is required.
 
-On the other hand it is possible to intergrate external applications or functions in the program interface of GeoDin. Such functions (so called plug-ins) can for example perform special calculations or data exports and are displayed in GeoDin with a method symbol. A description for embedding and configuring this external functions is given in the chapter #GeoDinHelpLink:**Plug-ins**5285#. <!-- src: help/15/5283 -->
+On the other hand it is possible to intergrate external applications or functions in the program interface of GeoDin. Such functions (so called plug-ins) can for example perform special calculations or data exports and are displayed in GeoDin with a method symbol. A description for embedding and configuring this external functions is given in the chapter #GeoDinHelpLink:**Plug-ins**5285#.
 
 ### COM-Functions
 
-# **Tips for the use of GeoDin as COM server**
+#### Tips for the use of GeoDin as COM server
 
-# Using GeoDin as COM server (by creating an object of the type GeoDin.GeoDinApplication) can be controlled by the following parameters:
+Using GeoDin as COM server (by creating an object of the type GeoDin.GeoDinApplication) can be controlled by the following parameters:
 
-# **Working directory of the application GeoDin:**
+#### Working directory of the application GeoDin:
 
-# As default the folder \"TEMP\" in the folder \"Local settings\" of the current user is used as the working directory of the application GeoDin in the starting mode as COM server. By entering ExecutePath=**Folder** in the section \[System\] of the #GeoDinHelpLink:**Configuration file GeoDin.ini**3297# another folder can be defined.
+As default the folder \"TEMP\" in the folder \"Local settings\" of the current user is used as the working directory of the application GeoDin in the starting mode as COM server. By entering ExecutePath=**Folder** in the section \[System\] of the #GeoDinHelpLink:**Configuration file GeoDin.ini**3297# another folder can be defined.
 
-# **Availability of plug-ins:**
+#### Availability of plug-ins:
 
-# As default #GeoDinHelpLink:**Plug-ins**5285# are not loaded when GeoDin is started. By entering COMServerPlugins=true in the section \[System\] of the #GeoDinHelpLink:**Configuration file GeoDin.ini**3297# loading the plug-in can be achieved.
+As default #GeoDinHelpLink:**Plug-ins**5285# are not loaded when GeoDin is started. By entering COMServerPlugins=true in the section \[System\] of the #GeoDinHelpLink:**Configuration file GeoDin.ini**3297# loading the plug-in can be achieved.
 
-# **Application directory of GeoDin:**
+#### Application directory of GeoDin:
 
-# The application directory of GeoDin is as default the folder one level higher than the BIN folder (in which the GeoDin.exe is included). A typical GeoDin installation has the following structure:
+The application directory of GeoDin is as default the folder one level higher than the BIN folder (in which the GeoDin.exe is included). A typical GeoDin installation has the following structure:
 
-# C:\\Programs\\GeoDin (contains GeoDin.ini)
+C:\\Programs\\GeoDin (contains GeoDin.ini)
 
-# C:\\Programs\\GeoDin\\BIN (contains GeoDin.exe)
+C:\\Programs\\GeoDin\\BIN (contains GeoDin.exe)
 
-# C:\\Programs\\GeoDin\\SYSLIB
+C:\\Programs\\GeoDin\\SYSLIB
 
-# C:\\Programs\\GeoDin\\SOURCE
+C:\\Programs\\GeoDin\\SOURCE
 
-# etc.
+etc.
 
-# The application directory is in this case \<C:\\Programs\\GeoDin\>, where also the configuration file GeoDin.ini is read. With this name also the names of several subfolders are created (e.g. for SOURCE, QUERYDEF, LAYOUTS etc.)
+The application directory is in this case \<C:\\Programs\\GeoDin\>, where also the configuration file GeoDin.ini is read. With this name also the names of several subfolders are created (e.g. for SOURCE, QUERYDEF, LAYOUTS etc.)
 
-# It is possible to configure the application directory of GeoDin to any other folder, hence one can differentiate, if GeoDin is started directly as application by the user or is instanced as a COM server. For a (\"normal\") start of GeoDin by the user the application directory can be set by a command line parameter. It has to start with the keyword -af and has to contain a full folder name subsequently.
+It is possible to configure the application directory of GeoDin to any other folder, hence one can differentiate, if GeoDin is started directly as application by the user or is instanced as a COM server. For a (\"normal\") start of GeoDin by the user the application directory can be set by a command line parameter. It has to start with the keyword -af and has to contain a full folder name subsequently.
 
-# C:\\Programs\\GeoDin\\BIN\\GeoDin.exe -afC:\\Programs\\GeoDin\\Solutions\\Water
+C:\\Programs\\GeoDin\\BIN\\GeoDin.exe -afC:\\Programs\\GeoDin\\Solutions\\Water
 
-# **Note:** If the folder name contains empty spaces the entire parameter has to be put in quotation marks, e.g.:
+**Note:** If the folder name contains empty spaces the entire parameter has to be put in quotation marks, e.g.:
 
-# C:\\Programs\\GeoDin\\BIN\\GeoDin.exe \"-afC:\\Programs\\GeoDin Solutions\\Water\"
+C:\\Programs\\GeoDin\\BIN\\GeoDin.exe \"-afC:\\Programs\\GeoDin Solutions\\Water\"
 
-# By starting GeoDin as COM server a command line parameter is not possible. Because of that a method was prepared to enter this via the registry. Here the name of the chosen application directory has to be placed BEFORE the start of the COM server in the REG_SZ key \"ApplicationFolder\" in the following registry key:
+By starting GeoDin as COM server a command line parameter is not possible. Because of that a method was prepared to enter this via the registry. Here the name of the chosen application directory has to be placed BEFORE the start of the COM server in the REG_SZ key \"ApplicationFolder\" in the following registry key:
 
 \[HKEY_CURRENT_USER\\Software\\GeoDin-System\\COMServer\]
 
-With both methods GeoDin checks the existence of the folder and ignores the setting, if it does not find it. Further checks do not take place. Make sure that the selected folder contains a configuration file GeoDin.ini and all subfolders required by GeoDin. <!-- src: help/15/5284 -->
+With both methods GeoDin checks the existence of the folder and ignores the setting, if it does not find it. Further checks do not take place. Make sure that the selected folder contains a configuration file GeoDin.ini and all subfolders required by GeoDin.
 
 ### Plugins
 
@@ -449,11 +444,15 @@ function GeoDinGetGraphicReport(const Params: WideString): OleVariant;
 
 The string, which is transferred in params, has the structure of a configuration file with the sections and parameters like described above for the server plug-ins. As return an XML
 
-Data stream according to the GeoDin class C_GraphicDrawReport is expected. <!-- src: help/15/5285 -->
+Data stream according to the GeoDin class C_GraphicDrawReport is expected.
+
+***
+
+## Reference: COM methods
 
 ### ExceptionValue
 
-# **Functions to identify the error statusfunction ExceptionValue:integer;**
+Functions to identify the error statusfunction ExceptionValue:integer;
 
 This function shows the error status of the previously called up function. The return value is 0, if the previously called up function has worked correctly. The possible error numbers are described at the end of the document.
 
@@ -463,7 +462,7 @@ This function shows the error status of the previously called up function. The r
 
 Return of the error text of a previously failed function call. If ExceptionValue \<\>0 the full error message can be inquired with this function.
 
-## **Error numbers**
+#### Error numbers
 
 The error numbers are definite for all functions.
 
@@ -529,17 +528,17 @@ A selection is not possible because the marked object cannot be quit. Example: I
 
 16
 
-The expression cannot be started because no graphic window is opened. <!-- src: help/15/8426 -->
+The expression cannot be started because no graphic window is opened.
 
 ### ObjectManagerVisible
 
-# **Function to show or hide the GeoDin windowproperty ObjectManagerVisible:boolean**
+Function to show or hide the GeoDin windowproperty ObjectManagerVisible:boolean
 
-By setting this property to \"true\" or \"false\" the visibility of the GeoDin object manager is controlled. <!-- src: help/15/8427 -->
+By setting this property to \"true\" or \"false\" the visibility of the GeoDin object manager is controlled.
 
 ### LicenceInfo
 
-## **Functions to determine the licence informationfunction LicenceInfo:string;**
+Functions to determine the licence informationfunction LicenceInfo:string;
 
 This function is available for the Essentials-edition upwards.
 
@@ -555,11 +554,11 @@ GeoDin - Editions
 
 Professional
 
-Solution information with version number is continue output, if they are available. <!-- src: help/15/8429 -->
+Solution information with version number is continue output, if they are available.
 
 ### SelectLocation
 
-## **Functions to mark (selection) an object in the object managerfunction SelectLocation(Database, UserName, Password, ProjectID:Widestring; LocationID:integer):integer;**
+Functions to mark (selection) an object in the object managerfunction SelectLocation(Database, UserName, Password, ProjectID:Widestring; LocationID:integer):integer;
 
 This function is available from the basis module upwards.
 
@@ -585,7 +584,7 @@ GeoDin project ID (6 digits)
 
 GeoDin object ID
 
-The return value of the function is 0, if the function is executed. The return value is 1, if an error has occurred. See ExceptionValue and ExceptionMsg. <!-- src: help/15/8430 -->
+The return value of the function is 0, if the function is executed. The return value is 1, if an error has occurred. See ExceptionValue and ExceptionMsg.
 
 ### SelectObject
 
@@ -673,7 +672,7 @@ This parameter defines, whether the selected branch should be opened at the same
 
 The standard value of Expand is =true.
 
-The returning value of the function is 0, if the function was executed. The returning value is 1, if an error occurred. See ExceptionValue and Exceptions. <!-- src: help/15/8431 -->
+The returning value of the function is 0, if the function was executed. The returning value is 1, if an error occurred. See ExceptionValue and Exceptions.
 
 ### CreateObjectSelection
 
@@ -713,13 +712,13 @@ Optional indication of a MethodID. Starts the corresponding method. Is transferr
 
 Is only used, if MethodID \<\>-1. Is used to control the call upon of the method. See ExecuteMethodParams.
 
-The return value of the function is 0, if the function is executed. The return value is 1, if an error has occurred. See ExceptionValue and ExceptionMsg. <!-- src: help/15/8435 -->
+The return value of the function is 0, if the function is executed. The return value is 1, if an error has occurred. See ExceptionValue and ExceptionMsg.
 
 ### MethodListAsString
 
-# **Functions to start GeoDin methodsfunction MethodListAsString:string;**
+Functions to start GeoDin methodsfunction MethodListAsString:string;
 
-Returns a list of methods, which can be called up on the selected object. The result string can consist of several lines (separated by CRLF), where each line is a method. A method entry consists of the MethodID followed by a comma and the name of the method (e.g. 2,Edit graphic). The MethodID can be used in the method ExecuteMethod. If no method is available, the return string is empty. <!-- src: help/15/8436 -->
+Returns a list of methods, which can be called up on the selected object. The result string can consist of several lines (separated by CRLF), where each line is a method. A method entry consists of the MethodID followed by a comma and the name of the method (e.g. 2,Edit graphic). The MethodID can be used in the method ExecuteMethod. If no method is available, the return string is empty.
 
 ### ExecuteMethod
 
@@ -727,7 +726,7 @@ Returns a list of methods, which can be called up on the selected object. The re
 
 This function is available in the basis GeoDin module. Other modules may be necessary, depending on the method (e.g. Logs, Labs\...).
 
-The return value of the function is 0, if the function is executed. The return value is 1, if an error has occurred. <!-- src: help/15/8437 -->
+The return value of the function is 0, if the function is executed. The return value is 1, if an error has occurred.
 
 ### ExecuteMethodParams
 
@@ -737,13 +736,13 @@ This function is available in the basis GeoDin module. Other modules may be nece
 
 Starts a GeoDin method with parameters. The valid method IDs are described under ExecuteMethod \<ExecuteMethod\>CLASS_HLP_COM_ExecuteMethod#.
 
-The return value of the function is 0, if the function is executed. The return value is 1, if an error has occurred. <!-- src: help/15/8438 -->
+The return value of the function is 0, if the function is executed. The return value is 1, if an error has occurred.
 
 ### GetImage
 
-## **Function to create an imagefunction GetImage(const Database, Username, Password, ProjectID: WideString; LocationID: Integer; const VersionName, LayoutFileName, OutFileName: WideString; ImageType, MaxResolution, Compression, Scale, PageNumber: Integer; out PageCount: Integer): OleVariant;**
+Function to create an imagefunction GetImage(const Database, Username, Password, ProjectID: WideString; LocationID: Integer; const VersionName, LayoutFileName, OutFileName: WideString; ImageType, MaxResolution, Compression, Scale, PageNumber: Integer; out PageCount: Integer): OleVariant;
 
-## **Note:** This function is only available with a GeoDin Server Licence.
+**Note:** This function is only available with a GeoDin Server Licence.
 
 ***Database***
 
@@ -901,25 +900,25 @@ Compression Size in KB Comment
 
 100 564 very large file
 
-Values above 70 should not be used, the used library creates this PNG files sporadically defective, so that the images cannot be displayed with all programs. <!-- src: help/15/8439 -->
+Values above 70 should not be used, the used library creates this PNG files sporadically defective, so that the images cannot be displayed with all programs.
 
 ### GraphicWidth
 
 **function GraphicWidth:integer**
 
-Returns the width of the figure, which was created when GetImage was called up the last time. The functions should only be used, if in the called-up application there is no possibility to call up these parameters by oneself. <!-- src: help/15/8440 -->
+Returns the width of the figure, which was created when GetImage was called up the last time. The functions should only be used, if in the called-up application there is no possibility to call up these parameters by oneself.
 
 ### GraphicHeight
 
 **function GraphicHeight:integer**
 
-Returns the height of the figure, which was created when GetImage was called up the last time. The functions should only be used, if in the called-up application there is no possibility to call up these parameters by oneself. <!-- src: help/15/8441 -->
+Returns the height of the figure, which was created when GetImage was called up the last time. The functions should only be used, if in the called-up application there is no possibility to call up these parameters by oneself.
 
 ### GraphicPageCount
 
 **function GraphicPageCount:integer**
 
-Returns the page number, which was created when GetImage or GetPrintFile was called up the last time. Is equal to the out parameter PageCount of both functions. The functions should only be used, if in the application calling up cannot handle the out parameter of both functions. <!-- src: help/15/8442 -->
+Returns the page number, which was created when GetImage or GetPrintFile was called up the last time. Is equal to the out parameter PageCount of both functions. The functions should only be used, if in the application calling up cannot handle the out parameter of both functions.
 
 ### Data management
 
@@ -947,7 +946,7 @@ The available numbers are:
 
 5 - Data sequences
 
-6 - Additional data (1:n), depending on the object type, e.g. the table ground water <!-- src: help/15/8728 -->
+6 - Additional data (1:n), depending on the object type, e.g. the table ground water
 
 ### Edit graphic
 
@@ -969,13 +968,13 @@ E\) \"Report:Reportname\"
 
 The standard layout list is opened and the report \"reportname\" is selected. Optionally the layout list, which should be used, can be described as path:
 
-e.g.: \"Report:Reportname\|c:\\programme\\GeoDin\\syslib\\geo.gll\" <!-- src: help/15/8731 -->
+e.g.: \"Report:Reportname\|c:\\programme\\GeoDin\\syslib\\geo.gll\"
 
 ### Open graphic
 
 **MethodID = 4 (Open Graphic) MethodParams:**
 
-A full-length path name of a GeoDin graphic, layout or layoutlist is expected. The file is opened in the graphic window. <!-- src: help/15/8734 -->
+A full-length path name of a GeoDin graphic, layout or layoutlist is expected. The file is opened in the graphic window.
 
 ### Import measurement data
 
@@ -1049,7 +1048,7 @@ IgnorePlausibilityErrors=false
 
 CalcRecordChanges=false
 
-DetailProtocol=true <!-- src: help/15/8737 -->
+DetailProtocol=true
 
 ### Print graphic or report
 
@@ -1091,7 +1090,7 @@ For example the parameter block would look like this, if you want to use the pri
 
 PrintDevice=Win2PDF
 
-PrintFileName=C:\\GeoDinPrints\\Ausdruck1.PDF <!-- src: help/15/8740 -->
+PrintFileName=C:\\GeoDinPrints\\Ausdruck1.PDF
 
 ### Start plugin
 
@@ -1121,7 +1120,7 @@ Param2=My parameter 2
 
 \.....
 
-This configuration section is transferred to the plug-in (only COM server plug-ins) completely and is not analyzed by GeoDin. Because of this any parameter can be transferred to the plug-in by call up over the COM function. <!-- src: help/15/8743 -->
+This configuration section is transferred to the plug-in (only COM server plug-ins) completely and is not analyzed by GeoDin. Because of this any parameter can be transferred to the plug-in by call up over the COM function.
 
 ### Check measurements
 
@@ -1137,7 +1136,7 @@ Further information to this method can be found in the chapter [Check measuremen
 
 \[Regression\]
 
-Layout=AnalysisLayout1 <!-- src: help/15/8746 -->
+Layout=AnalysisLayout1
 
 ### SysInfo
 
@@ -1153,4 +1152,4 @@ The following parameters are available:
 
 2.  SysInfo(ProgramDataFolder): returns the program data path.
 
-3.  SysInfo(ApplicationFolder): resturns the application folder. <!-- src: help/15/10967 -->
+3.  SysInfo(ApplicationFolder): resturns the application folder.
