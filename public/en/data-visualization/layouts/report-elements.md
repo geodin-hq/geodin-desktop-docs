@@ -15,14 +15,14 @@ The most practical pattern for exporting master data or layer data to Excel from
 **Steps:**
 
 1. In the layout editor, insert a **Multi-Object Frame** from the element toolbar.
-2. Drag the desired objects (or a query) from the GeoDin Object Manager into the Multi-Object Frame — this populates the frame with the selected objects.
+2. Drag the desired objects (or a query) from the GeoDin Object Manager into the Multi-Object Frame - this populates the frame with the selected objects.
 3. Inside the Multi-Object Frame, insert a **Report Element**.
 4. In the Report Element properties, set the **Data source** (e.g. General Data, Layer Data, or a specific measurement data type).
 5. Add columns using the blue **+** button. For each column, assign a **Text Macro** (the parameter to display) and a **Heading**.
 6. To export, use the toolbar at the bottom of the layout view: because the layout contains a Report Element, an **Export to Excel** button appears. Click it to produce an Excel file with one row per object.
 
 {% hint style="info" %}
-This pattern is the recommended way to produce tabular exports of master data or layer data for multiple objects — for example, exporting chloride values from a groundwater chemistry data type for all objects in a query.
+This pattern is the recommended way to produce tabular exports of master data or layer data for multiple objects - for example, exporting chloride values from a groundwater chemistry data type for all objects in a query.
 {% endhint %}
 
 ## Grouping and custom views in the Stammdaten Grid
@@ -33,7 +33,7 @@ The general data grid (Stammdaten Grid) supports dynamic grouping of rows by col
 
 1. In the general data grid, right-click any column header.
 2. From the context menu, select the option to show the **grouping zone** (a grey area appears above the column headers).
-3. Drag one or more column headers into the grouping zone. Objects are immediately grouped by the values in those columns. Multi-level grouping is supported — drag additional column headers to create nested groups.
+3. Drag one or more column headers into the grouping zone. Objects are immediately grouped by the values in those columns. Multi-level grouping is supported - drag additional column headers to create nested groups.
 4. To remove a grouping column, drag it back out of the grouping zone.
 
 **Saving custom views:**
@@ -53,7 +53,7 @@ Use the **Save current view** button in the grid toolbar to save the current col
 
 ### Row selectors
 
-Rows can be excluded from the report by parameter condition — for example, skip values above or below a threshold. Selectors are configured in the Report Element properties and filter the displayed rows without modifying the underlying data.
+Rows can be excluded from the report by parameter condition - for example, skip values above or below a threshold. Selectors are configured in the Report Element properties and filter the displayed rows without modifying the underlying data.
 
 ### Conditional formatting
 
@@ -61,7 +61,7 @@ To highlight data by value, use **Column Properties > Presentation Options**: se
 
 ### Multi-block layouts
 
-Multiple report blocks can be combined in one layout — for example, a general-data report and a measurement report placed side by side in the same frame. Each block has its own data source and column configuration.
+Multiple report blocks can be combined in one layout - for example, a general-data report and a measurement report placed side by side in the same frame. Each block has its own data source and column configuration.
 
 ### Footers and headers
 
@@ -78,5 +78,5 @@ Each report group can include a **footer** carrying additional information per g
 
 Two export paths are available:
 
-- **Right-click in edit mode** — right-click the Report Element → **Export as Excel** or **Export as CSV**. Exports the visible data for the current object selection.
-- **Report Access button** — in the layout overview, use the **Report Access** button to export to Excel without opening edit mode first.
+- **Right-click in edit mode** - right-click the Report Element → **Export as Excel** or **Export as CSV**. Exports the visible data for the current object selection.
+- **Report Access button** - in the layout overview, use the **Report Access** button to export to Excel without opening edit mode first.

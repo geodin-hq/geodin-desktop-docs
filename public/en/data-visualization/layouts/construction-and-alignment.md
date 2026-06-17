@@ -28,7 +28,7 @@ The projection model is configured automatically when using the geological cross
 | **Align to elevation**            | In a multi-object frame, depth is normally calculated from ground level. Enable "Align all objects to the maximum of elevation" to display at correct absolute elevation. Requires vertical datum in the general data. Use "Automatic start elevation" or enter a custom value. |
 | **Datum correction**              | When boreholes use different elevation systems, select a data field containing the correction value to recalculate all elevations to a common system.                                                                                                                           |
 | **Display adjusted inclination**  | Select the data field containing the borehole inclination (0 = vertical, up to 89 = nearly horizontal; 90 is invalid).                                                                                                                                                          |
-| **Drawing depth options**         | _Depth_ — draw to a fixed depth below ground surface. _Cut-off_ — set a reduced level below which the cross-section is not displayed (acts as a horizontal cut line).                                                                                                           |
+| **Drawing depth options**         | _Depth_ - draw to a fixed depth below ground surface. _Cut-off_ - set a reduced level below which the cross-section is not displayed (acts as a horizontal cut line).                                                                                                           |
 
 ## Join layers tool
 
@@ -37,7 +37,7 @@ The "Join layers" tool connects geological layers between adjacent boreholes wit
 **Workflow:**
 
 1. Activate the tool from the toolbar. It stays active until another tool is selected.
-2. Click layers in two or more boreholes to select them (they highlight in color). Selection order does not matter — filling always starts from the leftmost borehole.
+2. Click layers in two or more boreholes to select them (they highlight in color). Selection order does not matter - filling always starts from the leftmost borehole.
 3. End the selection by right-clicking and choosing "End layer choice", or by re-clicking the tool icon.
 4. In the dialog, edit the suggested fill pattern (based on the two outermost selected layers). Apply from a palette, or double-click to edit in detail.
 5. Confirm with OK. Use `Edit > Undo` to remove if needed.
@@ -50,7 +50,7 @@ Create cross-section layer connections in a separate drawing layer from the bore
 
 ## Freehand layer drawing
 
-Layer connections can also be drawn as freehand polygons instead of using the Join layers tool. Draw with the Polygon element — the polyline does not need to be closed. Use overlapping layers drawn front-to-back to create clean boundaries: draw the deeper layer first, then overlap with the upper layer so the upper boundary becomes the visible edge.
+Layer connections can also be drawn as freehand polygons instead of using the Join layers tool. Draw with the Polygon element - the polyline does not need to be closed. Use overlapping layers drawn front-to-back to create clean boundaries: draw the deeper layer first, then overlap with the upper layer so the upper boundary becomes the visible edge.
 
 ## Importing and exporting polylines
 
@@ -84,12 +84,12 @@ For map elements within variable images:
 
 ## Scale bar
 
-The horizontal scale bar appearance is configured with number of divisions, font type, size, and other display settings. Unit labeling (`m`, `ft`) is automatic when an EPSG code is defined for the cross-section objects — the unit matches the coordinate system of the EPSG code. Without an EPSG code, unit labeling must be entered manually.
+The horizontal scale bar appearance is configured with number of divisions, font type, size, and other display settings. Unit labeling (`m`, `ft`) is automatic when an EPSG code is defined for the cross-section objects - the unit matches the coordinate system of the EPSG code. Without an EPSG code, unit labeling must be entered manually.
 
 ## Column properties for reports
 
 When configuring report columns, options include:
 
 * **Report width:** Fix the report width so it remains consistent regardless of invisible or removed columns. Remaining column widths are calculated proportionally.
-* **Horizontal orientation:** Position the report within its frame (left, center, right) — applies only when the report is narrower than the frame.
+* **Horizontal orientation:** Position the report within its frame (left, center, right) - applies only when the report is narrower than the frame.
 * **Vertical orientation:** Position data within the frame when content overflows to multiple pages (top or bottom).

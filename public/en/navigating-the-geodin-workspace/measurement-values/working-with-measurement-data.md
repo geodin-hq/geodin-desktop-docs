@@ -476,7 +476,7 @@ Open the **Data Type Manager** method (available at the database level).
 {% step %}
 #### Choose a data type
 
-In the Data Type Manager, click the blue **+** button (right-hand side) to select a data type from the system configuration — for example, _Groundwater Chemistry_.
+In the Data Type Manager, click the blue **+** button (right-hand side) to select a data type from the system configuration - for example, _Groundwater Chemistry_.
 {% endstep %}
 {% step %}
 #### Select parameters
@@ -498,9 +498,9 @@ If the data type does not appear in the system configuration list, use **Add dat
 
 When adding a data type you can choose between two storage models:
 
-**Small Data Model (SDM)** — 2 tables. One row per measurement record; each parameter is a column. Simple and transparent, but limited to a maximum of 254 parameters per data type. Suitable for most standard data types.
+**Small Data Model (SDM)** - 2 tables. One row per measurement record; each parameter is a column. Simple and transparent, but limited to a maximum of 254 parameters per data type. Suitable for most standard data types.
 
-**Large Data Model (LDM)** — 3 tables (values, text, dates). Each parameter value occupies one row, linked via a parameter ID. More efficient for data types with many parameters or sparse data distributions. Mandatory if a data type exceeds 254 parameters (e.g. full groundwater chemistry suites).
+**Large Data Model (LDM)** - 3 tables (values, text, dates). Each parameter value occupies one row, linked via a parameter ID. More efficient for data types with many parameters or sparse data distributions. Mandatory if a data type exceeds 254 parameters (e.g. full groundwater chemistry suites).
 
 The default model for each data type is set in the system configuration, but can be overridden at the time of creation or converted later via **Data Type Settings > Convert data model**.
 
@@ -748,7 +748,7 @@ Data types are compilations of measurable parameters. This compilation is ultima
 | PHYSFILE | Name of the object file (only in GeoDin standard projects) |
 | LOCKINFO | empty |
 
-_Additional variant rows recovered from the former Databases-page copy of “Measurement values”:_
+_Additional variant rows recovered from the former Databases-page copy of "Measurement values":_
 
 | INVID | Measurement point ID number (format below) |
 | INVID | Measurement point ID number |

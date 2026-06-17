@@ -1,6 +1,6 @@
 # Layer Queries
 
-Layer queries search the coded layer descriptions of boreholes — soil and rock attributes recorded as strings of codes — which a plain SQL query on the database cannot reliably match. This page covers what layer queries are, the simple single-condition walkthrough for finding all boreholes with a given layer property, and the full reference for the multi-characteristic layer-query workflow (GLQ definition files, the layer query manager, definitions, results tables) plus additional query options such as code-hierarchy search and multiclassification export.
+Layer queries search the coded layer descriptions of boreholes - soil and rock attributes recorded as strings of codes - which a plain SQL query on the database cannot reliably match. This page covers what layer queries are, the simple single-condition walkthrough for finding all boreholes with a given layer property, and the full reference for the multi-characteristic layer-query workflow (GLQ definition files, the layer query manager, definitions, results tables) plus additional query options such as code-hierarchy search and multiclassification export.
 
 ## What layer queries are
 
@@ -81,7 +81,7 @@ GeoDin stores the results of a layer query in the current database. Each query e
 
 ## Reference: Layer query workflow
 
-The multi-characteristic layer-query workflow — defining conditions in GLQ definition files, classifying and generalising layers, and managing the stored results — is documented in the subsections below.
+The multi-characteristic layer-query workflow - defining conditions in GLQ definition files, classifying and generalising layers, and managing the stored results - is documented in the subsections below.
 
 ### Complex layer queries
 
@@ -543,11 +543,11 @@ Closes the list and changes in the tree view of the object properties to the par
 
 When using structured dictionaries (e.g. SEP 3) that contain hierarchical code descriptions, the search can optionally be restricted to a specific position in the hierarchy:
 
-**A) Arbitrary** — Searches the entire data field regardless of hierarchy level; the code is found wherever it appears.
+**A) Arbitrary** - Searches the entire data field regardless of hierarchy level; the code is found wherever it appears.
 
-**B) Search only in main level** — Searches only at the level of main codes; attribute (descriptor) codes of the main level are not matched.
+**B) Search only in main level** - Searches only at the level of main codes; attribute (descriptor) codes of the main level are not matched.
 
-**C) Only search in attributes of the main level** — Searches only the attributes of the main codes, not the main codes themselves or deeper levels.
+**C) Only search in attributes of the main level** - Searches only the attributes of the main codes, not the main codes themselves or deeper levels.
 
 **Example:** Searching for code `U` in the data field `mS(u2,gs2,h2,U(t2,fs,h(sf),wl))`:
 
@@ -561,7 +561,7 @@ When searching for layer packages or layer package sequences, an optional level 
 
 ### Profile type
 
-Used in soil science workflows to define and search for specific profile types — characteristic sequences of layer packages. Define a unique name for the profile type and specify whether it targets a single or multi-layer package. Enter `0` in the layer package count field to include all layer packages defined in the current layer query definition.
+Used in soil science workflows to define and search for specific profile types - characteristic sequences of layer packages. Define a unique name for the profile type and specify whether it targets a single or multi-layer package. Enter `0` in the layer package count field to include all layer packages defined in the current layer query definition.
 
 ### Multiclassifications export
 

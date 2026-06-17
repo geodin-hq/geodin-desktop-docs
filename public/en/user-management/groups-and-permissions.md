@@ -8,6 +8,6 @@ Permissions are managed at the method level: individual methods can be made visi
 
 Example permission scenario: some users can view and add data but cannot delete objects.
 
-External users may not have permission to modify shipped system data types — `System > System Configuration > Data Types` is effectively read-only for external users.
+External users may not have permission to modify shipped system data types - `System > System Configuration > Data Types` is effectively read-only for external users.
 
 Custom data type creation (`System > Data Types > New Data Type`) is available to users even when modifying existing system data types is restricted.

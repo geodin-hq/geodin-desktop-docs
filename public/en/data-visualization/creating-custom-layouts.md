@@ -31,7 +31,7 @@ To adjust the page size or orientation:
 
 These settings define the overall layout format.
 
-<figure><img src="../.gitbook/assets/layout_02_EN.jpg" alt="Object properties tree with Page layout selected"><figcaption>Page layout selected at the top of the Object Properties tree — page size and orientation are configured here.</figcaption></figure>
+<figure><img src="../.gitbook/assets/layout_02_EN.jpg" alt="Object properties tree with Page layout selected"><figcaption>Page layout selected at the top of the Object Properties tree - page size and orientation are configured here.</figcaption></figure>
 {% endstep %}
 {% step %}
 #### Step 3: Create an Object Frame
@@ -39,8 +39,8 @@ These settings define the overall layout format.
 An **object frame** is required to link graphic elements to database data.
 
 1. Select one of the following tools:
-   * **Single‑Object Frame** – displays data for one object (e.g. one borehole)
-   * **Multi‑Object Frame** – displays multiple objects simultaneously
+   * **Single‑Object Frame** - displays data for one object (e.g. one borehole)
+   * **Multi‑Object Frame** - displays multiple objects simultaneously
 2. Draw a rectangle on the page to define the object frame.
 
 In most cases, it is recommended to draw the object frame to cover **the entire page**.
@@ -49,7 +49,7 @@ In most cases, it is recommended to draw the object frame to cover **the entire 
 The object frame is the link between the layout and the GeoDin database. It retrieves the data that will be displayed in the graphic elements.
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/layout_03_EN.jpg" alt="Drawing an object frame with the Single-object frame tool"><figcaption>Drawing the object frame across the page with the Single-object frame tool (highlighted in the left toolbar). The Data source branch in Object Properties is still empty — no object is linked yet.</figcaption></figure>
+<figure><img src="../.gitbook/assets/layout_03_EN.jpg" alt="Drawing an object frame with the Single-object frame tool"><figcaption>Drawing the object frame across the page with the Single-object frame tool (highlighted in the left toolbar). The Data source branch in Object Properties is still empty - no object is linked yet.</figcaption></figure>
 {% endstep %}
 {% step %}
 #### Step 4: Insert Graphic Elements
@@ -117,8 +117,8 @@ More detailed information is available in the **GeoDin Help (F1)** under:
 
 Deep reference for the layout editor lives in the subpages:
 
-- [Layout Editor Basics](layouts/layout-editor-basics.md) — editor mechanics: menus, drawing layers, snap, grouping, palettes, paper formats, interface settings
-- [Element Properties Reference](layouts/element-properties.md) — text, fonts, lines, fills, symbols, images, legends, labeling
-- [Layout Files and Lists](layouts/layout-files-and-lists.md) — file formats, folders, snippets, lists and collections
-- [Construction and Alignment](layouts/construction-and-alignment.md) — projection model, cross-section alignment, layer joining, polylines, scale bar
+- [Layout Editor Basics](layouts/layout-editor-basics.md) - editor mechanics: menus, drawing layers, snap, grouping, palettes, paper formats, interface settings
+- [Element Properties Reference](layouts/element-properties.md) - text, fonts, lines, fills, symbols, images, legends, labeling
+- [Layout Files and Lists](layouts/layout-files-and-lists.md) - file formats, folders, snippets, lists and collections
+- [Construction and Alignment](layouts/construction-and-alignment.md) - projection model, cross-section alignment, layer joining, polylines, scale bar
 - Element pages: [Object Frames](layouts/object-frames.md), [Borehole Elements](layouts/borehole-elements.md), [Measurement Value Graphics](layouts/measurement-value-graphics.md), [X-Y Diagrams](layouts/x-y-diagrams.md), [Report Elements](layouts/report-elements.md), [Text Macros](layouts/text-macros-and-variable-text.md), [Cross Section Layouts](layouts/cross-section-layouts.md)

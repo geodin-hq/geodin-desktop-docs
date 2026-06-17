@@ -1,6 +1,6 @@
 # Formula Basics
 
-Formulas let GeoDin compute the value of a data field from values that already exist in the data set. This page is the reference for the formula system: how a formula is defined (its name, target, condition and options), how to add a formula to an existing data type, and the full formula syntax — mathematical operators, conditions, special-case constructions, object-type and EGIS formulas, and the alternative SQL command.
+Formulas let GeoDin compute the value of a data field from values that already exist in the data set. This page is the reference for the formula system: how a formula is defined (its name, target, condition and options), how to add a formula to an existing data type, and the full formula syntax - mathematical operators, conditions, special-case constructions, object-type and EGIS formulas, and the alternative SQL command.
 
 ## General formulas
 
@@ -124,7 +124,7 @@ Empty spaces can be contained in the formulas. Fixed number values (100 in the e
 
 ## Adding a formula to an existing data type
 
-Formulas can be added to a data type at any time — even after measurement data already exists in the database. The following steps cover the end-to-end process:
+Formulas can be added to a data type at any time - even after measurement data already exists in the database. The following steps cover the end-to-end process:
 
 {% stepper %}
 {% step %}
@@ -167,7 +167,7 @@ Formulas defined as active are calculated automatically on new and updated recor
 {% step %}
 #### Step 5: Single-use inline formulas in the measurement editor
 
-The measurement editor also accepts a one-off formula entered directly in the formula bar — without saving it to the system configuration. This is useful for ad-hoc calculations during a session.
+The measurement editor also accepts a one-off formula entered directly in the formula bar - without saving it to the system configuration. This is useful for ad-hoc calculations during a session.
 
 Note: an inline formula **cannot target a field that is already assigned as the target of an active system formula**. If a conflict exists, the active system formula takes precedence and the inline formula will not be executed on that field.
 {% endstep %}

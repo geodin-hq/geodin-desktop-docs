@@ -1,6 +1,6 @@
 # Creating Cross Sections
 
-A cross section in GeoDin is a vertical slice through the ground that displays borehole data — logs, samples, groundwater levels, and data sequences — projected onto a user-defined line of section. This page is a reference for the cross-section window panels and their settings. For layout element options (axis ranges, data sequence display, layout lists), see [Cross Section Layouts](cross-section-layouts.md).
+A cross section in GeoDin is a vertical slice through the ground that displays borehole data - logs, samples, groundwater levels, and data sequences - projected onto a user-defined line of section. This page is a reference for the cross-section window panels and their settings. For layout element options (axis ranges, data sequence display, layout lists), see [Cross Section Layouts](cross-section-layouts.md).
 
 ## Reference: Cross-section panels
 
@@ -10,13 +10,13 @@ By selecting the **Objects** branch in the cross-section object properties tree,
 
 Objects for the cross section can be added directly by drag and drop from the GeoDin object manager. Single objects, queries, or groups can be selected and dropped onto the list or the site plan. If an object is already included in the list, it is not added again.
 
-Objects can be loaded from any database or project — data for a cross section does not need to be stored in a single project or database.
+Objects can be loaded from any database or project - data for a cross section does not need to be stored in a single project or database.
 
 In the site plan, loaded objects are shown with a marker and label. The site plan can be zoomed and panned with the available tools.
 
 **Borehole list**
 
-The selected boreholes are displayed in a site plan. An object can be selected either in the list or in the site plan — it appears in red in the site plan and is highlighted in the list. The coordinates, elevation, and depth of the selected object are shown below the list.
+The selected boreholes are displayed in a site plan. An object can be selected either in the list or in the site plan - it appears in red in the site plan and is highlighted in the list. The coordinates, elevation, and depth of the selected object are shown below the list.
 
 Use the **Remove** button to remove an object from the list; it is also removed from the site plan.
 
@@ -88,7 +88,7 @@ All depth-related graphic elements can be used in a scene: borehole logs, data s
 
 By default, the borehole log, borehole name (variable text), and two scale bars are selected. Additional scenes can be added, removed, or modified.
 
-Use the **Add** button to add more scenes and select the graphic element type. The drawing order follows the sequence in the list — the top scene is drawn first, the bottom scene last. Change the order with the arrow buttons. In cases of overlap, drawing order determines which element appears on top.
+Use the **Add** button to add more scenes and select the graphic element type. The drawing order follows the sequence in the list - the top scene is drawn first, the bottom scene last. Change the order with the arrow buttons. In cases of overlap, drawing order determines which element appears on top.
 
 Cross-section scenarios can be saved and loaded independently of boreholes (file format: `*.gsz`). Click **Save** to store the scenario (`*.gsz`); **Load** applies a saved scenario to another cross section. All predefined scenes are available and can be adjusted as required. Multiple scenario files can be created for different cross-section themes.
 
@@ -112,11 +112,11 @@ The position of each scene element relative to the anchor point of the object ca
 
 The anchor point (X:0, Y:0) is the calculated position of the object in the cross section based on its coordinates and elevation. Example positions:
 
-* **Borehole log** — drawn directly on the anchor point (X:0, Y:0)
-* **Scale bar** — drawn 20 mm to the left: X:−20, Y:0
-* **Groundwater symbol** — drawn 10 mm to the right: X:10, Y:0
-* **Borehole name (variable text, top-aligned)** — shown above the borehole: X:0, Y:−5
-* **End depth (variable text, bottom-aligned)** — shown below the borehole log: X:−5, Y:5
+* **Borehole log** - drawn directly on the anchor point (X:0, Y:0)
+* **Scale bar** - drawn 20 mm to the left: X:−20, Y:0
+* **Groundwater symbol** - drawn 10 mm to the right: X:10, Y:0
+* **Borehole name (variable text, top-aligned)** - shown above the borehole: X:0, Y:−5
+* **End depth (variable text, bottom-aligned)** - shown below the borehole log: X:−5, Y:5
 
 **Using scenes**
 
@@ -179,7 +179,7 @@ When an existing well design is added to a groundwater measurement point, this o
 
 ### Snap
 
-The snap distance — the maximum distance within which one point automatically connects to another — can be set between 1 and 50 mm. The snap distance is configured via **Preferences** > **Snap preferences**.
+The snap distance - the maximum distance within which one point automatically connects to another - can be set between 1 and 50 mm. The snap distance is configured via **Preferences** > **Snap preferences**.
 
 Graphic elements whose nodes are affected by the snap function: line, rectangle, polyline, and borehole profile.
 

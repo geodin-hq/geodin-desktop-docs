@@ -8,34 +8,34 @@ All three must be installed in GeoDin to ensure full functionality:
 
 1. **AGS 4 \[AGSSTAND]**: Includes general location data, geological layers, samples, well design information, object type tables, and data types.
 2. **AGS 4 LBSG - Testing schedule \[AGSLBSG]**: Used to define and manage project-specific testing schedules.
-3. **AGS 4 PREM - Project-specific time-related remarks \[AGSPREM]**: Used to record project-specific time-dependent events (e.g., “Heavy rainfall for two days; site flooded”).
+3. **AGS 4 PREM - Project-specific time-related remarks \[AGSPREM]**: Used to record project-specific time-dependent events (e.g., "Heavy rainfall for two days; site flooded").
 
 <figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-Follow the process outlined [here](https://docs.geodin.com/navigating-the-geodin-workspace/object-types/installing) in Method 1 and select **“AGSSTAND\_Geotechnical Geoenvironmental Standard“** to install all three object types including the associated data types.
+Follow the process outlined [here](https://docs.geodin.com/navigating-the-geodin-workspace/object-types/installing) in Method 1 and select **"AGSSTAND\_Geotechnical Geoenvironmental Standard"** to install all three object types including the associated data types.
 
 <figure><img src="../../.gitbook/assets/Bild.png" alt=""><figcaption></figcaption></figure>
 
 #### 1.1	Missing AGS groups in GeoDin
 
-Some AGS groups are not stored in GeoDin because they are either automatically generated during the AGS export process or are not supported by GeoDin’s data model and therefore cannot be stored within the system.
+Some AGS groups are not stored in GeoDin because they are either automatically generated during the AGS export process or are not supported by GeoDin's data model and therefore cannot be stored within the system.
 
-• ABBR – automatically generated on AGS Export\
-• DICT – not part of the GeoDin structure\
-• FILE – automatically generated on AGS Export\
-• TRAN – not imported into GeoDin; users must complete these values during the AGS Export in Step 4\
-• TYPE – automatically generated on AGS Export\
-• UNIT – GeoDin provides its own dedicated unit dictionary (PU)\
-• STND – not part of the GeoDin structure
+• ABBR - automatically generated on AGS Export\
+• DICT - not part of the GeoDin structure\
+• FILE - automatically generated on AGS Export\
+• TRAN - not imported into GeoDin; users must complete these values during the AGS Export in Step 4\
+• TYPE - automatically generated on AGS Export\
+• UNIT - GeoDin provides its own dedicated unit dictionary (PU)\
+• STND - not part of the GeoDin structure
 
 #### 1.2	General information for GeoDin
 
 **1.2.1 Parameters and Groups**
 
-Parameters or groups that are only included in AGS 4.1.1 and not in AGS 4.0.4 are marked with the note “(4.1)”.
+Parameters or groups that are only included in AGS 4.1.1 and not in AGS 4.0.4 are marked with the note "(4.1)".
 
 **Example:**\
-CTRG – Cyclic triaxial test \[CTRG] is a new group for AGS 4.1.1.
+CTRG - Cyclic triaxial test \[CTRG] is a new group for AGS 4.1.1.
 
 <figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -57,14 +57,14 @@ When entering data via the grid view, users can switch between the long field na
 
 * GeoDin includes comprehensive dictionaries that store all AGS codes from the **AGS 4.1.1** and **AGS 4.0.4** standards.
 * The following dictionaries are **exceptions** and are intentionally empty:
-  * **(AGS) Layer data: GEOL – Second geology code**
-  * **(AGS) Layer data: GEOL – Geology code**\
+  * **(AGS) Layer data: GEOL - Second geology code**
+  * **(AGS) Layer data: GEOL - Geology code**\
     These must be populated with **project-specific codes** in accordance with AGS standards.
 * Users can **edit GeoDin dictionaries**.
   * Once modified, dictionaries are **not updated during an object type update**, ensuring user changes are retained.
 * The following **database-specific dictionaries** must be populated by user input:
-  * **(AGS) Testing schedule: LBSG – Schedule reference**, used in data type **LBST**
-  * **(AGS) Monitoring installation: PIPE – Pipe reference**, used in data type **MONG**\
+  * **(AGS) Testing schedule: LBSG - Schedule reference**, used in data type **LBST**
+  * **(AGS) Monitoring installation: PIPE - Pipe reference**, used in data type **MONG**\
     These dictionaries are only usable once the required information has been entered into the database.
 *   In contrast to the AGS structure, GeoDin includes an **additional EPSG dictionary** to enable location display in:
 
@@ -75,18 +75,18 @@ When entering data via the grid view, users can switch between the long field na
 
     <figure><img src="../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 * The following dictionaries are repeatedly used in GeoDin:
-  * **(AGS) Units: UNIT – Unit**, defining all units used for data headings and data records
+  * **(AGS) Units: UNIT - Unit**, defining all units used for data headings and data records
     * Used multiple times for all AGS types = **PU**
   * **(AGS) Yes or No: YN**
     * Used multiple times for all AGS types = **YN**
-* The dictionary **(AGS) Data type: PTST – Type of permeability test** contains **duplicate entries** with different upper- and lower-case letters, reflecting differences between **AGS 4.0** and **AGS 4.1** standards.
+* The dictionary **(AGS) Data type: PTST - Type of permeability test** contains **duplicate entries** with different upper- and lower-case letters, reflecting differences between **AGS 4.0** and **AGS 4.1** standards.
 * GeoDin does **not allow spaces or colons (:)** in dictionary codes.
   * AGS-standard codes containing spaces are converted to **underscores (\_)** within GeoDin.
   * AGS-standard codes containing colons are converted to **minus (-)** within GeoDin.
   * This conversion is handled automatically by the **importer and exporter**, where it is reversed.
 * Users can enter their own **ABBR codes** into GeoDin dictionaries.
   * During export, these codes are written to the **ABBR group** with their corresponding long texts.
-  * Such entries are marked with **“GeoDin”** instead of **“AGS4”** in the **ABBR\_LIST** heading.
+  * Such entries are marked with **"GeoDin"** instead of **"AGS4"** in the **ABBR\_LIST** heading.
 
 **1.2.5 Presentation with Fill Patterns**
 
@@ -94,8 +94,8 @@ GeoDin uses fill patterns defined in the AGS dictionaries to visually represent 
 
 **Dictionaries used:**
 
-* **(AGS) Layer data: GEOL – Legend code**
-* **(AGS) Well design: BKFL – Backfill legend**
+* **(AGS) Layer data: GEOL - Legend code**
+* **(AGS) Well design: BKFL - Backfill legend**
 
 <figure><img src="../../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -129,13 +129,13 @@ The user can find the AGS groups and the associated parameters in GeoDin in the 
 |              |            |         | FILT        | DOBS               |
 |              |            |         |             | HORN               |
 
-All AGS groups **except LBSG and PREM** that are **not listed above** are implemented in GeoDin as **data types**. The complete list of AGS data types is provided in **Chapter 6 – Data Types**.
+All AGS groups **except LBSG and PREM** that are **not listed above** are implemented in GeoDin as **data types**. The complete list of AGS data types is provided in **Chapter 6 - Data Types**.
 
-#### 3.1	General data – Location details - LOCA
+#### 3.1	General data - Location details - LOCA
 
 <figure><img src="../../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
 
-#### 3.2	Layer data – GEOL, DETL, DLOG
+#### 3.2	Layer data - GEOL, DETL, DLOG
 
 **3.2.1 Field geological description - GEOL**
 
@@ -147,7 +147,7 @@ All AGS groups **except LBSG and PREM** that are **not listed above** are implem
 
 **3.2.3 Driller geological description (4.1) - DLOG**
 
-The DLOG group represents the driller’s geological description according to AGS 4.1.1.
+The DLOG group represents the driller's geological description according to AGS 4.1.1.
 
 <figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
 
@@ -155,7 +155,7 @@ The DLOG group represents the driller’s geological description according to AG
 
 <figure><img src="../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
 
-#### 3.4 Well design – HDIA, FLSH, BKFL, PIPE, FILT
+#### 3.4 Well design - HDIA, FLSH, BKFL, PIPE, FILT
 
 **3.4.1 Hole diameter - HDIA**
 
@@ -185,16 +185,16 @@ Pipe reference in monitoring installation pipe (PIPE group) and in filter detail
 
 <figure><img src="../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
 
-#### 3.5 Additional object type tables – CDIA, CHIS, HDPH, DREM, DOBS, HORN
+#### 3.5 Additional object type tables - CDIA, CHIS, HDPH, DREM, DOBS, HORN
 
 Additional object type tables store advanced drilling information that supports detailed project documentation:
 
-1. CDIA – Casing diameter
-2. CHIS – Chiseling details
-3. HDPH – Depth‑related hole information
-4. DREM – Depth related remarks
-5. DOBS – Drilling advancement observation and parameters
-6. HORN – Hole orientation and inclination
+1. CDIA - Casing diameter
+2. CHIS - Chiseling details
+3. HDPH - Depth‑related hole information
+4. DREM - Depth related remarks
+5. DOBS - Drilling advancement observation and parameters
+6. HORN - Hole orientation and inclination
 
 <figure><img src="../../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
 
@@ -230,17 +230,17 @@ Additional object type tables store advanced drilling information that supports 
 
 A **testing schedule object** must be created so that its reference can be used in the **Testing Schedule Details \[LBST]** data type records.
 
-The dictionary **(AGS) Testing schedule: LBSG – Schedule reference** is **database‑specific**. Schedule references are only available if corresponding objects are created in the **AGS 4 LBSG – Testing schedule** object type.
+The dictionary **(AGS) Testing schedule: LBSG - Schedule reference** is **database‑specific**. Schedule references are only available if corresponding objects are created in the **AGS 4 LBSG - Testing schedule** object type.
 
 Using the **Add objects** method at the level of the opened database, testing schedule objects can be copied from one database to another. Once copied, they are also available as schedule references for the **Testing Schedule Details \[LBST]** data type.
 
 <figure><img src="../../.gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure>
 
-### 5. Object Type AGS 4 PREM – Project-Specific Time-Related Remarks \[AGSPREM]
+### 5. Object Type AGS 4 PREM - Project-Specific Time-Related Remarks \[AGSPREM]
 
 #### 5.1	General data - Project specific time related remarks - PREM
 
-The **AGS 4 PREM object** allows users to document project‑specific, time‑dependent events such as delays, weather events, and site accessibility issues. These records form part of the project’s **AGS‑compliant documentation**.
+The **AGS 4 PREM object** allows users to document project‑specific, time‑dependent events such as delays, weather events, and site accessibility issues. These records form part of the project's **AGS‑compliant documentation**.
 
 <figure><img src="../../.gitbook/assets/image (29).png" alt=""><figcaption></figcaption></figure>
 
@@ -268,7 +268,7 @@ There are currently **no data types** linked to **(AGS) Screens / filter \[AGF]*
 Each data type follows the naming pattern:
 
 **"(AGS) GROUPNAME"**\
-Example: **“(AGS) AAVT”**
+Example: **"(AGS) AAVT"**
 
 Data types may include **first-, second-, and third‑level sub data types**, which provide a more detailed structure for specific measurements.
 
@@ -322,11 +322,11 @@ If a plugin is already installed, it appears under **Installed plugins**.
 * **GeoDin version 15.4 or higher**
 * **.NET 8 Desktop Runtime or higher**
 
-Users running **GeoDin versions 15.0 to 15.3** can update **GeoDin** by using the **“Update GeoDin”** function on the **System** page.
+Users running **GeoDin versions 15.0 to 15.3** can update **GeoDin** by using the **"Update GeoDin"** function on the **System** page.
 
 <figure><img src="../../.gitbook/assets/image (49).png" alt=""><figcaption></figcaption></figure>
 
-When the AGS plugins are started and the required .NET runtime is not already installed, a message is displayed informing the user that the .NET Desktop Runtime must be downloaded and installed first. If the user confirms the prompt by selecting “Yes”, they are automatically redirected to the official [Microsoft download](https://dotnet.microsoft.com/en-us/download/dotnet) page. From there, the user can download and install the required .NET Desktop Runtime to proceed with the plugin import/export process.
+When the AGS plugins are started and the required .NET runtime is not already installed, a message is displayed informing the user that the .NET Desktop Runtime must be downloaded and installed first. If the user confirms the prompt by selecting "Yes", they are automatically redirected to the official [Microsoft download](https://dotnet.microsoft.com/en-us/download/dotnet) page. From there, the user can download and install the required .NET Desktop Runtime to proceed with the plugin import/export process.
 
 <figure><img src="../../.gitbook/assets/image (50).png" alt=""><figcaption></figcaption></figure>
 
@@ -351,18 +351,18 @@ The AGS Importer is available at the level of an open GeoDin database and at the
 {% hint style="danger" %}
 Note: The AGS Importer can automatically create the required database tables for AGS object types only when using a **Microsoft Access database** in GeoDin.
 \
-If you are working with a **client–server database** and the AGS object types have not yet been registered, you must first create these tables manually via GeoDin. Ensure that the relevant user has **permission to create tables** in the client–server database.
+If you are working with a **client-server database** and the AGS object types have not yet been registered, you must first create these tables manually via GeoDin. Ensure that the relevant user has **permission to create tables** in the client-server database.
 {% endhint %}
 
-**Creating AGS Database Tables in a Client–Server Database**
+**Creating AGS Database Tables in a Client-Server Database**
 
-1. In GeoDin, Open a project in your client-server database and go to the “Objects“ node. Start the “New object“ method.
-2. Select the object type “AGS 4“ \[AGSSTAND] and confirm with “OK“. GeoDin will now create the corresponding tables in your client-server database.
+1. In GeoDin, Open a project in your client-server database and go to the "Objects" node. Start the "New object" method.
+2. Select the object type "AGS 4" \[AGSSTAND] and confirm with "OK". GeoDin will now create the corresponding tables in your client-server database.
    \
-   You may cancel the data entry afterwards by clicking the “Cancel edits“ button (prohibition sign).
+   You may cancel the data entry afterwards by clicking the "Cancel edits" button (prohibition sign).
 3. Repeat the process for the following object types to create all necessary AGS tables:
-   * “AGS 4 LBSG – Testing schedule” \[AGSLBSG]
-   * “AGS 4 PREM – Project specific time related remarks” \[AGSPREM]
+   * "AGS 4 LBSG - Testing schedule" \[AGSLBSG]
+   * "AGS 4 PREM - Project specific time related remarks" \[AGSPREM]
 
 These steps only need to be performed once per client-server database.
 
@@ -370,32 +370,32 @@ After all required tables have been created, you can proceed with the AGS import
 
 **The AGS Importer guides users through a four‑step process:**
 
-**Step 1** **– AGS Import configuration:** The user can choose between the standard formats AGS 4.1.1 or AGS 4.0.4. Information about the standard can be found in the TRAN group in the TRAN\_AGS parameter of the AGS import files.
+**Step 1** **- AGS Import configuration:** The user can choose between the standard formats AGS 4.1.1 or AGS 4.0.4. Information about the standard can be found in the TRAN group in the TRAN\_AGS parameter of the AGS import files.
 
-Checkbox: “Update existing data with uploaded AGS.”
+Checkbox: "Update existing data with uploaded AGS."
 
 * [x] If all key fields are filled in, existing data will be replaced with the current data record.
 * [ ] If all key fields are filled in, existing data will NOT be replaced with the current data set.
 
 Empty key fields lead to multiple imports because no comparison can take place.
 
-Checkbox: “Ignore AGS project identifiers.”
+Checkbox: "Ignore AGS project identifiers."
 
 * [x] Import the data into the selected project without comparing the PROJ group.
 
 <figure><img src="../../.gitbook/assets/image (52).png" alt=""><figcaption></figcaption></figure>
 
-**Step 2 – File selection:** The user selects the AGS file(s) to be imported. It is possible to import multiple AGS files at the same time.
+**Step 2 - File selection:** The user selects the AGS file(s) to be imported. It is possible to import multiple AGS files at the same time.
 
 Importing multiple files for the same object:
 
-1\.     If the data within the AGS files differs, the data from the last file will be written, provided that the checkbox “Update existing data with uploaded AGS” is selected.
+1\.     If the data within the AGS files differs, the data from the last file will be written, provided that the checkbox "Update existing data with uploaded AGS" is selected.
 
 2\.     If the checkbox is not selected, the data from the first file will be written to the database. The data from the following files will then no longer be written to the database unless the parameter is not yet assigned.
 
 <figure><img src="../../.gitbook/assets/image (53).png" alt=""><figcaption></figcaption></figure>
 
-**Step 3 – Validation:** Before importing, a validator checks the AGS file and issues warnings if there are any problems. In this case, importing is not possible, and the file must first be modified to comply with the standard and the import process restarted.
+**Step 3 - Validation:** Before importing, a validator checks the AGS file and issues warnings if there are any problems. In this case, importing is not possible, and the file must first be modified to comply with the standard and the import process restarted.
 
 <figure><img src="../../.gitbook/assets/image (54).png" alt=""><figcaption></figcaption></figure>
 
@@ -417,25 +417,25 @@ The AGS Exporter is available at the level of a GeoDin project. Starting the met
 
 The AGS Exporter creates a fully validated AGS file.
 
-**Step 1 – Select objects:** The tool is loading all objects from the project. You can select all locations, deselect or filter by the object name. Once selected, the user can go to the next step.
+**Step 1 - Select objects:** The tool is loading all objects from the project. You can select all locations, deselect or filter by the object name. Once selected, the user can go to the next step.
 
 It is important that the user selects not only the LOCA objects, but also the corresponding PREM and LBSG objects for the export.
 
 <figure><img src="../../.gitbook/assets/image (59).png" alt=""><figcaption></figcaption></figure>
 
-**Step 2 – AGS export configuration:** The user must choose the AGS export configuration. The Standards AGS 4.0.4 and AGS 4.1.1 are available. By choosing one standard, all parameters according to the standard are exported. Currently, it is not possible to export user-defined parameters from data types. The user can also choose AGS groups for the export. By default, all groups are exported.
+**Step 2 - AGS export configuration:** The user must choose the AGS export configuration. The Standards AGS 4.0.4 and AGS 4.1.1 are available. By choosing one standard, all parameters according to the standard are exported. Currently, it is not possible to export user-defined parameters from data types. The user can also choose AGS groups for the export. By default, all groups are exported.
 
 A check mark can be used to remove empty headings if the lines do not contain any data.
 
 <figure><img src="../../.gitbook/assets/image (60).png" alt=""><figcaption></figcaption></figure>
 
-**Step 3 – Project details:** The user must insert mandatory project details for the AGS Export, like project identifier \[PROJ\_ID] (PRJ\_ALIAS in GeoDin) and Project name \[PROJ\_NAME] (PRJ\_NAME in GeoDin and read-only). These fields are marked with a star, read from the GeoDin database and can be changed by the user. All other fields are optional.
+**Step 3 - Project details:** The user must insert mandatory project details for the AGS Export, like project identifier \[PROJ\_ID] (PRJ\_ALIAS in GeoDin) and Project name \[PROJ\_NAME] (PRJ\_NAME in GeoDin and read-only). These fields are marked with a star, read from the GeoDin database and can be changed by the user. All other fields are optional.
 
 The PROJ group must be filled in by the user because most of the data (Headings) are not stored in GeoDin: Location of site \[PROJ\_LOC], Client name \[PROJ\_CLNT], Contractors name \[PROJ\_CONT], Project Engineer \[PROJ\_ENG], General project comments \[PROJ\_MEMO]
 
 <figure><img src="../../.gitbook/assets/image (61).png" alt=""><figcaption></figcaption></figure>
 
-**Step 4 – Transmission details:** In the next, the user must insert the transmission details, like Producer \[TRAN\_PROD], Issue sequence reference \[TRAN\_ISNO], Recipient \[TRAN\_RECV] and Transmission status \[TRAN\_STAT]. The two fields Description \[TRAN\_DESC] and Remarks \[TRAN\_REM] are optional fields. The AGS Edition Reference \[TRAN\_AGS] is read from the Step 2 (AGS export configuration) and can only be changed by the user in Step 2.
+**Step 4 - Transmission details:** In the next, the user must insert the transmission details, like Producer \[TRAN\_PROD], Issue sequence reference \[TRAN\_ISNO], Recipient \[TRAN\_RECV] and Transmission status \[TRAN\_STAT]. The two fields Description \[TRAN\_DESC] and Remarks \[TRAN\_REM] are optional fields. The AGS Edition Reference \[TRAN\_AGS] is read from the Step 2 (AGS export configuration) and can only be changed by the user in Step 2.
 
 The TRAN group must be filled in by the user because the data is not stored in GeoDin. Mandatory fields marked with \* are filled in automatically and can be changed by the user.
 
@@ -457,6 +457,6 @@ During the export, the file is validated. Any deviations from the AGS standard a
 
 <figure><img src="../../.gitbook/assets/image (66).png" alt=""><figcaption></figcaption></figure>
 
-If an error is detected, the export is aborted with the error message: “The export could not be completed.” Example: The database contains data for version 4.1.1 and is exported as format 4.0.4
+If an error is detected, the export is aborted with the error message: "The export could not be completed." Example: The database contains data for version 4.1.1 and is exported as format 4.0.4
 
 <figure><img src="../../.gitbook/assets/image (67).png" alt=""><figcaption></figcaption></figure>

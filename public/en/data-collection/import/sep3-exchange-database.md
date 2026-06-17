@@ -4,7 +4,7 @@ description: Importing SEP 3 data from a state authority using the GeoDin exchan
 
 # SEP 3 Exchange Database
 
-State geological authorities (Landesämter) often deliver borehole data as a plain SEP 3 Access database — a file containing only the SEP 3 data tables, without the GeoDin system wrapper tables that a standard GeoDin database requires. GeoDin cannot open such a file directly as a project database.
+State geological authorities (Landesämter) often deliver borehole data as a plain SEP 3 Access database - a file containing only the SEP 3 data tables, without the GeoDin system wrapper tables that a standard GeoDin database requires. GeoDin cannot open such a file directly as a project database.
 
 The **exchange database** (German: *Austauschdatenbank*) is a special Access database that acts as a bridge: it can read the SEP 3 table structure from the authority's file and expose the objects so they can be copied into your main GeoDin database.
 
@@ -12,7 +12,7 @@ The **exchange database** (German: *Austauschdatenbank*) is a special Access dat
 
 - GeoDin version 3.4 or later.
 - The exchange database file, downloaded from the GeoDin website (free download, version-specific).
-- The Access (`.mdb` or `.accdb`) file received from the state authority, placed in a **locally accessible path on the GeoDin server** — for example, `C:\Temp\`. Avoid long UNC network paths, which can cause file access errors.
+- The Access (`.mdb` or `.accdb`) file received from the state authority, placed in a **locally accessible path on the GeoDin server** - for example, `C:\Temp\`. Avoid long UNC network paths, which can cause file access errors.
 
 ## Step-by-step import procedure
 
@@ -20,7 +20,7 @@ The **exchange database** (German: *Austauschdatenbank*) is a special Access dat
 {% step %}
 #### Step 1: Download the exchange database
 
-from the GeoDin website. The download is version-specific — ensure you use the version matching your GeoDin installation.
+from the GeoDin website. The download is version-specific - ensure you use the version matching your GeoDin installation.
 {% endstep %}
 
 {% step %}

@@ -4,11 +4,11 @@ This object type supports standardized documentation of **geological and geotech
 
 ## Overview
 
-The object type **“Geotechnical Investigation EN ISO 22475 (2018)”** is a further development of the earlier **2007 version**. It enables comprehensive acquisition, evaluation, and graphical representation of geotechnical data using standardized input forms, dictionaries, layouts, and database structures.
+The object type **"Geotechnical Investigation EN ISO 22475 (2018)"** is a further development of the earlier **2007 version**. It enables comprehensive acquisition, evaluation, and graphical representation of geotechnical data using standardized input forms, dictionaries, layouts, and database structures.
 
 For current projects, the **2018 object type \[ENISO002]** is recommended and is provided to all GeoDin users via the GeoDin server.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption>The Geotechnical Investigation EN ISO 22475 (2018) object type open in GeoDin — the General data input form (Borehole tab) on the left, with the map preview of the borehole location below.</figcaption></figure>
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption>The Geotechnical Investigation EN ISO 22475 (2018) object type open in GeoDin - the General data input form (Borehole tab) on the left, with the map preview of the borehole location below.</figcaption></figure>
 
 ## Working with the object type
 
@@ -147,25 +147,25 @@ Field and laboratory investigation results used to assess soil suitability for c
 
 The following database tables are used by the object type:
 
-* **GEODIN\_LOC\_E2GENER** – General data
-* **GEODIN\_LOC\_E2LAYER** – Layer data
-* **GEODIN\_LOC\_E2STRATI** – Stratigraphy
-* **GEODIN\_LOC\_E2TF** – Discontinuities
-* **GEODIN\_LOC\_E2TFNAB** – Discontinuities (standard distances)
-* **GEODIN\_LOC\_E2RMZ** – Degree of decomposition
-* **GEODIN\_LOC\_E2RMLK** – Consistency
-* **GEODIN\_LOC\_E2RMV** – Degree of weathering
-* **GEODIN\_LOC\_E2RMGF** – Rock strength
-* **GEODIN\_LOC\_E2RMFQ** – Rock quality
-* **GEODIN\_LOC\_E2RMKM** – Cored section boundaries
-* **GEODIN\_LOC\_E2SAMPLE** – Sample data
-* **GEODIN\_LOC\_E2GWATER** – Groundwater data
-* **GEODIN\_LOC\_E2BESCH** – Official notifications
-* **GEODIN\_LOC\_E2WDGEN** – Well design: general data
-* **GEODIN\_LOC\_E2WDHOLE** – Well design: borehole
-* **GEODIN\_LOC\_E2WDCAS** – Well design: casing/screens
-* **GEODIN\_LOC\_E2WDFILD** – Filter/screen information
-* **GEODIN\_LOC\_E2WDBCKF** – Well design: backfill
-* **GEODIN\_LOC\_E2WDFLUI** – Well design: flushing
-* **GEODIN\_LOC\_E2WDSPCL** – Well design: special features
-* **GEODIN\_LOC\_E2DSREG** – Register of data sequences
+* **GEODIN\_LOC\_E2GENER** - General data
+* **GEODIN\_LOC\_E2LAYER** - Layer data
+* **GEODIN\_LOC\_E2STRATI** - Stratigraphy
+* **GEODIN\_LOC\_E2TF** - Discontinuities
+* **GEODIN\_LOC\_E2TFNAB** - Discontinuities (standard distances)
+* **GEODIN\_LOC\_E2RMZ** - Degree of decomposition
+* **GEODIN\_LOC\_E2RMLK** - Consistency
+* **GEODIN\_LOC\_E2RMV** - Degree of weathering
+* **GEODIN\_LOC\_E2RMGF** - Rock strength
+* **GEODIN\_LOC\_E2RMFQ** - Rock quality
+* **GEODIN\_LOC\_E2RMKM** - Cored section boundaries
+* **GEODIN\_LOC\_E2SAMPLE** - Sample data
+* **GEODIN\_LOC\_E2GWATER** - Groundwater data
+* **GEODIN\_LOC\_E2BESCH** - Official notifications
+* **GEODIN\_LOC\_E2WDGEN** - Well design: general data
+* **GEODIN\_LOC\_E2WDHOLE** - Well design: borehole
+* **GEODIN\_LOC\_E2WDCAS** - Well design: casing/screens
+* **GEODIN\_LOC\_E2WDFILD** - Filter/screen information
+* **GEODIN\_LOC\_E2WDBCKF** - Well design: backfill
+* **GEODIN\_LOC\_E2WDFLUI** - Well design: flushing
+* **GEODIN\_LOC\_E2WDSPCL** - Well design: special features
+* **GEODIN\_LOC\_E2DSREG** - Register of data sequences

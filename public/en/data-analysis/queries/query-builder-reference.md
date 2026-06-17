@@ -1,10 +1,10 @@
 ---
-description: Query Builder Reference — every node and field in the GeoDin sub-query definition, from the table list and FROM clause to display fields and website caching.
+description: Query Builder Reference - every node and field in the GeoDin sub-query definition, from the table list and FROM clause to display fields and website caching.
 ---
 
 # Query Builder Reference
 
-The Query Builder defines a GeoDin sub-query as a set of individual node definitions — table list, FROM clause, conditions, result and display fields — which GeoDin combines into a full SQL statement. This page is the reference for each node in that definition: what it configures and the syntax it accepts. Use it when you are building or editing a query and need to know what a specific node does.
+The Query Builder defines a GeoDin sub-query as a set of individual node definitions - table list, FROM clause, conditions, result and display fields - which GeoDin combines into a full SQL statement. This page is the reference for each node in that definition: what it configures and the syntax it accepts. Use it when you are building or editing a query and need to know what a specific node does.
 
 ***
 

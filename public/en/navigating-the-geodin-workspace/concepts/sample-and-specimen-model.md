@@ -8,18 +8,18 @@ The **Sample Data** section holds every sample associated with a location. Each 
 
 For the related concepts, see also:
 
-- [Borehole and Location Model](borehole-and-location-model.md) — the location these samples belong to.
-- [Layer and Stratigraphy](layer-and-stratigraphy.md) — ground descriptions at the depths these samples cover.
+- [Borehole and Location Model](borehole-and-location-model.md) - the location these samples belong to.
+- [Layer and Stratigraphy](layer-and-stratigraphy.md) - ground descriptions at the depths these samples cover.
 
 ## Sample fields
 
 Each sample has:
 
-- **Sample reference** — sample name, often just a number; user-defined and advised to be unique within a location.
+- **Sample reference** - sample name, often just a number; user-defined and advised to be unique within a location.
 - **Recovery from / to depth** and **penetration from / to depth**.
-- **Sample condition** — disturbed / undisturbed / etc., from a dictionary.
-- **Sampling method** — grab sample, auger, etc., from a dictionary.
-- **Sample type** — bag, etc., from a dictionary.
+- **Sample condition** - disturbed / undisturbed / etc., from a dictionary.
+- **Sampling method** - grab sample, auger, etc., from a dictionary.
+- **Sample type** - bag, etc., from a dictionary.
 - **Date, comments, blow count.**
 
 {% hint style="info" %}
@@ -47,8 +47,8 @@ Onsite assigns each soil sample a unique ID with a fixed structure:
 
 | Component | Length | Notes |
 |---|---|---|
-| Prefix letter(s) | 1–3 chars | Configurable |
+| Prefix letter(s) | 1-3 chars | Configurable |
 | Timestamp | 6 chars | Encodes the moment of sampling |
 | Random | 4 chars (default) | Shrinks if prefix grows so that *prefix + random* always totals 5 chars |
 
-The timestamp portion changes every second, so collisions only happen if more than ~20–100 samples are generated in the exact same second.
+The timestamp portion changes every second, so collisions only happen if more than ~20-100 samples are generated in the exact same second.

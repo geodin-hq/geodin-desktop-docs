@@ -1,7 +1,7 @@
 
 # Creating Objects
 
-An object is anything in a GeoDin project that has at least a name and is related to that project — a borehole, monitoring well, cone testing hole, climate measuring station, surface water collection point, and so on. This page covers how objects appear in the Object Manager, how to create them (one at a time, from data sequences, or by import), and the related export, deletion, evaluation and map operations.
+An object is anything in a GeoDin project that has at least a name and is related to that project - a borehole, monitoring well, cone testing hole, climate measuring station, surface water collection point, and so on. This page covers how objects appear in the Object Manager, how to create them (one at a time, from data sequences, or by import), and the related export, deletion, evaluation and map operations.
 
 ## Objects
 

@@ -195,9 +195,9 @@ A comparison list (also called a limit list) contains a set of parameters with r
 
 ## Reference: Comparison parameter properties
 
-- **Field name** — The parameter to compare against. Once created, the parameter selection is locked; only the value and unit can be edited afterward. Delete and re-add to change the parameter.
-- **Value** — The exceedance threshold. When a measured value exceeds this value, the exceedance is flagged in the report.
-- **Unit** — The unit of measurement for the comparison value. If the measured value uses a different unit, GeoDin performs automatic unit conversion during comparison.
+- **Field name** - The parameter to compare against. Once created, the parameter selection is locked; only the value and unit can be edited afterward. Delete and re-add to change the parameter.
+- **Value** - The exceedance threshold. When a measured value exceeds this value, the exceedance is flagged in the report.
+- **Unit** - The unit of measurement for the comparison value. If the measured value uses a different unit, GeoDin performs automatic unit conversion during comparison.
 
 ## Reference: Code transformation for XML/dictionary export
 
@@ -205,16 +205,16 @@ When exporting dictionary-coded data to XML, field codes can be transformed to t
 
 **With code transformation:** Define a source table and macro, then map source codes to target codes. For example, SEP3 drilling-method codes (HB, HDB, HSB, HSPB, BS) can all be mapped to the XML export code "HK". Two mapping methods are available:
 
-- **Simple transformation list** — Enter source/target code pairs directly in an attached list.
-- **Transformation table from a database** — Read the mapping from an Access database table (see Code list database below).
+- **Simple transformation list** - Enter source/target code pairs directly in an attached list.
+- **Transformation table from a database** - Read the mapping from an Access database table (see Code list database below).
 
 **Code list database properties:**
 
-- **Database** — An Access database containing code transformation definitions.
-- **Table** — The table within the database holding the mappings.
-- **Field name (source code)** — Column containing the dictionary source codes to transform.
-- **Field name (target code)** — Column containing the target codes.
-- **Field name (list name)** — Column identifying which code list the mapping belongs to, used as a node restriction during export configuration.
+- **Database** - An Access database containing code transformation definitions.
+- **Table** - The table within the database holding the mappings.
+- **Field name (source code)** - Column containing the dictionary source codes to transform.
+- **Field name (target code)** - Column containing the target codes.
+- **Field name (list name)** - Column identifying which code list the mapping belongs to, used as a node restriction during export configuration.
 
 ## Reference: Linked additional information
 
@@ -226,10 +226,10 @@ Example: Base URL `https://www.example.com/` + parameter block `DictionaryItemIn
 
 This transformation searches for a common superior node in a hierarchical (tree-structured) dictionary.
 
-- **Macro** — A text macro whose return value provides the input codes (e.g. `{$STRAT@C$|$STRATO@C[,]$$STRATU@C$}`).
-- **Separators** — The character used to split the macro result into individual components (e.g. `,` for comma-separated values, or `-` for SEP3 code transitions).
-- **Dictionary** — Select a tree-structured dictionary whose hierarchy is used to find superior terms.
-- **Code list** — An optional code list to translate individual components before the hierarchy lookup.
+- **Macro** - A text macro whose return value provides the input codes (e.g. `{$STRAT@C$|$STRATO@C[,]$$STRATU@C$}`).
+- **Separators** - The character used to split the macro result into individual components (e.g. `,` for comma-separated values, or `-` for SEP3 code transitions).
+- **Dictionary** - Select a tree-structured dictionary whose hierarchy is used to find superior terms.
+- **Code list** - An optional code list to translate individual components before the hierarchy lookup.
 
 ## Reference: Compare elements
 

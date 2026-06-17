@@ -1,10 +1,10 @@
 ---
-description: Styling and property reference for layout graphic elements — text, fonts, lines, fills, symbols, images, legends, and labeling.
+description: Styling and property reference for layout graphic elements - text, fonts, lines, fills, symbols, images, legends, and labeling.
 ---
 
 # Element Properties Reference
 
-Every graphic element in a layout shares a common set of properties: an element name, a drawing layer assignment, and a z-order position. Beyond that, different element types expose their own styling branches — text, fonts, lines, fills, symbols, images, legends, and labeling. This page is the canonical reference for all of those shared and per-type properties.
+Every graphic element in a layout shares a common set of properties: an element name, a drawing layer assignment, and a z-order position. Beyond that, different element types expose their own styling branches - text, fonts, lines, fills, symbols, images, legends, and labeling. This page is the canonical reference for all of those shared and per-type properties.
 
 Part of the [Creating Custom Layouts](../creating-custom-layouts.md) family.
 
@@ -16,7 +16,7 @@ Text elements display static or variable content in a layout. Key behaviors:
 
 | Property | Description |
 |---|---|
-| **Simple text vs Formatted text** | Simple text uses one font throughout. Formatted text allows mixed fonts, subscript/superscript, and per-section styling within a single element — useful when variable-length data (e.g. `$LONGNAME$`) must share a text element with a fixed label. Use formatted text sparingly as it requires more processing time. |
+| **Simple text vs Formatted text** | Simple text uses one font throughout. Formatted text allows mixed fonts, subscript/superscript, and per-section styling within a single element - useful when variable-length data (e.g. `$LONGNAME$`) must share a text element with a fixed label. Use formatted text sparingly as it requires more processing time. |
 | **Word wrap** | When activated, the text element can be scaled horizontally and line breaks are inserted automatically. For rotated text (angle other than 0), the maximum width must be entered manually. |
 | **Line break** | Use the Return key or insert `\` (backslash) in the text content. |
 | **Make available as quick setting** | Releases the text element for editing via layout interfaces. By default, text elements are not available in the layout interface. |
@@ -32,7 +32,7 @@ Font properties apply to text elements, axis labels, legend labels, and other te
 |---|---|
 | **Alignment** | Six anchor points are available. The status bar always shows position relative to the chosen alignment point. Use center or right alignment for variable-length text and centered headers. |
 | **Angle** | Rotates the text element up to 360 degrees. |
-| **Background** | _Transparent_ — elements behind the text show through. _Opaque_ — text is cropped against a background color (white by default; customizable). |
+| **Background** | _Transparent_ - elements behind the text show through. _Opaque_ - text is cropped against a background color (white by default; customizable). |
 | **Font for formatted text** | When using formatted text, font selection is done inline while editing. In the Font properties panel, only vertical alignment and background type are available. |
 
 {% hint style="info" %}
@@ -47,7 +47,7 @@ The following line/outline properties apply uniformly to grid lines, tag lines, 
 |---|---|
 | **Color** | Select from the dropdown, or choose "Individually" (first entry) to open the full color dialog. |
 | **Line type** | Select a line style from the dropdown. |
-| **Line thickness** | Can be set in mm or pixels. Prefer mm — pixel thickness depends on screen resolution and does not match print output. Use pixels only for screen-only graphics. |
+| **Line thickness** | Can be set in mm or pixels. Prefer mm - pixel thickness depends on screen resolution and does not match print output. Use pixels only for screen-only graphics. |
 
 ## Reference: Fill pattern and transparency
 
@@ -67,7 +67,7 @@ Controls how area fills are determined from data fields.
 | Mode | Description |
 |---|---|
 | **Color and fill pattern together** | A single data field determines both the background color and the fill pattern. Hover over the dropdown to see the selected field names. |
-| **Color and fill pattern separate** | Background color and fill pattern come from different data fields — e.g., stratigraphy defines the color while petrography defines the fill pattern drawn on top. |
+| **Color and fill pattern separate** | Background color and fill pattern come from different data fields - e.g., stratigraphy defines the color while petrography defines the fill pattern drawn on top. |
 
 ## Reference: Symbol fill, color, and outline
 
@@ -105,8 +105,8 @@ The Image graphic element supports importing the following file formats:
 
 | Axis type | Key settings |
 |---|---|
-| **Parameter axis** | Labeling option, decimal places. "Remove superfluous decimal places" strips trailing zeros — particularly useful for logarithmic axes (displays 0.001, 0.01, 0.1, 1, 10, 100, 1000). When per-series decimal places are enabled, the global setting is unavailable. |
-| **Depth axis** | Optional labeling with absolute height and selectable decimal places. Incline of a data sequence can be factored in — depth values are converted using the selected angle of incline (configure the incline data field in the Scale branch). |
+| **Parameter axis** | Labeling option, decimal places. "Remove superfluous decimal places" strips trailing zeros - particularly useful for logarithmic axes (displays 0.001, 0.01, 0.1, 1, 10, 100, 1000). When per-series decimal places are enabled, the global setting is unavailable. |
+| **Depth axis** | Optional labeling with absolute height and selectable decimal places. Incline of a data sequence can be factored in - depth values are converted using the selected angle of incline (configure the incline data field in the Scale branch). |
 
 ## Reference: Data sequence connections
 

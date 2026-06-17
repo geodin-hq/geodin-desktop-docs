@@ -1,6 +1,6 @@
 # Geotechnical Analyses
 
-GeoDin provides several geotechnical and hydrogeochemical analysis methods, each with its own diagram type or settings. This page is the reference for the available methods — the **Piper diagram** and **Stiff diagram** for hydrogeochemical analyses, the **Particle sizes** settings for grain size analysis, the **Evaluate SEP3 layer colors** transformation, and the **Engineer** method for registering and running the grain size analysis tools.
+GeoDin provides several geotechnical and hydrogeochemical analysis methods, each with its own diagram type or settings. This page is the reference for the available methods - the **Piper diagram** and **Stiff diagram** for hydrogeochemical analyses, the **Particle sizes** settings for grain size analysis, the **Evaluate SEP3 layer colors** transformation, and the **Engineer** method for registering and running the grain size analysis tools.
 
 ## Reference: Piper diagram
 

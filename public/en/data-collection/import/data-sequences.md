@@ -4,15 +4,15 @@ description: Importing CPT and other data sequences, including batch import and 
 
 # Data Sequences
 
-Data sequences (German: *Sondierungen*) cover CPT (cone penetration test) data and any other depth-oriented measurement series — SPT, geophysical logs, chemical profiles, etc. This page focuses on importing data sequences from external ASCII files, including free-format CPT import, the reduce factor, and batch import.
+Data sequences (German: *Sondierungen*) cover CPT (cone penetration test) data and any other depth-oriented measurement series - SPT, geophysical logs, chemical profiles, etc. This page focuses on importing data sequences from external ASCII files, including free-format CPT import, the reduce factor, and batch import.
 
 For the data entry grid and manual editing of data sequences, see [Data sequences (editor)](../../navigating-the-geodin-workspace/objects/general-data.md#data-sequences).
 
 ## Supported formats
 
-- **Free-format ASCII / CSV** — handled by the generic Data Sequences importer described below. Use this for any depth-indexed text file, including CSV-format CPT data.
-- **GEF** — supported natively for CPT data. GEF is the standard format used in the Netherlands and the UK.
-- **Dedicated ASCII CPT** — a legacy filter built for historic company use. Note that **CSV CPT imports do not go through this filter** — use the generic Data Sequences import for CSV.
+- **Free-format ASCII / CSV** - handled by the generic Data Sequences importer described below. Use this for any depth-indexed text file, including CSV-format CPT data.
+- **GEF** - supported natively for CPT data. GEF is the standard format used in the Netherlands and the UK.
+- **Dedicated ASCII CPT** - a legacy filter built for historic company use. Note that **CSV CPT imports do not go through this filter** - use the generic Data Sequences import for CSV.
 
 ## Free-format CPT import
 
@@ -41,11 +41,11 @@ Select the source file and choose **User Format** (free format).
 #### Step 4
 
 Configure the columns:
-   - **Depth column** — typically column 1
-   - **Data start column** — the first column containing measurement values (typically column 2)
-   - **Decimal places** — number of decimal places in the source file
-   - **Delimiter** — separator character (space, comma, semicolon, etc.)
-   - **Units** — unit of the depth values (e.g. m)
+   - **Depth column** - typically column 1
+   - **Data start column** - the first column containing measurement values (typically column 2)
+   - **Decimal places** - number of decimal places in the source file
+   - **Delimiter** - separator character (space, comma, semicolon, etc.)
+   - **Units** - unit of the depth values (e.g. m)
 {% endstep %}
 
 {% step %}
@@ -77,7 +77,7 @@ If you leave the reduce factor at 0, GeoDin calculates an automatic factor so th
 {% endhint %}
 
 {% hint style="warning" %}
-**Column layout constraint** — data columns must sit to the right of the depth column in the source file. The importer reads every column to the right of depth and there is no option to skip or exclude specific columns at import time. To remove unwanted series, delete them after import.
+**Column layout constraint** - data columns must sit to the right of the depth column in the source file. The importer reads every column to the right of depth and there is no option to skip or exclude specific columns at import time. To remove unwanted series, delete them after import.
 {% endhint %}
 
 ## Import filters (saving and reusing format settings)
@@ -105,7 +105,7 @@ GeoDin can match import files to objects automatically by filename, allowing you
 {% step %}
 #### Step 1
 
-In the GeoDin Object Manager, select the **Objects** branch (or a query/group) — not an individual object.
+In the GeoDin Object Manager, select the **Objects** branch (or a query/group) - not an individual object.
 {% endstep %}
 
 {% step %}
@@ -149,8 +149,8 @@ Filenames must match the object short name exactly (case-sensitive on some syste
 
 ***
 
-## Beyond CPT — custom filters for any depth-indexed data
+## Beyond CPT - custom filters for any depth-indexed data
 
 The Data Sequences importer is not limited to CPT. Build a custom import filter for any depth-indexed series, for example **measurement-while-drilling (MWD)** logs that record penetration speed, tool pressure, injection pressure, torque, and RPM against depth. The filter mechanism is the same as for CPT: define depth column, data start column, delimiters, units, and series names; save it as a named filter for reuse.
 
-Imported data sequence series can also be **re-exported to CSV** — useful when you need to pull a series out of GeoDin, edit it externally, and re-import.
+Imported data sequence series can also be **re-exported to CSV** - useful when you need to pull a series out of GeoDin, edit it externally, and re-import.

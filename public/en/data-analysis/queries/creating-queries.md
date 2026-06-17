@@ -82,15 +82,15 @@ Messpunkte
 This can be controlled via the advanced settings and the user management.
 
 {% hint style="warning" %}
-**Default visibility changed:** In earlier versions of GeoDin, newly created queries were private by default (visible only to the user who created them). This behaviour has been reversed — queries and maps created now are **visible to all users** of the same database by default. If a query should be restricted to the creating user, open the query's **Advanced** settings tab and configure the visibility accordingly. The same default applies to maps.
+**Default visibility changed:** In earlier versions of GeoDin, newly created queries were private by default (visible only to the user who created them). This behaviour has been reversed - queries and maps created now are **visible to all users** of the same database by default. If a query should be restricted to the creating user, open the query's **Advanced** settings tab and configure the visibility accordingly. The same default applies to maps.
 {% endhint %}
 
 ## AND vs. OR condition logic
 
 When building conditions in the query wizard, the placement of a condition determines whether it is combined with AND or OR logic:
 
-* **OR logic:** drag a field onto the top-level **Conditions** node. Each condition dropped at this level creates an independent OR branch — the query returns objects that match any one of the conditions.
-* **AND logic:** drag a field onto an **existing condition entry** (nested under the "If" node). This adds the condition as an additional AND requirement within that branch — the query returns objects that match all nested conditions simultaneously.
+* **OR logic:** drag a field onto the top-level **Conditions** node. Each condition dropped at this level creates an independent OR branch - the query returns objects that match any one of the conditions.
+* **AND logic:** drag a field onto an **existing condition entry** (nested under the "If" node). This adds the condition as an additional AND requirement within that branch - the query returns objects that match all nested conditions simultaneously.
 
 **Example:** To find all objects deeper than 9 m AND on map sheet JD1234, drop the depth condition on the Conditions node first, then drop the map sheet condition onto the depth condition entry. Both must be satisfied.
 
@@ -608,6 +608,6 @@ select $Schema$GeoDin\_LOC\_LOCE2LAYER.\* from $Schema$GeoDin\_LOC\_LOCE2LAYER
 
 Mapping:
 
-Database — table structure
+Database - table structure
 
 GeoDin\_LOC\_LOC\_E2LAYER.SECSTYPE E2LAYER.SECSTYPE

@@ -4,7 +4,7 @@ description: Exporting GeoDin data tables and data sequences as CSV
 
 # CSV Export
 
-GeoDin can export any tabular data view — general data, samples, measurement data tables, data sequence series — to CSV. CSV is the right choice when the downstream tool prefers plain text or expects a delimited format.
+GeoDin can export any tabular data view - general data, samples, measurement data tables, data sequence series - to CSV. CSV is the right choice when the downstream tool prefers plain text or expects a delimited format.
 
 For Excel exports of the same tables (with column titles preserved as cell formatting), see [Excel Export](excel.md). For preparing import templates by exporting and re-importing, see [CSV and Excel Import](../import/csv-and-excel-import.md).
 

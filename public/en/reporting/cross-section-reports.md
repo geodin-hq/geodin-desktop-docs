@@ -1,5 +1,5 @@
 ---
-description: How to create geological cross-sections in GeoDin — selecting boreholes, defining the line of section, and configuring display scenarios
+description: How to create geological cross-sections in GeoDin - selecting boreholes, defining the line of section, and configuring display scenarios
 ---
 
 # Cross-Section Reports
@@ -29,12 +29,12 @@ The cross-section workflow runs under the **All Objects** branch via the **Cross
 {% step %}
 #### Set scales and positions
 
-**Set scales and positions** — choose horizontal and vertical scales; GeoDin auto-selects paper size (A0/A1/A2/A3/A4) to fit, or override via Page Layout
+**Set scales and positions** - choose horizontal and vertical scales; GeoDin auto-selects paper size (A0/A1/A2/A3/A4) to fit, or override via Page Layout
 {% endstep %}
 {% step %}
 #### Configure cross-section scenarios
 
-**Configure cross-section scenarios** — add graphic elements: borehole log, borehole name, depth scale (left/right), samples, data sequence, measurement element, horizontal scale, distance ruler, coordinates, waypoints
+**Configure cross-section scenarios** - add graphic elements: borehole log, borehole name, depth scale (left/right), samples, data sequence, measurement element, horizontal scale, distance ruler, coordinates, waypoints
 {% endstep %}
 {% endstepper %}
 
@@ -44,14 +44,14 @@ The workflow supports both automatic perpendicular projection AND manual per-bor
 
 Cross-sections can be saved in two formats:
 
-- **GLO** — template only (no data). Reusable for different borehole sets.
-- **GGF** — with connected data. Can be reopened later with data intact.
+- **GLO** - template only (no data). Reusable for different borehole sets.
+- **GGF** - with connected data. Can be reopened later with data intact.
 
 To store a cross-section in the project: navigate to the project's **Documents** area, create a new folder, add a new document, select the GGF file, and choose to either save in the database or link to an external file.
 
 ## Scale configuration
 
-Depth scale divisions are configurable (e.g., 1 m intervals with 5 m main divisions). You can set different vertical scales for ground elevation and borehole profiles — helpful when elevation differences are large relative to borehole depth.
+Depth scale divisions are configurable (e.g., 1 m intervals with 5 m main divisions). You can set different vertical scales for ground elevation and borehole profiles - helpful when elevation differences are large relative to borehole depth.
 
 To auto-print scales in text elements, use the macros `$%SectionHorizontalScale$` and `$%SectionVerticalScale$` in variable text elements.
 
@@ -65,20 +65,20 @@ For borehole log configuration details, see [Borehole Log Reports](borehole-log-
 
 Three methods to start:
 
-1. **From a query or group** — double-click the Cross-section method icon; the graphic window opens and all objects are loaded into the site plan
-2. **From the menu** — `Extras > Cross-Section` in the graphic window; objects must be added manually
-3. **From properties** — navigate to the "Cross-section" branch in the graphic properties and click Start
+1. **From a query or group** - double-click the Cross-section method icon; the graphic window opens and all objects are loaded into the site plan
+2. **From the menu** - `Extras > Cross-Section` in the graphic window; objects must be added manually
+3. **From properties** - navigate to the "Cross-section" branch in the graphic properties and click Start
 
 ### Working with objects
 
-Objects can be added via drag-and-drop from the object manager — single objects, queries, or groups. Objects from any database or project can be included (they don't need to be in the same project). The site plan shows loaded objects with a sign and label; coordinate transformation between meridian zones is available for the Gauss-Kruger coordinate system.
+Objects can be added via drag-and-drop from the object manager - single objects, queries, or groups. Objects from any database or project can be included (they don't need to be in the same project). The site plan shows loaded objects with a sign and label; coordinate transformation between meridian zones is available for the Gauss-Kruger coordinate system.
 
 ### Defining the line of section
 
 Two drawing tools are available:
 
-- **Line tool** — defines the line of section with any number of nodal points (coordinates are editable)
-- **Projection tool** — projects objects perpendicular to the line of section (shortest distance). Objects used as nodal points cannot be projected.
+- **Line tool** - defines the line of section with any number of nodal points (coordinates are editable)
+- **Projection tool** - projects objects perpendicular to the line of section (shortest distance). Objects used as nodal points cannot be projected.
 
 The line can be saved and loaded as a `.LIN` file (ASCII format with nodal point coordinates), enabling reuse across cross-sections or import from other programs.
 
@@ -108,10 +108,10 @@ Each scene has configurable width, height (for measurement graphics), and relati
 
 Two storage modes:
 
-- **Save object data in graphic** — borehole data is embedded in the GGF file. Changes to the database are NOT reflected. The cross-section can be opened without a database connection.
-- **Save object link in graphic** — only links to the database are stored. Changes to the database ARE reflected when reopening. Requires database access.
+- **Save object data in graphic** - borehole data is embedded in the GGF file. Changes to the database are NOT reflected. The cross-section can be opened without a database connection.
+- **Save object link in graphic** - only links to the database are stored. Changes to the database ARE reflected when reopening. Requires database access.
 
-To edit individual graphic elements, use **Break up cross-section** to unlock the elements into standard layers. This is irreversible — the link to the cross-section assistant is lost.
+To edit individual graphic elements, use **Break up cross-section** to unlock the elements into standard layers. This is irreversible - the link to the cross-section assistant is lost.
 
 ### Axis range configuration
 

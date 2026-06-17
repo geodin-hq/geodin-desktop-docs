@@ -1,6 +1,6 @@
 # Digitizing Objects
 
-GeoDin Maps lets you select, search, and display GeoDin objects on the map, tune how each layer behaves, and draw new point, line, and area objects directly into your database. This page is the reference for the map window's object tools — layer properties, the detail and search panels, mini graphics, and the four-step object digitisation flow.
+GeoDin Maps lets you select, search, and display GeoDin objects on the map, tune how each layer behaves, and draw new point, line, and area objects directly into your database. This page is the reference for the map window's object tools - layer properties, the detail and search panels, mini graphics, and the four-step object digitisation flow.
 
 ## Reference: Properties
 

@@ -20,8 +20,8 @@ It is possible to select different vertical scales for the ground elevation and 
 
 The scales used in the cross-section can be written automatically into existing text elements. If a layout contains text elements with the content:
 
-* `$%SectionHorizontalScale$` — Horizontal scale of the cross-section
-* `$%SectionVerticalScale$` — Vertical scale of the cross-section
+* `$%SectionHorizontalScale$` - Horizontal scale of the cross-section
+* `$%SectionVerticalScale$` - Vertical scale of the cross-section
 
 the text is replaced with the corresponding scale value. This way, any scale specifications in prepared layouts are filled automatically and do not need to be changed manually.
 
@@ -39,9 +39,9 @@ For the presentation of values, the options **Logarithmic** and **Mirror axis** 
 
 **Main divisions**
 
-The selection of the main divisions can be done by entering the division unit or by entering a number of main divisions. If the view area is set to **Automatic**, selecting **Number of main divisions** is often more useful than setting a division unit. Regardless of the overall view area (for example 0–5 or 0–50,000), a sensibly displayable number of main divisions is created.
+The selection of the main divisions can be done by entering the division unit or by entering a number of main divisions. If the view area is set to **Automatic**, selecting **Number of main divisions** is often more useful than setting a division unit. Regardless of the overall view area (for example 0-5 or 0-50,000), a sensibly displayable number of main divisions is created.
 
-The number of **Help ticks** and the number of **decimal places** can also be selected. The option **Cut surplus decimals** cuts surplus zeros in the labelling — especially useful for logarithmic axes, to produce labelling like: 0.001 — 0.01 — 0.1 — 1 — 10 — 100 — 1,000.
+The number of **Help ticks** and the number of **decimal places** can also be selected. The option **Cut surplus decimals** cuts surplus zeros in the labelling - especially useful for logarithmic axes, to produce labelling like: 0.001 - 0.01 - 0.1 - 1 - 10 - 100 - 1,000.
 
 ## Reference: Presentation options
 
@@ -57,17 +57,17 @@ The **Labeling** layout interface offers input options for text elements and is 
 
 **Graphic elements of a cross-section**
 
-The graphic elements of the profile cross-section are stored in special drawing layers. Editing these graphic elements is possible only by changing the properties in the cross-section — they cannot be selected with the mouse. To manipulate the elements individually, the cross-section elements must be written into standard graphic layers using the **Break up cross-section** function. Each object is written into a special layer; these layers are shown in the layer list with a cross-section symbol, cannot be edited, but can be toggled visible or invisible.
+The graphic elements of the profile cross-section are stored in special drawing layers. Editing these graphic elements is possible only by changing the properties in the cross-section - they cannot be selected with the mouse. To manipulate the elements individually, the cross-section elements must be written into standard graphic layers using the **Break up cross-section** function. Each object is written into a special layer; these layers are shown in the layer list with a cross-section symbol, cannot be edited, but can be toggled visible or invisible.
 
-All settings made in the cross-section — defining the line of section, changing the scale, or changing the display properties of a scenario — are visible immediately. Display property changes are automatically applied to all applicable objects.
+All settings made in the cross-section - defining the line of section, changing the scale, or changing the display properties of a scenario - are visible immediately. Display property changes are automatically applied to all applicable objects.
 
 **Starting a cross-section**
 
 A cross-section can be started by different methods:
 
-1. From a query or group of objects: double-click the method icon ![Cross-section](../../.gitbook/assets/icons/cross-section.png) **Cross-section** — the graphics window opens, the cross-section starts, and all objects of the query are loaded into the site plan.
-2. From the menu **Extras** > **Cross-Section** in the graphics window — starts the cross-section without objects added automatically. Objects can be added manually by drag and drop into the **Cross-section Objects** window.
-3. By navigating to the **Cross-section** branch in the properties of the current graphic — select the desired cross-section and click **Start** to make the settings branches available.
+1. From a query or group of objects: double-click the method icon ![Cross-section](../../.gitbook/assets/icons/cross-section.png) **Cross-section** - the graphics window opens, the cross-section starts, and all objects of the query are loaded into the site plan.
+2. From the menu **Extras** > **Cross-Section** in the graphics window - starts the cross-section without objects added automatically. Objects can be added manually by drag and drop into the **Cross-section Objects** window.
+3. By navigating to the **Cross-section** branch in the properties of the current graphic - select the desired cross-section and click **Start** to make the settings branches available.
 
 **Start and Close**
 
@@ -104,7 +104,7 @@ With the **Visible** and **Invisible** buttons, the drawing layers of the curren
 
 The **Horizontal scale** scenario creates a horizontal scale bar in a cross-section.
 
-By defining the **Minimum width** you can set the horizontal extent for the scale bar. Depending on the coordinate range for the cross-section, a scale bar with rounded divisions is created — the minimum width setting may therefore have a limited effect.
+By defining the **Minimum width** you can set the horizontal extent for the scale bar. Depending on the coordinate range for the cross-section, a scale bar with rounded divisions is created - the minimum width setting may therefore have a limited effect.
 
 The positioning options allow you to place the horizontal scale bar according to your requirements.
 
@@ -113,5 +113,5 @@ The positioning options allow you to place the horizontal scale bar according to
 Layout lists (`.GLL`) and layout collections (`.GLC`) allow multiple layouts to be grouped for report sequences and quick access. For file formats, editing, and the GLL→GLC conversion, see [Layout Files and Lists](../layouts/layout-files-and-lists.md).
 
 {% hint style="info" %}
-Only `.GLL` files can be declared as the standard layout list. `.GLL` files can no longer be created — use `.GLC` for creating new layout lists.
+Only `.GLL` files can be declared as the standard layout list. `.GLL` files can no longer be created - use `.GLC` for creating new layout lists.
 {% endhint %}

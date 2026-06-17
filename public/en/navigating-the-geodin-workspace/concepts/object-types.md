@@ -1,6 +1,6 @@
 ---
 description: >-
-  GeoDin object types — the data-entry schemas (G1, AGS4, German Step 3, ISO,
+  GeoDin object types - the data-entry schemas (G1, AGS4, German Step 3, ISO,
   and others) behind boreholes, locations, and custom tables.
 ---
 

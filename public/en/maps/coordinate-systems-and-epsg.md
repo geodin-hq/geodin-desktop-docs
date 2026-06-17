@@ -14,7 +14,7 @@ In GeoDin Onsite, the local coordinate system is configured via EPSG code in the
 
 ## Transforming coordinates in-mask
 
-GeoDin allows a coordinate transformation to be run directly in the general data editor — without switching to the Maps module or an external GIS tool.
+GeoDin allows a coordinate transformation to be run directly in the general data editor - without switching to the Maps module or an external GIS tool.
 
 {% stepper %}
 {% step %}
@@ -49,7 +49,7 @@ Click **OK** to write the transformed coordinates back to the object's general d
 {% endstepper %}
 
 {% hint style="warning" %}
-GeoDin determines the transformation algorithm internally. No transformation method selection dialog is shown, and no accuracy estimate or warning is displayed. Users who require a specific transformation method — for example NTv2 grid-based transformations between Gauss-Krüger (DHDN) and UTM (ETRS89) — should verify results independently using QGIS or a surveying tool that exposes the transformation method and tolerance.
+GeoDin determines the transformation algorithm internally. No transformation method selection dialog is shown, and no accuracy estimate or warning is displayed. Users who require a specific transformation method - for example NTv2 grid-based transformations between Gauss-Krüger (DHDN) and UTM (ETRS89) - should verify results independently using QGIS or a surveying tool that exposes the transformation method and tolerance.
 {% endhint %}
 
 {% hint style="info" %}

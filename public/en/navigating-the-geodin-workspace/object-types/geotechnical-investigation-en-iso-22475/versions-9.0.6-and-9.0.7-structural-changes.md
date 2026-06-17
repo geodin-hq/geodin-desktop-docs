@@ -52,9 +52,9 @@ To install object type version **9.0.7**, clean up the GeoDin configuration, and
 To check the GeoDin version currently in use:
 
 * Click the **Info (i)** button in the top‑right corner of the GeoDin user interface
-* Select **“Info to GeoDin…”**
+* Select **"Info to GeoDin..."**
 
-<figure><img src="../../../.gitbook/assets/image (7).png" alt=""><figcaption>The <strong>Info (i)</strong> menu in the top-right corner of GeoDin, with <strong>Info to GeoDin…</strong> selected; the About dialog reports the running GeoDin version (here <code>GeoDin 15.2.29_H</code>).</figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (7).png" alt=""><figcaption>The <strong>Info (i)</strong> menu in the top-right corner of GeoDin, with <strong>Info to GeoDin...</strong> selected; the About dialog reports the running GeoDin version (here <code>GeoDin 15.2.29_H</code>).</figcaption></figure>
 
 ### Determining the Object Type Version in Your System
 
@@ -71,11 +71,11 @@ The installed object type version can be checked as follows:
 
 The object type version registered in a database is displayed **during a database update** in the dialog:
 
-**“Database structure: \[DATABASE NAME]”**
+**"Database structure: \[DATABASE NAME]"**
 
 A backup of the relevant database is strongly recommended before updating.
 
-<figure><img src="../../../.gitbook/assets/image (10).png" alt=""><figcaption>The <strong>Database structure: ENISO_DEMO_Saarbruecken</strong> update dialog — the <strong>Database version</strong> and <strong>System settings version</strong> columns show the Geotechnical investigation EN ISO 22475 (2018) row updating from 9.0.5 to 9.0.7.</figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (10).png" alt=""><figcaption>The <strong>Database structure: ENISO_DEMO_Saarbruecken</strong> update dialog - the <strong>Database version</strong> and <strong>System settings version</strong> columns show the Geotechnical investigation EN ISO 22475 (2018) row updating from 9.0.5 to 9.0.7.</figcaption></figure>
 
 ### Backup Recommendation Before Updating
 

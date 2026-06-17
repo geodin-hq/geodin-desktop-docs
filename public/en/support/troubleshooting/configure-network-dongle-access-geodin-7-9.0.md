@@ -1,4 +1,4 @@
-# Configure Network Dongle Access (GeoDin 7–9.0)
+# Configure Network Dongle Access (GeoDin 7-9.0)
 
 To help GeoDin find a network dongle in your network more quickly, you can use the **NETHASP.INI** configuration file.
 

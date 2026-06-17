@@ -1,6 +1,6 @@
 # Object Type Formulas
 
-Object types can carry their own formulas — on master-data fields and as spatial (`$%EGIS`) operations — alongside the data-type formula system they share with measurement values. This page is the reference for those object-type-level mechanics: how a general formula is defined (name, target, condition and options) with its full syntax, how data types are managed and transformed on the object type, the formula list-management controls, the object-type and EGIS spatial formulas, and the system and object-frame queries configured on an object type. Object-type installation, editing, and management are covered in [Object Types Management](../../configuration/object-types-management.md).
+Object types can carry their own formulas - on master-data fields and as spatial (`$%EGIS`) operations - alongside the data-type formula system they share with measurement values. This page is the reference for those object-type-level mechanics: how a general formula is defined (name, target, condition and options) with its full syntax, how data types are managed and transformed on the object type, the formula list-management controls, the object-type and EGIS spatial formulas, and the system and object-frame queries configured on an object type. Object-type installation, editing, and management are covered in [Object Types Management](../../configuration/object-types-management.md).
 
 ***
 

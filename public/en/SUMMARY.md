@@ -35,8 +35,8 @@
 * [AGS 4](navigating-the-geodin-workspace/object-types/ags-4.md)
 * [(G1) Location](navigating-the-geodin-workspace/object-types/g1-location.md)
 * [Geotechnical Investigation EN ISO 22475](navigating-the-geodin-workspace/object-types/geotechnical-investigation-en-iso-22475.md)
-  * [Versions 9.0.6 and 9.0.7 — General Adaptations](navigating-the-geodin-workspace/object-types/geotechnical-investigation-en-iso-22475/versions-9.0.6-and-9.0.7-general-adaptations.md)
-  * [Versions 9.0.6 and 9.0.7 — Structural Changes](navigating-the-geodin-workspace/object-types/geotechnical-investigation-en-iso-22475/versions-9.0.6-and-9.0.7-structural-changes.md)
+  * [Versions 9.0.6 and 9.0.7 - General Adaptations](navigating-the-geodin-workspace/object-types/geotechnical-investigation-en-iso-22475/versions-9.0.6-and-9.0.7-general-adaptations.md)
+  * [Versions 9.0.6 and 9.0.7 - Structural Changes](navigating-the-geodin-workspace/object-types/geotechnical-investigation-en-iso-22475/versions-9.0.6-and-9.0.7-structural-changes.md)
 
 ## Importing Data
 
@@ -175,5 +175,5 @@
 * [Get Support](support/get-support.md)
 * [Changelog](support/changelog.md)
 * [Troubleshooting](support/troubleshooting.md)
-  * [Configure Network Dongle Access (GeoDin 7–9.0)](support/troubleshooting/configure-network-dongle-access-geodin-7-9.0.md)
+  * [Configure Network Dongle Access (GeoDin 7-9.0)](support/troubleshooting/configure-network-dongle-access-geodin-7-9.0.md)
   * [Update Incomplete Message (until GeoDin 10.1)](support/troubleshooting/update-incomplete-message-until-geodin-10.1.md)

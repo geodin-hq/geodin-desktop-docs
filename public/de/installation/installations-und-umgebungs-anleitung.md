@@ -40,7 +40,7 @@ Wenn Sie eine Empfehlung für Ihre Anforderungen benötigen, wenden Sie sich bit
 
 ## 3. GeoDin Datenbanken
 
-GeoDin nutzt für die Verbindung zu Datenbanken **FireDAC** (Fire Data Access Components). Dies ist ein universelles Framework, das es ermöglicht, auf eine Vielzahl von Datenbanken zuzugreifen – lokal, remote oder in der Cloud.
+GeoDin nutzt für die Verbindung zu Datenbanken **FireDAC** (Fire Data Access Components). Dies ist ein universelles Framework, das es ermöglicht, auf eine Vielzahl von Datenbanken zuzugreifen - lokal, remote oder in der Cloud.
 
 <figure><img src="../.gitbook/assets/Picture2.png" alt=""><figcaption></figcaption></figure>
 

@@ -1,6 +1,6 @@
 # Borehole Elements
 
-The **Borehole log / Borehole tab** graphic element renders a borehole log inside an object frame: fill patterns, depth labeling, layer descriptions, and optionally a scaled tabular presentation. It supports three drawing types — **Graphic Log**, **Tabular Log**, and **Log with Default** — and automatically distributes across multiple pages when the chosen height scale requires it.
+The **Borehole log / Borehole tab** graphic element renders a borehole log inside an object frame: fill patterns, depth labeling, layer descriptions, and optionally a scaled tabular presentation. It supports three drawing types - **Graphic Log**, **Tabular Log**, and **Log with Default** - and automatically distributes across multiple pages when the chosen height scale requires it.
 
 For the creation walkthrough (drawing an object frame and adding the element), see [Creating Borehole Logs](../../borehole-logs/creating-borehole-logs.md). For general element properties shared across all layout elements (element name, drawing layer, z-order), see [Element Properties Reference](element-properties.md).
 
@@ -8,10 +8,10 @@ For the creation walkthrough (drawing an object frame and adding the element), s
 
 The following elements are typically placed alongside a borehole log in the same object frame. Each is described on its own page.
 
-- **Depth Scale** — add from the toolbar; can be placed left or right of the borehole log. See [Scale Bars and Depth Scales](../../scale-bars-and-depth-scales.md).
-- **Samples** — automatically connects to the borehole and moves with it (height-synchronised; no vertical misfit).
-- **Groundwater** — shows nothing if no groundwater data exists for the object. See [Groundwater Visualizations](../groundwater-visualizations.md).
-- **Well Design** — renders casing and filling visualization alongside the borehole profile.
+- **Depth Scale** - add from the toolbar; can be placed left or right of the borehole log. See [Scale Bars and Depth Scales](../../scale-bars-and-depth-scales.md).
+- **Samples** - automatically connects to the borehole and moves with it (height-synchronised; no vertical misfit).
+- **Groundwater** - shows nothing if no groundwater data exists for the object. See [Groundwater Visualizations](../groundwater-visualizations.md).
+- **Well Design** - renders casing and filling visualization alongside the borehole profile.
 
 ***
 
@@ -19,7 +19,7 @@ The following elements are typically placed alongside a borehole log in the same
 
 Borehole elements support three drawing types: **Graphic Log**, **Tabular Log**, and **Log with Default**. Elements can be resized; a red outline indicates insufficient space for the description text.
 
-The borehole scale can be set to a fixed ratio (1:100, 1:200, etc.), a fixed depth interval (e.g., only show the first 10 m), or "Fit to Page" (dynamic scale per object). Setting an end depth can force a page break — for example, setting end depth to 10 m causes the borehole to continue on page 2. Scale, interval, page break, and fit-to-page settings interact and must be balanced together.
+The borehole scale can be set to a fixed ratio (1:100, 1:200, etc.), a fixed depth interval (e.g., only show the first 10 m), or "Fit to Page" (dynamic scale per object). Setting an end depth can force a page break - for example, setting end depth to 10 m causes the borehole to continue on page 2. Scale, interval, page break, and fit-to-page settings interact and must be balanced together.
 
 Text descriptions for borehole elements are driven by the `Text Macro > Build` button. For G1 ground descriptions, most information sits inside a single "geological description" macro (unlike other object types which use separate petrography and color macros).
 
@@ -45,7 +45,7 @@ The element can be moved and scaled inside the object frame. All other graphic e
 
 #### Graphical view
 
-Controls whether the borehole log is drawn (otherwise only labels are displayed). The data presentation supports multiple country norms — with configured standards and fill patterns, borehole logs can be output in the original language with customary patterns, or in a foreign language with different patterns. In "Automatic" mode, the language and presentation norm from data entry are used. The profile width can be set to "Automatic" or a fixed "Default" value.
+Controls whether the borehole log is drawn (otherwise only labels are displayed). The data presentation supports multiple country norms - with configured standards and fill patterns, borehole logs can be output in the original language with customary patterns, or in a foreign language with different patterns. In "Automatic" mode, the language and presentation norm from data entry are used. The profile width can be set to "Automatic" or a fixed "Default" value.
 
 #### Tabular view
 
@@ -97,7 +97,7 @@ Additional options:
 When displaying depth-oriented images in the borehole log element:
 
 * **Scale pictures on maximum picture width:** When multiple images are used, scales all images to the width of the broadest one.
-* **Scale pictures on picture frame:** Scales images to the width of the image frame element. Use with caution — images may be distorted.
+* **Scale pictures on picture frame:** Scales images to the width of the image frame element. Use with caution - images may be distorted.
 * **Edit horizontal display detail:** Manually adjust the displayed image detail by removing pixels from the left or right margin.
 * **Position of the detail within the scope:** When the image element is narrower than needed for undistorted display, select the visible portion using the slide control or pixel position input.
 * **Horizontal alignment:** Sets the position of the image column within the graphic element frame.
@@ -118,4 +118,4 @@ Key behaviors:
 - **Conditional formatting:** Column Properties → Presentation Options → set a condition and color (e.g., "if CU > 50, color row red").
 - **Multi-block layouts:** Multiple report blocks can be combined in one layout (e.g., one general-data report and one measurement report side by side).
 - **Export options:** Right-click in edit mode → Export as Excel or CSV; or use the Report Access button in the layout overview for an Excel export without opening edit mode.
-- **Report Type:** Original data (shows database values as-is) or Calculations (statistics, comparisons — more advanced).
+- **Report Type:** Original data (shows database values as-is) or Calculations (statistics, comparisons - more advanced).

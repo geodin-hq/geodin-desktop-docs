@@ -25,7 +25,7 @@ Only two form types currently produce GeoDinML output:
 - The **G1 drilling form**.
 - The **Step 3 form** (ISO standard).
 
-The **picture log form** does **not** produce GeoDinML — it produces a PDF with embedded thumbnails plus the original JPEG/PNG source files. These can be delivered via file delivery but cannot be imported into GeoDin as structured data.
+The **picture log form** does **not** produce GeoDinML - it produces a PDF with embedded thumbnails plus the original JPEG/PNG source files. These can be delivered via file delivery but cannot be imported into GeoDin as structured data.
 
 {% hint style="warning" %}
 **EN ISO E2 standard is currently disabled in Onsite** because of a bug in the GeoDinML importer specifically for E2-flavoured GeoDinML. The form exists in both E2 and Step 3 flavours; E2 has been temporarily hidden to prevent users from creating data they cannot import. Re-activation in Onsite is a ~5-minute turnaround once the Desktop importer is fixed and released.
@@ -39,8 +39,8 @@ GeoDinML is also the only server-less way to push a project list to field users.
 
 **On the Onsite side:** in `Configuration > Integration > Project metadata`, choose between:
 
-- **Manual** — user types the project number freely.
-- **GeoDinML-based** — pull-down menu listing all projects from a selected `.GeoDinml` file. Onsite reads the client name and project name for each project automatically. A `Reload` action re-reads the file if it has been updated in the background.
+- **Manual** - user types the project number freely.
+- **GeoDinML-based** - pull-down menu listing all projects from a selected `.GeoDinml` file. Onsite reads the client name and project name for each project automatically. A `Reload` action re-reads the file if it has been updated in the background.
 
 Onsite never sanitizes data on import via GeoDinML beyond the standard project-number file-name sanitization rules.
 

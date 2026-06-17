@@ -9,7 +9,7 @@ Click `<Next>` to continue.
 
 ## Select Individual Licence Key Activation
 
-If you have an individual licence, please select ‘I have a licence key’.\
+If you have an individual licence, please select 'I have a licence key'.\
 Click `<Next>` to continue.
 
 <figure><img src="../.gitbook/assets/2_Screen.jpg" alt=""><figcaption><p>GeoDin® Licence Activation Wizard</p></figcaption></figure>
@@ -37,7 +37,7 @@ Click `<Finish>` to start using GeoDin®.
 
 ## Access a Professional Licence
 
-If your company or university has a professional licence, which is stored on a server, please select ‘My company or university has a licence’.\
+If your company or university has a professional licence, which is stored on a server, please select 'My company or university has a licence'.\
 Click `<Next>` to continue.
 
 <figure><img src="../.gitbook/assets/7_Screen.jpg" alt=""><figcaption><p>Access a Professional Licence</p></figcaption></figure>

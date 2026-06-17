@@ -1,13 +1,13 @@
 # Pages allowed to be under MIN_LINES of content. One path per line.
 # Use only for pages where shortness is intentional (focused topic, link-only landing).
-# Do NOT add empty 1-line files here — those should be deleted or filled.
+# Do NOT add empty 1-line files here - those should be deleted or filled.
 
 # Short focused pages with valid content
 public/en/user-management/database-visibility.md
 public/en/user-management/data-privacy-and-ownership.md
 public/en/user-management/groups-and-permissions.md
 public/en/maps/map-view-coordinate-picking.md
-# Slimmed in PR docs/dedup-cleanup — intentional landing pages that cross-link
+# Slimmed in PR docs/dedup-cleanup - intentional landing pages that cross-link
 # to canonical reference pages (see PR description for the canonical map).
 public/en/navigating-the-geodin-workspace/objects/data-management.md
 public/en/navigating-the-geodin-workspace/objects/general-data.md

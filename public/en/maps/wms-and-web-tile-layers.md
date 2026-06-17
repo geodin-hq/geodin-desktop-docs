@@ -18,11 +18,11 @@ Should this not be the case, please [Install](../installation/express-installati
 
 Use this button to add a WMS layer (Web Map Service) to your map. Select one of the displayed layers from the service offering, then confirm with the button **Add layer**.
 
-* **Server URL** — Enter the URL (\"Internet address\") of the server on which the service is provided. Please note that the URL must not contain any configuration parameters, i.e. no information on e.g. format or measurements of the layer. If the desired URL contains a question mark and subsequent parameters, delete both from the line.
+* **Server URL** - Enter the URL (\"Internet address\") of the server on which the service is provided. Please note that the URL must not contain any configuration parameters, i.e. no information on e.g. format or measurements of the layer. If the desired URL contains a question mark and subsequent parameters, delete both from the line.
   * Right: http://*www.address.com*/*geoservices xy*/wms
   * Wrong: http://*www.address.com*/*geoservices xy*/wms?Service=WMS&Version=xy
-* **Format** — Enter the image format here.
-* **System** — Select one of the coordinate systems provided by the WMS service by selecting the corresponding EPSG code.
+* **Format** - Enter the image format here.
+* **System** - Select one of the coordinate systems provided by the WMS service by selecting the corresponding EPSG code.
 
 ## Reference: Add WebTileLayer
 

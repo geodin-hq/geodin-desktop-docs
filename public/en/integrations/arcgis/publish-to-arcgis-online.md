@@ -6,7 +6,7 @@ description: >-
 
 # Publish to ArcGIS Online
 
-This final step in the integration workflow publishes your borehole feature layers — including attached GeoDin reports — to ArcGIS Online, making them accessible through a web browser to stakeholders and team members.
+This final step in the integration workflow publishes your borehole feature layers - including attached GeoDin reports - to ArcGIS Online, making them accessible through a web browser to stakeholders and team members.
 
 ## Step 1: Open the project in ArcGIS Pro
 
@@ -62,7 +62,7 @@ Navigate between borehole points on the map to verify that all locations have th
 
 ## Related pages
 
-* [Plan and Export to GeoDin](plan-and-export-to-geodin.md) — Step 1: ArcGIS → GeoDin
-* [Export to ArcGIS Pro](export-to-arcgis-pro.md) — Step 2: GeoDin → ArcGIS
-* [Generate Reports](generate-reports.md) — Step 3: Create PDFs in GeoDin
-* [Attach Reports](attach-reports.md) — Step 4: Link PDFs to features
+* [Plan and Export to GeoDin](plan-and-export-to-geodin.md) - Step 1: ArcGIS → GeoDin
+* [Export to ArcGIS Pro](export-to-arcgis-pro.md) - Step 2: GeoDin → ArcGIS
+* [Generate Reports](generate-reports.md) - Step 3: Create PDFs in GeoDin
+* [Attach Reports](attach-reports.md) - Step 4: Link PDFs to features

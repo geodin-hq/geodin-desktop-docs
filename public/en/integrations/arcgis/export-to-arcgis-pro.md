@@ -16,7 +16,7 @@ Ensure all field investigation and measurement data has been entered into GeoDin
 
 ## Step 2: Review borehole data
 
-Navigate to individual boreholes in GeoDin to review the additional information available — layer data, samples, measurement values, and any attached documents. This is the data that will be exported alongside the location coordinates.
+Navigate to individual boreholes in GeoDin to review the additional information available - layer data, samples, measurement values, and any attached documents. This is the data that will be exported alongside the location coordinates.
 
 ![GeoDin borehole with layer and sample data](../../.gitbook/assets/export-to-arcgis-pro-02.jpeg)
 

@@ -1,7 +1,7 @@
 ---
 description: >-
   Reference list of the (G1) Location Data Types available in GeoDin for
-  geotechnical, geological, and laboratory data — name, short name, long
+  geotechnical, geological, and laboratory data - name, short name, long
   name/description, and which are complex data types.
 ---
 

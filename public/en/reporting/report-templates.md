@@ -8,7 +8,7 @@ GeoDin ships with pre-built report templates organized by object type. You can c
 
 ## Template basics
 
-Templates are accessed via the **Layout** section in the Graphic Printing and Editing method. Default layouts ship in `GeoDin\Layouts\`, organized by object type — for example, G1 includes borehole logs, stiff/parameter layouts, water content vs. depth, and Atterberg limits charts.
+Templates are accessed via the **Layout** section in the Graphic Printing and Editing method. Default layouts ship in `GeoDin\Layouts\`, organized by object type - for example, G1 includes borehole logs, stiff/parameter layouts, water content vs. depth, and Atterberg limits charts.
 
 Users can add custom layout folders via `Available Layouts > + button > browse to folder` (e.g., a network share for team-wide templates).
 
@@ -16,22 +16,22 @@ Users can add custom layout folders via `Available Layouts > + button > browse t
 
 Templates can be saved in two formats:
 
-- **GLO (GeoDin Layout)** — template only, no data connection. Reusable across projects. Only GLO files appear in the Available Layouts overview.
-- **GGF (GeoDin Graphic Format)** — layout with connected data (e.g., a specific cross-section with 10 boreholes). Can be reopened by drag-and-dropping into GeoDin.
+- **GLO (GeoDin Layout)** - template only, no data connection. Reusable across projects. Only GLO files appear in the Available Layouts overview.
+- **GGF (GeoDin Graphic Format)** - layout with connected data (e.g., a specific cross-section with 10 boreholes). Can be reopened by drag-and-dropping into GeoDin.
 
 Save as GLO for reusable templates; save as GGF to preserve a specific graphic with its connected objects.
 
 {% hint style="warning" %}
-When editing a default layout, always use `File > Save As` (never Save) to avoid overwriting the shipped default. Create a folder like `[YourCompany]_Layouts` and copy defaults there before editing. If a default is accidentally overwritten, there is no built-in reset — you must request a copy from the GeoDin team. In a network installation, overwriting a default affects all users.
+When editing a default layout, always use `File > Save As` (never Save) to avoid overwriting the shipped default. Create a folder like `[YourCompany]_Layouts` and copy defaults there before editing. If a default is accidentally overwritten, there is no built-in reset - you must request a copy from the GeoDin team. In a network installation, overwriting a default affects all users.
 {% endhint %}
 
 ### Layout snippets
 
-A layout can embed another layout as a **snippet** — for example, a company header/footer stored once in `Common_A4_LHF.GLO` and referenced by many templates. Changing the logo in the snippet file automatically updates all layouts using it. In edit mode, snippets appear as green-boxed regions that cannot be edited inline; open the snippet layout directly to modify it.
+A layout can embed another layout as a **snippet** - for example, a company header/footer stored once in `Common_A4_LHF.GLO` and referenced by many templates. Changing the logo in the snippet file automatically updates all layouts using it. In edit mode, snippets appear as green-boxed regions that cannot be edited inline; open the snippet layout directly to modify it.
 
 ### Multi-language support
 
-Templates can carry translations and print in different languages depending on the `File > Language` setting — the same template can output in German or English without modification.
+Templates can carry translations and print in different languages depending on the `File > Language` setting - the same template can output in German or English without modification.
 
 For detailed layout creation steps, see [Creating Custom Layouts](../data-visualization/creating-custom-layouts.md).
 
@@ -46,7 +46,7 @@ The **Report element** is a table-based component for displaying tabular output 
 1. **Data source:** choose from General Data, Layer Data, or Samples > specific data type (e.g., CU triaxial tests)
 2. **Column configuration:** use the blue `+` button to add columns. Each column has a **Text Macro** (the parameter to display) and a **Heading**.
 3. **Selectors:** exclude rows by parameter conditions (e.g., skip values above or below a threshold)
-4. **Conditional formatting:** set presentation options to highlight data — for example, "if CU > 50, color the row red" via `Column Properties > Presentation Options`
+4. **Conditional formatting:** set presentation options to highlight data - for example, "if CU > 50, color the row red" via `Column Properties > Presentation Options`
 
 Multiple report blocks can be combined in one layout (e.g., a general-data table and a measurement table side by side).
 
@@ -54,8 +54,8 @@ Multiple report blocks can be combined in one layout (e.g., a general-data table
 
 Two categories of reports are available:
 
-- **Original data reports** — display raw data in summary (borehole tabs, sample overviews, measurement tables)
-- **Calculation reports** — process data before display (statistics, list comparisons, plausibility checks, grain size analyses)
+- **Original data reports** - display raw data in summary (borehole tabs, sample overviews, measurement tables)
+- **Calculation reports** - process data before display (statistics, list comparisons, plausibility checks, grain size analyses)
 
 ### Exporting report data
 

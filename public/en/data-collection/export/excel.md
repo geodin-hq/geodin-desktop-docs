@@ -10,7 +10,7 @@ For CSV equivalents, see [CSV Export](csv-export.md). For the import side of the
 
 ## Exporting a tabular view
 
-Export commands sit on most tabular views and are identified by the **red dot with two arrows** icon. The same icon and dialog are used across general data, sample tables, measurement tables, and data sequence series — the workflow is consistent regardless of the data type.
+Export commands sit on most tabular views and are identified by the **red dot with two arrows** icon. The same icon and dialog are used across general data, sample tables, measurement tables, and data sequence series - the workflow is consistent regardless of the data type.
 
 The **All Objects > Data Management > General Data** tabular view shows metadata for all locations at once. Exporting this view produces a single workbook covering every location in the database, useful for project-level reporting or as a starting point for bulk-edit-then-reimport workflows.
 

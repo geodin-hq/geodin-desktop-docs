@@ -6,7 +6,7 @@ Hygiene checks for the docs repo. Run locally before opening a PR; CI runs them 
 
 Fails if the same `<!-- src: transcript/... -->` attribution appears in more than one `.md` file.
 
-Each transcript section is a single source of truth. Duplicates mean auto-assembled content was copy-pasted into multiple destinations — the bug that produced the original `data-collection/import/` mess.
+Each transcript section is a single source of truth. Duplicates mean auto-assembled content was copy-pasted into multiple destinations - the bug that produced the original `data-collection/import/` mess.
 
 ```bash
 ./scripts/check-duplication.sh           # defaults to public/
@@ -24,7 +24,7 @@ MIN_LINES=20 ./scripts/check-stubs.sh   # raise the bar
 
 ## `check-asset-integrity.sh`
 
-Fails if an existing `.gitbook/assets/` image's **content** changes, or a pinned asset disappears — the silent-swap failure mode. GitBook keeps every image in one flat folder with generic names (`image (N).png`, `N_Screen.jpg`); a GitBook→git sync can re-point an existing filename at different bytes while leaving the page markdown untouched (commit `ce308ef` / "GITBOOK-86" did exactly this to 20 screenshots, unnoticed for ~2 months). Every asset is pinned by sha256 in `asset-manifest.sha256`. New uploads are allowed and only reported; mutating an existing file is what fails.
+Fails if an existing `.gitbook/assets/` image's **content** changes, or a pinned asset disappears - the silent-swap failure mode. GitBook keeps every image in one flat folder with generic names (`image (N).png`, `N_Screen.jpg`); a GitBook→git sync can re-point an existing filename at different bytes while leaving the page markdown untouched (commit `ce308ef` / "GITBOOK-86" did exactly this to 20 screenshots, unnoticed for ~2 months). Every asset is pinned by sha256 in `asset-manifest.sha256`. New uploads are allowed and only reported; mutating an existing file is what fails.
 
 ```bash
 ./scripts/check-asset-integrity.sh           # verify against the manifest (CI)
@@ -32,13 +32,13 @@ Fails if an existing `.gitbook/assets/` image's **content** changes, or a pinned
 ROOT=public/en ./scripts/check-asset-integrity.sh   # narrow scope
 ```
 
-On a legitimate change (new screenshot for a step, GitBook re-export): review the flagged files, then run `--update` and commit the refreshed `asset-manifest.sha256` in the same PR. Because GitBook syncs *into* this repo, the `push: main` trigger (no path filter) is what surfaces a sync-introduced swap — it can't block an already-pushed commit, but it turns a months-long silent corruption into a red check within minutes.
+On a legitimate change (new screenshot for a step, GitBook re-export): review the flagged files, then run `--update` and commit the refreshed `asset-manifest.sha256` in the same PR. Because GitBook syncs *into* this repo, the `push: main` trigger (no path filter) is what surfaces a sync-introduced swap - it can't block an already-pushed commit, but it turns a months-long silent corruption into a red check within minutes.
 
 ## `check-text-similarity.py`
 
 Informational audit: finds **near-duplicate pages** and **repeated paragraph blocks** that don't share a `<!-- src: -->` marker (so the marker-based linter can't catch them). 5-word word-shingles + Jaccard, page-level AND block-level, with `difflib.SequenceMatcher.ratio()` as a secondary verify on top candidates. Stdlib only.
 
-Writes a markdown report — defaults to stdout, point `--output` at a path to capture it (the convention is `~/GitHub/geodin-docs-internal/AUDIT-text-similarity.md`, alongside the existing `AUDIT-import-duplication.md`).
+Writes a markdown report - defaults to stdout, point `--output` at a path to capture it (the convention is `~/GitHub/geodin-docs-internal/AUDIT-text-similarity.md`, alongside the existing `AUDIT-import-duplication.md`).
 
 ```bash
 python3 scripts/check-text-similarity.py public/en
@@ -46,21 +46,21 @@ python3 scripts/check-text-similarity.py public/en --output ~/GitHub/geodin-docs
 python3 scripts/check-text-similarity.py public/en --page-threshold 0.70 --block-threshold 0.85 --quiet
 ```
 
-Defaults: page Jaccard ≥ 0.55, block Jaccard ≥ 0.75 with ≥ 40 normalized tokens. Skips pages with fewer than 60 normalized tokens (those are stubs — `check-stubs.sh`'s job).
+Defaults: page Jaccard ≥ 0.55, block Jaccard ≥ 0.75 with ≥ 40 normalized tokens. Skips pages with fewer than 60 normalized tokens (those are stubs - `check-stubs.sh`'s job).
 
-**Not wired into CI** — text similarity isn't a binary defect; a 0.62 page-level score isn't *wrong*, it's a candidate for human review. Run on-demand when you suspect duplication has crept in, or after a bulk content addition.
+**Not wired into CI** - text similarity isn't a binary defect; a 0.62 page-level score isn't *wrong*, it's a candidate for human review. Run on-demand when you suspect duplication has crept in, or after a bulk content addition.
 
 ## `check-relative-links.py`
 
-Fails if a relative link or image reference in any `.md` page points at a file that doesn't exist. This is the move-a-block-break-a-path failure mode: GitBook redirects page *URLs* when SUMMARY regroups, but relative *file* references inside page bodies break silently when content moves between folder depths — a section relocated from a two-level-deep page keeps its `../../.gitbook/...` prefix and points above the content root. Handles GitBook asset names containing parentheses (`image (42).png`), which naive `[^)]+` link regexes silently skip.
+Fails if a relative link or image reference in any `.md` page points at a file that doesn't exist. This is the move-a-block-break-a-path failure mode: GitBook redirects page *URLs* when SUMMARY regroups, but relative *file* references inside page bodies break silently when content moves between folder depths - a section relocated from a two-level-deep page keeps its `../../.gitbook/...` prefix and points above the content root. Handles GitBook asset names containing parentheses (`image (42).png`), which naive `[^)]+` link regexes silently skip.
 
 ```bash
 python3 scripts/check-relative-links.py            # defaults to public/
 python3 scripts/check-relative-links.py public/en  # narrow scope
 ```
 
-Checks markdown `](...)` targets and raw `src="..."` attributes with a known file extension; external URLs, mailto:, absolute paths, and bare anchors are ignored. Exits 1 on any broken reference — CI-ready as a required check, not wired in yet.
+Checks markdown `](...)` targets and raw `src="..."` attributes with a known file extension; external URLs, mailto:, absolute paths, and bare anchors are ignored. Exits 1 on any broken reference - CI-ready as a required check, not wired in yet.
 
 ## CI
 
-`check-asset-integrity.sh`, `check-duplication.sh`, and `check-stubs.sh` run via `.github/workflows/docs-lint.yml`. `check-asset-integrity.sh` and `check-duplication.sh` are required; `check-stubs.sh` is informational. The asset check also runs on every push to `main` (no path filter) so GitBook sync commits are caught. `check-text-similarity.py` is not in CI — it's a local audit tool.
+`check-asset-integrity.sh`, `check-duplication.sh`, and `check-stubs.sh` run via `.github/workflows/docs-lint.yml`. `check-asset-integrity.sh` and `check-duplication.sh` are required; `check-stubs.sh` is informational. The asset check also runs on every push to `main` (no path filter) so GitBook sync commits are caught. `check-text-similarity.py` is not in CI - it's a local audit tool.

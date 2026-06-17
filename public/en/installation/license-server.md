@@ -93,7 +93,7 @@ Click `<Next>` to continue.
 
 ## Access a Professional Licence
 
-Please select ‘My company or university has a licence’.\
+Please select 'My company or university has a licence'.\
 Click `<Next>` to continue.
 
 <figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Access a professional licence</p></figcaption></figure>

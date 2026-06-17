@@ -1,7 +1,7 @@
 ---
 description: >-
-  The database backends GeoDin connects to — Client/Server via OLE-DB or
-  FireDAC, and desktop MS Access — with per-platform drivers, GeoDin-to-DDL data
+  The database backends GeoDin connects to - Client/Server via OLE-DB or
+  FireDAC, and desktop MS Access - with per-platform drivers, GeoDin-to-DDL data
   type mappings and example connection strings.
 ---
 
@@ -236,9 +236,9 @@ Detailed descriptions on FireDAC connections can be found here:
 
 http://docwiki.embarcadero.com/RADStudio/XE5/en/Database\_Connectivity\_(FireDAC)
 
-Object, measurement, report, document, and project-copy reference content formerly duplicated on this page now lives on its subject pages — see [Working with Measurement Data](../measurement-values/working-with-measurement-data.md), [Object Operations Reference](../object-types/object-operations-reference.md), [Working with Projects](../projects/working-with-projects.md), [Report Templates](../../reporting/report-templates.md), and [Managing Documents](../documents/managing-documents.md).
+Object, measurement, report, document, and project-copy reference content formerly duplicated on this page now lives on its subject pages - see [Working with Measurement Data](../measurement-values/working-with-measurement-data.md), [Object Operations Reference](../object-types/object-operations-reference.md), [Working with Projects](../projects/working-with-projects.md), [Report Templates](../../reporting/report-templates.md), and [Managing Documents](../documents/managing-documents.md).
 
 ## Related topics
 
-- [Connecting to a Database](connecting-to-a-database.md) — creating connections
-- [Managing Database Connections](managing-database-connections.md) — managing, system vs. user databases
+- [Connecting to a Database](connecting-to-a-database.md) - creating connections
+- [Managing Database Connections](managing-database-connections.md) - managing, system vs. user databases
