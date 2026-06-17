@@ -1,10 +1,10 @@
 ---
-description: Copying and transferring GeoDin projects — duplicating, exporting, and moving projects between databases.
+description: Copying and transferring GeoDin projects - duplicating, exporting, and moving projects between databases.
 ---
 
 # Copying and Transferring Projects
 
-Projects can be **copied within the same database** (for branching variants or template re-use) or **transferred between databases** (e.g. moving a project from a local Access database to a shared client–server database).
+Projects can be **copied within the same database** (for branching variants or template re-use) or **transferred between databases** (e.g. moving a project from a local Access database to a shared client-server database).
 
 GeoDin offers project-level **Add Objects**, **Copy Project**, and **Publish and Export** methods for these workflows. The exact options depend on whether the destination is in the same database, in a different database of the same connection, or in a different database type entirely.
 
@@ -18,7 +18,7 @@ When delivering data to a state geological authority (Landesamt), the recommende
 {% step %}
 #### Step 1: Create the transfer database
 
-Create a dedicated transfer database — this can be either an Access (`.accdb`) file or a PostgreSQL database. Connect it to GeoDin as a separate database connection.
+Create a dedicated transfer database - this can be either an Access (`.accdb`) file or a PostgreSQL database. Connect it to GeoDin as a separate database connection.
 
 {% hint style="warning" %}
 Ensure the transfer database is accessible on the GeoDin server (e.g. a local path such as `C:\Temp\`) and not only on a long UNC network path. Very long UNC paths can cause connection issues with Access files.
@@ -52,7 +52,7 @@ In the copy options, choose **Copy** (not **Move**) to keep the objects in the o
 {% step %}
 #### Step 6: Confirm the copy
 
-Confirm the copy. The selected objects — with their layer data, well design, and measurement values — are now in the transfer project.
+Confirm the copy. The selected objects - with their layer data, well design, and measurement values - are now in the transfer project.
 {% endstep %}
 
 {% step %}
@@ -66,4 +66,4 @@ The ZIP produced by **Publish and Export** always contains an Access database in
 {% endstep %}
 {% endstepper %}
 
-For the comprehensive reference — full syntax, all options, edge cases — see [**Working with Projects**](working-with-projects.md).
+For the comprehensive reference - full syntax, all options, edge cases - see [**Working with Projects**](working-with-projects.md).

@@ -4,7 +4,7 @@ description: Reference for diagram, chart, and drawing-layer display properties 
 
 # Diagram and Chart Properties
 
-This page documents the display properties available for diagram and chart graphic elements used in GeoDin site-plan layouts and print graphics. For constructing site plans — scenarios, scenes, object selection, and scales — see [Creating Site Plans](site-plans/creating-site-plans.md).
+This page documents the display properties available for diagram and chart graphic elements used in GeoDin site-plan layouts and print graphics. For constructing site plans - scenarios, scenes, object selection, and scales - see [Creating Site Plans](site-plans/creating-site-plans.md).
 
 ***
 
@@ -20,7 +20,7 @@ The **Durov diagram 2020** variant allows freely definable axis parameters (whic
 
 ### Formation Diagram (LBGR)
 
-A classification method for high-mineralized natural waters (Valjaschko, 1960s), extended by Rechlin et al. for slightly mineralized freshwater. Distinguishes four elementary water types based on molar equivalent ratios of main ingredients (not predominating ions): **Carbonate Type** (unsaturated NaHCO3 water), **Sulfate Sodium Type** (carbonate saturated, sulfate not — dissolved Na2SO4), **Sulfate Magnesium Type** (carbonate and sulfate saturated with earth-alkali ions), and **Chloride Type** (calcium exceeds carbonate and sulfate). Requires analysis of Ca, Mg, Na, K, HCO3+CO3, SO4, Cl. The LBGR hydrogeochemical formation model (Brandenburg) distinguishes 9 formation types from precipitation through deep water-bearing layers.
+A classification method for high-mineralized natural waters (Valjaschko, 1960s), extended by Rechlin et al. for slightly mineralized freshwater. Distinguishes four elementary water types based on molar equivalent ratios of main ingredients (not predominating ions): **Carbonate Type** (unsaturated NaHCO3 water), **Sulfate Sodium Type** (carbonate saturated, sulfate not - dissolved Na2SO4), **Sulfate Magnesium Type** (carbonate and sulfate saturated with earth-alkali ions), and **Chloride Type** (calcium exceeds carbonate and sulfate). Requires analysis of Ca, Mg, Na, K, HCO3+CO3, SO4, Cl. The LBGR hydrogeochemical formation model (Brandenburg) distinguishes 9 formation types from precipitation through deep water-bearing layers.
 
 ### Pie/Bar Chart
 
@@ -58,13 +58,13 @@ Filters which datasets of a measurement series are displayed using a time-interv
 
 ### Confidence Limit
 
-Configures confidence limit display on time series. Properties: **Display name** (for legend), **Confidence level** (0–1, typically 0.95), **Upper/lower confidence level** selection, **Draw curve** and **Draw symbols** toggles (with sub-node styling), and **Show in legend** option.
+Configures confidence limit display on time series. Properties: **Display name** (for legend), **Confidence level** (0-1, typically 0.95), **Upper/lower confidence level** selection, **Draw curve** and **Draw symbols** toggles (with sub-node styling), and **Show in legend** option.
 
 ## Reference: Data Filtering
 
 ### Post-selection
 
-Filters data sets from correlated data types using logical conditions. Define a **Name** (shown in layout interfaces) and a **Condition** using selection syntax. Conditions can be parameterized with placeholders: `%NUMERICPARAM` (numeric fields), `%STRINGPARAM` (text fields), `%DATEPARAM` (date fields). Set a **Default value** for parameterized conditions. Enable **Make available as quick setting** to expose the parameter in layout interfaces. Display selector content in layouts using `$%SelectorContent:Selector_name[@format]$` — use `@t` for translated values or `@c` for key codes.
+Filters data sets from correlated data types using logical conditions. Define a **Name** (shown in layout interfaces) and a **Condition** using selection syntax. Conditions can be parameterized with placeholders: `%NUMERICPARAM` (numeric fields), `%STRINGPARAM` (text fields), `%DATEPARAM` (date fields). Set a **Default value** for parameterized conditions. Enable **Make available as quick setting** to expose the parameter in layout interfaces. Display selector content in layouts using `$%SelectorContent:Selector_name[@format]$` - use `@t` for translated values or `@c` for key codes.
 
 ## Reference: Text and Labeling
 

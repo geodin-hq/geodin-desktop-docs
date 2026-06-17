@@ -12,9 +12,9 @@ To bulk print, select multiple objects in the object manager (Ctrl-click or Shif
 
 **Three bulk export modes are available:**
 
-1. **Export pages as a contiguous PDF** — all boreholes in one file
-2. **Export pages as individual PDFs** — one file per page
-3. **Export pages as PDF per object** — one file per borehole (if a borehole spans multiple pages, all pages are included in that file)
+1. **Export pages as a contiguous PDF** - all boreholes in one file
+2. **Export pages as individual PDFs** - one file per page
+3. **Export pages as PDF per object** - one file per borehole (if a borehole spans multiple pages, all pages are included in that file)
 
 **Print targets:** Any system printer (PDF printer, Microsoft Print to PDF, etc.) OR GeoDin's internal PDF printer, which supports PDF, PNG (raster), vector files (EMF), and DXF export.
 
@@ -36,7 +36,7 @@ In the standard setting, areas are filled with patterns whose dimensions are def
 
 ### Page print numbers
 
-Page print numbers allow numbering independent of the layout's internal page sequence — useful for reports with appendices. The layout must contain a variable text element with the macro `$%PRNPAGE$`. Change the "Start with page print number" value to offset numbering (e.g., set to 26 to continue from a 25-page report).
+Page print numbers allow numbering independent of the layout's internal page sequence - useful for reports with appendices. The layout must contain a variable text element with the macro `$%PRNPAGE$`. Change the "Start with page print number" value to offset numbering (e.g., set to 26 to continue from a 25-page report).
 
 ### Report sequences
 

@@ -63,7 +63,7 @@ Contour lines generated in GeoDin Maps are saved as Shape files. Use the EPSG co
 
 ## Offline tile caching for OSM base maps
 
-An OpenStreetMap (OSM) tile layer can be downloaded and cached locally for offline use — for example, on a field laptop without a reliable internet connection.
+An OpenStreetMap (OSM) tile layer can be downloaded and cached locally for offline use - for example, on a field laptop without a reliable internet connection.
 
 **Steps:**
 
@@ -79,10 +79,10 @@ To produce a print-quality map output with a north arrow, scale bar, and grid li
 1. In the Maps module toolbar, click **Edit graphic** (German: _Grafik bearbeiten_) or **Print map** (German: _Karte drucken_).
 2. The standard GeoDin layout/print editor opens with the current map view embedded as a map frame element.
 3. Add layout elements as needed:
-   * **Map frame** — the map view itself
-   * **Scale bar** — from the element toolbar
-   * **North arrow** — from the element toolbar
-   * **Grid lines** — configured in the map frame properties
+   * **Map frame** - the map view itself
+   * **Scale bar** - from the element toolbar
+   * **North arrow** - from the element toolbar
+   * **Grid lines** - configured in the map frame properties
 4. Export as PDF or vector format (DXF/SVG) using the standard print/export function.
 
 {% hint style="info" %}
@@ -130,75 +130,75 @@ In the next section, the project assignment for the new object is defined. There
 
 ### Toolbar buttons
 
-**Select Layout** — Displays the available layouts for the layer shown in the map; choose a layout from the list to link the selected object(s) to it.
+**Select Layout** - Displays the available layouts for the layer shown in the map; choose a layout from the list to link the selected object(s) to it.
 
-**Previous / Next Layout** — Navigate through layouts that were previously used.
+**Previous / Next Layout** - Navigate through layouts that were previously used.
 
-**Zoom in** — Increases the display size of the selected area; a single click doubles the zoom and centres the clicked point; a rectangle can also be drawn to zoom to that area.
+**Zoom in** - Increases the display size of the selected area; a single click doubles the zoom and centres the clicked point; a rectangle can also be drawn to zoom to that area.
 
-**Zoom out** — Reduces the display size of the selected area.
+**Zoom out** - Reduces the display size of the selected area.
 
-**Pan** — Moves the displayed area without using scroll bars.
+**Pan** - Moves the displayed area without using scroll bars.
 
-**View full page** — Displays the entire page in the object detail view.
+**View full page** - Displays the entire page in the object detail view.
 
-**Next view / Previous view** — Navigates between pages of a multi-page object detail view (e.g. reports).
+**Next view / Previous view** - Navigates between pages of a multi-page object detail view (e.g. reports).
 
-**Hide object details** — Hides the object detail view, collapsing it to a slim bar on the right; click the bar or the arrow button to restore it.
+**Hide object details** - Hides the object detail view, collapsing it to a slim bar on the right; click the bar or the arrow button to restore it.
 
-**Measure distance** — Activates a line-drawing tool that measures distances between user-set points; right-click to end. The unit system (map units, metric, or Anglo-American) is configurable in the distance settings.
+**Measure distance** - Activates a line-drawing tool that measures distances between user-set points; right-click to end. The unit system (map units, metric, or Anglo-American) is configurable in the distance settings.
 
-**Load elevation data (SRTM)** — Downloads SRTM elevation data from the internet for the currently visible map section, or uses cached data if available. The result can be saved as a grid file (`*.grd`) and added as a map layer.
+**Load elevation data (SRTM)** - Downloads SRTM elevation data from the internet for the currently visible map section, or uses cached data if available. The result can be saved as a grid file (`*.grd`) and added as a map layer.
 
-**Key date measurement** — Selects boreholes or measurement values that have a recorded value for a chosen parameter on a specific date or within a defined tolerance; results can be saved as a Shape file (`*.shp`) and added as a new map layer.
+**Key date measurement** - Selects boreholes or measurement values that have a recorded value for a chosen parameter on a specific date or within a defined tolerance; results can be saved as a Shape file (`*.shp`) and added as a new map layer.
 
 ### Map properties
 
-**Hide GeoDin Object Manager when the map is opened** — Hides the Object Manager automatically when the map is opened to maximise map display area; the Object Manager can be re-shown at any time.
+**Hide GeoDin Object Manager when the map is opened** - Hides the Object Manager automatically when the map is opened to maximise map display area; the Object Manager can be re-shown at any time.
 
-**Create detail view automatically, if the data are linked** — If layers are linked to favourite layouts, the object detail view opens automatically when an object with an available layout is selected.
+**Create detail view automatically, if the data are linked** - If layers are linked to favourite layouts, the object detail view opens automatically when an object with an available layout is selected.
 
-**Number of decimal places for the coordinate display** — Controls how many decimal places are shown in the coordinate display.
+**Number of decimal places for the coordinate display** - Controls how many decimal places are shown in the coordinate display.
 
-**EPSG code** — Click "?" to define or verify the EPSG code for the coordinate system used in the map.
+**EPSG code** - Click "?" to define or verify the EPSG code for the coordinate system used in the map.
 
-**Status information** — Displays layer type and load time information.
+**Status information** - Displays layer type and load time information.
 
 ### Initial view
 
-**Zoom to map limits** — Default: opens the map zoomed to the full data extent.
+**Zoom to map limits** - Default: opens the map zoomed to the full data extent.
 
-**User defined** — Allows the map centre and scale to be set manually; use the \<take from map> button to capture the current view as the initial view.
+**User defined** - Allows the map centre and scale to be set manually; use the \<take from map> button to capture the current view as the initial view.
 
 ### Grid layer tab
 
 The **Grid** tab appears only when the selected layer is recognised as a grid layer. It manages colour zones for grid value ranges:
 
-* **+** / **-** / **X** buttons — Add, delete the selected zone, or delete all zones from the Zone list.
-* **Color button** — Opens the Color dialog to assign a colour to the selected zone.
-* **Min / Max** — Lower and upper value limits for the selected zone.
-* **Legend** — Name of the zone as it appears in the Legend panel.
-* **Shadow** — When checked, treats the grid layer as a height map and renders a shadow effect as if light comes from the left.
+* **+** / **-** / **X** buttons - Add, delete the selected zone, or delete all zones from the Zone list.
+* **Color button** - Opens the Color dialog to assign a colour to the selected zone.
+* **Min / Max** - Lower and upper value limits for the selected zone.
+* **Legend** - Name of the zone as it appears in the Legend panel.
+* **Shadow** - When checked, treats the grid layer as a height map and renders a shadow effect as if light comes from the left.
 
 ### Line layer tab
 
 The **Line** tab controls the visual appearance of line layers. Key properties across its subtabs:
 
-**Line subtab** — Style, width, colour, bitmap fill, pattern, symbol (character/image), symbol gap, symbol rotation, and Include in legend option.
+**Line subtab** - Style, width, colour, bitmap fill, pattern, symbol (character/image), symbol gap, symbol rotation, and Include in legend option.
 
-**Outline subtab** — Style, width, colour, bitmap, pattern, and Include in legend option for the outline drawn around the line.
+**Outline subtab** - Style, width, colour, bitmap, pattern, and Include in legend option for the outline drawn around the line.
 
-**Smart size subtab** — Minimum width factor (in current scale units) below which a line is not rendered; optionally driven by an attribute field.
+**Smart size subtab** - Minimum width factor (in current scale units) below which a line is not rendered; optionally driven by an attribute field.
 
 ### Area layer tab
 
 The **Area** tab controls the visual appearance of polygon layers. Key properties across its subtabs:
 
-**Area subtab** — Pattern, bitmap, colour, symbol type and gap/rotation/size, and Include in legend option.
+**Area subtab** - Pattern, bitmap, colour, symbol type and gap/rotation/size, and Include in legend option.
 
-**Outline subtab** — Style, width, colour, bitmap, pattern, symbol (with gap/rotation), and Include in legend option for the polygon outline.
+**Outline subtab** - Style, width, colour, bitmap, pattern, symbol (with gap/rotation), and Include in legend option for the polygon outline.
 
-**Smart size subtab** — Minimum polygon size factor below which it is not rendered; optionally driven by an attribute field.
+**Smart size subtab** - Minimum polygon size factor below which it is not rendered; optionally driven by an attribute field.
 
 ### Clipping
 
@@ -208,11 +208,11 @@ GeoDin can clip a grid layer to a defined area using a polygon layer as a mask. 
 
 Converts grid (raster) data to vector polygons, similar to contour line generation but producing filled polygons. Key options:
 
-* **Decimal places** — Precision of calculated values.
-* **Fieldname** — Attribute column name in the output Shape file to store the polygon value.
-* **Tolerance** — Controls how many polygons are created; lower tolerance = more polygons.
-* **Ignore "NoData" values** — Excludes NoData values (e.g. −9999) from polygon generation; recommended in most cases.
-* **Split equal value polygons** — When enabled, polygons of the same value are created as separate simple polygons rather than a single multi-polygon.
+* **Decimal places** - Precision of calculated values.
+* **Fieldname** - Attribute column name in the output Shape file to store the polygon value.
+* **Tolerance** - Controls how many polygons are created; lower tolerance = more polygons.
+* **Ignore "NoData" values** - Excludes NoData values (e.g. −9999) from polygon generation; recommended in most cases.
+* **Split equal value polygons** - When enabled, polygons of the same value are created as separate simple polygons rather than a single multi-polygon.
 
 The result is saved as a Shape file (`*.shp`) and can be added directly to the map.
 
@@ -220,9 +220,9 @@ The result is saved as a Shape file (`*.shp`) and can be added directly to the m
 
 Publishing a database for the GeoDin MapReporter is a two-step process:
 
-1. **Generate a request key** — Click OK to generate a key for the database and send it to the GeoDin support team by email. The key is database-specific and must be regenerated if database contents change after the key was issued.
-2. **Enter the activation key** — After receiving the activation key from GeoDin support, enter it in the second step of the assistant and select an output directory.
+1. **Generate a request key** - Click OK to generate a key for the database and send it to the GeoDin support team by email. The key is database-specific and must be regenerated if database contents change after the key was issued.
+2. **Enter the activation key** - After receiving the activation key from GeoDin support, enter it in the second step of the assistant and select an output directory.
 
 The output directory must contain a `/MapReporterTemplate` subdirectory with the following subfolders: `BIN` (MapReporter.exe), `LAYOUTS`, `QUERYDEF`, `SYSLIB`, and `HELP`. The complete MapReport package (database, linked documents, and template files) is written to the output directory and can be used directly from CD or USB without installation.
 
-**Note:** Changes to the database after the request key was generated will invalidate the activation key — finalise database work before publishing.
+**Note:** Changes to the database after the request key was generated will invalidate the activation key - finalise database work before publishing.

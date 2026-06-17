@@ -225,7 +225,7 @@ If the parameters Fe or NO3 are defined as empty in the parameter definition, th
 
 Controls the fill color and transparency of area fills in well design diagrams:
 
-* **Default color** — The background color for a fill pattern is taken from the fill pattern table by default.
-* **User defined** — Select this option to override the default and choose a custom color for the area fill.
-* **Transparent fill** — Allows overlaying filled areas with a transparent fill pattern so underlying elements remain visible. Note: not all print output devices support transparency.
-* **Line thickness** — Adjustable only for vector fill patterns; affects print output only. Changing this setting has no visible effect on the screen.
+* **Default color** - The background color for a fill pattern is taken from the fill pattern table by default.
+* **User defined** - Select this option to override the default and choose a custom color for the area fill.
+* **Transparent fill** - Allows overlaying filled areas with a transparent fill pattern so underlying elements remain visible. Note: not all print output devices support transparency.
+* **Line thickness** - Adjustable only for vector fill patterns; affects print output only. Changing this setting has no visible effect on the screen.

@@ -8,7 +8,7 @@ GeoDin provides multiple export formats for different use cases, from quick tabu
 
 ## Choosing a format
 
-| Format | Use it when… | Guide |
+| Format | Use it when... | Guide |
 |---|---|---|
 | **Excel** | You need a structured workbook for analysis, sharing, or as a round-trip import template | [Excel Export](export/excel.md) |
 | **CSV** | The downstream tool prefers plain delimited text, or you need to re-export a data sequence | [CSV Export](export/csv-export.md) |
@@ -41,14 +41,14 @@ When configuring export column properties, the following options are available:
 
 ## Reference: Presentation conditions
 
-Presentation conditions control how individual cells in a report column are displayed based on their content. A column has a default font, but presentation conditions can override the font and background colour when specific criteria are met — for example, highlighting values that exceed a regulatory limit.
+Presentation conditions control how individual cells in a report column are displayed based on their content. A column has a default font, but presentation conditions can override the font and background colour when specific criteria are met - for example, highlighting values that exceed a regulatory limit.
 
 Multiple conditions can be defined and are evaluated in order. The first matching condition is applied; remaining conditions are skipped. Cells that match no condition use the column's default formatting.
 
 **Example:** In a numeric column, values > 10 should appear violet, values >= 1 red, and all others black. Define two conditions in this order:
 
-1. Cell content > 10 — colour violet
-2. Cell content >= 1 — colour red
+1. Cell content > 10 - colour violet
+2. Cell content >= 1 - colour red
 
 Cells not matching either condition remain black (the column default).
 
@@ -58,8 +58,8 @@ Cells not matching either condition remain black (the column default).
 
 A post-selection filters data records from already-correlated data types (see Pre-selection for correlation).
 
-- **Name** — A label for the post-selection, shown in layout interfaces when the post-selection is exposed as a quick setting.
-- **Condition** — A logical expression that defines the filter criterion. Click inside the field to open the expression builder listing available parameters. Double-click a parameter name to insert it. Syntax is described under *Selection syntax*.
+- **Name** - A label for the post-selection, shown in layout interfaces when the post-selection is exposed as a quick setting.
+- **Condition** - A logical expression that defines the filter criterion. Click inside the field to open the expression builder listing available parameters. Double-click a parameter name to insert it. Syntax is described under *Selection syntax*.
 
 **Parameterised conditions:** Instead of hard-coding a threshold (e.g. `$WAT:Cl$ > 100`), use a placeholder so the user can supply the value at runtime:
 
@@ -69,8 +69,8 @@ A post-selection filters data records from already-correlated data types (see Pr
 | `%STRINGPARAM` | Text data fields |
 | `%DATEPARAM` | Date data fields |
 
-- **Default value** — Pre-fills the parameter input with a starting value.
-- **Make available as quick setting** — Exposes the parameter in the layout's Selection Parameter panel so users enter only the value, not the full expression.
+- **Default value** - Pre-fills the parameter input with a starting value.
+- **Make available as quick setting** - Exposes the parameter in the layout's Selection Parameter panel so users enter only the value, not the full expression.
 
 **Displaying selector content in a layout:** Use the variable text element with the macro `$%SelectorContent:Selector_name[@format]$`. Use `@c` to display the dictionary code instead of the translated long name.
 
@@ -84,17 +84,17 @@ When a statistic report analyses parameters that have no measured values for som
 | **Display as empty row** (default) | A row is created for every parameter; missing counts are left blank. |
 | **Do not display in the report** | Parameters with no data are omitted entirely. |
 
-When a statistic interval is defined (e.g. yearly), the same three options apply to individual time periods within each parameter — missing intervals can show `0`, be left blank, or be suppressed.
+When a statistic interval is defined (e.g. yearly), the same three options apply to individual time periods within each parameter - missing intervals can show `0`, be left blank, or be suppressed.
 
 ## Reference: Report row types
 
 Each row in a report definition has a type that controls its content:
 
-- **Measurement parameter** — Displays data for a single measurement parameter (value, unit, etc.) as defined by the selected column configuration and parameter assignment.
-- **Measurement program** — Inserts an entire measurement program as a block; GeoDin adds parameters automatically in their program sort order. More efficient than adding parameters individually for large data types.
-- **Text** — Creates a separator or header row spanning the full report width. Supports text content (including variable text macros), fill colour, and outline styling.
-- **Page break** — Forces a page break at the defined position. Commonly placed at the end of a row definition so each sample starts on a new page.
-- **Remove text line or page break if no parameter lines follow** — When enabled, suppresses orphaned header rows or page breaks that would appear when a data source has no matching parameter data (e.g. a "Cations" header with no cation values).
+- **Measurement parameter** - Displays data for a single measurement parameter (value, unit, etc.) as defined by the selected column configuration and parameter assignment.
+- **Measurement program** - Inserts an entire measurement program as a block; GeoDin adds parameters automatically in their program sort order. More efficient than adding parameters individually for large data types.
+- **Text** - Creates a separator or header row spanning the full report width. Supports text content (including variable text macros), fill colour, and outline styling.
+- **Page break** - Forces a page break at the defined position. Commonly placed at the end of a row definition so each sample starts on a new page.
+- **Remove text line or page break if no parameter lines follow** - When enabled, suppresses orphaned header rows or page breaks that would appear when a data source has no matching parameter data (e.g. a "Cations" header with no cation values).
 
 ## Reference: Text row properties
 
@@ -112,15 +112,15 @@ Dynamic captions provide per-data-record information in column headers of labora
 
 ## Reference: Footer row properties
 
-- **Name** — Label for the footer line, typically written in the first column. Use the *To column* option to span the label across multiple columns; set to `0` to suppress the label entirely.
-- **Type** — Choose between a text footer or a statistical-value footer.
-- **Decimal places** — Controls precision of calculated values. Set to `0` to strip trailing insignificant decimals; otherwise all calculated decimals are shown.
+- **Name** - Label for the footer line, typically written in the first column. Use the *To column* option to span the label across multiple columns; set to `0` to suppress the label entirely.
+- **Type** - Choose between a text footer or a statistical-value footer.
+- **Decimal places** - Controls precision of calculated values. Set to `0` to strip trailing insignificant decimals; otherwise all calculated decimals are shown.
 
 ## Reference: Parameter settings (list comparison)
 
-- **Sensitivity of response** — Adjusts the tolerance for list-comparison checks. At 100 % (default) the comparison is exact. Reducing to 90 % introduces a 10 % margin, so a measured value of 95 mg/l would be flagged against a limit of 100 mg/l.
-- **Parameter display — if list value is available** — Show the parameter always, or only when the measured value exceeds the comparison value.
-- **Parameter display — if list value is not available** — Controls whether parameters without a comparison value appear in the report.
+- **Sensitivity of response** - Adjusts the tolerance for list-comparison checks. At 100 % (default) the comparison is exact. Reducing to 90 % introduces a 10 % margin, so a measured value of 95 mg/l would be flagged against a limit of 100 mg/l.
+- **Parameter display - if list value is available** - Show the parameter always, or only when the measured value exceeds the comparison value.
+- **Parameter display - if list value is not available** - Controls whether parameters without a comparison value appear in the report.
 
 ## Reference: Barcode and QR code
 

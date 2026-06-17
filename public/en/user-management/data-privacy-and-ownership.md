@@ -12,4 +12,4 @@ GeoDin does not anonymize or sell customer data.
 
 NDA arrangements are available for clients who need to share sensitive project data during configuration or API development; standard NDA templates are provided, or clients can use their own.
 
-Customers can run GeoDin in a locked-down corporate environment with no internet access — runtime telemetry or file transfer from GeoDin staff into the customer network is blocked in such setups.
+Customers can run GeoDin in a locked-down corporate environment with no internet access - runtime telemetry or file transfer from GeoDin staff into the customer network is blocked in such setups.

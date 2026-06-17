@@ -14,28 +14,28 @@ The easiest path is to prepare an Excel table that mirrors the tabular view of G
 
 Mapping options in the import wizard:
 
-- **Automatic Link** — matches headers to GeoDin parameters by name.
-- **Drag-and-drop** — drag from the GeoDin parameter list (left pane) onto the source header (right pane) when names don't match.
-- **Save as ICF** — save the parameter mapping as an ICF file and reload it on subsequent imports to skip manual mapping.
+- **Automatic Link** - matches headers to GeoDin parameters by name.
+- **Drag-and-drop** - drag from the GeoDin parameter list (left pane) onto the source header (right pane) when names don't match.
+- **Save as ICF** - save the parameter mapping as an ICF file and reload it on subsequent imports to skip manual mapping.
 
 ### Preview colours
 
 After mapping, the import preview uses colour to show what will happen:
 
-- **Red** — invalid or out-of-range values; these are blocked.
-- **Green** — new data that will be inserted.
-- **Purple / light green** — existing data that will be overwritten.
+- **Red** - invalid or out-of-range values; these are blocked.
+- **Green** - new data that will be inserted.
+- **Purple / light green** - existing data that will be overwritten.
 - Dictionary values that don't match an existing entry are flagged but still importable.
 
 ### Dictionary fields and unit system
 
-- **Dictionary fields** — accept either the short code (e.g. `CPT`) or the full text value.
-- **Unit system** — toggle under `File > Unit System` between Metric (SI) and US Customary. Unit conversions (e.g. feet to metres) happen on the fly during import.
+- **Dictionary fields** - accept either the short code (e.g. `CPT`) or the full text value.
+- **Unit system** - toggle under `File > Unit System` between Metric (SI) and US Customary. Unit conversions (e.g. feet to metres) happen on the fly during import.
 
 ## Use GeoDin's Excel export to generate a template
 
 The fastest way to prepare an import file with correctly-named columns is to export the matching data type from GeoDin first, fill the exported file, and re-import.
 
 - Any data table (general data, samples, measurement data) can be exported to Excel via the **red-dot export** button.
-- The tabular **All Objects** view under Data Management shows general data for all locations in a single sortable table — exporting this view gives a complete template for general-data imports.
+- The tabular **All Objects** view under Data Management shows general data for all locations in a single sortable table - exporting this view gives a complete template for general-data imports.
 - Exported Excel files contain headers matching GeoDin's internal parameter names, ready for round-trip re-import.

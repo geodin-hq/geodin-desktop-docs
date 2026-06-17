@@ -717,7 +717,7 @@ The following sections describe the `MethodParams` strings accepted by [ExecuteM
 
 ### Data management
 
-**MethodID = 1 (Data management)** — `MethodParams`:
+**MethodID = 1 (Data management)** - `MethodParams`:
 
 A) no entry
 
@@ -743,7 +743,7 @@ The available numbers are:
 
 ### Edit graphic
 
-**MethodID = 2 (Edit graphic)** — `MethodParams`:
+**MethodID = 2 (Edit graphic)** - `MethodParams`:
 
 A) no entry
 
@@ -769,13 +769,13 @@ e.g.: "Report:Reportname|c:\programme\geodin\syslib\geo.gll"
 
 ### Open graphic
 
-**MethodID = 4 (Open Graphic)** — `MethodParams`:
+**MethodID = 4 (Open Graphic)** - `MethodParams`:
 
 A full-length path name of a GeoDin graphic, layout or layoutlist is expected. The file is opened in the graphic window.
 
 ### Import measurement data
 
-**MethodID = 12 (Import measurement values)** — `MethodParams`:
+**MethodID = 12 (Import measurement values)** - `MethodParams`:
 
 ```
 [Params]
@@ -824,7 +824,7 @@ DetailProtocol=true
 
 ### Print graphic or report
 
-**MethodID = 13 (Print graphic or report)** — `MethodParams`:
+**MethodID = 13 (Print graphic or report)** - `MethodParams`:
 
 No entry: The printout is done without a print dialogue on the current printer. If no graphic is opened (detail view or layout overview) or if there are no objects connected with the layout in the layout overview, nothing is printed and the error number 16 is returned.
 
@@ -864,7 +864,7 @@ PrintFileName=C:\GEODINPrints\Ausdruck1.PDF
 
 ### Start plugin
 
-**MethodID = 14 (Start plug-in)** — `MethodParams`:
+**MethodID = 14 (Start plug-in)** - `MethodParams`:
 
 A configuration block has to be transferred, which contains at least the entry:
 
@@ -893,7 +893,7 @@ This configuration section is transferred to the plug-in (only COM server plug-i
 
 ### Check measurements
 
-**MethodID = 53 (Check measurement values)** — `MethodParams`:
+**MethodID = 53 (Check measurement values)** - `MethodParams`:
 
 Use the section "Regression" to check measurement values using a regression analysis.
 

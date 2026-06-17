@@ -1,5 +1,5 @@
 ---
-description: Document organization in GeoDin — how documents are stored, named, and grouped within projects and objects.
+description: Document organization in GeoDin - how documents are stored, named, and grouped within projects and objects.
 ---
 
 # Document Organization
@@ -8,4 +8,4 @@ Documents in GeoDin are attached to **projects** and **objects** (boreholes, loc
 
 Documents can be organized into **folders** within a project's Documents node. Supported file types include PDFs, images, CAD files, GeoDin graphics, and any external file referenced by path.
 
-For the comprehensive reference — full syntax, all options, edge cases — see [**Managing Documents**](managing-documents.md).
+For the comprehensive reference - full syntax, all options, edge cases - see [**Managing Documents**](managing-documents.md).

@@ -27,39 +27,39 @@ This type of series is based on already existing series and allows, for example,
 
 **Pre-defined line**
 
-This series type displays a pre-defined horizontal line — for example, a limit line — in the time line diagram.
+This series type displays a pre-defined horizontal line - for example, a limit line - in the time line diagram.
 
 Selecting the series type changes the structure of the object properties so that the relevant settings can be adjusted. To distinguish individual series more easily in the object properties tree, give each series a free name in the **Name series** input field.
 
 **Time interval**
 
-By default, a series is displayed for the entire time interval of the time series graph as defined by the time scale settings, for as long as data for the series is available. In some cases it is useful to define a special displayed time interval for a particular series — for example, when a threshold value changes due to regulatory amendments. This way, displaying the threshold as a pre-defined line can include the validity period of the threshold using a specific time interval. Select **-Use user-specified time interval-** and choose the desired interval. The series is then displayed only within the selected time interval.
+By default, a series is displayed for the entire time interval of the time series graph as defined by the time scale settings, for as long as data for the series is available. In some cases it is useful to define a special displayed time interval for a particular series - for example, when a threshold value changes due to regulatory amendments. This way, displaying the threshold as a pre-defined line can include the validity period of the threshold using a specific time interval. Select **-Use user-specified time interval-** and choose the desired interval. The series is then displayed only within the selected time interval.
 
 ## Reference: Time Series List Controls
 
 The following toolbar icons appear in list controls throughout the time series properties (both the **Time series** list and the **Series definitions** list):
 
-**New** — Add an entry to the list.
+**New** - Add an entry to the list.
 
-**Duplicate** — Create a copy of the selected entry. The new entry is added at the end of the list and selected automatically.
+**Duplicate** - Create a copy of the selected entry. The new entry is added at the end of the list and selected automatically.
 
-**Delete** — Remove the marked entries from the list.
+**Delete** - Remove the marked entries from the list.
 
-**Move selected entry up** — Move an entry up in the list. Moving entries is also possible using drag and drop.
+**Move selected entry up** - Move an entry up in the list. Moving entries is also possible using drag and drop.
 
-**Move selected entry down** — Move an entry down in the list. Moving entries is also possible using drag and drop.
+**Move selected entry down** - Move an entry down in the list. Moving entries is also possible using drag and drop.
 
-**Edit without refresh** — Edit list entries without triggering a refresh. Moving a series or column definition in the list can cause long processing depending on the underlying data, because many pages may be affected. Use this icon to edit the list without actualization; abandon editing with the cross or confirm with the tick mark.
+**Edit without refresh** - Edit list entries without triggering a refresh. Moving a series or column definition in the list can cause long processing depending on the underlying data, because many pages may be affected. Use this icon to edit the list without actualization; abandon editing with the cross or confirm with the tick mark.
 
-**Double-click an entry** — Closes the list and navigates in the object properties tree to the selected entry, so its properties can be edited.
+**Double-click an entry** - Closes the list and navigates in the object properties tree to the selected entry, so its properties can be edited.
 
 ## Reference: Presentation Options
 
-Optionally, a time line series can use curves, bars, and symbols — in any combination. If no presentation type is chosen, the series is not displayed (this can be useful for series used only for aggregations).
+Optionally, a time line series can use curves, bars, and symbols - in any combination. If no presentation type is chosen, the series is not displayed (this can be useful for series used only for aggregations).
 
 **Curve**
 
-Select the **Curve** presentation type to display a continuous line. Optionally choose an interruption criterion based on the time span between two measurements — this avoids the visual impression of continuous measurements when data has gaps. Combined with a symbol or bar diagram, this produces different graphic presentation types for irregular measurement intervals.
+Select the **Curve** presentation type to display a continuous line. Optionally choose an interruption criterion based on the time span between two measurements - this avoids the visual impression of continuous measurements when data has gaps. Combined with a symbol or bar diagram, this produces different graphic presentation types for irregular measurement intervals.
 
 By default, data records are ignored when the chosen parameter has no value (but a time exists), and a line is drawn through these records. Use the option **break line for empty records** to interrupt the line at such records instead.
 
@@ -90,7 +90,7 @@ An individual series defines two essential features:
 1. Selection of the amount of data to be shown
 2. Selection of the type of presentation (graphic properties)
 
-For example, in an X-Y diagram, triangle diagram, or hydrochemical special diagram — to display measurement values of one measurement point as red symbols and another as blue symbols — create two series: set the data source for the first to the first measurement point and select red as the symbol color; set the data source for the second to the second measurement point and select blue.
+For example, in an X-Y diagram, triangle diagram, or hydrochemical special diagram - to display measurement values of one measurement point as red symbols and another as blue symbols - create two series: set the data source for the first to the first measurement point and select red as the symbol color; set the data source for the second to the second measurement point and select blue.
 
 To distinguish individual series in the object properties tree, give each series a free name in the **Name series** input field.
 
@@ -108,21 +108,21 @@ The option **-Draw top diagram boundary-** draws a horizontal closing line at th
 
 The time interval of the time axis defines the starting and ending time of the presentation. The points in time can be selected separately using the following options:
 
-**Automatic** — The point in time is defined by the existing measurement values.
+**Automatic** - The point in time is defined by the existing measurement values.
 
-**Point in time** — The point in time is entered directly in the input field.
+**Point in time** - The point in time is entered directly in the input field.
 
-**Relative** — The point in time is selected relative to other points in time. This option can be selected for only one of the two endpoints. Optionally, use **Round up time difference** to round the calculated point in time to a round value of the time interval (for example, the 1st of the month).
+**Relative** - The point in time is selected relative to other points in time. This option can be selected for only one of the two endpoints. Optionally, use **Round up time difference** to round the calculated point in time to a round value of the time interval (for example, the 1st of the month).
 
-**Current time** — Available for the ending time only. The current time is used as the ending point.
+**Current time** - Available for the ending time only. The current time is used as the ending point.
 
 The starting and ending points resulting from the settings or the actual measurement values are displayed as information.
 
-**Example:** to display the measurement values of the last 10 years until today — set the ending point to **-Current time-** and the starting time to **-Relative-** with a value of 10 and **Years** selected in the dropdown.
+**Example:** to display the measurement values of the last 10 years until today - set the ending point to **-Current time-** and the starting time to **-Relative-** with a value of 10 and **Years** selected in the dropdown.
 
 ## Reference: Formula Syntax
 
-For graphic elements related to measurements and measurement graphics — such as time series, triangle diagrams, and others — formulas are used for the featured parameters. In the simplest case a formula contains only the variable for the parameter; complex mathematical formulas combining several parameters are also supported.
+For graphic elements related to measurements and measurement graphics - such as time series, triangle diagrams, and others - formulas are used for the featured parameters. In the simplest case a formula contains only the variable for the parameter; complex mathematical formulas combining several parameters are also supported.
 
 In formula entry fields, use the **Build** button (right icon in the entry field) to build a formula from a list of possible parameters.
 
@@ -145,7 +145,7 @@ Supported mathematical operators: `+` `-` `*` `/`
 Supported functions (argument in round brackets):
 
 * `ABS`
-* `ROUND` — example: `ROUND($WAS:NO3$)`
+* `ROUND` - example: `ROUND($WAS:NO3$)`
 * `EXP`
 * `LN`
 * `LOG`
@@ -178,7 +178,7 @@ The time interval of a time line series can be adjusted so that the measurement 
 
 **Effect:** the presentation area of the time axis of all time line series in the layout is set to the selected time interval in the past of the current date.
 
-### Axis scale — time axis
+### Axis scale - time axis
 
 **Using layout interfaces**
 

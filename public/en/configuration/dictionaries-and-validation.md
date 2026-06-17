@@ -6,7 +6,7 @@ Dictionaries supply the controlled value lists behind GeoDin's drop-down fields,
 
 Dictionaries are pre-made lists that populate drop-down fields (marked with a `?` symbol to the right of the field).
 
-Dictionary values have two representations: full text (e.g., "Cone Penetration Testing") and short code (e.g., "CPT") — the short code is what GeoDin actually stores in the database.
+Dictionary values have two representations: full text (e.g., "Cone Penetration Testing") and short code (e.g., "CPT") - the short code is what GeoDin actually stores in the database.
 
 Dictionaries support multi-language translations (e.g., English, Dutch); language switch happens at a setting level and applies to layer descriptions.
 
@@ -14,19 +14,19 @@ Every dictionary in GeoDin is stored as a separate file with `.GSD` extension in
 
 Example dictionary files: `G1 Investigation Method`, `BS5930 Walker Secondary Soil Type`, `G1_EPSG.GSD` (coordinate systems), `Sample Type`.
 
-Dictionaries are viewable/editable under `System > Dictionaries > [dictionary name]` — double-click to see all entries with short code and language translations.
+Dictionaries are viewable/editable under `System > Dictionaries > [dictionary name]` - double-click to see all entries with short code and language translations.
 
-Some dictionaries are context-sensitive — e.g., the secondary soil type dictionary is restricted based on the primary ground type selected (clay+silt vs coarse-grain).
+Some dictionaries are context-sensitive - e.g., the secondary soil type dictionary is restricted based on the primary ground type selected (clay+silt vs coarse-grain).
 
 Users can add their own terms to dictionaries (new clients, new labs, new soil types).
 
-When a user edits a dictionary, a timestamp is recorded and that dictionary becomes "frozen" — GeoDin releases will not overwrite it, preserving user additions.
+When a user edits a dictionary, a timestamp is recorded and that dictionary becomes "frozen" - GeoDin releases will not overwrite it, preserving user additions.
 
 Users should keep a list of dictionaries they have edited so they can request updates from GeoDin support when needed.
 
 Low-risk dictionaries (client list, lab names) can be edited freely; higher-risk dictionaries (soil types, field patterns) require more care because losing updates could matter.
 
-Some dictionary-backed fields allow free-text entry in addition to dictionary selection — free text does not add the value to the dictionary.
+Some dictionary-backed fields allow free-text entry in addition to dictionary selection - free text does not add the value to the dictionary.
 
 Dictionary files live per installation; users on a shared network install share the same dictionary files.
 
@@ -50,11 +50,11 @@ Central GeoDin-distributed tables cannot be edited by users (must remain consist
 
 Data types contain built-in formulas (e.g., the water content table auto-calculates W from tin mass, wet mass, dry mass inputs); formula cells are displayed in darker blue to indicate auto-populated calculated fields.
 
-Each measurement table parameter has both a long name (human-readable) and a short/database field name (used in macros, queries, formulas) — toggle via right-click "short field name".
+Each measurement table parameter has both a long name (human-readable) and a short/database field name (used in macros, queries, formulas) - toggle via right-click "short field name".
 
-Data type tables are inspectable via `System > Data Types > [table name]` — shows parameter list, long name, database field name, active formulas.
+Data type tables are inspectable via `System > Data Types > [table name]` - shows parameter list, long name, database field name, active formulas.
 
-**Compulsory fields** appear in a darker purple color in the form — e.g., the `Method` field in general data.
+**Compulsory fields** appear in a darker purple color in the form - e.g., the `Method` field in general data.
 
 Saving a record without a compulsory field triggers an error telling the user which field is required.
 

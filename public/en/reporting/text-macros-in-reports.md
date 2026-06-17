@@ -10,18 +10,18 @@ For the broader template structure (layouts, snippets, report elements), see [Re
 
 ## Static text vs. dynamic macros
 
-- **Static text** — placed anywhere on a template; the same text prints on every output.
-- **Dynamic macros** — placed inside an object frame, reference a GeoDin parameter and resolve at render time. For example, the `location_name` macro pulls the current borehole name dynamically.
+- **Static text** - placed anywhere on a template; the same text prints on every output.
+- **Dynamic macros** - placed inside an object frame, reference a GeoDin parameter and resolve at render time. For example, the `location_name` macro pulls the current borehole name dynamically.
 
 ## Macro syntax
 
 Macros are delimited with `$` on both sides:
 
-- `$LONGNAME$` — long location name
-- `$%PRNPAGE$` — page print number
-- `$ZCOORDE$` — Z coordinate (elevation)
+- `$LONGNAME$` - long location name
+- `$%PRNPAGE$` - page print number
+- `$ZCOORDE$` - Z coordinate (elevation)
 
-Macros can reference parameters from any table — general data, sample tables, measurement tables, and data sequences.
+Macros can reference parameters from any table - general data, sample tables, measurement tables, and data sequences.
 
 ### Concatenation
 
@@ -37,19 +37,19 @@ Square brackets `[ ]` inside a macro act as conditional separators: the brackete
 
 ### Calculated parameters
 
-The Build dialog can include calculated parameters — for example, layer thickness derived from top and base depths — alongside raw database fields.
+The Build dialog can include calculated parameters - for example, layer thickness derived from top and base depths - alongside raw database fields.
 
 ## Display options
 
 When configuring a text-macro element you can choose:
 
-- **Show depth** — include the depth value of the referenced row.
-- **Show layer data** — include layer attributes alongside the macro.
-- **Orientation** — text orientation on the page.
+- **Show depth** - include the depth value of the referenced row.
+- **Show layer data** - include layer attributes alongside the macro.
+- **Orientation** - text orientation on the page.
 
 The **coding / norm / user** setting controls which descriptor source feeds the macro. For G1 these are mostly equivalent; the **user** option allows arbitrary plain text mixed with macros.
 
-For G1 ground description specifically, most descriptive content sits inside the single `geological description` macro — unlike other object types which split the description across separate petrography and colour macros.
+For G1 ground description specifically, most descriptive content sits inside the single `geological description` macro - unlike other object types which split the description across separate petrography and colour macros.
 
 ## Translation support
 
@@ -57,4 +57,4 @@ A single layout can hold multiple translations. Switching the file language unde
 
 ## Querying for macro data sources
 
-Text macros can pull from query results, not just direct table fields. Build a SQL query that joins tables across different tests — for example, "show water content only where unit weight is non-zero" — and use the query result as the data source for a template element.
+Text macros can pull from query results, not just direct table fields. Build a SQL query that joins tables across different tests - for example, "show water content only where unit weight is non-zero" - and use the query result as the data source for a template element.

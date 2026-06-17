@@ -15,7 +15,7 @@ The borehole element supports three drawing types: **Graphic Log**, **Tabular Lo
 - Fixed depth intervals (e.g., only show the first 10 m)
 - "Fit to Page" (dynamic scale per object)
 
-A depth interval setting can force a page break — for example, setting an end depth of 10 m causes the borehole to continue on page 2. Scale, interval, page break, and fit-to-page settings interact and must be balanced together.
+A depth interval setting can force a page break - for example, setting an end depth of 10 m causes the borehole to continue on page 2. Scale, interval, page break, and fit-to-page settings interact and must be balanced together.
 
 {% hint style="info" %}
 Each borehole with measurement data is marked with a small blue sphere icon next to it in the tree view.
@@ -36,7 +36,7 @@ The **Report** graphic element displays tables with database contents or calcula
 | Type | Description |
 |---|---|
 | **Original data report** | Shows original data in summary: tabular borehole presentations, sample overviews, measurement value tables. Nearly all data in a GeoDin database can be documented in any combination. |
-| **Report calculation** | Processes measurement value data before reporting — includes list comparison, statistics, annual statistics, laboratory control reports, plausibility reports, and grain size analyses (particle size parameter, sieve analysis, hydrometer analysis). |
+| **Report calculation** | Processes measurement value data before reporting - includes list comparison, statistics, annual statistics, laboratory control reports, plausibility reports, and grain size analyses (particle size parameter, sieve analysis, hydrometer analysis). |
 | **Plug-in reports** | Requires external plug-in modules. The plug-in handles all configuration and calculation; no further settings can be made in GeoDin. |
 
 ### Image element

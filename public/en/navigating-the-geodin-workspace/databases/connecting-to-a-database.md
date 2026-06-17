@@ -1,6 +1,6 @@
 ---
 description: >-
-  How GeoDin stores data in databases — desktop vs client/server types, the
+  How GeoDin stores data in databases - desktop vs client/server types, the
   system/user hierarchy and naming rules, and how to create a database
   connection from the GeoDin object manager.
 ---
@@ -62,9 +62,9 @@ The creation of database connections to Access databases is described in chapter
 
 The creation of database connections to Client/Server databases is described in chapter: [Client/Server](connecting-to-a-database.md)
 
-Object, measurement, report, document, and project-copy reference content formerly duplicated on this page now lives on its subject pages — see [Working with Measurement Data](../measurement-values/working-with-measurement-data.md), [Object Operations Reference](../object-types/object-operations-reference.md), [Working with Projects](../projects/working-with-projects.md), [Report Templates](../../reporting/report-templates.md), and [Managing Documents](../documents/managing-documents.md).
+Object, measurement, report, document, and project-copy reference content formerly duplicated on this page now lives on its subject pages - see [Working with Measurement Data](../measurement-values/working-with-measurement-data.md), [Object Operations Reference](../object-types/object-operations-reference.md), [Working with Projects](../projects/working-with-projects.md), [Report Templates](../../reporting/report-templates.md), and [Managing Documents](../documents/managing-documents.md).
 
 ## Related topics
 
-- [Managing Database Connections](managing-database-connections.md) — editing, deleting, system vs. user databases, configuration
-- [Supported Database Types](supported-database-types.md) — Access, SQL-Server, Oracle, MySQL, PostgreSQL specifics
+- [Managing Database Connections](managing-database-connections.md) - editing, deleting, system vs. user databases, configuration
+- [Supported Database Types](supported-database-types.md) - Access, SQL-Server, Oracle, MySQL, PostgreSQL specifics

@@ -8,9 +8,9 @@ The **General Data** section of a GeoDin object holds the headline record for a 
 
 For the related concepts, see also:
 
-- [Layer and Stratigraphy](layer-and-stratigraphy.md) — soil/rock layers and ground descriptions attached to a location.
-- [Sample and Specimen Model](sample-and-specimen-model.md) — samples taken from a location.
-- [Object Types](object-types.md) — G1, AGS, and other object-type families.
+- [Layer and Stratigraphy](layer-and-stratigraphy.md) - soil/rock layers and ground descriptions attached to a location.
+- [Sample and Specimen Model](sample-and-specimen-model.md) - samples taken from a location.
+- [Object Types](object-types.md) - G1, AGS, and other object-type families.
 
 ## What General Data holds
 
@@ -20,4 +20,4 @@ For the related concepts, see also:
 
 ## Compulsory fields
 
-Compulsory fields (e.g. `Method` in general data) appear in a darker purple colour. Saving a record without a compulsory field triggers a validation error that names the missing field — the record cannot be persisted until the field is supplied.
+Compulsory fields (e.g. `Method` in general data) appear in a darker purple colour. Saving a record without a compulsory field triggers a validation error that names the missing field - the record cannot be persisted until the field is supplied.

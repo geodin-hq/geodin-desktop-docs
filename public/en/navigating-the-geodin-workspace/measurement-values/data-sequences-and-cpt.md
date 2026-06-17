@@ -1,7 +1,7 @@
 
 # Data Sequences and CPT
 
-Data sequences are the measurement-value series held against a data type in GeoDin — the per-row records the measurement editor reads and writes. This page is the reference for the data-sequence operations and the data-type structure dialogs you work with around them: inserting and removing rows, resolving data-type creation errors, comparing data-type structures across databases, and the parameter overview and parameter-property editors.
+Data sequences are the measurement-value series held against a data type in GeoDin - the per-row records the measurement editor reads and writes. This page is the reference for the data-sequence operations and the data-type structure dialogs you work with around them: inserting and removing rows, resolving data-type creation errors, comparing data-type structures across databases, and the parameter overview and parameter-property editors.
 
 For the measurement-data editor itself, see [Working with Measurement Data](../measurement-values/working-with-measurement-data.md).
 

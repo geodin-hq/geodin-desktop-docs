@@ -1,7 +1,7 @@
 
 # Managing Documents
 
-GeoDin document management lets you attach any type of file — photos, Microsoft Word texts, Microsoft Excel tables, videos, and GeoDin graphics — to a database, project, object, or measurement point, store it in the database or as a link, and view, edit, save, or print it from GeoDin. This page is the canonical, comprehensive reference for the document management module: the orientation and walkthroughs come first, then the working detail, then the full configuration, table, and import-format reference. For a short conceptual overview see [**Document Organization**](document-organization.md).
+GeoDin document management lets you attach any type of file - photos, Microsoft Word texts, Microsoft Excel tables, videos, and GeoDin graphics - to a database, project, object, or measurement point, store it in the database or as a link, and view, edit, save, or print it from GeoDin. This page is the canonical, comprehensive reference for the document management module: the orientation and walkthroughs come first, then the working detail, then the full configuration, table, and import-format reference. For a short conceptual overview see [**Document Organization**](document-organization.md).
 
 ## Documents
 

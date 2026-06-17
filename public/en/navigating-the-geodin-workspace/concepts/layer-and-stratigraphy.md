@@ -1,5 +1,5 @@
 ---
-description: GeoDin's Layer Data model — soil/rock layers, ground descriptions, and coding
+description: GeoDin's Layer Data model - soil/rock layers, ground descriptions, and coding
 ---
 
 # Layer and Stratigraphy
@@ -8,7 +8,7 @@ The Layer Data section stores soil/rock layers with their descriptions.
 
 ## Building a layered borehole log
 
-Layers in G1 must be entered by hand — layer by layer via "Add Ground Description".
+Layers in G1 must be entered by hand - layer by layer via "Add Ground Description".
 
 Each layer requires selection of a Ground Description Standard (e.g. BS5930 Walker, ASTM) from a dictionary of available standards.
 
@@ -46,7 +46,7 @@ When saving, GeoDin warns about layer properties valid in one standard but not t
 
 ## Copying layers between boreholes
 
-Borehole log properties (layer data) can be copied from one borehole to another, even across databases, via `Copy Borehole Log` — layers transfer, but some standard-specific codes may not translate automatically.
+Borehole log properties (layer data) can be copied from one borehole to another, even across databases, via `Copy Borehole Log` - layers transfer, but some standard-specific codes may not translate automatically.
 
 ## Further reference
 

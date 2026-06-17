@@ -39,7 +39,7 @@ is now displayed **without inverted commas**.
 * The default value for the input field **Type of structure (TYP\_TF)** has been removed\
   This enables the deletion of an existing layer.
 
-<figure><img src="../../../.gitbook/assets/image (88).png" alt=""><figcaption>The Discontinuities input form, with multiple keys (<code>e,r</code>) entered in the <strong>Roughness</strong> field — the resulting "planar, rough" description appears in the layer summary bar.</figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (88).png" alt=""><figcaption>The Discontinuities input form, with multiple keys (<code>e,r</code>) entered in the <strong>Roughness</strong> field - the resulting "planar, rough" description appears in the layer summary bar.</figcaption></figure>
 
 ## Reference: Adaptations to DIN standards
 
@@ -96,10 +96,10 @@ For the standard **DIN EN ISO (deutsch)**, fill patterns were updated for the fo
 * `(E2) Major components` \[E2PSTYPE]
 * `(E2) Secondary components` \[E2SSTYPE]
 * `(E2) Genesis` \[E2GENESE]
-* `(E2) Well design – back fill` \[E2ASBVER]
-* `(E2) Well design – casing` \[E2ROHEL]
+* `(E2) Well design - back fill` \[E2ASBVER]
+* `(E2) Well design - casing` \[E2ROHEL]
 
-<figure><img src="../../../.gitbook/assets/image (90).png" alt=""><figcaption>Old (left) versus new (right) fill patterns for Silt, Limestone, Sandstone, Granite, Monzonite, Rhyolite, Amphibolite, Greenschist, and Hornfels — recoloured to the DIN 4023 colour values.</figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (90).png" alt=""><figcaption>Old (left) versus new (right) fill patterns for Silt, Limestone, Sandstone, Granite, Monzonite, Rhyolite, Amphibolite, Greenschist, and Hornfels - recoloured to the DIN 4023 colour values.</figcaption></figure>
 
 ## Reference: Visualisation adaptations
 
@@ -114,7 +114,7 @@ This was achieved by adapting the dictionary:
 
 **Dictionary:** `(E2) Condition WRT cuttings` \[E2BOHGUT]
 
-<figure><img src="../../../.gitbook/assets/image (91).png" alt=""><figcaption>Borehole-log visualisation of the new cutting conditions — "Limestone, highly jointed" (left) and "Topsoil, liquid" (right).</figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (91).png" alt=""><figcaption>Borehole-log visualisation of the new cutting conditions - "Limestone, highly jointed" (left) and "Topsoil, liquid" (right).</figcaption></figure>
 
 ### Adaptation of the Display for Weathering Grade
 
@@ -124,11 +124,11 @@ A new visualisation was introduced for the weathering stage **Residual soil** (g
 
 For visualisation, the graphic element **Special symbol** with the special symbol type **Weathering grade** can be used.
 
-<figure><img src="../../../.gitbook/assets/image (92).png" alt=""><figcaption>Borehole-log visualisation of the residual-soil weathering grade using the <strong>Special symbol</strong> graphic element — "fine Sand, silty, residual soil".</figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (92).png" alt=""><figcaption>Borehole-log visualisation of the residual-soil weathering grade using the <strong>Special symbol</strong> graphic element - "fine Sand, silty, residual soil".</figcaption></figure>
 
 ### Adaptation of Sample Visualisation
 
-Samples of **category A–E** are now displayed **uniformly in full colour** for the standards:
+Samples of **category A-E** are now displayed **uniformly in full colour** for the standards:
 
 * DIN EN ISO (deutsch)
 * INT (english)
@@ -138,7 +138,7 @@ Samples of **category A–E** are now displayed **uniformly in full colour** for
 **Screenshot placeholder:**\
 `E2_samples_categoy_A-E.png`
 
-<figure><img src="../../../.gitbook/assets/image (93).png" alt=""><figcaption>Sample-type legend — categories A–E shown uniformly in full colour, with the water sample as the open-triangle exception.</figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (93).png" alt=""><figcaption>Sample-type legend - categories A-E shown uniformly in full colour, with the water sample as the open-triangle exception.</figcaption></figure>
 
 ## Reference: Further general adaptations
 
@@ -148,7 +148,7 @@ Samples of **category A–E** are now displayed **uniformly in full colour** for
 
 * Ground unit (`GROUNDUNIT`)
 
-**Well Design Data – Casing \[E2WDCAS]**
+**Well Design Data - Casing \[E2WDCAS]**
 
 * Diameter nominal (`ELDNWIDE`)
 
@@ -185,7 +185,7 @@ The display format in the data management method has been adjusted from **0 to 2
 
 **Data type:** `E2LAYER`
 
-* The long text for the field **GROUP** has been renamed from **“group”** to **“soil group”**
+* The long text for the field **GROUP** has been renamed from **"group"** to **"soil group"**
 
 ### Adjustment of Dictionaries
 
@@ -194,13 +194,13 @@ The display format in the data management method has been adjusted from **0 to 2
 **Dictionary:** `(E2) Organic components` \[E2ORGMAT]
 
 * A gradation has been added for the key **humous**:
-  * 2 – slightly
-  * 4 – very
+  * 2 - slightly
+  * 4 - very
 * Translations have been added for:
   * _slightly_ (`$TRCODE2B`)
   * _very_ (`$TRCODE4B`)
 
-<figure><img src="../../../.gitbook/assets/image (94).png" alt=""><figcaption>Layer data input form — the <strong>Organic components</strong> field with key <code>hum2</code> entered, producing "slightly humous" in the layer description.</figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (94).png" alt=""><figcaption>Layer data input form - the <strong>Organic components</strong> field with key <code>hum2</code> entered, producing "slightly humous" in the layer description.</figcaption></figure>
 
 #### Sample Type
 
@@ -234,8 +234,8 @@ In the graphic element **Well design**, the default display has been adjusted fo
 
 **New text macro:**<br>
 
-<figure><img src="../../../.gitbook/assets/image (95).png" alt=""><figcaption>New text macro — the Well design layout displaying borehole and casing diameters with the updated decimal-place formatting.</figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (95).png" alt=""><figcaption>New text macro - the Well design layout displaying borehole and casing diameters with the updated decimal-place formatting.</figcaption></figure>
 
 **Old text macro:**<br>
 
-<figure><img src="../../../.gitbook/assets/image (96).png" alt=""><figcaption>Old text macro — the previous Well design layout display, before the decimal-place adjustment.</figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (96).png" alt=""><figcaption>Old text macro - the previous Well design layout display, before the decimal-place adjustment.</figcaption></figure>

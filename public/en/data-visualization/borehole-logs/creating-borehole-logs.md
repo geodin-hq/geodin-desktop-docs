@@ -4,7 +4,7 @@ Borehole logs are created as complex graphic elements in a layout: you draw an o
 
 ## Creating a borehole log graphic
 
-The second toolbar contains the complex graphic elements — tools for borehole logs, well design, data sequences etc. General information on adding and editing graphic elements can be found in [Edit graphic](../layouts/layout-editor-basics.md); detailed descriptions of the individual graphic elements are available in [Borehole elements](../layouts/borehole-elements.md).
+The second toolbar contains the complex graphic elements - tools for borehole logs, well design, data sequences etc. General information on adding and editing graphic elements can be found in [Edit graphic](../layouts/layout-editor-basics.md); detailed descriptions of the individual graphic elements are available in [Borehole elements](../layouts/borehole-elements.md).
 
 {% stepper %}
 {% step %}
@@ -15,7 +15,7 @@ The object frame is the base for geological/geotechnical graphic drawing element
 {% step %}
 #### Step 2: Add an element inside the object frame
 
-Add the complex graphic element — for a borehole log, the element **Borehole log/Borehole tab** — inside the selected object frame.
+Add the complex graphic element - for a borehole log, the element **Borehole log/Borehole tab** - inside the selected object frame.
 {% endstep %}
 {% step %}
 #### Step 3: Define the featured object or objects
@@ -28,7 +28,7 @@ Define the object or objects the element displays at **Data source**.
 
 ## Working with borehole log graphics
 
-With the graphic element **Borehole log/Borehole tab** the borehole log can be realized with fill patterns, including the labeling with depth values and layer description, and presentation of the consistency — or optionally a presentation of the layer description in scaled tabular form.
+With the graphic element **Borehole log/Borehole tab** the borehole log can be realized with fill patterns, including the labeling with depth values and layer description, and presentation of the consistency - or optionally a presentation of the layer description in scaled tabular form.
 
 The borehole log or the table is distributed automatically over several pages if the chosen height scale requires it and scaling on one page is not selected. In this case the two page icons in the upper symbol bar are available to switch from the previous page to the next.
 
@@ -110,9 +110,9 @@ Text tags to the element can optionally be aligned automatically to the element 
 
 ### Grid
 
-* **Show grid to end depth** — the background grid can be drawn until the end depth of the borehole, even when the measurement values do not reach this depth. The option is only active if a borehole log element is included in the object frame which is drawn until the end depth. Also the height of the graphic element data sequence must be large enough for the presentation until the end depth.
-* **Draw in foreground** — if showing the data sequence in a grid, choose this option for the grid to be displayed in the presentation. Otherwise it is drawn behind the borehole log, curve or data sequence element and therefore partially hidden by filled borehole logs and curves.
-* **Draw grid without data** — only active if the layout contains at least one displayable element (for example a borehole log or another data sequence graphic). If the current object contains no data concerning the selected measurement series, the grid of the data sequence element is drawn; otherwise the space in the layout remains empty.
+* **Show grid to end depth** - the background grid can be drawn until the end depth of the borehole, even when the measurement values do not reach this depth. The option is only active if a borehole log element is included in the object frame which is drawn until the end depth. Also the height of the graphic element data sequence must be large enough for the presentation until the end depth.
+* **Draw in foreground** - if showing the data sequence in a grid, choose this option for the grid to be displayed in the presentation. Otherwise it is drawn behind the borehole log, curve or data sequence element and therefore partially hidden by filled borehole logs and curves.
+* **Draw grid without data** - only active if the layout contains at least one displayable element (for example a borehole log or another data sequence graphic). If the current object contains no data concerning the selected measurement series, the grid of the data sequence element is drawn; otherwise the space in the layout remains empty.
 
 ### Profile display (graphically)
 
@@ -152,9 +152,9 @@ Select the data field and enter the code to be searched. Choose a fill pattern a
 
 Selection of the view of consistency, compactness and groundwater on the right side of the borehole.
 
-* **Draw** — deactivate this option if you don't want consistency, compactness and groundwater to be drawn.
-* **Show in legend** — define whether the symbols for consistency, compactness and groundwater are to be shown in the automatic legend.
-* **Line type** — define how the lines are drawn; a detailed description can be found at [Line type](../../configuration/fill-patterns-and-symbols.md).
+* **Draw** - deactivate this option if you don't want consistency, compactness and groundwater to be drawn.
+* **Show in legend** - define whether the symbols for consistency, compactness and groundwater are to be shown in the automatic legend.
+* **Line type** - define how the lines are drawn; a detailed description can be found at [Line type](../../configuration/fill-patterns-and-symbols.md).
 
 ### Show as line
 
@@ -173,17 +173,17 @@ For the layer description you can choose between the following labeling modes:
 | Mode | Description |
 |---|---|
 | **Text** | The borehole is shown with a pre-defined selection of data fields with a text translation of the dictionary codes. |
-| **Norm** | Uses standard macro definitions for the layer descriptions, depending upon in which standard the geological information has been collected (e.g. DIN 4023, BS 5930). The codes used are stored in the Standard field in the relevant dictionary — if no codes are present then the dictionary entries in the main window will be used. |
+| **Norm** | Uses standard macro definitions for the layer descriptions, depending upon in which standard the geological information has been collected (e.g. DIN 4023, BS 5930). The codes used are stored in the Standard field in the relevant dictionary - if no codes are present then the dictionary entries in the main window will be used. |
 | **Coding** | The codes stored in the database are used for labelling. |
 | **User** | The user-definable option can be customized via **Build**. Detailed descriptions are given in the chapter [Text macro](../../reporting/text-macros-in-reports.md). |
 
-* **Reverse slash** — this option allows the reverse slash to be interpreted as a line break.
-* **Ignore unknown variable names** — if you use universal layouts that are built for multiple object types, this option is useful in ignoring variable names of data fields that are not present.
-* **Join same layers** — adjacent layers in the borehole log or the borehole table can be unified to one layer if the content of the selected data fields is identical.
+* **Reverse slash** - this option allows the reverse slash to be interpreted as a line break.
+* **Ignore unknown variable names** - if you use universal layouts that are built for multiple object types, this option is useful in ignoring variable names of data fields that are not present.
+* **Join same layers** - adjacent layers in the borehole log or the borehole table can be unified to one layer if the content of the selected data fields is identical.
 
 ### Snap distance
 
-The snap distance — the maximum distance which cannot be exceeded for connecting one point automatically to another — can be adjusted between 1 and 50 mm. The selection of the distance is possible using the menu entry **Preferences → Snap preferences**.
+The snap distance - the maximum distance which cannot be exceeded for connecting one point automatically to another - can be adjusted between 1 and 50 mm. The selection of the distance is possible using the menu entry **Preferences → Snap preferences**.
 
 Graphic elements with nodes that are influenced by the snap function are: line, rectangle, polyline and borehole profile.
 

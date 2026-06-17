@@ -1,7 +1,7 @@
 
 # Creating Site Plans
 
-The site plan tool constructs a georeferenced plan of GeoDin objects in a configurable map frame, with automatic non-overlapping label placement. Objects are added from any database or project — they do not need to share a project. Scenarios control how object symbols, labels, and the map frame are drawn.
+The site plan tool constructs a georeferenced plan of GeoDin objects in a configurable map frame, with automatic non-overlapping label placement. Objects are added from any database or project - they do not need to share a project. Scenarios control how object symbols, labels, and the map frame are drawn.
 
 ## Creating a site plan
 
@@ -18,7 +18,7 @@ Once started, the construction workflow follows four steps:
 3. Define the map scale and the position of the site plan on the print (see [Reference: Scale](#reference-site-plan-properties) below).
 4. Select and configure the presentation options for map frame, point symbols, object names, and other scenarios (see [Reference: Site plan scenarios](#reference-site-plan-properties) below).
 
-All settings made in the site plan branch — adding objects, changing scale or display properties — are immediately reflected in the site plan graphic.
+All settings made in the site plan branch - adding objects, changing scale or display properties - are immediately reflected in the site plan graphic.
 
 ## Optional settings
 
@@ -30,7 +30,7 @@ All settings made in the site plan branch — adding objects, changing scale or 
 
 **Graphic elements of site plans**
 
-All graphic elements used for site plan construction are placed in special drawing layers of the graphic. These elements can only be edited by changing their parameters in the site plan branch — it is not possible to select and edit them directly, unless the site plan is dissolved using **Break up site plan**.
+All graphic elements used for site plan construction are placed in special drawing layers of the graphic. These elements can only be edited by changing their parameters in the site plan branch - it is not possible to select and edit them directly, unless the site plan is dissolved using **Break up site plan**.
 
 Each site plan scene (object symbols, object names, map frame, etc.) is placed in a separate drawing layer. These layers appear in the layer list with a site plan symbol and can be shown or hidden like any other drawing layer.
 
@@ -52,7 +52,7 @@ The entire site plan can be moved as a whole to the foreground or background rel
 
 **Portal links**
 
-GeoDin-portal layouts can set references to other sites — this is the essential difference from normal GeoDin layouts.
+GeoDin-portal layouts can set references to other sites - this is the essential difference from normal GeoDin layouts.
 
 {% hint style="info" %}
 To use portal links, activate the portal function in the advanced properties.
@@ -60,19 +60,19 @@ To use portal links, activate the portal function in the advanced properties.
 
 Portal links are differentiated by their jump target:
 
-* **Change page** — scroll through a multipage portal layout.
-* **Go to portal page** — jump to a portal layout.
-* **Get portal report** — retrieve a PDF of a portal report.
-* **Go to website** — jump to an arbitrary URL in the internet or intranet.
-* [Show document](../../navigating-the-geodin-workspace/documents/managing-documents.md) — call a document from the GeoDin document manager or from the file system.
+* **Change page** - scroll through a multipage portal layout.
+* **Go to portal page** - jump to a portal layout.
+* **Get portal report** - retrieve a PDF of a portal report.
+* **Go to website** - jump to an arbitrary URL in the internet or intranet.
+* [Show document](../../navigating-the-geodin-workspace/documents/managing-documents.md) - call a document from the GeoDin document manager or from the file system.
 
 Selecting a link below the **portal links** node opens the properties dialogue for that link. The following properties can be set:
 
 * **Name of the link:** free name for the link.
 * **Conditions:** specify whether and to what conditions the portal function is bound:
-  * **-without conditions-** — the portal function is always active.
-  * **-Data set conditions-** — click the editing field to enter a data set condition (enter directly or use a frame query).
-  * **-Conditions of cell content-** — condition based on cell content; enter directly or use a frame query. The **type of the cell content** must be set: **-Numeric-** (numbers and `+`/`-`/decimal point), **-Alpha numeric-** (numbers, letters, and special characters), or **-Date setting-** (standard date format, e.g. `mm.dd.yyyy`). The syntax for conditions is described in [Selection syntax](../../data-analysis/queries/conditions-and-operators.md).
+  * **-without conditions-** - the portal function is always active.
+  * **-Data set conditions-** - click the editing field to enter a data set condition (enter directly or use a frame query).
+  * **-Conditions of cell content-** - condition based on cell content; enter directly or use a frame query. The **type of the cell content** must be set: **-Numeric-** (numbers and `+`/`-`/decimal point), **-Alpha numeric-** (numbers, letters, and special characters), or **-Date setting-** (standard date format, e.g. `mm.dd.yyyy`). The syntax for conditions is described in [Selection syntax](../../data-analysis/queries/conditions-and-operators.md).
 * **Font colour:** font colour of the link as displayed in the browser.
 
 **Go to website target**
@@ -87,7 +87,7 @@ To set the target of a portal link of type **Go to URL**: select the **portal li
 
 Selecting the **Objects** branch opens the **Site plan: Objects** window. The window is freely scalable and stays visible until another branch is selected or the window is closed.
 
-Add objects by drag and drop from the GeoDin object manager — single objects, queries, or groups can be dropped onto the list or the site plan directly for the site plan or for orientation in the site plan. Objects already in the list are not added again. Objects from any database or project can be used; they do not need to share a project.
+Add objects by drag and drop from the GeoDin object manager - single objects, queries, or groups can be dropped onto the list or the site plan directly for the site plan or for orientation in the site plan. Objects already in the list are not added again. Objects from any database or project can be used; they do not need to share a project.
 
 Selected objects are shown with a symbol and label in the site plan; the site plan can be zoomed and moved as necessary with the available tools. An object selected in the list is highlighted in red in the site plan. The coordinates, elevation, and depth of a selected borehole are displayed below the object list. Use the **Remove** button to remove an object from both the list and the site plan.
 
@@ -105,26 +105,26 @@ Switch between the different parts of the site plan (objects, line of section, s
 
 ### Scale
 
-**Define scale** — use this option to define the scale explicitly. The paper size is determined by the corner coordinates and the selected scale. The map size in centimetres at the selected scale is shown, not accounting for coordinate labels at the map frame border.
+**Define scale** - use this option to define the scale explicitly. The paper size is determined by the corner coordinates and the selected scale. The map size in centimetres at the selected scale is shown, not accounting for coordinate labels at the map frame border.
 
-**Define width and height** — use this option to define the physical size of the site plan on paper. GeoDin calculates and displays the required scale. Enter optional preferred scales in the **"Round scale to"** field as comma-separated values (for example, `1,2,5`); usable scales are those values and their multiples (1, 2, 5, 10, 20, 50, 100, …).
+**Define width and height** - use this option to define the physical size of the site plan on paper. GeoDin calculates and displays the required scale. Enter optional preferred scales in the **"Round scale to"** field as comma-separated values (for example, `1,2,5`); usable scales are those values and their multiples (1, 2, 5, 10, 20, 50, 100, ...).
 
 **Paper size:** the minimum paper size and orientation required for the site plan is displayed. Set the position of the site plan from the upper-left corner using the **"Position X:"** and **"Position Y:"** fields. With **-Automatic page layout-** active, the minimum size shown under `<Min:>` is used for construction.
 
 ### Site plan scenarios
 
-Scenarios define the detailed appearance of the site plan. Each scenario contains a graphic element to be displayed for all selected objects — for example, one scenario for the symbol and another for the label.
+Scenarios define the detailed appearance of the site plan. Each scenario contains a graphic element to be displayed for all selected objects - for example, one scenario for the symbol and another for the label.
 
 Possible site plan scene types:
 
-* [Symbol](../../configuration/fill-patterns-and-symbols.md) — displaying the point symbols
-* [Variable text](../layouts/text-macros-and-variable-text.md) — labelling the objects
-* [Map frame](../maps-and-site-plans.md) — display properties of the map frame
-* [Text tag](../layouts/text-macros-and-variable-text.md) — tag lines
+* [Symbol](../../configuration/fill-patterns-and-symbols.md) - displaying the point symbols
+* [Variable text](../layouts/text-macros-and-variable-text.md) - labelling the objects
+* [Map frame](../maps-and-site-plans.md) - display properties of the map frame
+* [Text tag](../layouts/text-macros-and-variable-text.md) - tag lines
 
 Scenes can be added as needed (also twice, if required), except for the **tag line** scene type, which can be added only once. The standard preset includes map frame, point symbol, tag line, and borehole name. Additional scenes can be added, deleted, or edited.
 
-Use the add button to select the desired scene type from the menu. The order of scenes in the scene list determines the drawing order: the upper scene is drawn first, the bottom scene last. Change the order using the arrow icons — this matters when graphic elements overlap.
+Use the add button to select the desired scene type from the menu. The order of scenes in the scene list determines the drawing order: the upper scene is drawn first, the bottom scene last. Change the order using the arrow icons - this matters when graphic elements overlap.
 
 Scenarios can be saved and loaded independently of the objects currently loaded. Save with **Save** (stores as a `.gpz` scenario file in any directory); load with **Load** to reuse the scenario in another site plan. Any number of scenario files can be created for different thematic site plans.
 
@@ -157,7 +157,7 @@ The **Symbol** scene type displays symbols at object locations. Symbol type, col
 **Symbol colour**
 
 * **Fixed:** select the color directly.
-* **Variable:** the selected database field must contain a valid colour number (1–16 from [Color tables](../../configuration/fill-patterns-and-symbols.md)); invalid entries result in the symbol being drawn in black.
+* **Variable:** the selected database field must contain a valid colour number (1-16 from [Color tables](../../configuration/fill-patterns-and-symbols.md)); invalid entries result in the symbol being drawn in black.
 * **-Transparent-** background: graphic elements behind the symbol show through unfilled areas.
 * **-Opaque-** background: all graphic elements behind the symbol are completely hidden regardless of unfilled areas.
 
@@ -176,10 +176,10 @@ Size (height and width) ranges from 0.2 to 100 mm. With **Variable** selected, t
 
 When a layout snippet is used, GeoDin automatically creates a drawing layer named after the snippet. Elements on this layer cannot be directly selected or edited in the layout. The following settings control how the layer is displayed:
 
-* **Visible** — Controls overall layer visibility.
-* **Screen presentation** — Defines whether the layer's elements are shown on screen. This setting affects the layout overview only, not the layout edit mode.
-* **Printing** — Defines whether the layer's elements are included in print output.
-* **Make available for layout quick settings** — Allows the drawing layer to be shown or hidden via the layout overview's quick settings panel.
+* **Visible** - Controls overall layer visibility.
+* **Screen presentation** - Defines whether the layer's elements are shown on screen. This setting affects the layout overview only, not the layout edit mode.
+* **Printing** - Defines whether the layer's elements are included in print output.
+* **Make available for layout quick settings** - Allows the drawing layer to be shown or hidden via the layout overview's quick settings panel.
 
 ### Column properties
 

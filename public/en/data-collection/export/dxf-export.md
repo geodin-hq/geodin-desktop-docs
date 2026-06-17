@@ -4,7 +4,7 @@ description: Exporting GeoDin layouts as DXF for use in AutoCAD and other CAD to
 
 # DXF Export
 
-GeoDin's internal PDF printer can export layouts as **DXF** — useful when boreholes, cross-sections, or site-plan layouts need to land in AutoCAD or another CAD package as editable vector geometry rather than a flat raster image.
+GeoDin's internal PDF printer can export layouts as **DXF** - useful when boreholes, cross-sections, or site-plan layouts need to land in AutoCAD or another CAD package as editable vector geometry rather than a flat raster image.
 
 For PDF and bulk multi-borehole printing, see [Bulk Print and PDF Export](../../reporting/bulk-print-and-pdf-export.md). For tabular Excel/CSV exports, see [CSV Export](csv-export.md) and [Excel Export](excel.md).
 
@@ -20,4 +20,4 @@ For static deliverables (reports, archives, email attachments) PDF is usually th
 
 ## How it works
 
-DXF export runs through GeoDin's internal PDF printer. The same printer drives PDF, PNG, and EMF output — the difference is the chosen output format. The vector path is preserved end-to-end, so line work, fill patterns, and text remain editable in the receiving CAD tool.
+DXF export runs through GeoDin's internal PDF printer. The same printer drives PDF, PNG, and EMF output - the difference is the chosen output format. The vector path is preserved end-to-end, so line work, fill patterns, and text remain editable in the receiving CAD tool.

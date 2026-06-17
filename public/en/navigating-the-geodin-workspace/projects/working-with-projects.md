@@ -1,7 +1,7 @@
 
 # Working with Projects
 
-This is the comprehensive reference for GeoDin projects — how they are created and managed, how project data is copied or moved between projects and databases, how data is transferred to other systems, and how legacy projects are converted into the current format. For the focused handover and transfer workflow, see [Copying and Transferring Projects](copying-and-transferring-projects.md).
+This is the comprehensive reference for GeoDin projects - how they are created and managed, how project data is copied or moved between projects and databases, how data is transferred to other systems, and how legacy projects are converted into the current format. For the focused handover and transfer workflow, see [Copying and Transferring Projects](copying-and-transferring-projects.md).
 
 ## Creating and managing projects
 

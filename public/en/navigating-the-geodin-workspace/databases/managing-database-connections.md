@@ -1,7 +1,7 @@
 ---
 description: >-
   Editing, deleting and configuring database connections in the GeoDin object
-  manager — the GeoDin.INI configuration keys, object-manager display options,
+  manager - the GeoDin.INI configuration keys, object-manager display options,
   and the system-tables reference.
 ---
 
@@ -47,7 +47,7 @@ For a MS Access database the option of deleting the \*.accdb file of the Access 
 
 Understanding the distinction between user and system databases is especially important when GeoDin is installed centrally and accessed via Remote Desktop (RDS/Citrix) or a shared network installation.
 
-**User databases** (blue cylinder icon) are stored in the **Windows registry of the individual user's local PC**. In a centralized deployment, this means they are stored in the registry profile of that user on the terminal server. Only that user sees these connections — other users opening GeoDin from the same installation will not see them.
+**User databases** (blue cylinder icon) are stored in the **Windows registry of the individual user's local PC**. In a centralized deployment, this means they are stored in the registry profile of that user on the terminal server. Only that user sees these connections - other users opening GeoDin from the same installation will not see them.
 
 **System databases** (yellow cylinder icon) are defined in the `GeoDin.INI` file, which is shared across the installation. Every user who opens GeoDin from that installation sees the same system databases.
 
@@ -56,7 +56,7 @@ In organizations with a central GeoDin installation (e.g. accessed via Remote De
 {% endhint %}
 
 {% hint style="warning" %}
-If a user creates a user database connection and then another user needs to access the same database, that second user must also create their own connection — or the IT administrator must add the database to `GeoDin.INI` as a system database.
+If a user creates a user database connection and then another user needs to access the same database, that second user must also create their own connection - or the IT administrator must add the database to `GeoDin.INI` as a system database.
 {% endhint %}
 
 ## Migrating an Access database to PostgreSQL using Copy All Projects
@@ -70,7 +70,7 @@ The **Copy All Projects** method (available at the database level) is the recomm
 3. Choose the method **Copy All Projects**.
 4. Select the target PostgreSQL database as the destination and confirm.
 
-After the copy completes, both databases are closed automatically. Open only one of them going forward — having the same project IDs in two databases simultaneously can cause confusion. Remove or rename the old Access database connection once migration is verified.
+After the copy completes, both databases are closed automatically. Open only one of them going forward - having the same project IDs in two databases simultaneously can cause confusion. Remove or rename the old Access database connection once migration is verified.
 
 ***
 
@@ -413,9 +413,9 @@ FIELD\_OPT bit-flags:
 | 20 (1048576) | Last FixedCol field |
 | 21 (2097152) | Field is automatically transferred to new DS |
 
-Object, measurement, report, document, and project-copy reference content formerly duplicated on this page now lives on its subject pages — see [Working with Measurement Data](../measurement-values/working-with-measurement-data.md), [Object Operations Reference](../object-types/object-operations-reference.md), [Working with Projects](../projects/working-with-projects.md), [Report Templates](../../reporting/report-templates.md), and [Managing Documents](../documents/managing-documents.md).
+Object, measurement, report, document, and project-copy reference content formerly duplicated on this page now lives on its subject pages - see [Working with Measurement Data](../measurement-values/working-with-measurement-data.md), [Object Operations Reference](../object-types/object-operations-reference.md), [Working with Projects](../projects/working-with-projects.md), [Report Templates](../../reporting/report-templates.md), and [Managing Documents](../documents/managing-documents.md).
 
 ## Related topics
 
-- [Connecting to a Database](connecting-to-a-database.md) — creating connections
-- [Supported Database Types](supported-database-types.md) — per-backend specifics
+- [Connecting to a Database](connecting-to-a-database.md) - creating connections
+- [Supported Database Types](supported-database-types.md) - per-backend specifics

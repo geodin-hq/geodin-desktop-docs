@@ -24,10 +24,10 @@ Add the point feature class to your map and create points representing the plann
 
 Open the attribute table for the point feature class and verify that each point has the required fields:
 
-* **Borehole name** — unique identifier for each location
-* **Coordinates** — X and Y in the appropriate coordinate system
-* **EPSG code** — coordinate reference system identifier
-* **Status** — investigation status
+* **Borehole name** - unique identifier for each location
+* **Coordinates** - X and Y in the appropriate coordinate system
+* **EPSG code** - coordinate reference system identifier
+* **Status** - investigation status
 
 ![Attribute table showing borehole fields](../../.gitbook/assets/plan-and-export-to-geodin-03.jpeg)
 

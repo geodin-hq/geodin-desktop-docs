@@ -7,7 +7,7 @@ description: >-
 
 # Object Operations Reference
 
-This page is the comprehensive reference for working with GeoDin objects beyond installation — what objects are, how they appear in the Object Manager, the editors used to record their data, the operations for creating, duplicating, deleting, importing, exporting and reporting them, and the dictionary, code and database-table details that underpin them. Use it as the single look-up home for object operations; the focused task pages (Create object, Data management, Sample data, Well design data, and so on) link here for the full picture.
+This page is the comprehensive reference for working with GeoDin objects beyond installation - what objects are, how they appear in the Object Manager, the editors used to record their data, the operations for creating, duplicating, deleting, importing, exporting and reporting them, and the dictionary, code and database-table details that underpin them. Use it as the single look-up home for object operations; the focused task pages (Create object, Data management, Sample data, Well design data, and so on) link here for the full picture.
 
 ## Objects in GeoDin
 
@@ -1172,7 +1172,7 @@ If you have not made any changes to the dictionaries or masks, you can remove th
 
 ### Symbols
 
-Symbol tables (.SYA) follow the same editing and compilation workflow — see [Fill Patterns and Symbols](../../configuration/fill-patterns-and-symbols.md).
+Symbol tables (.SYA) follow the same editing and compilation workflow - see [Fill Patterns and Symbols](../../configuration/fill-patterns-and-symbols.md).
 
 ### Dictionary properties
 
@@ -1791,16 +1791,16 @@ When importing such preset data, the string '31.12' will be entered as the resul
 
 To create a copy of an existing object including some or all of its data, right-click the object in the GeoDin Object Manager and choose **Duplicate object** (German: _Objekt duplizieren_).
 
-* !['Layer data\'](../../.gitbook/assets/icons/layer-data.png) **Layer data** — geological layers and borehole log data
-* **Sample data** — sample intervals and associated data
-* **Well design data** — casing, backfill, and filter information
-* **Documents** — linked or embedded document files
-* **Measurement values** — all measurement data from the data types assigned to this object
+* !['Layer data\'](../../.gitbook/assets/icons/layer-data.png) **Layer data** - geological layers and borehole log data
+* **Sample data** - sample intervals and associated data
+* **Well design data** - casing, backfill, and filter information
+* **Documents** - linked or embedded document files
+* **Measurement values** - all measurement data from the data types assigned to this object
 
 Select the data types to copy and confirm. The duplicated object appears in the same project with a new auto-generated ID. Edit the short name and coordinates to differentiate it from the original.
 
 {% hint style="info" %}
-Object duplication is particularly useful when multiple objects at the same site share the same well design or measurement program setup — create the first object in full, then duplicate and adjust coordinates for subsequent objects.
+Object duplication is particularly useful when multiple objects at the same site share the same well design or measurement program setup - create the first object in full, then duplicate and adjust coordinates for subsequent objects.
 {% endhint %}
 
 ### Object link
@@ -2102,6 +2102,6 @@ These tables define and describe relationships between measurement points. INVID
 | PHYSFILE | Name of the object file (only in GeoDin standard projects) |
 | LOCKINFO | empty |
 
-_Additional variant rows recovered from the former Databases-page copy of “Objects”:_
+_Additional variant rows recovered from the former Databases-page copy of "Objects":_
 
 | INVID | Measuring point identification number |

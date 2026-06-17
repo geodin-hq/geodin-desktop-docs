@@ -4,11 +4,11 @@ description: 'GeoDin allows you to install object types in three different ways:
 
 # Installing Object Types
 
-GeoDin can install object types in three different ways: directly from the GeoDin website, from a ZIP archive, or from a folder. All three use the same **Install object type** dialog on the **System** tab — the methods differ only in which source you choose in Step 4.
+GeoDin can install object types in three different ways: directly from the GeoDin website, from a ZIP archive, or from a folder. All three use the same **Install object type** dialog on the **System** tab - the methods differ only in which source you choose in Step 4.
 
 ## Method 1: Installation from the GeoDin Website
 
-Current object types can be installed directly from GeoDin’s server:
+Current object types can be installed directly from GeoDin's server:
 
 {% stepper %}
 {% step %}
@@ -59,7 +59,7 @@ If GeoDin is not connected to the Internet:
   &#xNAN;_(Note: Do NOT use the_ [_ObjectTypesAll.zip archive from `/8_save/`_](http://update.geodin.com/objecttypes/8_save/) _for this manual procedure.)_
 * Follow the same steps as mentioned in **Section 1** above but select the ZIP archive via the second option in Step 4.
 
-<div align="center"><figure><img src="../../.gitbook/assets/image (45).png" alt=""><figcaption>The same Install object type dialog with the second source field selected — the path to a downloaded ZIP archive is shown, and the contained object types (here under 3_Geotechnical) are listed for ticking before Install.</figcaption></figure></div>
+<div align="center"><figure><img src="../../.gitbook/assets/image (45).png" alt=""><figcaption>The same Install object type dialog with the second source field selected - the path to a downloaded ZIP archive is shown, and the contained object types (here under 3_Geotechnical) are listed for ticking before Install.</figcaption></figure></div>
 
 ## Method 3: Installation from a Folder
 
@@ -67,7 +67,7 @@ You can also use object types from other GeoDin installations or a shared **SYSL
 
 * Follow the steps in **Section 1**, but select the corresponding folder (e.g., **SYSLIB**) as the source using the first option in Step 4.
 
-<div align="center"><figure><img src="../../.gitbook/assets/image (46).png" alt=""><figcaption>The Install object type dialog with the first source field selected — a folder path (here a SYSLIB folder under ProgramData) is shown, and the folder's object types are listed by identifier code (e.g. [DOC], [SEP1], [UGS], [BNI]) for ticking before Install.</figcaption></figure></div>
+<div align="center"><figure><img src="../../.gitbook/assets/image (46).png" alt=""><figcaption>The Install object type dialog with the first source field selected - a folder path (here a SYSLIB folder under ProgramData) is shown, and the folder's object types are listed by identifier code (e.g. [DOC], [SEP1], [UGS], [BNI]) for ticking before Install.</figcaption></figure></div>
 
 ## Update object types
 

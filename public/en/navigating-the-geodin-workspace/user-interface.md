@@ -1,5 +1,5 @@
 ---
-description: Overview of the GeoDin user interface — the database panel, tree navigation, system configuration, and key interface controls
+description: Overview of the GeoDin user interface - the database panel, tree navigation, system configuration, and key interface controls
 ---
 
 # User Interface
@@ -16,8 +16,8 @@ The **Databases** panel is the starting point of your work in GeoDin. Each datab
 
 GeoDin supports client-server databases, which can be hosted on a single computer or across a network. Databases are color-coded:
 
-- **Yellow** — network-level databases (shared by a group of users for collaboration)
-- **Blue** — local databases (accessible only to the individual user)
+- **Yellow** - network-level databases (shared by a group of users for collaboration)
+- **Blue** - local databases (accessible only to the individual user)
 
 {% hint style="info" %}
 GeoDin databases are based on Microsoft Access files. For other backend options, see the [Installation guide](../installation/express-installation.md).
@@ -45,11 +45,11 @@ Clicking different levels in the left-hand tree populates the central "methods" 
 Each borehole with measurement data is marked with a small blue sphere icon in the tree view.
 {% endhint %}
 
-A project's **Documents** area lives directly under the project level and can hold folders and files — cross-sections, PDFs, videos, or any other file type.
+A project's **Documents** area lives directly under the project level and can hold folders and files - cross-sections, PDFs, videos, or any other file type.
 
 ## System panel
 
-The **System** panel provides access to system-level configuration. Within this panel, you can access and edit pre-made dictionaries, data types, and object types — including those for G1 locations and AGS standards.
+The **System** panel provides access to system-level configuration. Within this panel, you can access and edit pre-made dictionaries, data types, and object types - including those for G1 locations and AGS standards.
 
 <figure><img src="../.gitbook/assets/Screenshot 2025-12-22 142044.png" alt=""><figcaption><p>Figure 2</p></figcaption></figure>
 
@@ -87,8 +87,8 @@ When you navigate to an object (borehole) in the tree, the following data sectio
 
 | Section | Contents |
 |---|---|
-| **General Data** | Location metadata — coordinates, elevation, project information, classification |
-| **Layer Data** | Geological layer descriptions — stratigraphy, petrography, colors, consistency |
+| **General Data** | Location metadata - coordinates, elevation, project information, classification |
+| **Layer Data** | Geological layer descriptions - stratigraphy, petrography, colors, consistency |
 | **Samples** | Physical samples taken from the borehole, with depth intervals |
 | **Well Design Data** | Casing, screens, backfill, piezometer installations |
 | **Data Sequences** | Continuous depth-indexed data (CPT traces, geophysical logs, custom measurements) |
@@ -116,7 +116,7 @@ A discrete method must be completed before further operations in the object mana
 
 ### Parallel methods
 
-Parallel methods remain active until they are ended by closing the method window. When a parallel method is active, you can select and start other methods in the object manager. Parallel methods retain their direct connection to the object manager and react to changes in object selection. An example is **Data management**: choose an object, double-click the method symbol, and the object is loaded in the editor for editing general data, borehole logs, and so on. If another object is chosen, it is automatically opened for editing — the editor does not have to be closed first.
+Parallel methods remain active until they are ended by closing the method window. When a parallel method is active, you can select and start other methods in the object manager. Parallel methods retain their direct connection to the object manager and react to changes in object selection. An example is **Data management**: choose an object, double-click the method symbol, and the object is loaded in the editor for editing general data, borehole logs, and so on. If another object is chosen, it is automatically opened for editing - the editor does not have to be closed first.
 
 An unlimited number of parallel methods may be used concurrently. This means you can edit borehole data and its graphical presentation simultaneously.
 
@@ -126,7 +126,7 @@ Some methods take a selection from the object manager on startup and then keep t
 
 ### Methods without a selection
 
-A handful of methods can be started directly from the task bar at the bottom of the object manager, without first selecting anything in the tree. **GeoDin-Graph** (the CAD module for creating drawings independent of any database object) is one example — you do not need any object selected to launch it.
+A handful of methods can be started directly from the task bar at the bottom of the object manager, without first selecting anything in the tree. **GeoDin-Graph** (the CAD module for creating drawings independent of any database object) is one example - you do not need any object selected to launch it.
 
 ### Switching between active methods
 
@@ -139,10 +139,10 @@ Switching between active methods is done by clicking the method's symbol in the 
 | **F9** | Maximize or minimize the object manager's Objects and Methods windows |
 | **Ctrl+F9** | Maximize or minimize both at once |
 
-On the right side of each method symbol, a small switch closes the method — even when the method is in the background. The **Close all methods** switch on the right side of the **Active Methods** toolbar closes every active method in one step.
+On the right side of each method symbol, a small switch closes the method - even when the method is in the background. The **Close all methods** switch on the right side of the **Active Methods** toolbar closes every active method in one step.
 
 {% hint style="info" %}
 It is not necessary to shut down all methods before closing GeoDin. Selecting **File → Exit** (or **Alt+F4**) closes all active methods automatically; if any have unsaved changes, a save dialog appears first.
 {% endhint %}
 
-All methods available for a selected object are also available as a popup menu via right-click on the tree entry — the methods window does not need to be maximized to start a method.
+All methods available for a selected object are also available as a popup menu via right-click on the tree entry - the methods window does not need to be maximized to start a method.

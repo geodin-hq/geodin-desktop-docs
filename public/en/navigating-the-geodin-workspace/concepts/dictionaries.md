@@ -1,5 +1,5 @@
 ---
-description: GeoDin dictionaries — the coded value lists behind drop-down fields
+description: GeoDin dictionaries - the coded value lists behind drop-down fields
 ---
 
 # Dictionaries
@@ -8,7 +8,7 @@ Dictionaries are pre-made lists that populate drop-down fields (marked with a `?
 
 ## How dictionary values are stored
 
-Dictionary values have two representations: full text (e.g. "Cone Penetration Testing") and short code (e.g. "CPT") — the short code is what GeoDin actually stores in the database.
+Dictionary values have two representations: full text (e.g. "Cone Penetration Testing") and short code (e.g. "CPT") - the short code is what GeoDin actually stores in the database.
 
 Dictionaries support multi-language translations (e.g. English, Dutch); language switch happens at a setting level and applies to layer descriptions.
 
@@ -18,11 +18,11 @@ Example dictionary files: `G1_Investigation_Method`, `BS5930_Walker_Secondary_So
 
 ## Viewing dictionary entries
 
-Dictionaries are viewable/editable via `System > Dictionaries > [dictionary name]` — double-click to see all entries with short code and language translations.
+Dictionaries are viewable/editable via `System > Dictionaries > [dictionary name]` - double-click to see all entries with short code and language translations.
 
 ## How dictionaries behave in forms
 
-Some dictionaries are context-sensitive — e.g. the secondary soil type dictionary is restricted based on the primary ground type (clay+silt vs coarse-grain).
+Some dictionaries are context-sensitive - e.g. the secondary soil type dictionary is restricted based on the primary ground type (clay+silt vs coarse-grain).
 
 Some dictionary-backed fields allow free-text entry in addition to dictionary selection; free text does not add the value to the dictionary.
 
@@ -30,7 +30,7 @@ Some dictionary-backed fields allow free-text entry in addition to dictionary se
 
 Users can add their own terms to dictionaries (new clients, new labs, new soil types).
 
-When a user edits a dictionary, a timestamp is recorded and that dictionary becomes "frozen" — GeoDin distribution updates will no longer overwrite it, preserving user changes.
+When a user edits a dictionary, a timestamp is recorded and that dictionary becomes "frozen" - GeoDin distribution updates will no longer overwrite it, preserving user changes.
 
 Users should keep a list of dictionaries they have edited so they can request updates from GeoDin support when needed.
 

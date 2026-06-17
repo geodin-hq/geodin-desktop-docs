@@ -9,5 +9,5 @@ The installation folder layout is split across a **bin folder** (executable) and
 
 ## See also
 
-* [Custom installation](custom-installation.md) — choose between single-user and network installation during setup.
-* [Infrastructure and environment setup guide](infrastructure-and-environment-setup-guide.md) — multi-user deployment, syslib sharing, and database options.
+* [Custom installation](custom-installation.md) - choose between single-user and network installation during setup.
+* [Infrastructure and environment setup guide](infrastructure-and-environment-setup-guide.md) - multi-user deployment, syslib sharing, and database options.

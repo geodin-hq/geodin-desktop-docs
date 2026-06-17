@@ -1,5 +1,5 @@
 ---
-description: Layout editor mechanics — accessing the editor, file formats, drawing layers, snap, grouping, palettes, layout interfaces, unit systems, and paper formats.
+description: Layout editor mechanics - accessing the editor, file formats, drawing layers, snap, grouping, palettes, layout interfaces, unit systems, and paper formats.
 ---
 
 # Layout Editor Basics
@@ -18,11 +18,11 @@ Two file formats are used for saved layouts:
 
 | Format | Name | Purpose |
 |---|---|---|
-| **GLO** | GeoDin Layout | Template — no data connection. Listed in the Available Layouts overview. Use for reusable templates. |
+| **GLO** | GeoDin Layout | Template - no data connection. Listed in the Available Layouts overview. Use for reusable templates. |
 | **GGF** | GeoDin Graphic Format | Layout + connected data (e.g., a specific cross section with 10 boreholes baked in). Not listed in Available Layouts. GGF files can be drag-and-dropped into GeoDin to open with original data connections. |
 
 {% hint style="warning" %}
-When editing a default layout, always use **File > Save As** (not **Save**) to avoid overwriting the shipped default. Create a folder such as `[CLIENT]_Layouts` and copy defaults there before editing. If a default is accidentally overwritten, there is no built-in reset — you must request a copy from the GeoDin team (there is no public re-download link).
+When editing a default layout, always use **File > Save As** (not **Save**) to avoid overwriting the shipped default. Create a folder such as `[CLIENT]_Layouts` and copy defaults there before editing. If a default is accidentally overwritten, there is no built-in reset - you must request a copy from the GeoDin team (there is no public re-download link).
 {% endhint %}
 
 Default layouts are stored once per GeoDin installation. In a network install, overwriting a default affects all users on that installation.
@@ -33,8 +33,8 @@ To start a new layout: open the graphic editing method with no layout loaded, do
 
 Two buttons in the lower-left corner of the editor window control access to the overview and blank edit mode:
 
-* **Layer Overview** — opens the overview of layout layers and drawing elements.
-* **Edit Graphics** — opens a new blank layout in edit mode.
+* **Layer Overview** - opens the overview of layout layers and drawing elements.
+* **Edit Graphics** - opens a new blank layout in edit mode.
 
 Layouts can be fully customised (delete fields, replace logos) via **Edit Mode** from the upper-right toolbar.
 
@@ -60,7 +60,7 @@ The in-product **F1** context-sensitive help is comprehensive on template creati
 | **Select multiple** | Shift+click or drag a selection frame (elements must be completely inside the frame). |
 | **Select all** | `Edit > Select All` or `Ctrl+A`. |
 | **Select a group frame** | Click the border area, or Ctrl+click inside the frame. Selected group frames show 4 gray side lines. |
-| **Select same type** | Select one element, then `Edit > Select same objects` to select all elements of that type — useful for batch-changing fonts or styles. |
+| **Select same type** | Select one element, then `Edit > Select same objects` to select all elements of that type - useful for batch-changing fonts or styles. |
 | **Object Properties** | Double-click an element, or press `F11`, or use `Edit > Object Properties`. Properties update automatically when selecting different elements. The panel position (left/right) can be set in Preferences. |
 | **Find hidden elements** | In the tree view of graphic elements, single-click an entry to highlight it briefly with blinking blue markers. Double-click to select and edit it. |
 
@@ -70,11 +70,11 @@ The in-product **F1** context-sensitive help is comprehensive on template creati
 
 Layouts use multiple drawing layers, visible in the **Layer Overview** panel (lower-left corner). Layers can be toggled visible/invisible, reordered, and locked. Use separate layers to isolate fixed elements (title blocks, logos) from variable graphic elements.
 
-For the full drawing layers reference — dialog icons, visibility controls, and the `Ctrl+E` shortcut — see [Customizing Log Layouts](../../borehole-logs/customizing-log-layouts.md#drawing-layers).
+For the full drawing layers reference - dialog icons, visibility controls, and the `Ctrl+E` shortcut - see [Customizing Log Layouts](../../borehole-logs/customizing-log-layouts.md#drawing-layers).
 
 ## Snap function
 
-The snap function (`Ctrl+K`, or **Preferences > Snap**) provides exact alignment when drawing graphic elements. Endpoints, corners, and nodal points snap automatically to nearby existing points within a configurable distance (1–50 mm via **Preferences > Snap preferences**). Works across all drawing layers. Affected elements: lines, rectangles, polylines, and borehole profiles.
+The snap function (`Ctrl+K`, or **Preferences > Snap**) provides exact alignment when drawing graphic elements. Endpoints, corners, and nodal points snap automatically to nearby existing points within a configurable distance (1-50 mm via **Preferences > Snap preferences**). Works across all drawing layers. Affected elements: lines, rectangles, polylines, and borehole profiles.
 
 ## Grouping elements
 
@@ -83,7 +83,7 @@ The snap function (`Ctrl+K`, or **Preferences > Snap**) provides exact alignment
 | **Group** | Select multiple elements, then use the Group icon or `Arrange > Group`. |
 | **Ungroup** | `Arrange > Ungroup` or the Ungroup icon. |
 | **Lock/Unlock** | Lock group elements to prevent accidental edits. Unlock to modify individual elements within the group (elements can only be moved/scaled within the group frame). |
-| **Add to group** | Select the group frame first, then insert the new element — it automatically becomes part of the group. |
+| **Add to group** | Select the group frame first, then insert the new element - it automatically becomes part of the group. |
 | **Merge groups** | `Arrange > Merge groups` combines two or more groups (or object frames) into one. This can unite different layouts into a single object frame. |
 | **Multiple selection** | When multiple elements are selected, display/arrangement functions (move, z-order, fix/unfix) apply to all at once. |
 
@@ -109,9 +109,9 @@ Palettes provide preset fill patterns, colors, line types, fonts, and symbols th
 
 ## Layout snippets
 
-A layout can embed another layout as a snippet — for example, a header/footer stored once in `Common_A4_LHF.GLO` and referenced by many templates. The snippet pattern lets users change a company logo in one file and have all layouts using it update automatically.
+A layout can embed another layout as a snippet - for example, a header/footer stored once in `Common_A4_LHF.GLO` and referenced by many templates. The snippet pattern lets users change a company logo in one file and have all layouts using it update automatically.
 
-A snippet appears in edit mode as a green-boxed region that cannot be edited inline — open the snippet layout directly to edit it.
+A snippet appears in edit mode as a green-boxed region that cannot be edited inline - open the snippet layout directly to edit it.
 
 ***
 
