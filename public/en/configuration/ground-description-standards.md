@@ -61,6 +61,10 @@ A standard is mainly defined by the selection of available properties and ground
 
 Each standard contains a unique ID, which has to be selected in the entry field GUID. Additionally a name is given, which is displayed during the data management. The dictionary to select the kind of interbedding has to be selected. After creating new standards and selection of a dictionary name an empty dictionary can be added with the icon **Create**. Editing is possible in the branch dictionaries in the GeoDin configuration.
 
+<!-- src: adhoc/2026-07-16_website-drift -->
+
+_Example: the Brazilian ABNT NBR 6502/2022 standard (soil and rock terminology and classification principles) is available as a coding standard in GeoDin._
+
 _**Important:**_ _During the collection of ground types in the GeoDin database only the GUIDs of standards, ground types and properties are saved and not the name. Because of this GUIDs that already have been used for the data collection may NOT be changed, because it would lead to a misinterpretation of existing data._
 
 ### Properties

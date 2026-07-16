@@ -60,6 +60,15 @@ When you select a location within a project, the central ribbon displays the ava
 
 <figure><img src="../.gitbook/assets/Screenshot 2025-12-22 133833.png" alt=""><figcaption><p>Figure 3</p></figcaption></figure>
 
+## Beta design mode (opt-in)
+
+<!-- src: adhoc/2026-07-16_website-drift -->
+
+From GeoDin 15.5 (release 15.5.0.185, April 2026), an opt-in Beta design is available: a
+customizable title bar that unifies the top navigation, layout controls, and Help/Info in a
+single header. You can switch between the Beta and Classic design at any time from the title
+bar; the Classic design remains unchanged and is the default. Screenshots in this
+documentation show the Classic design unless noted.
 
 ***
 

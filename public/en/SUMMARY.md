@@ -34,6 +34,7 @@
 * [Object Operations Reference](navigating-the-geodin-workspace/object-types/object-operations-reference.md)
 * [AGS 4](navigating-the-geodin-workspace/object-types/ags-4.md)
 * [(G1) Location](navigating-the-geodin-workspace/object-types/g1-location.md)
+* [(KA6) Bodenkundlicher Aufschluss](navigating-the-geodin-workspace/object-types/ka6-bodenkundlicher-aufschluss.md)
 * [Geotechnical Investigation EN ISO 22475](navigating-the-geodin-workspace/object-types/geotechnical-investigation-en-iso-22475.md)
   * [Versions 9.0.6 and 9.0.7 - General Adaptations](navigating-the-geodin-workspace/object-types/geotechnical-investigation-en-iso-22475/versions-9.0.6-and-9.0.7-general-adaptations.md)
   * [Versions 9.0.6 and 9.0.7 - Structural Changes](navigating-the-geodin-workspace/object-types/geotechnical-investigation-en-iso-22475/versions-9.0.6-and-9.0.7-structural-changes.md)
@@ -129,6 +130,7 @@
 
 * [Getting Started with Maps](maps/getting-started-with-maps.md)
 * [Adding Layers](maps/adding-layers.md)
+* [Heatmaps](maps/heatmaps.md)
 * [WMS and Web Tile Layers](maps/wms-and-web-tile-layers.md)
 * [Coordinate Systems and EPSG](maps/coordinate-systems-and-epsg.md)
 * [Coordinate Systems and Projections](maps/coordinate-systems-and-projections.md)
@@ -145,6 +147,7 @@
   * [Generate Reports](integrations/arcgis/generate-reports.md)
   * [Attach Reports](integrations/arcgis/attach-reports.md)
   * [Publish to ArcGIS Online](integrations/arcgis/publish-to-arcgis-online.md)
+* [Export to Leapfrog Geo](integrations/leapfrog-geo-export.md)
 * [Installing Plug-ins](plug-ins-and-tools/installing-plug-ins.md)
 * [gINT Converter](plug-ins-and-tools/introduction.md)
   * [Convert gINT Database to GeoDinML](plug-ins-and-tools/introduction/convert-gint-databases-to-geodinml.md)

@@ -52,6 +52,14 @@ Navigate between borehole points on the map to verify that all locations have th
 
 ![Opening another borehole's report from the web map](../../.gitbook/assets/publish-to-arcgis-online-06.jpeg)
 
+### Web scenes
+
+<!-- src: adhoc/2026-07-16_website-drift -->
+
+Published feature layers - including any 3D solid and surface representations - can be
+published as an ArcGIS Online web scene, so stakeholders can review subsurface conditions in a
+browser without specialist software.
+
 ***
 
 **This completes the GeoDin ↔ ArcGIS integration workflow.** Your team can now access geotechnical reports directly from the web map without needing GeoDin or ArcGIS Pro installed.

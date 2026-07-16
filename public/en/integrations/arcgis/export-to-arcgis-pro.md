@@ -46,6 +46,14 @@ For projects with multiple investigation areas, create separate feature classes 
 
 ![Multiple feature classes by investigation area](../../.gitbook/assets/export-to-arcgis-pro-06.jpeg)
 
+### 3D representation
+
+<!-- src: adhoc/2026-07-16_website-drift -->
+
+Once borehole data is in ArcGIS Pro, boreholes can also be represented as 3D solids
+(multipatch features) and soil layer boundaries as surfaces, placing the subsurface alongside
+terrain and the built environment.
+
 ***
 
 **Next step:** [Generate geotechnical reports](generate-reports.md) in GeoDin for attaching to ArcGIS features.
