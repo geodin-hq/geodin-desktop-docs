@@ -51,6 +51,8 @@ For projects with multiple investigation areas, create separate feature classes 
 
 Beyond point features, boreholes can also be represented as **3D solids** (multipatch features), with soil layer boundaries modeled as **surfaces**. This places the subsurface data alongside the terrain in a true 3D scene, rather than as flat points on a 2D map.
 
+![Borehole solids and soil surfaces in a 3D scene](../../.gitbook/assets/export-to-arcgis-pro-07.png)
+
 Before sharing, symbolize the borehole point layer with a single symbol and label it with the borehole-name field so boreholes are easy to identify within the scene.
 
 These layers can then be published as a 3D web scene — see [Publish to ArcGIS Online](./publish-to-arcgis-online.md).

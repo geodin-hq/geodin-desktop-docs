@@ -61,13 +61,19 @@ Beyond 2D feature layers, a scene containing 3D borehole solids and soil surface
 ### Prepare the scene before sharing
 
 1. **Check elevation units.** If your borehole elevations are in feet, run the **Adjust 3D Z** geoprocessing tool with **Reverse Sign of Z Values** set to **Maintain Z Orientation** and convert **From Feet** **To Meters**.
+
+![Adjust 3D Z configured to convert feet to meters](../../.gitbook/assets/publish-to-arcgis-online-07.png)
 2. **Update layer elevation settings.** Open **Layer Properties → Elevation** for the relevant layer and set the vertical units to **Meters**.
 3. **Set the scene coordinate system.** Open the scene's **Map Properties → Coordinate Systems** and select **WGS 1984 Web Mercator** as the required coordinate system. See [Coordinate systems and EPSG](../../maps/coordinate-systems-and-epsg.md) for background on coordinate system settings.
+
+![Scene coordinate system set to WGS 1984 Web Mercator](../../.gitbook/assets/publish-to-arcgis-online-08.png)
 
 ### Share the web scene
 
 1. Go to the **Share** tab in the ribbon and choose **Web Scene**.
 2. Enter a name, choose the destination folder, and select the sharing level.
+
+![The Share As Web Scene pane with name, folder, and sharing level](../../.gitbook/assets/publish-to-arcgis-online-09.png)
 3. Click **Analyze** and resolve any errors it reports — do not proceed to publishing until Analyze returns no errors.
 4. Click **Share** to publish, and once processing finishes, open the item's portal page to verify the scene and confirm all data is present.
 

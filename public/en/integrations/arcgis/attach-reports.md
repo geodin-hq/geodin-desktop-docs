@@ -70,6 +70,8 @@ Check the results to confirm that attachments have been added successfully. Clic
 When the feature class was exported from a Civil 3D drawing, each borehole can have several annotation rows (general data, document, layer descriptions, and so on), not one row per borehole. In this case, build the attach key in two extra steps before running **Generate Attachments Match Table**:
 
 1. Use **Select By Attributes** to isolate only the document annotation records — build the query so that **RefName contains the text** `document`. Apply the selection and confirm the correct records are highlighted before continuing.
+
+![Select By Attributes isolating the document annotation records](../../.gitbook/assets/attach-reports-10.png)
 2. With those records still selected, right-click the attach key field and choose **Calculate Field**. Make sure the calculation applies **only to the selected records** — calculating across all rows can create incorrect matches. Set **Expression Type** to **Python**, use `extract_bh(!Layer!)` as the expression, and supply this code block:
 
 ```python
@@ -85,6 +87,8 @@ def extract_bh(layer):
 
     return None
 ```
+
+![Calculate Field with the extract_bh code block applied to the selected records](../../.gitbook/assets/attach-reports-11.png)
 
 The trailing `" -"` in the returned value is intentional: it makes the extracted borehole name specific enough to match only the correct report filename, avoiding accidental matches against similarly named boreholes.
 

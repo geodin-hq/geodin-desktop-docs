@@ -363,6 +363,8 @@ If a direct display of the document in the preview is not possible, a correspond
 
 A common way to keep the printable log together with the field data is to attach the generated 2D borehole log (PDF) as a document to its borehole or CPT object. Once added, the report appears under that object's **Documents** node alongside any other attached files.
 
+![A borehole log PDF attached under the object's Documents node](../../.gitbook/assets/managing-documents-borehole-log.jpg)
+
 Open it with the **Show document** method (or the [Display of document information](document-organization.md)) and the log opens as a formatted PDF report — keeping the borehole's shareable log one click away from its underlying investigation data.
 
 ## Document description
