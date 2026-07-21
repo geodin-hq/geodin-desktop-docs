@@ -62,7 +62,7 @@ Navigate between borehole points on the map to verify that all locations have th
 
 ## Related pages
 
-* [Plan and Export to GeoDin](plan-and-export-to-geodin.md) - Step 1: ArcGIS → GeoDin
-* [Export to ArcGIS Pro](export-to-arcgis-pro.md) - Step 2: GeoDin → ArcGIS
+* [Plan and Export to GeoDin](plan-and-export-to-geodin.md) - Step 1: ArcGIS > GeoDin
+* [Export to ArcGIS Pro](export-to-arcgis-pro.md) - Step 2: GeoDin > ArcGIS
 * [Generate Reports](generate-reports.md) - Step 3: Create PDFs in GeoDin
 * [Attach Reports](attach-reports.md) - Step 4: Link PDFs to features
