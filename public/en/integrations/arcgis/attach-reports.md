@@ -46,15 +46,13 @@ Confirm that the attach key values match the report filenames. Each row should c
 
 ## Step 7: Create a match table
 
-Use the **Geoprocessing > Add Table** tool to create a table that maps the attach key to the PDF file paths. Run the process to build the mapping.
+Use the **Geoprocessing > Generate Attachment Match Table** tool to create a table that maps the attach key to the PDF file paths: set the **Key Field** to the attach key, filter the input to `*.pdf`, and choose the **Match Pattern** (**Exact**, or **Prefix** when the key is a filename prefix). Run the tool to build the mapping. <!-- src: loom/arcgis-3d-D -->
 
-![Geoprocessing Add Table tool configuration](../../.gitbook/assets/attach-reports-07.jpeg)
-
-<!-- CORRECTION-PROPOSED: The ArcGIS Pro tool used in video D (Loom, June 2026) is "Generate Attachments Match Table" (Key Field = the attach key, Match Pattern option Exact/Prefix, input filter *.pdf) — "Add Table" appears to be a mislabel. The subsequent Add Attachments step uses Input Join Field OBJECTID and Match Join Field MatchID. Please verify and update the step wording. src: loom/arcgis-3d-D -->
+![Attribute table with the attach key prepared, and the attachment tables in the geodatabase](../../.gitbook/assets/attach-reports-07.jpeg)
 
 ## Step 8: Add attachments
 
-Use the **Geoprocessing > Add Attachments** tool with the match table you just created. Configure the input table, match field (the attach key), and the folder containing the PDF reports. Click **Run** to execute the attachment process.
+Use the **Geoprocessing > Add Attachments** tool with the match table you just created: set the **Input Join Field** to `OBJECTID`, the **Match Join Field** to `MatchID`, and point the working folder at the PDF reports. Click **Run** to execute the attachment process. <!-- src: loom/arcgis-3d-D -->
 
 ![Add Attachments tool with input table and match field](../../.gitbook/assets/attach-reports-08.jpeg)
 
@@ -67,7 +65,7 @@ Check the results to confirm that attachments have been added successfully. Clic
 <!-- src: loom/arcgis-3d-D -->
 ### Variant: annotation layers with multiple records per borehole
 
-When the feature class was exported from a Civil 3D drawing, each borehole can have several annotation rows (general data, document, layer descriptions, and so on), not one row per borehole. The complete step-by-step tutorial for that case lives in the GeoDin® Ground documentation: [Attaching geotechnical reports to borehole annotations](https://docs.geodin.com/geodin-ground/workflows-and-integrations/arcgis-pro-attach-reports). In short, build the attach key in two extra steps before running **Generate Attachments Match Table**:
+When the feature class was exported from a Civil 3D drawing, each borehole can have several annotation rows (general data, document, layer descriptions, and so on), not one row per borehole. The complete step-by-step tutorial for that case lives in the GeoDin® Ground documentation: [Attaching geotechnical reports to borehole annotations](https://docs.geodin.com/geodin-ground/workflows-and-integrations/arcgis-pro-attach-reports). In short, build the attach key in two extra steps before running **Generate Attachment Match Table**:
 
 1. Use **Select By Attributes** to isolate only the document annotation records — build the query so that **RefName contains the text** `document`. Apply the selection and confirm the correct records are highlighted before continuing.
 
