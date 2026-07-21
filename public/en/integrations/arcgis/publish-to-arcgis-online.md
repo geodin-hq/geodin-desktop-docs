@@ -52,6 +52,29 @@ Navigate between borehole points on the map to verify that all locations have th
 
 ![Opening another borehole's report from the web map](../../.gitbook/assets/publish-to-arcgis-online-06.jpeg)
 
+<!-- src: loom/arcgis-3d-E -->
+<!-- src: loom/arcgis-3d-F -->
+## Publishing a 3D web scene
+
+Beyond 2D feature layers, a scene containing 3D borehole solids and soil surfaces (see [Export to ArcGIS Pro](export-to-arcgis-pro.md)) can also be shared as an **ArcGIS Online web scene**. This lets stakeholders review subsurface conditions directly in a browser, without ArcGIS Pro or other specialist software installed.
+
+### Prepare the scene before sharing
+
+1. **Check elevation units.** If your borehole elevations are in feet, run the **Adjust 3D Z** geoprocessing tool with **Reverse Sign of Z Values** set to **Maintain Z Orientation** and convert **From Feet** **To Meters**.
+2. **Update layer elevation settings.** Open **Layer Properties → Elevation** for the relevant layer and set the vertical units to **Meters**.
+3. **Set the scene coordinate system.** Open the scene's **Map Properties → Coordinate Systems** and select **WGS 1984 Web Mercator** as the required coordinate system. See [Coordinate systems and EPSG](../../maps/coordinate-systems-and-epsg.md) for background on coordinate system settings.
+
+### Share the web scene
+
+1. Go to the **Share** tab in the ribbon and choose **Web Scene**.
+2. Enter a name, choose the destination folder, and select the sharing level.
+3. Click **Analyze** and resolve any errors it reports — do not proceed to publishing until Analyze returns no errors.
+4. Click **Share** to publish, and once processing finishes, open the item's portal page to verify the scene and confirm all data is present.
+
+Document pop-ups — including attached geotechnical reports — carry over into the published scene, so the same attachments available in ArcGIS Pro remain accessible when reviewing the model online. The published scene opens via **Open in Scene Viewer**, ready for review in a browser.
+
+If your 3D model originates from a GeoDin® Ground drawing in Civil 3D, see [ArcGIS integration](https://docs.geodin.com/geodin-ground/workflows-and-integrations/arcgis-integration) in the GeoDin® Ground documentation for how to bring the model into ArcGIS Pro.
+
 ***
 
 **This completes the GeoDin ↔ ArcGIS integration workflow.** Your team can now access geotechnical reports directly from the web map without needing GeoDin or ArcGIS Pro installed.

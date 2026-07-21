@@ -358,6 +358,13 @@ When the -Refresh Preview- option is enabled, the document data is automatically
 
 If a direct display of the document in the preview is not possible, a corresponding message will appear, and the document can be viewed using the [Display of document information](document-organization.md).
 
+<!-- src: loom/arcgis-3d-A -->
+### Example: attaching a 2D borehole log to its object
+
+A common way to keep the printable log together with the field data is to attach the generated 2D borehole log (PDF) as a document to its borehole or CPT object. Once added, the report appears under that object's **Documents** node alongside any other attached files.
+
+Open it with the **Show document** method (or the [Display of document information](document-organization.md)) and the log opens as a formatted PDF report — keeping the borehole's shareable log one click away from its underlying investigation data.
+
 ## Document description
 
 The **Document description** tab can be used to provide extra information about the file just added. This can be subsequently edited.

@@ -50,6 +50,8 @@ Use the **Geoprocessing > Add Table** tool to create a table that maps the attac
 
 ![Geoprocessing Add Table tool configuration](../../.gitbook/assets/attach-reports-07.jpeg)
 
+<!-- CORRECTION-PROPOSED: The ArcGIS Pro tool used in video D (Loom, June 2026) is "Generate Attachments Match Table" (Key Field = the attach key, Match Pattern option Exact/Prefix, input filter *.pdf) — "Add Table" appears to be a mislabel. The subsequent Add Attachments step uses Input Join Field OBJECTID and Match Join Field MatchID. Please verify and update the step wording. src: loom/arcgis-3d-D -->
+
 ## Step 8: Add attachments
 
 Use the **Geoprocessing > Add Attachments** tool with the match table you just created. Configure the input table, match field (the attach key), and the folder containing the PDF reports. Click **Run** to execute the attachment process.
@@ -61,6 +63,30 @@ Use the **Geoprocessing > Add Attachments** tool with the match table you just c
 Check the results to confirm that attachments have been added successfully. Click on individual borehole points to verify that their PDF reports are accessible as attachments.
 
 ![Feature with attached PDF report visible](../../.gitbook/assets/attach-reports-09.jpeg)
+
+<!-- src: loom/arcgis-3d-D -->
+### Variant: annotation layers with multiple records per borehole
+
+When the feature class was exported from a Civil 3D drawing, each borehole can have several annotation rows (general data, document, layer descriptions, and so on), not one row per borehole. In this case, build the attach key in two extra steps before running **Generate Attachments Match Table**:
+
+1. Use **Select By Attributes** to isolate only the document annotation records — build the query so that **RefName contains the text** `document`. Apply the selection and confirm the correct records are highlighted before continuing.
+2. With those records still selected, right-click the attach key field and choose **Calculate Field**. Make sure the calculation applies **only to the selected records** — calculating across all rows can create incorrect matches. Set **Expression Type** to **Python**, use `extract_bh(!Layer!)` as the expression, and supply this code block:
+
+```python
+def extract_bh(layer):
+    layer = layer.upper()
+
+    # Define known prefix and suffix
+    prefix = "LOC_BASE-"
+    suffix = "-BASIC"
+
+    if layer.startswith(prefix) and layer.endswith(suffix):
+        return layer[len(prefix):-len(suffix)] + " -"
+
+    return None
+```
+
+The trailing `" -"` in the returned value is intentional: it makes the extracted borehole name specific enough to match only the correct report filename, avoiding accidental matches against similarly named boreholes.
 
 ***
 

@@ -24,6 +24,9 @@ The integration follows a five-step sequence:
 | 4. [Attach reports to features](attach-reports.md) | ArcGIS Pro | Attach GeoDin PDF reports to the corresponding ArcGIS feature class points |
 | 5. [Publish to ArcGIS Online](publish-to-arcgis-online.md) | ArcGIS Pro → ArcGIS Online | Publish feature layers with attached reports for web-based access |
 
+<!-- src: loom/arcgis-3d-F -->
+After publishing, results can be reviewed in a browser via **ArcGIS Scene Viewer**, which supports both 2D maps and 3D scenes.
+
 ## Prerequisites
 
 - GeoDin with an active database and project
