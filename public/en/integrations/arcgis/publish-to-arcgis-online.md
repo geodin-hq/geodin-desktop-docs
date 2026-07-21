@@ -64,6 +64,8 @@ Beyond 2D feature layers, a scene containing 3D borehole solids and soil surface
 
 ![Adjust 3D Z configured to convert feet to meters](../../.gitbook/assets/publish-to-arcgis-online-07.png)
 2. **Update layer elevation settings.** Open **Layer Properties → Elevation** for the relevant layer and set the vertical units to **Meters**.
+
+![Layer elevation settings with vertical units in meters](../../.gitbook/assets/publish-to-arcgis-online-10.png)
 3. **Set the scene coordinate system.** Open the scene's **Map Properties → Coordinate Systems** and select **WGS 1984 Web Mercator** as the required coordinate system. See [Coordinate systems and EPSG](../../maps/coordinate-systems-and-epsg.md) for background on coordinate system settings.
 
 ![Scene coordinate system set to WGS 1984 Web Mercator](../../.gitbook/assets/publish-to-arcgis-online-08.png)
@@ -75,6 +77,8 @@ Beyond 2D feature layers, a scene containing 3D borehole solids and soil surface
 
 ![The Share As Web Scene pane with name, folder, and sharing level](../../.gitbook/assets/publish-to-arcgis-online-09.png)
 3. Click **Analyze** and resolve any errors it reports — do not proceed to publishing until Analyze returns no errors.
+
+![Analyze running before publication](../../.gitbook/assets/publish-to-arcgis-online-11.png)
 4. Click **Share** to publish, and once processing finishes, open the item's portal page to verify the scene and confirm all data is present.
 
 Document pop-ups — including attached geotechnical reports — carry over into the published scene, so the same attachments available in ArcGIS Pro remain accessible when reviewing the model online. The published scene opens via **Open in Scene Viewer**, ready for review in a browser.

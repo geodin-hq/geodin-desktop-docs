@@ -67,7 +67,7 @@ Check the results to confirm that attachments have been added successfully. Clic
 <!-- src: loom/arcgis-3d-D -->
 ### Variant: annotation layers with multiple records per borehole
 
-When the feature class was exported from a Civil 3D drawing, each borehole can have several annotation rows (general data, document, layer descriptions, and so on), not one row per borehole. In this case, build the attach key in two extra steps before running **Generate Attachments Match Table**:
+When the feature class was exported from a Civil 3D drawing, each borehole can have several annotation rows (general data, document, layer descriptions, and so on), not one row per borehole. The complete step-by-step tutorial for that case lives in the GeoDin® Ground documentation: [Attaching geotechnical reports to borehole annotations](https://docs.geodin.com/geodin-ground/workflows-and-integrations/arcgis-pro-attach-reports). In short, build the attach key in two extra steps before running **Generate Attachments Match Table**:
 
 1. Use **Select By Attributes** to isolate only the document annotation records — build the query so that **RefName contains the text** `document`. Apply the selection and confirm the correct records are highlighted before continuing.
 
