@@ -73,6 +73,8 @@ Beyond 2D feature layers, a scene containing 3D borehole solids and soil surface
 
 Document pop-ups — including attached geotechnical reports — carry over into the published scene, so the same attachments available in ArcGIS Pro remain accessible when reviewing the model online. The published scene opens via **Open in Scene Viewer**, ready for review in a browser.
 
+For an example of the result, see the public demo scene at [arcg.is/0rD1OL3](https://arcg.is/0rD1OL3) — a borehole and ground-model scene published with exactly this workflow. <!-- src: loom/arcgis-3d-E -->
+
 If your 3D model originates from a GeoDin® Ground drawing in Civil 3D, see [ArcGIS integration](https://docs.geodin.com/geodin-ground/workflows-and-integrations/arcgis-integration) in the GeoDin® Ground documentation for how to bring the model into ArcGIS Pro.
 
 ***
