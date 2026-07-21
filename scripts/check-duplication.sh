@@ -12,8 +12,16 @@ set -euo pipefail
 
 ROOT="${1:-public}"
 
+# A repo with no src: refs at all is clean — exit before the pipeline, which
+# would otherwise abort under pipefail on the empty grep.
+files=$(grep -rE 'src: [^ ]+#' "$ROOT" --include='*.md' -l || true)
+if [ -z "$files" ]; then
+  echo "OK: no src: references present yet."
+  exit 0
+fi
+
 dupes=$(
-  grep -rE 'src: [^ ]+#' "$ROOT" --include='*.md' -l \
+  echo "$files" \
     | xargs -I{} sh -c 'grep -oE "src: [^ ]+#[^ ]+" "$1" | sort -u | sed "s|^|$1\t|"' _ {} \
     | awk -F'\t' '{print $2"\t"$1}' \
     | sort \
