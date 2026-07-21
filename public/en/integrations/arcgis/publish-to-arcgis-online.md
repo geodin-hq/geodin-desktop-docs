@@ -58,6 +58,10 @@ Navigate between borehole points on the map to verify that all locations have th
 
 Beyond 2D feature layers, a scene containing 3D borehole solids and soil surfaces (see [Export to ArcGIS Pro](export-to-arcgis-pro.md)) can also be shared as an **ArcGIS Online web scene**. This lets stakeholders review subsurface conditions directly in a browser, without ArcGIS Pro or other specialist software installed.
 
+{% embed url="https://www.youtube.com/watch?v=c1nneSVzYkw" %}
+
+> **Video chapters:** 0:00 Adding borehole location points & labels · 1:17 Converting annotation units to meters · 2:26 Setting the WGS 1984 coordinate system · 2:42 Publishing the web scene · 3:31 Viewing the published scene online
+
 ### Prepare the scene before sharing
 
 1. **Check elevation units.** If your borehole elevations are in feet, run the **Adjust 3D Z** geoprocessing tool with **Reverse Sign of Z Values** set to **Maintain Z Orientation** and convert **From Feet** **To Meters**.
