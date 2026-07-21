@@ -130,7 +130,6 @@
 
 * [Getting Started with Maps](maps/getting-started-with-maps.md)
 * [Adding Layers](maps/adding-layers.md)
-* [Heatmaps](maps/heatmaps.md)
 * [WMS and Web Tile Layers](maps/wms-and-web-tile-layers.md)
 * [Coordinate Systems and EPSG](maps/coordinate-systems-and-epsg.md)
 * [Coordinate Systems and Projections](maps/coordinate-systems-and-projections.md)
