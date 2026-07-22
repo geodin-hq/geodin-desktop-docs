@@ -31,6 +31,25 @@ jobs:
         # reintroduces a duplicate `src: <ref>#<section>` is blocked here.
         run: bash scripts/check-duplication.sh public
 
+      - name: Check typography
+        # Required: docs prose is ASCII-typography only (house rule,
+        # 2026-07-21). Pre-existing violations are grandfathered in
+        # scripts/typography-allowlist.txt - clean pages up and remove
+        # entries; never allowlist new content.
+        run: bash scripts/check-typography.sh public/en
+
+      - name: Check relative links
+        # Required: relative links and image references must resolve
+        # (the move-a-block-break-a-path failure mode).
+        run: python3 scripts/check-relative-links.py public
+
+      - name: Check structure
+        # Informational: SUMMARY resolution/orphans/nesting depth, figure
+        # captions, heading hierarchy. Promote to required once the
+        # pre-existing findings are triaged.
+        continue-on-error: true
+        run: python3 scripts/check-structure.py public/en
+
       - name: Check stub pages
         # Informational. ~22 placeholder stubs predate this PR and will be
         # addressed in follow-up cleanup work; remove `continue-on-error`

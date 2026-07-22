@@ -2,13 +2,13 @@
 
 The **Borehole log / Borehole tab** graphic element renders a borehole log inside an object frame: fill patterns, depth labeling, layer descriptions, and optionally a scaled tabular presentation. It supports three drawing types - **Graphic Log**, **Tabular Log**, and **Log with Default** - and automatically distributes across multiple pages when the chosen height scale requires it.
 
-For the creation walkthrough (drawing an object frame and adding the element), see [Creating Borehole Logs](../../borehole-logs/creating-borehole-logs.md). For general element properties shared across all layout elements (element name, drawing layer, z-order), see [Element Properties Reference](element-properties.md).
+For the creation walkthrough (drawing an object frame and adding the element), see [Creating Borehole Logs](../borehole-logs/creating-borehole-logs.md). For general element properties shared across all layout elements (element name, drawing layer, z-order), see [Element Properties Reference](element-properties.md).
 
 ## Companion elements
 
 The following elements are typically placed alongside a borehole log in the same object frame. Each is described on its own page.
 
-- **Depth Scale** - add from the toolbar; can be placed left or right of the borehole log. See [Scale Bars and Depth Scales](../../scale-bars-and-depth-scales.md).
+- **Depth Scale** - add from the toolbar; can be placed left or right of the borehole log. See [Scale Bars and Depth Scales](../scale-bars-and-depth-scales.md).
 - **Samples** - automatically connects to the borehole and moves with it (height-synchronised; no vertical misfit).
 - **Groundwater** - shows nothing if no groundwater data exists for the object. See [Groundwater Visualizations](../groundwater-visualizations.md).
 - **Well Design** - renders casing and filling visualization alongside the borehole profile.
@@ -41,7 +41,7 @@ The element can be moved and scaled inside the object frame. All other graphic e
 
 **Labeling with layer data:** Layer data descriptions are added on the right side of the borehole log. For layers with component descriptions, you can define whether component labeling occurs at the depth where the component is described. The option "Layer description only once" ensures that a layer split across pages is labelled only once.
 
-**Language selection:** A different language than the input language can be selected for text labeling (requires configured [Standards](../../../configuration/ground-description-standards.md)). Fill pattern presentation is not affected by language selection. Vertical text orientation and tag line styles can also be configured.
+**Language selection:** A different language than the input language can be selected for text labeling (requires configured [Standards](../../configuration/ground-description-standards.md)). Fill pattern presentation is not affected by language selection. Vertical text orientation and tag line styles can also be configured.
 
 #### Graphical view
 
