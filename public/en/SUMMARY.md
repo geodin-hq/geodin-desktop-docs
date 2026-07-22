@@ -42,6 +42,7 @@
 ## Importing Data
 
 * [Overview](data-collection/import.md)
+* [Supported data formats](data-collection/supported-formats.md)
 * [Data Sequences (CPT, free-format)](data-collection/import/data-sequences.md)
 * [CSV and Excel Import](data-collection/import/csv-and-excel-import.md)
 * [AGS Import](data-collection/import/ags-import.md)
