@@ -14,7 +14,7 @@ The object frame is a special type - a further development - of the group frame.
 
 Inside the object frame the individual graphic elements can be arranged in any way. For example a borehole log and borehole table can be displayed in detail using the large number of possibilities for the labeling instructions. The geological graphic elements inside the object frame always refer to a borehole; the borehole to be shown is chosen by the object frame.
 
-The behavior of the **Borehole log/Borehole tab** element inside the frame (page distribution, moving and scaling, multiple instances) is described in [Creating Borehole Logs](creating-borehole-logs.md). The snap function is activated and deactivated using the menu entry **Preferences → Snap** or the shortcut **Ctrl+K**; it is described in [Layout Editor Basics](../layouts/layout-editor-basics.md).
+The behavior of the **Borehole log/Borehole tab** element inside the frame (page distribution, moving and scaling, multiple instances) is described in [Creating Borehole Logs](creating-borehole-logs.md). The snap function is activated and deactivated using the menu entry **Preferences > Snap** or the shortcut **Ctrl+K**; it is described in [Layout Editor Basics](../layouts/layout-editor-basics.md).
 
 **Converting an object frame**
 
@@ -37,7 +37,7 @@ The use of different drawing layers can be summarized as follows:
 * Drawing layers can be hidden, so temporarily disturbing graphic elements do not have to be removed from the graph. The construction of the image is faster if you temporarily hide unneeded elements.
 * Drawing layers may contain information which is either exclusively shown on the display or when printing. This way certain contents can be shown for specific user groups or applications.
 
-Each drawing layer has a name; the name of the current layer is displayed on the right in the status bar. Creating new drawing layers or changing the drawing area is done by selecting the menu entry **Arrangement → Drawing layer**, with the key combination **Ctrl + E**, or by selecting the branch **\<Drawing layers>** directly in the object properties. The dialog itself is described under *Drawing layers dialog* in the Reference section below.
+Each drawing layer has a name; the name of the current layer is displayed on the right in the status bar. Creating new drawing layers or changing the drawing area is done by selecting the menu entry **Arrangement > Drawing layer**, with the key combination **Ctrl + E**, or by selecting the branch **\<Drawing layers>** directly in the object properties. The dialog itself is described under *Drawing layers dialog* in the Reference section below.
 
 ### Layout lists
 

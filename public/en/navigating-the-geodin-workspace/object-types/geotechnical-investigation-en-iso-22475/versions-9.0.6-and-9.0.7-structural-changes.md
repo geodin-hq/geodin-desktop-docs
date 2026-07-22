@@ -61,11 +61,11 @@ To check the GeoDin version currently in use:
 The installed object type version can be checked as follows:
 
 * Open the **System** tab
-* Navigate to **System configuration → Object types**
+* Navigate to **System configuration > Object types**
 * Select **Geotechnical investigation EN ISO 22475 (2008)**
 * Open **Properties**
 
-<figure><img src="../../../.gitbook/assets/image (8).png" alt=""><figcaption>System configuration → Object types with <strong>Geotechnical investigation EN ISO 22475 (2018)</strong> selected and <strong>Properties</strong> opened; the Properties dialog shows the installed object type version (here Version 9.0.5).</figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (8).png" alt=""><figcaption>System configuration > Object types with <strong>Geotechnical investigation EN ISO 22475 (2018)</strong> selected and <strong>Properties</strong> opened; the Properties dialog shows the installed object type version (here Version 9.0.5).</figcaption></figure>
 
 ### Determining the Object Type Version in Your Database
 
@@ -85,10 +85,10 @@ Before updating the object type, it is strongly recommended to:
   * `C:\ProgramData\GeoDin`
   * `C:\ProgramData\Fugro\GeoDin`
 * Back up the affected geotechnical data types via:
-  * **System → System configuration → Data types**
+  * **System > System configuration > Data types**
   * Use the **Export data types** method
 
-<figure><img src="../../../.gitbook/assets/image (9).png" alt=""><figcaption>System → System configuration → Data types → <strong>Export data types</strong>, with the affected geotechnical data types ticked and the export file path set; click <strong>Export</strong> to save the backup.</figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (9).png" alt=""><figcaption>System > System configuration > Data types > <strong>Export data types</strong>, with the affected geotechnical data types ticked and the export file path set; click <strong>Export</strong> to save the backup.</figcaption></figure>
 
 ***
 

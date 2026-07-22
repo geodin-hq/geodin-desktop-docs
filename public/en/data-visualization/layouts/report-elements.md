@@ -78,5 +78,5 @@ Each report group can include a **footer** carrying additional information per g
 
 Two export paths are available:
 
-- **Right-click in edit mode** - right-click the Report Element → **Export as Excel** or **Export as CSV**. Exports the visible data for the current object selection.
+- **Right-click in edit mode** - right-click the Report Element -> **Export as Excel** or **Export as CSV**. Exports the visible data for the current object selection.
 - **Report Access button** - in the layout overview, use the **Report Access** button to export to Excel without opening edit mode first.

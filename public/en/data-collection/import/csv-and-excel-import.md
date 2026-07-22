@@ -10,13 +10,13 @@ For depth-indexed data sequences (CPT and similar), see [Data Sequences](data-se
 
 ## Mapping source columns to GeoDin fields
 
-The easiest path is to prepare an Excel table that mirrors the tabular view of GeoDin: column headers matching either the long parameter name or the short database field name will auto-link via the **Automatic Link** button.
+Mapping happens on the **Parameter links** tab of the import wizard (reached via the **Import general data** method on a project's **Objects** node). The easiest path is to prepare an Excel table that mirrors the tabular view of GeoDin: column headers matching either the long parameter name or the short database field name will auto-link via the **Automatic Link** button.
 
 Mapping options in the import wizard:
 
 - **Automatic Link** - matches headers to GeoDin parameters by name.
 - **Drag-and-drop** - drag from the GeoDin parameter list (left pane) onto the source header (right pane) when names don't match.
-- **Save as ICF** - save the parameter mapping as an ICF file and reload it on subsequent imports to skip manual mapping.
+- **Save as ICF** - save the parameter mapping as an ICF file and reload it on subsequent imports (via **Load configuration**) to skip manual mapping.
 
 ### Preview colours
 

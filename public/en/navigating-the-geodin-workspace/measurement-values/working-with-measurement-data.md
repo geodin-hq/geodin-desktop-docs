@@ -355,19 +355,19 @@ The method is especially useful for creating empty data sets for a monitoring pr
 
 **Attention:** Decisive for the processing of the method is the level, at which it is called up. Is it a single measurement point, only this is edited, is it a measurement point group, the data set is added on every measurement point of the group.
 
-· **Data type**
+- **Data type**
 
 Choice of data type for the measurement objects.
 
-· **Measurement presets**
+- **Measurement presets**
 
 Useful for defining defaults (e.g. detection limit, investigation method) for each parameter of the data type
 
-· **Date list**
+- **Date list**
 
 Default value is the current date, but a list of dates may be created, saved and loaded.
 
-· **Time**
+- **Time**
 
 It may be useful to specify the same time for a number of measurement points or monitoring stages.
 
@@ -576,15 +576,15 @@ You can also load only parts of the settings stored in the configuration file, f
 
 Open a file or database that contains the import data. The program supports the following file formats:
 
-·MS Excel
+- MS Excel
 
-·MS Access
+- MS Access
 
-·dBASE
+- dBASE
 
-·Text-files
+- Text-files
 
-·CSV-files
+- CSV-files
 
 After selecting a file or database, choose a tab sheet (Excel), table (Access, dBase) or a column separator (CSV, text file). You can preview the import data. For MS Excel or text files you can define whether the first line contains column headers, which is common. In addition, you can define the date format used in the import data. GeoDin uses this setting for later date conversion.
 

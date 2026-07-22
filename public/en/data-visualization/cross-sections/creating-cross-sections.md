@@ -147,7 +147,7 @@ With this setting you can fix the report width even if there are invisible or re
 
 Fixed report width: 200 mm. Sum of visible columns: 20 + 40 + 50 + 30 = 140 mm.
 
-Resulting widths: Column 1 = 29 mm · Column 2 = 57 mm · Column 3 = 71 mm · Column 4 = 43 mm
+Resulting widths: Column 1 = 29 mm, Column 2 = 57 mm, Column 3 = 71 mm, Column 4 = 43 mm
 
 **Horizontal report orientation**
 
@@ -203,7 +203,7 @@ Select how many divisions to display. The scale bar contains n+1 sections, where
 
 The scale bar element has a dynamic size that adjusts relative to the configured percentage and is rounded to a common scale. This option sets whether the anchor point is the left or right edge of the scale bar.
 
-Example: a scale bar set to 25% of the map might resolve to 5 cm → exact value 8,223 m → rounded to 8,000 m → the element is slightly smaller than the original 25%.
+Example: a scale bar set to 25% of the map might resolve to 5 cm -> exact value 8,223 m -> rounded to 8,000 m -> the element is slightly smaller than the original 25%.
 
 ### Distance ruler
 

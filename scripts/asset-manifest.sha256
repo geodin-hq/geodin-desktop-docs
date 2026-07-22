@@ -1,15 +1,15 @@
 8a86ea9fe534a9018fa284dcd0d2cd9ca04e83796d3e6fb31733b95055432d10	public/de/.gitbook/assets/0_Screen.jpg
+6705da20b4c91ea184c13593451d21b1e04f7d0f3a6e9f20e6f20a6d1a3df946	public/de/.gitbook/assets/10_Screen.png
 19235d04e4023635b1f6dbdc993c3a8ef6d9b0c9999d26d119e722f7aacd75c0	public/de/.gitbook/assets/1_Screen (1) (1).png
 f02e007a39c4759d275c2a1b9625745c3268290d5e7bf63a6cee1fd30f528178	public/de/.gitbook/assets/1_Screen (1).png
 8bcb1353bbccbeeccdc2e2112e87d855079e5ad4e331d591cd2642237fbf71d7	public/de/.gitbook/assets/1_Screen.png
-6705da20b4c91ea184c13593451d21b1e04f7d0f3a6e9f20e6f20a6d1a3df946	public/de/.gitbook/assets/10_Screen.png
-dff7b86647496d5bc2ad4bfd87be7c2c9a9b6065e8f83d71d56309f94b698648	public/de/.gitbook/assets/2_Screen (1) (1).png
-71218f2cc30a41b7f0fa62dbd158e9597300631bc4db6c34c35c2871af9fd998	public/de/.gitbook/assets/2_Screen (1).png
-3686d8ff6d6895cff062c2730a141609497fab5cfae676c69669ce9f440ca4b9	public/de/.gitbook/assets/2_Screen.png
 dfeae8cb840a38a5a9d4a9272fa86d43c124e7c61294a15b403d7dde0350dc84	public/de/.gitbook/assets/2025-03-19_09-47-34.png
 10ae8b7e7bd1f995aff251ec2e4428dedcb6bc3fb5a6177d8822670a7d874bf6	public/de/.gitbook/assets/2025-03-19_09-48-03.png
 5191c3bdf3285667779bca9f8cc614a9567623016759b93ed465a8cb06ebedb5	public/de/.gitbook/assets/2025-03-19_09-48-49.png
 a0072f36d5b382ef19543d5e5ee48d47557b6db634e5cb88dec9a1096658e367	public/de/.gitbook/assets/2025-03-19_09-51-54.png
+dff7b86647496d5bc2ad4bfd87be7c2c9a9b6065e8f83d71d56309f94b698648	public/de/.gitbook/assets/2_Screen (1) (1).png
+71218f2cc30a41b7f0fa62dbd158e9597300631bc4db6c34c35c2871af9fd998	public/de/.gitbook/assets/2_Screen (1).png
+3686d8ff6d6895cff062c2730a141609497fab5cfae676c69669ce9f440ca4b9	public/de/.gitbook/assets/2_Screen.png
 73fab232b924e06fd289c82b0b15aa4efb82dc9e6e83f5e8b50ab4e085fa8a44	public/de/.gitbook/assets/3_Screen (1) (1).png
 e1206d277a73abcf7397539261cfbd57897ded41650505dd31b401212c2bb7bc	public/de/.gitbook/assets/3_Screen (1).png
 eb3f50861d90d653df0edbbd85d59f2299d76361df81ac0f12da77751e286d57	public/de/.gitbook/assets/3_Screen (2).png
@@ -29,6 +29,12 @@ d6f3e2cbd97175c9aa8227c6b2ff2abaf63b0714f65f9bc7cfa164629718b16b	public/de/.gitb
 c7bc3ab8df253e03bf25a5ba9c16ffa6c4bf4dbd44616d6757410e5cc65c54fb	public/de/.gitbook/assets/9_Screen (1) (1).png
 c7bc3ab8df253e03bf25a5ba9c16ffa6c4bf4dbd44616d6757410e5cc65c54fb	public/de/.gitbook/assets/9_Screen (1).png
 c7bc3ab8df253e03bf25a5ba9c16ffa6c4bf4dbd44616d6757410e5cc65c54fb	public/de/.gitbook/assets/9_Screen.png
+f546455a1e374607b7fef4d95bc2116ba57d70178e7a65a2c2180dc9f3305d6b	public/de/.gitbook/assets/Picture1.png
+c23859eacb122d0ba68c580a8b4af440d55dcb176cd25cbc61651eb92539e86a	public/de/.gitbook/assets/Picture2.png
+2e5b603124d32ce521f033a372a91ac3dd90d43a6c379626dd5b457a98b632ff	public/de/.gitbook/assets/Picture3.png
+eea8b502e3d400a266694b858c8adc644b82a06d740f384b70cf89dc8d638d4e	public/de/.gitbook/assets/Picture4.png
+e23eb81ff770f463477eef259a5cb5ededce6b030b2579f3d8f7565f2834055c	public/de/.gitbook/assets/Picture5.png
+9da9207feb02409caed81acc2ad2b2fabc58299237fe7e2b9254778722088819	public/de/.gitbook/assets/Picture6.png
 1bd41b6f440c06dc5ba0318b426b26783a141442616ed431adc1392682d0e28b	public/de/.gitbook/assets/connection_mssql_cloud_de.png
 464a950bec84512885ebdf9a12ec76d47147ceafc5a72fc067412b935a3109ac	public/de/.gitbook/assets/connection_mssql_de.png
 02c8c8b3034df73fb7b4605482f45124179c32470643a7c1a5931cdfcf6bd394	public/de/.gitbook/assets/connection_ora_de.png
@@ -94,21 +100,8 @@ bdae752a337c2c999e268c84c26fdd243c6eb735e6178f17eeb8c10cd6814f3b	public/de/.gitb
 cee36eca95fe710b455d16d1798611e37b52732f0eeda64caf248ac9de14cd9e	public/de/.gitbook/assets/image (8).png
 a385fbaca6bb405cad793c08350ad1cc6d17ae905fbb5da2352f6a8f97397803	public/de/.gitbook/assets/image (9).png
 50afa63a4bb3d92225fdbeb2b91bb12d0eeeb3f567a3a886e47a3e1c837eb81a	public/de/.gitbook/assets/image.png
-f546455a1e374607b7fef4d95bc2116ba57d70178e7a65a2c2180dc9f3305d6b	public/de/.gitbook/assets/Picture1.png
-c23859eacb122d0ba68c580a8b4af440d55dcb176cd25cbc61651eb92539e86a	public/de/.gitbook/assets/Picture2.png
-2e5b603124d32ce521f033a372a91ac3dd90d43a6c379626dd5b457a98b632ff	public/de/.gitbook/assets/Picture3.png
-eea8b502e3d400a266694b858c8adc644b82a06d740f384b70cf89dc8d638d4e	public/de/.gitbook/assets/Picture4.png
-e23eb81ff770f463477eef259a5cb5ededce6b030b2579f3d8f7565f2834055c	public/de/.gitbook/assets/Picture5.png
-9da9207feb02409caed81acc2ad2b2fabc58299237fe7e2b9254778722088819	public/de/.gitbook/assets/Picture6.png
 8a86ea9fe534a9018fa284dcd0d2cd9ca04e83796d3e6fb31733b95055432d10	public/en/.gitbook/assets/0_Screen (1).jpg
 8a86ea9fe534a9018fa284dcd0d2cd9ca04e83796d3e6fb31733b95055432d10	public/en/.gitbook/assets/0_Screen.jpg
-3e0e2445f7ce814ac87a127c2b98216912ad7234dadaf59da3f639bb344d649f	public/en/.gitbook/assets/1_Screen (1) (1).jpg
-876d1a965bd6c62e934852879a4ebc3a5c83ceb7a3bca8ddf5d46fa8468b6a99	public/en/.gitbook/assets/1_Screen (1).jpg
-f02e007a39c4759d275c2a1b9625745c3268290d5e7bf63a6cee1fd30f528178	public/en/.gitbook/assets/1_Screen (1).png
-3e0e2445f7ce814ac87a127c2b98216912ad7234dadaf59da3f639bb344d649f	public/en/.gitbook/assets/1_Screen (2).jpg
-876d1a965bd6c62e934852879a4ebc3a5c83ceb7a3bca8ddf5d46fa8468b6a99	public/en/.gitbook/assets/1_Screen (3).jpg
-f19b6ae38c716a9beea74feb939267e5fcf33ed5ea4861aa319bb0c24c11b096	public/en/.gitbook/assets/1_Screen.jpg
-f02e007a39c4759d275c2a1b9625745c3268290d5e7bf63a6cee1fd30f528178	public/en/.gitbook/assets/1_Screen.png
 e94f2e8af52f4308c000103a7407ca0d1db3525256d4ce5721e7caa4af0df070	public/en/.gitbook/assets/10_Screen (1).jpg
 e94f2e8af52f4308c000103a7407ca0d1db3525256d4ce5721e7caa4af0df070	public/en/.gitbook/assets/10_Screen.jpg
 f0591bf850ad63b05f93d9afc88fd3da92e300c53ceaf3fef1b37a75082a0d7c	public/en/.gitbook/assets/11_Screen (1).jpg
@@ -119,6 +112,16 @@ f0591bf850ad63b05f93d9afc88fd3da92e300c53ceaf3fef1b37a75082a0d7c	public/en/.gitb
 5599c1ac8f7f72d1a18c71d855cf7a18296b116a9a246420fc916103c38e1204	public/en/.gitbook/assets/13_Screen.jpg
 c5a84686eaba061ec934ac01777403e81db57555b9d69acd8646aa746ac4d414	public/en/.gitbook/assets/14_Screen (1).jpg
 c5a84686eaba061ec934ac01777403e81db57555b9d69acd8646aa746ac4d414	public/en/.gitbook/assets/14_Screen.jpg
+3e0e2445f7ce814ac87a127c2b98216912ad7234dadaf59da3f639bb344d649f	public/en/.gitbook/assets/1_Screen (1) (1).jpg
+876d1a965bd6c62e934852879a4ebc3a5c83ceb7a3bca8ddf5d46fa8468b6a99	public/en/.gitbook/assets/1_Screen (1).jpg
+f02e007a39c4759d275c2a1b9625745c3268290d5e7bf63a6cee1fd30f528178	public/en/.gitbook/assets/1_Screen (1).png
+3e0e2445f7ce814ac87a127c2b98216912ad7234dadaf59da3f639bb344d649f	public/en/.gitbook/assets/1_Screen (2).jpg
+876d1a965bd6c62e934852879a4ebc3a5c83ceb7a3bca8ddf5d46fa8468b6a99	public/en/.gitbook/assets/1_Screen (3).jpg
+f19b6ae38c716a9beea74feb939267e5fcf33ed5ea4861aa319bb0c24c11b096	public/en/.gitbook/assets/1_Screen.jpg
+f02e007a39c4759d275c2a1b9625745c3268290d5e7bf63a6cee1fd30f528178	public/en/.gitbook/assets/1_Screen.png
+d8f3c40bdfa2521f132637c80e732d1f422116dc8c0e4ee4d90a5448c1e2e66d	public/en/.gitbook/assets/2025-03-19_14-33-25.png
+a37b57249f8db76d9290ce18f29f4c5e946a463a723442a254beaa220662661e	public/en/.gitbook/assets/2025-03-19_14-34-28.png
+fa75d14a6d7bc9cce159418ae246e338b11fb1088227fb4744f2e3edf20bf267	public/en/.gitbook/assets/2025-03-19_14-56-32.png
 ee3b526df7752d4bb3638678de95ce288835e4224fe3e73207036751aebbb9b5	public/en/.gitbook/assets/2_Screen (1) (1).jpg
 fc61d04a9671cae3486511d0ad91e6c38378e8b29c0706e2d73c067be343863f	public/en/.gitbook/assets/2_Screen (1).jpg
 71218f2cc30a41b7f0fa62dbd158e9597300631bc4db6c34c35c2871af9fd998	public/en/.gitbook/assets/2_Screen (1).png
@@ -126,9 +129,7 @@ ee3b526df7752d4bb3638678de95ce288835e4224fe3e73207036751aebbb9b5	public/en/.gitb
 fc61d04a9671cae3486511d0ad91e6c38378e8b29c0706e2d73c067be343863f	public/en/.gitbook/assets/2_Screen (3).jpg
 2b001f72f71081db3906120f3e4e5905dbb648e5c60a12f806f0a714d7281576	public/en/.gitbook/assets/2_Screen.jpg
 71218f2cc30a41b7f0fa62dbd158e9597300631bc4db6c34c35c2871af9fd998	public/en/.gitbook/assets/2_Screen.png
-d8f3c40bdfa2521f132637c80e732d1f422116dc8c0e4ee4d90a5448c1e2e66d	public/en/.gitbook/assets/2025-03-19_14-33-25.png
-a37b57249f8db76d9290ce18f29f4c5e946a463a723442a254beaa220662661e	public/en/.gitbook/assets/2025-03-19_14-34-28.png
-fa75d14a6d7bc9cce159418ae246e338b11fb1088227fb4744f2e3edf20bf267	public/en/.gitbook/assets/2025-03-19_14-56-32.png
+80c646ad1dd21d49688c8c16d8846b1fa1b6f2bddb0a946ae83b2cd0aa13edc7	public/en/.gitbook/assets/3.png
 f89efba4fa7724ed4dbc7be65ab5863d15393ac27214f6b83e43dc8008102f30	public/en/.gitbook/assets/3_Screen (1) (1).jpg
 05448358edc010166b4100ef6b4c67cd2c94f479c8f7ed6eb387c38f38dae560	public/en/.gitbook/assets/3_Screen (1).jpg
 05448358edc010166b4100ef6b4c67cd2c94f479c8f7ed6eb387c38f38dae560	public/en/.gitbook/assets/3_Screen (2) (1).jpg
@@ -138,8 +139,8 @@ eb3f50861d90d653df0edbbd85d59f2299d76361df81ac0f12da77751e286d57	public/en/.gitb
 d4631db677667280082c085e44e5f2c488997b477773063a4d0e8c4e229911d4	public/en/.gitbook/assets/3_Screen (4).jpg
 d4631db677667280082c085e44e5f2c488997b477773063a4d0e8c4e229911d4	public/en/.gitbook/assets/3_Screen.jpg
 eb3f50861d90d653df0edbbd85d59f2299d76361df81ac0f12da77751e286d57	public/en/.gitbook/assets/3_Screen.png
-80c646ad1dd21d49688c8c16d8846b1fa1b6f2bddb0a946ae83b2cd0aa13edc7	public/en/.gitbook/assets/3.png
 1bdb2b12f331c3aef624479ca1f0c876e1a01cd289c9b1609088e33446a03b5e	public/en/.gitbook/assets/4 (1).png
+1bdb2b12f331c3aef624479ca1f0c876e1a01cd289c9b1609088e33446a03b5e	public/en/.gitbook/assets/4.png
 68137f64f5f468166f5db606801a31bb4ba58902dd2d95ab30c6402caee9eecf	public/en/.gitbook/assets/4_Screen (1) (1).jpg
 9349beb1269155c8a41c8fd4b1d2a6beaa7b43cb98c61daecc83468665b5fbc0	public/en/.gitbook/assets/4_Screen (1).jpg
 9349beb1269155c8a41c8fd4b1d2a6beaa7b43cb98c61daecc83468665b5fbc0	public/en/.gitbook/assets/4_Screen (2) (1).jpg
@@ -149,7 +150,7 @@ eb3f50861d90d653df0edbbd85d59f2299d76361df81ac0f12da77751e286d57	public/en/.gitb
 213e4bb41ad1c0641dd0aeb4f5819f34322256b9e49e15226ea575ba1d748487	public/en/.gitbook/assets/4_Screen (3).jpg
 db61d66257788ac2e46a87674520f046738dcfcbce311b7abdba6f97b4a4d2b2	public/en/.gitbook/assets/4_Screen.jpg
 58d66dd03fc8b1341dfdced470a9a9ed15e9f2bd85927956c1dbeba8d87c785d	public/en/.gitbook/assets/4_Screen.png
-1bdb2b12f331c3aef624479ca1f0c876e1a01cd289c9b1609088e33446a03b5e	public/en/.gitbook/assets/4.png
+49128bc5b1dbb903eafc051fe36e8c8282ae203780c21af2aece0d2ce20dfdb3	public/en/.gitbook/assets/5.png
 aa504800b8fa80900ab41a3da88a67b7f32cd478abaa9fe7a5101e3c93b7e005	public/en/.gitbook/assets/5_Screen (1) (1).jpg
 84ca1a822d40e44d704c545fbcc838e43d89ffac38025571c066737e40dd83e9	public/en/.gitbook/assets/5_Screen (1).jpg
 84ca1a822d40e44d704c545fbcc838e43d89ffac38025571c066737e40dd83e9	public/en/.gitbook/assets/5_Screen (2) (1).jpg
@@ -159,7 +160,7 @@ f10a3ad4b5a119e6eba7e37f940cea3e8eba00c499c4f2e8f98cfb779ae4d4e6	public/en/.gitb
 f10a3ad4b5a119e6eba7e37f940cea3e8eba00c499c4f2e8f98cfb779ae4d4e6	public/en/.gitbook/assets/5_Screen (3).jpg
 0a114a20e71a0e21c1d3c8da256b5f291e9a39f5b1d614f03e62d3d04f486365	public/en/.gitbook/assets/5_Screen.jpg
 29b75d98fc8957f0f8270d0af70e80e2ace30bbf4acfbe9839b88bf107af2ddd	public/en/.gitbook/assets/5_Screen.png
-49128bc5b1dbb903eafc051fe36e8c8282ae203780c21af2aece0d2ce20dfdb3	public/en/.gitbook/assets/5.png
+d4c5050456eaa08374476c35ef3e0555d4bb4bc8116cb272fef43c1f0f01d4b2	public/en/.gitbook/assets/6.png
 5de49c844b5c8a49f533cd9ae85da9ad9d80bd908776e5fa1355777aa4a82ed6	public/en/.gitbook/assets/6_Screen (1) (1).jpg
 5de49c844b5c8a49f533cd9ae85da9ad9d80bd908776e5fa1355777aa4a82ed6	public/en/.gitbook/assets/6_Screen (1).jpg
 b2bd7c2e7a1cff2ab87ca2c049b75bf09edcc4a1ff58166e84f872ec329f6e3f	public/en/.gitbook/assets/6_Screen (2) (1).jpg
@@ -168,7 +169,6 @@ b2bd7c2e7a1cff2ab87ca2c049b75bf09edcc4a1ff58166e84f872ec329f6e3f	public/en/.gitb
 73de0f43be92f7c852a4b0ddd099e5861719ea0d37a58b245dd45a4b8e58927f	public/en/.gitbook/assets/6_Screen (3).png
 43f90b7a3bc6b99c066cc1ba11f6907a188d770de877fda4674235eb4f31ef06	public/en/.gitbook/assets/6_Screen.jpg
 73de0f43be92f7c852a4b0ddd099e5861719ea0d37a58b245dd45a4b8e58927f	public/en/.gitbook/assets/6_Screen.png
-d4c5050456eaa08374476c35ef3e0555d4bb4bc8116cb272fef43c1f0f01d4b2	public/en/.gitbook/assets/6.png
 89e10da2db10c99f5f8c3f15639986d8e6508258b8a04957781e355fff9edd24	public/en/.gitbook/assets/7_Screen (1) (1).jpg
 89e10da2db10c99f5f8c3f15639986d8e6508258b8a04957781e355fff9edd24	public/en/.gitbook/assets/7_Screen (1).jpg
 1e2aac465ad7e87ce1ac7b6f02f1d3ef229e94b31620ee659b2c4544160c489b	public/en/.gitbook/assets/7_Screen.jpg
@@ -179,35 +179,90 @@ d4c5050456eaa08374476c35ef3e0555d4bb4bc8116cb272fef43c1f0f01d4b2	public/en/.gitb
 54f27e8d4f03d6fd4a94be271ce023eac656dbb385c1d04c2e8a90cd5571da67	public/en/.gitbook/assets/9_Screen (1).jpg
 a0ac7563883ce234bf2d0eab1ada2ccd4ad5ab47edeb2107dcba077718e1b285	public/en/.gitbook/assets/9_Screen.jpg
 0f2f7ad38fb128f00f711cc028b76602cd18f3f736abf2d5b73becadb77c6717	public/en/.gitbook/assets/AGS4.png
-c25054a5bfe0479f92d753daa62f262e8818cf09a4d21be79b9f4a9151caaa18	public/en/.gitbook/assets/attach-reports-01.jpeg
-bd28a1eb9b273e955b45e75570fb239b3c053e881508467abb40d6b960f2a04e	public/en/.gitbook/assets/attach-reports-02.jpeg
-c2532839ea8518ba0118e22407af8bf5d756ffa4753946f7d4470c5b0497f720	public/en/.gitbook/assets/attach-reports-03.jpeg
-cd243a30f37eba00fafba7bbfcb0db5881e7f4942efabaffa0b53305f0738cc9	public/en/.gitbook/assets/attach-reports-04.jpeg
-63c510864bcac12f30eec8a3e499eed897fa32c99fb2c2dfb50e8e332e31edd2	public/en/.gitbook/assets/attach-reports-05.jpeg
-bd2fc5b08673161b41fbc6c998f41260707fc4eb01ee85e1db7e08822d412311	public/en/.gitbook/assets/attach-reports-06.jpeg
-4bfd7f59ef8210ffa6355d907ef51165976c86d2282e857252491433dfcc5f0d	public/en/.gitbook/assets/attach-reports-07.jpeg
-ec3c3f1239567281d56c6e57182fef2be759d77f5c2dcb7184d7e1172578d465	public/en/.gitbook/assets/attach-reports-08.jpeg
-9966185fd0cb592e8fd866f849a2b204d53e4ca3ae4bb3c600ef4c33c074754b	public/en/.gitbook/assets/attach-reports-09.jpeg
 59ac896a7b565b5705ab9a6b57077d33ac805cebcc6c583482b1931d9693554f	public/en/.gitbook/assets/Bild.png
+d73ee930b97bafb8e1358fed0417cab8557f82f58b056f779ef2afa2568301ba	public/en/.gitbook/assets/GeoDin_infrastructure_overview_en.png
+f546455a1e374607b7fef4d95bc2116ba57d70178e7a65a2c2180dc9f3305d6b	public/en/.gitbook/assets/Picture1.png
+c23859eacb122d0ba68c580a8b4af440d55dcb176cd25cbc61651eb92539e86a	public/en/.gitbook/assets/Picture2 (1).png
+c23859eacb122d0ba68c580a8b4af440d55dcb176cd25cbc61651eb92539e86a	public/en/.gitbook/assets/Picture2.png
+2e5b603124d32ce521f033a372a91ac3dd90d43a6c379626dd5b457a98b632ff	public/en/.gitbook/assets/Picture3.png
+eea8b502e3d400a266694b858c8adc644b82a06d740f384b70cf89dc8d638d4e	public/en/.gitbook/assets/Picture4.png
+e23eb81ff770f463477eef259a5cb5ededce6b030b2579f3d8f7565f2834055c	public/en/.gitbook/assets/Picture5.png
+9da9207feb02409caed81acc2ad2b2fabc58299237fe7e2b9254778722088819	public/en/.gitbook/assets/Picture6.png
+e94f2e8af52f4308c000103a7407ca0d1db3525256d4ce5721e7caa4af0df070	public/en/.gitbook/assets/Screens/Custom/EN/10_Screen.jpg
+f0591bf850ad63b05f93d9afc88fd3da92e300c53ceaf3fef1b37a75082a0d7c	public/en/.gitbook/assets/Screens/Custom/EN/11_Screen.jpg
+5adbd3876d755e441eaf6b0b43fb85dee5109ab45d6a91ec75d5c72a2702ef03	public/en/.gitbook/assets/Screens/Custom/EN/12_Screen.jpg
+5599c1ac8f7f72d1a18c71d855cf7a18296b116a9a246420fc916103c38e1204	public/en/.gitbook/assets/Screens/Custom/EN/13_Screen.jpg
+c5a84686eaba061ec934ac01777403e81db57555b9d69acd8646aa746ac4d414	public/en/.gitbook/assets/Screens/Custom/EN/14_Screen.jpg
+f4881f1d090b6a410ac3cf0f1713a41d2b67e11d09d79a0ed62827538bf92863	public/en/.gitbook/assets/Screens/Custom/EN/15_Screen.jpg
+3e0e2445f7ce814ac87a127c2b98216912ad7234dadaf59da3f639bb344d649f	public/en/.gitbook/assets/Screens/Custom/EN/1_Screen.jpg
+ee3b526df7752d4bb3638678de95ce288835e4224fe3e73207036751aebbb9b5	public/en/.gitbook/assets/Screens/Custom/EN/2_Screen.jpg
+31b7bc7f9253d7ec0a56489e1f835be2e96f782b7f949d57275113d0322de652	public/en/.gitbook/assets/Screens/Custom/EN/3_Screen.jpg
+213e4bb41ad1c0641dd0aeb4f5819f34322256b9e49e15226ea575ba1d748487	public/en/.gitbook/assets/Screens/Custom/EN/4_Screen.jpg
+f10a3ad4b5a119e6eba7e37f940cea3e8eba00c499c4f2e8f98cfb779ae4d4e6	public/en/.gitbook/assets/Screens/Custom/EN/5_Screen.jpg
+b2bd7c2e7a1cff2ab87ca2c049b75bf09edcc4a1ff58166e84f872ec329f6e3f	public/en/.gitbook/assets/Screens/Custom/EN/6_Screen.jpg
+89e10da2db10c99f5f8c3f15639986d8e6508258b8a04957781e355fff9edd24	public/en/.gitbook/assets/Screens/Custom/EN/7_Screen.jpg
+688a8d4feb3002b5aecbc64f9c1ca29c780c2cdce4ec09e93b0c6acfaa39a925	public/en/.gitbook/assets/Screens/Custom/EN/8_Screen.jpg
+54f27e8d4f03d6fd4a94be271ce023eac656dbb385c1d04c2e8a90cd5571da67	public/en/.gitbook/assets/Screens/Custom/EN/9_Screen.jpg
+3e0e2445f7ce814ac87a127c2b98216912ad7234dadaf59da3f639bb344d649f	public/en/.gitbook/assets/Screens/Express/EN/1_Screen.jpg
+ee3b526df7752d4bb3638678de95ce288835e4224fe3e73207036751aebbb9b5	public/en/.gitbook/assets/Screens/Express/EN/2_Screen.jpg
+f89efba4fa7724ed4dbc7be65ab5863d15393ac27214f6b83e43dc8008102f30	public/en/.gitbook/assets/Screens/Express/EN/3_Screen.jpg
+68137f64f5f468166f5db606801a31bb4ba58902dd2d95ab30c6402caee9eecf	public/en/.gitbook/assets/Screens/Express/EN/4_Screen.jpg
+aa504800b8fa80900ab41a3da88a67b7f32cd478abaa9fe7a5101e3c93b7e005	public/en/.gitbook/assets/Screens/Express/EN/5_Screen.jpg
+43f90b7a3bc6b99c066cc1ba11f6907a188d770de877fda4674235eb4f31ef06	public/en/.gitbook/assets/Screens/Express/EN/6_Screen.jpg
+8a86ea9fe534a9018fa284dcd0d2cd9ca04e83796d3e6fb31733b95055432d10	public/en/.gitbook/assets/Screens/Update/DE/0_Screen.jpg
+f02e007a39c4759d275c2a1b9625745c3268290d5e7bf63a6cee1fd30f528178	public/en/.gitbook/assets/Screens/Update/DE/1_Screen.png
+71218f2cc30a41b7f0fa62dbd158e9597300631bc4db6c34c35c2871af9fd998	public/en/.gitbook/assets/Screens/Update/DE/2_Screen.png
+eb3f50861d90d653df0edbbd85d59f2299d76361df81ac0f12da77751e286d57	public/en/.gitbook/assets/Screens/Update/DE/3_Screen.png
+58d66dd03fc8b1341dfdced470a9a9ed15e9f2bd85927956c1dbeba8d87c785d	public/en/.gitbook/assets/Screens/Update/DE/4_Screen.png
+29b75d98fc8957f0f8270d0af70e80e2ace30bbf4acfbe9839b88bf107af2ddd	public/en/.gitbook/assets/Screens/Update/DE/5_Screen.png
+73de0f43be92f7c852a4b0ddd099e5861719ea0d37a58b245dd45a4b8e58927f	public/en/.gitbook/assets/Screens/Update/DE/6_Screen.png
+8a86ea9fe534a9018fa284dcd0d2cd9ca04e83796d3e6fb31733b95055432d10	public/en/.gitbook/assets/Screens/Update/EN/0_Screen.jpg
+876d1a965bd6c62e934852879a4ebc3a5c83ceb7a3bca8ddf5d46fa8468b6a99	public/en/.gitbook/assets/Screens/Update/EN/1_Screen.jpg
+fc61d04a9671cae3486511d0ad91e6c38378e8b29c0706e2d73c067be343863f	public/en/.gitbook/assets/Screens/Update/EN/2_Screen.jpg
+05448358edc010166b4100ef6b4c67cd2c94f479c8f7ed6eb387c38f38dae560	public/en/.gitbook/assets/Screens/Update/EN/3_Screen.jpg
+9349beb1269155c8a41c8fd4b1d2a6beaa7b43cb98c61daecc83468665b5fbc0	public/en/.gitbook/assets/Screens/Update/EN/4_Screen.jpg
+84ca1a822d40e44d704c545fbcc838e43d89ffac38025571c066737e40dd83e9	public/en/.gitbook/assets/Screens/Update/EN/5_Screen.jpg
+5de49c844b5c8a49f533cd9ae85da9ad9d80bd908776e5fa1355777aa4a82ed6	public/en/.gitbook/assets/Screens/Update/EN/6_Screen.jpg
+b0892820d24ebf1283ab2be985553805f4046729f2a49a215b8aab01bc5c3a55	public/en/.gitbook/assets/Screenshot 2025-12-22 133833.png
+9135a7b32f0e02db189b856bfec3b8a736730714255fcc3ed214c325e458372c	public/en/.gitbook/assets/Screenshot 2025-12-22 142044.png
+5945e1d1619af06f548ac35ce4dcf48c3d4712b3f2764545ce0de3b72709fcfa	public/en/.gitbook/assets/attach-reports-01.png
+8a5ee25bb03107439badf6ceb5293ee5591490e9a7cdeef83961d29cc8b1ec2b	public/en/.gitbook/assets/attach-reports-02.png
+736d1c22eab6b1c810e0c3ed9226d2eaa06f8f6e27d0455164832a251045f830	public/en/.gitbook/assets/attach-reports-03.png
+ec6a8ae74e79ee09e59a222d1676ee958462b613a1f4fa7ccd769f809c557c09	public/en/.gitbook/assets/attach-reports-04.png
+b7eda11b131dddc915efe7dd767006042af746cf83f045d581c04aaf1f50a42f	public/en/.gitbook/assets/attach-reports-05.png
+1ac8b649d2d789fb5cae9301db234f4aa9aa1a0555166fd344c34d532af176e3	public/en/.gitbook/assets/attach-reports-06.png
+f5e7afa575ce05db9234ce2d0daf88ba46abb2412f493a53d92cb79b2818dfec	public/en/.gitbook/assets/attach-reports-07.png
+81f51863b70e86fb3e720c714a2c36754eabf7c979d464857323542e9b183cec	public/en/.gitbook/assets/attach-reports-08.png
+3008a15c803bbb04cfde1d7445a3b8dd12e9e6e7436e409af52397810283e361	public/en/.gitbook/assets/attach-reports-09.png
+ab384c81d15fed934c824a813e866223d75838e696d4052dbaee9ed380856761	public/en/.gitbook/assets/attach-reports-10.png
+f42973cc39a2af279a35f6b6fca138808ced15de1c820d422e13bc9deb567cc9	public/en/.gitbook/assets/attach-reports-11.png
+ec57ef8f376ecaad46f04c1c73d4b98392bb4276df09f40595b0828fb49fa027	public/en/.gitbook/assets/attach-reports-12.png
+b44e2ad86b7dcf2cebf212b0b85ea9b4ed9541d9d7acefa499e278aed08ac1bb	public/en/.gitbook/assets/attach-reports-13.png
+fe69131301d2744594a10aea64473301e934e6795a67b0ce3b60a8fe5e17c609	public/en/.gitbook/assets/attach-reports-14.png
+0eee12b0b339006cf96163a686258fb8c472a4a5c9f69e9be1400fa7dcff8eae	public/en/.gitbook/assets/attach-reports-15.png
+bdd99ddb083ac6380ce5b1d3b6fb6954297425cdfeff1834153b251a525ae3e5	public/en/.gitbook/assets/attach-reports-16.png
 a027138f05dd0522e601be264a5d2409ef0458b76156250deda5a298d644fbcd	public/en/.gitbook/assets/connection_mssql 1.png
 dfb26ad669e738e3de455e272229ea4ccfdf96e87a182fcf91066e5b0cff611f	public/en/.gitbook/assets/connection_mssql_cloud 1.png
 c3d841618a01b773310291f4f9ca866485fa0ffbe5e72460a4150457273675d5	public/en/.gitbook/assets/connection_ora 1.png
 222b3a8e7e9ed400cdfb2b62c37b45231c8f12495291aea5a38abdbb26e797ed	public/en/.gitbook/assets/connection_pg 1.png
-2a27fc143f288bdd629b8fec45dd5b6d9c52a52ae45e0235fe8e2ad39be910c4	public/en/.gitbook/assets/export-to-arcgis-pro-01.jpeg
-96859890bd64b25229e034d171224a9f1be6d49cd0987b1dac5cc46e13a11cc3	public/en/.gitbook/assets/export-to-arcgis-pro-02.jpeg
-0f9c7a383b96444dfc1a24bfb831a7f623b7535d869a477c5006b0ef65976ef0	public/en/.gitbook/assets/export-to-arcgis-pro-03.jpeg
-ff4cf604fc99f86a4daaa7722282098e8568f2b1de13bdf8977006f572b900ef	public/en/.gitbook/assets/export-to-arcgis-pro-04.jpeg
-bbdedace96fe493c065287d5b6f57e39cf7bd77ec5aa0d14846be77041130373	public/en/.gitbook/assets/export-to-arcgis-pro-05.jpeg
-c2c2cdb6eeac2ea42bc9af87d3886a1b320371a4346dcace75b1ff475a669f0a	public/en/.gitbook/assets/export-to-arcgis-pro-06.jpeg
-dbde489a5643eef407e7cdebf4a46cc9516fb03b004b6463fa7c2b52ed5e86ab	public/en/.gitbook/assets/generate-reports-01.jpeg
-d77789c2869eede54893b8168a511179b9308069c54703afb83438e8329d8aff	public/en/.gitbook/assets/generate-reports-02.jpeg
-60af2f2084f30a7a8a45c3a797f40d3e96b268d4e6558ffd4e3d9a4b946606ca	public/en/.gitbook/assets/generate-reports-03.jpeg
-1aebcdd484827c9f97da82d6369e46911ece9a6718b3f841486f4f0135d67d72	public/en/.gitbook/assets/generate-reports-04.jpeg
-ca7256551b09057d6ff4076f4ffcb078ee58e6de9821ec36a80b3017af2c9ded	public/en/.gitbook/assets/generate-reports-05.jpeg
-a9d41d52f86c4abc4922eaeddf0a277e0c64fff60383dd30441bf8a180673002	public/en/.gitbook/assets/generate-reports-06.jpeg
-189b269b621d6cee22f1ff9cffd2e83cc8f4de37df1f8cda9787c79fc7466e47	public/en/.gitbook/assets/generate-reports-07.jpeg
-0d3140f23897b034a06b008b4de3c7b46d74010ddeb8bbb7fb1686f316056aed	public/en/.gitbook/assets/generate-reports-08.jpeg
-d73ee930b97bafb8e1358fed0417cab8557f82f58b056f779ef2afa2568301ba	public/en/.gitbook/assets/GeoDin_infrastructure_overview_en.png
+6564c62468119bc56dc033969194f560e27bdd51c775a7a938021d019c40eb2a	public/en/.gitbook/assets/export-to-arcgis-pro-01.png
+1537b181c53ffffee277082802762dd37f5fe2b275c2e14b3bd5f2ceb8cb12be	public/en/.gitbook/assets/export-to-arcgis-pro-02.png
+99b67aff5a2ff20d4ebb97def878809c0038ccf589c4bc5aca000094ed0b9477	public/en/.gitbook/assets/export-to-arcgis-pro-03.png
+327b8bcf196e94b896528103795fad5e24954fd16de0cbcb54094512a6fdd135	public/en/.gitbook/assets/export-to-arcgis-pro-04.png
+ec0afab25ebdfc16df91f6be4c5414c67b61275fab6e9cc6c8a135eaa55c87a5	public/en/.gitbook/assets/export-to-arcgis-pro-05.png
+57c6189e7cd019678cb9b99182715a5bda2b092f40126b99a528479fa7f99a5d	public/en/.gitbook/assets/export-to-arcgis-pro-06.png
+93f8a68f0a4b62f658a5027f8eb5b67c3135bef38218cc07422d94ba676c3615	public/en/.gitbook/assets/export-to-arcgis-pro-07.png
+a27ed08da059e4dbfc9f569ca701e69ce5efe01400f08eb20d33f594c1fc98d4	public/en/.gitbook/assets/export-to-arcgis-pro-08.png
+5a18e34128bfb808ffb64c30a0137983b45019c3f928f8ed9b660bc066d422da	public/en/.gitbook/assets/export-to-arcgis-pro-09.png
+530213b8798ad9261616714127904f05685270ddb5c170f7de9e969cad29d4a3	public/en/.gitbook/assets/export-to-arcgis-pro-10.png
+37b4d9856813cf7668dac0a428fbcda074418f099627a00ce4b66c8ad3a77aad	public/en/.gitbook/assets/generate-reports-01.png
+69d6784297b989dbd4cfc7af5b14c4cacd1adba79dd5a34a8d35042b6d2239b3	public/en/.gitbook/assets/generate-reports-02.png
+1edfe566a215def2e66136e61c6fc50d31cd9c5bdcc0584cede31c0701ab4e52	public/en/.gitbook/assets/generate-reports-03.png
+7959a32776359f42d1ff14a6d268e871fe502614084b920279e9f926c5ad69a6	public/en/.gitbook/assets/generate-reports-04.png
+6d56796d255ea95e0eded065445bc95d424b087ed372367b85651bc70abf00df	public/en/.gitbook/assets/generate-reports-05.png
+0412d8437cfa7f69f570260b6b0097340ac66006085ecf110b5b6ef32fe9661d	public/en/.gitbook/assets/generate-reports-06.png
+5c7e394a8f43a55554e82f71987fc1424ace54e003ed9e2da39a1254a04efe0d	public/en/.gitbook/assets/generate-reports-07.png
+8fa961c8cde01a79b9ec444404c5fffc2df1a4e4304ea5b1f3bc032305f43781	public/en/.gitbook/assets/generate-reports-08.png
 9c955ed6a8a0a474110b9d1650f48e5e3fe3ff1ceedea6d956e36ad24723872f	public/en/.gitbook/assets/icon-index.json
 d189ec13317b3576a5d79675dacf048b8d548dad5eb40cfc54ad71c7ef313b98	public/en/.gitbook/assets/icons/8.png
 ee6bd11fef4c4644470f3a8bab8c73b9479faec251711e7a9fbaed5ed61e803e	public/en/.gitbook/assets/icons/a4-portrait.png
@@ -433,7 +488,6 @@ e894930213857caf011605e6d880f5f26ed168ae082140db5fc45ddc113a3691	public/en/.gitb
 957c7313108dc4f82b5b730c6a16035f94765765cfdf3ad9f06a4662cb11ac3c	public/en/.gitbook/assets/icons/transformation-2.png
 539b59e1fe59439dbbf3bf25bd7a58f6b876effd79b4d02f4f769f7ef380fbd7	public/en/.gitbook/assets/icons/transformation-3.png
 cd061e6a6460b675b9821bf134d1677bbde3d7eef9bfb0f4de235bcd4edaf41e	public/en/.gitbook/assets/icons/transformation.png
-6f8bf6522292502044a0ea651b53d6b1792bd4d747233aff536fd851b08c545c	public/en/.gitbook/assets/icons/übernehmen.png
 5b15f85801770c67018f86cb4a71176d9c3b5cd41844a85edc15ab14351f45a7	public/en/.gitbook/assets/icons/umbenennen.png
 a97fd944d84b15d7c135bb4f20447a53975d5b85ae047368adb48d6bd0c3b2a4	public/en/.gitbook/assets/icons/unlabeled-001ece44.png
 e56c140d4835045ca0327d1db220b0d867bba420221edf12812f7aaf319f02e3	public/en/.gitbook/assets/icons/unlabeled-02c48e3e.png
@@ -618,6 +672,7 @@ c076772ff2cdcd85b7ee19c98298f2792e0a89aa809da8a3e9359ca6637d5f91	public/en/.gitb
 efffa9933f87afedfb044f026b0e826069dc505ad9890f0114b5d06bd32cb8cd	public/en/.gitbook/assets/icons/zoom-to-full-map.png
 7e1f0c952ffdec02e3006e8f775488da7d5b22ba963969e7a5be2afa4550a62f	public/en/.gitbook/assets/icons/zoom-to-layer.png
 0c96494a4c9e8b2074dd17298607d36dd26b1eb1364c9926541f37dbd8642e6b	public/en/.gitbook/assets/icons/zoom.png
+6f8bf6522292502044a0ea651b53d6b1792bd4d747233aff536fd851b08c545c	public/en/.gitbook/assets/icons/übernehmen.png
 91478d6eb990357f8453f80524e93bc0dbb59062b715e58bb12474ce006893ba	public/en/.gitbook/assets/image (1) (1) (1) (1) (1) (1).png
 905da7d0a2a7760be62a9253f7f4e9ca6d51c1356ff9f922b5b350b60e790cd8	public/en/.gitbook/assets/image (1) (1) (1) (1) (1).png
 a631f82c6c2f266bcfbb2701926a57c9126785bee49bc28a90c7399600031b0f	public/en/.gitbook/assets/image (1) (1) (1) (1).png
@@ -789,59 +844,25 @@ cb0517990cc3d374912e50defd21689fd0f2a6047d1677b42382da6849723792	public/en/.gitb
 bb0235a68ee70c01edabb39f9bf938ad4912877b5ab35796aea545ec3313ed3f	public/en/.gitbook/assets/onsite/config-lock-error.png
 9f1287563cce00cababd843113a7e9a2feddd18f2f0fa85fdb0ae72843511f34	public/en/.gitbook/assets/onsite/config-restore-menu.png
 f1fc86dfae7e4c51f1256ef53683104ccd10b799f1794eaaca8955febf3b8ba7	public/en/.gitbook/assets/onsite/config-standards.png
-f546455a1e374607b7fef4d95bc2116ba57d70178e7a65a2c2180dc9f3305d6b	public/en/.gitbook/assets/Picture1.png
-c23859eacb122d0ba68c580a8b4af440d55dcb176cd25cbc61651eb92539e86a	public/en/.gitbook/assets/Picture2 (1).png
-c23859eacb122d0ba68c580a8b4af440d55dcb176cd25cbc61651eb92539e86a	public/en/.gitbook/assets/Picture2.png
-2e5b603124d32ce521f033a372a91ac3dd90d43a6c379626dd5b457a98b632ff	public/en/.gitbook/assets/Picture3.png
-eea8b502e3d400a266694b858c8adc644b82a06d740f384b70cf89dc8d638d4e	public/en/.gitbook/assets/Picture4.png
-e23eb81ff770f463477eef259a5cb5ededce6b030b2579f3d8f7565f2834055c	public/en/.gitbook/assets/Picture5.png
-9da9207feb02409caed81acc2ad2b2fabc58299237fe7e2b9254778722088819	public/en/.gitbook/assets/Picture6.png
-60c0177253445fdd431d0091fba06e8d130f921f8af76af8f7739774a8a2adc9	public/en/.gitbook/assets/plan-and-export-to-geodin-01.jpeg
-f58cdfe4e8aa9ee9a55c344c5402921ce0f28ef3f196abad4f784709aea77ded	public/en/.gitbook/assets/plan-and-export-to-geodin-02.jpeg
-ebb29df05f936932c0b422751e457df9c06b44426a04f279e87b1f78cc917e93	public/en/.gitbook/assets/plan-and-export-to-geodin-03.jpeg
-2d75c6ac1bfc0055727eeb8714c78837bd223537a6599e38702fac705c68047e	public/en/.gitbook/assets/plan-and-export-to-geodin-04.jpeg
-60d119d0b9e2b205e811476b90c7ad34f81a87112dc854aa986186604be89b7a	public/en/.gitbook/assets/plan-and-export-to-geodin-05.jpeg
-1791abd3ca81b9ded25a7af575a80fdbcbc7e3f62bf6d08ec4c942b4c66e8213	public/en/.gitbook/assets/plan-and-export-to-geodin-06.jpeg
-15714dba2a72346394e06d16683fbb564eea21b42754faec08e4dc588ce0e01d	public/en/.gitbook/assets/publish-to-arcgis-online-01.jpeg
-5552cecb6c7612dd1c0c4bfc5491ec40c1223d806fa2389936a4299d80f92484	public/en/.gitbook/assets/publish-to-arcgis-online-02.jpeg
-0aa4677323b69cc5ce1eaf84cf6f7aff8f4782410d564a3eab3c800adabe6b0b	public/en/.gitbook/assets/publish-to-arcgis-online-03.jpeg
-46ea60bbb908580dc5ccdf9abc3e6d306b9d7cbdf9770fd1ececaffff5710baf	public/en/.gitbook/assets/publish-to-arcgis-online-04.jpeg
-1f1796e409fb250365dffc6badf4ba6764d2483e410fadcb98d835856f5bcddc	public/en/.gitbook/assets/publish-to-arcgis-online-05.jpeg
-11d5b7156fcd9892c5da4d91238fab8d53a87bf7498a6e3fedab653e42b6e206	public/en/.gitbook/assets/publish-to-arcgis-online-06.jpeg
-3e0e2445f7ce814ac87a127c2b98216912ad7234dadaf59da3f639bb344d649f	public/en/.gitbook/assets/Screens/Custom/EN/1_Screen.jpg
-e94f2e8af52f4308c000103a7407ca0d1db3525256d4ce5721e7caa4af0df070	public/en/.gitbook/assets/Screens/Custom/EN/10_Screen.jpg
-f0591bf850ad63b05f93d9afc88fd3da92e300c53ceaf3fef1b37a75082a0d7c	public/en/.gitbook/assets/Screens/Custom/EN/11_Screen.jpg
-5adbd3876d755e441eaf6b0b43fb85dee5109ab45d6a91ec75d5c72a2702ef03	public/en/.gitbook/assets/Screens/Custom/EN/12_Screen.jpg
-5599c1ac8f7f72d1a18c71d855cf7a18296b116a9a246420fc916103c38e1204	public/en/.gitbook/assets/Screens/Custom/EN/13_Screen.jpg
-c5a84686eaba061ec934ac01777403e81db57555b9d69acd8646aa746ac4d414	public/en/.gitbook/assets/Screens/Custom/EN/14_Screen.jpg
-f4881f1d090b6a410ac3cf0f1713a41d2b67e11d09d79a0ed62827538bf92863	public/en/.gitbook/assets/Screens/Custom/EN/15_Screen.jpg
-ee3b526df7752d4bb3638678de95ce288835e4224fe3e73207036751aebbb9b5	public/en/.gitbook/assets/Screens/Custom/EN/2_Screen.jpg
-31b7bc7f9253d7ec0a56489e1f835be2e96f782b7f949d57275113d0322de652	public/en/.gitbook/assets/Screens/Custom/EN/3_Screen.jpg
-213e4bb41ad1c0641dd0aeb4f5819f34322256b9e49e15226ea575ba1d748487	public/en/.gitbook/assets/Screens/Custom/EN/4_Screen.jpg
-f10a3ad4b5a119e6eba7e37f940cea3e8eba00c499c4f2e8f98cfb779ae4d4e6	public/en/.gitbook/assets/Screens/Custom/EN/5_Screen.jpg
-b2bd7c2e7a1cff2ab87ca2c049b75bf09edcc4a1ff58166e84f872ec329f6e3f	public/en/.gitbook/assets/Screens/Custom/EN/6_Screen.jpg
-89e10da2db10c99f5f8c3f15639986d8e6508258b8a04957781e355fff9edd24	public/en/.gitbook/assets/Screens/Custom/EN/7_Screen.jpg
-688a8d4feb3002b5aecbc64f9c1ca29c780c2cdce4ec09e93b0c6acfaa39a925	public/en/.gitbook/assets/Screens/Custom/EN/8_Screen.jpg
-54f27e8d4f03d6fd4a94be271ce023eac656dbb385c1d04c2e8a90cd5571da67	public/en/.gitbook/assets/Screens/Custom/EN/9_Screen.jpg
-3e0e2445f7ce814ac87a127c2b98216912ad7234dadaf59da3f639bb344d649f	public/en/.gitbook/assets/Screens/Express/EN/1_Screen.jpg
-ee3b526df7752d4bb3638678de95ce288835e4224fe3e73207036751aebbb9b5	public/en/.gitbook/assets/Screens/Express/EN/2_Screen.jpg
-f89efba4fa7724ed4dbc7be65ab5863d15393ac27214f6b83e43dc8008102f30	public/en/.gitbook/assets/Screens/Express/EN/3_Screen.jpg
-68137f64f5f468166f5db606801a31bb4ba58902dd2d95ab30c6402caee9eecf	public/en/.gitbook/assets/Screens/Express/EN/4_Screen.jpg
-aa504800b8fa80900ab41a3da88a67b7f32cd478abaa9fe7a5101e3c93b7e005	public/en/.gitbook/assets/Screens/Express/EN/5_Screen.jpg
-43f90b7a3bc6b99c066cc1ba11f6907a188d770de877fda4674235eb4f31ef06	public/en/.gitbook/assets/Screens/Express/EN/6_Screen.jpg
-8a86ea9fe534a9018fa284dcd0d2cd9ca04e83796d3e6fb31733b95055432d10	public/en/.gitbook/assets/Screens/Update/DE/0_Screen.jpg
-f02e007a39c4759d275c2a1b9625745c3268290d5e7bf63a6cee1fd30f528178	public/en/.gitbook/assets/Screens/Update/DE/1_Screen.png
-71218f2cc30a41b7f0fa62dbd158e9597300631bc4db6c34c35c2871af9fd998	public/en/.gitbook/assets/Screens/Update/DE/2_Screen.png
-eb3f50861d90d653df0edbbd85d59f2299d76361df81ac0f12da77751e286d57	public/en/.gitbook/assets/Screens/Update/DE/3_Screen.png
-58d66dd03fc8b1341dfdced470a9a9ed15e9f2bd85927956c1dbeba8d87c785d	public/en/.gitbook/assets/Screens/Update/DE/4_Screen.png
-29b75d98fc8957f0f8270d0af70e80e2ace30bbf4acfbe9839b88bf107af2ddd	public/en/.gitbook/assets/Screens/Update/DE/5_Screen.png
-73de0f43be92f7c852a4b0ddd099e5861719ea0d37a58b245dd45a4b8e58927f	public/en/.gitbook/assets/Screens/Update/DE/6_Screen.png
-8a86ea9fe534a9018fa284dcd0d2cd9ca04e83796d3e6fb31733b95055432d10	public/en/.gitbook/assets/Screens/Update/EN/0_Screen.jpg
-876d1a965bd6c62e934852879a4ebc3a5c83ceb7a3bca8ddf5d46fa8468b6a99	public/en/.gitbook/assets/Screens/Update/EN/1_Screen.jpg
-fc61d04a9671cae3486511d0ad91e6c38378e8b29c0706e2d73c067be343863f	public/en/.gitbook/assets/Screens/Update/EN/2_Screen.jpg
-05448358edc010166b4100ef6b4c67cd2c94f479c8f7ed6eb387c38f38dae560	public/en/.gitbook/assets/Screens/Update/EN/3_Screen.jpg
-9349beb1269155c8a41c8fd4b1d2a6beaa7b43cb98c61daecc83468665b5fbc0	public/en/.gitbook/assets/Screens/Update/EN/4_Screen.jpg
-84ca1a822d40e44d704c545fbcc838e43d89ffac38025571c066737e40dd83e9	public/en/.gitbook/assets/Screens/Update/EN/5_Screen.jpg
-5de49c844b5c8a49f533cd9ae85da9ad9d80bd908776e5fa1355777aa4a82ed6	public/en/.gitbook/assets/Screens/Update/EN/6_Screen.jpg
-b0892820d24ebf1283ab2be985553805f4046729f2a49a215b8aab01bc5c3a55	public/en/.gitbook/assets/Screenshot 2025-12-22 133833.png
-9135a7b32f0e02db189b856bfec3b8a736730714255fcc3ed214c325e458372c	public/en/.gitbook/assets/Screenshot 2025-12-22 142044.png
+5b3a7835319790333e933dc7cb770afd3a4d526b46961243bac1cd57a1730336	public/en/.gitbook/assets/plan-and-export-to-geodin-01.png
+e6f7940879c578845a181896bc830becfaf3fbcd024267c146cb0b29017c052f	public/en/.gitbook/assets/plan-and-export-to-geodin-02.png
+3a4e0149fe2e8c4d25aa554af32ff3a148d7c87c304ec45624e993980018ccc3	public/en/.gitbook/assets/plan-and-export-to-geodin-03.png
+682b9e9db091610a992d97bad31737306320de5f644ce15c6e5a75630e0c2dca	public/en/.gitbook/assets/plan-and-export-to-geodin-04.png
+e9ce8e401b02706ae4602bc1e79cea676d12a48b947059e4801fc0eee19126e9	public/en/.gitbook/assets/plan-and-export-to-geodin-05.png
+b5ac4280d9f24dda4ca6aa417995a6ba393d85c00ec61e099cee2351be3b044e	public/en/.gitbook/assets/plan-and-export-to-geodin-06.png
+e91253c95eb4ff1c7e0e35bd1845723d9dc0002d79c2510605997c6074215188	public/en/.gitbook/assets/plan-and-export-to-geodin-07.png
+f3cd02c298f2a931e7a17903fcc8e0a49f54d0425e5ea2ba6d051be6cced453c	public/en/.gitbook/assets/plan-and-export-to-geodin-08.png
+4733e69a945490a7ebc908356ecfc95f9638f1cd0f5c8dd4dedc1e05a9a0ad19	public/en/.gitbook/assets/plan-and-export-to-geodin-09.png
+c07eb975cd67b96398ca8dba8a58d5bc3d0fcf87db629f9d757a540615466870	public/en/.gitbook/assets/plan-and-export-to-geodin-10.png
+e6c6af4a34b24b20427a6301e51286b9c5bc5047bfc0c3ed157cd0e295587ef9	public/en/.gitbook/assets/plan-and-export-to-geodin-11.png
+aca086b0eb2eebd6a42a4e61f7fbddaa1b72ce014e2fd5158e711917b59ae339	public/en/.gitbook/assets/plan-and-export-to-geodin-12.png
+dc654358309d253853e07c7d8b60dfbca2558dc8b327618fec7cb006517b79fa	public/en/.gitbook/assets/plan-and-export-to-geodin-13.png
+1e93b7bb72a8acf3a22afa59fa9ba4642285c0f1a83b3e26db47fa28f746d234	public/en/.gitbook/assets/publish-to-arcgis-online-01.png
+8382fb9106fba52a9dbadd7a7bccd908f18dcc32685cd3d7d58c1c6990ba127d	public/en/.gitbook/assets/publish-to-arcgis-online-02.png
+346df004245afd5450031761ba92878cf82ab1e8f4032372537e14bf35450f50	public/en/.gitbook/assets/publish-to-arcgis-online-03.png
+9d20c2bc55ce9f33d4f61cc54b480d75014d99bcb8bb5c4c635e9a5baa75b3f6	public/en/.gitbook/assets/publish-to-arcgis-online-04.png
+2150e039bf1767a44d09782c15a46577103124e789c3a1e3ba7b42209655dc87	public/en/.gitbook/assets/publish-to-arcgis-online-05.png
+b6fc02b14707061e4f041b5380cefee1701a408fe4b4d58e11c0493a2b5029ac	public/en/.gitbook/assets/publish-to-arcgis-online-06.png
+d00b4b6eb71306cfb4581ed5c906077d65b276da9422cc31453d17f0248ddc2e	public/en/.gitbook/assets/publish-to-arcgis-online-07.png
+cc5310e09d49cd2b517488716aa43939ed61614ef77b34afa4f0ef13439adba1	public/en/.gitbook/assets/publish-to-arcgis-online-08.png
+f4920f2f4ae0778920ca067c3d6d5b41167b2709e34460bdbd8404561b2119b4	public/en/.gitbook/assets/publish-to-arcgis-online-09.png

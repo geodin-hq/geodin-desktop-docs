@@ -202,7 +202,7 @@ The **Area** tab controls the visual appearance of polygon layers. Key propertie
 
 ### Clipping
 
-GeoDin can clip a grid layer to a defined area using a polygon layer as a mask. Steps: open **Map Manager** and load objects → right-click the target layer → **Actions** → **Clipping** → select the polygon layer defining the clip boundary → run. The resulting clipped grid (`*.grd`) can be saved and added as a new map layer. If an overlapping background colour appears, adjust the transparent value range under **Display options** → **Grid** for that layer.
+GeoDin can clip a grid layer to a defined area using a polygon layer as a mask. Steps: open **Map Manager** and load objects -> right-click the target layer -> **Actions** > **Clipping** -> select the polygon layer defining the clip boundary -> run. The resulting clipped grid (`*.grd`) can be saved and added as a new map layer. If an overlapping background colour appears, adjust the transparent value range under **Display options** > **Grid** for that layer.
 
 ### Grid to polygon
 

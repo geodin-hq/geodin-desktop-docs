@@ -84,8 +84,8 @@ The following changes were implemented:
 * Added entry:
   * _coarse silty_
 * Standard text changes (only for **DIN EN ISO (deutsch)**):
-  * _organic \[DIN]_: `h` → `o`
-  * _organic \[EN ISO]_: `h` → `o`
+  * _organic \[DIN]_: `h` -> `o`
+  * _organic \[EN ISO]_: `h` -> `o`
 
 #### Adaptation of Fill Patterns
 
@@ -156,14 +156,14 @@ Samples of **category A-E** are now displayed **uniformly in full colour** for t
 
 **General Data \[E2GENER]**
 
-* Reference (`AKTENZ`): 20 → 40 characters
-* Borehole number / short name (`SHORTNAME`): 15 → 25 characters
-* Functional supervision (`SUPVIS`): 50 → 100 characters
-* Name of borehole (`LONGNAME`): 40 → 50 characters
+* Reference (`AKTENZ`): 20 -> 40 characters
+* Borehole number / short name (`SHORTNAME`): 15 -> 25 characters
+* Functional supervision (`SUPVIS`): 50 -> 100 characters
+* Name of borehole (`LONGNAME`): 40 -> 50 characters
 
 **Layer Data \[E2LAYER]**
 
-* Additional comments / layer comments (`NOTELAYER`): 100 → 254 characters
+* Additional comments / layer comments (`NOTELAYER`): 100 -> 254 characters
 
 ### Adjustment of Output Formats
 

@@ -115,7 +115,7 @@ Key behaviors:
 - **Data source:** Choose General Data, Layer Data, Samples, or a specific measurement data type (e.g., CU).
 - **Columns:** The blue **+** button adds columns. Each column requires a Text Macro (which parameter to display) and a Heading.
 - **Row selectors:** Rows can be excluded by parameter condition (e.g., skip values above or below a threshold).
-- **Conditional formatting:** Column Properties → Presentation Options → set a condition and color (e.g., "if CU > 50, color row red").
+- **Conditional formatting:** Column Properties > Presentation Options -> set a condition and color (e.g., "if CU > 50, color row red").
 - **Multi-block layouts:** Multiple report blocks can be combined in one layout (e.g., one general-data report and one measurement report side by side).
-- **Export options:** Right-click in edit mode → Export as Excel or CSV; or use the Report Access button in the layout overview for an Excel export without opening edit mode.
+- **Export options:** Right-click in edit mode -> Export as Excel or CSV; or use the Report Access button in the layout overview for an Excel export without opening edit mode.
 - **Report Type:** Original data (shows database values as-is) or Calculations (statistics, comparisons - more advanced).

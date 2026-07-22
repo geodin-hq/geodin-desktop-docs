@@ -183,7 +183,7 @@ For the layer description you can choose between the following labeling modes:
 
 ### Snap distance
 
-The snap distance - the maximum distance which cannot be exceeded for connecting one point automatically to another - can be adjusted between 1 and 50 mm. The selection of the distance is possible using the menu entry **Preferences → Snap preferences**.
+The snap distance - the maximum distance which cannot be exceeded for connecting one point automatically to another - can be adjusted between 1 and 50 mm. The selection of the distance is possible using the menu entry **Preferences > Snap preferences**.
 
 Graphic elements with nodes that are influenced by the snap function are: line, rectangle, polyline and borehole profile.
 
