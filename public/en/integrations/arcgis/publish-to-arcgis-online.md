@@ -1,68 +1,89 @@
 ---
 description: >-
-  How to publish GeoDin borehole data and attached reports from ArcGIS Pro to
-  ArcGIS Online for web-based access
+  Publish GeoDin borehole data and attached reports from ArcGIS Pro to ArcGIS
+  Online for web-based access
 ---
 
 # Publish to ArcGIS Online
 
-This final step in the integration workflow publishes your borehole feature layers - including attached GeoDin reports - to ArcGIS Online, making them accessible through a web browser to stakeholders and team members.
+<!-- src: loom/arcgis-2d-5 -->
 
-## Step 1: Open the project in ArcGIS Pro
+This final step publishes the borehole feature layers - including the attached GeoDin reports - to ArcGIS Online, making them accessible in a browser for stakeholders and team members.
 
-Open ArcGIS Pro with the project containing your borehole feature classes and attached reports.
+{% embed url="https://www.youtube.com/watch?v=v7Lb_Vphhzc&list=PLfA_dsMIot34WQYVtEluk87UsZt0hb21A&index=1" %}
 
-![Project with borehole feature classes open in ArcGIS Pro](../../.gitbook/assets/publish-to-arcgis-online-01.jpeg)
+> **Video chapters:** 0:00 Accessing the data in ArcGIS Pro | 0:15 Logging into ArcGIS Online and starting the share | 0:35 Naming and publishing the data | 1:19 Managing the published web data | 1:44 Viewing the field layers | 1:57 Accessing CPT data and reports | 2:19 Opening additional borehole reports
 
-## Step 2: Log in to ArcGIS Online
+## Requirements
 
-Log in to your ArcGIS Online account from within ArcGIS Pro. This connects your desktop project to your organization's online portal.
+- An ArcGIS Online account with publishing privileges, signed in via the ArcGIS Pro account menu.
+- The map with the area feature classes and report attachments completed (see [Export to ArcGIS Pro](export-to-arcgis-pro.md), [Generate Reports](generate-reports.md), and [Attach Reports](attach-reports.md)).
 
-![Sharing options after logging in to ArcGIS Online](../../.gitbook/assets/publish-to-arcgis-online-02.jpeg)
+### Step 1: Confirm the ArcGIS Online sign-in
 
-## Step 3: Share the data
+Open the account menu in ArcGIS Pro and confirm you are signed in to the organization's ArcGIS Online portal.
 
-Choose the option to share your feature layer data. Select the appropriate sharing level (organization, specific groups, or public) depending on your project requirements.
+<figure><img src="../../.gitbook/assets/publish-to-arcgis-online-01.png" alt=""><figcaption><p>The account menu with the active portal</p></figcaption></figure>
 
-## Step 4: Name and publish
+### Step 2: Configure sharing and publish the dataset
 
-Give the published layer a descriptive name. If there are validation warnings, use the **auto-assign** option to resolve them. Click **Publish** to upload the data to ArcGIS Online.
+On the **Share** tab, choose to publish the feature layer. Enter a name, pick a portal folder, and set the **sharing level** deliberately - **Owner**, **Organization**, or **Everyone (public)**. Run **Analyze** before publishing:
 
-![Name and publish dialog with auto-assign option](../../.gitbook/assets/publish-to-arcgis-online-03.jpeg)
+- The error **00374 "Unique numeric IDs are not assigned"** can be fixed in place - right-click it and choose **Auto-Assign IDs Sequentially**.
+- Ignore warnings only if they are understood and acceptable for the workflow.
 
-## Step 5: Confirm publication
+Then click **Publish**.
 
-Verify that the data has been published successfully. Click **Manage the web data** to open the ArcGIS Online management interface.
+<figure><img src="../../.gitbook/assets/publish-to-arcgis-online-02.png" alt=""><figcaption><p>Starting the share from the ribbon</p></figcaption></figure>
 
-![ArcGIS Online web data management interface](../../.gitbook/assets/publish-to-arcgis-online-04.jpeg)
+<figure><img src="../../.gitbook/assets/publish-to-arcgis-online-03.png" alt=""><figcaption><p>Name, folder, sharing level, and Analyze</p></figcaption></figure>
 
-## Step 6: View feature layers
+<figure><img src="../../.gitbook/assets/publish-to-arcgis-online-04.png" alt=""><figcaption><p>Fixing error 00374 with Auto-Assign IDs Sequentially</p></figcaption></figure>
 
-In the web data management section, locate your published feature layers. Make the layers visible to verify that the borehole points appear correctly on the map.
+### Step 3: Confirm the publish was successful and open the web layer
 
-![Published borehole feature layers visible on the ArcGIS Online map](../../.gitbook/assets/publish-to-arcgis-online-05.jpeg)
+When publishing completes, click **Manage the web layer** - this opens the hosted item in the browser.
 
-## Step 7: Access reports online
+<figure><img src="../../.gitbook/assets/publish-to-arcgis-online-05.png" alt=""><figcaption><p>Publish confirmation with Manage the web layer</p></figcaption></figure>
 
-Click on individual borehole points to verify that the attached GeoDin reports are accessible. Both borehole log reports and CPT reports should be available as downloadable attachments directly from the web map.
+### Step 4: Review layer visibility and validate the data
 
-## Step 8: Browse additional boreholes
+Open the item in **Map Viewer**, expand the layer group, and toggle visibility to confirm the borehole points appear correctly.
 
-Navigate between borehole points on the map to verify that all locations have their corresponding reports attached and accessible.
+<figure><img src="../../.gitbook/assets/publish-to-arcgis-online-06.png" alt=""><figcaption><p>Opening the published item in Map Viewer</p></figcaption></figure>
 
-![Opening another borehole's report from the web map](../../.gitbook/assets/publish-to-arcgis-online-06.jpeg)
+<figure><img src="../../.gitbook/assets/publish-to-arcgis-online-07.png" alt=""><figcaption><p>Expanding the layer group and toggling visibility</p></figcaption></figure>
+
+### Step 5: Open and verify associated reports
+
+Click a data point such as a **CPT** record - the attached report loads straight from the browser. Repeat the check for a **borehole** record to confirm multiple record types work. Use this final check to confirm the published web layer and reports are functioning as expected.
+
+<figure><img src="../../.gitbook/assets/publish-to-arcgis-online-08.png" alt=""><figcaption><p>A CPT pop-up with its attached report</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/publish-to-arcgis-online-09.png" alt=""><figcaption><p>A borehole pop-up with the full attribute set and report</p></figcaption></figure>
+
+## Optional settings
+
+- **Sharing level**: Owner (only you) / Organization (all members) / Everyone (public) - pick deliberately before publishing.
+- **Portal folder**: a dedicated folder keeps published items easy to find later.
 
 ***
 
-**This completes the GeoDin ↔ ArcGIS integration workflow.** Your team can now access geotechnical reports directly from the web map without needing GeoDin or ArcGIS Pro installed.
+## Working with published layers
 
-[Watch the full video walkthrough](https://www.youtube.com/watch?v=v7Lb_Vphhzc&list=PLfA_dsMIot34WQYVtEluk87UsZt0hb21A&index=5)
+**Overwrite Web Layer** (same Share menu) republishes updates to the same item without breaking links. Keep a standard review sequence - publish, open web layer, verify layers, test pop-ups and attachments - and validate both record types (CPT and borehole) with at least one opened attachment to catch report issues early.
+
+If you are working with a full 3D ground model from Civil 3D rather than 2D borehole points, see [Publishing and reviewing the model as a web scene](https://docs.geodin.com/geodin-ground/workflows-and-integrations/arcgis-web-scene) in the GeoDin Ground documentation.
+
+***
+
+**This completes the GeoDin - ArcGIS integration workflow.** Your team can now access geotechnical reports directly from the web map without needing GeoDin or ArcGIS Pro installed.
 
 ***
 
 ## Related pages
 
-* [Plan and Export to GeoDin](plan-and-export-to-geodin.md) - Step 1: ArcGIS → GeoDin
-* [Export to ArcGIS Pro](export-to-arcgis-pro.md) - Step 2: GeoDin → ArcGIS
+* [Plan and Export to GeoDin](plan-and-export-to-geodin.md) - Step 1: ArcGIS to GeoDin
+* [Export to ArcGIS Pro](export-to-arcgis-pro.md) - Step 2: GeoDin to ArcGIS
 * [Generate Reports](generate-reports.md) - Step 3: Create PDFs in GeoDin
 * [Attach Reports](attach-reports.md) - Step 4: Link PDFs to features
