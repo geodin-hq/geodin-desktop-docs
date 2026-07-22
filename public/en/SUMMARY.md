@@ -179,3 +179,4 @@
 * [Troubleshooting](support/troubleshooting.md)
   * [Configure Network Dongle Access (GeoDin 7-9.0)](support/troubleshooting/configure-network-dongle-access-geodin-7-9.0.md)
   * [Update Incomplete Message (until GeoDin 10.1)](support/troubleshooting/update-incomplete-message-until-geodin-10.1.md)
+* [Glossary](support/glossary.md)
