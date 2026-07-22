@@ -151,7 +151,7 @@ Switching between active methods is done by clicking the method's symbol in the 
 On the right side of each method symbol, a small switch closes the method - even when the method is in the background. The **Close all methods** switch on the right side of the **Active Methods** toolbar closes every active method in one step.
 
 {% hint style="info" %}
-It is not necessary to shut down all methods before closing GeoDin. Selecting **File → Exit** (or **Alt+F4**) closes all active methods automatically; if any have unsaved changes, a save dialog appears first.
+It is not necessary to shut down all methods before closing GeoDin. Selecting **File > Exit** (or **Alt+F4**) closes all active methods automatically; if any have unsaved changes, a save dialog appears first.
 {% endhint %}
 
 All methods available for a selected object are also available as a popup menu via right-click on the tree entry - the methods window does not need to be maximized to start a method.

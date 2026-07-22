@@ -56,7 +56,7 @@ Select the objects you want to import. Use **Add Objects** on your target projec
 {% step %}
 #### Step 7: Review the protocol.
 
-After the copy, GeoDin displays a protocol showing which objects were transferred and any issues encountered (e.g. unmapped SEP codes). See [SEP 1 → SEP 3 conversion](cross-database-object-copying.md#converting-sep-1-objects-to-sep-3-during-copy) for notes on handling unmapped abbreviations.
+After the copy, GeoDin displays a protocol showing which objects were transferred and any issues encountered (e.g. unmapped SEP codes). See [SEP 1 -> SEP 3 conversion](cross-database-object-copying.md#converting-sep-1-objects-to-sep-3-during-copy) for notes on handling unmapped abbreviations.
 {% endstep %}
 {% endstepper %}
 

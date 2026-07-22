@@ -137,15 +137,15 @@ The method exports measurement values as a table that can then be edited further
 
 The following dialogue appears when starting the method, where you can choose from the following options:
 
-· **Data type**
+- **Data type**
 
 One data type can be chosen for export from a list of data types that are available for the measurement point (group).
 
-· **Measurement programs**
+- **Measurement programs**
 
 The number of parameters for export can be set by the choice of a measurement program (see [Measurement program](../../navigating-the-geodin-workspace/measurement-values/working-with-measurement-data.md)).
 
-· **Layout**
+- **Layout**
 
 <**Use short parameter names**> uses the GeoDin short parameter names for the table columns in Excel (note for the SDM the column names are identical; the default setting is no/unchecked)
 

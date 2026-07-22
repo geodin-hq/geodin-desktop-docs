@@ -70,7 +70,7 @@ The reduce factor controls how many values are imported from dense data series. 
 - Factor = 1: all values are imported (up to 10,000 per series).
 - Factor = n (where n > 1): GeoDin reads blocks of n² values. From each block it retains only the **minimum** and **maximum** values (with their depths). Peaks and troughs are preserved; intermediate values are discarded.
 
-**Example:** Factor = 3 → blocks of 9 values → 2 values retained per block (min and max). This reduces a 4,500-point CPT to approximately 1,000 imported points.
+**Example:** Factor = 3 -> blocks of 9 values -> 2 values retained per block (min and max). This reduces a 4,500-point CPT to approximately 1,000 imported points.
 
 {% hint style="info" %}
 If you leave the reduce factor at 0, GeoDin calculates an automatic factor so that no series exceeds 500 values. Set the factor to 1 to import without any reduction (maximum 10,000 values per series).

@@ -27,7 +27,7 @@ Double-click the database to connect. The tree populates with any existing proje
 Databases are colour-coded - blue for local, yellow for network. The demo database is a local Microsoft Access database.
 {% endhint %}
 
-→ Reference: [Connecting to a Database](../navigating-the-geodin-workspace/databases/connecting-to-a-database.md)
+-> Reference: [Connecting to a Database](../navigating-the-geodin-workspace/databases/connecting-to-a-database.md)
 
 ## Step 2 - Create a new project
 
@@ -35,11 +35,11 @@ Databases are colour-coded - blue for local, yellow for network. The demo databa
 
 The new project appears under the database in the tree, with empty sub-branches for **Objects**, **Measurement Points**, and **Documents**.
 
-→ Reference: [Working with Projects](../navigating-the-geodin-workspace/projects/working-with-projects.md)
+-> Reference: [Working with Projects](../navigating-the-geodin-workspace/projects/working-with-projects.md)
 
 ## Step 3 - Create your first borehole
 
-![](../.gitbook/assets/icons/new-object.png) Select your new project in the tree. In the central **Methods** ribbon, double-click **New object** (or right-click the project → **New object**).
+![](../.gitbook/assets/icons/new-object.png) Select your new project in the tree. In the central **Methods** ribbon, double-click **New object** (or right-click the project -> **New object**).
 
 Choose an object type - for a standard geotechnical borehole, ![](../.gitbook/assets/icons/borehole.png) **(G1) Location** (GeoDin's standard geotechnical investigation object type - see [Object Types Overview](../navigating-the-geodin-workspace/object-types.md)) is the common choice. Enter identifying information: borehole ID, coordinates, and elevation.
 
@@ -49,7 +49,7 @@ Coordinates are interpreted in the project's configured coordinate system. If yo
 
 The new borehole appears under the project's **Objects** branch.
 
-→ References:
+-> References:
 * [Object Types Overview](../navigating-the-geodin-workspace/object-types.md)
 * [Creating Objects](../navigating-the-geodin-workspace/objects/creating-objects.md)
 * [General Data](../navigating-the-geodin-workspace/objects/general-data.md)
@@ -62,7 +62,7 @@ The new borehole appears under the project's **Objects** branch.
 
 Save your changes. Because Data management is a parallel method, you can keep it open while navigating to other parts of the tree.
 
-→ References:
+-> References:
 * [Layer and Stratigraphy](../navigating-the-geodin-workspace/concepts/layer-and-stratigraphy.md)
 * [Dictionaries](../navigating-the-geodin-workspace/concepts/dictionaries.md)
 
@@ -72,7 +72,7 @@ Save your changes. Because Data management is a parallel method, you can keep it
 
 Pick a borehole log template and run it. GeoDin produces a PDF-style log showing the stratigraphy, annotations, and any configured elements (groundwater, samples, test results).
 
-→ References:
+-> References:
 * [Creating Borehole Logs](../data-visualization/borehole-logs/creating-borehole-logs.md)
 * [Bulk Print and PDF Export](../reporting/bulk-print-and-pdf-export.md)
 

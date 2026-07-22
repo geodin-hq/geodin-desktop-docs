@@ -31,8 +31,8 @@ When you open GeoDin for the first time, you are prompted to enter your licence 
 
 Once GeoDin is installed and activated:
 
-* Take a quick tour of the workspace → [The GeoDin user interface](../navigating-the-geodin-workspace/user-interface.md)
-* Run through a first end-to-end walkthrough → [First steps](first-steps.md)
+* Take a quick tour of the workspace -> [The GeoDin user interface](../navigating-the-geodin-workspace/user-interface.md)
+* Run through a first end-to-end walkthrough -> [First steps](first-steps.md)
 
 ## Deeper reference
 

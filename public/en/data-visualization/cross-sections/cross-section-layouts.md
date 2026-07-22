@@ -110,7 +110,7 @@ The positioning options allow you to place the horizontal scale bar according to
 
 ## Layout lists
 
-Layout lists (`.GLL`) and layout collections (`.GLC`) allow multiple layouts to be grouped for report sequences and quick access. For file formats, editing, and the GLL→GLC conversion, see [Layout Files and Lists](../layouts/layout-files-and-lists.md).
+Layout lists (`.GLL`) and layout collections (`.GLC`) allow multiple layouts to be grouped for report sequences and quick access. For file formats, editing, and the GLL->GLC conversion, see [Layout Files and Lists](../layouts/layout-files-and-lists.md).
 
 {% hint style="info" %}
 Only `.GLL` files can be declared as the standard layout list. `.GLL` files can no longer be created - use `.GLC` for creating new layout lists.

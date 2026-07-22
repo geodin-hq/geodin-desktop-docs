@@ -247,49 +247,49 @@ This is a scale unit, which can be used for metric (meter, centimeter etc.) or e
 
 \*\*_Special settings:Options_
 
-· offset (only for numeric parameters)
+- offset (only for numeric parameters)
 
 Explains, that the concerning parameter acts as an offset field. For certain data types it is used as an information of the remove of the sampling starting point. According to this the absolute depth of the concerning investigation is calculated.
 
-· Mandatory field
+- Mandatory field
 
 The field must be filled in for the record to be saved.
 
-· Write Protect
+- Write Protect
 
 The parameter is displayed in the measurement editor, but it cannot be edited.
 
-· One- time editing/ single editing
+- One- time editing/ single editing
 
 This setting causes a special behavior of the input field. If the input field is empty, a new content can be entered and edited. After completing the input with \<Enter> or by leaving the input field, the input content is locked. It is then no longer possible to change the input. To change the existing input, the entire content must first be deleted by using the \<Enter> key. The input field will be completely cleared. Now a new single input in this input field is possible. A use case for this option is an input field for a BarCode scanner. After reading in the BarCode, a change of the character string is to be prevented. However, a re-reading of the BarCode is possible after using the \<Del> key.
 
-· inorganic (only for numeric parameters)
+- inorganic (only for numeric parameters)
 
 Qualifies a parameter as inorganic to be used for special lists comparison with calculations (see there).
 
-· calculated (only for numeric parameters)
+- calculated (only for numeric parameters)
 
 The parameter cannot be edited, but it will be calculated with a formula.
 
-· scientific notation (only for floating-point numbers)
+- scientific notation (only for floating-point numbers)
 
 This option conduces the handling of very small values because their registration would require a large number of decimal places. The notation of the data entry is done by the rule "9.99 E-8".
 
-· use last value
+- use last value
 
 If this option is activated, the value of the parameter is transferred from the previous row, when a new dataset is created in the measurement value editor.
 
 _**Note:**_ _This option can be used only if you activate the option -copy last record- in the drop-down-menu in the options of the data set. To get there you have to use the method_ _**"Measurement data"**_ _for the data set and select the button_ _Options. This should be located on the right by default. Open the drop-down-menu with the "Data set defaults" and select **copy last record**._
 
-· column fixed
+- column fixed
 
 This option defines, that the columns inside the measurement editor are fixed from the left up to the column of the parameter. If the row is longer than the range which can be displayed in the measurement editor the fixed columns will stand still while the right section scrolls sideways.
 
-· triggering data type (event field)
+- triggering data type (event field)
 
 This option can be used for parameters meant to accept the triggering data type of an **Event** as data content during a regression analysis.
 
-· triggering parameter (event field)
+- triggering parameter (event field)
 
 This option can be used for parameters meant to accept the triggering parameter of an **Event** as data content during a regression analysis.
 

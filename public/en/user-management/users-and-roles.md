@@ -56,7 +56,7 @@ The intended workflow is fire-and-forget: field users publish from the tablet, t
 Two license types exist (Standard and Professional). With a Professional license, the **number of seats** determines how many users can run GeoDin simultaneously - for example, 3 seats means up to 3 concurrent users out of a 15-person team.
 
 - Any machine on the network can act as the license server. There is no separate license server product.
-- Licenses are **hardware-bound**. Hardware changes (new laptop, Windows 10 → 11 upgrade) require reactivation by GeoDin support.
+- Licenses are **hardware-bound**. Hardware changes (new laptop, Windows 10 -> 11 upgrade) require reactivation by GeoDin support.
 - An **educational package** is available for colleges and students.
 - Civil 3D plugin (GeoDin Ground) users do not need a GeoDin license. Only people who manage and curate the database need paid licenses.
 - **GeoDin Onsite is included with a GeoDin Desktop subscription** at no additional cost.

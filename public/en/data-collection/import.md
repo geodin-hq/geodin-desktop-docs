@@ -6,7 +6,7 @@ description: Importing data into GeoDin from external files and databases
 
 GeoDin imports data from a wide range of file formats and external databases. This page is the entry point for the Importing Data section: it covers the overall **batch import workflow** that applies to every import type, then links to the specific guides for each source.
 
-## Batch import workflow (General → Samples → Measurements)
+## Batch import workflow (General -> Samples -> Measurements)
 
 Most data lands in GeoDin in three sequential steps:
 

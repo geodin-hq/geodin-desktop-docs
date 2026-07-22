@@ -74,15 +74,15 @@ An operation can be arranged in case of using the formula. This operation is to 
 
 **Execute**
 
-· if all parameters are defined
+- if all parameters are defined
 
 If this option is active and the formula, e.g. sum parameter, contains several field names the calculation result is only written if there are entries for all used fields. Otherwise the partly existing or partly filled fields are used for the calculation.
 
-· if last valid formula in a block of the same row
+- if last valid formula in a block of the same row
 
 Several formulas can be defined for one and the same target parameter. This option causes the last mentioned valid formula is going to be executed. Formulas listed before won't be executed and cannot affect each other.
 
-· if the statement of the condition check has changed
+- if the statement of the condition check has changed
 
 A condition can be set for the execution of the formula. With this option you can determine the formula to be executed if the evaluation of the condition changes its value.
 

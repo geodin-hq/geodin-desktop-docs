@@ -1,6 +1,6 @@
 # Cross Database Object Copying
 
-GeoDin can move objects between databases without exporting flat files: you can copy boreholes directly from one connected database into another, package a selection as a portable GeoDin Access database, and convert older-standard objects to the current standard as part of the copy. This page covers connecting the source and target databases, the copy and publish/export commands, and the SEP 1 → SEP 3 conversion option.
+GeoDin can move objects between databases without exporting flat files: you can copy boreholes directly from one connected database into another, package a selection as a portable GeoDin Access database, and convert older-standard objects to the current standard as part of the copy. This page covers connecting the source and target databases, the copy and publish/export commands, and the SEP 1 -> SEP 3 conversion option.
 
 ## Database Connections & File-Based Migration
 
@@ -32,7 +32,7 @@ Borehole log properties (layer data) can be copied from one borehole to another,
 
 ## Converting SEP 1 Objects to SEP 3 During Copy
 
-When copying SEP 1 objects from one database into another using **Add Objects**, a conversion option appears at the bottom of the copy dialog: **Conversion SEP 1 → SEP 3** (German: *Konvertierung von SEP 1 nach SEP 3*).
+When copying SEP 1 objects from one database into another using **Add Objects**, a conversion option appears at the bottom of the copy dialog: **Conversion SEP 1 -> SEP 3** (German: *Konvertierung von SEP 1 nach SEP 3*).
 
 ### How to use it
 
@@ -47,7 +47,7 @@ Drag the SEP 1 objects from the source database into the **List of objects**.
 {% endstep %}
 {% step %}
 #### Step 3: Enable the conversion
-At the bottom of the dialog, check **Conversion SEP 1 → SEP 3**.
+At the bottom of the dialog, check **Conversion SEP 1 -> SEP 3**.
 {% endstep %}
 {% step %}
 #### Step 4: Copy and confirm
@@ -63,7 +63,7 @@ GeoDin displays a protocol log on completion. Review this log carefully:
 - Abbreviations (Kürzel) that could not be matched to a SEP 3 code are not discarded - they are written into the **comment/remarks field** (Kommentarfeld) of the target SEP 3 record for manual review.
 
 {% hint style="warning" %}
-This conversion is one-directional only: **SEP 1 → SEP 3**. There is no built-in conversion from SEP 3 back to SEP 1 in GeoDin. Always review the protocol log and the comment fields of imported objects to catch any unmatched abbreviations.
+This conversion is one-directional only: **SEP 1 -> SEP 3**. There is no built-in conversion from SEP 3 back to SEP 1 in GeoDin. Always review the protocol log and the comment fields of imported objects to catch any unmatched abbreviations.
 {% endhint %}
 
 For importing SEP 3 data delivered by a state authority, see [Importing SEP 3 data via the exchange database](sep3-exchange-database.md).
