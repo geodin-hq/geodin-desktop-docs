@@ -70,7 +70,7 @@ The in-product **F1** context-sensitive help is comprehensive on template creati
 
 Layouts use multiple drawing layers, visible in the **Layer Overview** panel (lower-left corner). Layers can be toggled visible/invisible, reordered, and locked. Use separate layers to isolate fixed elements (title blocks, logos) from variable graphic elements.
 
-For the full drawing layers reference - dialog icons, visibility controls, and the `Ctrl+E` shortcut - see [Customizing Log Layouts](../../borehole-logs/customizing-log-layouts.md#drawing-layers).
+For the full drawing layers reference - dialog icons, visibility controls, and the `Ctrl+E` shortcut - see [Customizing Log Layouts](../borehole-logs/customizing-log-layouts.md#drawing-layers).
 
 ## Snap function
 

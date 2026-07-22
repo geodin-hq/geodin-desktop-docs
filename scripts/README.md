@@ -38,11 +38,11 @@ On a legitimate change (new screenshot for a step, GitBook re-export): review th
 
 Informational audit: finds **near-duplicate pages** and **repeated paragraph blocks** that don't share a `<!-- src: -->` marker (so the marker-based linter can't catch them). 5-word word-shingles + Jaccard, page-level AND block-level, with `difflib.SequenceMatcher.ratio()` as a secondary verify on top candidates. Stdlib only.
 
-Writes a markdown report - defaults to stdout, point `--output` at a path to capture it (the convention is `~/GitHub/geodin-docs-internal/AUDIT-text-similarity.md`, alongside the existing `AUDIT-import-duplication.md`).
+Writes a markdown report - defaults to stdout, point `--output` at a path to capture it (the convention is `~/GitHub/geodin-docs-internal/insights/AUDIT-text-similarity.md`, alongside the existing `AUDIT-import-duplication.md`).
 
 ```bash
 python3 scripts/check-text-similarity.py public/en
-python3 scripts/check-text-similarity.py public/en --output ~/GitHub/geodin-docs-internal/AUDIT-text-similarity.md
+python3 scripts/check-text-similarity.py public/en --output ~/GitHub/geodin-docs-internal/insights/AUDIT-text-similarity.md
 python3 scripts/check-text-similarity.py public/en --page-threshold 0.70 --block-threshold 0.85 --quiet
 ```
 
@@ -64,3 +64,19 @@ Checks markdown `](...)` targets and raw `src="..."` attributes with a known fil
 ## CI
 
 `check-asset-integrity.sh`, `check-duplication.sh`, and `check-stubs.sh` run via `.github/workflows/docs-lint.yml`. `check-asset-integrity.sh` and `check-duplication.sh` are required; `check-stubs.sh` is informational. The asset check also runs on every push to `main` (no path filter) so GitBook sync commits are caught. `check-text-similarity.py` is not in CI - it's a local audit tool.
+
+## `check-typography.sh`
+
+Fails if any `.md` page contains AI smart-typography characters (em/en dashes, curly quotes, ellipsis char, arrows, middle dots, non-breaking spaces). House rule (2026-07-21): docs prose is ASCII-typography only - see `CLAUDE.md` section 1 for the replacement map. Pre-existing violations are grandfathered in `typography-allowlist.txt`; clean pages up and remove their entries - never allowlist new content.
+
+```bash
+./scripts/check-typography.sh public/en
+```
+
+## `check-structure.py`
+
+Mechanizable house-structure checks: every SUMMARY.md entry resolves, every page is referenced in SUMMARY.md (no orphans), nesting stays within two subpage levels, every `<figure>` has a non-empty `<figcaption>`, one H1 per page, no skipped heading levels. See `CLAUDE.md` sections 2-6 for the rules these enforce. Informational in CI until the pre-existing findings are triaged.
+
+```bash
+python3 scripts/check-structure.py public/en
+```
