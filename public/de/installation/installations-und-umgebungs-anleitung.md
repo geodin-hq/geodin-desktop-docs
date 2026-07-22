@@ -27,10 +27,10 @@ Installieren Sie GeoDin über das bereitgestellte Setup. Wählen Sie zwischen fo
 
 Wenn GeoDin von mehreren Benutzerinnen und Benutzern innerhalb eines Netzwerks verwendet wird, empfiehlt es sich, die Software auf einem gemeinsamen Netzwerklaufwerk zu installieren. Dies bietet folgende Vorteile:
 
-* **Zentrale Konfiguration**: Alle greifen auf dieselbe Konfigurationsdatei zu (z. B. Datenbankverbindungen, Wörterbücher, GeoDin-Layouts), was Inkonsistenzen vermeidet.
+* **Zentrale Konfiguration**: Alle greifen auf dieselbe Konfigurationsdatei zu (z. B. Datenbankverbindungen, Wörterbücher, GeoDin-Layouts), was Inkonsistenzen vermeidet.
 * **Einfachere Wartung**: Updates und Änderungen müssen nur einmal durchgeführt werden.
 * **Reduzierter Verwaltungsaufwand**: Keine separate Installation auf jedem Client-PC erforderlich.
-* **Zugriffsrechte steuerbar**: Über das Dateisystem des Netzwerks (z. B. NTFS-Berechtigungen) kann der Zugriff gezielt gesteuert werden.
+* **Zugriffsrechte steuerbar**: Über das Dateisystem des Netzwerks (z. B. NTFS-Berechtigungen) kann der Zugriff gezielt gesteuert werden.
 
 <figure><img src="../.gitbook/assets/Picture1.png" alt=""><figcaption></figcaption></figure>
 
