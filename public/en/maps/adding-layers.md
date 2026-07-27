@@ -234,6 +234,8 @@ Right-click a layer in the legend and select **Export...** to write it out to `*
 
 ### Exporting layer polygons
 
+*Layer* here means the geological layers of the exported cross-section, not a map layer.
+
 Layer polygons can be exported as well as layers. Right-click the profile cross-section in the map legend, select **Export** and then the submenu **Layer polygons**. In the window that opens you choose whether all existing objects or only the previously selected ones are exported, and how overlapping polygons are handled - either intersect the polygons, or keep the shape.
 
 <!-- src: help/H0000010939#export-dialog -->
