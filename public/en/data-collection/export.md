@@ -160,6 +160,8 @@ At the level of a measurement point or a group of measurement points, the Object
 
 Every exported data set is augmented with the matching general data: the short and long name of the object and the name of the measurement point (`SHORTNAME`, `LONGNAME`, `INVNAME`), plus the internal measurement point ID and sample number (`INVID`, `SMPID`). With knowledge of the GeoDin data model, those two identifiers let you rebuild the links between exported tables.
 
+For the **Microsoft Access database** type, select an existing database or create a new one as the export target; the format-specific settings below apply to the other types.
+
 ### UBA CSV
 
 The UBA format follows the German federal and state agreement on groundwater data exchange (Annex II.x 12.04, table template for the LAWA AK "Optimizing the groundwater service", Chemnitz, 1999-02-04). GeoDin's export covers the measurement values only.

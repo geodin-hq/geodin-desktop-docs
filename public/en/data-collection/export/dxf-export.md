@@ -45,7 +45,7 @@ The example maps GeoDin's background colour for gravel to AutoCAD colour 51 (yel
 ## Legacy export routes
 
 {% hint style="warning" %}
-Graphic export runs through the print dialog. The former route **File > Export > Picture file...** was removed in GeoDin 9.6 (Release Build G2651022).
+Graphic export runs through the print dialog - DXF output itself remains available that way. The former route **File > Export > Picture file...** was removed in GeoDin 9.6 (Release Build G2651022).
 
 Two output formats were retired along the way: Windows Metafile (`.wmf`) is no longer supported since GeoDin 9.0, and the legacy Windows Bitmap (`.bmp`) and JPEG (`.jpg`, `.jpeg`) outputs are no longer supported since GeoDin 9.6. PNG is the supported bitmap format; EMF remains available as the Windows vector format.
 {% endhint %}

@@ -449,7 +449,7 @@ UBA= 1244 07 1 0.1
 
 By the identifier "UBA=" the property will be recognised to be necessary for the UBA-export. Measurement size no and separation code are information to be taken from the document mentioned above (table coding of the measured values and scale units for groundwater data). The target scale unit for the export is defined by the code number for the scale unit (see the document above). If necessary, a conversion may be executed during the export. The limit of determination is a standard information. If a limit of determination has been registered for the concerning parameter, it will be used for the export. Specific information, following the name of the property, are separated by comma. The decimal character for the limit of determination is the point.
 
-#### Parameter groups
+### Parameter groups
 
 The parameters of a data type are arranged in parameter groups (also called substance groups). Groups are managed on the data type branch, either with the toolbar buttons or through the context menu (right mouse click):
 
@@ -508,6 +508,8 @@ intervalProperty
 ```
 
 <!-- src: help/H0000005581#generate-sub-nodes -->
+
+A separate transformation exists specifically for layer data - see [Generate subnotes (Layer)](#generate-subnotes-layer) below.
 
 ### Generate subnotes (Layer)
 

@@ -2,7 +2,6 @@
 description: >-
   How to install GeoDin plug-ins from the plug-in archive and how to configure a
   custom plug-in under Installed Plugins in the system configuration.
-hidden: true
 ---
 
 # Installing Plug-ins

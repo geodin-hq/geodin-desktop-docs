@@ -14,7 +14,7 @@ In the **Manage Methods** dialog the option **-All-** is active by default, whic
 
 <!-- src: help/H0000009041#user-rights-defaults -->
 
-When user-rights restrictions are active, using and editing layouts and creating databases are not permitted by default. Both can be allowed for certain users. These restrictions apply to computer (Windows) user names only.
+When user-rights restrictions are active in the user rights configuration, using and editing layouts and creating databases are not permitted by default. Both can be allowed for certain users. These restrictions apply to computer (Windows) user names only.
 
 External users may not have permission to modify shipped system data types - `System > System Configuration > Data Types` is effectively read-only for external users.
 

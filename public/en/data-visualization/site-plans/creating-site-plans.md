@@ -79,7 +79,7 @@ Selecting a link below the **portal links** node opens the properties dialogue f
 
 To set the target of a portal link of type **Go to URL**: select the **portal links** node in the element properties tree, set the type to **"Go to URL"**, then at the **Go to URL** node enter the target as free text or choose it from a frame query.
 
-**Go to portal page target**
+### Go to portal page target
 
 <!-- src: help/H0000006987#call-portal-page -->
 
@@ -93,7 +93,7 @@ Activate the **[return image only]** checkbox at the **Call portal page** node t
 
 *Example:* create a variable text element to call a portal layout, then in its object properties select **Properties** > **Portal links**, add an entry with the blue **+**, and name it (for example `hydraulic head`). Below that entry, select **Portal link** and choose the type **Call portal page**. At the new **Call portal page** node, select the target layout from **Available layouts** and confirm with **OK**. Finally, add an entry under **Object-ID's** and select the ID to transfer.
 
-**Preparing a layout for portal use**
+### Preparing a layout for portal use
 
 <!-- src: help/H0000007066#portal-preparation -->
 
@@ -267,7 +267,7 @@ This setting is only available when the report data overflows one page. The defa
 
 _**Note:**_ _Both settings are independant from element anchors, since they are only releated to their respective element container._
 
-**Options per column**
+#### Options per column
 
 <!-- src: help/H0000010887#column-options -->
 

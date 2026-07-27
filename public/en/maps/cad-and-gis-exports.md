@@ -12,6 +12,8 @@ DXF export makes GeoDin graphical output (borehole logs, cross-sections) directl
 
 The internal PDF printer supports vector output (not just raster), preserving quality for CAD and publication use.
 
+For the DXF route in detail (block vs linear structure, `ACAD_COLORS.TXT` colour mapping), see [DXF Export](../data-collection/export/dxf-export.md).
+
 ## Exporting query results as a shape file
 
 <!-- src: help/H0000007849#export-shape-files -->

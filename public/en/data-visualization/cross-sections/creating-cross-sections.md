@@ -211,7 +211,7 @@ The **Distance ruler** scene adds horizontal labelling to the objects shown in t
 
 The ruler starts at the position of the first cross-section object and ends at the last object on the right. The relative start and end positions can be adjusted with the two **Position** entry fields.
 
-**Labelling the distance ruler**
+### Labelling the distance ruler
 
 <!-- src: help/H0000010726#distance-ruler-labeling -->
 
