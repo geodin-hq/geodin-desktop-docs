@@ -30,6 +30,12 @@ The projection model is configured automatically when using the geological cross
 | **Display adjusted inclination**  | Select the data field containing the borehole inclination (0 = vertical, up to 89 = nearly horizontal; 90 is invalid).                                                                                                                                                          |
 | **Drawing depth options**         | _Depth_ - draw to a fixed depth below ground surface. _Cut-off_ - set a reduced level below which the cross-section is not displayed (acts as a horizontal cut line).                                                                                                           |
 
+<!-- src: help/H0000007402#datum-correction -->
+
+**Datum correction in detail.** The general-data field selected under **Data field to correct the vertical datum** can hold either a numeric offset per object or a key referring to a dictionary entry. With a dictionary, the difference to the reference datum system is stored in the dictionary and the number in the entry's **Standard** field is used. The value found is added to the elevation of the object's start point.
+
+*Example:* a cross-section uses four boreholes measured in two elevation systems - boreholes 1 and 2 in system A, boreholes 3 and 4 in system B. The section is built in system A, whose elevations are 10 m higher than system B. Enter the difference to the primary datum system in a `DATUM SYSTEM` field for each borehole: 0 for boreholes 1 and 2, 10 for boreholes 3 and 4. Selecting `DATUM SYSTEM` as the correction field raises boreholes 3 and 4 by 10 m so all four sit in system A.
+
 ## Join layers tool
 
 The "Join layers" tool connects geological layers between adjacent boreholes with filled polygons, either fully automatically or semi-automatically.
@@ -52,9 +58,65 @@ Create cross-section layer connections in a separate drawing layer from the bore
 
 Layer connections can also be drawn as freehand polygons instead of using the Join layers tool. Draw with the Polygon element - the polyline does not need to be closed. Use overlapping layers drawn front-to-back to create clean boundaries: draw the deeper layer first, then overlap with the upper layer so the upper boundary becomes the visible edge.
 
+<!-- src: help/H0000001955#drawing-and-editing-polylines -->
+
+**Drawing a polyline.** Place the individual nodes with left mouse clicks and finish the polyline with a double-click. Two behaviors follow from the fill and node count: a polyline filled with a pattern is automatically closed into a polygon, and a polyline with only two nodes is converted into the graphic element **Line**, which therefore cannot be filled.
+
+**Editing nodes.** Select the polyline first, then activate the **Edit polygon** tool. With the tool active:
+
+* **Move a node** - click it and drag it to the new position.
+* **Delete a node** - click it (the selected node is marked black) and press `Del`.
+* **Add a node** - hold `Ctrl` and click at the position where the node should be inserted.
+
+Activate `Preferences > Show polygon points` to display the nodes of all polygons on screen, which makes it easier to align polygons with one another or position them precisely.
+
 ## Importing and exporting polylines
 
 **Importing:** Use `File > Import > Polylines`. Polylines use the ArcInfo UNGENERATE format (`.lic`). Coordinates are transformed according to the active projection model. Maximum 8,192 nodes per polyline. Imported polylines appear red in preview; click "Add polyline(s)" to transfer them to the graph.
+
+<!-- src: help/H0000003486#projection-options -->
+
+**Projection at import time.** If the imported coordinates are not already relative coordinates, transform them with the **Projection parameter** option. With **-Activate projection-** deactivated in the **Projection parameters** dialog, the imported coordinates are interpreted as relative coordinates. With projection active, every imported point is multiplied by the factor in the **Unit** entry field and then converted into relative coordinates; click the **Recalculation** icon to apply a new factor.
+
+The insertion position depends on the coordinate system of the open GeoDin graph. By default a graph starts at the upper-left corner with coordinates (0,0) and increases to the right and downwards in centimeters, so an A4 page runs from X=0, Y=0 at the top left to X=21.00, Y=29.70 at the bottom right. If a polyline exceeds 8,192 nodes, the import stops at that node and a warning is shown.
+
+<!-- src: help/H0000003486#ungenerate-file-structure -->
+
+**UNGENERATE file structure.** The ASCII file repeats one block per polyline:
+
+```
+ID XP YP
+X1 Y1
+X2 Y2
+... ...
+Xn Yn
+END
+ID XP YP
+X1 Y1
+X2 Y2
+... ...
+Xn Yn
+END
+END
+```
+
+`ID` is any ident number of the line, `XP` and `YP` are the coordinates of the ident point. None of the three is analyzed, so all can be `0`, but the first line of each polyline must still obey the syntax. `X1 Y1` to `Xn Yn` are the coordinate pairs of the polyline's nodes. Each polyline is closed with `END` at the start of a line, and the file itself is closed with a further `END`, so the last two lines both read `END`. The decimal separator is always a point.
+
+*Example* - a file with two polylines of three coordinate pairs each:
+
+```
+0 0 0
+10 12
+15 12
+15 16
+END
+0 0 0
+4.5 5.1
+7.5 11.3
+4.3 7.7
+END
+END
+```
 
 **Exporting:** Use `File > Export > Polylines`. Three coordinate modes are available:
 
