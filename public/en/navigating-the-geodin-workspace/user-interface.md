@@ -148,6 +148,8 @@ Switching between active methods is done by clicking the method's symbol in the 
 | **F9** | Maximize or minimize the object manager's Objects and Methods windows |
 | **Ctrl+F9** | Maximize or minimize both at once |
 
+For the complete list of shortcuts across all editors, see [Keyboard shortcuts](keyboard-shortcuts.md).
+
 On the right side of each method symbol, a small switch closes the method - even when the method is in the background. The **Close all methods** switch on the right side of the **Active Methods** toolbar closes every active method in one step.
 
 {% hint style="info" %}

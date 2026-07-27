@@ -6,7 +6,7 @@ description: Layout editor mechanics - accessing the editor, file formats, drawi
 
 The layout editor is GeoDin's graphic authoring environment for creating and modifying layout templates. It is accessed via the **Graphic Printing and Editing** method and the **Layout** section. This page covers the editor's core mechanics: how to open and save layouts, how the editor toolbar is organised, and the tools for managing elements, layers, groups, and palettes.
 
-Part of the [Creating Custom Layouts](../creating-custom-layouts.md) family.
+Part of the [Creating Custom Layouts](../creating-custom-layouts.md) family. For the editor's key combinations (select, duplicate, nudge, snap, zoom), see [Keyboard shortcuts](../../navigating-the-geodin-workspace/keyboard-shortcuts.md).
 
 ## Opening and saving layouts
 
