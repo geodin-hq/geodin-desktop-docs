@@ -1,4 +1,4 @@
-# Coordinate Systems and Projections
+# Choosing the export coordinate system
 
 When you export a map layer, you choose which coordinate system its coordinates are written in. The export behaviour is controlled by one of three **Export options**, described below.
 

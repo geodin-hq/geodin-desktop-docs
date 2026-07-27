@@ -1,4 +1,4 @@
-# Cross Section Layouts
+# Cross-section graphic element
 
 The cross-section layouts graphic element controls how a cross-section graphic is embedded in a layout, including saving formats and document storage. For scale, axis range, labeling, and cross-section panel settings, see [Cross Section Layouts (cross-sections)](../cross-sections/cross-section-layouts.md).
 

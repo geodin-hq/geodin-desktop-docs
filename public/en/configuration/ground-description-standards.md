@@ -155,15 +155,7 @@ _**Important:**_ _During the collection of ground types in the GeoDin database o
 
 ### Translation style sheets
 
-The translation style sheets control the translation of a GeoDin XML ground type description into a text for the labelling instructions of layers in graphics. For main and sublayers different style sheets are defined.
-
-### Main-layer
-
-The translation style sheets control the translation of a GeoDin XML ground type description into a text for the labelling instructions of layers in graphics. Simply copy the definition of the style sheet in the input field using the clipboard.
-
-### Sub-layer
-
-The translation style sheets control the translation of a GeoDin XML ground type description into a text for the labelling instructions of layers in graphics. Simply copy the definition of the style sheet in the input field using the clipboard.
+Translation style sheets control how a ground type description is translated into the text used for layer labels in graphics, with separate sheets for main layers and sublayers. They are covered in full on [Translation style sheets](translation-style-sheets.md); define them there and copy the style sheet definition into the input field here using the clipboard.
 
 ### Dictionaries
 
