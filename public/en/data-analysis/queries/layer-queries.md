@@ -1,3 +1,9 @@
+---
+description: >-
+  Reference for GeoDin layer queries - single conditions, codes and wildcards,
+  GLQ definitions, layer classification syntax, sequences, and processing options.
+---
+
 # Layer Queries
 
 Layer queries search the coded layer descriptions of boreholes - soil and rock attributes recorded as strings of codes - which a plain SQL query on the database cannot reliably match. This page covers what layer queries are, the simple single-condition walkthrough for finding all boreholes with a given layer property, and the full reference for the multi-characteristic layer-query workflow (GLQ definition files, the layer query manager, definitions, results tables) plus additional query options such as code-hierarchy search and multiclassification export.
@@ -347,7 +353,7 @@ The **Transitions** tab restricts a single condition by how the found code is co
 | **C) Codes may build transitions or be part of an enumeration** | Permits certain transitions or enumerations, optionally restricted. |
 | **D) Codes must build transitions or be part of an enumeration** | Searches specifically for certain transitions or enumerations, optionally restricted. |
 
-With option C or D, restricting the permitted transitions or enumerations is optional. The restricted or excluded codes are declared as a list of keys and may use the same wildcard characters as the search key; quantifiers and the secure or insecure specification can be given as well. Declare the codes that must be involved in the transition or enumeration to find specific ones, and the codes that must not be involved to exclude them.
+With option C or D, restricting the permitted transitions or enumerations is optional. The restricted or excluded codes are declared as a list of keys and may use the same wildcard characters as the search key; quantifiers (the **Quantificators** field) and the secure or insecure specification can be given as well. Declare the codes that must be involved in the transition or enumeration to find specific ones, and the codes that must not be involved to exclude them.
 
 The check is always carried out against the list of codes involved in the transition that was found, not against the search code itself. Defining the search code as `%G` (all gravels) and then excluding the code fG from the transitions therefore does not work: the transition fG-mG still gives a TRUE result, because fG is found as the search code and does not have a transition to fG. To find medium and coarse gravels without transitions or enumerations with fine gravel, use the search code `mG,gG` and exclude the code fG in the transition.
 
