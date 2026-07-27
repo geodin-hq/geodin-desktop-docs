@@ -1,7 +1,7 @@
 
 # Working with Measurement Data
 
-This page is the working reference for the measurement value editor: entering and editing measurement values, the data sheet and additional information, the data model behind the tables, adding and managing data types, importing and exporting, and the time range controller.
+This page is the working reference for the measurement value editor: entering and editing measurement values, the data sheet and additional information, the data model behind the tables, adding and managing data types, importing and exporting, and the time range controller. For the grid's key combinations, see [Keyboard shortcuts](../keyboard-shortcuts.md).
 
 ## Measurement data
 

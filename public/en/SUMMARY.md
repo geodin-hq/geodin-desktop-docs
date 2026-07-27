@@ -5,6 +5,7 @@
 * [Introduction](README.md)
 * [Install & activate](documentation/install-and-activate.md)
 * [The GeoDin user interface](navigating-the-geodin-workspace/user-interface.md)
+* [Keyboard shortcuts](navigating-the-geodin-workspace/keyboard-shortcuts.md)
 * [First steps](documentation/first-steps.md)
 
 ## Installation & Licensing
