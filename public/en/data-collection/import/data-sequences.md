@@ -90,6 +90,15 @@ To avoid re-entering the same column configuration for every import of a given f
 
 To load an existing filter, click the **Edit selected filters** drop-down in the import dialog and select the filter name.
 
+{% hint style="info" %}
+<!-- src: transcript/csv-cpt-import-filter#entry-point -->
+If a CPT or CSV file seems to be rejected ("only ASCII is read"), you are
+usually in the wrong import entry point: sequence files in CSV or free-format
+ASCII are imported under **general data** with an import filter - the filter
+is the interpreter of your file structure. Native probe formats (e.g. GRU) are
+converted to CSV first and imported the same way.
+{% endhint %}
+
 ## Batch import at the Objects branch level
 
 GeoDin can match import files to objects automatically by filename, allowing you to import CPT data for dozens of objects in one step.

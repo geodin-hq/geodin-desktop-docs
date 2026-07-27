@@ -64,6 +64,29 @@ After the copy, GeoDin displays a protocol showing which objects were transferre
 The exchange database only works with files that use the **SEP 3 table structure**. Arbitrary third-party Access databases or non-SEP formats are not supported.
 {% endhint %}
 
+## Troubleshooting: exchange database appears empty or will not import
+
+<!-- src: support/sep3-austausch#empty-exchange-db -->
+
+The exchange database is version-matched and path-sensitive. If it opens but
+shows no objects, or the import fails:
+
+* **Use the version matching the delivery.** Fugro provides the exchange
+  database for [SEP 3.4.X](https://download.geodin.com/tools/SEP3_Austausch/SEP3_Austausch_Version_3-4-X.zip),
+  [SEP 3.5.X](https://download.geodin.com/tools/SEP3_Austausch/SEP3_Austausch_Version_3-5-X.zip),
+  and [SEP 3.6.X](https://download.geodin.com/tools/SEP3_Austausch/SEP3_Austausch_Version_3-6-X.zip).
+  Data exported by other software reads correctly only if it was exported with
+  one of these object type versions.
+* **The source file must be `C:\Temp\SEP3.mdb`.** The exchange database
+  contains fixed links to a database named `SEP3.mdb` in the folder `C:\Temp` -
+  rename the received file accordingly and create the folder if needed.
+* **Fix the project ID.** The `PRJ_ID` in the source data must be exactly
+  6 digits; correct it in the source file if the exchange database stays empty.
+* **Add the missing EPSG column.** Older third-party exports can lack the
+  EPSG column in the `S3STAMM` table - add it, then re-open the exchange
+  database. Legacy coordinate codes may additionally need the
+  [KSYS cleanup](../../support/troubleshooting/import-and-data-exchange.md).
+
 {% hint style="info" %}
 If you regularly receive data from state authorities, keep a permanent connection to the exchange database in GeoDin and simply update the path to point to each new delivery file as it arrives.
 {% endhint %}

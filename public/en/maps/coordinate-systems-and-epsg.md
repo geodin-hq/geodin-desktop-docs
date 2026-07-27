@@ -12,6 +12,14 @@ EPSG dictionary is stored as `G1_EPSG.GSD` in the syslib folder at `C:\ProgramDa
 
 In GeoDin Onsite, the local coordinate system is configured via EPSG code in the project settings and auto-filled into new forms as a default.
 
+{% hint style="info" %}
+<!-- src: transcript/state-plane-epsg#lookup -->
+The dictionary is keyed on numeric EPSG codes, so searching for a regional
+code name (for example a US state plane code like `MA83F`) returns nothing.
+Look up the numeric EPSG code for your system first - for example NAD83 /
+Massachusetts Mainland - and search for that number instead.
+{% endhint %}
+
 ## Transforming coordinates in-mask
 
 GeoDin allows a coordinate transformation to be run directly in the general data editor - without switching to the Maps module or an external GIS tool.
