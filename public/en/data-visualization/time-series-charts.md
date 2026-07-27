@@ -35,6 +35,55 @@ Selecting the series type changes the structure of the object properties so that
 
 By default, a series is displayed for the entire time interval of the time series graph as defined by the time scale settings, for as long as data for the series is available. In some cases it is useful to define a special displayed time interval for a particular series - for example, when a threshold value changes due to regulatory amendments. This way, displaying the threshold as a pre-defined line can include the validity period of the threshold using a specific time interval. Select **-Use user-specified time interval-** and choose the desired interval. The series is then displayed only within the selected time interval.
 
+## Reference: Processing Options
+
+<!-- src: help/H0000000707#processing-options -->
+
+The **Processing options** branch of a time line series controls whether the raw measurement values or calculated statistics are plotted.
+
+**-Use measured values-**
+
+All individual measured values of a data series are used for the display.
+
+**-Calculation of statistical values-**
+
+Statistical values calculated from the individual measured values are displayed instead. Two settings define the calculation:
+
+* **Calculation type** - mean values, sums, minima, maxima, or median.
+* **Time range** - minutes, hours, days, months, or years. The time range determines which values of a data series are summarized into one new value for the display - for example, a monthly average of water level measurements.
+
+**Time calculation**
+
+Defines the point on the time axis at which the calculated value is drawn. With a monthly time range, **-at the start time of the range-** places the value on the 1st of the month and **-at the middle of the range-** places it on the 15th.
+
+**Calculate values for**
+
+The calculated values can be plotted against either the **-left axis-** or the **-right axis-**. Assigning series to different axes makes it possible to show parameters with very different value ranges in one diagram. If an axis is selected here, make sure that axis is also displayed and labeled.
+
+## Reference: Multiple Series in One Element
+
+<!-- src: help/H0000001654#series -->
+
+The **Series** branch collects the options that affect how more than one time series is presented within a single graphic element.
+
+**Diagram type**
+
+Choose **-Stack series-** for series that are usually shown as bars, so they are drawn as a stacked graphic. The stack can optionally be standardized to 100%. Grain size analysis is a common use of this view.
+
+**Series order**
+
+Choose **-Show each series-** to display individual series side by side in separate diagrams, each with its own axes and labels. With this option selected, the horizontal order of the series can be controlled.
+
+If all series are instead drawn on top of one another in one diagram, the default is a single x-parameter axis. When the series show differing parameters - rather than differing measurement points for the same parameter - use **-Each series has individual parameter axis-** to show several axes at different relative positions above the diagram. Axis settings are then made individually for each axis.
+
+**Show empty series**
+
+Series that contain no measurement values for the current GeoDin project are shown as an empty diagram when this option is active; otherwise they are removed.
+
+**Default series width** - Sets the usable horizontal area for each individual diagram.
+
+**Default series spacing** - Sets the space between the single diagrams in the horizontal view.
+
 ## Reference: Time Series List Controls
 
 The following toolbar icons appear in list controls throughout the time series properties (both the **Time series** list and the **Series definitions** list):
@@ -117,6 +166,10 @@ The time interval of the time axis defines the starting and ending time of the p
 **Current time** - Available for the ending time only. The current time is used as the ending point.
 
 The starting and ending points resulting from the settings or the actual measurement values are displayed as information.
+
+<!-- src: help/H0000010794#stiff-single-record -->
+
+Stiff diagrams are the exception: they can only be used with one data record - the first record, the last one, or a specific point in time.
 
 **Example:** to display the measurement values of the last 10 years until today - set the ending point to **-Current time-** and the starting time to **-Relative-** with a value of 10 and **Years** selected in the dropdown.
 
