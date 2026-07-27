@@ -1,3 +1,9 @@
+---
+description: >-
+  Create a GeoDin map, add GIS documents, folders and query layers to it, preview
+  cross-sections, and control layer presentation and export from the legend.
+---
+
 # Adding Layers
 
 A GeoDin Map is a container: it stores a combination of layers, their individual settings, the drawing order, and the general map settings. This page covers creating a map, adding and deleting layers, and the property dialogs and context-menu functions used to control how each layer is displayed.
@@ -64,13 +70,44 @@ In a GeoDin Map you may display documents from the "Document management" (e.g. s
 
 To add a new layer, simply drag & drop a node from the GeoDin Object Manager (GOM) into the map window. Layers are drawn in the order that they were added to the map i.e. the last layer added will be superimposed on all other layers. To change this drawing order select a layer with the mouse, press and hold whilst moving the layer up or down in the list.
 
+Every kind of data that the map view can show is moved there this way. If the data you are dragging cannot be displayed in the map view, the cursor changes to a "no parking" sign and the dataset cannot be dropped. The display name of a new layer is generated automatically from the name of the document or the document link. The formats GeoDin can read are listed under [supported file formats](getting-started-with-maps.md#supported-file-formats).
+
+GeoDin data is added in exactly the same way as GIS data: both user queries and the common branches (for example **All Locations**) can be dragged in as sources.
+
+**Adding a whole folder at once**
+
+For several files at a time it is faster to drag a complete folder out of the document structure instead of the individual documents. GeoDin collects all the data in that folder that can be used in GeoDin Maps and opens a dialog with further options.
+
+**Adding a layer from disk**
+
+The icons above the legend - **\<Add layer>**, **\<Add WMS layer>** and **\<Add Web Tile Layer>** - add GIS layers without going through the Object Manager. Choose the file you want in the dialog window and GeoDin saves the necessary document files automatically to the folder _Documents/Linked documents_. The two web layer icons are described under [WMS and Web Tile Layers](wms-and-web-tile-layers.md).
+
+{% hint style="warning" %}
+Adding layers from the legend icons requires the international document object types (DOC), introduced with GeoDin 8.1. Install them and [register the document descriptions](../navigating-the-geodin-workspace/documents/document-organization.md) in the database in question before using this function.
+{% endhint %}
+
+<!-- src: help/H0000010541#add-layer -->
+
 ### Deleting layers
 
 The context menu for a layer has an option for deleting the layer.
 
+### Adding a cross-section and previewing it
+
+A constructed cross-section can be shown in the map as a line, with the section itself displayed in a preview window when you click that line.
+
+1. Construct the cross-section (see [Creating cross-sections](../data-visualization/cross-sections/creating-cross-sections.md)) and add it to the project as a document through [Document management](../navigating-the-geodin-workspace/documents/managing-documents.md).
+2. Drag & drop the cross-section document onto the map. It appears there as a line.
+3. Activate the cross-section preview with its icon on the map toolbar.
+4. Click a cross-section line in the map. The cross-section is displayed in the preview window.
+
+<!-- src: help/H0000008798#cross-section-preview -->
+
 ### Adding map data to the document management
 
 Preparing GIS data for GeoDin Maps is covered in [Getting Started with Maps](getting-started-with-maps.md).
+
+Which layouts a query layer offers for object details and for graphic printing is controlled by its favourite layouts, described under [Preparing GIS data for GeoDin Maps](getting-started-with-maps.md#preparing-gis-data-for-geodin-maps).
 
 ***
 
@@ -110,7 +147,7 @@ Assign a layer to a specific group. All groups available in the map are shown. C
 
 _Export_
 
-This function allows you to export a layer in the formats SHP, GML, MIF, KML and JSON.
+This function allows you to export a layer in the formats SHP, GML, MIF, KML, JSON and DXF. The dialog and its options are described under [Reference: Exporting a layer](#reference-exporting-a-layer).
 
 _Interpolation_
 
@@ -129,6 +166,37 @@ _Attach presentation to document source_
 ## Reference: Layer properties
 
 The tabs **Layer** and **Section** are available for both vector and raster layers. Here, you can find general information and make some basic settings for the visualisation. Depending on the map size and the performance of the computer hardware, the display settings can be optimized.
+
+**Presentation options** on the layer context menu opens this dialog. It comes in two forms - the _Vector_ dialog box for vector layers and the _Raster_ dialog box for raster layers (images, grids) - and covers colouring, labeling, coordinate system adjustment, chart creation and the rest of the display customization.
+
+Consistent with GIS principles, and unlike more CAD-oriented solutions, the layer's visual properties are saved to the project file or to the layer properties file. Changing the layer properties does not alter the layer file itself in any way. Keeping the properties out of the layer file allows for greater interoperability: the same layer file can be used in different ways in several projects or applications.
+
+### Sections
+
+A **section** is a set of visual properties defined for a range of zoom levels, so one layer can look different at different scales. All settings in the properties dialog apply to the section currently selected in the **Section list**. The **Visible** section is the default section; the visual properties defined for it are valid at any zoom level.
+
+To add a section, activate the layer by clicking its name in the legend, open **Presentation options** from its context menu, switch to any tab that shows the **Section list**, and click the add button at the left-hand side of the list. Deleting works the same way: select the section in the **Section list** first, then click the delete button beside the list. A further button beside the list removes all custom sections from the layer at once.
+
+### Wizard
+
+The **Wizard** button in the _Vector_ and _Raster_ dialog boxes customizes the visual properties automatically instead of tab by tab.
+
+* For a vector layer it opens the **Rendering Wizard**: pick the attribute in the **Formula...** drop-down list, click **Next**, keep **Continuous values** selected and check that **Minimal value** and **Maximal value** are correct, click **Next**, select **Color** in the **Render by** list and click **Apply**. All shapes are then coloured proportionally to that numeric attribute.
+* For a grid layer it opens the **Grid Wizard**, which creates optimal colour zones. Adjust the colours with the three colour buttons if needed and click **Apply**.
+
+Confirm the properties dialog with **OK** afterwards to keep the result.
+
+<!-- src: help/H0000005953#sections-and-wizard -->
+
+### Presentation settings inside a system query
+
+A query used as a layer can carry its own presentation settings. Because the display options are stored with the query definition, a system query can do more than test conditions and return results - it can also bring its own colours, fill patterns and legend settings into the embedded GIS.
+
+{% hint style="info" %}
+These settings can get complex to write by hand. It is usually easier to build them first in the embedded GIS with the integrated assistant, then copy them as a text block from the layer properties into the system queries branch.
+{% endhint %}
+
+<!-- src: help/H0000011483#presentation-in-system-queries -->
 
 ### Vector dialog box
 
@@ -151,6 +219,26 @@ The **Raster** dialog box is the layer property dialog box for the raster type l
 2. _Section tab_
 3. _Pixel tab_ - appears if the layer was not recognized as a grid layer.
 4. _Grid tab_ - appears only when the layer was recognized as a grid layer.
+
+## Reference: Exporting a layer
+
+Right-click a layer in the legend and select **Export...** to write it out to `*.shp`, `*.gml`, `*.mif`, `*.kml`, `*.json` or `*.dxf`. The export window has the following settings.
+
+| Setting | What it does |
+|---|---|
+| **Output file** | Name, format and storage location of the export file. Click the **\<...>** button in the field to choose them. |
+| **Objects** | Which objects are exported: -all- (every object in the layer), -selected- (the objects previously picked in the layer with the selection tool), or -current map extent- (every object visible in the current map section). |
+| **Geometry type** | Only for Shape export (`*.shp`): specify points, arcs or polygons. |
+| **EPSG code** | The EPSG code of the coordinate system used for the export, taken from the layer properties. It can only be changed here if the option -ask user- was selected in the layer's export options. |
+| **Preview** | Shows the objects of the layer that will be exported, following the choice made under **Objects**. |
+
+### Exporting layer polygons
+
+*Layer* here means the geological layers of the exported cross-section, not a map layer.
+
+Layer polygons can be exported as well as layers. Right-click the profile cross-section in the map legend, select **Export** and then the submenu **Layer polygons**. In the window that opens you choose whether all existing objects or only the previously selected ones are exported, and how overlapping polygons are handled - either intersect the polygons, or keep the shape.
+
+<!-- src: help/H0000010939#export-dialog -->
 
 ## Reference: Selection properties
 
