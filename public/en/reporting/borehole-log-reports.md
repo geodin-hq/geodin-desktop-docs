@@ -39,6 +39,85 @@ The **Report** graphic element displays tables with database contents or calcula
 | **Report calculation** | Processes measurement value data before reporting - includes list comparison, statistics, annual statistics, laboratory control reports, plausibility reports, and grain size analyses (particle size parameter, sieve analysis, hydrometer analysis). |
 | **Plug-in reports** | Requires external plug-in modules. The plug-in handles all configuration and calculation; no further settings can be made in GeoDin. |
 
+Row types, page breaks, and dynamic captions are common to all report calculations and are documented under [Export](../data-collection/export.md#reference-report-row-types).
+
+#### List comparison
+
+<!-- src: help/H0000000872#configuration -->
+
+The list comparison is a report calculation in which the measured values of different parameters are compared with a comparative list, so that exceedance of or approximation to a comparative value is shown in tabular form. Configure it with:
+
+| Setting | Description |
+|---|---|
+| **Data type** | The data type for which the list comparison is calculated. The list of possible data types depends on the selected data source (measurement point type). |
+| **List group** | A list group from the offered entries. If the chosen data type is not correlated with any comparative list, a list comparison is not possible. |
+| **List** | The comparative list itself. |
+| **Parameter list** | **manual** - choose the parameters to be considered one by one. **automatically create from** - take the parameters to be considered from a measurement program, or alternatively use all parameters of the data type. |
+
+Display tolerances and the behavior for parameters with or without a list value are set under [Parameter settings (list comparison)](../data-collection/export.md#reference-parameter-settings-list-comparison).
+
+#### Statistic
+
+<!-- src: help/H0000000875#settings -->
+
+The statistic is a report calculation in which statistical values such as minimum, maximum, standard deviation and variance are shown in tabular form. The values can be structured temporally, and several parameters can be examined at once.
+
+**Parameter settings**
+
+- **manual** - a parameter list is shown below the statistic, in which any parameter can be added or removed.
+- **automatically create from** - gives access to the parameter lists of prepared measurement programs. Select a data type and a measurement program; alternatively all parameters of a data type can be used.
+
+**Time based classification**
+
+| Option | Effect |
+|---|---|
+| **without** | The measurement values are not divided into time periods. All measurement values of the whole time span of the measurement are considered for the statistic values. |
+| **monthly** | The measurement values are analyzed monthly. The monthly statistic contains several statistic values per parameter depending on the time interval of the entire measurement series. Only the year of the first data set is used. |
+| **monthly multi year** | As monthly, but all data sets are used independent of year for the chosen time period. |
+| **yearly** | The measurement values are analyzed yearly. The annual statistic contains several statistic values per parameter depending on the time interval of the complete measurement series. |
+
+**Pool measurement points**
+
+If several measurement points exist for a single object, these can be combined. If several objects are used in one object frame, all their measurement points can be combined to create a statistic across locally separated measurement points of an area.
+
+How parameters with no data in a period are shown is controlled by the [blank-value options](../data-collection/export.md#reference-blank-values-in-statistic-reports).
+
+#### Laboratory control report
+
+<!-- src: help/H0000005326#parameter-rows -->
+
+The report type **Laboratory control report** displays single parameters as rows. Samples, filters, boreholes, or object manager queries can be specified as the data source under report > report type > data source (in the object properties).
+
+With samples as data source, the result looks like this:
+
+```
+Measurement parameter    Measurement value   Unit
+Cyanide (total)          0.333               mg/kg DW
+Metals
+Lead                     40.000              mg/kg DW
+Nickel                   50.000              mg/kg DW
+PAH
+Naphtalene               4.200               mg/kg DW
+```
+
+The columns define which information about the parameter is displayed - measured value, unit, and optionally the extended measurement value specifications such as measurement method, sample preparation, or detection limit. The rows define which parameters and which subheadings ("Metals", "PAH" in the example) appear. A sample with several measured parameters is displayed with a corresponding number of rows; if several samples are connected to the layout, the same number of row blocks is created for each sample. Row blocks can be separated by subheadings (for example the sample name) or page breaks - see [Report row types](../data-collection/export.md#reference-report-row-types) and [Dynamic captions](../data-collection/export.md#reference-dynamic-captions).
+
+Rows carrying a parameter need their line type set to **measurement parameter** beforehand; rows carrying a subheading need line type **Text**.
+
+**Parameter-level defaults**
+
+Standard unit of measurement, standard limit of determination, and standard method do not have to be entered for each individual measured value. They can be defined once at the parameter itself.
+
+{% hint style="info" %}
+These defaults can only be set in the system configuration.
+{% endhint %}
+
+| Default | Where to set it |
+|---|---|
+| Unit | The **Unit** field of the parameter. |
+| Standard detection limit | A discrete text line `DEFAULTQUANTIFLIMIT=<value>` in the parameter's editing field. |
+| Standard method | A discrete text line `DEFAULTMETHOD=<string>` in the parameter's editing field. |
+
 ### Image element
 
 The **Image** graphic element can be used for company logos, topographic backgrounds, and similar. Supported formats: BMP, EMF, ICO, JPG, GGF (GeoDin graphic files), PCX, PNG, TIFF, WMF. After adding, the element appears as a blue dashed frame; select the image file via the **Data source** settings.
