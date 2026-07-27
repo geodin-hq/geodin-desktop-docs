@@ -15,7 +15,7 @@ For specific access-control topics, see also:
 
 ## Built-in user management system
 
-GeoDin Desktop includes a built-in user management system. It is **optional** - most customers do not turn it on. Where it is used, it is typically by organisations with strict access requirements (e.g. public authorities running ~20 users on the same database).
+GeoDin includes a built-in user management system. It is **optional** - most customers do not turn it on. Where it is used, it is typically by organizations with strict access requirements (e.g. public authorities running ~20 users on the same database).
 
 Users are created with a name and a login credential tied to the Windows login used at machine startup. There is no separate password store and no SSO/MFA/directory-service integration documented in the product.
 
@@ -51,7 +51,7 @@ The intended workflow is fire-and-forget: field users publish from the tablet, t
 
 ***
 
-## GeoDin Desktop licensing
+## GeoDin licensing
 
 Two license types exist (Standard and Professional). With a Professional license, the **number of seats** determines how many users can run GeoDin simultaneously - for example, 3 seats means up to 3 concurrent users out of a 15-person team.
 
@@ -59,8 +59,8 @@ Two license types exist (Standard and Professional). With a Professional license
 - Licenses are **hardware-bound**. Hardware changes (new laptop, Windows 10 -> 11 upgrade) require reactivation by GeoDin support.
 - An **educational package** is available for colleges and students.
 - Civil 3D plugin (GeoDin Ground) users do not need a GeoDin license. Only people who manage and curate the database need paid licenses.
-- **GeoDin Onsite is included with a GeoDin Desktop subscription** at no additional cost.
-- For contractors, Onsite licenses can be bundled; bundle pricing is custom/negotiated.
+- **GeoDin Onsite is part of the GeoDin subscription.**
+- For contractors, bundled Onsite licensing is available.
 
 For pricing details, see [geodin.com/pricing](https://geodin.com/pricing).
 

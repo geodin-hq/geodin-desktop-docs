@@ -14,7 +14,7 @@ GeoDin provides multiple export formats for different use cases, from quick tabu
 | **CSV** | The downstream tool prefers plain delimited text, or you need to re-export a data sequence | [CSV Export](export/csv-export.md) |
 | **AGS** | Delivering geotechnical data per AGS 4.0.4 / 4.1 | [AGS Export](export/ags-export.md) |
 | **DXF** | The output needs to land in AutoCAD or another CAD tool as editable vectors | [DXF Export](export/dxf-export.md) |
-| **GeoDinML** | Pushing data between GeoDin Desktop and GeoDin Onsite, or distributing a project list | [GeoDinML Export](export/geodinml-export.md) |
+| **GeoDinML** | Pushing data between GeoDin and GeoDin Onsite, or distributing a project list | [GeoDinML Export](export/geodinml-export.md) |
 | **PDF** | Static deliverables (reports, archives, attachments). Bulk PDF runs through the print/report system | [Bulk Print and PDF Export](../reporting/bulk-print-and-pdf-export.md) |
 
 ## Publish and Export

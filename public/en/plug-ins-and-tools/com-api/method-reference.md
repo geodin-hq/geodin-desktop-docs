@@ -1,9 +1,3 @@
-<!--
-**Content status:** Rebuilt from product help source (chapter 15 COM-API topics)
-**Source quality:** A (Faithful rebuild from clean source topics)
-**Needs:** needs screenshots, needs examples, editorial review
--->
-
 # Method Reference
 
 This page is the canonical reference for the GeoDin COM API. It describes the methods an external application can call to drive GeoDin (as a COM server) or to embed external functions into GeoDin as plug-ins. The reference is addressed to software developers who combine GeoDin with other products or integrate special functions into GeoDin. For each method the required GeoDin edition is noted.
