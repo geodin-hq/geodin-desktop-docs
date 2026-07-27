@@ -13,6 +13,17 @@ EPSG dictionary is stored as `G1_EPSG.GSD` in the syslib folder at `C:\ProgramDa
 In GeoDin Onsite, the local coordinate system is configured via EPSG code in the project settings and auto-filled into new forms as a default.
 
 {% hint style="info" %}
+<!-- src: help/H0000007499#google-maps-wgs84 -->
+**Working with Google Maps coordinates.** Google Maps always uses
+latitude/longitude data in the WGS84 coordinate system (EPSG:4326), so recorded
+coordinates have to be converted into it. To enter coordinates in that system,
+switch from **Projected systems** to **Geographic system** and use EPSG code
+4326. Note that the standard data-collection mask does not accept enough decimal
+places to hold an accurate latitude/longitude position - for precise work, keep
+the data in a projected system and convert on export.
+{% endhint %}
+
+{% hint style="info" %}
 <!-- src: transcript/state-plane-epsg#lookup -->
 The dictionary is keyed on numeric EPSG codes, so searching for a regional
 code name (for example a US state plane code like `MA83F`) returns nothing.
