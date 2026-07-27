@@ -60,7 +60,7 @@ For vector fill patterns you also select which fill pattern table the dialog dra
 
 ### Mixing vector fill patterns
 
-Select a fill pattern either by name in the list or from the fill pattern grid. To mix vector fill patterns, click one of the icons **1** to **4**, or the additional pattern. The ratio is calculated automatically in steps of 25%. For a ratio of 75% to 25%, choose fill pattern 1 and fill pattern 3.
+Select a fill pattern either by name in the list or from the fill pattern grid. To mix vector fill patterns, click one of the icons **1** to **4**, or the additional pattern; each selection contributes to the mix and GeoDin assigns the mixing ratio automatically in steps of 25%. In the legacy help's example, choosing fill pattern 1 and fill pattern 3 produces a 75% to 25% ratio.
 
 ## Symbols
 
@@ -70,13 +70,13 @@ Symbols live in symbol tables (`.SYA` source files, compiled to `.SYM`) and are 
 
 | Symbol table | Contents |
 |---|---|
-| `GEODEF` | The standard symbol table - the general-purpose symbol set. |
+| `GEODEF` | The standard symbol table - the general-purpose symbol set (distinct from the `GEODDEF` fill pattern table). |
 | `#Consistency` | Special symbols for consistency. |
 | `#Sampletypes` | Sample symbols, one per sample type. |
 | `#Groundwater` | Groundwater symbols. |
 
 {% hint style="info" %}
-For groundwater, the number of the graphic symbol is not the number that defines the graphic type in the dictionary. Groundwater symbols are used in several different standards (BS, DIN, OENORM, NEN), so the dictionary defines only the type of groundwater reading - the graphic that represents it differs per standard.
+For groundwater, the number of the graphic symbol is not the number that defines the graphic type in the [dictionary](dictionaries.md). Groundwater symbols are used in several different standards (BS, DIN, OENORM, NEN), so the dictionary defines only the type of groundwater reading - the graphic that represents it differs per standard.
 {% endhint %}
 
 ## Dictionary properties
