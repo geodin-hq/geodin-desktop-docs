@@ -34,6 +34,29 @@ things: the license file must grant **write permission** to every user, the
 `LicProtector313.dll` must be up to date on each client (or on the terminal
 server), and the license file must have been activated before first use.
 
+## No GeoDin dongle found - LicProtector313.dll not registered (until GeoDin 9.0)
+
+<!-- src: support/dongle-licprotector#fix -->
+
+This is legacy guidance for the dongle-based licensing used until GeoDin 9.0.
+It is a different problem from the network license `LicProtector313.dll`
+check above - that one covers an up-to-date DLL on a shared network license;
+this one covers a missing or unregistered DLL on a dongle installation.
+
+* Check whether `LicProtector313.dll` exists in the `BIN` folder of your
+  GeoDin installation.
+* If it exists, check the date of `geodin.exe`. If it is older than
+  2014-05-08, download the current program build for your GeoDin version from
+  the GeoDin download archive.
+* If `LicProtector313.dll` is missing, download it, unpack the archive, and
+  place the files in the `BIN` folder of your GeoDin installation.
+* If the DLL is present and `geodin.exe` is the newer build, run
+  `register_admin.cmd` in the `BIN` folder as administrator (right-click >
+  **Run as administrator**).
+* If that fails, copy both `LicProtector313.dll` and `register_admin.cmd` to
+  a local folder on the machine and run `register_admin.cmd` again from
+  there.
+
 ## GIS Extension functions are grayed out
 
 <!-- src: support/gis-extension-lizenz#scope -->
