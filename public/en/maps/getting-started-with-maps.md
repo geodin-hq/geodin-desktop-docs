@@ -124,6 +124,20 @@ In the next section, the project assignment for the new object is defined. There
 1. Manual assignment: simple selection of the project in which the object is to be saved later.
 2. Definition via a field of a map layer: the field must contain the PRJID (for this case, use the button **<...>** in field "Take from map" and select the corresponding field in the new window).
 
+## Protecting and backing up maps
+
+To let users work with prepared map templates without being able to save them over with changes (so the templates are never overwritten or deleted), there are two approaches:
+
+1. **Restrict write access (client/server databases only)** - grant users SELECT-only rights on the document tables, with no UPDATE rights, so map templates cannot be overwritten. This is not possible with MS Access databases (`*.mdb`, `*.accdb`).
+
+   {% hint style="warning" %}
+   Restricting write access this way affects **all document types**, not only maps - photos, reports, and every other document share the same underlying table, so removing update rights locks out changes to all of them.
+   {% endhint %}
+
+2. **Save the map as an external file (any database)** - select the map in the document management and use **Save document as** to save it as an external `*.GGM` file in a folder of your choice. If a map is later altered in a way that was not intended, the saved `*.GGM` file can be re-inserted as a document to restore the original version.
+
+<!-- src: support/maps-schuetzen#protect-and-backup -->
+
 ***
 
 ## Reference: Map Tools and Layer Properties

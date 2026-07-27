@@ -38,6 +38,8 @@
 * [Geotechnical Investigation EN ISO 22475](navigating-the-geodin-workspace/object-types/geotechnical-investigation-en-iso-22475.md)
   * [Versions 9.0.6 and 9.0.7 - General Adaptations](navigating-the-geodin-workspace/object-types/geotechnical-investigation-en-iso-22475/versions-9.0.6-and-9.0.7-general-adaptations.md)
   * [Versions 9.0.6 and 9.0.7 - Structural Changes](navigating-the-geodin-workspace/object-types/geotechnical-investigation-en-iso-22475/versions-9.0.6-and-9.0.7-structural-changes.md)
+* [Miscellaneous Object Types](navigating-the-geodin-workspace/object-types/miscellaneous-object-types.md)
+* [Remediation Projects](navigating-the-geodin-workspace/object-types/remediation-projects.md)
 
 ## Importing Data
 

@@ -319,6 +319,16 @@ To calculate the coordinates, click on the **Calculate** button. After convertin
 
 In the table/grid view of the master data, the \<Export> button is also available in the upper toolbar. This allows you to export the table to Excel in the form in which it is displayed.
 
+### Master data grid view
+
+Selecting a node, query, or group in the GeoDin object manager and starting **Data management** shows the master data of all objects belonging to that selection as a table (grid view), instead of the single-object editor.
+
+In the grid, use the field-selection button in the top left corner to choose which fields (columns) are displayed - tick or clear the checkbox for each field. This view can then be saved and recalled later.
+
+For exporting the grid contents to Excel, see [Export master data](object-operations-reference.md#general-data) above.
+
+<!-- src: support/stammdaten-datengitter#grid-view -->
+
 ### Sample data
 
 All sampling information is recorded in the sample editor.
