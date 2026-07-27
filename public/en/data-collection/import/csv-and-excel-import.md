@@ -39,3 +39,12 @@ The fastest way to prepare an import file with correctly-named columns is to exp
 - Any data table (general data, samples, measurement data) can be exported to Excel via the **red-dot export** button.
 - The tabular **All Objects** view under Data Management shows general data for all locations in a single sortable table - exporting this view gives a complete template for general-data imports.
 - Exported Excel files contain headers matching GeoDin's internal parameter names, ready for round-trip re-import.
+
+{% hint style="warning" %}
+<!-- src: transcript/batch-import-blank-values#mandatory-fields -->
+If imported values arrive blank or grayed out with no error message, a
+mandatory field is missing from the import file or the columns do not match
+the GeoDin table structure. Build the file from a GeoDin export of the same
+table (see above) so every required column is present - mandatory fields are
+the ones shown in a darker purple in the entry form.
+{% endhint %}

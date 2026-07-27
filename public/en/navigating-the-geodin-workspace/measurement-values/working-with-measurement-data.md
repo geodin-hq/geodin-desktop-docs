@@ -678,6 +678,15 @@ The button is not available on groups or queries for several measuring points, b
 
 Detailed information on the settings in the import dialogue can be found in the chapter [Import](../../data-collection/import.md).
 
+{% hint style="info" %}
+<!-- src: transcript/measurement-sample-matching#composite-identifier -->
+Imported measurement values are matched to their samples via a composite
+identifier: borehole, sample reference, and start/end depth together. If
+values do not attach to the expected samples, build that combined identifier
+column in your import file (for example in Excel) so it matches the samples
+exactly before importing.
+{% endhint %}
+
 ***
 
 ## Reference: Project and measurement-value tables
