@@ -1,3 +1,9 @@
+---
+description: >-
+  Set up the GeoDin Maps window: supported GIS file formats, adding map data,
+  navigating with the map toolbar, interpolating, printing, and labeling layers.
+---
+
 # Getting Started with Maps
 
 Maps can be edited in the **"Maps Modul"** window.
@@ -9,6 +15,25 @@ The window is divided into 4 areas:
 3. In the center, the map is displayed. Here, the different operations with the map data can be performed.
 4. On the right side, [Display for object data](digitizing-objects.md) details are displayed in predefined layouts.
 
+## Moving around the map window
+
+The toolbar at the top of the map window holds the tools you reach for most often:
+
+* **Save map** - saves the currently displayed map document.
+* **Zoom to full map** - shows the entire map in the editor window.
+* **Pan** - moves the visible region of the map without using the scroll bars at the side of the window.
+* **Zoom** - drag a rectangle from the upper left to the lower right corner to display that region at a larger scale; drag from the lower right to the upper left and the region is displayed at a smaller scale.
+* **Selection** - selects objects in the map so that operations can be run on them.
+* **Object data** - links a map object to its GeoDin data and layouts.
+
+{% hint style="success" %}
+The scroll wheel of the mouse zooms in and out at the cursor position whatever tool is currently active, so you never have to switch to the **Zoom** tool just to change the scale.
+{% endhint %}
+
+When a selection contains GeoDin objects, those objects also appear in the GeoDin Object Manager under the **Objects selection** branch - location objects under **GIS selections (locations)**, measurement point objects under **GIS selections (measurement points)**. The selection modes and the **Object data** options are described under [Selection and object data tools](#selection-and-object-data-tools).
+
+<!-- src: help/H0000005934#map-toolbar -->
+
 ## Preparing GIS data for GeoDin Maps
 
 GeoDin Maps shows GeoDin objects in a spatial context. Map information has to first be added to the GeoDin database using the integrated document management.
@@ -17,6 +42,35 @@ Geographic map information can be either grid (JPG, TIFF, ECW\*) or vector data 
 
 \
 &#xNAN;_**Note:**_ _ECW is a new highly efficient grid format._
+
+### Supported file formats
+
+The embedded GIS reads data in the following formats:
+
+| Data type | Formats |
+|---|---|
+| Raster (pixel) data | TIFF, JPG, ECW, IMG |
+| Vector data | SHP, DXF, CSV, MIF, KML |
+
+Shape files (`*.shp`) are in widespread use, and they are the format we recommend for vector data. DXF works too, but it is a CAD format: it carries information that a GIS does not use, and every DXF file has to be interpreted before it can be drawn in the map window. Converting large DXF files to Shape format before use can increase the display speed significantly.
+
+Depending on whether data is loaded straight out of the GeoDin database or through a link, stronger image compression may be needed. ECW gives good performance here - it was designed for use in GIS systems.
+
+{% hint style="warning" %}
+For copyright reasons the GeoDin team may not distribute the program libraries that ECW files need. Download the Erdas ECW/JP2 SDK from [Hexagon Geospatial](https://download.hexagongeospatial.com/downloads/ecw/erdas-ecwjp2-sdk-v54-update-1-for-windows); the package contains `NCScnet.dll`, `NCSEcw.dll`, `NCSEcwC.dll` and `NCSUtil.dll`. If another program that reads ECW files is already installed on the computer (ArcGIS, for example), those libraries are usually present already and can be used as they are.
+{% endhint %}
+
+CSV files must follow a fixed structure: the two coordinate columns first, then the attribute columns.
+
+```csv
+X,Y,FIELD_1,..,FIELD_N
+18.123,55.123,value1,..,value_n
+19.123,55.456,value1,..,value_n
+```
+
+Whichever format you use, GeoDin only loads GIS data into the map window once that data has been registered in the document management - either embedded in the database or linked to it. The two methods are described below.
+
+<!-- src: help/H0000005932#file-formats -->
 
 **Adding documents to the Document management**
 
@@ -42,6 +96,10 @@ Both user-defined and system queries can be shown in the map window. All the res
 
 Additionally specific layouts can be defined in the query for displaying the relevant data. Choose the button **Favourite layouts** to define which layouts are to be used for the query (these need to be multi object capable, e.g. time lines from several objects) or the results of the query (single object frame layouts).
 
+Favourite layouts also control which templates are offered in graphic printing and editing. By default all available layouts in the selected folders or layout lists are displayed there; naming favourites narrows that list to the ones that make sense for this query, so the layout overview leads straight to the display you want. Select a layout or a layout list with the **<...>** button in the input field - only `*.GLO` and `*.GLL` files can be chosen, not `*.GGF` or `*.GLC`. If you pick a layout list, choose the particular layout or report in the second input field. Where several layouts are defined, check **Select as start layout** on one of them and the layout overview opens with that layout by default.
+
+<!-- src: help/H0000007816#favourite-layouts -->
+
 ## Interpolation and contour lines from query result fields
 
 If a query includes numeric result fields (e.g. chloride concentrations, groundwater levels), GeoDin Maps can generate an interpolation grid from the object locations and attribute values.
@@ -52,6 +110,19 @@ If a query includes numeric result fields (e.g. chloride concentrations, groundw
 2. In the Maps module, add the query as a layer.
 3. Right-click the query layer in the Legend and choose **Interpolation** (German: _Interpolation_) from the actions menu.
 4. Configure the interpolation method and grid resolution, then run. A colour-coded interpolation grid layer is generated.
+
+The action is reached by right-clicking the layer and choosing **Actions** > **Interpolation...**. The window that opens lists the elements of the layer; pick the interpolation field first - the parameter the interpolation is to be based on - and its values appear straight away in the preview.
+
+**Interpolation methods:**
+
+* **Inverse distance weighting**
+* **Kriging**
+* **Spline**
+* **Heat-Map** - represents the number of objects in a given space, so it maps object density rather than an attribute value.
+
+**Area to interpolate:** a submenu defines how far the interpolation reaches - the entire map, the section currently visible in the window, or the complete extent of the input layer.
+
+<!-- src: help/H0000009015#methods-and-area -->
 
 **Generating contour lines:**
 
@@ -71,6 +142,17 @@ An OpenStreetMap (OSM) tile layer can be downloaded and cached locally for offli
 2. Navigate to the area of interest and set the desired zoom levels.
 3. Right-click the OSM layer in the Legend and choose the option to **cache tiles offline** (German: _Kacheln offline speichern_).
 4. GeoDin downloads and stores the tiles in a local cache. The map displays from the cache when no internet connection is available.
+
+**Saving a map section as an offline image**
+
+The **Offline OSM map** tool takes a different route to the same result: instead of caching tiles, it writes the chosen section of the OpenStreetMap data out as an image that the map can show with no network or internet connection.
+
+1. Check that a coordinate system is stored with the map - it is shown below the map section. This is a prerequisite for the tool.
+2. Start **Offline OSM map**. A new window opens with a preview of the map section.
+3. Define the area you want in the preview.
+4. Confirm, then save the section as a georeferenced `*.JPG` image and add it to the current map as a layer.
+
+<!-- src: help/H0000011141#offline-osm-map-tool -->
 
 ## Printing and exporting maps (Grafik bearbeiten)
 
@@ -92,6 +174,17 @@ The map print editor is the same layout editor used for borehole logs and cross-
 {% hint style="warning" %}
 Shape layers displayed in Maps must have their EPSG code set in **Display Options** (Darstellungsoptionen). Without a valid EPSG code, the layer will appear in the wrong location on the map.
 {% endhint %}
+
+### The Print map window
+
+**Print map** opens a window in which the map currently in use is prepared for printing. The available layouts are listed on the left, the settings for the selected layout sit below that list, and the selected print layout is shown on the right. Select a **Full map** or **Current map view** branch and thumbnail previews of the maps are shown.
+
+Two kinds of branch appear in the layout tree:
+
+* **Current map print templates** - the layouts that were created for use as map print layouts. You can build your own map print templates with elements such as a company logo and make them available in this branch.
+* **Page formats** - provided automatically by GeoDin and always available. GeoDin creates map layouts in the formats A4 to A0, in portrait and landscape, once under **Full map** and once under **Current map view**. The map or the current map view is placed automatically in the center of the page; no further elements are generated in these layouts.
+
+<!-- src: help/H0000007494#print-map-window -->
 
 ## Triangulate
 
@@ -142,6 +235,33 @@ To let users work with prepared map templates without being able to save them ov
 
 ## Reference: Map Tools and Layer Properties
 
+### Selection and object data tools
+
+Two tools on the map toolbar do more than change the view.
+
+**Selection** picks objects out of the map so that operations can be run on them. Its **Selection mode** setting decides what a click, or a dragged rectangle, does:
+
+| Selection mode | Effect |
+|---|---|
+| Create new selection | Each click or rectangle creates a new selection. Objects selected before are deselected, unless they are included in the new selection. |
+| Add to selection | The existing selection is kept and newly selected objects are added to it. Holding the \[Shift\] key while selecting has the same effect. |
+| Remove from selection | The selected objects are removed from the current selection. Holding the \[Shift\] key while clicking objects has the same effect. |
+
+**Set selection layer** limits how far the tool reaches:
+
+* **Top layer** - only objects from the top layer are selected.
+* **Active layer** - only objects from the layer marked as active in the Legend are selected.
+* **All layers** - objects from any layer are selected.
+
+**Object data** creates links to object data:
+
+* **Portal link** - links the selected object to a chosen portal layout, so its details are displayed on the right side of the map window.
+* **Data management** - starts data management for the current object.
+* **Edit graphic** - starts the graphics editor.
+* **Measurement data** - starts the measurement data method for the current object.
+
+<!-- src: help/H0000005934#selection-and-object-data -->
+
 ### Toolbar buttons
 
 **Select Layout** - Displays the available layouts for the layer shown in the map; choose a layout from the list to link the selected object(s) to it.
@@ -161,6 +281,15 @@ To let users work with prepared map templates without being able to save them ov
 **Hide object details** - Hides the object detail view, collapsing it to a slim bar on the right; click the bar or the arrow button to restore it.
 
 **Measure distance** - Activates a line-drawing tool that measures distances between user-set points; right-click to end. The unit system (map units, metric, or Anglo-American) is configurable in the distance settings.
+
+**More tools** - Opens a menu with the further tools available in GeoDin Maps: **Information**, **Measure distance**, **Attribute table**, **Load elevation data**, and **Search in polygons**.
+
+**Information** - Click an object in the map and a pop-up window shows that object's attribute values.
+
+**Attribute table** - Opens the attribute table of the layer, listing its records and fields.
+
+<!-- src: help/H0000008789#more-tools -->
+
 
 **Load elevation data (SRTM)** - Downloads SRTM elevation data from the internet for the currently visible map section, or uses cached data if available. The result can be saved as a grid file (`*.grd`) and added as a map layer.
 
@@ -213,6 +342,67 @@ The **Area** tab controls the visual appearance of polygon layers. Key propertie
 **Outline subtab** - Style, width, colour, bitmap, pattern, symbol (with gap/rotation), and Include in legend option for the polygon outline.
 
 **Smart size subtab** - Minimum polygon size factor below which it is not rendered; optionally driven by an attribute field.
+
+### Label layer tab
+
+The **Label** tab controls the text drawn for the features of a layer. Like the Line and Area tabs it is organized into subtabs. **Include in legend** (show the label symbol of the current section in the Legend panel) and **Visible** (draw the labels of the current section in the map area) are repeated on every subtab.
+
+**Label subtab** - Maximum label **Width** and **Height**, background **Color** (check **Use renderer** to take the global settings from the **Renderer** tab instead), a background **Bitmap** or **Pattern** in place of the color, and the label **Font**. Two properties decide what the label actually says:
+
+* **Field** - the attribute whose values are displayed as the labels.
+* **Value** - if this is not blank, a formatted combination of fixed text and attributes is displayed as the label instead of the attribute named in **Field**.
+
+**Outline subtab** - **Style**, **Width**, **Color** (each with a **Use renderer** option), **Bitmap** and **Pattern** of the outline drawn around the label.
+
+**Smart size subtab** - **Size** is the factor stating how big a shape must be at the current scale before its label is rendered at all; **Field** lets an attribute drive that size instead of a fixed factor.
+
+**Position subtab** - Placement is set with nine checkboxes, numbered like a keypad around the reference position:
+
+| Number | Position |
+|---|---|
+| 5 | The reference position itself - the shape centroid, or the optimal point inside the shape if the centroid falls outside it |
+| 1 / 2 / 3 | Top-left / over / top-right with respect to the reference |
+| 4 / 6 | Left-hand side / right-hand side of the reference |
+| 7 / 8 / 9 | Bottom-left / under / bottom-right with respect to the reference |
+
+The order in which the boxes are checked decides the position priority: when GeoDin Maps cannot put the label in one position, it tries the position with the next-lower priority. The remaining options on this subtab:
+
+* **Flow** - GeoDin Maps always tries to position the label in the optimal place.
+* **Alignment** - **Single line** displays only the first line of the label; **Left justify**, **Center** and **Right justify** align the text within the label extent; **Follow** displays only the first line, in the best place or, for line-type shapes, along the line.
+* **Avoid overlap** - labels never overlap each other.
+* **Avoid duplicates** - where more than one shape shares the value used in the label definition, only the label of the shape with the lowest `GIS_UID` value is displayed.
+* **Label Rotate** - rotation of the label in degrees.
+
+#### Formatting a Value expression
+
+The **Value** field takes a simple markup language, so a label can combine fixed text, visual formatting, and attribute values.
+
+Visual formatting uses a subset of the standard HTML markers: `<B>...</B>` (bold, also available as `<BOL>...</BOL>` for compatibility with other GIS products), `<I>...</I>` (italic), `<U>...</U>` (underline), `<STRONG>...</STRONG>` (extra bold), `<P>...</P>` (paragraph), `<HR>` (horizontal line) and `<BR>` (line break). `<FONT SIZE="S" NAME="F" COLOR="C">...</FONT>` sets size, font name (ARIAL, TIMES, TAHOMA and so on) and color - either a name (BLACK, BLUE, FUCHSIA, GRAY, GREEN, LIME, MAROON, NAVY, OLIVE, PURPLE, RED, SILVER, TEAL, WHITE, YELLOW) or an RGB value in `#RRGGBB` form. The entities `&amp;`, `&nbsp;`, `&gt;` and `&lt;` insert an ampersand, a forced space, and the greater-than and less-than signs.
+
+Attribute values are inserted with `{FIELD_NAME:FORMAT}`, where `FIELD_NAME` is the attribute and `FORMAT` is a format string specific to the attribute type. Omitting the format string displays the raw value.
+
+Number and float formats:
+
+| Character | Name | Description |
+|---|---|---|
+| `C` / `c` | Currency | The integer next to the character sets the number of most significant digits displayed. |
+| `D` / `d` | Decimal | Minimum number of digits; padded with zeroes if needed, non-integral values are rounded first. |
+| `E` / `e` | Scientific | Digits after the decimal point (default 2); always displayed in exponential form. |
+| `F` / `f` | Fixed-point | Digits after the decimal point (default 2). |
+| `G` / `g` | General | Best-suited form; the integer sets the number of significant digits. |
+| `N` / `n` | Number | Digits after the decimal point (default 2), with thousand separators from the system settings. |
+| `P` / `p` | Percent | The number is multiplied by 100; the integer sets the digits after the decimal point (default 2). |
+| `X` / `x` | Hexadecimal | Minimum number of hexadecimal digits, padded with zeroes; non-integral values are rounded first. |
+
+Numbers can also be formatted with a custom picture: `#` is an optional digit position (dropped when there is no digit for it), `0` is an obligatory digit position (filled with `0` when there is no digit), and `.` marks the decimal point. Any other character is displayed unchanged. The code `###.#` renders the value 57.28 as 57.3; the code `000.0` renders it as 057.3.
+
+Boolean attributes are displayed as `True` or `False`.
+
+Date formats use the usual placeholders, where repeating a character pads or expands the output: `d`, `dd`, `ddd` and `dddd` for the day (number, padded number, abbreviated and full weekday name), `M`, `MM`, `MMM` and `MMMM` for the month, `y` through `yyyy` for the year, `h`/`hh` for the 12-hour clock and `H`/`HH` for the 24-hour clock, `m`/`mm` for minutes, `s`/`ss` for seconds, and `t`/`tt` for the AM/PM string. Name and abbreviation forms follow the system regional settings; any other character is displayed unchanged.
+
+String formats combine a case character with optional position numbers: `$` displays the text unchanged, `S` in uppercase and `s` in lowercase. A number before the case character sets the first character to display and a number after it sets the last; negative numbers count from the end of the string. For the value `Abcdefghij`, `{FIELD_NAME:S}` gives `ABCDEFGHIJ`, `{FIELD_NAME:1S3}` gives `ABC`, `{FIELD_NAME:-3$-1}` gives `hij`, and `{FIELD_NAME:4$-4}` gives `defg`.
+
+<!-- src: help/H0000007902#label-tab -->
 
 ### Clipping
 
