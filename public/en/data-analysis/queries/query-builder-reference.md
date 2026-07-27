@@ -281,7 +281,7 @@ Here, the SQL command is displayed based on the current configuration of the que
 
 **Query type of an object frame query**
 
-When editing a [Object frame query](conditions-and-operators.md) you can choose between defining a structured template or an entire SQL statement. A SQL statement allows all possibilities of data selection (e.g. SELECT COUNT(Datafield) AS GCCOUNT FROM table), but is probably not executable in all database types. Generally a structured template is preferrable.
+When editing an [object frame query](../../data-visualization/layouts/object-frames.md#object-frame-queries) you can choose between defining a structured template or an entire SQL statement. A SQL statement allows all possibilities of data selection (e.g. SELECT COUNT(Datafield) AS GCCOUNT FROM table), but is probably not executable in all database types. Generally a structured template is preferrable.
 
 ### Link (FROM)
 

@@ -57,6 +57,18 @@ If this option is switched on, it is taken from the BLCODE field in the assigned
 
 If this option is switched off, the frames of the borehole including the signatures of the backfillings are omitted from the display.
 
+#### Making a backfilled pipe visible
+
+<!-- src: support/verfuellte-rohre#transparent-signature -->
+
+A pipe drawn with its default signature is opaque, so a backfill entered in the well design data is hidden behind the pipe rather than rendering through it. To make the backfill visible inside the pipe:
+
+1. Open the dictionary that contains the pipe types.
+2. Select the pipe type, then open its **Signature**.
+3. Check **transparent** (the fill pattern must be set to **Empty**).
+
+See [Editing fill patterns and symbols](../configuration/fill-patterns-and-symbols.md) for the mechanics of the Signature dialog. You can apply this to an existing pipe type or create a new one for it. Once the signature is transparent, enter the backfill in the well design data as usual - it now renders through the pipe.
+
 **Fill pattern line thickness**
 
 Select the line thickness of the shown fill patterns (only printout).

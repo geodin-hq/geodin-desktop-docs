@@ -60,3 +60,18 @@ An object frame can be converted to or from a multi-object frame. Select the fra
 {% hint style="warning" %}
 Some graphic elements - **well design**, **groundwater**, **special symbols**, and **samples** - can only be used in a single object frame, not in a multi-object frame. These elements are removed during conversion, and the confirmation window lists all removed elements. If the frame is linked to a dataset in the GeoDin Object Manager, the connection is also removed during conversion; re-establish the link by dragging the object onto the layout.
 {% endhint %}
+
+### Object frame queries
+
+<!-- src: support/objektrahmenabfrage#create -->
+
+An object frame query makes additional database content available to a layout, beyond the fields that are retrieved by default - including content that is not part of the standard GeoDin database structure. A query is saved inside the layout file (`.glo`) itself, so it travels with the layout.
+
+To create one:
+
+1. In **Object Properties** for the object frame, add a new query under the **Queries** node and give it a name.
+2. Define the GeoDin tables the query needs, and enter the resulting join as the **FROM** clause under **Configuration** (SQL knowledge is required for this step).
+3. Map the object-identification fields the query needs to resolve: **PRJ_ID** (project), **LOC_ID** (borehole), and, where relevant, **INVID** (measurement point).
+4. Use the query as the data source for a variable text element: select the element, and set the query as its data source, then build the label instruction from the fields the query now exposes.
+
+An object frame can hold multiple queries, and each element inside the frame can use a different one. For the query syntax itself, see [Query builder reference](../../data-analysis/queries/query-builder-reference.md).

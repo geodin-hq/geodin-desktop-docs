@@ -16,6 +16,20 @@ Once downloaded, start the installation by double-clicking on the file `geodin-s
 
 ![Start installation](<../../.gitbook/assets/1_Screen (3).jpg>)
 
+## Compatibility notes before you upgrade
+
+Check whether either of these situations applies to your database before you start the upgrade.
+
+{% hint style="warning" %}
+**UniqueLocationID databases are not supported from GeoDin 10 onward.** If your database does not use the classic GeoDin project structure, contact [support@geodin.com](mailto:support@geodin.com) BEFORE upgrading. See [Databases without a project structure will not open in GeoDin 10](../troubleshooting/database-connections.md#databases-without-a-project-structure-will-not-open-in-geodin-10) for what to check.
+{% endhint %}
+
+{% hint style="warning" %}
+**The 9998-objects-per-project limit was removed in GeoDin 10, but there is no way back down.** Once a project grows past 9998 objects, its database receives a version stamp that older GeoDin versions cannot read. A database that has crossed this threshold can no longer be opened with an older GeoDin version - plan accordingly if you share databases with sites still running an older version.
+{% endhint %}
+
+<!-- src: support/upgrade-geodin-10#compatibility-caveats -->
+
 ## 1. Licence agreement
 
 Please read the licence agreement carefully and proceed by accepting it.
