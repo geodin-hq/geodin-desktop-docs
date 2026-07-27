@@ -1,10 +1,10 @@
 ---
-description: Reference for diagram, chart, and drawing-layer display properties used in GeoDin site-plan and layout graphics
+description: Reference for diagram, chart, and drawing-layer display properties - and the pre-/post-selection data filtering used by measurement-value presentations
 ---
 
 # Diagram and Chart Properties
 
-This page documents the display properties available for diagram and chart graphic elements used in GeoDin site-plan layouts and print graphics. For constructing site plans - scenarios, scenes, object selection, and scales - see [Creating Site Plans](site-plans/creating-site-plans.md).
+This page documents the display properties available for diagram and chart graphic elements used in GeoDin site-plan layouts and print graphics, and is the reference for the pre-/post-selection data filtering those presentations use. For constructing site plans - scenarios, scenes, object selection, and scales - see [Creating Site Plans](site-plans/creating-site-plans.md).
 
 ***
 
