@@ -59,6 +59,24 @@ The **Variable Text element** displays dynamic content resolved from the GeoDin 
 
 Macro syntax - delimiters (`$...$`), concatenation, conditional separators (`[...]`), and the full list of available parameters - is documented in [Text Macros in Reports](../../reporting/text-macros-in-reports.md).
 
+## Reference: System variables and empty values
+
+<!-- src: help/H0000002267#system-variables -->
+
+Besides the general data variables, a variable text element can use **system variables**, which describe the output rather than the object. System variables always start with a percent symbol and are listed alongside the other variables in the **Build** dialog; which of them are available depends on the object type in use.
+
+| Variable | Content |
+|---|---|
+| `%VERSCALE` | Currently selected vertical scale |
+| `%DATE` | Current system date |
+| `%FILE` | Current file name |
+
+(These are layout output variables. The `%`-prefixed variables used to assemble layer descriptions from dictionary key groups are a separate set - see [Object Operations Reference](../../navigating-the-geodin-workspace/object-types/object-operations-reference.md).)
+
+<!-- src: help/H0000002267#empty-value-placeholder -->
+
+**Empty macro values:** A variable only resolves when the object is linked to the object frame. Where the text stays empty because the general data is missing, a question mark is written at that position. The question mark is a preview placeholder only - it marks the spot in the graphic preview and is not printed in the output.
+
 ## Reference: Fill Color and Transparency
 
 ### Color / Transparency
