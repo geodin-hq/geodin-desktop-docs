@@ -1,3 +1,9 @@
+---
+description: >-
+  GeoDin dictionaries - controlled code lists, refresh and standards, plus the
+  code-transformation, publications, and configuration-comparison references.
+---
+
 # Dictionaries
 
 Dictionaries are the controlled code lists behind GeoDin's input fields. This page covers where they live in the system configuration, how they behave, how updates are applied, and the reference details for the related comparison, transformation, and configuration-comparison tools.
@@ -44,9 +50,9 @@ There are various options for adapting existing databases in your table structur
 
 **2. Run a publication to customize standard object types** *(only Access databases tested so far)*
 
-2.1 Download the required **Publications** (\<standard object types\> or \<MP surface water\>) and save the \*.GPC file in the CONFIG folder of your GeoDin installation.\
+2.1 Download the required **Publications** (\<standard object types\> or \<MP surface water\>) and save the \*.GPC file in the CONFIG folder of your GeoDin installation (see [Reference: Publications](#reference-publications)).\
 2.2 Open and select the relevant database in GeoDin.\
-2.3 Now start the method **\"Publish and Export\"**, select the corresponding publication and execute it.
+2.3 Now start the method **\"Publish and Export\"** (see [Reference: Publications](#reference-publications)), select the corresponding publication and execute it.
 
 The object types that can be updated using the publication \"Update standard object types_in_Access-DB\_\" are the following:
 
@@ -321,4 +327,4 @@ Use **Display options** to filter the view. The **Details** buttons in the centr
 
 The **"Compare system queries"** method compares the system queries of your GeoDin installation with those in any other directory, so you can adopt and transfer changes between them. The left side shows the system queries of your installation (the QUERYDEF folder); the right side shows the system queries of the directory you choose. Both sides may contain sub-folders, which are included in the comparison. Changes are saved with **OK**.
 
-The comparison window itself, its colour coding, and the transfer buttons work as described in Reference: Compare elements above. For the queries themselves, see [Query builder reference](../data-analysis/queries/query-builder-reference.md).
+The comparison window itself, its colour coding, and the transfer buttons work as described in [Reference: Compare elements](#reference-compare-elements) above. For the queries themselves, see [Query builder reference](../data-analysis/queries/query-builder-reference.md).
