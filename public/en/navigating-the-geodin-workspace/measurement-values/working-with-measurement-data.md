@@ -97,6 +97,43 @@ Reference to the result
 
 Interpretation of the measured value
 
+### Managing investigation methods
+
+<!-- src: help/H0000008107#investigation-method-administration -->
+
+Every measurement value is produced by a particular method, and the same parameter can often be determined in more than one way. Recording which laboratory method produced a value is what makes its accuracy and reasonability judgeable later. The **Investigation methods** list is data-type comprehensive: it is maintained once, on the system page under data types, and is then offered wherever a method has to be chosen during data entry.
+
+Any number of methods can be defined. The list shows them by name, and the buttons to the right of the list manage it:
+
+| Button | What it does |
+|---|---|
+| **Add new element** | Appends a new entry at the end of the list. |
+| **Insert new element** | Inserts a new entry directly **above** the entry currently marked in the list. |
+| **Delete element** | Removes the selected entry from the list. |
+| **Move selected entry up** | Moves the selected entry one position up. Drag and drop does the same. |
+| **Move selected entry down** | Moves the selected entry one position down. Drag and drop does the same. |
+| **Import...** | Imports a list of investigation methods from an MS Excel file. |
+| **Export...** | Exports all investigation methods with their data to an Excel table (`*.xls`, `*.xlsx`). |
+
+Double-clicking an entry closes the list and opens that method's properties for editing.
+
+{% hint style="danger" %}
+**Import overwrites everything.** Importing a list of investigation methods replaces **all** existing entries in GeoDin - it is not a merge. Export the current list first, both as a backup and to see the exact format the import expects.
+{% endhint %}
+
+**Properties of an investigation method**
+
+| Field | Content |
+|---|---|
+| **Method name** | The name of the method. It must be unique and is what users see during data entry - for example `AAS - arsenic - hydride method`. |
+| **Number** | The numeric key stored in the database. It must be unique within the list of investigation methods. |
+| **DIN-Norm** | Designation according to DIN, for example `DIN 38 405-D18`. |
+| **Euro-Norm** | Designation according to the EU norm, for example `EN ISO 11969 : 1996`. |
+| **ISO-Norm** | Designation according to the ISO standard, for example `ISO 11969 : 1996`. |
+| **Remark** | Free text description. |
+
+One investigation method can carry designations under all three norms at once.
+
 ## Location point link
 
 Each data set is internally linked to a measurement point. This classification relationship can be changed in the measurement editor. If opened by clicking the icon, a list of all objects in the current group or query is shown.
@@ -118,6 +155,30 @@ _**Attention:**_ _If parameters are present in several data sets with different 
 ## Measurement value editor options
 
 On several tabs there are options to control the way you use the measurement value editor.
+
+### Adding a data set with a code scanner
+
+<!-- src: help/H0000010875#code-scanner-configuration -->
+
+One of the editor options turns on code-scanner input. With it active, an extra button appears in the measurement value editor that creates a new data record from a scanned barcode or QR code - useful when samples or measuring points already carry printed labels.
+
+**Configuring the option**
+
+- **Target field** - the field within the data type that the scanned code is written into.
+- **Focus input field** - where the cursor is placed after the record has been created. By default the new record counts as *not completed*: if no further entry is made, or you press **ESC**, the insertion is undone. Choosing **-Finish dataset-** instead marks the record as complete immediately, which is what you want when formulas already fill every mandatory field and you are scanning many records one after another.
+- **Formulas** - any number of formulas can be defined in this branch. They run directly after the new record is created and are used to preset or calculate further data fields in it.
+
+The scanner itself must be configured to send **Enter** or **Tab** as the suffix character; without a suffix GeoDin does not know the code is complete.
+
+**Scanning during data entry**
+
+In the measurement value editor, start the scan request with the scanner button or the **F8** key. Once the code is captured, a new data record is created - in the simplest case containing nothing but the scanned string in the target field.
+
+{% hint style="warning" %}
+The code-scanner function is only available when a **single** measuring point is marked in the GeoDin object manager.
+{% endhint %}
+
+After the entry is confirmed with **ENTER**, or when you leave the input field, the content is locked and cannot be edited in place. To change it, delete the whole field content with **DELETE (DEL)** first - the input field is emptied completely, and only then can it be filled again.
 
 ***
 
@@ -510,6 +571,23 @@ A **Measurement Program** is a named, saved selection of parameters within a dat
 
 Measurement Programs are created and managed in the system configuration (System > Data Types > edit the data type group). Once saved, they appear in the **Measurement programs** drop-down in the **Add data type** dialog and in the measurement value editor for filtering the displayed parameters.
 
+<!-- src: help/H0000008062#measurement-program-editor -->
+
+There is no limit to the number of measurement programs that can be defined for one data type, and two programs may contain similar or completely different parameter sets. In the measurement value editor, the selected program filters the parameters shown in the input table; the option **Show chemical groups** can be switched on or off independently.
+
+**Buttons in the measurement program editor**
+
+| Button | What it does |
+|---|---|
+| **Add** | Adds a new, empty measurement program to the data type. |
+| **Copy** | Copies the selected measurement program including all of its parameters - the quickest way to build a variant of an existing program. |
+| **Delete** | Deletes the selected measurement program. |
+| **Sort** | Moves the selected measurement program within the list, which controls the order the programs are offered in. |
+| **Export** | Writes **all** measurement programs of the data type to a text file. |
+| **Import** | Adds all measurement programs contained in a text file to the data type. |
+
+Export and Import always work on the complete set of programs, so they are the practical way to carry a data type's measurement programs from one GeoDin installation to another: export on the source system, import on the target.
+
 ### Data type settings
 
 Here you can edit the data type properties of a database.
@@ -541,6 +619,30 @@ Object; A measurement point of this type is generated when an object is created 
 Sample; A measurement point of this type is generated when a data record for an object is created in the sample table.
 
 Filter; A measurement point of this type is generated when a filter is created in the well design table of an object.
+
+#### Data type properties on the system page
+
+<!-- src: help/H0000008083#system-template-properties -->
+
+The **Properties** method on the system page edits the properties of a data type that exists in the system. These properties act as a **template**: they are applied when a data type is newly created in a project or database.
+
+{% hint style="warning" %}
+Settings made on the system page have no effect on data types that are already in use in a database or project. They take effect only the next time the data type is created.
+{% endhint %}
+
+- **Data type** - the data type name. It can be edited but must be unique within GeoDin.
+- **Short name** - the identification property. It cannot be changed.
+- **Shortcut** - a key assignment used in the Measurement Editor to switch quickly between data types. Give the data types you work with side by side distinct shortcuts.
+
+**Identification fields.** Besides the *without sample name*, *without date* and *without time* options described above, a data type can be managed with a **Timestamp** - a combined date and time value accurate to one second. The timestamp is stored in the `SMPDATE` field, and `SMPTIME` is left empty in this case.
+
+{% hint style="danger" %}
+The identification-field options must be chosen **before** the data type is created or registered in a database. They cannot be changed afterwards - a data type already present in a database keeps the identification model it was created with.
+{% endhint %}
+
+{% hint style="info" %}
+Timestamps in PostgreSQL and MySQL databases are only possible over **FireDAC** connections. OLE-DB does not support the time portion in these databases, so a timestamp data type cannot be used there.
+{% endhint %}
 
 ## Import
 

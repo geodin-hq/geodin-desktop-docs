@@ -59,6 +59,8 @@ In organizations with a central GeoDin installation (e.g. accessed via Remote De
 If a user creates a user database connection and then another user needs to access the same database, that second user must also create their own connection - or the IT administrator must add the database as a system database.
 {% endhint %}
 
+**How the administrator adds one.** System database connections are created on the system page, not in the object manager: the **Create database connection** method there asks for a display name and then opens the same connection editor used for user databases. An **Import** method migrates connections from a legacy `GEODIN.INI`. Both are described in [Connecting to a Database > System databases](connecting-to-a-database.md), which is the reference for how `*.CON` files are named, distributed, and made available to users.
+
 ## Migrating an Access database to PostgreSQL using Copy All Projects
 
 The **Copy All Projects** method (available at the database level) is the recommended way to migrate an entire Access (`.accdb`) database into a PostgreSQL database. It creates a 1:1 copy of all projects while preserving project IDs and all data.
@@ -75,6 +77,10 @@ After the copy completes, both databases are closed automatically. Open only one
 ***
 
 ## Configuration
+
+{% hint style="warning" %}
+**System database connections are no longer defined in `GeoDin.INI`.** Since GeoDin 9.0, a system database connection is stored as a `*.CON` file in the `CONFIG` folder of the installation and is created on the system page - connections still written in a `GeoDin.INI` `[SystemDataBases]` section are not displayed in the GeoDin object manager. Migrate them with the **Import** method described in [Connecting to a Database](connecting-to-a-database.md). The `GeoDin.INI` keys documented below (`UserADODataBases`, `[DBCreateList]`, `[SystemDataBasesGroups]`) continue to control how the object manager behaves; only the connection definitions themselves have moved out of the INI file.
+{% endhint %}
 
 Display of database connections in theGeoDinobject manager
 

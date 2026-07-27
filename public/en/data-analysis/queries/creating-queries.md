@@ -102,7 +102,9 @@ Queries on the **Measurement Points** branch of a project return measurement poi
 
 To define your own queries (e.g. "boreholes deeper than 9 m") a query wizard is available.
 
-The query wizard is able to create queries up to a certain degree of complexity. For highly complex queries it is possible to enter [Alternative SQL-Command](sql-and-advanced-options.md) in the query wizard or to create [System queries](creating-queries.md) (On the system-side of GeoDin).
+The query wizard is able to create queries up to a certain degree of complexity. For highly complex queries it is possible to enter [Alternative SQL-Command](sql-and-advanced-options.md) in the query wizard or to create [system queries](query-builder-reference.md#working-with-system-queries) on the system side of GeoDin.
+
+**User query or system query?** A query built with the wizard as described below is a **user query**: its definition is stored in the project or database it was created in, and it exists only there. A **system query** is stored as a separate `.GSQ` file in the installation's `QUERYDEF` folder instead, so it appears automatically in every database and project and can be handed to other users as a file. Choose a system query when the same query is needed across databases, when you want to change the structure of the object manager itself, or when you are preparing a ready-made template for colleagues who should not have to know the GeoDin table structure. See [Query Builder Reference > Working with system queries](query-builder-reference.md#working-with-system-queries) for what system queries can do, how the `QUERYDEF` folder is organized into sub-folders, and how to refresh the object manager after changing it.
 
 A query is made up of an unlimited number of sub-queries. When an object fulfils a sub-query condition it is included in the query result.
 
