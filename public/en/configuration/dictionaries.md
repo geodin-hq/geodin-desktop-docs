@@ -183,6 +183,49 @@ Fig. 2 - Display of the signature in accordance with DIN, labelling in English
 
 Fig. 3 - Representation of the signature in accordance with British Standards, labelling in English
 
+## Working with dictionaries in practice
+
+<!-- src: transcript/dictionaries-validation#practice -->
+
+* Some dictionaries are **context-sensitive** - for example, the secondary
+  soil type list is restricted by the primary ground type selected.
+* Some dictionary-backed fields also allow free-text entry; free text does
+  **not** add the value to the dictionary.
+* When you edit a dictionary, a timestamp is recorded and that dictionary
+  becomes **frozen**: GeoDin releases will not overwrite it, preserving your
+  additions. Keep a list of the dictionaries you have edited so you can
+  request updates from support when needed.
+* Low-risk dictionaries (client lists, lab names) can be edited freely;
+  higher-risk ones (soil types, fill patterns) deserve more care, because a
+  missed update can matter.
+* Dictionary files live per installation - users on a shared network install
+  share the same files. When sending data to a recipient without your custom
+  dictionaries, also send the `.GSD` files or the full syslib folder.
+
+## Custom data types and validation
+
+<!-- src: transcript/dictionaries-validation#custom-data-types -->
+
+Custom data types extend the delivered structures and enforce required
+entries:
+
+* Create them via **System** > **Data Types** > **New Data Type**. They live
+  in your syslib, are shared by users on the same syslib, and are **not**
+  overwritten by GeoDin distribution updates. Centrally distributed tables
+  cannot be edited.
+* Each needs a unique three-character short name that does not clash with
+  system data types (support can provide the reserved list); choose parameter
+  names that do not collide with other tables.
+* Custom data types support parameter names, formulas in GeoDin's own syntax,
+  and validations (possibility checks), and can be used in batch imports and
+  templates like any built-in type.
+* Formula-calculated cells display in darker blue; each parameter has a long
+  name and a short database field name (toggle via right-click > **short
+  field name**).
+* Mandatory (compulsory) fields appear in darker purple and block saving when
+  empty - see [Borehole and location model](../navigating-the-geodin-workspace/concepts/borehole-and-location-model.md).
+* External users may not have permission to modify system data types.
+
 ***
 
 ## Reference: Comparison lists

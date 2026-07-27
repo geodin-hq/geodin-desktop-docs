@@ -1,0 +1,8 @@
+public/en/SUMMARY.md
+public/en/documentation/first-steps.md
+public/en/data-collection/supported-formats.md
+public/en/data-collection/import/cross-database-object-copying.md
+public/en/plug-ins-and-tools/introduction/convert-gint-databases-to-geodinml.md
+public/en/plug-ins-and-tools/introduction.md
+public/en/support/glossary.md
+public/en/navigating-the-geodin-workspace/concepts/object-types.md

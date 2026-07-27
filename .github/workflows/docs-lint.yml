@@ -62,3 +62,9 @@ jobs:
         # second net behind the src:-anchored duplication check).
         continue-on-error: true
         run: python3 scripts/check-text-similarity.py public/en
+
+      - name: Check editorial policy (names, pricing, competitors)
+        # Informational: greppable editorial-policy rules with judgment
+        # exemption lists (frozen paths, RX-gint allowlist).
+        continue-on-error: true
+        run: bash scripts/check-editorial-policy.sh public/en

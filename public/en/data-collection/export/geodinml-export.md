@@ -4,7 +4,7 @@ description: Exporting GeoDinML files from GeoDin and GeoDin Onsite
 
 # GeoDinML Export
 
-**GeoDinML** is GeoDin's structured data exchange format. It is the bridge between GeoDin Onsite (field) and GeoDin (office), and it is also the way to push a centralized project list to field users.
+**GeoDinML** is GeoDin's structured data exchange format - what it is and how the field-to-office bridge works is defined on [GeoDinML Import](../import/geodin-ml-import.md), its canonical page.
 
 This page covers the **export** side - generating GeoDinML files from Desktop and Onsite. For what to do with the file on the receiving end, the round-trip workflow, and which Onsite forms can produce GeoDinML, see [GeoDinML Import](../import/geodin-ml-import.md).
 
