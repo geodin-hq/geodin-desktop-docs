@@ -79,6 +79,32 @@ Selecting a link below the **portal links** node opens the properties dialogue f
 
 To set the target of a portal link of type **Go to URL**: select the **portal links** node in the element properties tree, set the type to **"Go to URL"**, then at the **Go to URL** node enter the target as free text or choose it from a frame query.
 
+**Go to portal page target**
+
+<!-- src: help/H0000006987#call-portal-page -->
+
+A link of type **Call portal page** jumps from the current layout to a target layout. Select the **Call portal page** node below the link: when the source layout is connected to a database, every GeoDin portal layout reachable from the start layout is listed under **Available layouts**. Pick the target and confirm with **OK** - the selected layout then acts as the target layout.
+
+{% hint style="info" %}
+A newly created layout must be saved before it can be selected, and the layouts have to be in the same directory to appear in the list.
+{% endhint %}
+
+Activate the **[return image only]** checkbox at the **Call portal page** node to return the target layout's image as a graphic instead of performing the jump - useful for embedding it as an information window or placing it in an HTML document in place of a wildcard. A jump to a portal layout from a single object frame requires an Object ID: add an entry at the **Object-ID's** node and select the ID to transfer. Queries and layout interfaces can be defined in addition and passed to the target layout.
+
+*Example:* create a variable text element to call a portal layout, then in its object properties select **Properties** > **Portal links**, add an entry with the blue **+**, and name it (for example `hydraulic head`). Below that entry, select **Portal link** and choose the type **Call portal page**. At the new **Call portal page** node, select the target layout from **Available layouts** and confirm with **OK**. Finally, add an entry under **Object-ID's** and select the ID to transfer.
+
+**Preparing a layout for portal use**
+
+<!-- src: help/H0000007066#portal-preparation -->
+
+A standard graphic offers no portal function. Switch on **Activate portal function** in the graphic's extended properties: a **Portal properties** branch appears, and the **Variable text** and **Variable image** elements gain the option of setting up portal links. Layouts recognized as portal layouts are marked with a colored symbol in the layout list tree, and in edit mode a jump can be performed with `AltGr` + left mouse button.
+
+<!-- src: help/H0000007066#object-id-transfer -->
+
+A single object frame presents one object - either a GeoDin object or a measuring point - and always refers to an `INVID`. For an object, `PRJ_ID` and `LOCID` are extracted from the `INVID` and used as identifiers in the called query; for a measuring point, the `INVID` itself has to be transmitted. Multi object frames transfer no object IDs at all.
+
+For the query side of this exchange - which result fields the called layout must declare, how the restriction is appended to the SQL statement, and the `%INVID` / `%PRJID` / `%LOCID` placeholders for alternative SQL - see [Portal properties](../../data-analysis/queries/query-builder-reference.md#portal-properties) in the query builder reference.
+
 ### Using a site plan in the layout overview
 
 <!-- src: support/lageplan-layoutuebersicht#gom-selection -->
@@ -240,3 +266,17 @@ This setting is only active when the report width is not fixed and coulmns are e
 This setting is only available when the report data overflows one page. The default orientation setting is top.
 
 _**Note:**_ _Both settings are independant from element anchors, since they are only releated to their respective element container._
+
+**Options per column**
+
+<!-- src: help/H0000010887#column-options -->
+
+Each column has its own **Options** branch controlling how repeated or empty content is handled:
+
+| Option | Effect |
+|---|---|
+| **Remove empty column** | Removes the column when it is empty. A standard value can be declared as the content that counts as empty. |
+| **Remove identical content in following rows** | Leaves out the cell content in following rows when it matches the cell above. The additional option **-Also remove lines inbetween-** hides the horizontal lines between the cells with identical content. |
+| **Adopt intermediate lines from other columns** | Bases the line separation of this column on another specified column. A column cannot refer to itself or form circular references; if a change of column order creates one, it is flagged as a warning here. Warnings are ignored for the display. |
+| **Remove identical content between lines** | Where lines are separated by another column, content blocks are formed - this option removes identical content within those blocks. |
+| **Calculations in footers** | Calculates statistical data from the current column for use in the report footers. |
