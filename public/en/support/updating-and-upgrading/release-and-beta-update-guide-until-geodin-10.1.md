@@ -13,6 +13,10 @@ description: >-
 * Navigate to the **System** tab at the top left of the GeoDin user interface.
 * Start the **Online-Update** method under the **System Configuration** node.
 
+<!-- src: help/H0000007202#online-update-download-and-backup -->
+
+The online update downloads about 15 MB into `...\GeoDinFolder\Update`. While the files are replaced, GeoDin creates a backup directory `...\GeoDinFolder\Backup_<timestamp>` and stores every replaced file there, so the online update needs no manual backup step of its own.
+
 **Manual Update for GeoDin 15**
 
 * Contact  [support@geodin.com](mailto:support@geodin.com) for assistance.
