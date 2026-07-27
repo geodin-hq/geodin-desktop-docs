@@ -259,6 +259,21 @@ When exporting dictionary-coded data to XML, field codes can be transformed to t
 - **Field name (target code)** - Column containing the target codes.
 - **Field name (list name)** - Column identifying which code list the mapping belongs to, used as a node restriction during export configuration.
 
+**Without code transformation:**
+
+<!-- src: help/H0000005591#without-code-transformation -->
+
+With this option the XML element is described directly, without a source/target code mapping. The element retrieves its data from GeoDin tables or from calculated variables:
+
+- **Macro** - A text macro, using the same labeling instructions as graphic elements, supplies the element value. Examples: `{$SHORTNAME$}` and `{$SHORTNAME$|$LONGNAME$}`.
+- **Condition** - An optional boolean expression that decides whether the element is exported. Comparisons against text strings must be enclosed in single quotes. Examples: `$ZCOORDE$>100` and `'$SHORTNAME$'<>''`.
+
+**Single condition:**
+
+<!-- src: help/H0000005606#single-condition -->
+
+A single condition selects a group of dictionary codes and maps them all to one XML output code. Wildcards are supported: entering `*Am%` matches every code starting with `*Am`, because the percent sign allows any further characters. Click the `<%>` icon to the right of the condition to list the codes it affects - in this example `*Am` (Amphibolite), `*Amo` (Ortho-Amphibolite), and `*Amp` (Para-Amphibolite). Assigning the XML output code `Amp` to the condition exports all three source codes as `Amp`.
+
 ## Reference: Linked additional information
 
 Each dictionary key can link to external information via a web service URL. The link is composed of a **base URL** (defined on the dictionary) and an auto-generated parameter block specifying the dictionary name and key code. Linked information appears as a clickable link in the Dictionary Search dialog.
@@ -274,6 +289,18 @@ This transformation searches for a common superior node in a hierarchical (tree-
 - **Dictionary** - Select a tree-structured dictionary whose hierarchy is used to find superior terms.
 - **Code list** - An optional code list to translate individual components before the hierarchy lookup.
 
+## Reference: Publications
+
+<!-- src: help/H0000010611#publications -->
+
+Publications are configurable processes that make data from a GeoDin database available in a different compilation or structure, for use by other software. A publication is based on SQL commands run against the current database, comparable to a SQL script, and can additionally use publication elements that provide special data availability.
+
+Publication definitions are stored as configuration files with the extension `.GPC` in the CONFIG folder of the GeoDin installation. The system configuration provides the basic methods **"New publication"**, **"Delete publication"**, and **"Edit publication"** for creating, deleting, and editing those definitions.
+
+The actual work a publication performs is defined by its collection of publication elements. At least one element must be defined for each publication.
+
+Each publication carries requirements that control where it becomes available. Depending on the requirements specified, the publication later appears at various objects in the object manager (for example database or project). When every requirement of a publication is met by the object currently selected in the object manager, the publication is offered in the **"Publish and Export"** method and the user can run it at any time. For an example of running a downloaded publication, see [Object operations reference](../navigating-the-geodin-workspace/object-types/object-operations-reference.md).
+
 ## Reference: Compare elements
 
 The comparison window shows differences between two versions of a configuration item (e.g. a data type formula vs. an import file's formula). The left side shows the target, the right side the source. Items are colour-coded:
@@ -286,3 +313,12 @@ The comparison window shows differences between two versions of a configuration 
 | **Grey** | Item is absent on this side |
 
 Use **Display options** to filter the view. The **Details** buttons in the centre column reveal property-level differences (shown in red). The **Apply** area provides buttons to transfer source properties to the target or delete extra target items.
+
+## Reference: Compare system queries
+
+<!-- src: help/H0000009038#compare-system-queries -->
+<!-- src: help/H0000011496#compare-system-queries -->
+
+The **"Compare system queries"** method compares the system queries of your GeoDin installation with those in any other directory, so you can adopt and transfer changes between them. The left side shows the system queries of your installation (the QUERYDEF folder); the right side shows the system queries of the directory you choose. Both sides may contain sub-folders, which are included in the comparison. Changes are saved with **OK**.
+
+The comparison window itself, its colour coding, and the transfer buttons work as described in Reference: Compare elements above. For the queries themselves, see [Query builder reference](../data-analysis/queries/query-builder-reference.md).
