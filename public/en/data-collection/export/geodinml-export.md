@@ -38,7 +38,7 @@ GeoDinML is the only server-less way to push a project list from Desktop to fiel
 
 <!-- src: help/H0000005510#xml-templates-list -->
 
-XML templates are held in an **XML templates** list in the GeoDin configuration. Each template in the list appears by its name in the tree on the left, and every template carries its own settings, its own element structure, and optionally its own code list database. Templates are added, duplicated, deleted, and reordered with the standard list toolbar described under [Managing condition lists](../export.md).
+XML templates are held in an **XML templates** list in the GeoDin configuration. Each template in the list appears by its name in the tree on the left, and every template carries its own settings, its own element structure, and optionally its own code list database. Templates are added, duplicated, deleted, and reordered with the standard list toolbar described under [Managing condition lists](../export.md#reference-presentation-conditions).
 
 Once defined, a template is offered as one of the available formats when a user runs the **XML export** method from the GeoDin object manager - see [XML export](../../navigating-the-geodin-workspace/object-types/object-operations-reference.md#xml-export). During an export, one XML document is created per exported GeoDin object, based on the selected template.
 
@@ -108,7 +108,7 @@ An element can have any number of sub-elements. Add them as further entries in t
 
 <!-- src: help/H0000005554#attribute-list -->
 
-Any number of XML attributes can be defined on an element. Attributes are maintained as a list on the element and use the same list toolbar as every other GeoDin list - see [Managing condition lists](../export.md).
+Any number of XML attributes can be defined on an element. Attributes are maintained as a list on the element and use the same list toolbar as every other GeoDin list - see [Managing condition lists](../export.md#reference-presentation-conditions).
 
 ### Transformations
 

@@ -1881,7 +1881,7 @@ The XML files created during the export are exported to the specified directory.
 
 For each GeoDin object, an XML file is created which is named with the name of the object.
 
-Detailed information about configuring an XML export template can be found in the chapter [Settings for XML templates](../../data-collection/export/geodinml-export.md)
+Detailed information about configuring an XML export template can be found in the chapter [Settings for XML templates](../../data-collection/export/geodinml-export.md#template-settings)
 
 The settings of the export dialogue can also be defined by an export configuration file (\*.INI).
 
