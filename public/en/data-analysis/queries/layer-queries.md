@@ -1,3 +1,9 @@
+---
+description: >-
+  Reference for GeoDin layer queries - single conditions, codes and wildcards,
+  GLQ definitions, layer classification syntax, sequences, and processing options.
+---
+
 # Layer Queries
 
 Layer queries search the coded layer descriptions of boreholes - soil and rock attributes recorded as strings of codes - which a plain SQL query on the database cannot reliably match. This page covers what layer queries are, the simple single-condition walkthrough for finding all boreholes with a given layer property, and the full reference for the multi-characteristic layer-query workflow (GLQ definition files, the layer query manager, definitions, results tables) plus additional query options such as code-hierarchy search and multiclassification export.
@@ -296,6 +302,80 @@ The fundamental determination of search criteria (single conditions), conditions
 
 Here you can manage the single conditions of the definition of the layer query. The specification of complex properties is often easier if you duplicate a single condition (with a later change of name and code to be searched).
 
+<!-- src: help/H0000006364#single-condition-dialog -->
+
+A single condition investigates a defined content in a single data field of the layer description. Normally one or more defined codes are searched in one data field at the same time. After the search is completed, the result of a single condition is either TRUE or FALSE, that is, a logical expression.
+
+The single condition dialog has the following fields:
+
+| Field | What it defines |
+|---|---|
+| **Name** | Name of the single condition. |
+| **Data field** | The data field the condition is investigated in. |
+| **Codes** | The codes searched for in that data field. |
+| **Quantificators** | Either an empty entry (all quantificators allowed) or a direct list of the possible digits, for example `3,4,5`. |
+| **Secure or insecure specifications** | Either an empty entry (`!` and `?` are not taken into consideration) or a direct list of the accepted characters. Possible entries: `!`, `?` or `!,?`. |
+
+The **Codes** field accepts three kinds of entry:
+
+* **Empty string (no entry in the data field)** - the special case of searching for empty data fields. The single condition is TRUE if the data field is empty.
+* **A single code, or a list of codes separated by commas** - the code is searched for in the selected data field, and the single condition is TRUE if the search was successful. Restrictions on the following tabs can still turn the condition FALSE. With several codes the search is a logical OR, so it succeeds as soon as at least one code is found. Examples: `s` searches for the code s; `s,c` searches for the code s or c.
+* **The symbol `%` (wildcard for any code)** - queries whether the data field contains at least one code at all, with the exception of numbers and percentages. Combined with the insecure specification (question mark) this finds all layers with insecure entries of any code.
+
+To search for whole groups of similar codes it is neither necessary nor sensible to list every single code. Two wildcard characters are available, and they may be used several times and in any combination:
+
+| Wildcard | Meaning |
+|---|---|
+| `_` (underscore) | Any single character, which may not be missing. |
+| `%` (percent) | One or several characters; the condition is also fulfilled if there is no character at all. |
+
+Wildcard examples:
+
+* `_s` - codes with exactly two characters that start with any character and have "s" in second position. The code "s" itself is not found by this query.
+* `%s` - codes of any length that end with an "s", with any number of characters before it, so both "s" and "fs" are found.
+* `+%` - codes beginning with a plus sign, followed by any characters. In the petrography field this finds all magmatic rocks.
+* `+%,^%,*%` - the keys of solid rock in the petrography field.
+
+Two buttons in the input window support this work. The dictionary search button opens a search over the dictionary entries, where the option -Full text search- without case sensitivity finds every entry containing a string such as "sand". The preview button lists the keys that the current code definition would actually find - the fastest way to test whether a wildcard is too broad.
+
+The difference is easy to underestimate. In the petrography dictionary, the definition `_S` returns fS (fine sand), gS (coarse sand) and mS (medium sand), while `%S` additionally returns +VS (slag), ffS (very fine sand) and S (sand). To search for sand while excluding slag, change the code definition to `ffS,_S,S`, which returns ffS, fS, gS, mS and S. Always check the preview list before running the query, so that no unwanted entry fulfils the single condition.
+
+### Transitions and enumerations
+
+<!-- src: help/H0000006375#transitions -->
+
+The **Transitions** tab restricts a single condition by how the found code is connected to other codes in transitions and enumerations:
+
+| Option | Effect |
+|---|---|
+| **A) Codes can be alone or in transitions or enumerations (arbitrary)** | No restriction on the search. |
+| **B) Codes must not build transitions or enumerations** | Use this option to look for pure layers, for example coarse gravel without any transition or enumeration to other gravel types. |
+| **C) Codes may build transitions or be part of an enumeration** | Permits certain transitions or enumerations, optionally restricted. |
+| **D) Codes must build transitions or be part of an enumeration** | Searches specifically for certain transitions or enumerations, optionally restricted. |
+
+With option C or D, restricting the permitted transitions or enumerations is optional. The restricted or excluded codes are declared as a list of keys and may use the same wildcard characters as the search key; quantifiers (the **Quantificators** field) and the secure or insecure specification can be given as well. Declare the codes that must be involved in the transition or enumeration to find specific ones, and the codes that must not be involved to exclude them.
+
+The check is always carried out against the list of codes involved in the transition that was found, not against the search code itself. Defining the search code as `%G` (all gravels) and then excluding the code fG from the transitions therefore does not work: the transition fG-mG still gives a TRUE result, because fG is found as the search code and does not have a transition to fG. To find medium and coarse gravels without transitions or enumerations with fine gravel, use the search code `mG,gG` and exclude the code fG in the transition.
+
+In the same way, a single condition "coarse sands (with gravels, stones, boulders)" that searches for the code gS in the petrography field, with all transitions and enumerations excluded except those of the type gravels, stones or boulders, is not fulfilled by a layer coded fS-gS.
+
+### Attributes
+
+<!-- src: help/H0000006379#attributes -->
+
+The **Attributes** tab optionally restricts how the codes found by a single condition are attributed:
+
+| Option | Effect |
+|---|---|
+| **A) Codes can either have no attributes or be attributed arbitrary** | No restriction on the attributes. |
+| **B) Codes must not be attributed** | Use this option to look for pure parts, for example coarse gravel without admixtures of other petrographic parts. |
+| **C) Codes can be (optionally restricted) attributed** | Authorises certain attributes, optionally restricted. |
+| **D) Codes must be (optionally restricted) attributed** | Searches specifically for certain attributes, optionally restricted. |
+
+With option C or D, restricting the allowed attributes is optional. The restricting codes and the codes to be excluded are declared as a list of codes using the same wildcard characters as the search code, and quantifiers as well as secure or insecure specifications may be declared in addition. Specify the desired codes to find certain attributed codes, and specify codes that must not stand as an attribute to exclude them.
+
+### Managing single conditions
+
 Where it is possible to define and edit any number of elements, they are displayed with their names in a list. This can be for example series of a data sequences, columns of a report element, lists of layout file names etc. Simultaneously these entries appear in the tree view of the object properties in the selected order. To add, remove and rearrange entries of the list on the right side the following icons are available:
 
 **New**
@@ -332,6 +412,126 @@ Closes the list and changes in the tree view of the object properties to the par
 ### Layer classification
 
 Here you can manage the layer classifications of the definition of the layer query. The specification of complex properties is often easier if you duplicate a layer classification (with a later change of name and condition).
+
+<!-- src: help/H0000006391#layer-classification-condition -->
+
+Verifying one or more single conditions for one layer classifies that layer into a fixed layer description, for example into classes with and without cohesive parts. Combining arbitrary single conditions verifies the contents of several data fields of the layer description, and the contents of data fields in other tables (master data of the borehole, for example) can be tested as well. The result of a layer classification is either TRUE or FALSE.
+
+A layer classification is defined by two fields:
+
+| Field | What it defines |
+|---|---|
+| **Name** | A significant designation of the layer classification. |
+| **Condition** | The logical expression that a layer must fulfil to belong to this layer classification. |
+
+The lists of single conditions and data fields below the input field are an overview of the variables available in the condition. Click a column header to switch the sorting between name and ID, and double-click an entry in the data field list to insert its variable name into the condition at the current cursor position.
+
+**Operators**
+
+| Group | Operators |
+|---|---|
+| Mathematical | `+` `-` `*` `/` |
+| Relational | `=` `<` `>` `<>` `<=` `>=` |
+| Logical | `OR` `AND` `NOT` |
+
+Expressions can be bracketed with round brackets in any desired nesting.
+
+**Variables**
+
+Variable names in a condition are introduced with a dollar sign. They stand either for the result of an evaluated single condition or for the content of a data field of the layer currently being evaluated.
+
+| Notation | Meaning |
+|---|---|
+| `$n:` | The result of the single condition with ID n, as a logical TRUE or FALSE. `$1:` is the result of single condition 1. |
+| `$0:` | Special case: a single condition that is predefined automatically and is always TRUE. Because a condition entry is mandatory, use `$0:` when main layers are to be evaluated without meeting a condition of their own but a restriction of the sub layers is required. |
+| `$FIELD$` | The value of a data field of the current layer, for example `$DEPTHTO$` for the bottom of the layer. |
+| `$%FIELD$` | A calculated data field of the current layer. |
+| `$TABLE.FIELD$` | A data field from another table, that is, the master data of the current borehole or the layer title data. |
+
+The calculated data fields used most often are:
+
+| Calculated field | Meaning |
+|---|---|
+| `$%ZBEG$` | Calculated top of the current layer. |
+| `$%THICKNSS$` | Calculated thickness of the layer. |
+| `$%ZBEGABS$` | Absolute elevation of the top of the layer. |
+| `$%ZENDABS$` | Absolute elevation of the bottom of the layer. |
+
+{% hint style="info" %}
+Normally only the bottoms of a layer are stored in the database, except for sub layers where the object type supports them. For this reason `$DEPTHFROM$` does not always contain the top of a layer - use `$%ZBEG$` when the top is needed.
+{% endhint %}
+
+The relational operator and the comparison syntax depend on the type of the data field, so the field type must be known before it is used:
+
+* Numeric fields: `$BSGENINF.ZCOORDE$>10` - mathematical operators and calculations are allowed, and the comparison value must be numeric.
+* Date fields: `$BSGENINF.CHECKDATE$>'20021021'` - dates are given in single quotation marks in the form yyyymmdd, which makes greater-than and less-than comparisons work.
+* String fields: `$BSGENINF.CLIENT@c$='Company XY'` - strings are given in single quotation marks, and another string field may be used as the comparison value.
+
+Access to the title data of the current borehole log and to the master data of the borehole works the same way: `$BSGENINF.ZCOORDE$>10` tests whether the total depth of the borehole is more than 10 m, and `$S3SCHTIT.PROLEIT$='Meier'` tests the project leader of the borehole log (only for object types with sub layers). Avoid addressing a data record by number in the form `$TABLE(n).FIELD$`. It is permitted, because the notation comes from the text macros of the labeling instructions, but with very few exceptions the reference is not technically useful: `$S3SCHTIT(1).PROLEIT$` returns the project leader of the first title data record of the borehole, which is always log version 0 if the first-log rule is applied, not the project leader of the current log.
+
+**Writing the condition**
+
+The condition must always resolve to a logical expression. Simple examples:
+
+| Expression | Result |
+|---|---|
+| `1=1` | Always TRUE. |
+| `1>2` | Always FALSE. |
+| `'A'='A'` | Always TRUE - this shows that strings can be used in a condition. |
+| `$DEPTHTO$>10` | TRUE if the bottom of the layer lies more than 10 m below the surface. |
+| `$%THICKNSS$<2` | TRUE if the thickness of the layer is less than 2 m. |
+
+{% hint style="warning" %}
+Logical operators have priority over mathematical operators, in the same way that multiplication and division come before addition and subtraction, so brackets must be set carefully. The condition `$1: and $%THICKNSS$<2` is syntactically incorrect: it resolves to the logical link `$1: and $%THICKNSS$`, which is not permitted because `$%THICKNSS$` is a numerical value while `$1:` is a logical variable. Written correctly it is `$1: and ($%THICKNSS$<2)`, which is TRUE when single condition 1 is fulfilled and the layer is thinner than 2 m.
+{% endhint %}
+
+**Worked example**
+
+Assume three single conditions are defined: "Fine sand in petrography" (ID 1, fS in PETRO), "Medium sand in petrography" (ID 2, mS in PETRO) and "Tertiary in stratigraphy" (ID 3, t in STRAT). The question "find all Tertiary layers consisting of fine sand or medium sand" can be written as a layer classification "fine sand or medium sand in Tertiary" in two equivalent ways:
+
+```
+($1: and $3:) or ($2: and $3:)
+$3: and ($1: or $2:)
+```
+
+The second form runs faster, because the short-circuit evaluation cancels the test as soon as the stratigraphy key t is missing and sets the result to FALSE without checking the remaining single conditions. More important still is combining the search for several keys in the same data field into one single condition. Defining "fine sand or medium sand in petrography" as single condition 1 (fS, mS in PETRO) and "Tertiary in stratigraphy" as single condition 2 reduces the whole classification to:
+
+```
+$1: and $2:
+```
+
+Summarising the search for several keys in one single condition normally gives a quicker result than a complex layer classification condition.
+
+**Checking the syntax**
+
+The check button next to the condition verifies that the single condition IDs are valid, that the data field specifications are correct, and that the expression resolves to TRUE or FALSE. If the check fails, one of the following messages appears:
+
+| Message | Cause |
+|---|---|
+| Wrong ID of the single condition | The single condition ID used in the expression, for example `$25:`, does not exist. |
+| Wrong data field identifier | A data field identifier such as `$%THICKNSS$` is syntactically wrong. |
+| Error while solving the condition | Wrong operators (for example `$1: * $3:`), a bracketing error, or a similar problem. |
+
+### Calculated value and parameters
+
+<!-- src: help/H0000006407#classification-calculation -->
+
+If a layer matches a layer classification, a numerical value can be calculated for that layer automatically from a mathematical formula and stored as the result. The formula supports all numeric data field identifiers, including the calculated data fields, and all numeric operations. For example, `$%THICKNSS$ * 0.1234` multiplies the thickness of the layer by a numeric constant. The result is stored in the data field `RES_VALUE` of the table GLQ\_LAYER.
+
+{% hint style="info" %}
+If the formula contains variables for the top, bottom or thickness of a layer, it is only evaluated for sub layers when that information exists for the sub layer.
+{% endhint %}
+
+Freely named parameters for the layer classification are declared in the input field _"Parameter"_. The declaration `C=1.23` defines a parameter named C, for example a conductivity. Several parameters are entered one per line:
+
+```
+Param1=1.23
+Param2=3.4
+```
+
+These parameters matter for geothermal calculations, where the parameters of a layer classification are used as the variables of the characteristic-value formulas. The variable names therefore have to be identical across all participating layer classifications.
+
+### Managing layer classifications
 
 Where it is possible to define and edit any number of elements, they are displayed with their names in a list. This can be for example series of a data sequences, columns of a report element, lists of layout file names etc. Simultaneously these entries appear in the tree view of the object properties in the selected order. To add, remove and rearrange entries of the list on the right side the following icons are available:
 
@@ -423,6 +623,25 @@ If all of the layer classifications from a sub layer are marked with TRUE, they 
 **Sub layers m u s t n o t fulfill the layer classifications listed below**
 
 The list is to exclude layer classification of sub layers. It will result in 'TRUE' if the sub layer does not fulfill any layer classification.
+
+### Groundwater restriction for layers
+
+<!-- src: help/H0000006399#groundwater-layer-restriction -->
+
+The layers to be analysed can also be restricted by their position relative to the groundwater level:
+
+| Option | Effect |
+|---|---|
+| Arbitrary | No restriction relative to the groundwater level. |
+| Only layers with the bottom above (>=) the groundwater level | The layer must lie entirely above the groundwater level. |
+| Only layers with the top below (<=) the groundwater level | The layer must lie entirely below the groundwater level. |
+
+The comparison uses the highest measured groundwater level, or the highest water level where no groundwater measurement exists.
+
+{% hint style="info" %}
+When the groundwater level is taken into account, a layer can only fulfil the layer classification if the data of the object contains information about the groundwater level.
+{% endhint %}
+
 ### New layer query
 
 To create a new layer query definition choose the **System** tab and the method " ![New layer query](../../.gitbook/assets/icons/new-layer-query.png) **New layer query**":
@@ -502,6 +721,25 @@ At first a layer package is defined by a unique name and a list of ID's of layer
 
 Here you can manage the layer package sequences of the definition of the layer query. The specification of complex properties is often easier if you duplicate a layer package sequence (with a latter change of name and condition).
 
+<!-- src: help/H0000006619#building-a-sequence -->
+
+A sequence is built from the layer packages already defined, for example to look for stratigraphic horizon A directly above stratigraphic horizon B. Mark the layer package in the lower list and add it to the sequence with the `<plus>` button. Adding an empty entry determines that other layer packages, not specified in the sequence, are allowed to lie in between - an indirect sequence. Without the empty entry the packages must follow each other directly.
+
+<!-- src: help/H0000006642#groundwater-sequence-restriction -->
+
+The layer package sequences to be analysed can be restricted by their position relative to the groundwater level:
+
+| Option | Effect |
+|---|---|
+| Arbitrary | No restriction relative to the groundwater level. |
+| Only sequences with the bottom above (>=) the groundwater level | The whole sequence must lie above the groundwater level. |
+| Only sequences with the top below (<=) the groundwater level | The whole sequence must lie below the groundwater level. |
+| Only sequences whose top is above and bottom is below the groundwater level | The sequence must straddle the groundwater level. |
+
+The comparison uses the highest measured groundwater level, or the highest water level where no groundwater measurement exists. A layer can only fulfil the condition if the data of the object contains information about the groundwater level.
+
+### Managing layer package sequences
+
 Where it is possible to define and edit any number of elements, they are displayed with their names in a list. This can be for example series of a data sequences, columns of a report element, lists of layout file names etc. Simultaneously these entries appear in the tree view of the object properties in the selected order. To add, remove and rearrange entries of the list on the right side the following icons are available:
 
 **New**
@@ -535,6 +773,47 @@ Using this icon the list can be edited without actualization. Editing the list c
 **Double-click an entry of the list**
 
 Closes the list and changes in the tree view of the object properties to the particular entry, so that its properties can be edited.
+
+### Processing options
+
+The definitions above are the building blocks. The processing options decide what is actually executed with the method **"Data checks and calculations"**: a classification, a generalisation, a layer package sequence search, or a calculation.
+
+#### Classification
+
+<!-- src: help/H0000006573#classification-group -->
+
+A classification is a group of layer classifications that stand in a logical context and are carried out for all layers in one step. Normally the purpose of a classification is to calculate one unambiguous layer classification for each queried layer, although this is not obligatory.
+
+Name the classification in a unique way and specify the numbers of the layer classifications it contains. Enter the number `0` if all layer classifications of the current layer query definition are to be used in this classification.
+
+#### Generalisation
+
+<!-- src: help/H0000006665#generalisation-group -->
+
+A generalisation is a group of layer packages that stand in a logical context and are carried out for all layers in one step. This can be the search for a single concrete layer package, or a list of layer packages for the purpose of generalising layers.
+
+Name the generalisation in a unique way and specify the numbers of the layer packages it contains. Enter the number `0` if all layer packages of the current layer query definition are to be used in this generalisation.
+
+#### Calculating a characteristic value for a borehole
+
+<!-- src: help/H0000006695#borehole-characteristic-value -->
+
+A calculation returns one numeric value for each selected borehole. To obtain the sum of the thicknesses of all sand layers in a borehole, for example:
+
+1. Define a single condition "search for code S in data field petrography".
+2. Define a layer classification "Sand" based on that single condition.
+3. Define a calculation "sum of the thicknesses of Sand", select the option -layer classification- and select the layer classification "Sand" in the selection box.
+4. Enter the formula `$%THICKNSS@SUM$` in the input field _"calculation formula"_.
+
+Execute the calculation for a query or group of boreholes with the method [Data checks and calculations](../calculation-engine/data-checks-and-validations.md). The results are stored in the database for each borehole.
+
+#### Geothermal calculation
+
+<!-- src: help/H0000006681#geothermal-calculation -->
+
+A special procedure is available for geothermal parameters. It calculates a parameter for each layer on the basis of a classification and visualises it in the borehole log with the help of a legend.
+
+Give the calculation a name and select the classification that serves as the calculation base. Each of the three input fields for the calculation formula accepts an arbitrary mathematical expression. Variable identifiers in dollar signs refer either to the parameters declared for a layer classification (see [Calculated value and parameters](#calculated-value-and-parameters)) or to values entered manually during the calculation. Values that are only known at run time must be defined as input parameters.
 
 ***
 
