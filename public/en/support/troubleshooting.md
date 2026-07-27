@@ -76,6 +76,19 @@ parameter in the Datatype Manager, or use a conditional macro in the report
 $%COND[#WAS:AL#like'<%']'-'$%CALC[$WAS:AL$*1@.2]
 ```
 
+### Problems with SEP data (German state-authority deliveries)
+
+<!-- src: support/sep-pointer#canonical-home -->
+
+SEP 1 / SEP 3 topics - conversion, the exchange database, and KSYS
+coordinate-code errors - are covered in depth on the German support portal,
+which is the authoritative home for SEP content:
+[SEP1 to SEP3 conversion](https://support.geodin.com/hc/de/articles/360022314873-Konvertierung-von-SEP1-nach-SEP3),
+[SEP3 exchange database](https://support.geodin.com/hc/de/articles/115003373465-Import-externer-SEP3-Daten-mit-der-SEP3-Austausch-Datenbank),
+and KSYS cleanup for
+[SEP1](https://support.geodin.com/hc/de/articles/360012769899-Altdaten-der-SEP1-Objektarten-%C3%BCbernehmen-KSYS-bereinigen) /
+[SEP3](https://support.geodin.com/hc/de/articles/115003069829-SEP3-Bohrungen-in-ein-anderes-Projekt-%C3%BCbernehmen-KSYS-bereinigen).
+
 ### Coordinates change when the coordinate system differs
 
 <!-- src: transcript/silent-coordinate-transform#behavior -->
