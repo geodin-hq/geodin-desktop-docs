@@ -1,10 +1,10 @@
 ---
-description: Importing GeoDinML files from GeoDin Onsite into GeoDin Desktop
+description: Importing GeoDinML files from GeoDin Onsite into GeoDin
 ---
 
 # GeoDinML Import
 
-**GeoDinML** is the file format used to move structured geotechnical data from **GeoDin Onsite** (field) into **GeoDin Desktop** (office). GeoDin Onsite has no server front-end and cannot talk directly to a GeoDin database, so GeoDinML files are the bridge.
+**GeoDinML** is the file format used to move structured geotechnical data from **GeoDin Onsite** (field) into **GeoDin** (office). GeoDin Onsite has no server front-end and cannot talk directly to a GeoDin database, so GeoDinML files are the bridge.
 
 This page covers what GeoDinML is, the field-to-office workflow, how to use a GeoDinML file as a project metadata source, and a step-by-step import procedure.
 

@@ -11,7 +11,7 @@ The window is divided into 4 areas:
 
 ## Preparing GIS data for GeoDin Maps
 
-GeoDin Maps shows GeoDin objects in a spaital contex. Map information has to first be added to the GeoDin database using the integrated document management.
+GeoDin Maps shows GeoDin objects in a spatial context. Map information has to first be added to the GeoDin database using the integrated document management.
 
 Geographic map information can be either grid (JPG, TIFF, ECW\*) or vector data (SHAPE, DXF).
 
@@ -24,21 +24,21 @@ Geographic map information can be either grid (JPG, TIFF, ECW\*) or vector data 
 
 2\. If required add new folders using the **New Folder** button to create an organised structure.
 
-3\. Then choose **New document** within the hierachy just created.
+3\. Then choose **New document** within the hierarchy just created.
 
 4\. Navigate to the chosen file and select it.
 
 5\. In some cases an item is composed of several individual files with different extensions and hence cannot be added to the database. This is not only the case with SHAPE (.shp) files, but also with raster files where spatial information is stored in separate files. To resolve this GeoDin creates a link to the files that are saved outside of the database.
 
-6.The next step is to choose the document description type "**(DOC) GeoDin layer**". In the same dialogue window the final step in the adding document process is to describe the contents of the document along with any other necessary comments. This final step can be repeated at a later date as more information becomes available.
+6\. The next step is to choose the document description type "**(DOC) GeoDin layer**". In the same dialog window the final step in the adding document process is to describe the contents of the document along with any other necessary comments. This final step can be repeated at a later date as more information becomes available.
 
-7\. End the documenet management with **Close**.
+7\. End the document management with **Close**.
 
 **Making GeoDin data available for GeoDin Maps**
 
 GeoDin data is made available as queries and groups. First of all a group of data has to be defined. This can be added via drag and drop from the GeoDin Object Manager to the map window. This makes a duplicate of the query available in the map and is independent of the original query and any subsequent changes that may be made to it.
 
-Both user-defined and system queries can be shown in the map window. All the result fields defined in these queries will be available in the map window. If a field is not defined then it cannot be used for labelling or other presentation options. These fileds are defined under the node " Results fields (ArcGIS/Export)" in the query.
+Both user-defined and system queries can be shown in the map window. All the result fields defined in these queries will be available in the map window. If a field is not defined then it cannot be used for labeling or other presentation options. These fields are defined under the node " Results fields (ArcGIS/Export)" in the query.
 
 Additionally specific layouts can be defined in the query for displaying the relevant data. Choose the button **Favourite layouts** to define which layouts are to be used for the query (these need to be multi object capable, e.g. time lines from several objects) or the results of the query (single object frame layouts).
 

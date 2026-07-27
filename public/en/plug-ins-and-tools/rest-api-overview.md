@@ -2,7 +2,7 @@
 
 ## REST API / Public API Capabilities
 
-GeoDin has no public REST API discussed in available transcripts; integration is primarily file-based and plugin-based.
+GeoDin does not currently offer a public REST API; integration is primarily file-based and plugin-based - see the [COM API](com-api/overview.md).
 
 SQL Server client-server databases are supported as a backend - the database connection string must be configured by the customer IT team (documented in the manual).
 

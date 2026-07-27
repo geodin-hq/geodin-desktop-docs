@@ -1,10 +1,4 @@
 
-<!--
-**Content status:** Auto-assembled from product documentation
-**Source quality:** C (Thin (limited source material))
-**Needs:** needs legacy verification, needs screenshots, needs examples, editorial review
--->
-
 # Updating & Upgrading
 
 ### Update an existing GeoDin installation
