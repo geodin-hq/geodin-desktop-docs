@@ -26,6 +26,19 @@ To avoid having to specify the schema replacement for each table, it is possible
 
 ***Note:*** *Alias names given in the FROM statement (for example for sub-queries) may not be included here. Otherwise, the schema extension will be added to the alias and the statement will fail.*
 
+### Project-level system queries (GeoDin 10 and later)
+
+Since the GeoDin 10 project-structure change, a system query that is to be displayed at project level must include the object registration table `GEODIN_LOC_LOCREG` - add it to the table list and to the FROM clause of the query.
+
+{% hint style="warning" %}
+If the object registration table is omitted from a project-level system query, running the query returns one of the following errors, depending on the database system:
+
+* Microsoft Access database: `[FireDAC][...] Too few parameters. Expected 1.`
+* Client/server database: `[FireDAC][...] Invalid column name 'ProjectGUID'.`
+{% endhint %}
+
+<!-- src: support/system-queries-project-level#geodin-loc-locreg -->
+
 ### Configuration
 
 In the configuration the settings for the query are made, based on the data basis used for the query.

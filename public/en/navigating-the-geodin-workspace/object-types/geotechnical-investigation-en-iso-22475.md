@@ -67,6 +67,23 @@ Available layouts include:
 * Full functionality is available **from GeoDin version 9 onwards**.
 * The object type is **not downward compatible** with earlier GeoDin versions.
 
+### Recording groundwater levels
+
+For the object types **"Geotechnical Investigation EN ISO 22475 (2007/2018)"** \[ENISOBOR/ENISO002], groundwater levels are entered in a dedicated table rather than in the layer log (as is standard for the SEP1 standard).
+
+To record groundwater levels:
+
+1. Start the **Data management** method.
+2. Select the **Bescheide, Grundwasser** or **Grundwasser** button (depending on your GeoDin version) in the upper toolbar.
+3. If the groundwater table is not displayed, click **Choose table** in the right-hand toolbar.
+4. Select **Groundwater** in the list and confirm with **OK**.
+
+The location of the groundwater table differs by version: up to GeoDin 8 it appears under the object type "Geotechnical Investigation EN ISO 22475 (2007)" \[ENISOBOR]; from GeoDin 9.0 onward it appears under "Geotechnical Investigation EN ISO 22475 (2018)" \[ENISO002].
+
+The SEP3 borehole database object type records groundwater levels the same way. German-speaking users can find the full SEP3 guidance in the German Help Center article [Grundwasserstaende erfassen bei EN ISO 22475 und SEP3 (Deutsch)](https://support.geodin.com/hc/de/articles/360002091174).
+
+<!-- src: support/grundwasserstaende-en-iso#procedure -->
+
 ***
 
 ## Reference: Standards and normative references
