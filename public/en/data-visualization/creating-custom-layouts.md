@@ -77,7 +77,7 @@ To display real borehole data:
 
 The borehole log is now displayed based on the recorded layer data.
 
-* If no layer data exists, an **empty frame with a fuchsia dashed outline** is shown.
+* If no layer data exists, an **empty frame with a fuchsia dashed outline** is shown - see [Layout and graphic problems](../support/troubleshooting/layouts-and-graphics.md) for the full color diagnostics if a different dashed color appears instead.
 * A **small red circle** in the top‑left corner of the object frame indicates that the layout is linked to database data.
 
 <figure><img src="../.gitbook/assets/layout_05_EN.jpg" alt="Dragging a database object onto the layout"><figcaption>Dragging borehole AE-BH-01 from the Object Manager onto the layout. The log renders from the recorded layer data; the small red circle in the top-left corner of the frame shows the layout is now linked to a database object.</figcaption></figure>

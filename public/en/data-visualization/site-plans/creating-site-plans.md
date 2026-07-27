@@ -79,6 +79,14 @@ Selecting a link below the **portal links** node opens the properties dialogue f
 
 To set the target of a portal link of type **Go to URL**: select the **portal links** node in the element properties tree, set the type to **"Go to URL"**, then at the **Go to URL** node enter the target as free text or choose it from a frame query.
 
+### Using a site plan in the layout overview
+
+<!-- src: support/lageplan-layoutuebersicht#gom-selection -->
+
+A checkbox on the site plan controls where its boreholes come from when the site plan appears in the layout overview. When checked, the site plan in the layout overview automatically uses the boreholes, group, or query currently selected in the GeoDin Object Manager. When unchecked, the layout overview always shows the boreholes that were last saved in the site plan.
+
+This makes the site plan reusable across different selections without editing it: build a report template once, and each time it runs against a different GOM selection, the site plan follows along automatically.
+
 ***
 
 ## Reference: Site Plan Properties

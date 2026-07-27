@@ -88,6 +88,11 @@ which is the authoritative home for SEP content:
 and KSYS cleanup for
 [SEP1](https://support.geodin.com/hc/de/articles/360012769899-Altdaten-der-SEP1-Objektarten-%C3%BCbernehmen-KSYS-bereinigen) /
 [SEP3](https://support.geodin.com/hc/de/articles/115003069829-SEP3-Bohrungen-in-ein-anderes-Projekt-%C3%BCbernehmen-KSYS-bereinigen).
+For the SEP object types themselves, see
+[Aufschluss Bohrdatenbank SEP 3](https://support.geodin.com/hc/de/articles/360016072840-Aufschluss-Bohrdatenbank-SEP-3)
+and
+[Benutzer-, Komplett- und Standardaufschluss (SEP 1)](https://support.geodin.com/hc/de/articles/360016072820-Benutzer-Komplett-und-Standardaufschluss-SEP-1)
+on the same portal.
 
 ### Coordinates change when the coordinate system differs
 
