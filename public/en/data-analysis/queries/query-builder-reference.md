@@ -4,7 +4,7 @@ description: Query Builder Reference - every node of a GeoDin sub-query and syst
 
 # Query Builder Reference
 
-The Query Builder defines a GeoDin sub-query as a set of individual node definitions - table list, FROM clause, conditions, result and display fields - which GeoDin combines into a full SQL statement. This page is the reference for each node in that definition: what it configures and the syntax it accepts. Use it when you are building or editing a query and need to know what a specific node does.
+The Query Builder defines a GeoDin sub-query as a set of individual node definitions - table list, FROM clause, conditions, result and display fields - which GeoDin combines into a full SQL statement. This page is the reference for each node in that definition: what it configures and the syntax it accepts. Use it when you are building or editing a query and need to know what a specific node does. It also covers system queries - what they are, the QUERYDEF folder, and the system-query nodes (requirements, display conditions, display and presentation options).
 
 ***
 
@@ -308,7 +308,7 @@ Here, a name for the sub-query can be entered.
 
 **Template description**
 
-Enter here a short description of the query. The description is shown in the query assistant, if the query is defined as a template for user queries (see [System query](sql-and-advanced-options.md))
+Enter here a short description of the query. The description is shown in the query assistant, if the query is defined as a template for user queries (see [Working with system queries](#working-with-system-queries))
 
 **Combine conditions with Or/And**
 
@@ -450,7 +450,7 @@ A system query carries a second group of nodes alongside the sub-query definitio
 
 The **Requirements** node defines the basic conditions under which the system query is executed in a database and added to the object manager. Because a query uses specific database tables, those tables may not exist everywhere: one database may use the object type "General Borehole Log - British Standard" while another uses different object types, so a query on the table `GEODIN_LOC_BSSRCLAS` created for the General Borehole Log leads to an error in the second database.
 
-Enter one condition per line. The system query is executed only when all conditions are fulfilled; if a single requirement is not matched, the query is ignored for that database. The exception is `Username=`, which may be entered for several different users.
+Enter one condition per line. Each line must be fulfilled (AND); if a single requirement is not matched, the query is ignored for that database. The exceptions are `Username=` and `WorkstationLogin=` lines, which are combined with OR so they may be entered for several different users. Within one line, comma-separated values are alternatives (OR).
 
 | Condition | Checks |
 |---|---|
