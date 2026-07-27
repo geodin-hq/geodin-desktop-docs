@@ -211,7 +211,25 @@ The **Distance ruler** scene adds horizontal labelling to the objects shown in t
 
 The ruler starts at the position of the first cross-section object and ends at the last object on the right. The relative start and end positions can be adjusted with the two **Position** entry fields.
 
-For labelling options, see [Cross Section Layouts](cross-section-layouts.md).
+**Labelling the distance ruler**
+
+<!-- src: help/H0000010726#distance-ruler-labeling -->
+
+The **Header:** input field takes free text describing what the ruler lists - for example `Distance:` or `Hole name:`. This text appears at the left end of the ruler.
+
+The labelling itself is defined in the macro entry field, using the same labelling macros as elsewhere in the graphic (name, elevation, and so on). Three additional macro variables are available under the calculated parameters:
+
+| Macro | Value |
+|---|---|
+| `$%Distance$` | Distance between two cross-section objects measured along the line of section - that is, between their projected positions on the line. |
+| `$%ObjectDistance$` | Actual distance between two cross-section objects, calculated from their coordinates. |
+| `$%ProjectionDistance$` | Distance between a cross-section object and the line of section. |
+
+The distinction matters as soon as objects are projected. Where a borehole is projected onto the line of section, `$%Distance$` measures from its projected point to the next point on the line, which is not necessarily the real distance between the two boreholes - use `$%ObjectDistance$` for that. If no objects are projected, that is, all points lie on the (crooked) line of section, then `$%Distance$` and `$%ObjectDistance$` are equal.
+
+The labelling defined in the macro is drawn for each cross-section object. In practice, information about the objects themselves reads best below the objects, and the distances between objects read best between them.
+
+For general text-element labelling options, see [Cross Section Layouts](cross-section-layouts.md).
 
 ## Reference: Import layer boundaries
 
