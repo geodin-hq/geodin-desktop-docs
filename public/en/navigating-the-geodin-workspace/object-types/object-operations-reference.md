@@ -1875,7 +1875,7 @@ The management of these settings is user-specific on each PC.
 
 The method **"XML Export"** can be found in the superordinate method **"Publish and Export"** at object nodes or at queries and groups below the object nodes, as well as at system queries that return objects (no measuring points) as a result (easily recognisable by the small red ball in the query symbol).
 
-With this method you can export objects of the GeoDin database into a configurable XML format.
+With this method you can export objects of the GeoDin database into a configurable XML format. The available formats are shown in the list.
 
 The XML files created during the export are exported to the specified directory.
 
@@ -1895,19 +1895,34 @@ In the \[PARAMS] section of the XML export configuration file (name of the file.
 
 The XML export configuration file can be named as desired and must have the following structure:
 
-This parameter must be set, it determines the method to be executed.
+{% code title="MyExportConfiguration.ini" %}
+```ini
+[PARAMS]
+Method=XMLExport
+ObjectType=1
+ParentNode=DatabaseQueries
+Query=BML-Objects
+ObjectID=
+Expand=false
+ExportFolder=X:\Folder_1\Subfolder_2\ExportProtocols
+ExportTemplate=SEP3 - BoreholeML 3.0.1
+ExportTarget=2
+TargetDB=Target database
+```
+{% endcode %}
 
-Specification of the node point type. The method is thus (=1) only available at nodes and queries that return objects and not measuring points as a result.
+| Parameter | Status | Default | Meaning |
+| --- | --- | --- | --- |
+| `Method` | Required | `XMLExport` | This parameter must be set, it determines the method to be executed. |
+| `ObjectType` | Required | `1` | Specification of the node point type. The method is thus (=1) only available at nodes and queries that return objects and not measuring points as a result. |
+| `ParentNode` | Required | `DatabaseQueries` | This parameter must be set, it determines the type of node at which the method is to be executed. |
+| `Query` | Required if `ParentNode=DatabaseQueries` | - | This parameter must be set, it determines the query below the parent node at which the method is executed. |
+| `ExportFolder` | Required | - | This parameter must be set, it specifies the folder and path where the export log is saved. |
+| `ExportTemplate` | Required | `SEP3 - BoreholeML 3.0.1` | This parameter must be set, it specifies which XML template is to be used. |
+| `ExportTarget` | Required | `2` | This parameter must be set, it specifies whether to export as individual XML files (=1), to a database (=2) or to a ZIP archive (=3). |
+| `TargetDB` | Required if `ExportTarget=2` | - | This parameter must be set if ExportTarget=2 was specified. It specifies the name of the target database in the GeoDin object manager. |
 
-This parameter must be set, it determines the type of node at which the method is to be executed.
-
-This parameter must be set, it specifies the folder and path where the export log is saved.
-
-This parameter must be set, it specifies which XML template is to be used.
-
-This parameter must be set, it specifies whether to export as individual XML files (=1), to a database (=2) or to a ZIP archive (=3).
-
-This parameter must be set if ExportTarget=2 was specified. It specifies the name of the target database in the GeoDin object manager.
+<!-- src: help/H0000007079#params -->
 
 ## Reference: Database tables
 
