@@ -179,7 +179,6 @@
 * [Changelog](support/changelog.md)
 * [Troubleshooting](support/troubleshooting.md)
   * [Database connection problems](support/troubleshooting/database-connections.md)
-  * [Import and data exchange problems](support/troubleshooting/import-and-data-exchange.md)
   * [Object type and dictionary problems](support/troubleshooting/object-types-and-dictionaries.md)
   * [Licensing problems](support/troubleshooting/licensing.md)
   * [Installation and update problems](support/troubleshooting/installation-and-updates.md)

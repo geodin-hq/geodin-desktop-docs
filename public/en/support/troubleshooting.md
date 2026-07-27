@@ -13,7 +13,6 @@ directly on this page.
 | Your problem involves... | Go to |
 |---|---|
 | Opening a database, lock errors, moved files, sharing data | [Database connection problems](troubleshooting/database-connections.md) |
-| Failed imports, SEP/KSYS errors, AGS into SQL | [Import and data exchange problems](troubleshooting/import-and-data-exchange.md) |
 | "Object type not installed", dictionary errors | [Object type and dictionary problems](troubleshooting/object-types-and-dictionaries.md) |
 | Licenses not active, network licenses, gray modules | [Licensing problems](troubleshooting/licensing.md) |
 | Install, start, or update failures | [Installation and update problems](troubleshooting/installation-and-updates.md) |
@@ -22,6 +21,15 @@ directly on this page.
 | "Update incomplete" on every start (up to 10.1) | [Update incomplete message](troubleshooting/update-incomplete-message-until-geodin-10.1.md) |
 
 ## Quick answers
+
+### AGS import into an SQL database fails
+
+<!-- src: transcript/ags-sql#dummy-object -->
+
+In client/server (SQL) databases the AGS table structure must exist before an
+AGS file can be imported. Create a dummy object of the AGS object type first -
+this creates the tables - then run the import. See
+[AGS import](../data-collection/import/ags-import.md).
 
 ### A method button does not react to a click
 
