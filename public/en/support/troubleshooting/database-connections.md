@@ -25,6 +25,24 @@ and run **File** > **Info** > **Compact and repair** - make a backup copy
 first. If none of this helps, contact [support](../get-support.md) and mention
 which steps you already tried.
 
+## The database could not be opened - Microsoft Access Database Engine missing
+
+<!-- src: support/access-database-engine#fix -->
+
+When opening a Microsoft Access database in the `.accdb` format, GeoDin shows
+this error if Microsoft Access 2007 (or later) is not installed:
+
+> The database 'XYZ' could not be opened. Verify that the following drivers
+> are installed: Microsoft Access Database Engine 64-Bit.
+
+The cause is that the Microsoft Access Database Engine driver itself is not
+installed. Install the **Microsoft Access Database Engine 2016
+Redistributable** from Microsoft's download page. The required bitness
+depends on your GeoDin version: **up to GeoDin 9.0** the driver must be the
+**32-bit** version, and **from GeoDin 9.5 onwards** the **64-bit** version is
+required. If you are unsure which to install, check with your system
+administrator.
+
 ## Access database asks for a user name and password
 
 <!-- src: support/access-db-not-opened#fix -->
