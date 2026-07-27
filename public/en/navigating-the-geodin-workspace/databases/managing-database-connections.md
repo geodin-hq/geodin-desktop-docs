@@ -49,14 +49,14 @@ Understanding the distinction between user and system databases is especially im
 
 **User databases** (blue cylinder icon) are stored in the **Windows registry of the individual user's local PC**. In a centralized deployment, this means they are stored in the registry profile of that user on the terminal server. Only that user sees these connections - other users opening GeoDin from the same installation will not see them.
 
-**System databases** (yellow cylinder icon) are defined in the `GeoDin.INI` file, which is shared across the installation. Every user who opens GeoDin from that installation sees the same system databases.
+**System databases** (yellow cylinder icon) are configured centrally for the installation and stored as `*.CON` files in the `CONFIG` folder of the GeoDin installation (see [System databases](connecting-to-a-database.md)). Every user who opens GeoDin from that installation sees the same system databases.
 
 {% hint style="info" %}
-In organizations with a central GeoDin installation (e.g. accessed via Remote Desktop), shared project databases should be registered as **system databases** in `GeoDin.INI` by the IT administrator. This ensures all users see the same database connections without each person needing to configure their own connection.
+In organizations with a central GeoDin installation (e.g. accessed via Remote Desktop), shared project databases should be registered as **system databases** by the IT administrator (created on the system level and stored as `*.CON` files in the installation's `CONFIG` folder). This ensures all users see the same database connections without each person needing to configure their own connection.
 {% endhint %}
 
 {% hint style="warning" %}
-If a user creates a user database connection and then another user needs to access the same database, that second user must also create their own connection - or the IT administrator must add the database to `GeoDin.INI` as a system database.
+If a user creates a user database connection and then another user needs to access the same database, that second user must also create their own connection - or the IT administrator must add the database as a system database.
 {% endhint %}
 
 ## Migrating an Access database to PostgreSQL using Copy All Projects

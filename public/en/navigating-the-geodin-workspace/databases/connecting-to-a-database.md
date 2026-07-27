@@ -28,9 +28,17 @@ The GeoDin-System contains functions to copy or transfer data between database t
 
 GeoDin databases can be defined on two distinct levels.
 
-[System databases](connecting-to-a-database.md)
+**System databases**
 
-are defined in one central object, the GeoDin.INI file. This can be a write protected file in a network and managed by the system administrator (see **Configuration**). Any database settings in this file override all other database definitions with the same name. These databases are available to all users who start GeoDin from this object.
+are configured centrally for a GeoDin installation and are displayed to every user who starts GeoDin from that installation. This is especially useful in network installations with client/server databases, as the database configuration only has to be done once centrally. A system database connection is created with the method **"Create database connection"** on the system level (see **Configuration**); the connection information is saved as a `*.CON` file in the `CONFIG` folder of the GeoDin installation, which can be write-protected on a network share and managed by the system administrator. These connection files can be passed on by file, or configured once by an administrator and then made available to all users. Any database settings defined on the system level override all other database definitions with the same name.
+
+The **Import** method transfers system database connections from an existing legacy `GEODIN.INI` file automatically into the current format. After selecting a `GEODIN.INI`, the recognized database connections are displayed; set the check marks in front of the databases to transfer and confirm with **OK**. Each imported connection is saved as a `*.CON` file named after the selected display name.
+
+{% hint style="warning" %}
+From GeoDin 9 onwards, system databases configured in `GEODIN.INI` are no longer displayed in the GeoDin Object Manager. Use the **Import** method to migrate legacy `GEODIN.INI` connections to `*.CON` files.
+{% endhint %}
+
+<!-- src: help/H0000011211#system-databases -->
 
 **User databases**
 
@@ -52,7 +60,7 @@ FireDAC has three main advantages over OLE-DB:
 
 1. The connection allows faster access (especially noticable with client/server databases).
 2. A complicated configuration process is not necessary (which is the case with ODBC connections).
-3. The correlation of DLL\_ names of field type descriptors for Client/Server datbases in the GeoDin.inin is not necessary.
+3. The correlation of DLL\_ names of field type descriptors for Client/Server databases in the GeoDin.INI is not necessary.
 
 Detailed descriptions on FireDAC connections can be found here:
 
