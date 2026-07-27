@@ -29,6 +29,19 @@ Drag a database object from the **GeoDin Object Manager** onto the layout to lin
 
 For a **Multi-Object Frame**, hold the **Command** key while dragging to add multiple objects to the data source. The data source can be defined to specify exactly which boreholes to include in the output.
 
+### Editing the objects-to-display list
+
+<!-- src: help/H0000002514#objects-to-display-list -->
+
+In a multi-object frame the **Data source** branch holds the list of objects to display. The icons on the right of the list are the standard list toolbar - delete the selected entries, and move the selected entry up or down. The order of that list is the order the data appears in, so moving entries up and down is how the sequence of objects in a report is changed.
+
+Two icons are specific to object frames:
+
+* **Edit without refresh** - lets the object list be edited without the graphic being recalculated after every operation. Because recalculation of very extensive reports takes time, reordering or deleting objects is much faster with this active.
+* **Refresh object data** - recalculates the graphic on demand. Changes to the underlying object data do not refresh the object frame automatically (again, because recalculation of extensive reports and calculations is slow), so use this icon after editing the data of the objects shown.
+
+In a layout of the layout list, or in the layout preview, the frame instead shows the object currently selected in the Object Manager, or all objects of a query or group; changing the selection updates the graphic automatically.
+
 ### Graphic elements inside the frame
 
 The geological graphic elements inside the object frame always refer to the borehole chosen by the frame. Individual graphic elements can be arranged in any way inside the frame - for example, a borehole log and a borehole table can be displayed side by side using the available labeling options.
