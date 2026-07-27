@@ -56,10 +56,10 @@ Cells not matching either condition remain black (the column default).
 
 ## Reference: Post-selection (data filtering)
 
-A post-selection filters data records from already-correlated data types (see Pre-selection for correlation).
+A post-selection filters data records from already-correlated data types (see [Pre-selection](../data-visualization/maps-and-site-plans.md#pre-selection) for correlation).
 
 - **Name** - A label for the post-selection, shown in layout interfaces when the post-selection is exposed as a quick setting.
-- **Condition** - A logical expression that defines the filter criterion. Click inside the field to open the expression builder listing available parameters. Double-click a parameter name to insert it. Syntax is described under *Selection syntax*.
+- **Condition** - A logical expression that defines the filter criterion. Click inside the field to open the expression builder listing available parameters. Double-click a parameter name to insert it. Syntax is described under [Selection syntax](../data-analysis/queries/conditions-and-operators.md).
 
 **Parameterised conditions:** Instead of hard-coding a threshold (e.g. `$WAT:Cl$ > 100`), use a placeholder so the user can supply the value at runtime:
 
