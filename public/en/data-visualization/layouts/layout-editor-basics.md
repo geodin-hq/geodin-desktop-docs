@@ -223,7 +223,7 @@ Layout interfaces allow end users to adjust layout parameters without opening th
 | **Axis range right Y-Axis** | Right Y-axis scale range | Time series with "Draw scale and labels" enabled |
 | **X-Axis range** | X-axis range and decimal places | XY-diagram |
 | **Y-Axis range** | Y-axis range and decimal places | XY-diagram |
-| **Selection parameter** | Selector/post-selection conditions (numbers, strings, dates, HAS operator with comma-separated terms, `%` wildcard) | Elements with selectors; selectors sharing a name are updated together |
+| **Selection parameter** | [Selector/post-selection](../maps-and-site-plans.md#post-selection) conditions (numbers, strings, dates, HAS operator with comma-separated terms, `%` wildcard) | Elements with selectors; selectors sharing a name are updated together |
 
 <!-- src: help/H0000006999#transferable-parameters -->
 
@@ -240,13 +240,13 @@ A quick setting is only offered when the matching parameter was set in the targe
 | **Reports** | List comparison, Measuring program |
 | **Time series** | Time series representation of the last..., Range of time, Parameter of left axis, Parameter of right axis |
 | **XY-plot** | Parameter of X-axis, Display range of X-axis, Parameter of Y-axis, Display range of Y-axis |
-| **Schoeller-plot** | Display range of Y-axis |
+| **[Schoeller-plot](../maps-and-site-plans.md#schoeller-diagram)** | Display range of Y-axis |
 | **Selection** | Selection parameter |
 
 Quick-setting parameters overwrite the corresponding parameters on the elements of the target layout, and act as restrictions in the target layout's queries.
 
 {% hint style="warning" %}
-Quick settings do not reduce the amount of data read from the database. If you hold ten years of data and use a quick setting to show only the current period, GeoDin still fetches all of it and discards what is not displayed. To limit what comes out of the database, use parameterized queries instead.
+Quick settings do not reduce the amount of data read from the database. If you hold ten years of data and use a quick setting to show only the current period, GeoDin still fetches all of it and discards what is not displayed. To limit what comes out of the database, use [parameterized queries](../../data-analysis/queries/parameterized-queries.md) instead.
 {% endhint %}
 
 ## Reference: Unit systems in layouts
@@ -287,4 +287,4 @@ Paper formats can be included as layout quick settings, allowing users to switch
 
 Special paper sizes for your layouts are defined in the **Paper formats** system-configuration dialog. Once defined they are available in your graphics like any built-in size.
 
-The definitions are stored in the file `papersizes.sys` in the Syslib folder, which requires write access. Copying that file to another GeoDin installation transfers the custom paper sizes with it.
+The definitions are stored in the file `papersizes.sys` in the Syslib folder (hence the write-access requirement above). Copying that file to another GeoDin installation transfers the custom paper sizes with it.

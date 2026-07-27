@@ -14,6 +14,7 @@ The object frame uses sphere icons to show its connection state:
 
 * **White sphere** - no database object connected; layout is in template mode.
 * **Red sphere** - a single database object is connected (single object frame).
+* **Blue sphere** - a measurement point is connected (rather than an object).
 * **Multiple spheres** - multiple objects connected (multi-object frame).
 
 Selected frames show **4 grey squares** and 4 grey side lines. An unselected frame is represented by **4 grey angles** at the corners.
