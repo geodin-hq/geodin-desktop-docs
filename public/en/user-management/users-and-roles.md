@@ -17,7 +17,13 @@ For specific access-control topics, see also:
 
 GeoDin includes a built-in user management system. It is **optional** - most customers do not turn it on. Where it is used, it is typically by organizations with strict access requirements (e.g. public authorities running ~20 users on the same database).
 
-Users are created with a name and a login credential tied to the Windows login used at machine startup. There is no separate password store and no SSO/MFA/directory-service integration documented in the product.
+Users are created with a name and a login credential tied to the Windows login used at machine startup. Apart from the optional web login described below, there is no separate password store and no SSO/MFA/directory-service integration documented in the product.
+
+<!-- src: help/H0000006330#user-settings-dialog -->
+
+Users and groups are maintained in the **User settings** method. Use the **Add new element** button to define a user: the user name is the workstation login, which can then be used for example to open a system database. The same button creates a group - name the group first, then add users to it.
+
+A web login can optionally be allowed. Select or clear the corresponding check box to activate or deactivate the function; when it is active, a separate user name and password can be set for that login.
 
 GeoDin Onsite has **no user accounts and no authentication** - it is a single-user desktop/tablet application. User name and computer name are captured passively in each form's `history` section for audit purposes.
 
