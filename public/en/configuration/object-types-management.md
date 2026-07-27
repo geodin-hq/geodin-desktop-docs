@@ -449,6 +449,25 @@ UBA= 1244 07 1 0.1
 
 By the identifier "UBA=" the property will be recognised to be necessary for the UBA-export. Measurement size no and separation code are information to be taken from the document mentioned above (table coding of the measured values and scale units for groundwater data). The target scale unit for the export is defined by the code number for the scale unit (see the document above). If necessary, a conversion may be executed during the export. The limit of determination is a standard information. If a limit of determination has been registered for the concerning parameter, it will be used for the export. Specific information, following the name of the property, are separated by comma. The decimal character for the limit of determination is the point.
 
+#### Parameter groups
+
+The parameters of a data type are arranged in parameter groups (also called substance groups). Groups are managed on the data type branch, either with the toolbar buttons or through the context menu (right mouse click):
+
+- **Add parameter group** - select the data type branch, then use **Add parameter group**. A group always has a long name and a short name. The short name may contain at most three characters and cannot be changed once the group has been created; only the long name stays editable.
+- **Edit parameter group** - select the group and start edit mode. Only the long name can be changed.
+- **Delete parameter group** - select the group and delete it.
+- **Relocate a parameter group** - move groups by drag and drop. A group is always inserted below the entry it is dropped on.
+
+{% hint style="warning" %}
+Deleting a parameter group also deletes every parameter it contains.
+{% endhint %}
+
+Individual parameters are added, edited, and deleted the same way, from the group they belong to. Parameters can also be moved by drag and drop, including across parameter groups, and are likewise inserted below the target entry.
+
+The search/filter field above the lists reduces the display to parameters whose short or long name contains the search string. The filter works across groups, so a parameter can be found without knowing which group holds it.
+
+<!-- src: help/H0000008505#parameter-groups -->
+
 ### Data types
 
 Data types are in GeoDin the basis for the management of measured values related to measuring points (object, filter, sample).
@@ -474,6 +493,21 @@ Select the appropriate data type from the list "Available data types". If you st
 Subsequently, please choose where you want to save the data type(s) as a ZIP archive.
 
 Dictionaries necessary for the export are also included.
+
+### Generate sub-nodes
+
+The simple, table-driven **Generate subnode** transformation turns one XML element into a generator: GeoDin writes one sub-element per record of a chosen source table, so the sub-element can occur many times in the exported document. The transformation itself, together with its **Data records available** option, is listed with the other element transformations under [XML elements](../data-collection/export/geodinml-export.md#transformations).
+
+**Example.** The element `intervalProperty` carries the transformation and is bound to the layer data table of the SEP3 location point type (`S3SCHDAT`). Its sub-element `Interval` is therefore written once for every layer record of that table. In the template tree, an element carrying a table-driven transformation is recognizable by the table symbol, and the generated sub-element appears beneath it:
+
+```
+intervalProperty
+  Transformation -> S3SCHDAT
+    Attribute
+      Interval
+```
+
+<!-- src: help/H0000005581#generate-sub-nodes -->
 
 ### Generate subnotes (Layer)
 
@@ -722,6 +756,31 @@ To register a document type, the corresponding file extension is specified, e.g.
 3. Always save uncompressed
 
 In addition, it can also be specified for the document type whether saving in the database, file links are allowed and editing is permitted. Furthermore, the maximum document size and certain document descriptions can be specified.
+
+#### Allowed document data and storage nodes
+
+Two multiple-choice settings complete the **Document data** dialog of a system database. Both accept any combination of their entries.
+
+**Which document data may be inserted:**
+
+- Internet addresses
+- Links
+- NULL documents (metadata only)
+
+**At which nodes of the database documents may be stored:**
+
+- Database
+- Project
+- Object
+- Measuring point
+
+{% hint style="info" %}
+Documents that are linked to projects, objects, or measuring points and stored in the GeoDin database exist in the database only as long as the object itself exists.
+{% endhint %}
+
+For working with documents once they are permitted, see [Managing Documents](../navigating-the-geodin-workspace/documents/managing-documents.md).
+
+<!-- src: help/H0000011370#document-data -->
 
 ### Object frame query
 
