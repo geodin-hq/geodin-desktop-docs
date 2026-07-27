@@ -38,11 +38,6 @@ When a selection contains GeoDin objects, those objects also appear in the GeoDi
 
 GeoDin Maps shows GeoDin objects in a spatial context. Map information has to first be added to the GeoDin database using the integrated document management.
 
-Geographic map information can be either grid (JPG, TIFF, ECW\*) or vector data (SHAPE, DXF).
-
-\
-&#xNAN;_**Note:**_ _ECW is a new highly efficient grid format._
-
 ### Supported file formats
 
 The embedded GIS reads data in the following formats:
@@ -108,10 +103,10 @@ If a query includes numeric result fields (e.g. chloride concentrations, groundw
 
 1. Create a query with the numeric attribute added to the **Result fields (Export)** node (see [Parameterized Queries](../data-analysis/queries/parameterized-queries.md)).
 2. In the Maps module, add the query as a layer.
-3. Right-click the query layer in the Legend and choose **Interpolation** (German: _Interpolation_) from the actions menu.
+3. Right-click the query layer in the Legend and choose **Actions** > **Interpolation...**.
 4. Configure the interpolation method and grid resolution, then run. A colour-coded interpolation grid layer is generated.
 
-The action is reached by right-clicking the layer and choosing **Actions** > **Interpolation...**. The window that opens lists the elements of the layer; pick the interpolation field first - the parameter the interpolation is to be based on - and its values appear straight away in the preview.
+The window that opens lists the elements of the layer; pick the interpolation field first - the parameter the interpolation is to be based on - and its values appear straight away in the preview.
 
 **Interpolation methods:**
 
@@ -282,7 +277,7 @@ Two tools on the map toolbar do more than change the view.
 
 **Measure distance** - Activates a line-drawing tool that measures distances between user-set points; right-click to end. The unit system (map units, metric, or Anglo-American) is configurable in the distance settings.
 
-**More tools** - Opens a menu with the further tools available in GeoDin Maps: **Information**, **Measure distance**, **Attribute table**, **Load elevation data**, and **Search in polygons**.
+**More tools** - Opens a menu with the further tools available in GeoDin Maps: **Information**, **Measure distance** (also available directly on the toolbar), **Attribute table**, **Load elevation data**, and **Search in polygons**.
 
 **Information** - Click an object in the map and a pop-up window shows that object's attribute values.
 
