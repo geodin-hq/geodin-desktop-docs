@@ -1372,6 +1372,34 @@ Presentation options can be adjusted for:
 
 The _percentage_ value controls the display in the slice head profile. A layer with the specification 100% has the full width of the drilling column, layers with lower percentage values are displayed correspondingly narrower. The value must be between 0 and 100.
 
+#### Fill patterns
+
+The fill pattern settings of a key control how that key is rendered in a borehole profile.
+
+**Intensity** is the intensity number used to form the signature:
+
+| Value | Meaning |
+|---|---|
+| 1-9 | Code values for minor components |
+| 10 | Standard code value for major components |
+| 11 | Major component given priority over other major components; minor components, when present, are mixed into the fill pattern |
+| 12 | Major component given priority over other major components; minor components are not mixed in, so only this fill pattern is shown in the borehole profile regardless of which other major and minor components are present |
+| 13 | The borehole column is divided into two halves, the left side filled with this pattern; no additional mixing occurs |
+
+**Standard** takes a code to be used for the **Standard** display in place of the input code - useful when the display code differs from the code used to record the information.
+
+**Fill signature** defines the signature shown for the key. Up to two basic signatures can be mixed. The colour that the signature standard assigns to the fill pattern appears in the **Fill colour** field; independently of that, separate foreground and background colours can be chosen, and the **more...** button opens the full colour selection or lets you define additional colours.
+
+**Background** can also be set to transparent, which gives a much clearer picture in well design drawings.
+
+{% hint style="warning" %}
+Not all printer drivers support a transparent background, so the screen display and the printed output may differ.
+{% endhint %}
+
+For the definition format behind fill patterns and the rules for mixing signatures, see [Fill Patterns and Symbols](../../configuration/fill-patterns-and-symbols.md).
+
+<!-- src: help/H0000003061#fill-pattern-key-properties -->
+
 ### Special symbol
 
 If the key is assigned to a special character group (e.g. consistency, storage density, etc.), the number of the graphic type determines the type of line or block display. Prepared groups and the freely usable groups 1 to 4 are available as special character groups.
