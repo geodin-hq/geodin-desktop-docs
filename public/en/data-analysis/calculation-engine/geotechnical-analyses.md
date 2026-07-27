@@ -168,7 +168,7 @@ Seelheim:
 
 ## Reference: Sieve analysis input mask
 
-<!-- src: help/H0000007771#sieve-input-mask -->
+<!-- src: help/H0000007771#sieve-input-mask (deviation: source prints "1 + water content * 100"; corrected to /100 - numerically impossible as printed) -->
 <!-- src: help/H0000011420#sieve-input-mask -->
 
 The input mask for sieving analysis data is structured as follows.
@@ -178,7 +178,7 @@ The input mask for sieving analysis data is structured as follows.
 The fields **wet mass** and **water content** are optional. If data is entered, the total mass is calculated. The fraction is always calculated from the data of the last sieve. The formula for calculating dry mass:
 
 ```
-dry weight = wet weight / (1 + water content * 100)
+dry weight = wet weight / (1 + water content / 100)
 ```
 
 ### Sieve sets
@@ -206,7 +206,7 @@ The shown values **residue**, **sieving loss** and **maximum grain size** are ca
 <!-- src: help/H0000007773#hydrometer-input-mask -->
 <!-- src: help/H0000011423#hydrometer-input-mask -->
 
-The input mask for elutriation analysis data is structured as follows.
+The input mask for hydrometer (elutriation) analysis data is structured as follows.
 
 ### Hydrometer
 
