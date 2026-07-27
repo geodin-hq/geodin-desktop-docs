@@ -24,6 +24,38 @@ In the Quick Search field, simple searches for objects on the map can be made to
 
 The search field can be configured to different searches (depending on the layer), as described in **Quick search**.
 
+### Search / filter objects assistant
+
+<!-- src: help/H0000007092#search-filter-assistant -->
+
+Beyond the single-keyword quick search, the **Search / filter objects** assistant finds objects in the map by condition, then selects them or removes them from the displayed map view.
+
+**Layer** - choose whether the search or filter is applied to the current layer only, or to all layers in the map.
+
+**Extent** - choose the search extent. Select *Visible map extent* to search only within the map extent currently on screen, or *Full map extent* to search everything.
+
+**Entering conditions**
+
+Searching and filtering are driven by the conditions you enter in the text field in the middle of the window. If a condition is true for an object, that object can be selected or filtered. The dialog assists you with the available fields, the possible operators, and the field values found in the attribute tables of the objects in the map.
+
+Build a search systematically, in this order:
+
+1. Field name
+2. Operator
+3. Field value
+
+**Data fields / Occurring field values** - this dropdown lists all attributes currently available for a search; which fields are offered depends on whether you are searching one layer or several. Selecting a field enters its name into the condition text field. The first 50 values of that field are then listed in the *Occurring field values* dropdown; selecting one enters it into the text field too, formatted for the field type - text values are placed in inverted commas automatically, numeric values are entered without them. Field names and values can also be typed directly into the text field.
+
+**Operators** - this list holds the most common operators.
+
+Once the condition is defined, choose what happens to the matching objects:
+
+| Option | Effect |
+|---|---|
+| **Select all matching objects** | Selects every object in the map that fulfills the conditions. |
+| **Select all matching objects successively** | Steps from one matching object to the next via the **Search / Continue** button. If the next object lies outside the visible map extent, the map can optionally pan to it; the zoom level stays constant. |
+| **Hide objects not matching** | Hides all non-matching objects from the map - useful for showing only the relevant datasets temporarily. While a filter is active, a button is available to deactivate it. |
+
 ## Reference: Preferences
 
 **Draw scalebar**
@@ -108,13 +140,10 @@ With the function "Digitise objects" it is possible to draw point, line and area
 
 The digitisation process takes place in four steps.
 
-**Choose object type and destination project**
-
-**Map contents to GeoDin data fields**
-
-[Create geometry in the map window](digitizing-objects.md)
-
-[Input general data](../navigating-the-geodin-workspace/objects/general-data.md)
+1. [Choose object type and destination project](#choose-object-type-and-destination-project)
+2. [Map contents to GeoDin data fields](#map-contents-to-geodin-data-fields)
+3. [Create geometry in the map window](#create-geometry-in-the-map-window)
+4. [Input general data](../navigating-the-geodin-workspace/objects/general-data.md)
 
 In order to digitise objects in the integrated GIS, it is assumed that the map has a coordinate system.
 
@@ -128,3 +157,45 @@ In the next section, the project assignment for the new object is defined. There
 
 1. Manual assignment: simple selection of the project in which the object is to be saved later.
 2. Definition via a field of a map layer: the field must contain the PRJID (for this case, use the button **<...>** in field "Take from map" and select the corresponding field in the new window).
+
+### Map contents to GeoDin data fields
+
+<!-- src: help/H0000011228#step-2-field-mapping -->
+
+In the second step, data fields of the map - for example from shape files - can optionally be assigned to GeoDin data fields. Use the **<...>** button behind the respective field to make an assignment.
+
+{% hint style="info" %}
+This step may be skipped. Digitisation works without any field assignment.
+{% endhint %}
+
+**Example.** The map contains a layer with polygons of the German federal states. To carry the federal-state information from the polygon over to a manually digitised point, select the field the information should be written to in the **general data** column, and enter the corresponding field of the map layer in the **source** column.
+
+The same mechanism, applied to more fields and set up once for repeated use, is described under [Digitizer options](#digitizer-options).
+
+### Create geometry in the map window
+
+<!-- src: help/H0000011229#step-3-geometry -->
+
+In the third step, the geometry of the object is captured. Depending on the object type, points, lines, or areas can be drawn. Three functions are available:
+
+| Function | Use |
+|---|---|
+| **<draw>** | Draw the geometry of the new object in the map window. |
+| **<edit object>** | Reopen the drawn object to adjust its geometry. |
+| **<delete>** | Remove the drawn geometry. |
+
+The **<Snap>** function lets you nominate a layer that the supporting points of the digitised object attach themselves to, so new geometry aligns exactly with existing features.
+
+{% hint style="info" %}
+Snap can be activated or deactivated separately at any time.
+{% endhint %}
+
+When the geometry is complete, all field assignments and the project assignment are applied.
+
+### Digitizer options
+
+<!-- src: help/H0000010551#auto-fill-from-map-layers -->
+
+The **Digitizer options** hold settings that speed up digitising GeoDin objects. While digitising, field values from different map layers can be used to fill GeoDin data fields automatically - not only the PRJID case used for project assignment, but any GeoDin data field.
+
+**Example.** Your GeoDin object type contains a field **Map Number**. Load a layer (for example a shape file) that carries this information into the map window, then create a field allocation from that layer's field to the GeoDin data field. From then on, **Map Number** is filled automatically from the shape whenever you digitise inside it.
