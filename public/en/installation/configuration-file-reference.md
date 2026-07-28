@@ -220,3 +220,31 @@ Standard: not defined = true
 Description
 
 Optical effects such as appear/disappear transitions are used in the GeoDin program user interface. In a terminal server environment this can slow down the display draw times. Setting this parameter = false turns off these effects. <!-- src: help/13/8866 -->
+
+**Section \[LayoutFolders\]** (optional)
+
+Description
+
+Makes folders with GeoDin layouts (\*.GLO files) centrally available for all users. Enter one folder per line:
+
+*\[LayoutFolders\]*
+
+*Folder1=\\\\server1\\geodin\\Layouts_all_users*
+
+*Folder2=\$%GeoDinROOT\$\\Additional_Layouts*
+
+**Section \[LayoutLists\]** (optional)
+
+Description
+
+Makes layout lists (\*.GLC or \*.GLL files) centrally available for all users in the layout overview. Enter one list per line:
+
+*\[LayoutLists\]*
+
+*List1=\\\\server1\\geodin\\layouts\\User_layout_list.GLC*
+
+*List2=\$%GeoDinROOT\$\\layouts\\Additional_layout_lists.GLL*
+
+Entries in both sections cannot be removed by individual users - they must be deleted for all users in the GeoDin.ini. For a single system-wide layout list, see also the parameter SysGLL above.
+
+<!-- src: help/H0000008611#layout-folders-and-lists -->
