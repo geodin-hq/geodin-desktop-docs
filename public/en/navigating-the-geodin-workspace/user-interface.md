@@ -90,6 +90,20 @@ documentation show the Classic design unless noted.
 | **SQL Protocol** | Alt+S | Opens the SQL protocol log |
 | **Log Folder** | Alt+H | Opens the log file directory |
 
+### Inside the help window
+
+**F1** opens the help at the chapter describing the current function or option; **Alt+F1** shows the last viewed chapter instead. Close the help window with **Esc** or the **Hide help** button. The window has its own navigation:
+
+| Feature | How it works |
+|---|---|
+| Chapter tree | The structured view of all chapters in the upper-left section. Links inside chapter text appear as blue underlined writing and jump to the linked chapter |
+| History | The **arrow** buttons at the upper left move back and forward through previously viewed chapters; the **Last viewed theme** icon selects one from a menu |
+| **Search for** field | The lower-left area lists all chapters alphabetically; typing a term reduces the list to chapters whose names contain it, regardless of case or position |
+| Full-text search | Searches the contents of all chapters (case-insensitive). Matching chapters are added to the list, and the term is highlighted yellow in the opened chapter |
+| **Print** icon | Prints the current chapter |
+
+<!-- src: help/H0000000056#help-viewer-navigation -->
+
 ## Reference: Understanding data management sections
 
 When you navigate to an object (borehole) in the tree, the following data sections are available under **Data Management**:
