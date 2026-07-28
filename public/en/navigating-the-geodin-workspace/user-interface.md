@@ -23,7 +23,7 @@ GeoDin supports client-server databases, which can be hosted on a single compute
 GeoDin databases are based on Microsoft Access files. For other backend options, see the [Installation guide](../installation/express-installation.md).
 {% endhint %}
 
-<div data-full-width="false"><figure><img src="../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption><p>Figure 1</p></figcaption></figure></div>
+<div data-full-width="false"><figure><img src="../.gitbook/assets/image (3) (1) (1).png" alt="GeoDin Databases panel with the G1_ASTM_DEMO_LasVegas database expanded to show a project's Objects, Measurement points, and Documents branches"><figcaption><p>The Databases panel: each database opens into projects, and each project into its <strong>Objects</strong>, <strong>Measurement points</strong>, and <strong>Documents</strong> branches.</p></figcaption></figure></div>
 
 
 ### Tree hierarchy and navigation
@@ -51,14 +51,14 @@ A project's **Documents** area lives directly under the project level and can ho
 
 The **System** panel provides access to system-level configuration. Within this panel, you can access and edit pre-made dictionaries, data types, and object types - including those for G1 locations and AGS standards.
 
-<figure><img src="../.gitbook/assets/Screenshot 2025-12-22 142044.png" alt=""><figcaption><p>Figure 2</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2025-12-22 142044.png" alt="GeoDin System panel with the System configuration tree expanded and the system-level methods shown in the central ribbon"><figcaption><p>The System panel: the <strong>System configuration</strong> tree lists the configurable areas (system databases, object types, data types, dictionaries, fill patterns, queries), and the central ribbon shows the system-level methods that apply to the selected branch.</p></figcaption></figure>
 
 
 ## Central ribbon
 
 When you select a location within a project, the central ribbon displays the available methods for that object. Methods are activated by **double-clicking** the method icon.
 
-<figure><img src="../.gitbook/assets/Screenshot 2025-12-22 133833.png" alt=""><figcaption><p>Figure 3</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2025-12-22 133833.png" alt="GeoDin object manager with borehole BH01 selected in the tree and its available methods listed in the central ribbon"><figcaption><p>With borehole <strong>BH01</strong> selected in the tree, the central ribbon lists the methods available for it - from <strong>Data management</strong> to <strong>Check measurements</strong>. Double-click an icon to start a method.</p></figcaption></figure>
 
 ## Beta design mode (opt-in)
 
@@ -89,6 +89,20 @@ documentation show the Classic design unless noted.
 | **Information** | Alt+I | Shows version and license validity |
 | **SQL Protocol** | Alt+S | Opens the SQL protocol log |
 | **Log Folder** | Alt+H | Opens the log file directory |
+
+### Inside the help window
+
+**F1** opens the help at the chapter describing the current function or option; **Alt+F1** shows the last viewed chapter instead. Close the help window with **Esc** or the **Hide help** button. The window has its own navigation:
+
+| Feature | How it works |
+|---|---|
+| Chapter tree | The structured view of all chapters in the upper-left section. Links inside chapter text appear as blue underlined writing and jump to the linked chapter |
+| History | The **arrow** buttons at the upper left move back and forward through previously viewed chapters; the **Last viewed theme** icon selects one from a menu |
+| **Search for** field | The lower-left area lists all chapters alphabetically; typing a term reduces the list to chapters whose names contain it, regardless of case or position |
+| Full-text search | Searches the contents of all chapters (case-insensitive). Matching chapters are added to the list, and the term is highlighted yellow in the opened chapter |
+| **Print** icon | Prints the current chapter |
+
+<!-- src: help/H0000000056#help-viewer-navigation -->
 
 ## Reference: Understanding data management sections
 
