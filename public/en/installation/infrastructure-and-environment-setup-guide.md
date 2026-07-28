@@ -121,3 +121,9 @@ Database=myDatabase;User_Name=myUser;Password=secret;Server=tcp:myInstance.datab
 ```
 
 <figure><img src="../.gitbook/assets/connection_mssql_cloud 1.png" alt=""><figcaption></figcaption></figure>
+
+## 4. Internet Access and Proxy
+
+Some GeoDin functions use an internet connection - for example the [online help update](../support/updating-and-upgrading/release-and-beta-update-guide-until-geodin-10.1.md) and object-type downloads. If your network reaches the internet through a proxy, enter the proxy settings in GeoDin's system configuration. The settings are saved on the local system and are used for every internet connection GeoDin makes.
+
+<!-- src: help/H0000006331#proxy-configuration -->
