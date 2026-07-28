@@ -137,11 +137,85 @@ To use snippets in the current layout choose the option **Use layout snippets** 
 * **Layout name** - Click in this field to choose the layout snippet file. The link to the file is saved with a relative path, hence snippets should be saved in the same folder or in sub-folders as the layouts. This ensures that layouts retain the relationship to their snippets even when the folder containing the layouts is moved. This is however only recommended practice and not obligatory - snippets can be stored in any folder, though this requires potentially more care.
 * **Using layout snippets** - If a snippet is temporarily not required, it may be deactivated rather than deleting it from the layout. In this case it will not be loaded or calculated. If the drawing layer containing the snippet is made invisible, the snippet will not be shown, but will be loaded and calculated.
 * **Bring to front** - The default setting places snippet elements in the background; this option allows them to be placed in the foreground.
-* **Scale to page** - If a layout snippet has a different page size than the current layout, it will be added in the top left corner of the current layout, where it can be more easily scaled to fit the current page size. To achieve this the graphical elements must use **Anchors**, which control how scaling and positioning are carried out when changing the page size/orientation.
+* **Scale to page** - If a layout snippet has a different page size than the current layout, it will be added in the top left corner of the current layout, where it can be more easily scaled to fit the current page size. To achieve this the graphical elements must use [Anchors](#anchors), which control how scaling and positioning are carried out when changing the page size/orientation.
+
+### Anchors
+
+<!-- src: help/H0000008971#anchorage-and-alignment -->
+
+Anchors tie a graphic element to a specific point in the layout, which is what makes a layout survive a change of paper format - a company logo, for example, stays in the bottom right corner. The default anchor point is the top left corner.
+
+**Anchorage**
+
+| Anchorage | Behavior on a page-size change |
+|---|---|
+| One corner | No scaling. The horizontal and vertical distance to the chosen corner is kept. |
+| One margin (for example horizontal at the top) | Scaling along that margin. The height of the element is kept, as are the distances to the left, right, and top margins. |
+| All four corners | Horizontal and vertical scaling. All four corners of the element keep their distance to the related corners of the page. |
+
+**Dynamic positioning**
+
+The standard calculation for anchor points is static. With dynamic positioning, the distance to the margins is calculated relative to the page-size change instead: if an axis grows, the anchor position moves relative to that enlargement.
+
+**Horizontal and vertical alignment of anchor points**
+
+In addition to anchorage, the element can be aligned to the page. The alignment applies to the anchor points and is carried out when the page size changes. It makes it possible, for example, to center an element without scaling it:
+
+| Anchorage | Alignment | Result |
+|---|---|---|
+| Left top | Horizontal center and vertical center | The anchor point keeps its position in the center both ways; the element size is unchanged. |
+| Left top | Horizontal center | The anchor point keeps its horizontal center position; the element size is kept. |
+| Left top | Vertical center | The anchor point keeps its vertical center position; the element size is kept. |
+| Top left and top right | Vertical center | The element scales horizontally because of the left and right anchors, and keeps its distance to the vertical center. |
+| Left top and right top | Top | The element scales horizontally; it keeps its distance to the top of the page, so a reduced page height makes it move down. |
+| Left top and right top | Bottom | The element scales horizontally; it keeps its distance to the bottom of the page, so a reduced page height makes it move up. |
 
 ### Selection syntax
 
 To describe parameter relations, string symbols are used like in labeling macros or formulas, for example `$NO3$` for nitrate. The condition has to contribute a logical result (true or false). Example for a condition (nitrate > 10): `$NO3$ > 10`. Several partial conditions can be connected with the logical operators AND and OR.
+
+#### The Selector dialog
+
+<!-- src: help/H0000000529#selector-dialog -->
+<!-- src: help/H0000000654#selector-dialog -->
+<!-- src: help/H0000006324#selector-dialog -->
+
+A condition is entered in a selector. The dialog has three parts:
+
+* **Name** - any name you like. It makes selectors easier to tell apart in the object properties when several are defined, and it is the name shown in the layout interface when the selector is permitted to appear there.
+* **Table** - the table or data type whose data field content the condition applies to. Click the icon at the right of the entry field to choose. The list also offers the option **-All data types-**, which is useful when one parameter occurs in several data types (for example `$SMPDATE$`): the selector then only has to be created once, regardless of which data type ends up being used in the presentation.
+* **Condition** - the selection criterion, entered as a logical term. Clicking inside the input field opens a building dialog listing the possible parameters; a parameter name is applied to the editing field by double-clicking it.
+
+**Chaining several selectors**
+
+Several selectors are managed in the list of selectors. They are worked out in the order set there, and a dataset has to fulfill *all* of them to stay in the result list - single selectors are correlated with an **AND**. Restricting values to a time period, for example, is defined with two selectors:
+
+```
+Selector 1: Name = Start date   Condition = $SMPDATE$ >= '20150601'
+Selector 2: Name = End date     Condition = $SMPDATE$ <= '20150630'
+```
+
+Only samples falling inside June 2015 fulfill both conditions, so only those appear in the presentation.
+
+**Parameterized conditions**
+
+Instead of writing a complete condition such as `$WAT:CL$ > 100`, the comparison value can be left as a parameter. The layout interface then no longer shows the whole condition - only the value has to be entered:
+
+```
+$WAT:CL$ > %NUMERICPARAM
+```
+
+The following placeholders are available:
+
+| Placeholder | Use with |
+|---|---|
+| `%NUMERICPARAM` | Comparative parameters with numeric data fields |
+| `%STRINGPARAM` | Comparative parameters with string fields |
+| `%DATEPARAM` | Comparative parameters with date fields |
+
+Using a parametric condition activates the **Default value** input field, where a standard value for the parameter is predefined - for example `100`. The default value is shown and entered in the format appropriate to the field, so a date can be typed according to the current country setting rather than in selection syntax.
+
+Parameterization pays off in combination with the option **Make available as quick setting**: in the selection parameter of the layout, only the value is entered, not the condition text. The value chosen this way can also be printed in the layout with the `$%SelectorContent:...$` macro - see [Using the operator HASLOOP in reports](#using-the-operator-hasloop-in-reports) for the syntax.
 
 #### String fields and wildcards
 

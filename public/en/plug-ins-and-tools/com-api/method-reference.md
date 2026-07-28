@@ -657,6 +657,80 @@ PNG: Speed and compression
 
 Values above 70 should not be used; the used library creates these PNG files sporadically defective, so that the images cannot be displayed with all programs.
 
+### GetPrintFile
+
+<!-- src: help/H0000008443#getprintfile -->
+
+Function to create a print file.
+
+{% code %}
+```
+function GetPrintFile(const Database, Username, Password, ProjectID: WideString; LocationID: Integer; const VersionName, LayoutFileName, OutFileName, PrintDevice: WideString; PrintFileType, Scale, StartPageNumber, EndPageNumber: Integer; out PageCount: Integer): OleVariant;
+```
+{% endcode %}
+
+{% hint style="info" %}
+**Note:** This function is available in the image server and portal server modules.
+{% endhint %}
+
+| Parameter | Description |
+|---|---|
+| `Database` | Database connection name, e.g. "GeoDin COM Example" |
+| `Username` | Database login name (for Access a space character ' ', no empty string!) |
+| `Password` | Database login password (for Access a space character ' ', no empty string!) |
+| `ProjectID` | GeoDin project ID / identification (6 characters) |
+| `ObjectID` | GeoDin object ID / identification number |
+| `VersionName` | Empty string `''` or the versions of the borehole logs and well design to be displayed. Follows the same extended rules as the `VersionName` parameter of [GetImage](#getimage). |
+| `LayoutFileName` | Full / complete file name of the layout file, e.g. `'C:\PROGRAMs\GEODIN\LAYOUTS\BOREHO1.GLO'` |
+| `OutFileName` | Either empty string (no file is created) or full / complete file name for the resulting print file, e.g. `'C:\SAMPLE1.JPG'` |
+| `PrintDevice` | Name of the output device. Output devices have to be configured in the configuration file GEODIN.INI (see [Configuring print devices](#configuring-print-devices) below). |
+| `PrintFileType` | `1` (= use of a graphic layout; other formats are not supported at the moment) |
+| `Scale` | Vertical scale of the object in the layout (overwrites the settings in the layout) |
+| `StartPageNumber` | First page printed (`0` for all) |
+| `EndPageNumber` | Last page printed (`0` for all) |
+| `PageCount` | Return of the page number of the current object in the selected scale |
+
+If the parameter `OutFileName` is transferred as an empty string, the function returns the print file as OleVariant instead of writing it to disk.
+
+**Using the function**
+
+With this function a print file can be created using an installed printer driver. Which driver is used is decided by the alias passed in `PrintDevice`, so the printer driver can be changed without changing the COM call.
+
+#### Configuring print devices
+
+<!-- src: help/H0000010451#print-devices -->
+
+The printer drivers that may be used have to be configured in a separate section `[PrintDevices]` in the configuration file GEODIN.INI:
+
+```
+[PrintDevices]
+PDF=Acrobat PDFwriter
+Win2PDF=Win2PDF
+SW=Canon GP300-405 PCL
+COL=\\UWG4\CLC900_PRINT
+```
+
+In the example four possible printer drivers have been configured; the first two of them are used to create PDF files. The alias name on the left of each entry is what has to be transferred to `GetPrintFile` in the parameter `PrintDevice` - for example the string `PDF` to use the Acrobat PDF Writer.
+
+The correct denominations of the printer drivers are most easily taken from the print dialogue of any application, because the printer names shown in the system control usually differ from the correct names of the output devices.
+
+The same `[PrintDevices]` section supplies the `PrintDevice` values used by the print method described under [Print graphic or report](#print-graphic-or-report).
+
+#### Spool time-out caveat
+
+Because the print file is generated through the print manager of the operating system, it can happen that - when the file is requested as return OleVariant - the creation of the temporary print file is not yet completed although the print manager has indicated so. The result of the function then contains only a part of the print file, or an error message is raised indicating that the temporary print file cannot be opened.
+
+To avoid this time-critical behavior, define the parameter `SpoolTimeOut` in the section `[System]` of GEODIN.INI:
+
+```
+[System]
+...
+SpoolTimeOut=5
+...
+```
+
+The value is the number of seconds that the function waits for the final completion of the print file before providing it as OleVariant and ending the call.
+
 ### GraphicWidth
 
 {% code %}
@@ -842,7 +916,7 @@ Win2PDF=Win2PDF
 SW=Canon GP300-405 PCL
 ```
 
-A more detailed description of this section you find in the information about the function "GetPrintFile". `DeviceName` has to contain a valid entry of this configuration section.
+A more detailed description of this section you find under [Configuring print devices](#configuring-print-devices) in the function [GetPrintFile](#getprintfile). `DeviceName` has to contain a valid entry of this configuration section.
 
 **FileName:**
 

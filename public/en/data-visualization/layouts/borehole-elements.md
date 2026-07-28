@@ -67,6 +67,20 @@ Instead of using fill patterns from the original petrographic description, the b
 
 **Individual conditions:** A single query can fill a borehole log without a layer query file. Layers matching the query are filled with a chosen pattern; non-matching layers remain empty. Select the data field, enter the code to search, and choose a fill pattern.
 
+<!-- src: help/H0000003143#layer-query-file -->
+
+**Layer query file:** Select the layer query file from the drop-down and choose the layer query operation to perform. A typical result shows the lithography on one side of the log and the classification result - for example hydraulic conductivity - on the other.
+
+**Layers matching several classifications:** One layer can satisfy more than one classification of the query. In that case up to four mixed fill patterns are displayed in the same layer band. For a clearer result, set the **Fill pattern mixer** to **Main components**: the matching classifications are then drawn as separate bars side by side instead of being blended into one band.
+
+**Labeling with the classification result:** Three variables carry the layer query result into the log labeling (build them into the text macro like any other variable):
+
+| Variable | Content |
+|---|---|
+| `$%GLQ_ID$` | List of the IDs of the layer classifications the layer fulfills |
+| `$%GLQ_LNAME$` | List of the names of those layer classifications |
+| `$%GLQ_CRES$` | Calculated value of the **first** layer classification that is fulfilled |
+
 #### Consistency display
 
 Controls the display of consistency, compactness, and groundwater symbols on the right side of the borehole. Options include whether to draw the symbols, whether to show them in the automatic legend, and line type configuration.
@@ -105,6 +119,16 @@ When displaying depth-oriented images in the borehole log element:
 #### Image header settings
 
 A header from the first image (smallest start depth) can be displayed above the image column, provided that upper and lower pixel positions for the header area were defined in the document description. Options include "Draw header", "Repeat on every page", and "Edit header range" to remove undesired margins.
+
+## Reference: Samples element data source
+
+<!-- src: help/H0000001152#samples-data-source -->
+
+By default the Samples element displays every sample of the object, regardless of sample type.
+
+**Restricting which sample types are shown:** In the **Sample types** entry field, enter the sample type as its dictionary code and choose whether the listed types are the only ones drawn (**Include**) or the only ones left out (**Exclude**). Several codes can be entered separated by commas. The codes are searched for in the data field selected alongside the field. For example, to show only the sampling intervals in which a special sample was taken, select the data field that holds the sample type and enter `so`.
+
+**Redefining the interval boundaries:** By default the top and bottom of each drawn sampling interval come from the sample table fields that define the top and bottom of the sample. Where a different span is wanted, the interval boundaries can instead be taken from other numeric fields of the sample table - for example from the top of the sample to its penetration depth.
 
 ## Report Element
 

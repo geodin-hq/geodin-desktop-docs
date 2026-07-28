@@ -116,6 +116,25 @@ Dynamic captions provide per-data-record information in column headers of labora
 - **Type** - Choose between a text footer or a statistical-value footer.
 - **Decimal places** - Controls precision of calculated values. Set to `0` to strip trailing insignificant decimals; otherwise all calculated decimals are shown.
 
+**Statistics are calculated per column.** A statistical footer always evaluates the entire column of the report. Whether a column can be evaluated at all is detected automatically from its content: a column holding text produces no statistics. The calculation can also be switched off for an individual column where it is not meaningful - a column of depth values, for example - through the column's own properties (see [Column properties](#reference-column-properties)).
+
+**Group report lines.** Instead of a single footer block at the end of the report, footers can be calculated for groups of lines, so a report that covers several boreholes or samples carries statistics per borehole or per sample. Enter the position of the grouping column in **Number of the column with the grouping feature**; GeoDin inserts a footer each time the content of that column changes.
+
+**Example** - grouping on column 1 (Borehole) inserts a minimum footer at every change of borehole:
+
+| Borehole | Sample | Value |
+|---|---|---|
+| B1 | P1 | 10 |
+| B1 | P2 | 12 |
+| B1 | P3 | 15 |
+| Minimum | | 10 |
+| B2 | P1 | 25 |
+| B2 | P2a | 20 |
+| B2 | P3 | 28 |
+| Minimum | | 20 |
+
+<!-- src: help/H0000007189#footer-statistics -->
+
 ## Reference: Parameter settings (list comparison)
 
 - **Sensitivity of response** - Adjusts the tolerance for list-comparison checks. At 100 % (default) the comparison is exact. Reducing to 90 % introduces a 10 % margin, so a measured value of 95 mg/l would be flagged against a limit of 100 mg/l.
@@ -127,3 +146,74 @@ Dynamic captions provide per-data-record information in column headers of labora
 Report layouts can include barcode or QR code elements. Select the code type, rotation, colour, and whether human-readable text is shown below the code.
 
 Supported types: EAN-13, EAN-8, UPC-A, UPC-E, Code 128, ITF, Interleaved 2 of 5, Code 39, Code 39 Extended, Code 93, Code 93 Extended, MSI, Code 11, QR code.
+
+## Reference: Export measurement values dialog
+
+<!-- src: help/H0000003880#export-measurement-values -->
+
+At the level of a measurement point or a group of measurement points, the Object Manager offers the method **Export measurement values**. Starting it opens a dialog that holds every setting for the export; the matching import method sits beside it (see [Formulas in measurement values](../data-analysis/formulas/formulas-in-measurement-values.md#reference-import-export)).
+
+- **Data type** - the drop-down lists the data types available for the selected measurement point(s).
+- **Export type** - Microsoft Access database, UBA CSV, free CSV, GMS, or Access table (lines). The Access format is the most portable of these and is read by many Windows applications.
+- **File name** - where the exported file is written.
+- **Parameter list** - the list of data fields to export. Click **Edit** to change it.
+
+Every exported data set is augmented with the matching general data: the short and long name of the object and the name of the measurement point (`SHORTNAME`, `LONGNAME`, `INVNAME`), plus the internal measurement point ID and sample number (`INVID`, `SMPID`). With knowledge of the GeoDin data model, those two identifiers let you rebuild the links between exported tables.
+
+For the **Microsoft Access database** type, select an existing database or create a new one as the export target; the format-specific settings below apply to the other types.
+
+### UBA CSV
+
+The UBA format follows the German federal and state agreement on groundwater data exchange (Annex II.x 12.04, table template for the LAWA AK "Optimizing the groundwater service", Chemnitz, 1999-02-04). GeoDin's export covers the measurement values only.
+
+Before this format can be used, the parameters must carry the corresponding format information on the system side - see [Set-up of the information for UBA-export](../configuration/object-types-management.md#set-up-of-the-information-for-uba-export).
+
+The output is a text file in CSV form: one line per parameter, semicolon between entries, comma as decimal separator. The entries appear in this order:
+
+1. Measurement point number
+2. Measurement dimension number
+3. Division identification number
+4. Unit
+5. Day
+6. Month
+7. Year
+8. Detection limit
+9. Measurement value
+10. Features
+11. Remarks
+
+| Entry | Coding |
+|---|---|
+| Division identification number | `1` for the complete content (dissolved and undissolved parts, homogenized sample after DIN), `6` for the dissolved part only (separation by filtration or centrifugation) |
+| Unit | `02` m3/s, `04` degrees Celsius, `06` mS/m, `07` mg/l, `10` micrograms/l, `23` relative values, `29` mmol/l, `33` m |
+| Features | `-` when the measured value lies below the detection limit |
+
+The measurement point number is read from the general data of the measurement point (short name); the measurement dimension number and the division identification number come from the system settings; measurement value and time come from the data set of each sample. If the export unit differs from the unit used in GeoDin, the value is converted during the export.
+
+Detection limits resolve in this order: a detection limit entered in the supplementary information of the parameter is used first; otherwise the default stored in the system settings applies. A measurement recorded below the detection limit (for example `-0,05`) is itself used as the detection limit, and `-` is written in the Features entry.
+
+Example of exported measurement values (several parameters from one data set):
+
+```
+17/80;1061;1;;13;02;1990;0;7,1;;
+17/80;1082;1;06;13;02;1990;0;72;;
+17/80;1246;1;07;13;02;1990;194;0,025;;
+17/80;1244;1;07;13;02;1990;53;3,8;;
+```
+
+### Free CSV
+
+The data are exported as comma-separated text. The first line defines the column names, the point is the decimal separator, and the comma separates the columns. The general-data fields listed above lead the header line, followed by one column per exported parameter:
+
+```
+SHORTNAME,LONGNAME,ZCOORDB,ZCOORDE,XCOORD,YCOORD,MKZ,INVNAME,INVZBEG,INVZEND,INVID,INVTYPE,SMPID,SMPNAME,SMPDATE,SMPTIME,NO3,SO4,FE_G,MG,NA,AOX,CKW,BTX
+17/80_1,"17/80 Example 1",40.50,56.00,5408320.00,5817447.00,,OP,4.30,6.30,8NKE420004FIL001,FIL,77,17/80_1,13.02.1990,20:12,2.1,0,,,,,,
+```
+
+### GMS
+
+The GMS format uses specially defined classification parameters, which can be filled with [general formulas](../data-analysis/formulas/formula-basics.md#general-formulas). Z is calculated with respect to the height datum. So that all data sets can be ordered by height, GMS3 records also export the top of the borehole and the top and bottom of the filter. Where several measurement rows exist per filter, run the export with time selectors to get unambiguous results.
+
+### Access table (lines)
+
+The parameters are written into an MS Access database with the samples in lines and the parameters in columns. Select an existing database or create a new one before exporting, and give the output table a name. If a table of that name already exists in the selected database, GeoDin asks whether the existing data should be overwritten.
