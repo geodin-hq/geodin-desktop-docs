@@ -24,3 +24,20 @@ public/en/navigating-the-geodin-workspace/workspace-and-data-management.md
 public/en/data-analysis/data-analysis-overview.md
 public/en/data-visualization/visualization-overview.md
 public/en/administration.md
+
+# Style rules section 2 exempts these page types as short by nature - the
+# MIN_LINES heuristic does not fit them. Each is complete as written.
+# Landing page:
+public/de/README.md
+# Troubleshooting pages:
+public/en/support/troubleshooting/update-incomplete-message-until-geodin-10.1.md
+public/en/support/troubleshooting/configure-network-dongle-access-geodin-7-9.0.md
+# Frozen page (installation/**), complete with a See also section:
+public/en/installation/deployment-modes.md
+# Canonical-home pointer created by the dedup wave - points at layer-queries.md:
+public/en/data-analysis/queries/complex-layer-queries.md
+# Short focused feature page; enrich when a real how-to source exists:
+public/en/integrations/leapfrog-geo-export.md
+# Two complete sections in dense prose; the MIN_LINES heuristic counts lines,
+# not words, so long paragraphs score low. Enrich candidate, not a stub:
+public/en/support/updating-and-upgrading.md
