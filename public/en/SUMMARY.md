@@ -179,7 +179,7 @@
 ## Support
 
 * [Get Support](support/get-support.md)
-* [Changelog](support/changelog.md)
+* [Release Notes](support/release-notes.md)
 * [Troubleshooting](support/troubleshooting.md)
   * [Database connection problems](support/troubleshooting/database-connections.md)
   * [Object type and dictionary problems](support/troubleshooting/object-types-and-dictionaries.md)
