@@ -4,7 +4,7 @@ description: GeoDin's built-in user management system, licensing, single-ownersh
 
 # Users and Roles
 
-GeoDin includes an optional built-in user management system, runs on Windows-login authentication, and uses two licensing systems (a hardware-bound seat model for Desktop and a Keygen-based key model for Onsite). This page covers user accounts, the single-ownership model that governs Onsite forms, licensing, and team-scope behaviour for custom content.
+GeoDin includes an optional built-in user management system, runs on Windows-login authentication, and uses two licensing systems (a hardware-bound seat model for GeoDin and a separate key-based seat model for Onsite). This page covers user accounts, the single-ownership model that governs Onsite forms, licensing, and team-scope behaviour for custom content.
 
 For specific access-control topics, see also:
 
@@ -65,22 +65,18 @@ Two license types exist (Standard and Professional). With a Professional license
 - Licenses are **hardware-bound**. Hardware changes (new laptop, Windows 10 -> 11 upgrade) require reactivation by GeoDin support.
 - An **educational package** is available for colleges and students.
 - Civil 3D plugin (GeoDin Ground) users do not need a GeoDin license. Only people who manage and curate the database need paid licenses.
-- **GeoDin Onsite is licensed separately** and is not included with a GeoDin license. It uses its own seat-based licensing system - see [GeoDin Onsite licensing](#geodin-onsite-licensing-keygen--hardware-binding) below.
-- For contractors, bundled Onsite licensing is available.
+- **GeoDin Onsite is licensed separately** and is not included with a GeoDin license. It uses its own seat-based licensing system - see [GeoDin Onsite licensing](#geodin-onsite-licensing) below.
+- Bundled Onsite licensing is available for contractors - contact GeoDin sales for details.
 
 For pricing details, see [geodin.com/pricing](https://geodin.com/pricing).
 
-## GeoDin Onsite licensing (Keygen + hardware binding)
+## GeoDin Onsite licensing
 
-Onsite uses a separate seat-based licensing system delivered via license key.
+Onsite uses a separate seat-based licensing system delivered via license key. A single key can cover multiple seats.
 
-- **Key format:** 30-character uppercase alphanumeric. A single key can cover multiple seats (multi-seat license).
-- **Backend:** Keygen (keygen.sh). Support staff manage licenses via the Keygen dashboard - suspend, renew, revoke, view customer info.
-- **Shopify integration:** purchases trigger license automation; customer IDs shown in Keygen are Shopify customer IDs.
-- **Hardware binding:** each activation is bound to a machine via a hardware fingerprint that cannot be spoofed. If the disk or memory is swapped, the license becomes unlinked and an admin must remove the old machine link in Keygen so the license can re-activate.
+- **Hardware binding:** each activation is bound to a machine. If the disk or memory is swapped, the license becomes unlinked - contact GeoDin support to re-activate it.
 - **Offline mode:** Onsite normally validates its license on startup. With no internet (e.g. tablet in the field), it falls back to offline mode for up to 30 days; after 30 days the license must re-validate online.
 - **License Manager UI** displays: key, license name (customer name), expiry date, maximum GeoDin version, offline grace period, multi-seat count, machine name, and hardware ID. Available in English and German.
-- **Anti-abuse:** only existing GeoDin customers can self-serve Onsite; unknown emails trigger manual sales approval.
 - **Onboarding:** post-purchase the customer receives an installer URL and a license key. First launch runs the License Wizard, which binds the license to the machine hardware ID.
 
 ## Dictionaries, custom content, and team scope
@@ -96,4 +92,4 @@ Custom dictionaries, custom tables, and configuration settings are stored in the
 
 ## Trial and evaluation access
 
-GeoDin offers a **free 30-day trial** with no user limit and extensions available on request. There is no hard stop on the trial. The trial-first approach is actively recommended - no customer should buy GeoDin without trialling it first.
+GeoDin offers a **free 30-day trial** with no user limit; extensions are available on request.
