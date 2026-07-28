@@ -172,7 +172,7 @@
 * [Database Visibility](user-management/database-visibility.md)
 * [Multi-User Collaboration](user-management/multi-user-collaboration.md)
 * [Data Privacy and Ownership](user-management/data-privacy-and-ownership.md)
-* [Updating & Upgrading](support/updating-and-upgrading.md)
+* [Updating and upgrading](support/updating-and-upgrading.md)
   * [Release and Beta Update Guide (until GeoDin 10.1)](support/updating-and-upgrading/release-and-beta-update-guide-until-geodin-10.1.md)
   * [Upgrade from 10 or Earlier](support/updating-and-upgrading/upgrade-paths.md)
 
