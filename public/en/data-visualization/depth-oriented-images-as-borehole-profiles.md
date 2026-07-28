@@ -38,7 +38,7 @@ Place all core photos in one folder (e.g., `core photos`) for easier display lat
 
 ***
 
-The borehole log element is not limited to layer data and documents: its scaled (often tabular) view can be based on any database table that carries a depth value - sample data or well design data, for example. Choose the table with the data-source icon at the right of the entry field in the element's object properties. For layer data you can additionally choose between **Original data** (the database contents as recorded) and analyzed contents based on a [layer query](../data-analysis/queries/layer-queries.md).
+The borehole log element is not limited to layer data and documents: any database table with a depth value (e.g., sample data or well design data) can serve as its data source. Select the table with the icon at the right of the entry field in the element's object properties. For layer data, choose between **Original data** (the database contents as recorded) and analyzed contents based on a [layer query](../data-analysis/queries/layer-queries.md).
 
 <!-- src: help/H0000003036#data-source -->
 
