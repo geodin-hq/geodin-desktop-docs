@@ -68,6 +68,7 @@
   * [Data Management](navigating-the-geodin-workspace/objects/data-management.md)
 * [Working with Measurement Data](navigating-the-geodin-workspace/measurement-values/working-with-measurement-data.md)
   * [Data Sequences and CPT](navigating-the-geodin-workspace/measurement-values/data-sequences-and-cpt.md)
+  * [Test Plans](navigating-the-geodin-workspace/measurement-values/test-plans.md)
 * [Managing Documents](navigating-the-geodin-workspace/documents/managing-documents.md)
   * [Document Organization](navigating-the-geodin-workspace/documents/document-organization.md)
 
