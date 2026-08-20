@@ -59,7 +59,7 @@ Lower lower cretacious
 
 Lower cretacious
 
-With the **apply** button, the code of the selected entry "Lower Cretacious" can be entered into the input field _"Key:"_ (in this case: kru (german SEP 3 stratigraphy)). To search for several codes simultaneously, these can be entered separated by a comma:
+With the **apply** button, the code of the selected entry "Lower Cretacious" can be entered into the input field _"Key:"_ (in this case: kru (german SEP3 stratigraphy)). To search for several codes simultaneously, these can be entered separated by a comma:
 
 kru,kru1,kru2
 
@@ -73,7 +73,7 @@ It is easier to use wildcards in place of precise codes, using special character
 
 This way, the code list in the given example kru,kru1,kru2 could be simplified to:
 
-kru% (German SEP 3 stratigraphy)
+kru% (German SEP3 stratigraphy)
 
 _**Note:**_ _The use of wildcard characters simplifies the definition of entire lists of keys but also carries the risk of including keys in the search that are not desired. To check this, click on the percent symbol at the end of the input field to view a list of all keys that are included in the search through the wildcard definition._
 
@@ -820,7 +820,7 @@ Give the calculation a name and select the classification that serves as the cal
 ## Reference: Additional Query Options
 ### Search position (code hierarchy)
 
-When using structured dictionaries (e.g. SEP 3) that contain hierarchical code descriptions, the search can optionally be restricted to a specific position in the hierarchy:
+When using structured dictionaries (e.g. SEP3) that contain hierarchical code descriptions, the search can optionally be restricted to a specific position in the hierarchy:
 
 **A) Arbitrary** - Searches the entire data field regardless of hierarchy level; the code is found wherever it appears.
 

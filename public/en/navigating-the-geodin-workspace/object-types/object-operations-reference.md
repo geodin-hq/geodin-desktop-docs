@@ -862,7 +862,7 @@ The following keys have special functions for working in the layer data mask edi
 **F3** Syntax control\
 **F4** Turns the graphic preview on and off
 
-**F7**Preview of layer queries (only for SEP 3)
+**F7**Preview of layer queries (only for SEP3)
 
 In the input screen the information of each layer can be edited. The lower layer boundary of the previous and the next layer is displayed left and right beside the entry field for the depth value.
 

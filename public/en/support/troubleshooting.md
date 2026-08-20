@@ -80,7 +80,7 @@ $%COND[#WAS:AL#like'<%']'-'$%CALC[$WAS:AL$*1@.2]
 
 <!-- src: support/sep-pointer#canonical-home -->
 
-SEP 1 / SEP 3 topics - conversion, the exchange database, and KSYS
+SEP1 / SEP3 topics - conversion, the exchange database, and KSYS
 coordinate-code errors - are covered in depth on the German support portal,
 which is the authoritative home for SEP content:
 [SEP1 to SEP3 conversion](https://support.geodin.com/hc/de/articles/360022314873-Konvertierung-von-SEP1-nach-SEP3),

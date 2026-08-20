@@ -15,7 +15,7 @@ layers, and report outputs.
 |---|---|---|---|---|
 | **AGS 4** (4.0.4 and 4.1.1) | Yes | Yes | Complete site investigation data: locations, ground descriptions, samples, lab results | [AGS import](import/ags-import.md), [AGS export](export/ags-export.md) |
 | **GeoDinML** | Yes | Yes | GeoDin's own XML exchange format; the bridge from GeoDin Onsite field data to the office | [GeoDinML import](import/geodin-ml-import.md), [GeoDinML export](export/geodinml-export.md) |
-| **SEP 3** | Yes | - | German state-authority borehole data, delivered as an Access database and read via an exchange database | [SEP3 exchange database](import/sep3-exchange-database.md) |
+| **SEP3** | Yes | - | German state-authority borehole data, delivered as an Access database and read via an exchange database | [SEP3 exchange database](import/sep3-exchange-database.md) |
 | **GEF** | Yes | - | CPT data in the format standard in the Netherlands | [Data sequences import](import/data-sequences.md) |
 | **Free-format ASCII** | Yes | - | CPT and other depth-oriented measurement series with configurable import filters | [Data sequences import](import/data-sequences.md) |
 | **gINT databases** | Yes | - | Legacy borehole databases, converted to GeoDinML by the gINT converter (PROJECT, LITHOLOGY, POINT, and SAMPLING groups) | [Convert gINT databases](../plug-ins-and-tools/introduction/convert-gint-databases-to-geodinml.md) |
@@ -51,6 +51,6 @@ layers, and report outputs.
   route in and out. See [AGS 4](../navigating-the-geodin-workspace/object-types/ags-4.md)
   for how AGS groups map onto GeoDin object types.
 - **Migrating a legacy database:** use the gINT converter for gINT databases;
-  German SEP 3 deliveries go through the exchange database.
+  German SEP3 deliveries go through the exchange database.
 - **Bulk tabular edits:** export Excel, edit, re-import - the export doubles as
   the import template. See [CSV and Excel import](import/csv-and-excel-import.md).
