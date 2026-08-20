@@ -37,7 +37,7 @@ The following section describes **GeoDin Onsite** form layout behavior - the Ons
 
 GeoDin Onsite is a digital form-filling application. It currently ships with 10 form layouts, selected from the 150+ layouts that exist in Gaia Forms (the predecessor tool).
 
-Form types: **G1 drilling form** (code `G1D`), **Step 3 form** (ISO standard), **picture log**, **standalone Sample Picture Log** (code `SPL`), and a combined **Drilling Report + SPL bundle** (`Dr+SPL`).
+Form types: **G1 drilling form** (code `G1D`), **SEP3 form** (ISO standard), **picture log**, **standalone Sample Picture Log** (code `SPL`), and a combined **Drilling Report + SPL bundle** (`Dr+SPL`).
 
 The G1 drilling form has 8 pages by default, but pages are switchable via "Show/hide pages" (menu under the logo). Users can turn pages on/off based on need - for example, switching off SPT, discontinuities, sub-samples and switching on water levels yields 5 pages.
 

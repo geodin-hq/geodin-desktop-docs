@@ -12,7 +12,7 @@ For general graphic-element properties shared across all layout elements (elemen
 
 If the current object has more than one layer table, select the layer table that contains the groundwater information. Set to **Automatic** to use the first available layer table of the borehole.
 
-For object types that record groundwater levels in a separate table (for example, SEP 3), this selection has no effect - the information is always read from the dedicated groundwater table.
+For object types that record groundwater levels in a separate table (for example, SEP3), this selection has no effect - the information is always read from the dedicated groundwater table.
 
 **Groundwater coding - SEP-compatible boreholes**
 
@@ -40,9 +40,9 @@ Groundwater levels above the surface level (artesian) are prefixed with `+` insi
 
 The appearance of the groundwater triangles for each code is controlled by the dictionary settings and can be adjusted in the dictionary.
 
-**Groundwater coding - SEP 3 boreholes**
+**Groundwater coding - SEP3 boreholes**
 
-For SEP 3 boreholes, groundwater levels are recorded in the separate **Groundwater** collection mask rather than the borehole table. Artesian levels are entered as negative values (a `-` prefix), where negative = above surface level and positive = below surface level.
+For SEP3 boreholes, groundwater levels are recorded in the separate **Groundwater** collection mask rather than the borehole table. Artesian levels are entered as negative values (a `-` prefix), where negative = above surface level and positive = below surface level.
 
 ### Graphic properties
 

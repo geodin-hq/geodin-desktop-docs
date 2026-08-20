@@ -58,7 +58,7 @@ Available while entering or editing layer descriptions in the layer data mask ed
 | **F2** | Open the dictionary for the current field (searchable) |
 | **F3** | Run syntax control |
 | **F4** | Turn the graphic preview on and off |
-| **F7** | Preview of layer queries (SEP 3 only) |
+| **F7** | Preview of layer queries (SEP3 only) |
 
 ## Data grids and tables
 

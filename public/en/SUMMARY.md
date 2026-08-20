@@ -51,7 +51,7 @@
 * [AGS Import](data-collection/import/ags-import.md)
 * [GeoDinML Import](data-collection/import/geodin-ml-import.md)
 * [Cross-Database Object Copying](data-collection/import/cross-database-object-copying.md)
-* [SEP 3 Exchange Database Import](data-collection/import/sep3-exchange-database.md)
+* [SEP3 Exchange Database Import](data-collection/import/sep3-exchange-database.md)
 
 ## Workspace & Data Management
 

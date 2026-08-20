@@ -1,6 +1,6 @@
 ---
 description: >-
-  GeoDin object types - the data-entry schemas (G1, AGS4, German Step 3, ISO,
+  GeoDin object types - the data-entry schemas (G1, AGS4, German SEP3, ISO,
   and others) behind boreholes, locations, and custom tables.
 ---
 
@@ -10,9 +10,9 @@ description: >-
 
 Object types are viewable under `System > System Configuration > Object Types`.
 
-Common object types include Location (also known as "G1"), AGS4 (recently added and published), plus German Step 3, ISO variants, and others depending on the installation.
+Common object types include Location (also known as "G1"), AGS4 (recently added and published), plus German SEP3, ISO variants, and others depending on the installation.
 
-Object types also include German standard (Step 3) and ISO variants with slightly different field definitions.
+Object types also include German standard (SEP3) and ISO variants with slightly different field definitions.
 
 ## The G1 object type
 

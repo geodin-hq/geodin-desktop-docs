@@ -23,12 +23,12 @@ On `Publish as Complete`, Onsite generates the full set of deliverables (`.GDOF`
 Only two form types currently produce GeoDinML output:
 
 - The **G1 drilling form**.
-- The **Step 3 form** (ISO standard).
+- The **SEP3 form** (ISO standard).
 
 The **picture log form** does **not** produce GeoDinML - it produces a PDF with embedded thumbnails plus the original JPEG/PNG source files. These can be delivered via file delivery but cannot be imported into GeoDin as structured data.
 
 {% hint style="warning" %}
-**EN ISO E2 standard is currently disabled in Onsite** because of a bug in the GeoDinML importer specifically for E2-flavoured GeoDinML. The form exists in both E2 and Step 3 flavours; E2 has been temporarily hidden to prevent users from creating data they cannot import. Re-activation in Onsite is a ~5-minute turnaround once the Desktop importer is fixed and released.
+**EN ISO E2 standard is currently disabled in Onsite** because of a bug in the GeoDinML importer specifically for E2-flavoured GeoDinML. The form exists in both E2 and SEP3 flavours; E2 has been temporarily hidden to prevent users from creating data they cannot import. Re-activation in Onsite is a ~5-minute turnaround once the Desktop importer is fixed and released.
 {% endhint %}
 
 ## Loading project metadata into Onsite via GeoDinML

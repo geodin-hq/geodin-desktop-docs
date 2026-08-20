@@ -51,4 +51,4 @@ Batch import is supported for general data, samples, data sequences, and sample-
 - [AGS Import](import/ags-import.md) - AGS 4.0.4 / 4.1 format
 - [GeoDinML Import](import/geodin-ml-import.md) - field-to-office data exchange from GeoDin Onsite
 - [Cross-Database Object Copying](import/cross-database-object-copying.md) - copying objects between GeoDin databases
-- [SEP 3 Exchange Database Import](import/sep3-exchange-database.md) - SEP 3 standard
+- [SEP3 Exchange Database Import](import/sep3-exchange-database.md) - SEP3 standard
