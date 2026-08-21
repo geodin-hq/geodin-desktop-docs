@@ -8,11 +8,11 @@ description: >-
 
 <!-- src: help/H0000011290#plugin-concept -->
 
-Plug-ins are external modules - programs, .NET assemblies or COM servers - that are integrated into the GeoDin user interface and launched from it. A software developer who wants to add, for example, a special export operation or a new calculation function can integrate the start of that application into the GeoDin program interface.
+Plug-ins are external modules - programs or .NET assemblies - that are integrated into the GeoDin user interface and launched from it. A software developer who wants to add, for example, a special export operation or a new calculation function can integrate the start of that application into the GeoDin program interface.
 
 For the GeoDin user, a plug-in presents itself as an ordinary GeoDin method. All information about the selected object or objects that the plug-in needs is taken from the object manager, so supplementary evaluation functions for a chosen set of objects can be offered by the plug-in. A plug-in does not have to work with the GeoDin database at all: a plug-in can just as well integrate the call of the operating system "Calculator" into the GeoDin program interface.
 
-This page covers installing and configuring plug-ins. For what a plug-in receives at call time - command-line parameters, the `[Params]` block, and the COM interface a plug-in has to implement - see [Method Reference](com-api/method-reference.md#plug-ins).
+This page covers installing and configuring plug-ins. For what a plug-in receives at runtime - command-line parameters, the `[Params]` block, and the interface a plug-in has to implement - see [Method Reference](com-api/method-reference.md#plug-ins).
 
 ## Requirements
 
@@ -33,15 +33,15 @@ Ready-made plug-ins - for example GeODinML Import and GeODinML Export - are dist
 
 {% stepper %}
 {% step %}
-#### Step 1: Open the set-up section
+#### Step 1: Open the Plugins node
 
-In the system configuration, go to the **Set up plugins** section. It lists the plug-ins that can be installed.
+In the system configuration, go to the **Plugins** node. It lists the plug-ins that can be installed.
 {% endstep %}
 
 {% step %}
 #### Step 2: Connect to the archive
 
-Press **Connect** to get access to the plug-in archive. The list is filled with the plug-ins available for your installation.
+Press **Connecting** to get access to the plug-in archive. The list is filled with the plug-ins available for your installation.
 {% endstep %}
 
 {% step %}
@@ -93,7 +93,7 @@ Fill in **Assembly ID** and **ProgID**. These keys are created and verified by t
 {% step %}
 #### Step 6: Name and describe the plug-in
 
-Set the display name per language in the **Display name** submenu and the description in the **Description** submenu. Name and description can be defined for German, English, Dutch, French, Russian, Italian, Portuguese, Turkish, Spanish, Polish and Swedish.
+Set the display name per language in the **Display name** submenu and the description in the **Description** submenu. Name and description can be defined for German, English, Dutch, French, Russian, Italian, Portuguese, Turkish, Spanish, Polish, Swedish and Lithuanian.
 {% endstep %}
 
 {% step %}
