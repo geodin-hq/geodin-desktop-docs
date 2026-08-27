@@ -20,7 +20,9 @@ You can administer your GeoDin® licences via the licence manager (web app of th
 ## General Information & Requirements
 
 To license GeoDin® Professional, you need to install the GeoDin® Licence Service locally on a server.\
-The GeoDin® Licence Service is installed as a service without a graphical user interface using the geodinlicenceserverregistration.exe available for download here: [https://resources.geodin.com/archives/download/geodin/GeODinLicenceService/LicenceServerRegistration.zip](https://resources.geodin.com/archives/download/geodin/GeODinLicenceService/LicenceServerRegistration.zip)
+The GeoDin® Licence Service is installed as a service without a graphical user interface using the geodinlicenceserverregistration.exe available for download here:
+
+[https://resources.geodin.com/archives/download/geodin/GeODinLicenceService/LicenceServerRegistration.zip](https://resources.geodin.com/archives/download/geodin/GeODinLicenceService/LicenceServerRegistration.zip)
 
 <figure><img src="../.gitbook/assets/image (12) (1).png" alt=""><figcaption><p>General information &#x26; requirements</p></figcaption></figure>
 
